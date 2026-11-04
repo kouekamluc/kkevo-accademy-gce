@@ -106,7 +106,8 @@ are entered by staff from official documents (`is_official` flags the source).
 
 - `learning` — Enrollment, LessonProgress, DailyActivity, SavedLesson, LessonNote, StudySession;
   `services.py` (progress maths), `analytics.py` (progress page / planner)
-- `practice` — PracticeSet, Question, Choice, Attempt, Answer
+- `practice` — PracticeSet, Question, Choice, Attempt, Answer; MistakeCard, ReviewSession, ReviewAnswer
+  (spaced "Review my mistakes"), `mastery.py` (topic levels). See docs/benchmarks/practice-assessment.md
 - `studio` — staff lesson list and block editor (no models)
 
 ## Known gaps
