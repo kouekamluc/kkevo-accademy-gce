@@ -295,3 +295,25 @@ def test_csrf_enforced_on_login():
 
     strict = Client(enforce_csrf_checks=True)
     assert strict.post(reverse("accounts:login"), {"username": "a@b.c", "password": "x"}).status_code == 403
+
+
+# ---------- staff accounts are not students ----------
+
+def test_staff_login_goes_to_studio_and_skips_onboarding(client):
+    staff = User.objects.create_user(email="staff.login@example.com", password=PASSWORD, is_staff=True)
+    response = client.post(reverse("accounts:login"), {"username": staff.email, "password": PASSWORD})
+    assert response.url == reverse("studio:lessons")
+    # Student pages that need onboarding send staff to their workspace, not to student setup
+    assert client.get(reverse("dashboard:home")).url == reverse("studio:lessons")
+
+
+def test_staff_login_still_honours_next(client):
+    staff = User.objects.create_user(email="staff.next@example.com", password=PASSWORD, is_staff=True)
+    response = client.post(reverse("accounts:login") + "?next=/subjects/",
+                           {"username": staff.email, "password": PASSWORD, "next": "/subjects/"})
+    assert response.url == "/subjects/"
+
+
+def test_student_login_still_goes_to_dashboard(client, onboarded):
+    response = client.post(reverse("accounts:login"), {"username": onboarded.email, "password": PASSWORD})
+    assert response.url == reverse("dashboard:home")

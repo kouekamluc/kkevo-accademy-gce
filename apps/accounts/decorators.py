@@ -15,6 +15,9 @@ def onboarding_required(view_func):
     @wraps(view_func)
     def wrapper(request, *args, **kwargs):
         if not get_profile(request.user).is_onboarded:
+            if request.user.is_staff:
+                # Staff are not students: send them to their workspace instead of student setup.
+                return redirect("studio:lessons")
             url = reverse("accounts:onboarding")
             return redirect(f"{url}?{urlencode({'next': request.get_full_path()})}")
         return view_func(request, *args, **kwargs)

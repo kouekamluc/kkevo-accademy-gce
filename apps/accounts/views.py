@@ -60,6 +60,12 @@ class LoginView(auth_views.LoginView):
     authentication_form = EmailAuthenticationForm
     redirect_authenticated_user = True
 
+    def get_default_redirect_url(self):
+        """Staff go to the content studio; students to their dashboard (an explicit ?next= still wins)."""
+        if self.request.user.is_staff:
+            return reverse("studio:lessons")
+        return super().get_default_redirect_url()
+
     def form_valid(self, form):
         response = super().form_valid(form)
         if not form.cleaned_data.get("remember_me"):
