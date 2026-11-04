@@ -63,6 +63,7 @@ def test_admin_can_create_subject_through_form(admin_client, form5, science):
             "icon_text": "Cs",
             "icon": "",
             "accent": "blue",
+            "category": "sciences",
             "order": 0,
             "is_active": "on",
             "offerings-TOTAL_FORMS": "1",

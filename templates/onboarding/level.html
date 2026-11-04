@@ -1,0 +1,28 @@
+{% extends "layouts/onboarding.html" %}
+{% block title %}Which class are you in? — GCE Learning Academy{% endblock %}
+{% block card %}
+<h2 class="text-[26px] font-bold tracking-[-.02em] text-navy">Which class are you in?</h2>
+<p class="mb-6 mt-2 text-base text-ink-muted">You can change this later in Settings.</p>
+{% for error in form.level.errors %}<p class="mb-3 text-sm font-medium text-danger-text" role="alert">{{ error }}</p>{% endfor %}
+<div role="radiogroup" aria-label="Academic level" class="flex flex-col gap-3">
+  {% for level in levels %}
+  <label class="block cursor-pointer">
+    <input type="radio" name="level" value="{{ level.pk }}" class="peer sr-only" {% if level.pk|stringformat:"s" == selected|stringformat:"s" %}checked{% endif %}>
+    <span class="group flex min-h-[84px] w-full items-center gap-4 rounded-card border-[1.5px] border-surface-border bg-white px-[18px] py-4 transition peer-checked:border-2 peer-checked:border-primary peer-checked:bg-primary-50 peer-focus-visible:ring-4 peer-focus-visible:ring-primary-300 hover:border-primary-300
+                 [&_.badge]:bg-slate-100 [&_.badge]:text-navy peer-checked:[&_.badge]:bg-primary peer-checked:[&_.badge]:text-white
+                 peer-checked:[&_.radio]:border-primary peer-checked:[&_.dot]:bg-primary">
+      <span class="badge flex h-[52px] w-[52px] flex-none items-center justify-center rounded-xl text-base font-bold">{{ level.code }}</span>
+      <span class="flex-1 text-left">
+        <span class="block text-lg font-bold text-ink-heading">{{ level.name }}</span>
+        <span class="mt-0.5 block text-sm text-ink-muted">{{ level.get_exam_level_display }}{% if level.description %} · {{ level.description|cut:"." }}{% endif %}</span>
+      </span>
+      <span class="radio flex h-6 w-6 flex-none items-center justify-center rounded-full border-2 border-slate-300"><span class="dot h-3 w-3 rounded-full"></span></span>
+    </span>
+  </label>
+  {% empty %}
+  <p class="text-sm text-slate-600">No classes are available yet. Please check back soon.</p>
+  {% endfor %}
+</div>
+{% endblock %}
+{% block mobile_right %}<span class="w-11"></span>{% endblock %}
+{% block actions %}<span></span>{% include "onboarding/_continue.html" %}{% endblock %}

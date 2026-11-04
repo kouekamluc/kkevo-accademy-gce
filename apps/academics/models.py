@@ -35,6 +35,9 @@ class AcademicPathway(OrderedModel):
     name = models.CharField(max_length=60, unique=True)
     slug = models.SlugField(max_length=60, unique=True)
     description = models.CharField(max_length=200, blank=True)
+    icon_text = models.CharField(max_length=4, blank=True, help_text="Glyph for the onboarding card, e.g. λ or Aa.")
+    accent = models.CharField(max_length=10, default="blue", choices=[
+        ("blue", "Blue"), ("emerald", "Emerald"), ("amber", "Amber"), ("slate", "Slate")])
     is_active = models.BooleanField(default=True)
 
     class Meta(OrderedModel.Meta):
@@ -59,12 +62,22 @@ class SubjectIcon(models.TextChoices):
     BOOK = "book", "Book"
 
 
+class SubjectCategory(models.TextChoices):
+    SCIENCES = "sciences", "Sciences"
+    LANGUAGES = "languages", "Languages"
+    HUMANITIES = "humanities", "Humanities"
+    TECHNICAL = "technical", "Technical"
+    BUSINESS = "business", "Business"
+    OTHER = "other", "Other"
+
+
 class Subject(OrderedModel):
     """A subject independent of level, e.g. Mathematics."""
 
     name = models.CharField(max_length=80, unique=True)
     slug = models.SlugField(max_length=80, unique=True)
     summary = models.CharField(max_length=160, blank=True, help_text="One line shown on subject cards.")
+    category = models.CharField(max_length=12, choices=SubjectCategory.choices, default=SubjectCategory.OTHER)
     icon_text = models.CharField(
         max_length=8, blank=True, help_text="Short glyph shown in the icon tile, e.g. x², F, H₂O, Aa."
     )

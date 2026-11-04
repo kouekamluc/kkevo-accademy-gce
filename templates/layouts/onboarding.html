@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% comment %}
+Onboarding wizard shell (mockup 07). Child templates fill `card` and `actions`,
+and may set `back_url`. Context: step, steps, total_steps.
+{% endcomment %}
+{% block title %}Set up your learning space — GCE Learning Academy{% endblock %}
+{% block body %}
+<div class="flex min-h-screen bg-white nav:bg-surface-bg">
+  <aside class="sticky top-0 hidden h-screen w-[480px] max-w-[42vw] shrink-0 flex-col gap-10 bg-navy px-12 py-10 text-white nav:flex">
+    <a href="{% url 'core:landing' %}" class="flex items-center gap-2.5 text-white hover:text-white">
+      <span class="flex h-9 w-9 items-end justify-center gap-[3px] rounded-[9px] bg-white py-2" aria-hidden="true"><span class="h-[7px] w-1 rounded-[1px] bg-primary-300"></span><span class="h-3 w-1 rounded-[1px] bg-navy"></span><span class="h-[19px] w-1 rounded-[1px] bg-success"></span></span>
+      <span class="text-[17px] font-bold">GCE Learning Academy</span>
+    </a>
+    <div>
+      <h1 class="text-[32px] font-bold leading-tight tracking-[-.02em]">Let’s set up your learning space</h1>
+      <p class="mt-3 text-base leading-relaxed text-slate-300">Tell us your class and subjects so we can show you the right lessons from day one.</p>
+    </div>
+    <ol class="flex flex-col gap-1.5">
+      {% for name in steps %}
+      <li class="flex min-h-[52px] items-center gap-3.5" {% if forloop.counter == step %}aria-current="step"{% endif %}>
+        {% if forloop.counter < step %}
+          <span class="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-success text-[#052E1C]">{% include "components/icon.html" with name="check" class="h-4 w-4" stroke="3" %}</span>
+          <span class="text-base text-slate-300">{{ name }}</span>
+        {% elif forloop.counter == step %}
+          <span class="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-white text-sm font-bold text-navy shadow-[0_0_0_4px_rgba(255,255,255,.18)]">{{ forloop.counter }}</span>
+          <span class="text-base font-bold text-white">{{ name }}</span>
+        {% else %}
+          <span class="flex h-8 w-8 flex-none items-center justify-center rounded-full border-2 border-navy-600 text-sm font-bold text-slate-400">{{ forloop.counter }}</span>
+          <span class="text-base text-slate-400">{{ name }}</span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+    <div class="mt-auto flex items-center gap-2 text-sm text-slate-400">
+      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      Takes about 2 minutes · Free to use
+    </div>
+  </aside>
+
+  <main id="main" class="flex min-w-0 flex-1 justify-center px-4 pb-32 pt-4 sm:px-6 nav:py-12 nav:pb-12">
+    <div class="flex w-full max-w-[640px] flex-col">
+      {# Mobile header: back · step · skip #}
+      <div class="flex h-11 items-center justify-between nav:hidden">
+        {% block mobile_back %}<span class="w-11"></span>{% endblock %}
+        <span class="text-base font-semibold text-primary-700">Step {{ step }} of {{ total_steps }}</span>
+        {% block mobile_right %}<span class="w-11"></span>{% endblock %}
+      </div>
+      <div class="hidden items-center justify-between text-sm text-ink-muted nav:flex">
+        <span class="font-semibold text-primary-700">Step {{ step }} of {{ total_steps }}</span>
+        {% block top_right %}{% endblock %}
+      </div>
+      <div class="mt-3 grid grid-cols-5 gap-1.5" role="progressbar" aria-valuemin="1" aria-valuemax="{{ total_steps }}" aria-valuenow="{{ step }}" aria-label="Onboarding progress">
+        {% for name in steps %}<span class="h-1.5 rounded-full {% if forloop.counter < step %}bg-success{% elif forloop.counter == step %}bg-primary{% else %}bg-surface-border{% endif %}"></span>{% endfor %}
+      </div>
+
+      {% include "components/messages.html" %}
+
+      {% block form_open %}<form method="post" novalidate class="contents">{% csrf_token %}{% endblock %}
+        <div class="mt-6 rounded-panel bg-white nav:mt-7 nav:border nav:border-surface-border nav:p-9 nav:shadow-card">
+          {% block card %}{% endblock %}
+        </div>
+        <div class="fixed inset-x-0 bottom-0 z-20 border-t border-surface-border bg-white px-4 py-4 nav:static nav:mt-6 nav:border-0 nav:bg-transparent nav:p-0">
+          <div class="mx-auto flex max-w-[640px] items-center justify-between gap-3">
+            {% block actions %}{% endblock %}
+          </div>
+        </div>
+      {% block form_close %}</form>{% endblock %}
+    </div>
+  </main>
+</div>
+{% endblock %}

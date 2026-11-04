@@ -12,7 +12,7 @@
     <p class="max-w-xl text-slate-600">Your subjects and the continue-learning section will appear here. Start by exploring the subjects available for your class.</p>
     <div class="flex flex-wrap gap-3">
       <a href="{% url 'courses:catalog' %}?level={{ student.level.slug }}" class="btn-primary">Explore {{ student.level.name }} subjects {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
-      <a href="{% url 'accounts:onboarding' %}" class="btn-secondary">Change class</a>
+      <a href="{% url 'accounts:profile' %}" class="btn-secondary">Change class</a>
     </div>
   </section>
 </div>

@@ -16,7 +16,7 @@ pytestmark = pytest.mark.django_db
 
 def test_levels_and_pathways_are_seeded_in_order():
     assert list(AcademicLevel.objects.values_list("code", flat=True)) == ["F5", "L6", "U6"]
-    assert list(AcademicPathway.objects.values_list("name", flat=True)) == ["Arts", "Science"]
+    assert list(AcademicPathway.objects.values_list("name", flat=True)) == ["Science", "Arts"]
 
 
 def test_subject_offered_once_per_level(subject, form5):
@@ -43,7 +43,7 @@ def test_card_meta_summarises_pathways_and_levels(offering, subject):
     lower_sixth = AcademicLevel.objects.get(code="L6")
     other = SubjectOffering.objects.create(subject=subject, level=lower_sixth)
     other.pathways.add(AcademicPathway.objects.get(slug="arts"))
-    assert subject.card_meta() == "Arts & Science · 2 levels"
+    assert subject.card_meta() == "Science & Arts · 2 levels"
 
 
 def test_syllabus_versions_unique_and_dates_validated(offering):

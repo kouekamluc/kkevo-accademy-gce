@@ -1,0 +1,15 @@
+{% extends "layouts/onboarding.html" %}
+{% block title %}Arts or Science? — GCE Learning Academy{% endblock %}
+{% block mobile_back %}{% url 'accounts:onboarding_level' as back %}{% include "onboarding/_mobile_back.html" with url=back %}{% endblock %}
+{% block card %}
+<h2 class="text-[26px] font-bold tracking-[-.02em] text-navy">Arts or Science?</h2>
+<p class="mb-6 mt-2 text-base text-ink-muted">We’ll suggest subjects that match your stream.</p>
+{% for error in form.stream.errors %}<p class="mb-3 text-sm font-medium text-danger-text" role="alert">{{ error }}</p>{% endfor %}
+<div role="radiogroup" aria-label="Stream" class="grid gap-3 sm:grid-cols-3">
+  {% for pathway in pathways %}
+    {% include "onboarding/_stream_card.html" with value=pathway.slug name=pathway.name desc=pathway.description glyph=pathway.icon_text|default:pathway.name|slice:":2" accent=pathway.accent %}
+  {% endfor %}
+  {% include "onboarding/_stream_card.html" with value=mix name="A mix" desc="Choose freely from all streams" glyph="±" accent="slate" %}
+</div>
+{% endblock %}
+{% block actions %}{% url 'accounts:onboarding_level' as back %}{% include "onboarding/_back.html" with url=back %}{% include "onboarding/_continue.html" %}{% endblock %}

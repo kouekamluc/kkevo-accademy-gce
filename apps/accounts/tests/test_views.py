@@ -29,22 +29,16 @@ def onboarded(student, form5, science):
 # ---------- registration ----------
 
 def register(client, **overrides):
-    data = {
-        "first_name": "Alex",
-        "last_name": "Nfor",
-        "email": "Alex@Example.com",
-        "password1": PASSWORD,
-        "password2": PASSWORD,
-        **overrides,
-    }
+    data = {"full_name": "  Alex   Nfor ", "email": "Alex@Example.com", "password": PASSWORD, **overrides}
     return client.post(reverse("accounts:register"), data)
 
 
 def test_registration_creates_user_profile_logs_in_and_starts_onboarding(client):
     response = register(client)
     assert response.status_code == 302
-    assert response.url == reverse("accounts:onboarding")
+    assert response.url == reverse("accounts:onboarding_level")
     user = User.objects.get(email="alex@example.com")
+    assert (user.first_name, user.last_name) == ("Alex", "Nfor")
     assert user.check_password(PASSWORD) and user.password.startswith("pbkdf2_")
     assert not user.is_staff
     assert StudentProfile.objects.filter(user=user, onboarded_at__isnull=True).exists()
@@ -54,10 +48,11 @@ def test_registration_creates_user_profile_logs_in_and_starts_onboarding(client)
 @pytest.mark.parametrize(
     "overrides, field",
     [
-        ({"password2": "different-pass-1"}, "password2"),
-        ({"password1": "12345678", "password2": "12345678"}, "password2"),
+        ({"password": "short"}, "password"),
+        ({"password": "12345678"}, "password"),
+        ({"password": "alex@example.com"}, "password"),
         ({"email": "not-an-email"}, "email"),
-        ({"first_name": ""}, "first_name"),
+        ({"full_name": "   "}, "full_name"),
     ],
 )
 def test_registration_validation(client, overrides, field):
@@ -114,57 +109,116 @@ def test_dashboard_requires_login(client):
     assert response.status_code == 302 and reverse("accounts:login") in response.url
 
 
-def test_dashboard_redirects_to_onboarding_until_class_chosen(client, student):
+def test_dashboard_redirects_to_onboarding_until_finished(client, student):
     client.force_login(student)
     response = client.get(reverse("dashboard:home"))
     assert response.status_code == 302
     assert response.url.startswith(reverse("accounts:onboarding"))
+    assert client.get(reverse("accounts:onboarding")).url == reverse("accounts:onboarding_level")
 
 
-def test_onboarding_lists_levels_and_pathways(client, student):
+def test_level_step_lists_levels_and_saves(client, student):
     client.force_login(student)
-    html = client.get(reverse("accounts:onboarding")).content.decode()
-    for name in ("Form 5", "Lower Sixth", "Upper Sixth", "Arts", "Science"):
+    html = client.get(reverse("accounts:onboarding_level")).content.decode()
+    for name in ("Form 5", "Lower Sixth", "Upper Sixth", "Step 2 of 5"):
         assert name in html
-
-
-def test_onboarding_saves_selection_and_opens_dashboard(client, student):
-    client.force_login(student)
     level = AcademicLevel.objects.get(code="U6")
-    pathway = AcademicPathway.objects.get(slug="arts")
-    response = client.post(reverse("accounts:onboarding"), {"level": level.pk, "pathway": pathway.pk})
-    assert response.url == reverse("dashboard:home")
-    student.profile.refresh_from_db()
-    assert student.profile.is_onboarded
-    assert student.profile.class_label == "Upper Sixth · Arts"
-    html = client.get(reverse("dashboard:home")).content.decode()
-    assert "Upper Sixth · Arts" in html
+    response = client.post(reverse("accounts:onboarding_level"), {"level": level.pk})
+    assert response.url == reverse("accounts:onboarding_stream")
+    assert StudentProfile.objects.get(user=student).level == level
 
 
-def test_onboarding_requires_both_choices(client, student):
+def test_level_step_requires_choice_and_rejects_inactive(client, student):
     client.force_login(student)
-    response = client.post(reverse("accounts:onboarding"), {})
-    assert response.status_code == 200
-    assert set(response.context["form"].errors) == {"level", "pathway"}
-
-
-def test_onboarding_rejects_inactive_level(client, student):
+    assert "level" in client.post(reverse("accounts:onboarding_level"), {}).context["form"].errors
     level = AcademicLevel.objects.get(code="L6")
     level.is_active = False
     level.save()
-    client.force_login(student)
-    response = client.post(
-        reverse("accounts:onboarding"), {"level": level.pk, "pathway": AcademicPathway.objects.first().pk}
-    )
+    response = client.post(reverse("accounts:onboarding_level"), {"level": level.pk})
     assert "level" in response.context["form"].errors
 
 
-def test_onboarding_returns_to_safe_next(client, student, form5, science):
+def test_stream_step_requires_level_first(client, student):
     client.force_login(student)
-    response = client.post(
-        reverse("accounts:onboarding") + "?next=/accounts/profile/", {"level": form5.pk, "pathway": science.pk}
-    )
-    assert response.url == "/accounts/profile/"
+    assert client.get(reverse("accounts:onboarding_stream")).url == reverse("accounts:onboarding_level")
+
+
+def test_stream_step_accepts_pathway_or_mix(client, student, form5):
+    student.profile.level = form5
+    student.profile.save()
+    client.force_login(student)
+    html = client.get(reverse("accounts:onboarding_stream")).content.decode()
+    assert "Arts" in html and "Science" in html and "A mix" in html
+    client.post(reverse("accounts:onboarding_stream"), {"stream": "arts"})
+    assert StudentProfile.objects.get(user=student).pathway.slug == "arts"
+    response = client.post(reverse("accounts:onboarding_stream"), {"stream": "mix"})
+    assert response.url == reverse("accounts:onboarding_subjects")
+    assert StudentProfile.objects.get(user=student).pathway is None
+    assert "stream" in client.post(reverse("accounts:onboarding_stream"), {"stream": "bogus"}).context["form"].errors
+
+
+@pytest.fixture
+def form5_offerings(form5, science):
+    from apps.academics.models import Subject, SubjectOffering
+
+    offerings = []
+    for i, name in enumerate(["Alpha", "Beta", "Gamma", "Delta"]):
+        subject = Subject.objects.create(name=name, slug=name.lower(), icon_text=name[0], order=i)
+        offering = SubjectOffering.objects.create(subject=subject, level=form5)
+        offering.pathways.add(science)
+        offerings.append(offering)
+    return offerings
+
+
+def test_subjects_step_needs_three_then_enrols_and_finishes(client, student, form5, science, form5_offerings):
+    from apps.learning.models import Enrollment
+
+    profile = student.profile
+    profile.level, profile.pathway = form5, science
+    profile.save()
+    client.force_login(student)
+    html = client.get(reverse("accounts:onboarding_subjects")).content.decode()
+    assert "Pick at least 3" in html and "Alpha" in html
+
+    too_few = client.post(reverse("accounts:onboarding_subjects"), {"offerings": [form5_offerings[0].pk]})
+    assert "offerings" in too_few.context["form"].errors
+    assert not Enrollment.objects.exists()
+
+    chosen = [o.pk for o in form5_offerings[:3]]
+    response = client.post(reverse("accounts:onboarding_subjects"), {"offerings": chosen})
+    assert response.url == reverse("accounts:onboarding_done")
+    assert set(Enrollment.objects.filter(user=student).values_list("offering_id", flat=True)) == set(chosen)
+    assert StudentProfile.objects.get(user=student).is_onboarded
+
+    # Going back and changing the selection replaces it
+    client.post(reverse("accounts:onboarding_subjects"), {"offerings": [o.pk for o in form5_offerings[1:]]})
+    assert set(Enrollment.objects.filter(user=student).values_list("offering_id", flat=True)) == {
+        o.pk for o in form5_offerings[1:]
+    }
+
+    done = client.get(reverse("accounts:onboarding_done")).content.decode()
+    assert "You’re all set, Ama!" in done and "Form 5" in done and "Beta, Gamma, Delta" in done
+    assert client.get(reverse("dashboard:home")).status_code == 200
+
+
+def test_subjects_step_with_no_content_still_lets_student_finish(client, student, form5):
+    student.profile.level = form5
+    student.profile.save()
+    client.force_login(student)
+    html = client.get(reverse("accounts:onboarding_subjects")).content.decode()
+    assert "No subjects are available" in html
+    assert client.post(reverse("accounts:onboarding_subjects"), {}).url == reverse("accounts:onboarding_done")
+
+
+def test_subjects_cannot_include_other_levels(client, student, form5, form5_offerings):
+    from apps.academics.models import AcademicLevel, SubjectOffering
+
+    other = SubjectOffering.objects.create(subject=form5_offerings[0].subject, level=AcademicLevel.objects.get(code="U6"))
+    student.profile.level = form5
+    student.profile.save()
+    client.force_login(student)
+    response = client.post(reverse("accounts:onboarding_subjects"), {"offerings": [other.pk]})
+    assert "offerings" in response.context["form"].errors
 
 
 # ---------- profile ----------
@@ -193,6 +247,14 @@ def test_profile_rejects_email_used_by_someone_else(client, onboarded):
     )
     assert response.status_code == 200
     assert "email" in response.context["details_form"].errors
+
+
+def test_profile_study_settings_allow_mix(client, onboarded):
+    client.force_login(onboarded)
+    l6 = AcademicLevel.objects.get(code="L6")
+    client.post(reverse("accounts:profile"), {"section": "study", "study-level": l6.pk, "study-pathway": ""})
+    profile = StudentProfile.objects.get(user=onboarded)
+    assert profile.pathway is None and profile.class_label == "Lower Sixth · Mixed"
 
 
 def test_profile_updates_study_settings(client, onboarded):

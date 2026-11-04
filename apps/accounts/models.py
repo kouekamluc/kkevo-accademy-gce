@@ -79,9 +79,15 @@ class StudentProfile(models.Model):
 
     @property
     def is_onboarded(self):
-        return self.onboarded_at is not None and self.level_id is not None and self.pathway_id is not None
+        return self.onboarded_at is not None and self.level_id is not None
 
     @property
     def class_label(self):
         """'Form 5 · Science' — shown under the student's name."""
-        return " · ".join(str(x) for x in (self.level, self.pathway) if x)
+        if not self.level_id:
+            return ""
+        return f"{self.level} · {self.pathway or 'Mixed'}"
+
+    @property
+    def stream_label(self):
+        return self.pathway.name if self.pathway_id else "A mix"

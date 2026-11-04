@@ -1,0 +1,32 @@
+{% extends "layouts/onboarding.html" %}
+{% block title %}Choose your subjects — GCE Learning Academy{% endblock %}
+{% block mobile_back %}{% url 'accounts:onboarding_stream' as back %}{% include "onboarding/_mobile_back.html" with url=back %}{% endblock %}
+{% block card %}
+<div x-data="{ count: {{ selected|length }} }" @change="count = $el.querySelectorAll('input[name=offerings]:checked').length">
+  <h2 class="text-[26px] font-bold tracking-[-.02em] text-navy">Choose your subjects</h2>
+  <p class="mb-5 mt-2 text-base text-ink-muted">
+    {% if minimum %}Pick at least {{ minimum }}. {% endif %}<strong class="text-ink-heading"><span x-text="count">{{ selected|length }}</span> selected</strong>
+  </p>
+  {% for error in form.offerings.errors %}<p class="mb-3 text-sm font-medium text-danger-text" role="alert">{{ error }}</p>{% endfor %}
+  {% if offerings %}
+  <div class="flex flex-wrap gap-2.5" role="group" aria-label="Subjects">
+    {% for offering in offerings %}
+    <label class="cursor-pointer">
+      <input type="checkbox" name="offerings" value="{{ offering.pk }}" class="peer sr-only" {% if offering.pk|stringformat:"s" in selected %}checked{% endif %}>
+      <span class="flex h-12 items-center gap-2.5 rounded-full border-[1.5px] border-slate-300 bg-white pl-3 pr-4 text-[15px] font-semibold text-slate-700 transition peer-checked:border-2 peer-checked:border-primary peer-checked:bg-primary-50 peer-checked:text-navy peer-focus-visible:ring-4 peer-focus-visible:ring-primary-300
+                   [&_.box]:border-2 [&_.box]:border-slate-300 peer-checked:[&_.box]:border-primary peer-checked:[&_.box]:bg-primary peer-checked:[&_.tick]:block">
+        <span class="box flex h-[22px] w-[22px] items-center justify-center rounded-md text-white"><svg class="tick hidden h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+        {{ offering.subject.name }}
+      </span>
+    </label>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="rounded-card border border-dashed border-slate-300 p-6 text-center">
+    <p class="font-semibold text-ink-heading">No subjects are available for this class yet</p>
+    <p class="mt-1 text-sm text-slate-600">Our content team is adding them now. Continue to your dashboard and you can add subjects later.</p>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
+{% block actions %}{% url 'accounts:onboarding_stream' as back %}{% include "onboarding/_back.html" with url=back %}{% include "onboarding/_continue.html" %}{% endblock %}

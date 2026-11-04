@@ -9,7 +9,6 @@ from django.utils.http import url_has_allowed_host_and_scheme
 from django.views.decorators.http import require_POST
 
 from .forms import (
-    AcademicSelectionForm,
     AccountDetailsForm,
     EmailAuthenticationForm,
     RegistrationForm,
@@ -40,33 +39,18 @@ def register(request):
     if request.method == "POST" and form.is_valid():
         user = form.save()
         login(request, user, backend="django.contrib.auth.backends.ModelBackend")
-        messages.success(request, f"Welcome, {user.first_name}! Tell us which class you are in.")
-        return redirect("accounts:onboarding")
-    return render(request, "accounts/register.html", {"form": form})
+        return redirect("accounts:onboarding_level")
+    from .onboarding import STEPS
+
+    return render(
+        request, "onboarding/account.html", {"form": form, "step": 1, "steps": STEPS, "total_steps": len(STEPS)}
+    )
 
 
 class LoginView(auth_views.LoginView):
     template_name = "accounts/login.html"
     authentication_form = EmailAuthenticationForm
     redirect_authenticated_user = True
-
-
-@login_required
-def onboarding(request):
-    profile = get_profile(request.user)
-    form = AcademicSelectionForm(_post_data(request), instance=profile)
-    if request.method == "POST" and form.is_valid():
-        profile = form.save(commit=False)
-        if profile.onboarded_at is None:
-            profile.onboarded_at = timezone.now()
-        profile.save()
-        messages.success(request, f"You’re all set for {profile.class_label}.")
-        return redirect(_safe_next(request, reverse("dashboard:home")))
-    return render(
-        request,
-        "accounts/onboarding.html",
-        {"form": form, "next": _safe_next(request, ""), "is_first_time": not profile.is_onboarded},
-    )
 
 
 @login_required

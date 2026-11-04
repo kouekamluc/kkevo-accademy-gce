@@ -1,0 +1,8 @@
+<label class="block cursor-pointer">
+  <input type="radio" name="stream" value="{{ value }}" class="peer sr-only" {% if value == selected %}checked{% endif %}>
+  <span class="flex h-full min-h-[120px] flex-col items-start gap-2.5 rounded-card border-[1.5px] border-surface-border bg-white p-[18px] text-left transition peer-checked:border-2 peer-checked:border-primary peer-checked:bg-primary-50 peer-focus-visible:ring-4 peer-focus-visible:ring-primary-300 hover:border-primary-300 sm:min-h-[168px]">
+    <span class="icon-tile accent-{{ accent }} font-math text-[22px]" aria-hidden="true">{{ glyph }}</span>
+    <span class="text-[17px] font-bold text-ink-heading">{{ name }}</span>
+    {% if desc %}<span class="text-[13px] leading-snug text-ink-muted">{{ desc }}</span>{% endif %}
+  </span>
+</label>

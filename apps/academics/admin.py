@@ -36,9 +36,9 @@ class SubjectOfferingInline(admin.TabularInline):
 
 @admin.register(Subject)
 class SubjectAdmin(admin.ModelAdmin):
-    list_display = ("name", "icon_text", "accent", "is_featured", "order", "is_active")
+    list_display = ("name", "category", "icon_text", "accent", "is_featured", "order", "is_active")
     list_editable = ("is_featured", "order", "is_active")
-    list_filter = ("accent", "is_featured", "is_active", "offerings__level", "offerings__pathways")
+    list_filter = ("category", "accent", "is_featured", "is_active", "offerings__level", "offerings__pathways")
     search_fields = ("name", "summary")
     prepopulated_fields = {"slug": ("name",)}
     inlines = [SubjectOfferingInline]
