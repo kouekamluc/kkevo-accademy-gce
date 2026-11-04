@@ -58,7 +58,7 @@
             <div class="mt-4 flex items-center gap-3"><div class="h-2 flex-1 rounded-full bg-surface-border"><div class="h-2 rounded-full bg-primary" style="width: {{ continue_card.progress.percent }}%"></div></div><span class="text-sm font-semibold">{{ continue_card.progress.percent }}%</span></div>
           </div>
         </div>
-        <a href="{{ continue_card.lesson.get_absolute_url }}" class="btn-primary h-14 text-lg lg:px-7">Resume lesson {% include "components/icon.html" with name="arrow" class="h-5 w-5" stroke="2.2" %}</a>
+        <a href="{{ continue_card.lesson.get_absolute_url }}?resume=1" class="btn-primary h-14 text-lg lg:px-7">Resume lesson {% include "components/icon.html" with name="arrow" class="h-5 w-5" stroke="2.2" %}</a>
       </div>
       {% else %}
       <div class="mt-5 flex flex-col items-start gap-3">
@@ -153,6 +153,7 @@
 
     <section class="nav:card nav:p-8 nav:shadow-card" aria-labelledby="revision-heading">
       <div class="flex items-center justify-between"><h2 id="revision-heading" class="text-xl font-bold">Upcoming revision</h2>{% url 'learning:planner' as planner_url %}{% if planner_url %}<a href="{{ planner_url }}" class="text-[15px] font-semibold">Planner</a>{% endif %}</div>
+      {% if reviews_due %}<a href="{% url 'practice:review' %}" class="mt-4 flex items-center justify-between rounded-xl border border-warning-200 bg-warning-50 px-4 py-3 text-[15px] font-semibold text-warning-text hover:text-warning-text">{% include "components/icon.html" with name="refresh" class="h-[18px] w-[18px]" stroke="2" %}<span class="flex-1 pl-2">{{ reviews_due }} mistake{{ reviews_due|pluralize }} to review today</span>{% include "components/icon.html" with name="chevron-right" class="h-4 w-4" stroke="2" %}</a>{% endif %}
       <ul class="mt-4 divide-y divide-surface-border rounded-2xl border border-surface-border bg-white px-3 nav:mt-5 nav:border-0 nav:px-0">
         {% for item in upcoming %}
         <li class="flex items-center gap-2 py-3">

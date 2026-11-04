@@ -71,6 +71,9 @@
           <label class="flex flex-col gap-1.5"><span class="form-label">Choices <span class="font-normal text-ink-muted">— one per line</span></span><textarea name="choices" rows="4" class="form-input py-2">{% for c in block.data.choices %}{{ c }}
 {% endfor %}</textarea></label>
           <div class="grid gap-3 sm:grid-cols-[160px_1fr]"><label class="flex flex-col gap-1.5"><span class="form-label">Correct choice #</span><input name="correct" type="number" min="1" value="{{ block.data.correct|add:1 }}" class="form-input"></label><label class="flex flex-col gap-1.5"><span class="form-label">Explanation</span><input name="explanation" value="{{ block.data.explanation }}" class="form-input"></label></div>
+          <label class="flex flex-col gap-1.5"><span class="form-label">Hint <span class="font-normal text-ink-muted">(optional, shown on “Get a hint”)</span></span><input name="hint" value="{{ block.data.hint|default:'' }}" class="form-input"></label>
+          <label class="flex flex-col gap-1.5"><span class="form-label">Why each choice is wrong <span class="font-normal text-ink-muted">— one line per choice, same order; leave the correct one blank</span></span><textarea name="feedback" rows="4" class="form-input py-2">{% for f in block.data.feedback %}{{ f }}
+{% endfor %}</textarea></label>
           {% else %}
           <label class="flex flex-col gap-1.5"><span class="form-label">{% if block.block_type == "summary" %}Points — one per line{% else %}Text{% endif %} <span class="font-normal text-ink-muted">· **bold**, *italic*, $maths$</span></span><textarea name="body" rows="4" class="form-input py-2">{{ block.body }}</textarea></label>
           {% if block.block_type == "practice" %}<label class="flex flex-col gap-1.5"><span class="form-label">Answer</span><textarea name="answer" rows="2" class="form-input py-2">{{ block.data.answer }}</textarea></label>{% endif %}

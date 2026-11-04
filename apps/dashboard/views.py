@@ -11,6 +11,7 @@ from apps.accounts.utils import get_profile
 from apps.courses.models import Course
 from apps.learning import motivation, services
 from apps.learning.models import DailyActivity, Enrollment, LessonProgress, RestDay, StudySession
+from apps.practice.reviews import review_summary
 from apps.practice.models import Attempt, PracticeSet
 
 WEEKDAY_SHORT = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
@@ -174,4 +175,5 @@ def home(request):
             {"session": s, "day": "Today" if timezone.localtime(s.starts_at).date() == today
              else WEEKDAY_SHORT[timezone.localtime(s.starts_at).weekday()]} for s in upcoming],
         "recent": recent, "today": today, "nav_active": "dashboard",
+        "reviews_due": review_summary(user)["due"],
     })

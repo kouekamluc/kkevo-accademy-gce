@@ -395,6 +395,10 @@ def _apply_post(block, post):
         except ValueError:
             data["correct"] = 0
         data["explanation"] = post.get("explanation", "")
+        if "hint" in post:
+            data["hint"] = post.get("hint", "").strip()
+        if "feedback" in post:  # one line per choice, explaining why it is wrong (blank line = none)
+            data["feedback"] = [line.strip() for line in post.get("feedback", "").splitlines()][: len(data["choices"])]
     elif block.block_type == BlockType.WORKED_EXAMPLE:
         steps = []
         for line in post.get("steps", "").splitlines():

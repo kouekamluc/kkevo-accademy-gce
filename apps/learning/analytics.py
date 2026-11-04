@@ -73,7 +73,8 @@ def topic_scores(user):
         if attempt.score >= MASTERY_MARK:
             entry["mastered_runs"] += 1
     for entry in by_topic.values():
-        entry["mastered"] = entry["mastered_runs"] >= 2
+        # Same rule as practice/mastery.py: 80%+ twice, and still 80%+ on the latest attempt
+        entry["mastered"] = entry["mastered_runs"] >= 2 and (entry["latest"] or 0) >= MASTERY_MARK
         entry["needs_revision"] = entry["latest"] is not None and entry["latest"] < PASS_MARK
     return by_topic
 
