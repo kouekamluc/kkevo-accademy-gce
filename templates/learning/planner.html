@@ -54,6 +54,23 @@
     </section>
 
     <div class="flex flex-col gap-6">
+      <section id="exam" class="card p-6" aria-labelledby="exam-heading" x-data="{ editing: {{ countdown|yesno:'false,true' }} }">
+        <div class="flex items-baseline justify-between gap-3">
+          <h2 id="exam-heading" class="text-xl font-bold">Exam countdown</h2>
+          {% if countdown %}<button type="button" class="text-[15px] font-semibold text-primary" @click="editing = !editing" :aria-expanded="editing.toString()">Change date</button>{% endif %}
+        </div>
+        {% if countdown %}<div class="mt-3">{% include "learning/_countdown.html" with countdown=countdown %}</div>
+        {% else %}<p class="mt-2 text-[15px] text-ink-muted">Add the date of your first GCE paper to see how many days are left and the pace that gets you through your plan in time.</p>{% endif %}
+        <form method="post" action="{% url 'learning:exam_date' %}" class="mt-4 flex flex-col gap-3" x-show="editing" {% if countdown %}x-cloak{% endif %}>
+          {% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}#exam">
+          {% include "components/field.html" with field=exam_form.exam_date %}
+          <div class="flex flex-wrap gap-2">
+            <button type="submit" class="btn-primary">Save exam date</button>
+            {% if countdown %}<button type="submit" name="exam_date" value="" class="btn-secondary" formnovalidate>Remove date</button>{% endif %}
+          </div>
+        </form>
+      </section>
+
       <section class="card p-6" aria-labelledby="today-heading">
         <div class="flex items-baseline justify-between"><h2 id="today-heading" class="text-xl font-bold">Today’s study tasks</h2><span class="text-sm text-ink-muted">{{ today|date:"D j M" }}</span></div>
         {% if todays %}
@@ -68,6 +85,21 @@
           {% endfor %}
         </ul>
         {% else %}<p class="mt-3 text-sm text-ink-muted">Nothing planned today. <button type="button" class="font-semibold text-primary" @click="adding = true">Add a session</button></p>{% endif %}
+        <form method="post" action="{% url 'learning:rest_day' %}" class="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-surface-border pt-4 text-sm text-slate-600">
+          {% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}">
+          {% if rest_today %}
+            <input type="hidden" name="date" value="{{ today.isoformat }}">
+            <span class="flex-1"><strong class="text-ink-heading">Today is a rest day.</strong> Your streak is kept — come back fresh tomorrow.</span>
+            <button type="submit" class="font-semibold text-primary">Cancel rest day</button>
+          {% elif rest_this_week %}
+            <span>Rest day this week: <strong class="text-ink-heading">{{ rest_this_week.date|date:"l" }}</strong>{% if rest_this_week.date > today %}.{% endif %}</span>
+            {% if rest_this_week.date > today %}<input type="hidden" name="date" value="{{ rest_this_week.date.isoformat }}"><button type="submit" class="font-semibold text-primary">Cancel</button>{% endif %}
+          {% else %}
+            <input type="hidden" name="date" value="{{ today.isoformat }}">
+            <span class="flex-1">Tired? Take one rest day a week — it won’t break your streak.</span>
+            <button type="submit" class="btn-secondary min-h-0 h-10 px-4 text-sm">Rest today</button>
+          {% endif %}
+        </form>
       </section>
 
       <section class="card p-6" aria-labelledby="thisweek-heading">
@@ -91,6 +123,29 @@
           {% empty %}<li class="text-sm text-warning-text">No topics need revision right now.</li>{% endfor %}
         </ul>
       </section>
+
+      <section id="calendar" class="card p-6" aria-labelledby="calendar-heading">
+        <h2 id="calendar-heading" class="flex items-center gap-2 text-xl font-bold">{% include "components/icon.html" with name="calendar" class="h-5 w-5 text-primary" stroke="2" %}Phone calendar</h2>
+        <p class="mt-1 text-[15px] text-ink-muted">Show your sessions in Google Calendar or your phone’s calendar, with a reminder 15 minutes before each one — even when you’re offline.</p>
+        {% if calendar_link %}
+        <div class="mt-4 flex flex-col gap-3" x-data="{ copied: false }">
+          <label for="calendar-url" class="form-label">Your private calendar link</label>
+          <div class="flex gap-2">
+            <input id="calendar-url" type="text" readonly value="{{ calendar_url }}" class="form-input min-w-0 flex-1 text-sm" @focus="$el.select()">
+            <button type="button" class="btn-secondary shrink-0" @click="navigator.clipboard && navigator.clipboard.writeText('{{ calendar_url|escapejs }}').then(() => copied = true)" x-text="copied ? 'Copied' : 'Copy'">Copy</button>
+          </div>
+          <a href="{{ calendar_webcal }}" class="btn-primary self-start">Add to my calendar</a>
+          <p class="text-sm text-ink-muted">Google Calendar: <em>Other calendars → + → From URL</em>, then paste the link. Calendars refresh every few hours.</p>
+          <p class="rounded-xl bg-warning-50 px-4 py-3 text-sm text-warning-text">Keep this link to yourself: anyone who has it can see your session titles. If it leaks, make a new one.</p>
+          <div class="flex flex-wrap gap-2">
+            <form method="post" action="{% url 'learning:private_link' 'calendar' %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}#calendar"><button type="submit" class="btn-secondary">Make a new link</button></form>
+            <form method="post" action="{% url 'learning:private_link' 'calendar' %}">{% csrf_token %}<input type="hidden" name="action" value="revoke"><input type="hidden" name="next" value="{{ request.get_full_path }}#calendar"><button type="submit" class="btn border border-danger-200 text-danger-text hover:bg-danger-50">Turn off</button></form>
+          </div>
+        </div>
+        {% else %}
+        <form method="post" action="{% url 'learning:private_link' 'calendar' %}" class="mt-4">{% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}#calendar"><button type="submit" class="btn-primary">Create my calendar link</button></form>
+        {% endif %}
+      </section>
     </div>
   </div>
 
@@ -104,9 +159,15 @@
       <div class="mt-5 flex flex-wrap gap-2">
         {% if item.session.lesson %}<a href="{{ item.session.lesson.get_absolute_url }}" class="btn-primary">Open lesson</a>{% endif %}
         <form method="post" action="{% url 'learning:session_toggle' item.session.pk %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}"><button type="submit" class="btn-secondary">{% if item.session.is_completed %}Mark not done{% else %}Mark done{% endif %}</button></form>
+        <a href="{% url 'learning:session_edit' item.session.pk %}" class="btn-secondary">Edit</a>
         <form method="post" action="{% url 'learning:session_delete' item.session.pk %}">{% csrf_token %}<button type="submit" class="btn border border-danger-200 text-danger-text hover:bg-danger-50">Delete</button></form>
         <button type="button" class="btn ml-auto text-slate-600" @click="selected = null">Close</button>
       </div>
+      {% if item.session.series %}
+      <form method="post" action="{% url 'learning:session_delete' item.session.pk %}" class="mt-3 border-t border-surface-border pt-3 text-sm text-ink-muted">{% csrf_token %}<input type="hidden" name="scope" value="future">
+        {% include "components/icon.html" with name="refresh" class="inline h-4 w-4" stroke="2" %} Part of a repeating series. <button type="submit" class="font-semibold text-danger-text">Delete this and later sessions</button>
+      </form>
+      {% endif %}
     </div>
   </div>
   {% endfor %}{% endfor %}
@@ -120,6 +181,7 @@
       <div class="grid gap-4 sm:grid-cols-2">{% include "components/field.html" with field=form.subject %}{% include "components/field.html" with field=form.kind %}</div>
       {% include "components/field.html" with field=form.lesson %}
       <div class="grid gap-4 sm:grid-cols-3">{% include "components/field.html" with field=form.date %}{% include "components/field.html" with field=form.start_time %}{% include "components/field.html" with field=form.duration_minutes %}</div>
+      {% include "learning/_repeat_fields.html" with form=form %}
       <div class="flex justify-end gap-2"><button type="button" class="btn-secondary" @click="adding = false">Cancel</button><button type="submit" class="btn-primary">Add session</button></div>
     </form>
   </div>

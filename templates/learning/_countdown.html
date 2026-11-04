@@ -1,0 +1,23 @@
+{# Exam countdown. Needs `countdown` (apps.learning.motivation.exam_countdown). `compact` for the dashboard strip. #}
+{% if countdown.past %}
+<p class="text-[15px] text-slate-700">Your exam date ({{ countdown.date|date:"j F Y" }}) has passed. Well done for getting there — set your next exam date when you know it.</p>
+{% elif countdown.is_today %}
+<p class="text-lg font-bold text-navy">Your GCE exams begin today. Good luck — trust your preparation.</p>
+{% else %}
+<div class="flex flex-wrap items-end gap-x-6 gap-y-2">
+  <p><span class="text-[34px] font-bold leading-none text-navy">{{ countdown.days_left }}</span> <span class="text-[15px] text-ink-muted">day{{ countdown.days_left|pluralize }} to your GCE exams</span></p>
+  {% if countdown.total %}
+  <p class="text-[15px] text-ink-muted"><strong class="text-ink-heading">{{ countdown.remaining }}</strong> of {{ countdown.total }} lesson{{ countdown.total|pluralize }} left in your plan</p>
+  {% endif %}
+</div>
+{% if countdown.finished %}
+<p class="mt-3 rounded-xl bg-success-50 px-4 py-3 text-[15px] text-success-text">You’ve finished every lesson in your plan. Use the time left for practice and revision.</p>
+{% elif countdown.total %}
+<p class="mt-3 rounded-xl bg-surface-bg px-4 py-3 text-[15px] leading-relaxed text-slate-700">
+  Aim for about <strong>{{ countdown.per_week }} lesson{{ countdown.per_week|pluralize }} a week</strong> (≈ {{ countdown.per_day }} a day) to finish by {{ countdown.target_date|date:"j M" }}{% if countdown.buffer_days %}, leaving two weeks for revision{% endif %}.
+  {% if not compact %}<span class="mt-1 block text-sm {% if countdown.on_track %}text-success-text{% else %}text-warning-text{% endif %}">{% if countdown.on_track %}Your pace over the last two weeks ({{ countdown.recent_per_week }} a week) keeps you on track.{% else %}Lately you’ve done {{ countdown.recent_per_week }} a week — a few short extra sessions will close the gap.{% endif %}</span>{% endif %}
+</p>
+{% else %}
+<p class="mt-3 text-sm text-ink-muted">Add subjects to your plan to see the pace you need.</p>
+{% endif %}
+{% endif %}

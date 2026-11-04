@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from .models import DailyActivity, Enrollment, LessonNote, LessonProgress, SavedLesson, StudySession
+from .models import (DailyActivity, Enrollment, LessonNote, LessonProgress, PrivateLink, RestDay, SavedLesson,
+                     StudySession)
 
 
 @admin.register(Enrollment)
@@ -33,3 +34,24 @@ class StudySessionAdmin(admin.ModelAdmin):
 admin.site.register(DailyActivity, list_display=("user", "date", "seconds"), list_filter=("date",))
 admin.site.register(SavedLesson, list_display=("user", "lesson", "created_at"))
 admin.site.register(LessonNote, list_display=("user", "lesson", "video_time", "created_at"))
+
+
+@admin.register(RestDay)
+class RestDayAdmin(admin.ModelAdmin):
+    list_display = ("user", "date", "created_at")
+    list_filter = ("date",)
+    search_fields = ("user__email",)
+
+
+@admin.register(PrivateLink)
+class PrivateLinkAdmin(admin.ModelAdmin):
+    """Tokens stay hidden; staff can only see that a link exists and revoke it (delete)."""
+
+    list_display = ("user", "purpose", "created_at", "last_used_at")
+    list_filter = ("purpose",)
+    search_fields = ("user__email",)
+    exclude = ("token",)
+    readonly_fields = ("user", "purpose", "created_at", "last_used_at")
+
+    def has_add_permission(self, request):
+        return False

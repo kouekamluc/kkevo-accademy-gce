@@ -1,3 +1,4 @@
+import secrets
 from datetime import timedelta
 
 from django.conf import settings
@@ -126,6 +127,10 @@ class StudySession(models.Model):
         default=30, validators=[MinValueValidator(5), MaxValueValidator(480)]
     )
     completed_at = models.DateTimeField(null=True, blank=True)
+    series = models.UUIDField(
+        null=True, blank=True, db_index=True, editable=False,
+        help_text="Shared by sessions created together as a repeating series.",
+    )
 
     class Meta:
         ordering = ["starts_at"]
@@ -144,3 +149,62 @@ class StudySession(models.Model):
     def clean(self):
         if self.lesson_id and self.subject_id and self.lesson.course.offering.subject_id != self.subject_id:
             raise ValidationError({"lesson": "This lesson belongs to a different subject."})
+
+
+class RestDay(models.Model):
+    """A planned day off. It neither adds to nor breaks the learning streak (one per week)."""
+
+    PER_WEEK = 1
+
+    user = models.ForeignKey(USER, on_delete=models.CASCADE, related_name="rest_days")
+    date = models.DateField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-date"]
+        constraints = [models.UniqueConstraint(fields=["user", "date"], name="unique_rest_day")]
+
+    def __str__(self):
+        return f"{self.user} rests {self.date}"
+
+
+class LinkPurpose(models.TextChoices):
+    CALENDAR = "calendar", "Calendar feed"
+    REPORT = "report", "Weekly report"
+
+
+class PrivateLink(models.Model):
+    """A secret, revocable URL token (calendar feed, weekly report for a parent or guardian)."""
+
+    user = models.ForeignKey(USER, on_delete=models.CASCADE, related_name="private_links")
+    purpose = models.CharField(max_length=10, choices=LinkPurpose.choices)
+    token = models.CharField(max_length=64, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    last_used_at = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=["user", "purpose"], name="unique_private_link")]
+
+    def __str__(self):
+        return f"{self.get_purpose_display()} link for {self.user}"
+
+    @staticmethod
+    def new_token():
+        return secrets.token_urlsafe(32)
+
+    @classmethod
+    def issue(cls, user, purpose):
+        """Create the link, or replace its token (the old URL stops working)."""
+        link, _ = cls.objects.update_or_create(user=user, purpose=purpose, defaults={"token": cls.new_token(),
+                                                                                    "last_used_at": None})
+        return link
+
+    @classmethod
+    def resolve(cls, token, purpose):
+        if not token or len(token) > 64:
+            return None
+        link = cls.objects.filter(token=token, purpose=purpose).select_related("user").first()
+        if link is None or not link.user.is_active:
+            return None
+        cls.objects.filter(pk=link.pk).update(last_used_at=timezone.now())
+        return link
