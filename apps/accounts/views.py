@@ -1,20 +1,28 @@
+import json
+
 from django.contrib import messages
-from django.contrib.auth import login, update_session_auth_hash
+from django.contrib.auth import login, logout, update_session_auth_hash
 from django.contrib.auth import views as auth_views
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import redirect, render
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.utils import timezone
 from django.utils.http import url_has_allowed_host_and_scheme
 from django.views.decorators.http import require_POST
 
 from .forms import (
     AccountDetailsForm,
+    DeleteAccountForm,
     EmailAuthenticationForm,
     RegistrationForm,
     StudyPreferencesForm,
     StyledPasswordChangeForm,
+    StyledPasswordResetForm,
+    StyledSetPasswordForm,
 )
+from .privacy import export_user_data
+from .ratelimit import login_limiter
 from .utils import get_profile
 
 
@@ -51,6 +59,57 @@ class LoginView(auth_views.LoginView):
     template_name = "accounts/login.html"
     authentication_form = EmailAuthenticationForm
     redirect_authenticated_user = True
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        if not form.cleaned_data.get("remember_me"):
+            self.request.session.set_expiry(0)  # ends when the browser closes
+        return response
+
+    def form_invalid(self, form):
+        response = super().form_invalid(form)
+        if form.rate_limited:
+            response.status_code = 429
+        return response
+
+
+# ---------- password reset by email ----------
+
+class PasswordResetView(auth_views.PasswordResetView):
+    template_name = "accounts/password_reset_form.html"
+    email_template_name = "accounts/email/password_reset_email.txt"
+    subject_template_name = "accounts/email/password_reset_subject.txt"
+    form_class = StyledPasswordResetForm
+    success_url = reverse_lazy("accounts:password_reset_done")
+
+    def get_form_kwargs(self):
+        return {**super().get_form_kwargs(), "request": self.request}
+
+    def form_invalid(self, form):
+        response = super().form_invalid(form)
+        if any(e.code == "rate_limited" for e in form.errors.as_data().get("email", [])):
+            response.status_code = 429
+        return response
+
+
+class PasswordResetDoneView(auth_views.PasswordResetDoneView):
+    template_name = "accounts/password_reset_done.html"
+
+
+class PasswordResetConfirmView(auth_views.PasswordResetConfirmView):
+    template_name = "accounts/password_reset_confirm.html"
+    form_class = StyledSetPasswordForm
+    post_reset_login = True
+    post_reset_login_backend = "django.contrib.auth.backends.ModelBackend"
+    success_url = reverse_lazy("accounts:password_reset_complete")
+
+    def form_valid(self, form):
+        login_limiter(self.request, form.user.email).reset()
+        return super().form_valid(form)
+
+
+class PasswordResetCompleteView(auth_views.PasswordResetCompleteView):
+    template_name = "accounts/password_reset_complete.html"
 
 
 @login_required
@@ -105,3 +164,30 @@ def toggle_low_data(request):
         return render(request, "components/low_data_toggle.html", {"student": student, "next_url": next_url})
     return redirect(_safe_next(request, reverse("dashboard:home")))
 
+
+
+# ---------- privacy: download and delete ----------
+
+@login_required
+def data_export(request):
+    """Everything we store about the student, as a JSON file they can keep."""
+    payload = json.dumps(export_user_data(request.user), indent=2, ensure_ascii=False, default=str)
+    response = HttpResponse(payload, content_type="application/json; charset=utf-8")
+    stamp = timezone.localdate().isoformat()
+    response["Content-Disposition"] = f'attachment; filename="gce-academy-my-data-{stamp}.json"'
+    response["Cache-Control"] = "no-store"
+    return response
+
+
+@login_required
+def delete_account(request):
+    user = request.user
+    if user.is_staff:
+        messages.error(request, "Staff accounts can only be removed by an administrator.")
+        return redirect("accounts:profile")
+    form = DeleteAccountForm(user, _post_data(request))
+    if request.method == "POST" and form.is_valid():
+        logout(request)
+        user.delete()  # cascades to profile, enrolments, progress, notes, plans and attempts
+        return redirect("accounts:account_deleted")
+    return render(request, "accounts/delete_account.html", {"form": form, "nav_active": "settings"})

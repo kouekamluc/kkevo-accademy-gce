@@ -129,3 +129,36 @@ if not DEBUG:
     SECURE_HSTS_SECONDS = env.int("DJANGO_HSTS_SECONDS", default=0)
     SECURE_CONTENT_TYPE_NOSNIFF = True
 
+
+# Email (password reset). Printed to the console in development; SMTP otherwise.
+EMAIL_BACKEND = env(
+    "DJANGO_EMAIL_BACKEND",
+    default="django.core.mail.backends.console.EmailBackend" if DEBUG else "django.core.mail.backends.smtp.EmailBackend",
+)
+EMAIL_HOST = env("EMAIL_HOST", default="localhost")
+EMAIL_PORT = env.int("EMAIL_PORT", default=587)
+EMAIL_HOST_USER = env("EMAIL_HOST_USER", default="")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD", default="")
+EMAIL_USE_TLS = env.bool("EMAIL_USE_TLS", default=True)
+EMAIL_USE_SSL = env.bool("EMAIL_USE_SSL", default=False)
+EMAIL_TIMEOUT = 15
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="GCE Learning Academy <no-reply@localhost>")
+SERVER_EMAIL = DEFAULT_FROM_EMAIL
+PASSWORD_RESET_TIMEOUT = 60 * 60 * 24  # reset links work for one day
+
+# Cache: per-process memory by default. Use a shared cache (CACHE_URL, e.g.
+# dbcache://django_cache or redis://...) when running several workers so the
+# login rate limit is shared between them.
+CACHES = {"default": env.cache("CACHE_URL", default="locmemcache://")}
+
+# Login brute-force protection (per email + IP) and password-reset request limit (per IP).
+LOGIN_RATE_LIMIT_ATTEMPTS = env.int("LOGIN_RATE_LIMIT_ATTEMPTS", default=5)
+LOGIN_RATE_LIMIT_WINDOW = 15 * 60
+PASSWORD_RESET_RATE_LIMIT = env.int("PASSWORD_RESET_RATE_LIMIT", default=5)
+PASSWORD_RESET_RATE_LIMIT_WINDOW = 60 * 60
+# Number of reverse proxies in front of the app that append to X-Forwarded-For.
+# 0 = use REMOTE_ADDR only (never trust a client-supplied header).
+TRUSTED_PROXY_COUNT = env.int("DJANGO_TRUSTED_PROXY_COUNT", default=0)
+
+# "Keep me signed in": ticked = this many seconds; unticked = until the browser closes.
+SESSION_COOKIE_AGE = env.int("DJANGO_SESSION_COOKIE_AGE", default=60 * 60 * 24 * 30)

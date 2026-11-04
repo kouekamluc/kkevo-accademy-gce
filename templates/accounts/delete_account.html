@@ -1,0 +1,19 @@
+{% extends "layouts/app.html" %}
+{% block title %}Delete account — GCE Learning Academy{% endblock %}
+{% block header_left %}<nav aria-label="Breadcrumb" class="text-[15px]"><a href="{% url 'accounts:profile' %}">Profile &amp; settings</a> <span class="mx-1.5 text-ink-muted">/</span> <span class="text-ink-heading">Delete account</span></nav>{% endblock %}
+{% block content %}
+<section class="card mx-auto mt-2 max-w-[520px] p-6 shadow-card nav:p-8">
+  <span class="icon-tile bg-danger-50 text-danger-text">{% include "components/icon.html" with name="warning" class="h-5 w-5" %}</span>
+  <h1 class="mt-4 text-[26px] font-bold tracking-[-.02em] text-navy">Delete your account?</h1>
+  <p class="mt-2 text-[15px] leading-relaxed text-slate-600">This permanently deletes your account and all your learning data: subjects, lesson progress, notes, saved lessons, study plan and practice results. It can’t be undone.</p>
+  <p class="mt-3 text-sm text-slate-600">Want a copy first? <a href="{% url 'accounts:data_export' %}" class="font-semibold" download>Download my data</a></p>
+  <form method="post" class="mt-6 flex flex-col gap-5" novalidate>
+    {% csrf_token %}
+    {% include "accounts/_password_input.html" with field=form.password autocomplete="current-password" %}
+    <div class="flex flex-wrap gap-3">
+      <button type="submit" class="btn bg-danger-text text-white hover:bg-red-800 hover:text-white focus-visible:ring-danger-200">Delete my account</button>
+      <a href="{% url 'accounts:profile' %}" class="btn-secondary">Keep my account</a>
+    </div>
+  </form>
+</section>
+{% endblock %}

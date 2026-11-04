@@ -9,10 +9,19 @@
     {% csrf_token %}
     <input type="hidden" name="next" value="{{ next }}">
     {% if form.non_field_errors %}
-      <div class="rounded-input border border-danger-200 bg-danger-50 px-4 py-3 text-sm font-medium text-danger-text" role="alert">{{ form.non_field_errors.0 }}</div>
+      <div class="rounded-input border border-danger-200 bg-danger-50 px-4 py-3 text-sm font-medium text-danger-text" role="alert">
+        {{ form.non_field_errors.0 }}
+        {% if form.rate_limited %}<a href="{% url 'accounts:password_reset' %}" class="mt-1 block font-semibold underline">Reset your password</a>{% endif %}
+      </div>
     {% endif %}
     {% include "components/field.html" with field=form.username %}
-    {% include "components/field.html" with field=form.password %}
+    {% url 'accounts:password_reset' as reset_url %}
+    {% include "accounts/_password_input.html" with field=form.password autocomplete="current-password" reset_url=reset_url %}
+    <label class="flex min-h-touch cursor-pointer items-start gap-3">
+      <input type="checkbox" name="{{ form.remember_me.html_name }}" id="{{ form.remember_me.id_for_label }}" {% if form.remember_me.value %}checked{% endif %}
+             aria-describedby="{{ form.remember_me.auto_id }}_helptext" class="mt-0.5 h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary-300">
+      <span><span class="block text-sm font-semibold text-ink-heading">{{ form.remember_me.label }}</span><span id="{{ form.remember_me.auto_id }}_helptext" class="block text-[13px] text-ink-muted">{{ form.remember_me.help_text }}</span></span>
+    </label>
     <button type="submit" class="btn-primary btn-lg mt-1 w-full">Log In</button>
   </form>
 </div>
