@@ -1,0 +1,12 @@
+{% load lesson_tags %}{% if resume %}
+<div x-show="resume" class="mt-6 flex flex-col gap-3 rounded-card border border-primary-200 bg-primary-50 px-5 py-4 sm:flex-row sm:items-center sm:justify-between print:hidden" role="region" aria-label="Continue where you stopped">
+  <div class="flex items-center gap-3">
+    <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary text-white">{% include "components/icon.html" with name="bookmark" class="h-[18px] w-[18px]" stroke="2" %}</span>
+    <div class="text-sm text-slate-700">Welcome back. You stopped at <strong class="text-ink-heading">{{ resume.label }}</strong>{% if progress.percent %} · {{ progress.percent }}% read{% endif %}.</div>
+  </div>
+  <div class="flex shrink-0 items-center gap-2">
+    <button type="button" @click="dismissResume()" class="h-11 rounded-btn px-3 text-sm font-medium text-slate-600 hover:bg-white">Start from the top</button>
+    <a href="#{{ resume.anchor }}" @click.prevent="continueReading()" class="btn-primary h-11">Continue from {{ resume.label|truncatechars:32 }} {% include "components/icon.html" with name="arrow" class="h-4 w-4" stroke="2.2" %}</a>
+  </div>
+</div>
+{% endif %}

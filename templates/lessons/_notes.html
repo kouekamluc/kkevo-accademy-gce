@@ -1,6 +1,23 @@
 {% load lesson_tags %}{% if notes %}
 <ul class="flex flex-col gap-3">
-  {% for note in notes %}<li class="rounded-card border border-surface-border bg-white px-5 py-4"><div class="text-xs font-semibold text-primary-700">{% if note.video_time is not None %}{{ note.video_time|mmss }}{% else %}Note{% endif %}</div><p class="mt-1 whitespace-pre-line text-[15px] text-slate-700">{{ note.body }}</p></li>{% endfor %}
+  {% for note in notes %}
+  <li class="rounded-card border border-surface-border bg-white px-5 py-4">
+    <div class="flex items-start justify-between gap-3">
+      <div class="text-xs font-semibold text-primary-700">
+        {% if note.video_time is not None %}{{ note.video_time|mmss }}
+        {% elif note.section_anchor %}<a href="#{{ note.section_anchor }}" @click="notesOpen = false" class="hover:underline">{{ note.section_label|default:"Go to section" }}</a>
+        {% else %}{{ note.section_label|default:"Note" }}{% endif %}
+      </div>
+      <form method="post" action="{% url 'courses:lesson_note_delete' lesson.course.slug lesson.pk note.pk %}"
+            hx-post="{% url 'courses:lesson_note_delete' lesson.course.slug lesson.pk note.pk %}" hx-target="#note-list" hx-swap="innerHTML"
+            hx-confirm="Delete this note?" class="print:hidden">
+        {% csrf_token %}
+        <button type="submit" class="-m-2 rounded p-2 text-xs font-medium text-ink-muted hover:text-danger-text" aria-label="Delete note from {{ note.created_at|date:'j M' }}">Delete</button>
+      </form>
+    </div>
+    <p class="mt-1 whitespace-pre-line text-[15px] text-slate-700">{{ note.body }}</p>
+  </li>
+  {% endfor %}
 </ul>
-<span hx-swap-oob="innerHTML:#note-count">{{ notes|length }}</span>
-{% else %}<p class="text-sm text-ink-muted">No notes yet. Add one while you watch.</p>{% endif %}
+{% else %}<p class="text-sm text-ink-muted">No notes yet. Add one while you {% if lesson.lesson_type == "video" %}watch{% else %}read{% endif %}{% if lesson.lesson_type != "video" %} — it remembers the section you were on{% endif %}.</p>{% endif %}
+{% if oob %}<span hx-swap-oob="innerHTML:#note-count">{{ notes|length }}</span>{% endif %}
