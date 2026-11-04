@@ -1,0 +1,31 @@
+{% extends "layouts/quiz.html" %}
+{% load lesson_tags %}
+{% block title %}Review results — Review my mistakes{% endblock %}
+{% block close_url %}{% url 'practice:index' %}{% endblock %}
+{% block kicker %}Spaced review{% endblock %}
+{% block quiz_title %}Review my mistakes{% endblock %}
+{% block progress %}100{% endblock %}
+{% block content %}
+<section class="rounded-panel border border-surface-border bg-white p-6 text-center nav:p-10">
+  <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-success-50 text-success-text">{% include "components/icon.html" with name="check" class="h-8 w-8" stroke="3" %}</div>
+  <h1 class="mt-5 text-[26px] font-bold text-navy">Review done</h1>
+  <p class="mt-2 text-slate-600">You got <strong class="text-ink-heading">{{ correct }} of {{ total }}</strong> right this time.{% if cleared %} {{ cleared }} question{{ cleared|pluralize }} cleared from your list.{% endif %}</p>
+  <p class="mt-1 text-sm text-ink-muted">Every mistake you revisit makes the next exam question easier.{% if correct < total %} The ones you missed come back tomorrow.{% endif %}</p>
+  <div class="mt-6 flex flex-wrap justify-center gap-3">
+    {% if review.due %}<form method="post" action="{% url 'practice:review_start' %}">{% csrf_token %}<button type="submit" class="btn-secondary h-12">Review {{ review.due }} more</button></form>{% endif %}
+    <a href="{% url 'practice:index' %}" class="btn-primary h-12">Back to practice</a>
+  </div>
+</section>
+<section class="mt-6 rounded-panel border border-surface-border bg-white p-6 nav:p-8" aria-labelledby="review-heading">
+  <h2 id="review-heading" class="text-lg font-bold">What happens next</h2>
+  <ol class="mt-4 divide-y divide-surface-border">
+    {% for row in rows %}{% with a=row.answer card=row.card %}
+    <li><a href="{% url 'practice:review_question' session.pk forloop.counter %}" class="flex items-start gap-4 py-4 text-ink-heading hover:text-ink-heading">
+      <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-semibold {% if a.is_correct %}bg-success text-white{% else %}border-[1.5px] border-dashed border-red-400 text-danger-text{% endif %}">{{ forloop.counter }}</span>
+      <span class="flex-1"><span class="block text-[15px]">{{ row.question.prompt|inline }}</span>
+        <span class="mt-1 block text-sm text-ink-muted">{% if card.retired_at %}<span class="font-semibold text-success-text">Cleared</span>{% elif card %}Next review {{ card.due_on|date:"l j M" }}{% endif %}</span></span>
+    </a></li>
+    {% endwith %}{% endfor %}
+  </ol>
+</section>
+{% endblock %}

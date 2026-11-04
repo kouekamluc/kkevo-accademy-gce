@@ -1,0 +1,42 @@
+{% extends "layouts/app.html" %}
+{% load lesson_tags %}
+{% block title %}Review my mistakes — Practice{% endblock %}
+{% block content %}
+<div class="mx-auto flex max-w-[760px] flex-col gap-6 nav:mt-2">
+  <a href="{% url 'practice:index' %}" class="inline-flex items-center gap-1 text-sm font-semibold text-primary">{% include "components/icon.html" with name="chevron-left" class="h-4 w-4" stroke="2" %}Practice</a>
+  <section class="card p-6 shadow-card nav:p-10">
+    <div class="icon-tile accent-amber">{% include "components/icon.html" with name="refresh" class="h-5 w-5" stroke="2" %}</div>
+    <h1 class="mt-4 text-[28px] font-bold tracking-[-.02em] text-navy">Review my mistakes</h1>
+    <p class="mt-2 text-slate-600">Questions you missed (or only guessed) come back after {{ intervals.0 }} day, then {{ intervals.1 }} days, then {{ intervals.2 }} days. Get one right each time and it leaves your list. Miss it again and it starts over, no harm done.</p>
+    {% if review.open_session %}
+    <form method="post" action="{% url 'practice:review_start' %}" class="mt-6 flex flex-wrap gap-3">{% csrf_token %}
+      <button type="submit" class="btn-primary h-12 px-7 text-base">Resume review {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</button>
+      {% if review.due %}<button type="submit" name="restart" value="1" class="btn-secondary h-12">Start a fresh review</button>{% endif %}
+    </form>
+    {% elif review.due %}
+    <form method="post" action="{% url 'practice:review_start' %}" class="mt-6">{% csrf_token %}
+      <button type="submit" class="btn-primary h-12 px-7 text-base">Review {% if review.due > session_size %}{{ session_size }} of {{ review.due }}{% else %}{{ review.due }}{% endif %} question{{ review.due|pluralize }} {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</button>
+    </form>
+    {% else %}
+    <div class="mt-6 rounded-card bg-surface-bg p-5">
+      <p class="font-semibold">Nothing due today.</p>
+      <p class="mt-1 text-sm text-slate-600">{% if review.next_due %}Next review: {{ review.next_due|date:"l j F" }} ({{ review.upcoming }} question{{ review.upcoming|pluralize }} scheduled).{% else %}When you miss a question in practice, it will come back here the next day.{% endif %}</p>
+    </div>
+    {% endif %}
+  </section>
+  {% if due_cards %}
+  <section class="card p-6 nav:p-8" aria-labelledby="due-heading">
+    <h2 id="due-heading" class="text-lg font-bold">Due today</h2>
+    <ul class="mt-3 divide-y divide-surface-border">
+      {% for card in due_cards %}
+      <li class="flex items-start gap-3 py-3">
+        {% include "components/subject_icon.html" with subject=card.question.practice_set.subject %}
+        <div class="min-w-0 flex-1"><p class="text-[15px]">{{ card.question.prompt|truncatechars:110|inline }}</p>
+          <p class="mt-0.5 text-[13px] text-ink-muted">{{ card.question.practice_set.topic.title }}{% if card.reviews %} · reviewed {{ card.reviews }} time{{ card.reviews|pluralize }}{% endif %}</p></div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}
