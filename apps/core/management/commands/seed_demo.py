@@ -199,6 +199,27 @@ PHYSICS_QUESTIONS = [
       ("Watt (W)", False, "The watt is the unit of power."), ("Kilogram (kg)", False, "The kilogram is the unit of mass.")]),
 ]
 
+# Sample hints for PHYSICS_QUESTIONS, in the same order (sample data, not official content).
+PHYSICS_HINTS = [
+    r"Force depends on acceleration, so find the acceleration first: $a = (v - u) \div t$.",
+    r"Start from $F = ma$ and rearrange it to get $a$ on its own.",
+    r"The book is not moving. What does Newton’s first law say about the resultant force then?",
+    r"Write $a = F \div m$. Keep $F$ the same and double $m$: what happens to $a$?",
+    r"It is named after the scientist whose three laws you are studying.",
+]
+
+# A small sample set with typed numeric answers (sample data, not official content).
+PHYSICS_NUMERIC_QUESTIONS = [
+    (r"A resultant force of $12\ \text{N}$ acts on a $4\ \text{kg}$ box. What is its acceleration?", 3, 0.05, "m/s²",
+     r"Use $a = F \div m$.", [{"title": "Rearrange and substitute", "math": r"a = F \div m = 12 \div 4 = 3\ \text{m/s}^2", "final": True}]),
+    (r"A $0.5\ \text{kg}$ ball accelerates at $8\ \text{m/s}^2$. What resultant force acts on it?", 4, 0.05, "N",
+     "Multiply the mass by the acceleration.", [{"title": "Apply $F = ma$", "math": r"F = 0.5 \times 8 = 4\ \text{N}", "final": True}]),
+    (r"A trolley speeds up from $2\ \text{m/s}$ to $5\ \text{m/s}$ in $2\ \text{s}$. What is its acceleration?", 1.5, 0.05, "m/s²",
+     "Acceleration is the change in velocity divided by the time taken.",
+     [{"title": "Change in velocity", "math": r"v - u = 5 - 2 = 3\ \text{m/s}"},
+      {"title": "Divide by the time", "math": r"a = 3 \div 2 = 1.5\ \text{m/s}^2", "final": True}]),
+]
+
 
 class Command(BaseCommand):
     help = "Load (or remove) the sample content from the design mockups. Not official syllabus content."
@@ -311,12 +332,31 @@ class Command(BaseCommand):
         practice_set, created = PracticeSet.objects.get_or_create(
             topic=newton.topic, title="Physics: Newton’s Laws", defaults=dict(lesson=newton, status="published"))
         if not created:
+            self.seed_practice_extras(newton, practice_set)
             return
         for q_i, (prompt, concept, skill, feedback, steps, choices) in enumerate(PHYSICS_QUESTIONS):
             q = Question.objects.create(practice_set=practice_set, prompt=prompt, concept=concept, skill=skill,
                                         feedback=feedback, solution_steps=steps, order=q_i)
             Choice.objects.bulk_create([Choice(question=q, text=t, is_correct=ok, why_wrong=why, order=c_i)
                                         for c_i, (t, ok, why) in enumerate(choices)])
+        self.seed_practice_extras(newton, practice_set)
+
+    def seed_practice_extras(self, newton, practice_set):
+        """Sample hints and a numeric-answer set (added with the practice improvements)."""
+        from apps.practice.models import PracticeSet, Question
+
+        for question, hint in zip(practice_set.questions.order_by("order", "pk"), PHYSICS_HINTS):
+            if not question.hint:
+                Question.objects.filter(pk=question.pk).update(hint=hint)
+        numeric_set, created = PracticeSet.objects.get_or_create(
+            topic=newton.topic, title="Physics: Newton’s Laws (typed answers)",
+            defaults=dict(lesson=newton, status="published", order=1))
+        if created:
+            for q_i, (prompt, value, tolerance, unit, hint, steps) in enumerate(PHYSICS_NUMERIC_QUESTIONS):
+                Question.objects.create(practice_set=numeric_set, kind="numeric", prompt=prompt, numeric_answer=value,
+                                        tolerance=tolerance, unit=unit, hint=hint, concept="Newton’s second law",
+                                        skill="Calculation", feedback="Right value, right unit.",
+                                        solution_steps=steps, order=q_i)
 
     # ------------------------------------------------------------------ student
     def seed_student(self):
