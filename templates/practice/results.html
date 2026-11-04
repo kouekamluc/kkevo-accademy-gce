@@ -1,0 +1,29 @@
+{% extends "layouts/quiz.html" %}
+{% load lesson_tags %}
+{% block title %}Results — {{ practice_set.title }}{% endblock %}
+{% block progress %}100{% endblock %}
+{% block content %}
+<section class="rounded-panel border border-surface-border bg-white p-6 text-center nav:p-10">
+  <div class="mx-auto flex h-[120px] w-[120px] items-center justify-center rounded-full" style="background: conic-gradient({% if attempt.score >= 80 %}#10B981{% elif attempt.score >= 60 %}#2563EB{% else %}#F59E0B{% endif %} 0 {{ attempt.score }}%, #E2E8F0 {{ attempt.score }}% 100%)">
+    <div class="flex h-[96px] w-[96px] flex-col items-center justify-center rounded-full bg-white"><span class="text-3xl font-bold">{{ attempt.score }}%</span></div>
+  </div>
+  <h1 class="mt-5 text-[26px] font-bold text-navy">{% if attempt.score >= 80 %}Great work!{% elif attempt.score >= 60 %}Good effort{% else %}Keep practising{% endif %}</h1>
+  <p class="mt-2 text-slate-600">You got <strong class="text-ink-heading">{{ attempt.correct_count }} of {{ attempt.total }}</strong> questions right.{% if attempt.score < 60 %} Re-read the lesson, then try again.{% endif %}</p>
+  <div class="mt-6 flex flex-wrap justify-center gap-3">
+    <form method="post" action="{% url 'practice:start' practice_set.pk %}">{% csrf_token %}<input type="hidden" name="restart" value="1"><button type="submit" class="btn-secondary h-12">{% include "components/icon.html" with name="refresh" class="h-[18px] w-[18px]" stroke="2" %}Try again</button></form>
+    {% if practice_set.lesson %}<a href="{{ practice_set.lesson.get_absolute_url }}" class="btn-secondary h-12">Back to the lesson</a>{% endif %}
+    <a href="{% url 'practice:index' %}" class="btn-primary h-12">More practice</a>
+  </div>
+</section>
+<section class="mt-6 rounded-panel border border-surface-border bg-white p-6 nav:p-8" aria-labelledby="review-heading">
+  <h2 id="review-heading" class="text-lg font-bold">Review your answers</h2>
+  <ol class="mt-4 divide-y divide-surface-border">
+    {% for a in answers %}
+    <li><a href="{% url 'practice:question' attempt.pk forloop.counter %}" class="flex items-start gap-4 py-4 text-ink-heading hover:text-ink-heading">
+      <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-semibold {% if a.is_correct %}bg-success text-white{% else %}border-[1.5px] border-dashed border-red-400 text-danger-text{% endif %}">{{ forloop.counter }}</span>
+      <span class="flex-1"><span class="block text-[15px]">{{ a.question.prompt|inline }}</span><span class="mt-1 block text-sm {% if a.is_correct %}text-success-text{% else %}text-danger-text{% endif %}">Your answer: {{ a.choice.text|inline }}</span></span>
+    </a></li>
+    {% endfor %}
+  </ol>
+</section>
+{% endblock %}

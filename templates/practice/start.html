@@ -1,0 +1,14 @@
+{% extends "layouts/app.html" %}
+{% block title %}{{ practice_set.title }} — Practice{% endblock %}
+{% block content %}
+<section class="card mx-auto mt-2 max-w-[640px] p-6 shadow-card nav:p-10">
+  <div class="flex items-center gap-3">{% include "components/subject_icon.html" with subject=practice_set.subject %}<span class="text-sm text-ink-muted">{{ practice_set.subject.name }} · {{ practice_set.topic.title }}</span></div>
+  <h1 class="mt-4 text-[28px] font-bold tracking-[-.02em] text-navy">{{ practice_set.title }}</h1>
+  <p class="mt-2 text-slate-600">{{ question_count }} question{{ question_count|pluralize }}. Each answer shows a full worked solution.</p>
+  {% if best is not None %}<p class="mt-2 text-sm text-ink-muted">Your best score: <strong class="text-ink-heading">{{ best }}%</strong></p>{% endif %}
+  <form method="post" action="{% url 'practice:start' practice_set.pk %}" class="mt-6 flex flex-wrap gap-3">{% csrf_token %}
+    <button type="submit" class="btn-primary h-12 px-7 text-base">{% if ongoing %}Resume practice{% else %}Start practice{% endif %} {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</button>
+    {% if practice_set.lesson %}<a href="{{ practice_set.lesson.get_absolute_url }}" class="btn-secondary h-12">Review the lesson first</a>{% endif %}
+  </form>
+</section>
+{% endblock %}

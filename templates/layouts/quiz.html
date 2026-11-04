@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% comment %}Focused quiz shell (mockup 09): close button, set title, question counter, progress bar.{% endcomment %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'vendor/katex/katex.min.css' %}">
+<script defer src="{% static 'vendor/katex/katex.min.js' %}"></script>
+<script defer src="{% static 'vendor/katex/auto-render.min.js' %}"></script>
+<script src="{% static 'js/lesson.js' %}"></script>
+{% endblock %}
+{% block body %}
+<div class="min-h-screen bg-surface-bg">
+  <header class="border-b border-surface-border bg-white">
+    <div class="mx-auto max-w-[960px] px-4 pt-3 nav:pt-4">
+      <div class="flex items-center gap-4">
+        <a href="{% block close_url %}{% url 'practice:index' %}{% endblock %}" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-btn border border-surface-border text-navy hover:bg-slate-50" aria-label="Close practice">{% include "components/icon.html" with name="close" class="h-5 w-5" stroke="2" %}</a>
+        <div class="min-w-0 flex-1"><div class="text-[13px] text-ink-muted">Practice set</div><div class="truncate font-semibold">{{ practice_set.title }}</div></div>
+        {% block counter %}{% endblock %}
+      </div>
+      <div class="mt-3 h-1.5 overflow-hidden rounded-full bg-surface-border nav:mt-4" aria-hidden="true"><div class="h-full rounded-full bg-primary" style="width: {% block progress %}0{% endblock %}%"></div></div>
+      <div class="h-3 nav:h-4"></div>
+    </div>
+  </header>
+  <main id="main" class="mx-auto max-w-[960px] px-4 pb-16 pt-6 nav:pt-10">
+    {% include "components/messages.html" %}
+    {% block content %}{% endblock %}
+  </main>
+</div>
+{% endblock %}

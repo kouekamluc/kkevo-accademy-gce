@@ -31,7 +31,7 @@ class PracticeSet(OrderedModel, TimeStampedModel):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("practice:start", kwargs={"pk": self.pk})
+        return reverse("practice:set", kwargs={"pk": self.pk})
 
     @property
     def subject(self):
@@ -77,9 +77,6 @@ class Choice(OrderedModel):
     def __str__(self):
         return self.text
 
-    @property
-    def letter(self):
-        return "ABCDEFGH"[self.order % 8] if self.order < 8 else "?"
 
 
 class Attempt(models.Model):

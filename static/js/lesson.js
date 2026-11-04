@@ -86,6 +86,16 @@
     };
   };
 
+  /* Learning-objective checklist remembered on this device. */
+  window.checklist = function (key) {
+    var stored = [];
+    try { stored = JSON.parse(localStorage.getItem(key) || "[]"); } catch (e) {}
+    return {
+      done: stored,
+      save: function () { try { localStorage.setItem(key, JSON.stringify(this.done)); } catch (e) {} },
+    };
+  };
+
   /* Multiple-choice quick check inside a lesson (block type "quiz"). */
   window.quickCheck = function (correct) {
     return {

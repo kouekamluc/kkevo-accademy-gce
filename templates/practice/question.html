@@ -1,0 +1,88 @@
+{% extends "layouts/quiz.html" %}
+{% load lesson_tags %}
+{% block title %}Question {{ number }} of {{ total }} — {{ practice_set.title }}{% endblock %}
+{% block close_url %}{% if practice_set.lesson %}{{ practice_set.lesson.get_absolute_url }}{% else %}{% url 'practice:index' %}{% endif %}{% endblock %}
+{% block counter %}<div class="shrink-0 text-[15px] font-semibold" aria-live="polite">Question {{ number }} <span class="font-normal text-ink-muted">of {{ total }}</span></div>{% endblock %}
+{% block progress %}{{ progress_percent }}{% endblock %}
+{% block content %}
+<section class="grid gap-6 rounded-panel border border-surface-border bg-white p-6 nav:p-10 {% if question.diagram_url %}lg:grid-cols-[1fr_440px]{% endif %}" aria-labelledby="q-prompt">
+  <div>
+    <div class="flex flex-wrap gap-2">
+      {% if question.concept %}<span class="rounded-md bg-primary-50 px-2.5 py-1 text-[13px] font-semibold text-primary-700">{{ question.concept }}</span>{% endif %}
+      {% if question.skill %}<span class="rounded-md bg-slate-100 px-2.5 py-1 text-[13px] font-semibold text-slate-700">{{ question.skill }}</span>{% endif %}
+    </div>
+    <h1 id="q-prompt" class="mt-4 text-xl font-semibold leading-relaxed text-ink-heading nav:text-[26px] nav:leading-[1.5]">{{ question.prompt|inline }}</h1>
+  </div>
+  {% if question.diagram_url %}<img src="{{ question.diagram_url }}" alt="{{ question.diagram_alt }}" loading="lazy" class="w-full rounded-card border border-surface-border bg-surface-bg">{% endif %}
+</section>
+
+<form method="post" class="mt-6" x-data="{ picked: null }">
+  {% csrf_token %}
+  <fieldset {% if answer %}disabled{% endif %}>
+    <legend class="sr-only">Choose an answer</legend>
+    <div class="grid gap-4 sm:grid-cols-2">
+      {% for choice in question.choices.all %}
+      {% with letter="ABCDEFGH"|slice:forloop.counter|last %}
+      {% if answer %}
+        {% if choice.pk == answer.choice_id and answer.is_correct %}
+        <div class="flex min-h-[72px] items-center gap-4 rounded-card border-2 border-success bg-success-50 px-5"><span class="flex h-9 w-9 items-center justify-center rounded-[10px] bg-success-text font-bold text-white">{{ letter }}</span><span class="flex-1 font-math text-2xl text-emerald-900">{{ choice.text|inline }}</span><span class="text-sm font-semibold text-success-text">Your answer</span></div>
+        {% elif choice.pk == answer.choice_id %}
+        <div class="flex min-h-[72px] items-center gap-4 rounded-card border-[1.5px] border-dashed border-red-400 bg-white px-5"><span class="flex h-9 w-9 items-center justify-center rounded-[10px] border-[1.5px] border-red-400 font-bold text-red-800">{{ letter }}</span><span class="flex-1 font-math text-2xl text-red-800">{{ choice.text|inline }}</span><span class="text-sm font-semibold text-danger-text">Your answer</span></div>
+        {% elif choice.is_correct %}
+        <div class="flex min-h-[72px] items-center gap-4 rounded-card border-2 border-success bg-success-50 px-5"><span class="flex h-9 w-9 items-center justify-center rounded-[10px] bg-success-text font-bold text-white">{{ letter }}</span><span class="flex-1 font-math text-2xl text-emerald-900">{{ choice.text|inline }}</span><span class="text-sm font-semibold text-success-text">Correct answer</span></div>
+        {% else %}
+        <div class="flex min-h-[72px] items-center gap-4 rounded-card border border-surface-border bg-slate-50 px-5 opacity-80"><span class="flex h-9 w-9 items-center justify-center rounded-[10px] border-[1.5px] border-slate-300 font-bold text-slate-500">{{ letter }}</span><span class="flex-1 font-math text-2xl text-slate-500">{{ choice.text|inline }}</span></div>
+        {% endif %}
+      {% else %}
+        <label class="block cursor-pointer">
+          <input type="radio" name="choice" value="{{ choice.pk }}" class="peer sr-only" x-model="picked" required>
+          <span class="flex min-h-[72px] items-center gap-4 rounded-card border-[1.5px] border-surface-border bg-white px-5 transition hover:border-primary-300 peer-checked:border-2 peer-checked:border-primary peer-checked:bg-primary-50 peer-focus-visible:ring-4 peer-focus-visible:ring-primary-300 [&_.badge]:border-slate-300 peer-checked:[&_.badge]:border-primary peer-checked:[&_.badge]:bg-primary peer-checked:[&_.badge]:text-white">
+            <span class="badge flex h-9 w-9 items-center justify-center rounded-[10px] border-[1.5px] font-bold text-slate-600">{{ letter }}</span>
+            <span class="flex-1 font-math text-2xl">{{ choice.text|inline }}</span>
+          </span>
+        </label>
+      {% endif %}
+      {% endwith %}
+      {% endfor %}
+    </div>
+  </fieldset>
+
+  {% if answer %}
+  <section class="mt-6 rounded-panel border p-6 nav:p-8 {% if answer.is_correct %}border-success-200 bg-success-50{% else %}border-warning-200 bg-warning-50{% endif %}" role="status" aria-live="polite">
+    <div class="flex items-start gap-4">
+      <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-white {% if answer.is_correct %}bg-success-text{% else %}bg-warning-text{% endif %}">{% if answer.is_correct %}{% include "components/icon.html" with name="check" class="h-6 w-6" stroke="3" %}{% else %}{% include "components/icon.html" with name="refresh" class="h-6 w-6" stroke="2.5" %}{% endif %}</span>
+      <div>
+        <h2 class="text-xl font-bold {% if answer.is_correct %}text-success-text{% else %}text-warning-text{% endif %}">{% if answer.is_correct %}Correct — nicely done.{% else %}Not quite — here’s how to get there.{% endif %}</h2>
+        {% if answer.is_correct and question.feedback %}<p class="mt-1 text-[15px] text-emerald-900">{{ question.feedback|inline }}</p>{% elif not answer.is_correct and answer.choice.why_wrong %}<p class="mt-1 text-[15px] text-amber-900">{{ answer.choice.why_wrong|inline }}</p>{% endif %}
+      </div>
+    </div>
+    {% if question.solution_steps %}
+    <ol class="mt-5 divide-y divide-slate-100 rounded-card bg-white px-6">
+      {% for step in question.solution_steps %}
+      <li class="flex gap-4 py-5"><span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white {% if step.final %}bg-success-text{% else %}bg-navy{% endif %}">{{ forloop.counter }}</span>
+        <div><div class="font-semibold">{{ step.title|inline }}</div>{% if step.text %}<div class="mt-1 text-[15px] text-slate-600">{{ step.text|inline }}</div>{% endif %}{% if step.math %}<div class="mt-1 overflow-x-auto text-xl {% if step.final %}text-success-text{% endif %}"><span data-latex="{{ step.math }}" data-display="inline">{{ step.math }}</span></div>{% endif %}</div></li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+    {% if answer.is_correct and why_not %}<p class="mt-5 text-[15px] text-emerald-900"><strong>Why not {{ why_not.text|inline }}?</strong> {{ why_not.why_wrong|inline }}</p>{% endif %}
+  </section>
+  {% endif %}
+
+  <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
+    <nav aria-label="Questions" class="flex items-center gap-2">
+      {% for dot in dots %}
+        {% if dot.n <= 5 or dot.state == "current" or forloop.last %}
+        {% if forloop.last and forloop.counter > 6 %}<span class="text-sm text-ink-muted">…</span>{% endif %}
+        <a {% if dot.url %}href="{{ dot.url }}"{% endif %} {% if dot.state == "current" %}aria-current="step"{% endif %} aria-label="Question {{ dot.n }}{% if dot.state == 'right' %}, correct{% elif dot.state == 'wrong' %}, incorrect{% endif %}"
+           class="flex h-9 w-9 items-center justify-center rounded-lg text-sm font-semibold {% if dot.state == 'right' %}bg-success text-white hover:text-white{% elif dot.state == 'wrong' %}border-[1.5px] border-dashed border-red-400 text-danger-text{% elif dot.state == 'current' %}bg-primary text-white hover:text-white{% else %}border border-surface-border text-slate-500{% endif %}">{{ dot.n }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+    {% if answer %}
+      <a href="{{ next_url }}" class="btn-primary h-14 px-8 text-lg">{% if is_last %}See results{% else %}Continue{% endif %} {% include "components/icon.html" with name="arrow" class="h-5 w-5" stroke="2.2" %}</a>
+    {% else %}
+      <button type="submit" :disabled="!picked" class="btn h-14 px-8 text-lg disabled:cursor-not-allowed disabled:bg-surface-border disabled:text-ink-muted" :class="picked && 'bg-primary text-white hover:bg-primary-700'">Check answer</button>
+    {% endif %}
+  </div>
+</form>
+{% endblock %}
