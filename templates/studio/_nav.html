@@ -1,1 +1,0 @@
-<a href="{{ href }}" {% if studio_active == key %}aria-current="page"{% endif %} class="flex h-11 items-center gap-3 rounded-btn px-3 font-medium {% if studio_active == key %}bg-white font-semibold text-navy hover:text-navy{% else %}text-slate-200 hover:bg-white/10 hover:text-white{% endif %}">{% include "components/icon.html" with name=icon class="h-5 w-5" %}{{ label }}</a>

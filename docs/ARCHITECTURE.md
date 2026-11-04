@@ -89,6 +89,10 @@ written by the exam board). Topics and lessons link to references many-to-many,
 so content can be re-mapped when a new syllabus version is published without
 touching the content. **No official syllabus content is seeded** — references
 are entered by staff from official documents (`is_official` flags the source).
+`manage.py load_gce_curriculum` loads KKEVO's own curriculum summary
+(`apps/academics/gce_curriculum.py`) as unofficial draft syllabi plus empty draft course
+outlines whose topics link to the matching references. It validates the data first, against
+model field lengths and choices, duplicates, and unknown levels or pathways.
 
 ## Milestones
 

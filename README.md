@@ -41,6 +41,23 @@ practice set) can be loaded to review every screen. It is **not** official GCE s
 .venv/Scripts/python manage.py seed_demo --remove
 ```
 
+## GCE curriculum outline
+
+`load_gce_curriculum` loads every GCE subject and level from
+`apps/academics/gce_curriculum.py` (KKEVO's summary in `docs/curriculum/GCE_CURRICULUM_GUIDE.md`).
+Syllabi are saved as **unofficial drafts** (`is_official=False`). Each one also gets a draft course
+outline with modules and topics but no lessons. The data is validated first: if anything is
+wrong, every problem is listed and nothing is written. The command is safe to run twice, and it
+never overwrites existing subjects, offerings or courses.
+
+```bash
+.venv/Scripts/python manage.py load_gce_curriculum --dry-run   # validate and report, save nothing
+.venv/Scripts/python manage.py load_gce_curriculum
+.venv/Scripts/python manage.py load_gce_curriculum --remove    # keeps outlines that already have lessons
+```
+
+Check each syllabus against the official GCE Board text before publishing anything built on it.
+
 ## Main URLs
 
 | Page | URL | Mockup |

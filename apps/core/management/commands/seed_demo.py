@@ -246,7 +246,9 @@ class Command(BaseCommand):
                 name=name, icon_text=glyph, icon=icon, accent=accent, category=category, summary=summary,
                 is_featured=featured, order=i * 10))
             for code in ("F5", "L6", "U6"):
-                if code != "F5" and slug in ("english-language", "computer-science", "french"):
+                # O Level-only subjects (General and Additional Mathematics are not A Level subjects).
+                if code != "F5" and slug in ("english-language", "computer-science", "french",
+                                             "mathematics", "additional-mathematics"):
                     continue
                 offering, created = SubjectOffering.objects.get_or_create(subject=subject, level=levels[code])
                 if created:
