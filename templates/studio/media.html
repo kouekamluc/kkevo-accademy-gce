@@ -1,0 +1,48 @@
+{% extends "layouts/studio.html" %}
+{% block title %}Media library — Content studio{% endblock %}
+{% block crumbs %}<span class="text-ink-heading">Media library</span>{% endblock %}
+{% block content %}
+<div>
+  <h1 class="text-[28px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">Media Library</h1>
+  <p class="mt-1 text-[17px] text-ink-muted">Upload diagrams once and reuse them in any lesson’s image blocks.</p>
+</div>
+<div class="mt-6 grid gap-6 lg:grid-cols-[340px_1fr]">
+  <section class="card self-start p-5" aria-labelledby="upload-h">
+    <h2 id="upload-h" class="text-lg font-bold">Upload an image</h2>
+    <form method="post" enctype="multipart/form-data" class="mt-4 flex flex-col gap-4" novalidate>
+      {% csrf_token %}
+      {% include "components/field.html" with field=form.file %}
+      {% include "components/field.html" with field=form.title %}
+      {% include "components/field.html" with field=form.alt_text %}
+      <p class="text-[13px] text-ink-muted">Maximum {{ max_mb }} MB. SVG is not accepted, so export diagrams as PNG or WebP.</p>
+      <button type="submit" class="btn-primary">Upload</button>
+    </form>
+  </section>
+  <section class="card min-w-0 overflow-hidden" aria-labelledby="library-h">
+    <div class="flex flex-wrap items-center gap-3 border-b border-surface-border px-5 py-4">
+      <h2 id="library-h" class="text-lg font-bold">{{ page.paginator.count }} image{{ page.paginator.count|pluralize }}</h2>
+      <form method="get" class="ml-auto min-w-[220px] flex-1 sm:max-w-sm"><label class="relative block"><span class="sr-only">Search images</span><span class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted">{% include "components/icon.html" with name="search" class="h-[18px] w-[18px]" stroke="2" %}</span><input type="search" name="q" value="{{ q }}" placeholder="Search by title or alt text" class="form-input pl-11"></label></form>
+    </div>
+    <ul class="grid grid-cols-2 gap-4 p-5 sm:grid-cols-3 xl:grid-cols-4">
+      {% for asset in page %}
+      <li class="overflow-hidden rounded-xl border border-surface-border bg-white">
+        <a href="{{ asset.file.url }}" target="_blank" rel="noopener"><img src="{{ asset.file.url }}" alt="{{ asset.alt_text }}" loading="lazy" class="h-32 w-full bg-surface-bg object-contain"></a>
+        <div class="p-3">
+          <div class="truncate text-sm font-semibold text-ink-heading" title="{{ asset.title }}">{{ asset.title }}</div>
+          <div class="text-[13px] text-ink-muted">{{ asset.size_label }} · {{ asset.created_at|date:"j M Y" }}{% if asset.uploaded_by %} · {{ asset.uploaded_by.display_name }}{% endif %}</div>
+          <p class="mt-1 line-clamp-2 text-[13px] text-slate-700">{{ asset.alt_text }}</p>
+        </div>
+      </li>
+      {% empty %}
+      <li class="col-span-full py-10 text-center text-ink-muted">{% if q %}No images match “{{ q }}”.{% else %}No images yet. Upload the first one.{% endif %}</li>
+      {% endfor %}
+    </ul>
+    {% if page.has_other_pages %}
+    <nav aria-label="Pages" class="flex justify-end gap-2 border-t border-surface-border px-5 py-4">
+      {% if page.has_previous %}<a href="?{% if q %}q={{ q|urlencode }}&{% endif %}page={{ page.previous_page_number }}" class="btn-secondary h-11">Previous</a>{% endif %}
+      {% if page.has_next %}<a href="?{% if q %}q={{ q|urlencode }}&{% endif %}page={{ page.next_page_number }}" class="btn-secondary h-11">Next</a>{% endif %}
+    </nav>
+    {% endif %}
+  </section>
+</div>
+{% endblock %}

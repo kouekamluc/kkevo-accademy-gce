@@ -1,0 +1,38 @@
+{% comment %}Review workflow bar under the editor header: state message, optional review comment, actions.
+Buttons choose their endpoint with `formaction`, so one comment box serves every action.{% endcomment %}
+{% url 'studio:changes' lesson.pk as changes_url %}{% url 'studio:status' lesson.pk as status_url %}
+<form method="post" class="flex flex-col gap-3 border-b border-surface-border px-6 py-4 {% if draft %}bg-warning-50{% else %}bg-surface-bg{% endif %} lg:flex-row lg:items-end" x-data="{ note: false }">
+  {% csrf_token %}
+  <div class="min-w-0 flex-1 text-[15px]">
+    {% if draft %}
+    <p class="font-semibold text-warning-text">{% if draft.status == "review" %}Draft changes are waiting for review.{% else %}You are editing draft changes to a published lesson.{% endif %}</p>
+    <p class="mt-0.5 text-sm text-slate-700">Students still see the published version until a reviewer publishes these changes.
+      {{ changed_count }} block{{ changed_count|pluralize }} new or changed{% if removed %}, {{ removed }} removed{% endif %}{% if reordered %}, order changed{% endif %}.</p>
+    {% elif lesson.status == "published" %}
+    <p class="font-semibold text-success-text">Published.</p>
+    <p class="mt-0.5 text-sm text-slate-700">Your next block edit starts a draft copy. Students keep seeing this version until the changes are reviewed and published.</p>
+    {% elif lesson.status == "review" %}
+    <p class="font-semibold text-warning-text">Waiting for review.</p>
+    <p class="mt-0.5 text-sm text-slate-700">{% if can_publish %}Publish it, or send it back to the author with a comment.{% else %}A reviewer will publish it or send it back with comments.{% endif %}</p>
+    {% else %}
+    <p class="font-semibold text-ink-heading">{{ lesson.get_status_display }}: not visible to students.</p>
+    {% endif %}
+    <div class="mt-3" x-show="note" x-cloak>
+      <label class="flex flex-col gap-1.5"><span class="form-label">Review comment <span class="font-normal text-ink-muted">(shown in the review notes)</span></span>
+        <textarea name="comment" rows="2" maxlength="2000" class="form-input py-2" placeholder="What should the author change, or what did you check?"></textarea></label>
+    </div>
+  </div>
+  <div class="flex flex-wrap items-center gap-2">
+    <button type="button" class="btn-secondary" @click="note = !note" x-text="note ? 'Hide comment' : 'Add comment'">Add comment</button>
+    {% if draft %}
+      {% if draft.status == "draft" %}<button type="submit" formaction="{{ changes_url }}" name="action" value="submit" class="btn-primary">Submit changes for review</button>{% endif %}
+      {% if can_publish %}<button type="submit" formaction="{{ changes_url }}" name="action" value="publish" class="btn bg-success text-white hover:bg-success-text hover:text-white">Publish changes</button>{% endif %}
+      {% if can_publish and draft.status == "review" %}<button type="submit" formaction="{{ changes_url }}" name="action" value="send_back" class="btn-secondary">Send changes back</button>{% endif %}
+      <button type="submit" formaction="{{ changes_url }}" name="action" value="discard" class="btn-secondary text-danger-text" onclick="return confirm('Discard all draft changes? The published version stays as it is.')">Discard changes</button>
+    {% else %}
+      {% if lesson.status == "draft" %}<button type="submit" formaction="{{ status_url }}" name="status" value="review" class="btn-primary">Submit for review</button>{% endif %}
+      {% if can_publish and lesson.status != "published" %}<button type="submit" formaction="{{ status_url }}" name="status" value="published" class="btn bg-success text-white hover:bg-success-text hover:text-white">Publish</button>{% endif %}
+      {% if lesson.status != "draft" %}<button type="submit" formaction="{{ status_url }}" name="status" value="draft" class="btn-secondary">{% if lesson.status == "published" %}Unpublish (back to draft){% else %}Back to draft{% endif %}</button>{% endif %}
+    {% endif %}
+  </div>
+</form>

@@ -108,11 +108,16 @@ are entered by staff from official documents (`is_official` flags the source).
   `services.py` (progress maths), `analytics.py` (progress page / planner)
 - `practice` — PracticeSet, Question, Choice, Attempt, Answer; MistakeCard, ReviewSession, ReviewAnswer
   (spaced "Review my mistakes"), `mastery.py` (topic levels). See docs/benchmarks/practice-assessment.md
-- `studio` — staff lesson list and block editor (no models)
+- `studio` — staff lesson list, block editor, overview, media library. Models: `LessonDraft` (unpublished
+  working copy of a published lesson's blocks), `LessonRevision` (block snapshots for history/restore),
+  `LessonEvent` (audit log + review comments), `MediaAsset` (validated image uploads). See
+  `apps/studio/revisions.py` and `docs/benchmarks/content-studio.md`.
 
 ## Known gaps
 
-- Offline downloads, phone-number sign-up, Google sign-in, notifications and media upload
-  (blocks take URLs) are shown in the mockups but not built.
-- Edits to blocks of an already-published lesson go live immediately (no draft versions yet).
-- Login rate limiting uses the default cache; set `CACHE_URL` to a shared cache when running several workers (see docs/benchmarks/accounts-onboarding.md).
+- Offline downloads, phone-number sign-up, Google sign-in and push notifications are shown in the mockups
+  but not built. Studio image uploads exist (media library); production must serve `MEDIA_ROOT` itself.
+- Lesson *settings* (title, objectives…) of a published lesson still change immediately; only blocks are
+  staged as draft changes. Django admin edits to blocks of published lessons are locked except for superusers.
+- Login rate limiting is per process unless `CACHE_URL` points to a shared cache.
+- Benchmarks behind the five improvement branches: `docs/benchmarks/`.

@@ -1,0 +1,19 @@
+{% extends "layouts/studio.html" %}
+{% block title %}Revision {{ revision.number }} of {{ lesson.title }} — Content studio{% endblock %}
+{% block crumbs %}<a href="{% url 'studio:edit' lesson.pk %}">{{ lesson.title }}</a><span class="mx-2 text-ink-muted">/</span><a href="{% url 'studio:history' lesson.pk %}">History</a><span class="mx-2 text-ink-muted">/</span><span class="text-ink-heading">Revision {{ revision.number }}</span>{% endblock %}
+{% block content %}
+<div class="flex flex-wrap items-end justify-between gap-4">
+  <div>
+    <h1 class="text-[28px] font-bold tracking-[-.02em] text-navy">Revision {{ revision.number }}: {{ revision.get_kind_display|lower }}</h1>
+    <p class="mt-1 text-[15px] text-ink-muted">{{ revision.created_by.display_name|default:"Someone" }} · {{ revision.created_at|date:"j M Y, H:i" }}{% if revision.note %} · “{{ revision.note }}”{% endif %}</p>
+  </div>
+  <form method="post" action="{% url 'studio:restore' lesson.pk revision.number %}" class="flex gap-3">{% csrf_token %}
+    <a href="{% url 'studio:history' lesson.pk %}" class="btn-secondary">Back to history</a>
+    <button type="submit" class="btn-primary">Restore this revision</button>
+  </form>
+</div>
+<div class="mx-auto mt-6 flex max-w-3xl flex-col gap-4">
+  {% for block in blocks %}<div class="rounded-card border border-surface-border bg-white p-5">{% include block.template_name with block=block lesson=lesson %}</div>
+  {% empty %}<p class="text-center text-ink-muted">This revision has no blocks.</p>{% endfor %}
+</div>
+{% endblock %}

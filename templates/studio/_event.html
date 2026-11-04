@@ -1,0 +1,8 @@
+<li class="flex gap-2.5">
+  <span class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full {% if event.action == 'published' or event.action == 'changes_published' %}bg-success-50 text-success-text{% elif event.action == 'sent_back' or event.action == 'changes_sent_back' %}bg-warning-50 text-warning-text{% else %}bg-slate-100 text-slate-600{% endif %} text-[11px] font-bold" aria-hidden="true">{{ event.actor.initials|default:"?" }}</span>
+  <div class="min-w-0">
+    <div><span class="font-semibold text-ink-heading">{{ event.actor.display_name|default:"Someone" }}</span> · {{ event.get_action_display|lower }}</div>
+    <div class="text-[13px] text-ink-muted"><time datetime="{{ event.created_at|date:'c' }}">{{ event.created_at|date:"j M Y, H:i" }}</time>{% if show_lesson %} · <a href="{% url 'studio:edit' event.lesson_id %}">{{ event.lesson.title }}</a>{% endif %}</div>
+    {% if event.comment %}<blockquote class="mt-1.5 whitespace-pre-line rounded-lg border-l-4 border-primary-300 bg-primary-50 px-3 py-2 text-slate-800">{{ event.comment }}</blockquote>{% endif %}
+  </div>
+</li>
