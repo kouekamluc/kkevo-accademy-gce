@@ -18,10 +18,24 @@
     {% if streak %}
     <div class="hidden items-center gap-3 rounded-xl border border-surface-border bg-white px-4 py-3 nav:flex">
       <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-warning-50 text-warning-text">{% include "components/icon.html" with name="star" class="h-[18px] w-[18px]" %}</span>
-      <span class="text-[15px]"><strong>{{ streak }}-day</strong> learning streak</span>
+      <span class="text-[15px]"><strong>{{ streak }}-day</strong> learning streak{% if rest_today %} · resting today{% endif %}</span>
     </div>
     {% endif %}
   </div>
+
+  {# ---------- Exam countdown ---------- #}
+  {% url 'learning:planner' as planner_home %}
+  {% if countdown and not countdown.past %}
+  <section class="card flex flex-col gap-3 p-5 nav:flex-row nav:items-center nav:gap-6 nav:px-8" aria-labelledby="countdown-heading">
+    <h2 id="countdown-heading" class="sr-only">Exam countdown</h2>
+    <div class="min-w-0 flex-1">{% include "learning/_countdown.html" with countdown=countdown compact=True %}</div>
+    <a href="{{ planner_home }}#exam" class="text-[15px] font-semibold">Plan my week</a>
+  </section>
+  {% elif not countdown %}
+  <a href="{{ planner_home }}#exam" class="flex items-center gap-3 rounded-2xl border border-dashed border-slate-300 bg-white px-5 py-4 text-[15px] text-slate-700 hover:border-primary-300 hover:text-navy">
+    {% include "components/icon.html" with name="calendar" class="h-5 w-5 text-primary" stroke="2" %}<span class="flex-1">Add your GCE exam date to see the days left and the pace you need.</span>{% include "components/icon.html" with name="chevron-right" class="h-4 w-4" stroke="2" %}
+  </a>
+  {% endif %}
 
   {# ---------- Row 1: continue + recommended ---------- #}
   <div class="grid gap-6 xl:grid-cols-3">

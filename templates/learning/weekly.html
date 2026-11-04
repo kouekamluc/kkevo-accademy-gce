@@ -1,0 +1,50 @@
+{% extends "layouts/app.html" %}
+{% block title %}Weekly summary — GCE Learning Academy{% endblock %}
+{% block content %}
+<div class="flex flex-col gap-6 nav:mt-2">
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <a href="{% url 'learning:progress' %}" class="inline-flex min-h-touch items-center gap-1 text-[15px] font-semibold">{% include "components/icon.html" with name="chevron-left" class="h-4 w-4" stroke="2" %}My progress</a>
+      <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">Your week</h1>
+      <p class="mt-1 text-base text-ink-muted">{{ summary.start|date:"j M" }} – {{ summary.end|date:"j M Y" }}{% if summary.is_current %} · so far{% endif %}</p>
+    </div>
+    <nav aria-label="Weeks" class="flex gap-2">
+      {% if prev_week %}<a href="?week={{ prev_week }}" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border text-navy" aria-label="Previous week">{% include "components/icon.html" with name="chevron-left" class="h-5 w-5" stroke="2" %}</a>{% endif %}
+      {% if next_week %}<a href="?week={{ next_week }}" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border text-navy" aria-label="Next week">{% include "components/icon.html" with name="chevron-right" class="h-5 w-5" stroke="2" %}</a>
+      <a href="{% url 'learning:weekly' %}" class="btn-secondary h-11">This week</a>{% endif %}
+    </nav>
+  </div>
+
+  {% if goal_suggestion %}
+  <section class="flex flex-wrap items-center gap-4 rounded-2xl border border-primary-100 bg-primary-50 p-5" aria-label="Daily goal suggestion">
+    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-primary">{% include "components/icon.html" with name="target" class="h-5 w-5" stroke="2" %}</span>
+    <p class="min-w-0 flex-1 text-[15px] text-slate-700">{{ goal_suggestion.reason }} {% if goal_suggestion.direction == "up" %}Ready to try <strong>{{ goal_suggestion.minutes }} minutes</strong> a day?{% else %}How about <strong>{{ goal_suggestion.minutes }} minutes</strong> a day for now?{% endif %}</p>
+    <form method="post" action="{% url 'learning:goal_adjust' %}">{% csrf_token %}<button type="submit" class="btn-primary">Set goal to {{ goal_suggestion.minutes }} min</button></form>
+  </section>
+  {% endif %}
+
+  {% include "learning/_weekly_summary.html" %}
+
+  <section id="share" class="card p-6" aria-labelledby="share-heading" x-data="{ copied: false }">
+    <h2 id="share-heading" class="text-xl font-bold">Share with a parent or guardian</h2>
+    <p class="mt-1 text-[15px] text-ink-muted">A read-only page with this summary (your first name, learning time, lessons and practice — nothing else). No account needed to open it.</p>
+    {% if report_link %}
+    <div class="mt-4 flex flex-col gap-3">
+      <label for="report-url" class="form-label">Private report link</label>
+      <div class="flex gap-2">
+        <input id="report-url" type="text" readonly value="{{ report_url }}" class="form-input min-w-0 flex-1 text-sm" @focus="$el.select()">
+        <button type="button" class="btn-secondary shrink-0" @click="navigator.clipboard && navigator.clipboard.writeText('{{ report_url|escapejs }}').then(() => copied = true)" x-text="copied ? 'Copied' : 'Copy'">Copy</button>
+      </div>
+      <a href="https://wa.me/?text={{ 'My weekly study report: '|urlencode }}{{ report_url|urlencode }}" target="_blank" rel="noopener noreferrer" class="btn-primary self-start">Send on WhatsApp</a>
+      <div class="flex flex-wrap gap-2">
+        <form method="post" action="{% url 'learning:private_link' 'report' %}">{% csrf_token %}<input type="hidden" name="next" value="{% url 'learning:weekly' %}#share"><button type="submit" class="btn-secondary">Make a new link</button></form>
+        <form method="post" action="{% url 'learning:private_link' 'report' %}">{% csrf_token %}<input type="hidden" name="action" value="revoke"><input type="hidden" name="next" value="{% url 'learning:weekly' %}#share"><button type="submit" class="btn border border-danger-200 text-danger-text hover:bg-danger-50">Stop sharing</button></form>
+      </div>
+      {% if report_link.last_used_at %}<p class="text-sm text-ink-muted">Last opened {{ report_link.last_used_at|timesince }} ago.</p>{% endif %}
+    </div>
+    {% else %}
+    <form method="post" action="{% url 'learning:private_link' 'report' %}" class="mt-4">{% csrf_token %}<input type="hidden" name="next" value="{% url 'learning:weekly' %}#share"><button type="submit" class="btn-primary">Create a report link</button></form>
+    {% endif %}
+  </section>
+</div>
+{% endblock %}

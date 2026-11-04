@@ -9,8 +9,8 @@ from django.utils import timezone
 from apps.accounts.decorators import onboarding_required
 from apps.accounts.utils import get_profile
 from apps.courses.models import Course
-from apps.learning import services
-from apps.learning.models import DailyActivity, Enrollment, LessonProgress, StudySession
+from apps.learning import motivation, services
+from apps.learning.models import DailyActivity, Enrollment, LessonProgress, RestDay, StudySession
 from apps.practice.models import Attempt, PracticeSet
 
 WEEKDAY_SHORT = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
@@ -34,14 +34,8 @@ def relative_day(when, today):
 
 
 def learning_streak(user, today):
-    days = set(DailyActivity.objects.filter(user=user, seconds__gte=60, date__gte=today - timedelta(days=366))
-               .values_list("date", flat=True))
-    day = today if today in days else today - timedelta(days=1)
-    streak = 0
-    while day in days:
-        streak += 1
-        day -= timedelta(days=1)
-    return streak
+    """Consecutive learning days; planned rest days keep the streak (see apps.learning.motivation)."""
+    return motivation.learning_streak(user, today)
 
 
 def weekly_activity(user, today, goal_minutes):
@@ -164,7 +158,14 @@ def home(request):
         r.day_label = relative_day(r.completed_at, today)
         r.attempt = last_scores.get(r.lesson_id)
 
+    countdown = None
+    if profile.exam_date:
+        lesson_ids = services.published_lessons().filter(topic__module__course__in=courses).values_list("pk", flat=True)
+        countdown = motivation.exam_countdown(profile.exam_date, overall.done, overall.total,
+                                              motivation.recent_completions(user, today, lesson_ids=lesson_ids), today)
+
     return render(request, "dashboard/home.html", {
+        "countdown": countdown, "rest_today": RestDay.objects.filter(user=user, date=today).exists(),
         "student": profile, "greeting": greeting(now), "plan": plan, "overall": overall,
         "continue_card": continue_card, "recommended": recommended, "avg_score": avg_score,
         "week": week, "week_total": fmt_minutes(week["total_minutes"]),

@@ -1,0 +1,18 @@
+{# Weekday checkboxes + number of weeks for a repeating planner session. #}
+<fieldset class="rounded-xl border border-surface-border p-4" x-data="{ repeat: false }">
+  <legend class="px-1 text-sm font-semibold text-ink-heading">Repeat</legend>
+  <label class="flex min-h-touch items-center gap-3 text-[15px]"><input type="checkbox" x-model="repeat" class="h-5 w-5 rounded border-slate-300 text-primary"> Repeat every week</label>
+  <fieldset x-show="repeat" x-cloak :disabled="!repeat" class="mt-2 flex flex-col gap-3">
+    <div>
+      <span class="form-label">{{ form.repeat_days.label }}</span>
+      <div class="mt-2 flex flex-wrap gap-2">
+        {% for cb in form.repeat_days %}
+        <label class="flex h-11 min-w-[52px] cursor-pointer items-center justify-center gap-1.5 rounded-btn border border-slate-300 px-2.5 text-sm font-semibold has-[:checked]:border-primary has-[:checked]:bg-primary-50 has-[:checked]:text-primary-700">{{ cb.tag }}{{ cb.choice_label }}</label>
+        {% endfor %}
+      </div>
+      {% for error in form.repeat_days.errors %}<p class="mt-1 text-[13px] font-medium text-danger-text" role="alert">{{ error }}</p>{% endfor %}
+    </div>
+    <div class="max-w-[200px]">{% include "components/field.html" with field=form.repeat_weeks %}</div>
+    <p class="text-sm text-ink-muted">Sessions start from the date above, at the same time each day you pick (up to 20 weeks).</p>
+  </fieldset>
+</fieldset>

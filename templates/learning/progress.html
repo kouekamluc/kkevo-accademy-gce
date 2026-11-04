@@ -7,9 +7,12 @@
       <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">My Progress</h1>
       <p class="mt-1 text-base text-ink-muted">How your understanding is growing, and where to focus next.</p>
     </div>
+    <div class="flex flex-wrap items-center gap-3">
+    <a href="{% url 'learning:weekly' %}" class="btn-secondary h-11">{% include "components/icon.html" with name="calendar" class="h-[18px] w-[18px]" stroke="2" %}Weekly summary</a>
     <nav aria-label="Time range" class="flex rounded-btn bg-slate-100 p-[3px]">
       {% for key, r in ranges.items %}<a href="?range={{ key }}" {% if key == range_key %}aria-current="page"{% endif %} class="flex h-10 items-center rounded-lg px-4 text-[15px] {% if key == range_key %}bg-white font-semibold text-ink-heading shadow-card{% else %}text-slate-600 hover:text-navy{% endif %}">{{ r.0 }}</a>{% endfor %}
     </nav>
+    </div>
   </div>
 
   <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">

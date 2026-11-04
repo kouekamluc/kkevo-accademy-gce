@@ -1,0 +1,30 @@
+{% extends "layouts/app.html" %}
+{% block title %}Edit session — GCE Learning Academy{% endblock %}
+{% block content %}
+<div class="mx-auto flex max-w-xl flex-col gap-6 nav:mt-2">
+  <div>
+    <a href="{% url 'learning:planner' %}?date={{ form.initial.date.isoformat }}" class="inline-flex min-h-touch items-center gap-1 text-[15px] font-semibold">{% include "components/icon.html" with name="chevron-left" class="h-4 w-4" stroke="2" %}Back to planner</a>
+    <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy">Edit study session</h1>
+    {% if session.series %}<p class="mt-1 text-[15px] text-ink-muted">This session repeats{% if later %} — {{ later }} more after this one{% endif %}.</p>{% endif %}
+  </div>
+  <form method="post" class="card flex flex-col gap-4 p-6">
+    {% csrf_token %}
+    {% for error in form.non_field_errors %}<p class="text-[13px] font-medium text-danger-text" role="alert">{{ error }}</p>{% endfor %}
+    {% include "components/field.html" with field=form.title %}
+    <div class="grid gap-4 sm:grid-cols-2">{% include "components/field.html" with field=form.subject %}{% include "components/field.html" with field=form.kind %}</div>
+    {% include "components/field.html" with field=form.lesson %}
+    <div class="grid gap-4 sm:grid-cols-3">{% include "components/field.html" with field=form.date %}{% include "components/field.html" with field=form.start_time %}{% include "components/field.html" with field=form.duration_minutes %}</div>
+    {% if form.scope %}
+    <fieldset class="rounded-xl border border-surface-border p-4">
+      <legend class="px-1 text-sm font-semibold text-ink-heading">{{ form.scope.label }}</legend>
+      {% for radio in form.scope %}<label class="flex min-h-touch items-center gap-3 text-[15px]">{{ radio.tag }}{{ radio.choice_label }}</label>{% endfor %}
+      <p class="mt-1 text-sm text-ink-muted">Later sessions keep their own days; title, subject, lesson, type, time and length are updated.</p>
+    </fieldset>
+    {% endif %}
+    <div class="flex flex-wrap justify-end gap-2">
+      <a href="{% url 'learning:planner' %}?date={{ form.initial.date.isoformat }}" class="btn-secondary">Cancel</a>
+      <button type="submit" class="btn-primary">Save changes</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

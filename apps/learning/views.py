@@ -1,22 +1,27 @@
+import uuid
 from collections import defaultdict
 from datetime import date, datetime, time, timedelta
 
 from django import forms
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.db import transaction
 from django.db.models import Prefetch
+from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.utils import timezone
-from django.views.decorators.http import require_POST
+from django.views.decorators.http import require_GET, require_POST
 
 from apps.academics.models import Subject
 from apps.accounts.decorators import onboarding_required
+from apps.accounts.models import StudentProfile
 from apps.accounts.utils import get_profile
 from apps.courses.models import Course, Lesson
 
-from . import analytics, services
-from .models import Enrollment, LessonProgress, SavedLesson, SessionKind, StudySession
+from . import analytics, motivation, services
+from .models import (Enrollment, LessonProgress, LinkPurpose, PrivateLink, RestDay, SavedLesson, SessionKind,
+                     StudySession)
 
 WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
@@ -186,8 +191,23 @@ class SessionForm(forms.ModelForm):
         fields = ("title", "subject", "lesson", "kind", "duration_minutes")
         labels = {"duration_minutes": "Duration (minutes)", "kind": "Type"}
 
+    repeat_days = forms.TypedMultipleChoiceField(
+        choices=list(enumerate(WEEKDAYS)), coerce=int, required=False, label="Repeat on",
+        widget=forms.CheckboxSelectMultiple(attrs={"class": "h-5 w-5 rounded border-slate-300 text-primary"}))
+    repeat_weeks = forms.IntegerField(min_value=1, max_value=20, required=False, initial=4, label="For how many weeks")
+    scope = forms.ChoiceField(choices=[("one", "Only this session"), ("future", "This and later sessions in the series")],
+                              required=False, initial="one", widget=forms.RadioSelect(attrs={"class": "h-5 w-5 text-primary"}),
+                              label="Apply changes to")
+
     def __init__(self, *args, user, **kwargs):
         super().__init__(*args, **kwargs)
+        self.original_starts_at = self.instance.starts_at if self.instance.pk else None
+        if self.instance.pk:
+            del self.fields["repeat_days"], self.fields["repeat_weeks"]
+            if not self.instance.series:
+                del self.fields["scope"]
+        else:
+            del self.fields["scope"]
         offering_ids = Enrollment.objects.filter(user=user).values_list("offering_id", flat=True)
         self.fields["subject"].queryset = Subject.objects.filter(offerings__in=offering_ids).distinct()
         self.fields["subject"].required = False
@@ -208,7 +228,41 @@ class SessionForm(forms.ModelForm):
             data["subject"] = lesson.course.offering.subject
         elif lesson and subject and lesson.course.offering.subject_id != subject.pk:
             self.add_error("lesson", "Choose a lesson from the selected subject.")
+        if data.get("repeat_days") and not data.get("repeat_weeks"):
+            self.add_error("repeat_weeks", "Say for how many weeks the session repeats.")
         return data
+
+    def save_series(self, user):
+        """Create one session, or one per chosen weekday for N weeks (shared `series`)."""
+        first = self.cleaned_data["date"]
+        days = self.cleaned_data.get("repeat_days") or []
+        dates = motivation.recurrence_dates(first, days, self.cleaned_data["repeat_weeks"]) if days else [first]
+        series = uuid.uuid4() if len(dates) > 1 else None
+        tz = timezone.get_current_timezone()
+        template = super().save(commit=False)
+        created = []
+        with transaction.atomic():
+            for d in dates:
+                created.append(StudySession.objects.create(
+                    user=user, title=template.title, subject=self.cleaned_data.get("subject"), lesson=template.lesson,
+                    kind=template.kind, duration_minutes=template.duration_minutes, series=series,
+                    starts_at=timezone.make_aware(datetime.combine(d, self.cleaned_data["start_time"]), tz)))
+        return created
+
+    def save_edit(self):
+        """Save this session; with scope 'future' also update later sessions of its series (keeping their dates)."""
+        session = self.save()
+        if self.cleaned_data.get("scope") == "future" and session.series:
+            tz = timezone.get_current_timezone()
+            later = StudySession.objects.filter(user=session.user, series=session.series,
+                                                starts_at__gt=self.original_starts_at).exclude(pk=session.pk)
+            for other in later:
+                local_day = timezone.localtime(other.starts_at).date()
+                other.starts_at = timezone.make_aware(datetime.combine(local_day, self.cleaned_data["start_time"]), tz)
+                other.title, other.subject, other.lesson = session.title, session.subject, session.lesson
+                other.kind, other.duration_minutes = session.kind, session.duration_minutes
+                other.save(update_fields=["starts_at", "title", "subject", "lesson", "kind", "duration_minutes"])
+        return session
 
     def save(self, commit=True):
         session = super().save(commit=False)
@@ -289,7 +343,9 @@ def planner(request):
         r["label"] = analytics.due_label(r["due"], today)
 
     form = SessionForm(user=user, initial={"date": anchor if anchor >= today else today, "start_time": time(17, 0),
-                                           "duration_minutes": 30})
+                                           "duration_minutes": 30, "repeat_weeks": 4})
+    rest_this_week = RestDay.objects.filter(user=user, date__gte=week_start, date__lte=week_start + timedelta(days=6)).first()
+    links = {link.purpose: link for link in PrivateLink.objects.filter(user=user)}
     return render(request, "learning/planner.html", {
         "view": view, "anchor": anchor, "days": days, "columns": columns, "today": today,
         "hours": list(range(first_hour, last_hour)), "hour_px": hour_px, "grid_height": (last_hour - first_hour) * hour_px,
@@ -301,7 +357,22 @@ def planner(request):
         "week_percent": min(100, round(100 * done_minutes / goal)) if goal else 0,
         "per_subject": sorted(per_subject.items(), key=lambda kv: -kv[1]["minutes"]),
         "revision": revision, "form": form, "nav_active": "planner", "now": now,
+        "countdown": _countdown(user, profile, today), "exam_form": ExamDateForm(instance=profile),
+        "rest_this_week": rest_this_week, "rest_today": bool(rest_this_week and rest_this_week.date == today),
+        "calendar_link": links.get(LinkPurpose.CALENDAR),
+        "calendar_url": _link_url(request, links.get(LinkPurpose.CALENDAR)),
+        "calendar_webcal": _link_url(request, links.get(LinkPurpose.CALENDAR)).replace("https://", "webcal://", 1)
+            .replace("http://", "webcal://", 1),
     })
+
+
+def _form_errors(form):
+    return "; ".join(f"{form.fields[f].label if f in form.fields else ''} {' '.join(e)}".strip()
+                     for f, e in form.errors.items())
+
+
+def _planner_at(day):
+    return redirect(f"{reverse('learning:planner')}?date={day.isoformat()}")
 
 
 @login_required
@@ -309,24 +380,219 @@ def planner(request):
 def session_create(request):
     form = SessionForm(request.POST, user=request.user)
     if form.is_valid():
-        session = form.save(commit=False)
-        session.user = request.user
-        session.save()
-        messages.success(request, f"“{session.title}” added to your planner.")
-        return redirect(f"{reverse('learning:planner')}?date={timezone.localtime(session.starts_at).date().isoformat()}")
-    messages.error(request, "Please fix the session details: " + "; ".join(
-        f"{form.fields[f].label if f in form.fields else ''} {' '.join(e)}".strip() for f, e in form.errors.items()))
+        created = form.save_series(request.user)
+        if not created:
+            messages.error(request, "None of the chosen days fall on or after the start date.")
+            return redirect("learning:planner")
+        first = created[0]
+        if len(created) > 1:
+            messages.success(request, f"“{first.title}” added {len(created)} times to your planner.")
+        else:
+            messages.success(request, f"“{first.title}” added to your planner.")
+        return _planner_at(timezone.localtime(first.starts_at).date())
+    messages.error(request, "Please fix the session details: " + _form_errors(form))
     return redirect("learning:planner")
+
+
+@onboarding_required
+def session_edit(request, pk):
+    session = get_object_or_404(StudySession, pk=pk, user=request.user)
+    if request.method == "POST":
+        form = SessionForm(request.POST, instance=session, user=request.user)
+        if form.is_valid():
+            session = form.save_edit()
+            messages.success(request, f"“{session.title}” updated.")
+            return _planner_at(timezone.localtime(session.starts_at).date())
+    else:
+        form = SessionForm(instance=session, user=request.user)
+    later = (StudySession.objects.filter(user=request.user, series=session.series, starts_at__gt=session.starts_at).count()
+             if session.series else 0)
+    return render(request, "learning/session_edit.html", {"form": form, "session": session, "later": later,
+                                                          "nav_active": "planner"})
 
 
 @login_required
 @require_POST
 def session_delete(request, pk):
     session = get_object_or_404(StudySession, pk=pk, user=request.user)
-    day = timezone.localtime(session.starts_at).date().isoformat()
-    session.delete()
-    messages.success(request, "Session removed.")
-    return redirect(f"{reverse('learning:planner')}?date={day}")
+    day = timezone.localtime(session.starts_at).date()
+    if request.POST.get("scope") == "future" and session.series:
+        removed, _ = StudySession.objects.filter(user=request.user, series=session.series,
+                                                 starts_at__gte=session.starts_at).delete()
+        messages.success(request, f"Removed {removed} session{'s' if removed != 1 else ''} from the series.")
+    else:
+        session.delete()
+        messages.success(request, "Session removed.")
+    return _planner_at(day)
+
+
+# --------------------------------------------------------------------------- exam countdown
+class ExamDateForm(forms.ModelForm):
+    exam_date = forms.DateField(required=False, label="Date of your first GCE paper",
+                                widget=forms.DateInput(attrs={"type": "date", "class": "form-input"}),
+                                help_text="Copy it from the official GCE timetable your school gives you.")
+
+    class Meta:
+        model = StudentProfile
+        fields = ("exam_date",)
+
+    def clean_exam_date(self):
+        value = self.cleaned_data.get("exam_date")
+        today = timezone.localdate()
+        if value and value < today:
+            raise forms.ValidationError("Choose a date that is still ahead.")
+        if value and value > today + timedelta(days=3 * 366):
+            raise forms.ValidationError("Choose a date within the next three years.")
+        return value
+
+
+def _countdown(user, profile, today):
+    if not profile.exam_date:
+        return None
+    courses = [p["course"] for p in _plan(user) if p["course"]]
+    stats = services.course_stats(user, courses)
+    lesson_ids = services.published_lessons().filter(topic__module__course__in=courses).values_list("pk", flat=True)
+    return motivation.exam_countdown(profile.exam_date, sum(s.done for s in stats.values()),
+                                     sum(s.total for s in stats.values()),
+                                     motivation.recent_completions(user, today, lesson_ids=lesson_ids), today)
+
+
+@login_required
+@require_POST
+def exam_date(request):
+    form = ExamDateForm(request.POST, instance=get_profile(request.user))
+    if form.is_valid():
+        form.save()
+        messages.success(request, "Exam date saved." if form.cleaned_data["exam_date"] else "Exam date removed.")
+    else:
+        messages.error(request, " ".join(form.errors.get("exam_date", ["Enter a valid date."])))
+    return redirect(_safe_next(request, reverse("learning:planner")))
+
+
+# --------------------------------------------------------------------------- rest days
+@login_required
+@require_POST
+def rest_day(request):
+    """Plan (or cancel) a rest day: it keeps the streak without asking for study that day."""
+    try:
+        day = date.fromisoformat(request.POST.get("date", ""))
+    except ValueError:
+        day = timezone.localdate()
+    existing = RestDay.objects.filter(user=request.user, date=day).first()
+    if existing:
+        existing.delete()
+        messages.success(request, "Rest day cancelled.")
+    else:
+        allowed, reason = motivation.can_rest(request.user, day)
+        if allowed:
+            RestDay.objects.create(user=request.user, date=day)
+            messages.success(request, "Rest day planned. Your streak is safe — enjoy the break."
+                             if day == timezone.localdate() else f"Rest day planned for {day:%A %d %B}.")
+        else:
+            messages.error(request, reason)
+    return redirect(_safe_next(request, reverse("learning:planner")))
+
+
+# --------------------------------------------------------------------------- private links (calendar, parent report)
+def _link_url(request, link):
+    if not link:
+        return ""
+    name = "learning:calendar_feed" if link.purpose == LinkPurpose.CALENDAR else "learning:report"
+    return request.build_absolute_uri(reverse(name, args=[link.token]))
+
+
+@login_required
+@require_POST
+def private_link(request, purpose):
+    if purpose not in LinkPurpose.values:
+        raise Http404
+    label = LinkPurpose(purpose).label.lower()
+    if request.POST.get("action") == "revoke":
+        PrivateLink.objects.filter(user=request.user, purpose=purpose).delete()
+        messages.success(request, f"Your {label} link is switched off. Anyone using the old link can no longer open it.")
+    else:
+        replaced = PrivateLink.objects.filter(user=request.user, purpose=purpose).exists()
+        PrivateLink.issue(request.user, purpose)
+        messages.success(request, f"New {label} link created. The old one no longer works." if replaced
+                         else f"Your private {label} link is ready.")
+    fallback = reverse("learning:planner") if purpose == LinkPurpose.CALENDAR else reverse("learning:weekly")
+    return redirect(_safe_next(request, fallback))
+
+
+def _private_headers(response):
+    response["Cache-Control"] = "private, no-store"
+    response["X-Robots-Tag"] = "noindex, nofollow"
+    response["Referrer-Policy"] = "no-referrer"
+    return response
+
+
+@require_GET
+def calendar_feed(request, token):
+    link = PrivateLink.resolve(token, LinkPurpose.CALENDAR)
+    if link is None:
+        raise Http404
+    now = timezone.now()
+    sessions = (StudySession.objects.filter(user=link.user, starts_at__gte=now - timedelta(days=30),
+                                            starts_at__lte=now + timedelta(days=200))
+                .select_related("subject", "lesson__topic__module__course").order_by("starts_at"))
+    body = motivation.build_ics(sessions, host=request.get_host().split(":")[0],
+                                exam_date=get_profile(link.user).exam_date,
+                                base_url=f"{request.scheme}://{request.get_host()}")
+    response = HttpResponse(body, content_type="text/calendar; charset=utf-8")
+    response["Content-Disposition"] = 'inline; filename="gce-study-planner.ics"'
+    return _private_headers(response)
+
+
+# --------------------------------------------------------------------------- weekly summary & parent report
+REPORT_WEEKS = 8
+
+
+def _weekly_context(user, request):
+    profile = get_profile(user)
+    today = timezone.localdate()
+    start = motivation.parse_week(request.GET.get("week"), today, earliest_weeks=REPORT_WEEKS)
+    summary = motivation.weekly_summary(user, profile, start, today)
+    this_week = motivation.week_start(today)
+    return {
+        "summary": summary, "profile": profile, "today": today,
+        "prev_week": (start - timedelta(weeks=1)).isoformat() if start > this_week - timedelta(weeks=REPORT_WEEKS) else None,
+        "next_week": (start + timedelta(weeks=1)).isoformat() if start < this_week else None,
+        "streak": motivation.learning_streak(user, today), "countdown": _countdown(user, profile, today),
+    }
+
+
+@onboarding_required
+def weekly(request):
+    ctx = _weekly_context(request.user, request)
+    link = PrivateLink.objects.filter(user=request.user, purpose=LinkPurpose.REPORT).first()
+    ctx.update({"report_link": link, "report_url": _link_url(request, link), "nav_active": "progress",
+                "goal_suggestion": motivation.goal_suggestion(request.user, ctx["profile"].daily_goal_minutes, ctx["today"])})
+    return render(request, "learning/weekly.html", ctx)
+
+
+@require_GET
+def report(request, token):
+    link = PrivateLink.resolve(token, LinkPurpose.REPORT)
+    if link is None:
+        raise Http404
+    ctx = _weekly_context(link.user, request)
+    ctx.update({"student_name": link.user.first_name or "Your student", "token": token})
+    return _private_headers(render(request, "learning/report.html", ctx))
+
+
+@login_required
+@require_POST
+def goal_adjust(request):
+    """Apply the suggested daily goal (recomputed here, never taken from the form)."""
+    profile = get_profile(request.user)
+    suggestion = motivation.goal_suggestion(request.user, profile.daily_goal_minutes, timezone.localdate())
+    if suggestion:
+        profile.daily_goal_minutes = suggestion["minutes"]
+        profile.save(update_fields=["daily_goal_minutes", "updated_at"])
+        messages.success(request, f"Daily goal set to {suggestion['minutes']} minutes.")
+    else:
+        messages.info(request, "Your daily goal looks right for now.")
+    return redirect(_safe_next(request, reverse("learning:weekly")))
 
 
 @login_required
