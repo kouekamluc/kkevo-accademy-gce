@@ -18,6 +18,7 @@
     <a href="?status=draft" class="studio-tab {% if status == 'draft' %}studio-tab-active{% endif %}">Draft <span class="font-normal text-ink-muted">{{ counts.draft|default:0 }}</span></a>
     <a href="?status=review" class="studio-tab {% if status == 'review' %}studio-tab-active{% endif %}">Under Review <span class="font-semibold text-warning-text">{{ counts.review|default:0 }}</span></a>
     <a href="?status=published" class="studio-tab {% if status == 'published' %}studio-tab-active{% endif %}">Published <span class="font-normal text-ink-muted">{{ counts.published|default:0 }}</span></a>
+    <a href="?status=changes" class="studio-tab {% if status == 'changes' %}studio-tab-active{% endif %}">Pending changes <span class="font-normal text-ink-muted">{{ changes_count }}</span></a>
     <a href="?status=archived" class="studio-tab {% if status == 'archived' %}studio-tab-active{% endif %}">Archived <span class="font-normal text-ink-muted">{{ counts.archived|default:0 }}</span></a>
   </nav>
   <form method="get" class="flex flex-wrap items-center gap-3 px-5 py-4">
@@ -44,9 +45,9 @@
             <td class="py-3.5">{{ lesson.topic.module.course.offering.subject.name }}</td>
             <td class="py-3.5">{{ lesson.topic.module.course.offering.level.name }}</td>
             <td class="py-3.5">{% if lesson.author %}<span class="flex items-center gap-2"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-50 text-xs font-bold text-primary-700">{{ lesson.author.initials }}</span>{{ lesson.author.display_name }}</span>{% else %}<span class="text-ink-muted">—</span>{% endif %}</td>
-            <td class="py-3.5">{% include "studio/_status.html" with status=lesson.status label=lesson.get_status_display %}</td>
+            <td class="py-3.5">{% include "studio/_status.html" with status=lesson.status label=lesson.get_status_display %}{% if lesson.studio_draft %}<div class="mt-1 text-[13px] font-semibold text-warning-text">{{ lesson.studio_draft.get_status_display }}</div>{% endif %}</td>
             <td class="py-3.5 text-slate-600">{{ lesson.updated_at|date:"j M Y" }}</td>
-            <td class="py-3.5 pr-5 text-right"><a href="{% url 'studio:edit' lesson.pk %}" class="font-semibold">{% if lesson.status == 'review' and can_publish %}Review{% else %}Edit{% endif %}</a></td>
+            <td class="py-3.5 pr-5 text-right"><a href="{% url 'studio:edit' lesson.pk %}" class="font-semibold">{% if can_publish and lesson.status == 'review' or can_publish and lesson.studio_draft.status == 'review' %}Review{% else %}Edit{% endif %}</a></td>
           </tr>
           {% empty %}
           <tr><td colspan="8" class="px-5 py-10 text-center text-ink-muted">No lessons match. <a href="{% url 'studio:new' %}" class="font-semibold">Create one</a></td></tr>

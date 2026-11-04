@@ -1,0 +1,50 @@
+{% extends "layouts/studio.html" %}
+{% block title %}Overview — Content studio{% endblock %}
+{% block crumbs %}<span class="text-ink-heading">Overview</span>{% endblock %}
+{% block content %}
+<div class="flex flex-wrap items-end justify-between gap-4">
+  <div>
+    <h1 class="text-[28px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">Overview</h1>
+    <p class="mt-1 text-[17px] text-ink-muted">What needs your attention in the content studio.</p>
+  </div>
+  <a href="{% url 'studio:new' %}" class="btn-primary h-12">{% include "components/icon.html" with name="plus" class="h-5 w-5" stroke="2.2" %}Create New Lesson</a>
+</div>
+<ul class="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
+  <li><a href="{% url 'studio:lessons' %}?status=draft" class="card-link block p-5"><div class="text-sm text-ink-muted">Drafts</div><div class="mt-1 text-3xl font-bold">{{ counts.draft|default:0 }}</div></a></li>
+  <li><a href="{% url 'studio:lessons' %}?status=review" class="card-link block p-5"><div class="text-sm text-ink-muted">Under review</div><div class="mt-1 text-3xl font-bold text-warning-text">{{ counts.review|default:0 }}</div></a></li>
+  <li><a href="{% url 'studio:lessons' %}?status=published" class="card-link block p-5"><div class="text-sm text-ink-muted">Published</div><div class="mt-1 text-3xl font-bold text-success-text">{{ counts.published|default:0 }}</div></a></li>
+  <li><a href="{% url 'studio:lessons' %}?status=changes" class="card-link block p-5"><div class="text-sm text-ink-muted">Pending changes</div><div class="mt-1 text-3xl font-bold">{{ pending_changes }}</div></a></li>
+  <li><a href="{% url 'studio:lessons' %}?status=archived" class="card-link block p-5"><div class="text-sm text-ink-muted">Archived</div><div class="mt-1 text-3xl font-bold">{{ counts.archived|default:0 }}</div></a></li>
+  <li><a href="{% url 'studio:media' %}" class="card-link block p-5"><div class="text-sm text-ink-muted">Images</div><div class="mt-1 text-3xl font-bold">{{ media_count }}</div></a></li>
+</ul>
+<div class="mt-6 grid gap-6 lg:grid-cols-2">
+  <section class="card overflow-hidden" aria-labelledby="queue-h">
+    <h2 id="queue-h" class="border-b border-surface-border px-5 py-4 text-lg font-bold">Review queue</h2>
+    <ul class="divide-y divide-surface-border">
+      {% for lesson in review_lessons %}
+      <li class="flex items-center gap-3 px-5 py-3"><div class="min-w-0 flex-1"><a href="{% url 'studio:edit' lesson.pk %}" class="font-semibold text-ink-heading hover:text-navy">{{ lesson.title }}</a><div class="text-[13px] text-ink-muted">New lesson · {{ lesson.topic.module.course.offering.subject.name }}{% if lesson.author %} · {{ lesson.author.display_name }}{% endif %} · {{ lesson.updated_at|date:"j M" }}</div></div><a href="{% url 'studio:edit' lesson.pk %}" class="font-semibold">{% if can_publish %}Review{% else %}Open{% endif %}</a></li>
+      {% endfor %}
+      {% for draft in review_changes %}
+      <li class="flex items-center gap-3 px-5 py-3"><div class="min-w-0 flex-1"><a href="{% url 'studio:edit' draft.lesson_id %}" class="font-semibold text-ink-heading hover:text-navy">{{ draft.lesson.title }}</a><div class="text-[13px] text-ink-muted">Changes to a published lesson · {{ draft.lesson.topic.module.course.offering.subject.name }}{% if draft.created_by %} · {{ draft.created_by.display_name }}{% endif %} · {{ draft.updated_at|date:"j M" }}</div></div><a href="{% url 'studio:edit' draft.lesson_id %}" class="font-semibold">{% if can_publish %}Review{% else %}Open{% endif %}</a></li>
+      {% endfor %}
+      {% if not review_lessons and not review_changes %}<li class="px-5 py-8 text-center text-ink-muted">Nothing is waiting for review.</li>{% endif %}
+    </ul>
+  </section>
+  <section class="card overflow-hidden" aria-labelledby="mine-h">
+    <h2 id="mine-h" class="border-b border-surface-border px-5 py-4 text-lg font-bold">Work in progress</h2>
+    <ul class="divide-y divide-surface-border">
+      {% for lesson in my_drafts %}
+      <li class="px-5 py-3"><a href="{% url 'studio:edit' lesson.pk %}" class="font-semibold text-ink-heading hover:text-navy">{{ lesson.title }}</a><div class="text-[13px] text-ink-muted">Your draft · {{ lesson.topic.title }} · {{ lesson.updated_at|date:"j M, H:i" }}</div></li>
+      {% endfor %}
+      {% for draft in draft_changes %}
+      <li class="px-5 py-3"><a href="{% url 'studio:edit' draft.lesson_id %}" class="font-semibold text-ink-heading hover:text-navy">{{ draft.lesson.title }}</a><div class="text-[13px] text-ink-muted">Unsubmitted changes to a published lesson{% if draft.created_by %} · {{ draft.created_by.display_name }}{% endif %} · {{ draft.updated_at|date:"j M, H:i" }}</div></li>
+      {% endfor %}
+      {% if not my_drafts and not draft_changes %}<li class="px-5 py-8 text-center text-ink-muted">No drafts in progress.</li>{% endif %}
+    </ul>
+  </section>
+  <section class="card p-5 lg:col-span-2" aria-labelledby="activity-h">
+    <h2 id="activity-h" class="text-lg font-bold">Recent activity</h2>
+    <ol class="mt-4 grid gap-4 text-sm md:grid-cols-2">{% for event in events %}{% include "studio/_event.html" with show_lesson=True %}{% empty %}<li class="text-ink-muted">No activity yet.</li>{% endfor %}</ol>
+  </section>
+</div>
+{% endblock %}
