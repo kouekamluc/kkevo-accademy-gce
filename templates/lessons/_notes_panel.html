@@ -1,0 +1,27 @@
+{# Notes slide-over for reading and interactive lessons. Opened from the header "Notes" button or the w key. #}
+<div x-show="notesOpen" x-cloak class="fixed inset-0 z-40 print:hidden" @keydown.escape.window="notesOpen = false">
+  <div class="absolute inset-0 bg-navy/40" @click="notesOpen = false" aria-hidden="true"></div>
+  <section id="notes" role="dialog" aria-modal="true" aria-labelledby="notes-title"
+           class="absolute inset-y-0 right-0 flex w-full max-w-md flex-col bg-surface-bg shadow-xl"
+           x-transition:enter="transition duration-200" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0">
+    <div class="flex items-center justify-between border-b border-surface-border bg-white px-5 py-4">
+      <h2 id="notes-title" class="text-lg font-bold text-navy">My notes</h2>
+      <button type="button" @click="toggleNotes()" class="flex h-10 w-10 items-center justify-center rounded-btn text-navy hover:bg-slate-100" aria-label="Close notes">{% include "components/icon.html" with name="close" class="h-5 w-5" stroke="2" %}</button>
+    </div>
+    <div class="flex-1 overflow-y-auto px-5 py-5">
+      <form method="post" action="{% url 'courses:lesson_note' course.slug lesson.pk %}" hx-post="{% url 'courses:lesson_note' course.slug lesson.pk %}"
+            hx-target="#note-list" hx-swap="innerHTML" @htmx:after-request="if ($event.detail.successful) $el.reset()"
+            class="flex flex-col gap-3 rounded-card border border-surface-border bg-white p-5">
+        {% csrf_token %}
+        <input type="hidden" name="section_label" :value="position">
+        <input type="hidden" name="section_anchor" :value="activeAnchor">
+        <label for="note-body" class="form-label">Add a note
+          <span class="font-normal text-ink-muted" x-show="position" x-cloak>about <span class="font-semibold text-slate-700" x-text="position"></span></span>
+        </label>
+        <textarea id="note-body" name="body" rows="4" maxlength="2000" required class="form-input py-3" placeholder="In your own words…"></textarea>
+        <div><button type="submit" class="btn-primary">Save note</button></div>
+      </form>
+      <div id="note-list" class="mt-4" aria-live="polite">{% include "lessons/_notes.html" %}</div>
+    </div>
+  </section>
+</div>

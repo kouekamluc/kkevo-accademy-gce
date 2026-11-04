@@ -1,0 +1,20 @@
+{# Keyboard shortcuts dialog (press ?). Shortcuts are ignored while typing in a field. #}
+<div x-show="helpOpen" x-cloak class="fixed inset-0 z-50 flex items-center justify-center p-4 print:hidden" @keydown.escape.window="helpOpen = false">
+  <div class="absolute inset-0 bg-navy/40" @click="helpOpen = false" aria-hidden="true"></div>
+  <section role="dialog" aria-modal="true" aria-labelledby="shortcuts-title" class="relative w-full max-w-sm rounded-panel border border-surface-border bg-white p-6 shadow-xl">
+    <div class="flex items-center justify-between">
+      <h2 id="shortcuts-title" class="text-lg font-bold text-navy">Keyboard shortcuts</h2>
+      <button type="button" @click="helpOpen = false" class="flex h-10 w-10 items-center justify-center rounded-btn text-navy hover:bg-slate-100" aria-label="Close">{% include "components/icon.html" with name="close" class="h-5 w-5" stroke="2" %}</button>
+    </div>
+    <dl class="mt-4 grid grid-cols-[48px_1fr] gap-y-2.5 text-sm text-slate-700">
+      {% if notes_panel %}<dt><kbd class="rounded border border-slate-300 bg-slate-50 px-2 py-0.5 font-mono text-xs">j</kbd></dt><dd>Next section</dd>
+      <dt><kbd class="rounded border border-slate-300 bg-slate-50 px-2 py-0.5 font-mono text-xs">k</kbd></dt><dd>Previous section</dd>{% endif %}
+      {% if next_lesson %}<dt><kbd class="rounded border border-slate-300 bg-slate-50 px-2 py-0.5 font-mono text-xs">n</kbd></dt><dd>Next lesson</dd>{% endif %}
+      {% if prev_lesson %}<dt><kbd class="rounded border border-slate-300 bg-slate-50 px-2 py-0.5 font-mono text-xs">p</kbd></dt><dd>Previous lesson</dd>{% endif %}
+      {% if resume %}<dt><kbd class="rounded border border-slate-300 bg-slate-50 px-2 py-0.5 font-mono text-xs">c</kbd></dt><dd>Continue where you stopped</dd>{% endif %}
+      {% if notes_panel %}<dt><kbd class="rounded border border-slate-300 bg-slate-50 px-2 py-0.5 font-mono text-xs">w</kbd></dt><dd>Open or close your notes</dd>{% endif %}
+      <dt><kbd class="rounded border border-slate-300 bg-slate-50 px-2 py-0.5 font-mono text-xs">?</kbd></dt><dd>Show this list</dd>
+      <dt><kbd class="rounded border border-slate-300 bg-slate-50 px-2 py-0.5 font-mono text-xs">Esc</kbd></dt><dd>Close a panel</dd>
+    </dl>
+  </section>
+</div>

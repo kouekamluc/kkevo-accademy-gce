@@ -39,6 +39,9 @@ class LessonProgress(models.Model):
         max_length=120, blank=True, help_text="Where the student stopped, e.g. 'Worked example 2'."
     )
     video_position = models.PositiveIntegerField(default=0, help_text="Seconds into the lesson video.")
+    position_anchor = models.CharField(
+        max_length=60, blank=True, help_text="HTML id of the section in view when the student stopped, e.g. 'block-12'."
+    )
     time_spent_seconds = models.PositiveIntegerField(default=0)
     started_at = models.DateTimeField(auto_now_add=True)
     last_viewed_at = models.DateTimeField(default=timezone.now, db_index=True)
@@ -100,6 +103,8 @@ class LessonNote(models.Model):
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name="notes")
     video_time = models.PositiveIntegerField(null=True, blank=True, help_text="Seconds into the video, if any.")
     body = models.TextField(max_length=2000)
+    section_label = models.CharField(max_length=120, blank=True, help_text="Section being read when the note was taken.")
+    section_anchor = models.CharField(max_length=60, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:

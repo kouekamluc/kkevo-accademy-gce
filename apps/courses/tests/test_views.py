@@ -120,7 +120,7 @@ def test_continue_learning_redirects_to_latest_lesson(client, student, outline):
     client.force_login(student)
     assert client.get(reverse("courses:continue")).url == reverse("courses:my_subjects")
     LessonProgress.objects.create(user=student, lesson=outline[2], percent=10)
-    assert client.get(reverse("courses:continue")).url == outline[2].get_absolute_url()
+    assert client.get(reverse("courses:continue")).url == outline[2].get_absolute_url() + "?resume=1"
 
 
 def test_course_stats_query_count_is_constant(student, course, outline, django_assert_num_queries):

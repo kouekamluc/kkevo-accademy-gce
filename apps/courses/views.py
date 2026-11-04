@@ -208,6 +208,6 @@ def continue_learning(request):
         .select_related("lesson__topic__module__course").order_by("-last_viewed_at").first()
     )
     if latest:
-        return redirect(latest.lesson.get_absolute_url())
+        return redirect(latest.lesson.get_absolute_url() + "?resume=1")
     messages.info(request, "You haven’t started a lesson yet. Pick a subject to begin.")
     return redirect("courses:my_subjects")

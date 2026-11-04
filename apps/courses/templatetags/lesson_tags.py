@@ -41,6 +41,24 @@ def lines(text):
 
 
 @register.filter
+def choice_letter(index):
+    """0 → 'A', 1 → 'B' … for quiz choices."""
+    try:
+        return "ABCDEFGHIJ"[int(index)]
+    except (ValueError, TypeError, IndexError):
+        return ""
+
+
+@register.filter
+def at(items, index):
+    """items[index] or '' — e.g. the feedback line for one quiz choice."""
+    try:
+        return items[int(index)] or ""
+    except (ValueError, TypeError, IndexError, KeyError):
+        return ""
+
+
+@register.filter
 def mmss(seconds):
     seconds = int(seconds or 0)
     return f"{seconds // 60:02d}:{seconds % 60:02d}" if seconds < 3600 else f"{seconds // 3600}:{seconds % 3600 // 60:02d}:{seconds % 60:02d}"

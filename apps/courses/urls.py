@@ -15,4 +15,6 @@ urlpatterns = [
     path("courses/<slug:course_slug>/lessons/<int:pk>/heartbeat/", lesson_views.lesson_heartbeat, name="lesson_heartbeat"),
     path("courses/<slug:course_slug>/lessons/<int:pk>/save/", lesson_views.lesson_save, name="lesson_save"),
     path("courses/<slug:course_slug>/lessons/<int:pk>/notes/", lesson_views.lesson_note, name="lesson_note"),
+    path("courses/<slug:course_slug>/lessons/<int:pk>/notes/<int:note_pk>/delete/", lesson_views.lesson_note_delete,
+         name="lesson_note_delete"),
 ]

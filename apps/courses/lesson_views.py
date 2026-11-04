@@ -1,5 +1,7 @@
 """Lesson player: reading (04), interactive (05) and video (06) lessons."""
 
+import re
+
 from django.contrib.auth.decorators import login_required
 from django.db.models import Count, Prefetch
 from django.http import Http404, HttpResponse, JsonResponse
@@ -14,6 +16,38 @@ from apps.practice.models import PracticeSet
 from .models import BlockType, Lesson, LessonType, Topic
 
 MAX_HEARTBEAT_SECONDS = 120  # ignore larger gaps (tab left open)
+ANCHOR_RE = re.compile(r"^[A-Za-z0-9_-]{1,60}$")
+
+
+def _clean_anchor(value):
+    value = (value or "").strip()
+    return value if ANCHOR_RE.match(value) else ""
+
+
+def _is_low_data(user):
+    profile = getattr(user, "profile", None)
+    return bool(profile and profile.low_data_mode)
+
+
+def _resume_point(progress, blocks, toc, created):
+    """Where 'Continue from …' should take the student, or None.
+
+    Uses the saved anchor when it still exists on the page; falls back to matching the saved
+    label against section titles (older progress rows only had a label). Nothing to offer on a
+    first visit, after completion, or when the student stopped at the first section.
+    """
+    if created or progress.is_completed:
+        return None
+    sections = [(item["anchor"], item["title"]) for item in toc]
+    sections += [(b.anchor, b.title) for b in blocks if b.title]
+    valid = {anchor for anchor, _ in sections}
+    anchor = progress.position_anchor if progress.position_anchor in valid else ""
+    if not anchor and progress.position_label:
+        anchor = next((a for a, title in sections if title == progress.position_label), "")
+    if not anchor or (toc and anchor == toc[0]["anchor"] and progress.percent < 10):
+        return None
+    label = progress.position_label or next((title for a, title in sections if a == anchor), "where you stopped")
+    return {"anchor": anchor, "label": label}
 
 
 def _get_lesson(request, course_slug, pk):
@@ -43,7 +77,7 @@ def lesson_detail(request, course_slug, pk):
     prev_lesson = lessons[index - 1] if index > 0 else None
     next_lesson = lessons[index + 1] if index + 1 < len(lessons) else None
 
-    progress, _ = LessonProgress.objects.get_or_create(user=request.user, lesson=lesson)
+    progress, created = LessonProgress.objects.get_or_create(user=request.user, lesson=lesson)
     LessonProgress.objects.filter(pk=progress.pk).update(last_viewed_at=timezone.now())
     all_progress = services.progress_by_lesson(request.user, lessons)
 
@@ -84,9 +118,12 @@ def lesson_detail(request, course_slug, pk):
         "is_saved": SavedLesson.objects.filter(user=request.user, lesson=lesson).exists(),
         "related": related, "practice_set": practice_set,
         "has_simulation": any(b.block_type == BlockType.SIMULATION for b in blocks),
-        "notes": LessonNote.objects.filter(user=request.user, lesson=lesson) if video else [],
+        "notes": LessonNote.objects.filter(user=request.user, lesson=lesson),
+        "resume": _resume_point(progress, blocks, toc, created),
+        "auto_resume": request.GET.get("resume") == "1",
+        "low_data": _is_low_data(request.user),
         "up_next": [item for item in module_lessons[module_lessons.index(lesson) + 1:]][:3] if lesson in module_lessons else [],
-        "media_note": "low" if request.user.profile.low_data_mode else "normal",
+        "media_note": "low" if _is_low_data(request.user) else "normal",
         "chapters": _chapters(video),
         "related_reading": [item for item in module_lessons if item.pk != lesson.pk
                             and item.lesson_type in ("reading", "interactive")][:2],
@@ -97,6 +134,7 @@ def lesson_detail(request, course_slug, pk):
         template = "lessons/interactive.html"
     else:
         template = "lessons/reading.html"
+    context["notes_panel"] = template != "lessons/video.html"  # video lessons keep notes in their tab
     return render(request, template, context)
 
 
@@ -138,6 +176,7 @@ def lesson_heartbeat(request, course_slug, pk):
     except ValueError:
         return HttpResponse(status=400)
     label = request.POST.get("position", "")[:120]
+    anchor = _clean_anchor(request.POST.get("anchor"))
     progress, _ = LessonProgress.objects.get_or_create(user=request.user, lesson=lesson)
     progress.time_spent_seconds += seconds
     progress.last_viewed_at = timezone.now()
@@ -145,6 +184,8 @@ def lesson_heartbeat(request, course_slug, pk):
         progress.percent = max(progress.percent, min(percent, 99))
         if label:
             progress.position_label = label
+        if anchor:
+            progress.position_anchor = anchor
     if video_position:
         progress.video_position = video_position
     progress.save()
@@ -177,11 +218,28 @@ def lesson_note(request, course_slug, pk):
     body = request.POST.get("body", "").strip()[:2000]
     if body:
         try:
-            video_time = max(0, int(request.POST.get("video_time") or 0))
+            raw_time = request.POST.get("video_time")  # only video lessons send a time
+            video_time = max(0, int(raw_time)) if raw_time not in (None, "") else None
         except ValueError:
             video_time = None
-        LessonNote.objects.create(user=request.user, lesson=lesson, body=body, video_time=video_time)
+        LessonNote.objects.create(
+            user=request.user, lesson=lesson, body=body, video_time=video_time,
+            section_label=request.POST.get("section_label", "").strip()[:120],
+            section_anchor=_clean_anchor(request.POST.get("section_anchor")),
+        )
+    return _notes_response(request, lesson)
+
+
+@login_required
+@require_POST
+def lesson_note_delete(request, course_slug, pk, note_pk):
+    lesson = _get_lesson(request, course_slug, pk)
+    get_object_or_404(LessonNote, pk=note_pk, lesson=lesson, user=request.user).delete()
+    return _notes_response(request, lesson)
+
+
+def _notes_response(request, lesson):
     notes = LessonNote.objects.filter(user=request.user, lesson=lesson)
     if request.htmx:
-        return render(request, "lessons/_notes.html", {"lesson": lesson, "notes": notes})
+        return render(request, "lessons/_notes.html", {"lesson": lesson, "course": lesson.course, "notes": notes, "oob": True})
     return redirect(lesson.get_absolute_url() + "#notes")
