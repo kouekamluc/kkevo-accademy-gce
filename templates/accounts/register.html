@@ -1,0 +1,26 @@
+{% extends "layouts/auth.html" %}
+{% block title %}Create your account — GCE Learning Academy{% endblock %}
+{% block header_action %}<a href="{% url 'accounts:login' %}" class="text-sm font-semibold">Log in</a>{% endblock %}
+{% block width %}max-w-[480px]{% endblock %}
+{% block content %}
+<div class="card mt-4 p-6 shadow-card sm:p-8">
+  <div class="eyebrow">Step 1 of 2</div>
+  <h1 class="mt-2 text-[28px] font-bold leading-tight tracking-[-.02em] text-navy">Create your free account</h1>
+  <p class="mt-2 text-[15px] text-slate-600">Start your first lesson in under two minutes.</p>
+  <form method="post" class="mt-7 flex flex-col gap-5" novalidate>
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+      <div class="rounded-input border border-danger-200 bg-danger-50 px-4 py-3 text-sm font-medium text-danger-text" role="alert">{{ form.non_field_errors.0 }}</div>
+    {% endif %}
+    <div class="grid gap-5 sm:grid-cols-2">
+      {% include "components/field.html" with field=form.first_name %}
+      {% include "components/field.html" with field=form.last_name %}
+    </div>
+    {% include "components/field.html" with field=form.email %}
+    {% include "components/field.html" with field=form.password1 %}
+    {% include "components/field.html" with field=form.password2 %}
+    <button type="submit" class="btn-primary btn-lg mt-1 w-full">Create account {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</button>
+  </form>
+</div>
+<p class="mt-6 text-center text-sm text-slate-600">Already have an account? <a href="{% url 'accounts:login' %}" class="font-semibold">Log in</a></p>
+{% endblock %}

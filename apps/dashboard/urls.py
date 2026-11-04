@@ -1,10 +1,9 @@
 from django.urls import path
 
-from apps.core.views import planned
+from . import views
 
 app_name = "dashboard"
 
-# Implemented in milestone 4 (student dashboard).
 urlpatterns = [
-    path("", planned, {"page": "Dashboard"}, name="home"),
+    path("", views.home, name="home"),
 ]

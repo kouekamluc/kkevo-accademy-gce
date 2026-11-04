@@ -126,5 +126,3 @@ if not DEBUG:
     SECURE_HSTS_SECONDS = env.int("DJANGO_HSTS_SECONDS", default=0)
     SECURE_CONTENT_TYPE_NOSNIFF = True
 
-# Django 6 default; set now to silence the transition warning
-FORMS_URLFIELD_ASSUME_HTTPS = True

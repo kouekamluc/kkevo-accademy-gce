@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="flex min-h-screen flex-col">
+  <header class="border-b border-surface-border bg-white">
+    <div class="wrap flex h-16 items-center justify-between">
+      <a href="{% url 'core:landing' %}" class="flex items-center gap-2.5 text-navy hover:text-navy">
+        {% include "components/logo.html" with size="sm" %}<span class="text-base font-bold tracking-[-.01em]">GCE Learning Academy</span>
+      </a>
+      {% block header_action %}{% endblock %}
+    </div>
+  </header>
+  <main id="main" class="flex flex-1 justify-center px-4 py-10 nav:py-16">
+    <div class="w-full {% block width %}max-w-[440px]{% endblock %}">
+      {% include "components/messages.html" %}
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+</div>
+{% endblock %}

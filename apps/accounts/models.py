@@ -56,3 +56,32 @@ class User(AbstractUser):
         if parts:
             return "".join(p[0] for p in parts).upper()[:2]
         return self.email[:2].upper()
+
+
+class StudentProfile(models.Model):
+    """Learning preferences for a user. Created automatically with every user."""
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
+    level = models.ForeignKey(
+        "academics.AcademicLevel", on_delete=models.SET_NULL, null=True, blank=True, related_name="students"
+    )
+    pathway = models.ForeignKey(
+        "academics.AcademicPathway", on_delete=models.SET_NULL, null=True, blank=True, related_name="students"
+    )
+    low_data_mode = models.BooleanField(
+        default=False, help_text="Load lighter images and lower-quality video."
+    )
+    onboarded_at = models.DateTimeField(null=True, blank=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Profile of {self.user}"
+
+    @property
+    def is_onboarded(self):
+        return self.onboarded_at is not None and self.level_id is not None and self.pathway_id is not None
+
+    @property
+    def class_label(self):
+        """'Form 5 · Science' — shown under the student's name."""
+        return " · ".join(str(x) for x in (self.level, self.pathway) if x)

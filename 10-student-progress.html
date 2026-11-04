@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My progress — GCE Learning Academy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=STIX+Two+Text:ital,wght@0,400;1,400&amp;display=swap">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0F172A;background:#F8FAFC;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#2563EB;text-decoration:none}a:hover{color:#1D4ED8}
+button{font-family:inherit;cursor:pointer}
+.nav{display:flex;align-items:center;gap:12px;height:44px;padding:0 12px;border-radius:10px;color:#334155;font-size:15px;font-weight:500}
+.nav:hover{background:#F1F5F9;color:#102A43}
+.card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;padding:24px}
+.h{margin:0;font-size:18px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.span2{grid-column:span 2}
+.lbl{font-size:13px;color:#64748B}
+.big{font-size:30px;font-weight:700;letter-spacing:-.02em}
+.mtop{display:none}
+@media (max-width:1100px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:1fr}.span2{grid-column:auto}}
+@media (max-width:900px){.side{display:none!important}.mtop{display:flex}.pad{padding:20px 16px!important}}
+</style>
+
+</head>
+<body>
+<div id="dc-root">
+<div style="display:flex;flex-wrap:wrap;min-height:1900px;background:#F8FAFC">
+
+<aside class="side" aria-label="Sidebar" style="flex:1 1 264px;max-width:264px;background:#FFFFFF;border-right:1px solid #E2E8F0;display:flex;flex-direction:column;padding:0 16px 20px">
+<div style="height:64px;display:flex;align-items:center;gap:10px;padding:0 8px;color:#102A43"><span style="width:32px;height:32px;border-radius:8px;background:#102A43;display:flex;align-items:flex-end;justify-content:center;gap:3px;padding:7px 0"><span style="width:4px;height:6px;border-radius:1px;background:#93C5FD"></span><span style="width:4px;height:11px;border-radius:1px;background:#FFFFFF"></span><span style="width:4px;height:17px;border-radius:1px;background:#10B981"></span></span><span style="font-weight:700;font-size:15px;line-height:1.2">GCE Learning<br>Academy</span></div>
+<nav aria-label="Main" style="display:flex;flex-direction:column;gap:2px;margin-top:16px">
+<a class="nav" href="02-dashboard.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>Dashboard</a>
+<a class="nav" href="03-subject-overview.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"></path><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"></path></svg>My Subjects</a>
+<a class="nav" href="08-explore-subjects.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15.5 8.5-2 5-5 2 2-5z"></path></svg>Explore Courses</a>
+<a class="nav" href="04-lesson-reading.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m10 8 6 4-6 4z"></path></svg>Continue Learning</a>
+<a class="nav" href="09-practice-quiz.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg>Practice</a>
+<a class="nav" href="11-study-planner.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg>Study Planner</a>
+<a class="nav" href="#" aria-current="page" style="background:#102A43;color:#FFFFFF;font-weight:600"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="m7 15 4-4 3 3 5-6"></path></svg>My Progress</a>
+<a class="nav" href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>Saved Lessons</a>
+<a class="nav" href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"></path><circle cx="15" cy="6" r="2"></circle><circle cx="9" cy="12" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg>Settings</a>
+</nav>
+</aside>
+
+<div style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column">
+<header style="height:64px;background:#FFFFFF;border-bottom:1px solid #E2E8F0;display:flex;align-items:center;gap:16px;padding:0 32px">
+<button class="mtop" aria-label="Open menu" style="width:44px;height:44px;border:1px solid #E2E8F0;border-radius:10px;background:#FFFFFF;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#102A43" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+<div style="margin-left:auto;display:flex;align-items:center;gap:8px"><span style="width:36px;height:36px;border-radius:50%;background:#DBEAFE;color:#1D4ED8;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center" aria-label="Alex Nfor">AN</span></div>
+</header>
+
+<main class="pad" style="padding:32px;max-width:1240px;width:100%;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap">
+<div><h1 style="margin:0;font-size:30px;letter-spacing:-.02em;color:#102A43">My Progress</h1><p style="margin:6px 0 0;font-size:16px;color:#64748B">How your understanding is growing, and where to focus next.</p></div>
+<div role="tablist" aria-label="Time range" style="display:flex;background:#F1F5F9;border-radius:10px;padding:3px"><button role="tab" aria-selected="false" style="height:38px;padding:0 14px;border:0;border-radius:8px;background:transparent;font-size:14px;font-weight:500;color:#475569">7 days</button><button role="tab" aria-selected="true" style="height:38px;padding:0 14px;border:0;border-radius:8px;background:#FFFFFF;font-size:14px;font-weight:600;box-shadow:0 1px 2px rgba(15,23,42,.1)">30 days</button><button role="tab" aria-selected="false" style="height:38px;padding:0 14px;border:0;border-radius:8px;background:transparent;font-size:14px;font-weight:500;color:#475569">This term</button></div>
+</div>
+
+<div class="g4">
+<div class="card" style="display:flex;gap:16px;align-items:center"><div role="img" aria-label="56 percent overall completion" style="width:76px;height:76px;border-radius:50%;background:conic-gradient(#10B981 0 56%,#E2E8F0 56% 100%);display:flex;align-items:center;justify-content:center;flex:none"><div style="width:58px;height:58px;border-radius:50%;background:#FFFFFF;display:flex;align-items:center;justify-content:center;font-weight:700">56%</div></div><div><div class="lbl">Overall completion</div><div style="font-size:14px;margin-top:4px;color:#047857;font-weight:600">+9% this month</div></div></div>
+<div class="card"><div class="lbl">Lessons completed</div><div class="big" style="margin-top:6px">84</div><div style="font-size:13px;color:#475569;margin-top:2px">of 151 in your plan</div></div>
+<div class="card"><div class="lbl">Average quiz score</div><div class="big" style="margin-top:6px">78%</div><div style="font-size:13px;color:#047857;margin-top:2px;font-weight:600">+6 points vs last month</div></div>
+<div class="card"><div class="lbl">Learning time</div><div class="big" style="margin-top:6px">21h 40m</div><div style="font-size:13px;color:#475569;margin-top:2px">≈ 43 min per day</div></div>
+</div>
+
+<div class="g3">
+<section class="card span2" aria-labelledby="sp">
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 id="sp" class="h">Subject progress</h2><span class="lbl">Completion · quiz average</span></div>
+<div style="display:flex;flex-direction:column;margin-top:10px">
+<div style="display:grid;grid-template-columns:200px 1fr 56px 72px;gap:16px;align-items:center;min-height:56px;border-bottom:1px solid #F1F5F9"><span style="display:flex;gap:10px;align-items:center;font-weight:600"><span style="width:32px;height:32px;border-radius:8px;background:#EFF6FF;color:#1D4ED8;display:flex;align-items:center;justify-content:center;font-family:'STIX Two Text',serif;font-style:italic">x²</span>Mathematics</span><div style="height:8px;border-radius:999px;background:#E2E8F0"><div style="width:72%;height:8px;border-radius:999px;background:#10B981"></div></div><strong style="text-align:right">72%</strong><span style="font-size:13px;color:#475569;text-align:right">quiz 86%</span></div>
+<div style="display:grid;grid-template-columns:200px 1fr 56px 72px;gap:16px;align-items:center;min-height:56px;border-bottom:1px solid #F1F5F9"><span style="display:flex;gap:10px;align-items:center;font-weight:600"><span style="width:32px;height:32px;border-radius:8px;background:#F1F5F9;color:#102A43;display:flex;align-items:center;justify-content:center;font-family:'STIX Two Text',serif">Aa</span>English Language</span><div style="height:8px;border-radius:999px;background:#E2E8F0"><div style="width:64%;height:8px;border-radius:999px;background:#10B981"></div></div><strong style="text-align:right">64%</strong><span style="font-size:13px;color:#475569;text-align:right">quiz 81%</span></div>
+<div style="display:grid;grid-template-columns:200px 1fr 56px 72px;gap:16px;align-items:center;min-height:56px;border-bottom:1px solid #F1F5F9"><span style="display:flex;gap:10px;align-items:center;font-weight:600"><span style="width:32px;height:32px;border-radius:8px;background:#EFF6FF;color:#1D4ED8;display:flex;align-items:center;justify-content:center;font-family:'STIX Two Text',serif;font-style:italic">F</span>Physics</span><div style="height:8px;border-radius:999px;background:#E2E8F0"><div style="width:58%;height:8px;border-radius:999px;background:#10B981"></div></div><strong style="text-align:right">58%</strong><span style="font-size:13px;color:#475569;text-align:right">quiz 74%</span></div>
+<div style="display:grid;grid-template-columns:200px 1fr 56px 72px;gap:16px;align-items:center;min-height:56px;border-bottom:1px solid #F1F5F9"><span style="display:flex;gap:10px;align-items:center;font-weight:600"><span style="width:32px;height:32px;border-radius:8px;background:#EFF6FF;color:#1D4ED8;display:flex;align-items:center;justify-content:center;font-family:'STIX Two Text',serif;font-size:12px">H₂O</span>Chemistry</span><div style="height:8px;border-radius:999px;background:#E2E8F0"><div style="width:46%;height:8px;border-radius:999px;background:#10B981"></div></div><strong style="text-align:right">46%</strong><span style="font-size:13px;color:#B45309;text-align:right;font-weight:600">quiz 63%</span></div>
+<div style="display:grid;grid-template-columns:200px 1fr 56px 72px;gap:16px;align-items:center;min-height:56px"><span style="display:flex;gap:10px;align-items:center;font-weight:600"><span style="width:32px;height:32px;border-radius:8px;background:#ECFDF5;color:#047857;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 3c0 6 10 6 10 12s-10 6-10 6M17 3c0 6-10 6-10 12"></path></svg></span>Biology</span><div style="height:8px;border-radius:999px;background:#E2E8F0"><div style="width:38%;height:8px;border-radius:999px;background:#10B981"></div></div><strong style="text-align:right">38%</strong><span style="font-size:13px;color:#475569;text-align:right">quiz 70%</span></div>
+</div>
+</section>
+
+<section class="card" aria-labelledby="ss" style="display:flex;flex-direction:column;gap:14px">
+<h2 id="ss" class="h">Strongest subjects</h2>
+<div style="display:flex;gap:14px;align-items:center;padding:14px;border-radius:12px;background:#ECFDF5"><span style="width:40px;height:40px;border-radius:10px;background:#047857;color:#FFFFFF;font-weight:700;display:flex;align-items:center;justify-content:center">1</span><div><div style="font-weight:700">Mathematics</div><div style="font-size:13px;color:#065F46">86% quiz average · 9 topics mastered</div></div></div>
+<div style="display:flex;gap:14px;align-items:center;padding:14px;border-radius:12px;background:#F8FAFC;border:1px solid #E2E8F0"><span style="width:40px;height:40px;border-radius:10px;background:#102A43;color:#FFFFFF;font-weight:700;display:flex;align-items:center;justify-content:center">2</span><div><div style="font-weight:700">English Language</div><div style="font-size:13px;color:#475569">81% quiz average · 6 topics mastered</div></div></div>
+<p style="margin:0;font-size:14px;line-height:1.6;color:#475569">“Mastered” means you scored 80% or more on a topic’s practice set twice.</p>
+</section>
+
+<section class="card span2" aria-labelledby="wk">
+<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px"><h2 id="wk" class="h">Weekly learning activity</h2><span class="lbl">Hours per week · last 8 weeks</span></div>
+<div role="img" aria-label="Hours per week: 3.5, 4.2, 2.8, 5.0, 4.6, 5.5, 6.1, and 5.4 this week" style="margin-top:20px;height:200px;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:18px;align-items:end;border-bottom:1px solid #E2E8F0;position:relative">
+<div style="position:absolute;left:0;right:0;bottom:164px;border-top:1px dashed #E2E8F0"></div><div style="position:absolute;left:0;right:0;bottom:82px;border-top:1px dashed #E2E8F0"></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:12px;color:#475569">3.5</span><div style="width:100%;max-width:40px;height:96px;border-radius:6px 6px 0 0;background:#BFDBFE"></div></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:12px;color:#475569">4.2</span><div style="width:100%;max-width:40px;height:115px;border-radius:6px 6px 0 0;background:#BFDBFE"></div></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:12px;color:#475569">2.8</span><div style="width:100%;max-width:40px;height:77px;border-radius:6px 6px 0 0;background:#BFDBFE"></div></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:12px;color:#475569">5.0</span><div style="width:100%;max-width:40px;height:137px;border-radius:6px 6px 0 0;background:#BFDBFE"></div></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:12px;color:#475569">4.6</span><div style="width:100%;max-width:40px;height:126px;border-radius:6px 6px 0 0;background:#BFDBFE"></div></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:12px;color:#475569">5.5</span><div style="width:100%;max-width:40px;height:151px;border-radius:6px 6px 0 0;background:#BFDBFE"></div></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:12px;color:#475569">6.1</span><div style="width:100%;max-width:40px;height:167px;border-radius:6px 6px 0 0;background:#BFDBFE"></div></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:6px"><span style="font-size:12px;color:#1D4ED8;font-weight:700">5.4</span><div style="width:100%;max-width:40px;height:148px;border-radius:6px 6px 0 0;background:#2563EB"></div></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:18px;margin-top:8px;font-size:12px;color:#64748B;text-align:center"><span>14 Sep</span><span>21 Sep</span><span>28 Sep</span><span>5 Oct</span><span>12 Oct</span><span>19 Oct</span><span>26 Oct</span><span style="color:#0F172A;font-weight:600">This week</span></div>
+</section>
+
+<section class="card" aria-labelledby="qp">
+<h2 id="qp" class="h">Quiz performance</h2>
+<div style="display:flex;align-items:baseline;gap:8px;margin-top:10px"><span class="big">78%</span><span class="lbl">average · 46 quizzes</span></div>
+<div role="img" aria-label="Last 10 quiz scores trending upward from 64 to 88 percent" style="margin-top:14px">
+<svg viewBox="0 0 260 90" width="100%" aria-hidden="true"><path d="M0 70H260M0 40H260M0 10H260" stroke="#F1F5F9"></path><polyline points="5,62 32,55 59,66 86,48 113,44 140,52 167,34 194,30 221,24 250,16" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linejoin="round"></polyline><circle cx="250" cy="16" r="4" fill="#2563EB"></circle></svg>
+<div style="display:flex;justify-content:space-between;font-size:12px;color:#64748B"><span>10 quizzes ago</span><span>Latest · 88%</span></div>
+</div>
+<div style="display:flex;gap:16px;margin-top:14px;font-size:13px"><span><strong style="color:#047857">212</strong> correct</span><span><strong>58</strong> to review</span></div>
+</section>
+
+<section class="card span2" aria-labelledby="tr">
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 id="tr" class="h">Topics needing revision</h2><span class="lbl">Practice score below 60%</span></div>
+<div style="display:flex;flex-direction:column;margin-top:8px">
+<div style="display:flex;gap:14px;align-items:center;min-height:64px;border-bottom:1px solid #F1F5F9"><span style="width:8px;height:36px;border-radius:4px;background:#F59E0B"></span><div style="flex:1"><div style="font-weight:600">The Mole Concept</div><div style="font-size:13px;color:#64748B">Chemistry · last practised 9 days ago</div></div><span style="font-size:13px;font-weight:600;color:#B45309;background:#FFFBEB;border-radius:6px;padding:3px 8px">48%</span><a href="#" style="height:40px;padding:0 14px;border-radius:10px;border:1px solid #CBD5E1;color:#102A43;font-weight:600;font-size:14px;display:flex;align-items:center">Revise</a></div>
+<div style="display:flex;gap:14px;align-items:center;min-height:64px;border-bottom:1px solid #F1F5F9"><span style="width:8px;height:36px;border-radius:4px;background:#F59E0B"></span><div style="flex:1"><div style="font-weight:600">Circular Motion</div><div style="font-size:13px;color:#64748B">Physics · last practised 5 days ago</div></div><span style="font-size:13px;font-weight:600;color:#B45309;background:#FFFBEB;border-radius:6px;padding:3px 8px">52%</span><a href="#" style="height:40px;padding:0 14px;border-radius:10px;border:1px solid #CBD5E1;color:#102A43;font-weight:600;font-size:14px;display:flex;align-items:center">Revise</a></div>
+<div style="display:flex;gap:14px;align-items:center;min-height:64px;border-bottom:1px solid #F1F5F9"><span style="width:8px;height:36px;border-radius:4px;background:#F59E0B"></span><div style="flex:1"><div style="font-weight:600">Probability</div><div style="font-size:13px;color:#64748B">Mathematics · last practised 12 days ago</div></div><span style="font-size:13px;font-weight:600;color:#B45309;background:#FFFBEB;border-radius:6px;padding:3px 8px">55%</span><a href="#" style="height:40px;padding:0 14px;border-radius:10px;border:1px solid #CBD5E1;color:#102A43;font-weight:600;font-size:14px;display:flex;align-items:center">Revise</a></div>
+<div style="display:flex;gap:14px;align-items:center;min-height:64px"><span style="width:8px;height:36px;border-radius:4px;background:#F59E0B"></span><div style="flex:1"><div style="font-weight:600">Photosynthesis</div><div style="font-size:13px;color:#64748B">Biology · last practised 3 days ago</div></div><span style="font-size:13px;font-weight:600;color:#B45309;background:#FFFBEB;border-radius:6px;padding:3px 8px">58%</span><a href="#" style="height:40px;padding:0 14px;border-radius:10px;border:1px solid #CBD5E1;color:#102A43;font-weight:600;font-size:14px;display:flex;align-items:center">Revise</a></div>
+</div>
+</section>
+
+<section class="card" aria-labelledby="ns" style="background:#102A43;border-color:#102A43;color:#FFFFFF;display:flex;flex-direction:column;gap:12px">
+<h2 id="ns" class="h" style="color:#FFFFFF">Suggested next steps</h2>
+<a href="#" style="display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;background:#1E3A5F;color:#FFFFFF"><span style="font-size:13px;font-weight:700;color:#6EE7B7;width:22px">1</span><span style="flex:1;font-size:14px;line-height:1.45">Re-read <strong>The Mole Concept</strong>, then retry its practice set</span></a>
+<a href="05-interactive-lesson.html" style="display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;background:#1E3A5F;color:#FFFFFF"><span style="font-size:13px;font-weight:700;color:#6EE7B7;width:22px">2</span><span style="flex:1;font-size:14px;line-height:1.45">Try the <strong>Newton’s Second Law</strong> simulation before Circular Motion</span></a>
+<a href="04-lesson-reading.html" style="display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;background:#1E3A5F;color:#FFFFFF"><span style="font-size:13px;font-weight:700;color:#6EE7B7;width:22px">3</span><span style="flex:1;font-size:14px;line-height:1.45">Finish <strong>Quadratic Equations</strong> — 4 lessons left</span></a>
+<a href="11-study-planner.html" style="margin-top:auto;height:44px;border-radius:10px;background:#FFFFFF;color:#102A43;font-weight:600;font-size:15px;display:flex;align-items:center;justify-content:center">Add these to my planner</a>
+</section>
+
+<section class="card" aria-labelledby="rc" style="grid-column:1/-1">
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 id="rc" class="h">Recently completed lessons</h2><a href="#" style="font-size:14px;font-weight:600;min-height:44px;display:flex;align-items:center">View all</a></div>
+<div style="overflow-x:auto;margin-top:4px">
+<table style="width:100%;border-collapse:collapse;font-size:14px;min-width:640px">
+<thead><tr style="text-align:left;color:#64748B;font-size:12px;letter-spacing:.04em;text-transform:uppercase"><th style="padding:10px 12px 10px 0;font-weight:600">Lesson</th><th style="padding:10px 12px;font-weight:600">Subject</th><th style="padding:10px 12px;font-weight:600">Completed</th><th style="padding:10px 12px;font-weight:600">Time</th><th style="padding:10px 0 10px 12px;font-weight:600;text-align:right">Practice score</th></tr></thead>
+<tbody>
+<tr style="border-top:1px solid #F1F5F9"><td style="padding:14px 12px 14px 0;font-weight:600">Introduction to Quadratic Equations</td><td style="padding:14px 12px;color:#475569">Mathematics</td><td style="padding:14px 12px;color:#475569">Yesterday</td><td style="padding:14px 12px;color:#475569">14 min</td><td style="padding:14px 0 14px 12px;text-align:right;font-weight:600;color:#047857">80%</td></tr>
+<tr style="border-top:1px solid #F1F5F9"><td style="padding:14px 12px 14px 0;font-weight:600">Scalars and Vectors</td><td style="padding:14px 12px;color:#475569">Physics</td><td style="padding:14px 12px;color:#475569">2 Nov</td><td style="padding:14px 12px;color:#475569">19 min</td><td style="padding:14px 0 14px 12px;text-align:right;font-weight:600;color:#047857">100%</td></tr>
+<tr style="border-top:1px solid #F1F5F9"><td style="padding:14px 12px 14px 0;font-weight:600">Ionic and Covalent Bonding</td><td style="padding:14px 12px;color:#475569">Chemistry</td><td style="padding:14px 12px;color:#475569">1 Nov</td><td style="padding:14px 12px;color:#475569">22 min</td><td style="padding:14px 0 14px 12px;text-align:right;font-weight:600;color:#B45309">60%</td></tr>
+<tr style="border-top:1px solid #F1F5F9"><td style="padding:14px 12px 14px 0;font-weight:600">Reading for Main Ideas</td><td style="padding:14px 12px;color:#475569">English Language</td><td style="padding:14px 12px;color:#475569">31 Oct</td><td style="padding:14px 12px;color:#475569">16 min</td><td style="padding:14px 0 14px 12px;text-align:right;font-weight:600;color:#047857">90%</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

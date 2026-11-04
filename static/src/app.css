@@ -24,4 +24,7 @@
   .accent-emerald { @apply bg-success-50 text-success-text; }
   .accent-amber { @apply bg-warning-50 text-warning-text; }
   .accent-slate { @apply bg-slate-100 text-navy; }
+  .form-label { @apply text-sm font-semibold text-ink-heading; }
+  .form-input { @apply block min-h-touch w-full rounded-input border border-slate-300 bg-white px-3.5 text-[15px] text-ink-heading placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary-100; }
+  .form-input-error { @apply border-danger-text focus:border-danger-text focus:ring-danger-50; }
 }

@@ -38,6 +38,6 @@ def test_authenticated_user_sees_dashboard_link(client):
     assert "Go to dashboard" in html
 
 
-@pytest.mark.parametrize("name", ["accounts:login", "accounts:register", "courses:catalog", "dashboard:home"])
-def test_planned_routes_resolve(client, name):
+@pytest.mark.parametrize("name", ["accounts:login", "accounts:register", "courses:catalog"])
+def test_public_routes_resolve(client, name):
     assert client.get(reverse(name)).status_code == 200

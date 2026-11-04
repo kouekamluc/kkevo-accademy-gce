@@ -1,0 +1,64 @@
+{% extends "layouts/app.html" %}
+{% block title %}Profile & settings — GCE Learning Academy{% endblock %}
+{% block header_left %}<span class="text-[15px] font-semibold text-ink-heading">Profile &amp; settings</span>{% endblock %}
+{% block content %}
+<div class="mt-2 flex flex-col gap-6">
+  <div>
+    <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[30px]">Profile &amp; settings</h1>
+    <p class="mt-1.5 text-base text-ink-muted">Manage your details, your class and how lessons load.</p>
+  </div>
+
+  <div class="grid gap-6 lg:grid-cols-3">
+    <section class="card p-6 shadow-card lg:col-span-2 nav:p-8" aria-labelledby="details-heading">
+      <h2 id="details-heading" class="text-h3 text-ink-heading">Your details</h2>
+      <form method="post" class="mt-5 flex flex-col gap-5" novalidate>
+        {% csrf_token %}
+        <input type="hidden" name="section" value="details">
+        <div class="grid gap-5 sm:grid-cols-2">
+          {% include "components/field.html" with field=details_form.first_name %}
+          {% include "components/field.html" with field=details_form.last_name %}
+        </div>
+        {% include "components/field.html" with field=details_form.email %}
+        <div><button type="submit" class="btn-primary">Save details</button></div>
+      </form>
+    </section>
+
+    <section class="card flex flex-col gap-4 p-6 shadow-card nav:p-8" aria-labelledby="security-heading">
+      <h2 id="security-heading" class="text-h3 text-ink-heading">Security</h2>
+      <p class="text-sm leading-relaxed text-slate-600">Your password is stored securely and never shown to anyone, including our staff.</p>
+      <a href="{% url 'accounts:password_change' %}" class="btn-secondary w-full">{% include "components/icon.html" with name="lock" class="h-[18px] w-[18px]" %}Change password</a>
+      <p class="text-xs text-ink-muted">Member since {{ user.date_joined|date:"j F Y" }}</p>
+    </section>
+
+    <section class="card p-6 shadow-card lg:col-span-3 nav:p-8" aria-labelledby="study-heading">
+      <h2 id="study-heading" class="text-h3 text-ink-heading">Class &amp; study settings</h2>
+      <p class="mt-1 text-sm text-slate-600">Changing your class changes the subjects recommended to you.</p>
+      <form method="post" class="mt-5 flex flex-col gap-5" novalidate>
+        {% csrf_token %}
+        <input type="hidden" name="section" value="study">
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div class="flex flex-col gap-1.5">
+            <label for="{{ study_form.level.id_for_label }}" class="form-label">Class</label>
+            <select name="{{ study_form.level.html_name }}" id="{{ study_form.level.id_for_label }}" class="form-input{% if study_form.level.errors %} form-input-error{% endif %}">
+              {% for level in study_form.fields.level.queryset %}<option value="{{ level.pk }}" {% if level.pk|stringformat:"s" == study_form.level.value|stringformat:"s" %}selected{% endif %}>{{ level.name }}</option>{% endfor %}
+            </select>
+            {% for error in study_form.level.errors %}<p class="text-[13px] font-medium text-danger-text" role="alert">{{ error }}</p>{% endfor %}
+          </div>
+          <div class="flex flex-col gap-1.5">
+            <label for="{{ study_form.pathway.id_for_label }}" class="form-label">Pathway</label>
+            <select name="{{ study_form.pathway.html_name }}" id="{{ study_form.pathway.id_for_label }}" class="form-input{% if study_form.pathway.errors %} form-input-error{% endif %}">
+              {% for pathway in study_form.fields.pathway.queryset %}<option value="{{ pathway.pk }}" {% if pathway.pk|stringformat:"s" == study_form.pathway.value|stringformat:"s" %}selected{% endif %}>{{ pathway.name }}</option>{% endfor %}
+            </select>
+            {% for error in study_form.pathway.errors %}<p class="text-[13px] font-medium text-danger-text" role="alert">{{ error }}</p>{% endfor %}
+          </div>
+        </div>
+        <label class="flex min-h-touch cursor-pointer items-start gap-3 rounded-xl border border-surface-border bg-surface-bg p-4">
+          <input type="checkbox" name="{{ study_form.low_data_mode.html_name }}" {% if study_form.low_data_mode.value %}checked{% endif %} class="mt-0.5 h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary-300">
+          <span><span class="block text-sm font-semibold text-ink-heading">Low-data mode</span><span class="block text-sm text-ink-muted">Load lighter images and lower-quality video to save mobile data.</span></span>
+        </label>
+        <div><button type="submit" class="btn-primary">Save study settings</button></div>
+      </form>
+    </section>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% comment %}
+Signed-in app shell from the dashboard mockup: 264px sidebar (≥900px), 64px header,
+bottom bar on phones. Views set `nav_active` to highlight the current item.
+{% endcomment %}
+{% block body %}
+<div class="flex min-h-screen bg-surface-bg">
+  <aside aria-label="Sidebar" class="sticky top-0 hidden h-screen w-sidebar shrink-0 flex-col border-r border-surface-border bg-white px-4 pb-5 nav:flex">
+    <a href="{% url 'dashboard:home' %}" class="flex h-16 items-center gap-2.5 px-2 text-navy hover:text-navy">
+      {% include "components/logo.html" with size="sm" %}<span class="text-[15px] font-bold leading-tight">GCE Learning<br>Academy</span>
+    </a>
+    <nav aria-label="Main" class="mt-4 flex flex-col gap-0.5">
+      {% include "components/app_nav_link.html" with key="dashboard" label="Dashboard" icon="home" url_name="dashboard:home" %}
+      {% include "components/app_nav_link.html" with key="explore" label="Explore Courses" icon="compass" url_name="courses:catalog" %}
+      {% include "components/app_nav_link.html" with key="settings" label="Settings" icon="settings" url_name="accounts:profile" %}
+    </nav>
+    <div class="mt-auto">{% include "components/low_data_toggle.html" with student=current_profile %}</div>
+  </aside>
+
+  <div class="flex min-w-0 flex-1 flex-col">
+    <header class="sticky top-0 z-30 flex h-14 items-center gap-4 border-b border-surface-border bg-white px-4 nav:h-header nav:px-8">
+      <a href="{% url 'dashboard:home' %}" class="flex items-center gap-2 text-navy nav:hidden" aria-label="GCE Learning Academy home">{% include "components/logo.html" with size="sm" %}</a>
+      <div class="min-w-0 flex-1">{% block header_left %}{% endblock %}</div>
+      <div class="relative" x-data="{ open: false }" @click.outside="open = false" @keydown.escape.window="open = false">
+        <button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-haspopup="menu" aria-controls="user-menu"
+                class="flex h-11 items-center gap-2.5 rounded-btn pl-2 pr-1 hover:bg-slate-50">
+          <span class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-100 text-sm font-bold text-primary-700">{{ user.initials }}</span>
+          <span class="hidden text-left leading-tight sm:block">
+            <span class="block text-sm font-semibold text-ink-heading">{{ user.display_name }}</span>
+            {% if current_profile.class_label %}<span class="block text-xs text-ink-muted">{{ current_profile.class_label }}</span>{% endif %}
+          </span>
+          {% include "components/icon.html" with name="chevron-down" class="h-4 w-4 text-ink-muted" stroke="2" %}
+        </button>
+        <div id="user-menu" role="menu" x-show="open" x-cloak x-transition.opacity
+             class="absolute right-0 top-full z-40 mt-2 w-60 rounded-card border border-surface-border bg-white p-1.5 shadow-raised">
+          <div class="border-b border-surface-border px-3 pb-2.5 pt-1.5 text-sm"><div class="truncate font-semibold">{{ user.display_name }}</div><div class="truncate text-xs text-ink-muted">{{ user.email }}</div></div>
+          <a role="menuitem" href="{% url 'accounts:profile' %}" class="mt-1 flex min-h-touch items-center gap-3 rounded-input px-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-navy">{% include "components/icon.html" with name="user" class="h-[18px] w-[18px]" %}Profile &amp; settings</a>
+          {% if user.is_staff %}<a role="menuitem" href="{% url 'admin:index' %}" class="flex min-h-touch items-center gap-3 rounded-input px-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-navy">{% include "components/icon.html" with name="shield" class="h-[18px] w-[18px]" %}Content admin</a>{% endif %}
+          <form method="post" action="{% url 'accounts:logout' %}">{% csrf_token %}
+            <button role="menuitem" type="submit" class="flex min-h-touch w-full items-center gap-3 rounded-input px-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-navy">{% include "components/icon.html" with name="logout" class="h-[18px] w-[18px]" %}Log out</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="mx-auto w-full max-w-[1240px] flex-1 px-4 pb-28 pt-5 nav:p-8">
+      {% include "components/messages.html" %}
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+</div>
+
+<nav aria-label="Primary" class="fixed inset-x-0 bottom-0 z-30 flex h-[76px] border-t border-surface-border bg-white px-2 pb-4 pt-1 nav:hidden">
+  {% include "components/bottom_nav_link.html" with key="dashboard" label="Home" icon="home" url_name="dashboard:home" %}
+  {% include "components/bottom_nav_link.html" with key="explore" label="Subjects" icon="book" url_name="courses:catalog" %}
+  {% include "components/bottom_nav_link.html" with key="settings" label="Profile" icon="user" url_name="accounts:profile" %}
+</nav>
+{% endblock %}

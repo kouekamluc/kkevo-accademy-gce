@@ -1,0 +1,19 @@
+{% extends "layouts/app.html" %}
+{% block title %}Dashboard — GCE Learning Academy{% endblock %}
+{% block content %}
+<div class="mt-2 flex flex-col gap-6">
+  <div>
+    <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[30px]">Welcome, {{ user.first_name|default:user.display_name }}!</h1>
+    <p class="mt-1.5 text-base text-ink-muted">Every lesson you complete brings you closer to your goals.</p>
+  </div>
+  <section class="card flex flex-col items-start gap-4 p-6 shadow-card nav:p-8">
+    <div class="eyebrow">Your class</div>
+    <div class="text-2xl font-bold text-ink-heading">{{ student.class_label }}</div>
+    <p class="max-w-xl text-slate-600">Your subjects and the continue-learning section will appear here. Start by exploring the subjects available for your class.</p>
+    <div class="flex flex-wrap gap-3">
+      <a href="{% url 'courses:catalog' %}?level={{ student.level.slug }}" class="btn-primary">Explore {{ student.level.name }} subjects {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
+      <a href="{% url 'accounts:onboarding' %}" class="btn-secondary">Change class</a>
+    </div>
+  </section>
+</div>
+{% endblock %}

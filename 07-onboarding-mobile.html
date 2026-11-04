@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onboarding mobile — GCE Learning Academy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=STIX+Two+Text:ital,wght@0,400;1,400&amp;display=swap">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0F172A;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#2563EB;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.fld{display:flex;flex-direction:column;gap:6px}
+.fld label{font-size:14px;font-weight:600}
+.fld input{height:48px;border:1px solid #CBD5E1;border-radius:10px;padding:0 14px;font:inherit;font-size:16px;background:#FFFFFF}
+</style>
+<style>html{background:#CBD5E1}body{display:flex;justify-content:center;padding:24px 0}#dc-root>div{box-shadow:0 12px 40px rgba(15,23,42,.18);border-radius:28px}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="width:390px;height:844px;background:#FFFFFF;display:flex;flex-direction:column;overflow:hidden">
+
+<header style="padding:8px 8px 12px;border-bottom:1px solid #F1F5F9;flex:none">
+<div style="display:flex;align-items:center;justify-content:space-between;height:44px">
+<button data-on-click="{{back}}" aria-label="Back" style="width:44px;height:44px;border:0;background:transparent;display:flex;align-items:center;justify-content:center;visibility:{{backVis}}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#102A43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></button>
+<span style="font-size:14px;font-weight:600;color:#1D4ED8">Step {{step}} of 5</span>
+<a href="#" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;color:#64748B">Skip</a>
+</div>
+<div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;padding:4px 8px 0" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="{{step}}" aria-label="Onboarding progress"><sc-for list="{{bars}}" as="b" hint-placeholder-count="5"><span style="{{b.style}}"></span></sc-for></div>
+</header>
+
+<main style="flex:1;overflow-y:auto;padding:24px 16px">
+<sc-if value="{{s1}}" hint-placeholder-val="{{ false }}">
+<h1 style="margin:0;font-size:26px;letter-spacing:-.02em;color:#102A43">Create your account</h1>
+<p style="margin:6px 0 20px;font-size:15px;color:#64748B">Start learning for free.</p>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div class="fld"><label for="mob-name">Full name</label><input id="mob-name" value="Alex Nfor"></div>
+<div class="fld"><label for="mob-phone">Phone number or email</label><input id="mob-phone" value="+237 6 77 12 34 56"></div>
+<div class="fld"><label for="mob-pass">Password</label><input id="mob-pass" type="password" value="studyhard26"></div>
+<label style="display:flex;gap:10px;font-size:14px;color:#475569;line-height:1.5"><input type="checkbox" checked="checked" style="width:20px;height:20px;margin:1px 0 0;accent-color:#2563EB">I agree to the Terms and Privacy Policy</label>
+<button style="height:48px;border-radius:10px;border:1px solid #CBD5E1;background:#FFFFFF;font-weight:600;font-size:15px">Continue with Google</button>
+</div>
+</sc-if>
+
+<sc-if value="{{s2}}" hint-placeholder-val="{{ true }}">
+<h1 style="margin:0;font-size:26px;letter-spacing:-.02em;color:#102A43">Which class are you in?</h1>
+<p style="margin:6px 0 20px;font-size:15px;color:#64748B">You can change this later.</p>
+<div role="radiogroup" aria-label="Academic level" style="display:flex;flex-direction:column;gap:12px">
+<sc-for list="{{levels}}" as="l" hint-placeholder-count="3">
+<button role="radio" aria-checked="{{l.on}}" data-on-click="{{l.pick}}" style="{{l.card}}"><span style="{{l.badge}}">{{l.short}}</span><span style="flex:1;text-align:left"><span style="display:block;font-size:17px;font-weight:700;color:#0F172A">{{l.name}}</span><span style="display:block;font-size:13px;color:#64748B;margin-top:2px;line-height:1.4">{{l.desc}}</span></span><span style="{{l.radio}}"><span style="{{l.radioDot}}"></span></span></button>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{s3}}" hint-placeholder-val="{{ false }}">
+<h1 style="margin:0;font-size:26px;letter-spacing:-.02em;color:#102A43">Arts or Science?</h1>
+<p style="margin:6px 0 20px;font-size:15px;color:#64748B">We’ll suggest matching subjects.</p>
+<div role="radiogroup" aria-label="Stream" style="display:flex;flex-direction:column;gap:12px">
+<sc-for list="{{streams}}" as="st" hint-placeholder-count="3">
+<button role="radio" aria-checked="{{st.on}}" data-on-click="{{st.pick}}" style="{{st.card}}"><span style="{{st.icon}}">{{st.glyph}}</span><span style="flex:1;text-align:left"><span style="display:block;font-size:17px;font-weight:700;color:#0F172A">{{st.name}}</span><span style="display:block;font-size:13px;color:#64748B;margin-top:2px">{{st.desc}}</span></span></button>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{s4}}" hint-placeholder-val="{{ false }}">
+<h1 style="margin:0;font-size:26px;letter-spacing:-.02em;color:#102A43">Choose your subjects</h1>
+<p style="margin:6px 0 18px;font-size:15px;color:#64748B">Pick at least 3 · <strong style="color:#0F172A">{{subjectCount}} selected</strong></p>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{subjects}}" as="sb" hint-placeholder-count="9"><button aria-pressed="{{sb.on}}" data-on-click="{{sb.toggle}}" style="{{sb.chip}}"><span style="{{sb.box}}">{{sb.tick}}</span>{{sb.name}}</button></sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{s5}}" hint-placeholder-val="{{ false }}">
+<div style="text-align:center;padding-top:24px">
+<div style="width:72px;height:72px;border-radius:50%;background:#ECFDF5;margin:0 auto;display:flex;align-items:center;justify-content:center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div>
+<h1 style="margin:18px 0 0;font-size:26px;letter-spacing:-.02em;color:#102A43">You’re all set, Alex!</h1>
+<p style="margin:8px 0 0;font-size:15px;color:#64748B">{{levelName}} · {{streamName}} · {{subjectCount}} subjects</p>
+</div>
+<div style="margin-top:24px;border:1px solid #BFDBFE;background:#EFF6FF;border-radius:14px;padding:16px;display:flex;gap:12px;align-items:center"><span style="width:44px;height:44px;border-radius:10px;background:#FFFFFF;color:#1D4ED8;display:flex;align-items:center;justify-content:center;font-family:'STIX Two Text',serif;font-size:20px;font-style:italic;flex:none">x²</span><span><span style="display:block;font-size:11px;font-weight:700;color:#1D4ED8;letter-spacing:.06em">FIRST LESSON</span><span style="display:block;font-size:15px;font-weight:600;margin-top:2px">Algebraic Expressions and Terms</span></span></div>
+</sc-if>
+</main>
+
+<div style="padding:12px 16px 24px;border-top:1px solid #F1F5F9;flex:none">
+<sc-if value="{{notLast}}" hint-placeholder-val="{{ true }}"><button data-on-click="{{next}}" style="{{nextStyle}}">Continue</button></sc-if>
+<sc-if value="{{isLast}}" hint-placeholder-val="{{ false }}"><a href="02-dashboard-mobile.html" style="height:52px;border-radius:12px;background:#2563EB;color:#FFFFFF;font-weight:600;font-size:16px;display:flex;align-items:center;justify-content:center">Enter my dashboard</a></sc-if>
+</div>
+</div>
+</div>
+
+<script>
+/* Minimal runtime: renders the {{bindings}} of the design file in plain JavaScript. */
+class DCLogic { constructor(props){ this.props = props || {}; this.state = {}; }
+  setState(p){ Object.assign(this.state, typeof p === 'function' ? p(this.state) : p); window.__dcUpdate && window.__dcUpdate(); }
+  forceUpdate(){ window.__dcUpdate && window.__dcUpdate(); } }
+(function(){
+  const RE = /\{\{\s*([\w.$]+)\s*\}\}/g;
+  const whole = s => { const m = s.match(/^\s*\{\{\s*([\w.$]+)\s*\}\}\s*$/); return m ? m[1] : null; };
+  const get = (o, p) => p.split('.').reduce((a, k) => a == null ? undefined : a[k], o);
+  const interp = (s, sc) => s.replace(RE, (m, p) => { const v = get(sc, p); return v == null ? '' : v; });
+  function compile(root, binds){
+    const fors = [...root.querySelectorAll('sc-for')].filter(f => !f.parentElement.closest('sc-for'));
+    fors.forEach(f => { const tpl = f.innerHTML; f.innerHTML = ''; f.style.display = 'contents';
+      const listPath = whole(f.getAttribute('list')); const as = f.getAttribute('as') || 'item';
+      binds.push(sc => { const list = get(sc, listPath) || []; f.innerHTML = '';
+        list.forEach((it, i) => { const t = document.createElement('template'); t.innerHTML = tpl;
+          const local = Object.assign({}, sc, { [as]: it, $index: i }); const inner = [];
+          compile(t.content, inner); inner.forEach(b => b(local)); f.appendChild(t.content); }); }); });
+    const inFor = el => { const p = el.closest && el.closest('sc-for'); return p && fors.includes(p) && p !== el; };
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT);
+    const nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n => {
+      if (n.nodeType === 3) { if (!n.nodeValue.includes('{{')) return; if (n.parentElement && inFor(n.parentElement)) return;
+        const orig = n.nodeValue; binds.push(sc => { n.nodeValue = interp(orig, sc); }); return; }
+      if (inFor(n) || fors.includes(n)) return;
+      if (n.tagName === 'SC-IF') { n.style.display = 'contents'; const p = whole(n.getAttribute('value'));
+        binds.push(sc => { n.style.display = get(sc, p) ? 'contents' : 'none'; }); }
+      [...n.attributes].forEach(a => {
+        if (!a.value.includes('{{') || a.name.startsWith('hint-') || (n.tagName === 'SC-IF' && a.name === 'value')) return;
+        const orig = a.value, name = a.name;
+        if (name === 'data-on-click' || name === 'data-on-change') { const p = whole(orig);
+          n.addEventListener(name === 'data-on-click' ? 'click' : 'input', e => { const f = n.__sc && get(n.__sc, p); f && f(e); });
+          binds.push(sc => { n.__sc = sc; }); return; }
+        if (name === 'value') { binds.push(sc => { const v = interp(orig, sc); if (n.value !== v) n.value = v; }); return; }
+        binds.push(sc => { n.setAttribute(name, interp(orig, sc)); });
+      });
+    });
+  }
+  window.__dcMount = function(Comp){
+    const root = document.getElementById('dc-root'); const binds = []; compile(root, binds);
+    const c = new Comp({});
+    window.__dcUpdate = () => { const v = c.renderVals(); window.__dcVals = v; binds.forEach(b => b(v)); };
+    window.__dcUpdate();
+  };
+})();
+</script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { step: Number(props.startStep ?? 2), level: 'f5', stream: 'science', picked: ['Mathematics', 'Physics', 'Chemistry', 'English Language'] };
+  }
+  renderVals() {
+    const st = this.state, step = st.step;
+    const bars = [1, 2, 3, 4, 5].map((k) => ({ style: 'height:5px;border-radius:999px;background:' + (k < step ? '#10B981' : k === step ? '#2563EB' : '#E2E8F0') }));
+    const lv = [['f5', 'F5', 'Form 5', 'GCE Ordinary Level'], ['l6', 'L6', 'Lower Sixth', 'Advanced Level foundations'], ['u6', 'U6', 'Upper Sixth', 'GCE Advanced Level · exam year']];
+    const levels = lv.map((l) => {
+      const on = st.level === l[0];
+      return { short: l[1], name: l[2], desc: l[3], on: on ? 'true' : 'false',
+        card: 'display:flex;align-items:center;gap:14px;width:100%;min-height:76px;padding:14px;border-radius:14px;font-family:inherit;' + (on ? 'border:2px solid #2563EB;background:#EFF6FF' : 'border:1.5px solid #E2E8F0;background:#FFFFFF'),
+        badge: 'width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex:none;' + (on ? 'background:#2563EB;color:#FFFFFF' : 'background:#F1F5F9;color:#102A43'),
+        radio: 'width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;border:2px solid ' + (on ? '#2563EB' : '#CBD5E1'),
+        radioDot: 'width:12px;height:12px;border-radius:50%;background:' + (on ? '#2563EB' : 'transparent'),
+        pick: () => this.setState({ level: l[0] }) };
+    });
+    const sm = [['science', 'Science', 'Maths, physics, chemistry, biology', 'λ', '#EFF6FF', '#1D4ED8'], ['arts', 'Arts', 'History, geography, literature', 'Aa', '#FFFBEB', '#B45309'], ['both', 'A mix', 'Choose from both streams', '±', '#F1F5F9', '#102A43']];
+    const streams = sm.map((s) => {
+      const on = st.stream === s[0];
+      return { name: s[1], desc: s[2], glyph: s[3], on: on ? 'true' : 'false',
+        card: 'display:flex;align-items:center;gap:14px;width:100%;min-height:76px;padding:14px;border-radius:14px;font-family:inherit;' + (on ? 'border:2px solid #2563EB;background:#EFF6FF' : 'border:1.5px solid #E2E8F0;background:#FFFFFF'),
+        icon: 'width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none;font-family:STIX Two Text,serif;font-size:22px;background:' + s[4] + ';color:' + s[5],
+        pick: () => this.setState({ stream: s[0] }) };
+    });
+    const sci = ['Mathematics', 'Additional Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'English Language', 'French', 'Geography'];
+    const art = ['English Language', 'Literature in English', 'French', 'History', 'Geography', 'Economics', 'Religious Studies', 'Mathematics', 'Commerce'];
+    const pool = st.stream === 'science' ? sci : st.stream === 'arts' ? art : Array.from(new Set(sci.concat(art)));
+    const subjects = pool.map((n) => {
+      const on = st.picked.indexOf(n) >= 0;
+      return { name: n, on: on ? 'true' : 'false', tick: on ? '✓' : '',
+        chip: 'height:44px;padding:0 14px 0 10px;border-radius:999px;font-family:inherit;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;' + (on ? 'border:2px solid #2563EB;background:#EFF6FF;color:#102A43' : 'border:1.5px solid #CBD5E1;background:#FFFFFF;color:#334155'),
+        box: 'width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;' + (on ? 'background:#2563EB;color:#FFFFFF' : 'border:2px solid #CBD5E1'),
+        toggle: () => this.setState({ picked: on ? st.picked.filter((x) => x !== n) : st.picked.concat([n]) }) };
+    });
+    const visible = st.picked.filter((n) => pool.indexOf(n) >= 0);
+    const ok = step !== 4 || visible.length >= 3;
+    return {
+      step: step, bars: bars, levels: levels, streams: streams, subjects: subjects,
+      s1: step === 1, s2: step === 2, s3: step === 3, s4: step === 4, s5: step === 5,
+      subjectCount: visible.length,
+      levelName: lv.filter((l) => l[0] === st.level)[0][2], streamName: sm.filter((s) => s[0] === st.stream)[0][1],
+      backVis: step > 1 ? 'visible' : 'hidden', notLast: step < 5, isLast: step === 5,
+      back: () => this.setState({ step: Math.max(1, step - 1) }),
+      next: () => { if (ok) this.setState({ step: Math.min(5, step + 1) }); },
+      nextStyle: 'width:100%;height:52px;border-radius:12px;border:0;font-weight:600;font-size:16px;' + (ok ? 'background:#2563EB;color:#FFFFFF' : 'background:#E2E8F0;color:#64748B')
+    };
+  }
+}
+window.__dcMount(Component);
+</script>
+</body>
+</html>

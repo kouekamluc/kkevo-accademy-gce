@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study planner — GCE Learning Academy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0F172A;background:#F8FAFC;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#2563EB;text-decoration:none}a:hover{color:#1D4ED8}
+button{font-family:inherit;cursor:pointer}
+.nav{display:flex;align-items:center;gap:12px;height:44px;padding:0 12px;border-radius:10px;color:#334155;font-size:15px;font-weight:500}
+.nav:hover{background:#F1F5F9;color:#102A43}
+.day{position:relative;border-left:1px solid #E2E8F0;height:480px;background-image:linear-gradient(#EEF2F6 1px,transparent 1px);background-size:100% 80px}
+.ev{position:absolute;left:4px;right:4px;border-radius:8px;padding:6px 8px;font-size:12px;line-height:1.3;overflow:hidden}
+.ev b{display:block;font-size:12px;font-weight:600}
+.blue{background:#DBEAFE;color:#1E3A8A}
+.navy{background:#E2E8F0;color:#102A43}
+.green{background:#D1FAE5;color:#065F46}
+.amber{background:#FEF3C7;color:#78350F}
+.done{opacity:.55}
+.cols{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap}
+.mtop{display:none}
+@media (max-width:900px){.side{display:none!important}.mtop{display:flex}.pad{padding:20px 16px!important}}
+</style>
+
+</head>
+<body>
+<div id="dc-root">
+<div style="display:flex;flex-wrap:wrap;min-height:1300px;background:#F8FAFC">
+
+<aside class="side" aria-label="Sidebar" style="flex:1 1 264px;max-width:264px;background:#FFFFFF;border-right:1px solid #E2E8F0;display:flex;flex-direction:column;padding:0 16px 20px">
+<div style="height:64px;display:flex;align-items:center;gap:10px;padding:0 8px;color:#102A43"><span style="width:32px;height:32px;border-radius:8px;background:#102A43;display:flex;align-items:flex-end;justify-content:center;gap:3px;padding:7px 0"><span style="width:4px;height:6px;border-radius:1px;background:#93C5FD"></span><span style="width:4px;height:11px;border-radius:1px;background:#FFFFFF"></span><span style="width:4px;height:17px;border-radius:1px;background:#10B981"></span></span><span style="font-weight:700;font-size:15px;line-height:1.2">GCE Learning<br>Academy</span></div>
+<nav aria-label="Main" style="display:flex;flex-direction:column;gap:2px;margin-top:16px">
+<a class="nav" href="02-dashboard.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>Dashboard</a>
+<a class="nav" href="03-subject-overview.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"></path><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"></path></svg>My Subjects</a>
+<a class="nav" href="08-explore-subjects.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m15.5 8.5-2 5-5 2 2-5z"></path></svg>Explore Courses</a>
+<a class="nav" href="04-lesson-reading.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m10 8 6 4-6 4z"></path></svg>Continue Learning</a>
+<a class="nav" href="09-practice-quiz.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg>Practice</a>
+<a class="nav" href="#" aria-current="page" style="background:#102A43;color:#FFFFFF;font-weight:600"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg>Study Planner</a>
+<a class="nav" href="10-student-progress.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="m7 15 4-4 3 3 5-6"></path></svg>My Progress</a>
+<a class="nav" href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>Saved Lessons</a>
+<a class="nav" href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"></path><circle cx="15" cy="6" r="2"></circle><circle cx="9" cy="12" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg>Settings</a>
+</nav>
+</aside>
+
+<div style="flex:999 1 560px;min-width:0;display:flex;flex-direction:column">
+<header style="height:64px;background:#FFFFFF;border-bottom:1px solid #E2E8F0;display:flex;align-items:center;gap:16px;padding:0 32px">
+<button class="mtop" aria-label="Open menu" style="width:44px;height:44px;border:1px solid #E2E8F0;border-radius:10px;background:#FFFFFF;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#102A43" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+<div style="margin-left:auto"><span style="width:36px;height:36px;border-radius:50%;background:#DBEAFE;color:#1D4ED8;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center" aria-label="Alex Nfor">AN</span></div>
+</header>
+
+<main class="pad" style="padding:32px;max-width:1280px;width:100%;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+<div><h1 style="margin:0;font-size:30px;letter-spacing:-.02em;color:#102A43">Study Planner</h1><p style="margin:6px 0 0;font-size:16px;color:#64748B">Plan short, regular sessions. Consistency beats cramming.</p></div>
+<button style="height:48px;padding:0 20px;border-radius:12px;border:0;background:#2563EB;color:#FFFFFF;font-weight:600;font-size:15px;display:flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>Add Study Session</button>
+</div>
+
+<div class="cols">
+<section aria-label="Weekly calendar" style="flex:999 1 620px;min-width:0;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:16px;overflow:hidden">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid #E2E8F0;flex-wrap:wrap;gap:10px">
+<div style="display:flex;align-items:center;gap:6px"><button aria-label="Previous week" style="width:40px;height:40px;border-radius:10px;border:1px solid #E2E8F0;background:#FFFFFF;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2.2" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></button><button aria-label="Next week" style="width:40px;height:40px;border-radius:10px;border:1px solid #E2E8F0;background:#FFFFFF;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2.2" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></button><span style="font-size:17px;font-weight:700;margin-left:8px">2 – 8 November 2026</span></div>
+<div style="display:flex;gap:8px;align-items:center"><button style="height:40px;padding:0 14px;border-radius:10px;border:1px solid #E2E8F0;background:#FFFFFF;font-weight:600;font-size:14px">Today</button><div role="tablist" aria-label="Calendar view" style="display:flex;background:#F1F5F9;border-radius:10px;padding:3px"><button role="tab" aria-selected="false" style="height:34px;padding:0 12px;border:0;border-radius:8px;background:transparent;font-size:14px;color:#475569">Day</button><button role="tab" aria-selected="true" style="height:34px;padding:0 12px;border:0;border-radius:8px;background:#FFFFFF;font-size:14px;font-weight:600;box-shadow:0 1px 2px rgba(15,23,42,.1)">Week</button></div></div>
+</div>
+<div style="overflow-x:auto">
+<div style="min-width:720px">
+<div style="display:grid;grid-template-columns:56px repeat(7,minmax(0,1fr));border-bottom:1px solid #E2E8F0;text-align:center;font-size:13px">
+<span></span>
+<span style="padding:10px 0;color:#64748B">Mon<br><strong style="font-size:17px;color:#0F172A">2</strong></span>
+<span style="padding:10px 0;color:#64748B">Tue<br><strong style="font-size:17px;color:#0F172A">3</strong></span>
+<span style="padding:10px 0;color:#1D4ED8;font-weight:600;background:#EFF6FF">Wed<br><strong style="font-size:17px;display:inline-flex;width:30px;height:30px;border-radius:50%;background:#2563EB;color:#FFFFFF;align-items:center;justify-content:center;margin-top:2px">4</strong></span>
+<span style="padding:10px 0;color:#64748B">Thu<br><strong style="font-size:17px;color:#0F172A">5</strong></span>
+<span style="padding:10px 0;color:#64748B">Fri<br><strong style="font-size:17px;color:#0F172A">6</strong></span>
+<span style="padding:10px 0;color:#64748B">Sat<br><strong style="font-size:17px;color:#0F172A">7</strong></span>
+<span style="padding:10px 0;color:#64748B">Sun<br><strong style="font-size:17px;color:#0F172A">8</strong></span>
+</div>
+<div style="display:grid;grid-template-columns:56px repeat(7,minmax(0,1fr))">
+<div style="position:relative;height:480px;font-size:11px;color:#64748B"><span style="position:absolute;top:2px;right:8px">15:00</span><span style="position:absolute;top:82px;right:8px">16:00</span><span style="position:absolute;top:162px;right:8px">17:00</span><span style="position:absolute;top:242px;right:8px">18:00</span><span style="position:absolute;top:322px;right:8px">19:00</span><span style="position:absolute;top:402px;right:8px">20:00</span></div>
+<div class="day"><div class="ev blue done" style="top:82px;height:76px"><b>✓ Mathematics</b>Quadratic equations</div><div class="ev navy done" style="top:322px;height:58px"><b>✓ English</b>Summary writing</div></div>
+<div class="day"><div class="ev blue done" style="top:122px;height:76px"><b>✓ Physics</b>Vectors review</div><div class="ev green done" style="top:242px;height:76px"><b>✓ Chemistry</b>Bonding practice</div></div>
+<div class="day" style="background-color:#F8FBFF"><div class="ev blue done" style="top:82px;height:58px"><b>✓ Mathematics</b>Factorization lesson</div><div class="ev amber" style="top:202px;height:40px;box-shadow:0 0 0 2px #F59E0B"><b>Physics · now</b>Newton’s 1st law</div><div class="ev green" style="top:322px;height:76px"><b>Chemistry</b>The mole concept</div><div aria-hidden="true" style="position:absolute;left:0;right:0;top:200px;border-top:2px solid #EF4444"><span style="position:absolute;left:-5px;top:-5px;width:8px;height:8px;border-radius:50%;background:#EF4444"></span></div></div>
+<div class="day"><div class="ev blue" style="top:82px;height:76px"><b>Mathematics</b>Indices &amp; logs practice</div><div class="ev green" style="top:282px;height:76px"><b>Biology</b>Photosynthesis</div></div>
+<div class="day"><div class="ev green" style="top:162px;height:76px"><b>Chemistry</b>Review: the mole</div><div class="ev navy" style="top:322px;height:38px"><b>English</b>Comprehension</div></div>
+<div class="day"><div class="ev blue" style="top:2px;height:116px"><b>Weekly revision</b>Maths &amp; Physics</div></div>
+<div class="day"><div class="ev navy" style="top:82px;height:76px;background:#FFFFFF;border:1.5px dashed #94A3B8"><b>Plan next week</b>15 min</div></div>
+</div>
+</div>
+</div>
+<div style="display:flex;gap:18px;flex-wrap:wrap;padding:12px 18px;border-top:1px solid #E2E8F0;font-size:12px;color:#475569"><span style="display:flex;gap:6px;align-items:center"><span style="width:10px;height:10px;border-radius:3px;background:#DBEAFE"></span>Maths &amp; Physics</span><span style="display:flex;gap:6px;align-items:center"><span style="width:10px;height:10px;border-radius:3px;background:#D1FAE5"></span>Chemistry &amp; Biology</span><span style="display:flex;gap:6px;align-items:center"><span style="width:10px;height:10px;border-radius:3px;background:#E2E8F0"></span>English</span><span style="display:flex;gap:6px;align-items:center"><span style="width:10px;height:10px;border-radius:3px;background:#FEF3C7"></span>Revision due</span><span>Faded = completed</span></div>
+</section>
+
+<aside style="flex:1 1 300px;max-width:380px;display:flex;flex-direction:column;gap:16px">
+<section style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:16px;padding:20px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><h2 style="margin:0;font-size:17px">Today’s study tasks</h2><span style="font-size:13px;color:#64748B">Wed 4 Nov</span></div>
+<div style="display:flex;align-items:center;gap:10px;margin-top:12px"><div style="flex:1;height:8px;border-radius:999px;background:#E2E8F0"><div style="width:33%;height:8px;border-radius:999px;background:#10B981"></div></div><span style="font-size:13px;font-weight:600">1 of 3</span></div>
+<div style="display:flex;flex-direction:column;margin-top:8px">
+<label style="display:flex;gap:12px;align-items:center;min-height:56px;border-bottom:1px solid #F1F5F9"><input type="checkbox" checked="checked" style="width:22px;height:22px;accent-color:#10B981;margin:0"><span style="flex:1"><span style="display:block;font-size:15px;color:#64748B;text-decoration:line-through">Factorization lesson</span><span style="display:block;font-size:12px;color:#64748B">Mathematics · 16:00 · 45 min</span></span></label>
+<label style="display:flex;gap:12px;align-items:center;min-height:56px;border-bottom:1px solid #F1F5F9"><input type="checkbox" style="width:22px;height:22px;accent-color:#10B981;margin:0"><span style="flex:1"><span style="display:block;font-size:15px;font-weight:600">Revise Newton’s 1st law</span><span style="display:block;font-size:12px;color:#B45309;font-weight:600">Physics · now · 30 min</span></span><a href="05-interactive-lesson.html" style="font-size:13px;font-weight:600">Start</a></label>
+<label style="display:flex;gap:12px;align-items:center;min-height:56px"><input type="checkbox" style="width:22px;height:22px;accent-color:#10B981;margin:0"><span style="flex:1"><span style="display:block;font-size:15px;font-weight:600">The mole concept</span><span style="display:block;font-size:12px;color:#64748B">Chemistry · 19:00 · 1 h</span></span></label>
+</div>
+</section>
+<section style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:16px;padding:20px">
+<h2 style="margin:0;font-size:17px">This week</h2>
+<div style="display:flex;align-items:baseline;gap:8px;margin-top:10px"><span style="font-size:26px;font-weight:700">4h 30m</span><span style="font-size:14px;color:#64748B">of 8h goal</span></div>
+<div style="height:8px;border-radius:999px;background:#E2E8F0;margin-top:8px"><div style="width:56%;height:8px;border-radius:999px;background:#2563EB"></div></div>
+<div style="display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:14px;font-size:14px"><span>Mathematics</span><span style="color:#475569">3 sessions · 2h 45m</span><span>Chemistry</span><span style="color:#475569">3 sessions · 3h</span><span>Physics</span><span style="color:#475569">2 sessions · 1h 30m</span><span>English</span><span style="color:#475569">2 sessions · 1h 15m</span><span>Biology</span><span style="color:#475569">1 session · 1h</span></div>
+</section>
+<section style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:16px;padding:20px">
+<h2 style="margin:0;font-size:17px;color:#78350F">Upcoming revision</h2>
+<p style="margin:6px 0 12px;font-size:13px;color:#92400E;line-height:1.5">Spaced reviews of topics you found hard.</p>
+<div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+<div style="display:flex;justify-content:space-between;background:#FFFFFF;border-radius:10px;padding:10px 12px"><span><strong>The mole concept</strong><span style="display:block;font-size:12px;color:#64748B">Chemistry</span></span><span style="font-weight:600;color:#B45309">Tonight</span></div>
+<div style="display:flex;justify-content:space-between;background:#FFFFFF;border-radius:10px;padding:10px 12px"><span><strong>Circular motion</strong><span style="display:block;font-size:12px;color:#64748B">Physics</span></span><span style="color:#475569">Sat</span></div>
+<div style="display:flex;justify-content:space-between;background:#FFFFFF;border-radius:10px;padding:10px 12px"><span><strong>Probability</strong><span style="display:block;font-size:12px;color:#64748B">Mathematics</span></span><span style="color:#475569">Mon 9</span></div>
+</div>
+</section>
+</aside>
+</div>
+</main>
+</div>
+</div>
+</div>
+</body>
+</html>

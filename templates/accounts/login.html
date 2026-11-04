@@ -1,0 +1,20 @@
+{% extends "layouts/auth.html" %}
+{% block title %}Log in — GCE Learning Academy{% endblock %}
+{% block header_action %}<a href="{% url 'accounts:register' %}" class="text-sm font-semibold">Create an account</a>{% endblock %}
+{% block content %}
+<div class="card mt-4 p-6 shadow-card sm:p-8">
+  <h1 class="text-[28px] font-bold leading-tight tracking-[-.02em] text-navy">Welcome back</h1>
+  <p class="mt-2 text-[15px] text-slate-600">Log in to continue where you stopped.</p>
+  <form method="post" class="mt-7 flex flex-col gap-5" novalidate>
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next }}">
+    {% if form.non_field_errors %}
+      <div class="rounded-input border border-danger-200 bg-danger-50 px-4 py-3 text-sm font-medium text-danger-text" role="alert">{{ form.non_field_errors.0 }}</div>
+    {% endif %}
+    {% include "components/field.html" with field=form.username %}
+    {% include "components/field.html" with field=form.password %}
+    <button type="submit" class="btn-primary btn-lg mt-1 w-full">Log In</button>
+  </form>
+</div>
+<p class="mt-6 text-center text-sm text-slate-600">New here? <a href="{% url 'accounts:register' %}" class="font-semibold">Create a free account</a></p>
+{% endblock %}

@@ -45,7 +45,8 @@ code/
 
 ```
 accounts.User (AbstractUser, email = login)
-  └─1:1─ accounts.StudentProfile ── level → AcademicLevel, pathway → AcademicPathway (milestone 2)
+  └─1:1─ accounts.StudentProfile  level → AcademicLevel · pathway → AcademicPathway
+                                  low_data_mode · onboarded_at   (auto-created by post_save signal)
 
 academics.AcademicLevel      code(F5/L6/U6) unique · name · slug unique · exam_level(O/A) · order
 academics.AcademicPathway    name unique (Arts, Science) · slug unique · order
@@ -91,9 +92,9 @@ are entered by staff from official documents (`is_official` flags the source).
 
 ## Milestones
 
-1. **Foundation** — project, settings, custom user, academic + course models,
+1. ✅ **Foundation** — project, settings, custom user, academic + course models,
    admin, Tailwind build, base layouts, landing page (DB-driven), tests.
-2. **Accounts & onboarding** — register / login / logout / profile, StudentProfile,
+2. ✅ **Accounts & onboarding** — register / login / logout / profile, StudentProfile,
    level + pathway selection.
 3. **Catalog & course overview** — subject catalog with HTMX filters, course page
    with ordered modules/topics/lessons.

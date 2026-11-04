@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin content mobile — GCE Learning Academy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0F172A;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#2563EB;text-decoration:none}
+button{font-family:inherit}
+.st{font-size:12px;font-weight:600;border-radius:999px;padding:3px 9px;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.st i{width:6px;height:6px;border-radius:50%;display:block}
+.it{display:flex;flex-direction:column;gap:8px;padding:14px 16px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;color:#0F172A}
+.chip{height:40px;padding:0 14px;border-radius:999px;border:1px solid #CBD5E1;background:#FFFFFF;font-size:14px;font-weight:600;color:#334155;white-space:nowrap;flex:none}
+</style>
+<style>html{background:#CBD5E1}body{display:flex;justify-content:center;padding:24px 0}#dc-root>div{box-shadow:0 12px 40px rgba(15,23,42,.18);border-radius:28px}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="width:390px;height:1240px;background:#F8FAFC;position:relative;overflow:hidden">
+
+<header style="background:#102A43;color:#FFFFFF;padding:8px 8px 16px">
+<div style="display:flex;align-items:center;gap:4px;height:48px">
+<button aria-label="Open admin menu" style="width:44px;height:44px;border:0;background:transparent;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+<span style="flex:1;line-height:1.2"><span style="display:block;font-size:12px;color:#6EE7B7;font-weight:600">Admin</span><span style="display:block;font-size:16px;font-weight:700">Content Management</span></span>
+<button aria-label="Create new lesson" style="width:44px;height:44px;border-radius:12px;border:0;background:#2563EB;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:8px 8px 0">
+<div style="background:#1E3A5F;border-radius:12px;padding:10px 12px"><div style="font-size:20px;font-weight:700">31</div><div style="font-size:12px;color:#CBD5E1">Drafts</div></div>
+<div style="background:#1E3A5F;border-radius:12px;padding:10px 12px;box-shadow:inset 0 0 0 2px #F59E0B"><div style="font-size:20px;font-weight:700">12</div><div style="font-size:12px;color:#FDE68A">To review</div></div>
+<div style="background:#1E3A5F;border-radius:12px;padding:10px 12px"><div style="font-size:20px;font-weight:700">205</div><div style="font-size:12px;color:#CBD5E1">Published</div></div>
+</div>
+</header>
+
+<main style="padding:16px 16px 40px;display:flex;flex-direction:column;gap:12px">
+<label style="display:flex;align-items:center;gap:10px;height:48px;padding:0 14px;border:1px solid #CBD5E1;border-radius:12px;color:#64748B;background:#FFFFFF"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><input aria-label="Search lessons" placeholder="Search lesson titles" style="border:0;outline:0;font:inherit;font-size:16px;flex:1;min-width:0;background:transparent"></label>
+<div style="display:flex;gap:8px;overflow:hidden"><button class="chip" style="background:#102A43;border-color:#102A43;color:#FFFFFF">All</button><button class="chip">Draft</button><button class="chip" style="color:#B45309;border-color:#FDE68A;background:#FFFBEB">Under Review · 12</button><button class="chip">Published</button></div>
+
+<a class="it" href="#"><div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><span style="font-size:15px;font-weight:700;line-height:1.35">Circular Motion and Centripetal Force</span><span class="st" style="background:#FFFBEB;color:#B45309"><i style="background:#F59E0B"></i>Review</span></div><span style="font-size:13px;color:#64748B">Physics · Lower Sixth · Eric Fon</span><div style="display:flex;justify-content:space-between;align-items:center;font-size:13px"><span style="color:#64748B">Updated yesterday</span><span style="font-weight:600;color:#2563EB">Review ›</span></div></a>
+<a class="it" href="#"><div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><span style="font-size:15px;font-weight:700;line-height:1.35">The Mole and Avogadro’s Constant</span><span class="st" style="background:#FFFBEB;color:#B45309"><i style="background:#F59E0B"></i>Review</span></div><span style="font-size:13px;color:#64748B">Chemistry · Form 5 · Dr. Ngo Biyong</span><div style="display:flex;justify-content:space-between;align-items:center;font-size:13px"><span style="color:#64748B">Updated 3 Nov</span><span style="font-weight:600;color:#2563EB">Review ›</span></div></a>
+<a class="it" href="#"><div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><span style="font-size:15px;font-weight:700;line-height:1.35">Completing the Square</span><span class="st" style="background:#F1F5F9;color:#334155"><i style="background:#64748B"></i>Draft</span></div><span style="font-size:13px;color:#64748B">Mathematics · Form 5 · Tabe Ashu</span><div style="display:flex;justify-content:space-between;align-items:center;font-size:13px"><span style="color:#64748B">Today, 20:14</span><span style="font-weight:600;color:#2563EB">Edit ›</span></div></a>
+<a class="it" href="#"><div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><span style="font-size:15px;font-weight:700;line-height:1.35">Solving Quadratic Equations by Factorization</span><span class="st" style="background:#ECFDF5;color:#047857"><i style="background:#10B981"></i>Live</span></div><span style="font-size:13px;color:#64748B">Mathematics · Form 5 · Tabe Ashu</span><div style="display:flex;justify-content:space-between;align-items:center;font-size:13px"><span style="color:#64748B">Updated 2 Nov</span><span style="font-weight:600;color:#2563EB">Edit ›</span></div></a>
+<a class="it" href="#"><div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><span style="font-size:15px;font-weight:700;line-height:1.35">Newton’s Second Law of Motion</span><span class="st" style="background:#ECFDF5;color:#047857"><i style="background:#10B981"></i>Live</span></div><span style="font-size:13px;color:#64748B">Physics · Form 5 · Eric Fon</span><div style="display:flex;justify-content:space-between;align-items:center;font-size:13px"><span style="color:#64748B">Updated 30 Oct</span><span style="font-weight:600;color:#2563EB">Edit ›</span></div></a>
+<a class="it" href="#"><div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><span style="font-size:15px;font-weight:700;line-height:1.35">The Reunification of Cameroon, 1961</span><span class="st" style="background:#F1F5F9;color:#334155"><i style="background:#64748B"></i>Draft</span></div><span style="font-size:13px;color:#64748B">History · Upper Sixth · André Mbarga</span><div style="display:flex;justify-content:space-between;align-items:center;font-size:13px"><span style="color:#64748B">Updated 25 Oct</span><span style="font-weight:600;color:#2563EB">Edit ›</span></div></a>
+
+<div style="margin-top:4px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:14px;padding:14px 16px;font-size:14px;line-height:1.55;color:#1E3A8A">The full block editor is designed for tablet and desktop. On phones, editors can review, comment on and publish lessons.</div>
+<button style="height:48px;border-radius:12px;border:1px solid #CBD5E1;background:#FFFFFF;font-weight:600;font-size:15px;color:#102A43">Load more lessons</button>
+</main>
+</div>
+</div>
+</body>
+</html>

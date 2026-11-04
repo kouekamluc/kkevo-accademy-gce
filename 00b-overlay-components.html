@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overlay components — GCE Learning Academy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0F172A;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#2563EB;text-decoration:none}
+button{font-family:inherit}
+.lbl{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#475569}
+.pop{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;box-shadow:0 16px 40px rgba(15,23,42,.14)}
+.fld label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.fld .in{height:44px;border:1px solid #CBD5E1;border-radius:10px;padding:0 12px;font-size:15px;display:flex;align-items:center;justify-content:space-between;background:#FFFFFF}
+.mi{display:flex;align-items:center;gap:12px;min-height:44px;padding:0 14px;font-size:14px;color:#0F172A;border-radius:8px}
+</style>
+
+</head>
+<body>
+<div id="dc-root">
+<div style="width:1200px;height:1180px;background:#F8FAFC;padding:48px 56px;display:flex;flex-direction:column;gap:28px">
+<div><div style="font-size:24px;font-weight:700;color:#102A43">Overlay &amp; state components</div><div style="font-size:15px;color:#64748B;margin-top:4px">Modal dialog, notification panel, profile menu, empty state, loading skeleton and toast.</div></div>
+
+<div style="display:grid;grid-template-columns:1.25fr 1fr 0.85fr;gap:32px;align-items:start">
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<div class="lbl">Modal dialog</div>
+<div style="background:rgba(15,23,42,.45);border-radius:18px;padding:28px">
+<div role="dialog" aria-modal="true" aria-labelledby="dlg-t" class="pop" style="border-radius:18px;padding:24px;border:0">
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 id="dlg-t" style="margin:0;font-size:20px;color:#102A43">Add study session</h2><button aria-label="Close" style="width:40px;height:40px;border:0;border-radius:10px;background:#F1F5F9;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></button></div>
+<div style="display:flex;flex-direction:column;gap:14px;margin-top:18px">
+<div class="fld"><label>Subject</label><div class="in"><span>Chemistry</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div></div>
+<div class="fld"><label>Lesson or topic</label><div class="in"><span>The Mole Concept</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="fld"><label>Day</label><div class="in">Thu 5 Nov</div></div><div class="fld"><label>Start time</label><div class="in">18:00</div></div></div>
+<div><span style="display:block;font-size:13px;font-weight:600;margin-bottom:6px">Duration</span><div style="display:flex;gap:8px"><span style="height:40px;padding:0 14px;border-radius:999px;border:1px solid #CBD5E1;display:flex;align-items:center;font-size:14px;font-weight:600">30 min</span><span style="height:40px;padding:0 14px;border-radius:999px;border:2px solid #2563EB;background:#EFF6FF;color:#1D4ED8;display:flex;align-items:center;font-size:14px;font-weight:600">45 min</span><span style="height:40px;padding:0 14px;border-radius:999px;border:1px solid #CBD5E1;display:flex;align-items:center;font-size:14px;font-weight:600">1 hour</span></div></div>
+<label style="display:flex;gap:10px;align-items:center;font-size:14px"><span style="width:40px;height:24px;border-radius:999px;background:#2563EB;position:relative;flex:none"><span style="position:absolute;right:3px;top:3px;width:18px;height:18px;border-radius:50%;background:#FFFFFF"></span></span>Remind me 15 minutes before</label>
+</div>
+<div style="display:flex;justify-content:flex-end;gap:10px;margin-top:22px"><button style="height:44px;padding:0 16px;border-radius:10px;border:1px solid #CBD5E1;background:#FFFFFF;font-weight:600;font-size:14px">Cancel</button><button style="height:44px;padding:0 18px;border-radius:10px;border:0;background:#2563EB;color:#FFFFFF;font-weight:600;font-size:14px">Add to planner</button></div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<div class="lbl">Notification panel</div>
+<div class="pop" role="region" aria-label="Notifications">
+<div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid #F1F5F9"><span style="font-weight:700">Notifications</span><a href="#" style="font-size:13px;font-weight:600">Mark all read</a></div>
+<div style="display:flex;gap:12px;padding:14px 16px;background:#F8FBFF;border-bottom:1px solid #F1F5F9"><span style="width:36px;height:36px;border-radius:10px;background:#FFFBEB;color:#B45309;display:flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><div style="flex:1"><div style="font-size:14px;line-height:1.45"><strong>Revision due tonight:</strong> The Mole Concept at 19:00</div><div style="font-size:12px;color:#64748B;margin-top:3px">10 min ago</div></div><span style="width:8px;height:8px;border-radius:50%;background:#2563EB;margin-top:6px"></span></div>
+<div style="display:flex;gap:12px;padding:14px 16px;background:#F8FBFF;border-bottom:1px solid #F1F5F9"><span style="width:36px;height:36px;border-radius:10px;background:#EFF6FF;color:#1D4ED8;display:flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"></path></svg></span><div style="flex:1"><div style="font-size:14px;line-height:1.45"><strong>New lesson:</strong> Completing the Square is now available</div><div style="font-size:12px;color:#64748B;margin-top:3px">2 h ago · Mathematics</div></div><span style="width:8px;height:8px;border-radius:50%;background:#2563EB;margin-top:6px"></span></div>
+<div style="display:flex;gap:12px;padding:14px 16px"><span style="width:36px;height:36px;border-radius:10px;background:#ECFDF5;color:#047857;display:flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.9z"></path></svg></span><div style="flex:1"><div style="font-size:14px;line-height:1.45">You reached a <strong>7-day learning streak</strong></div><div style="font-size:12px;color:#64748B;margin-top:3px">This morning</div></div></div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<div class="lbl">Profile menu</div>
+<div class="pop" role="menu" aria-label="Profile" style="padding:8px">
+<div style="display:flex;gap:12px;align-items:center;padding:10px 10px 14px;border-bottom:1px solid #F1F5F9;margin-bottom:6px"><span style="width:40px;height:40px;border-radius:50%;background:#DBEAFE;color:#1D4ED8;font-weight:700;display:flex;align-items:center;justify-content:center">AN</span><span><span style="display:block;font-weight:600">Alex Nfor</span><span style="display:block;font-size:12px;color:#64748B">Form 5 · Science</span></span></div>
+<a class="mi" role="menuitem" href="#">My profile</a>
+<a class="mi" role="menuitem" href="#">Change class or subjects</a>
+<a class="mi" role="menuitem" href="#" style="justify-content:space-between">Low-data mode <span style="font-size:12px;font-weight:600;color:#047857">On</span></a>
+<a class="mi" role="menuitem" href="#" style="justify-content:space-between">Language <span style="font-size:12px;color:#64748B">English</span></a>
+<a class="mi" role="menuitem" href="#">Help centre</a>
+<div style="border-top:1px solid #F1F5F9;margin-top:6px;padding-top:6px"><a class="mi" role="menuitem" href="#" style="color:#B91C1C">Log out</a></div>
+</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<div class="lbl">Empty state</div>
+<div style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;padding:28px;text-align:center">
+<div style="width:56px;height:56px;border-radius:14px;background:#F1F5F9;margin:0 auto;display:flex;align-items:center;justify-content:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div>
+<div style="font-weight:700;margin-top:14px">No saved lessons yet</div>
+<div style="font-size:14px;color:#64748B;line-height:1.55;margin-top:6px">Tap Save on any lesson to keep it here, ready for offline reading.</div>
+<a href="08-explore-subjects.html" style="margin:16px auto 0;width:max-content;height:44px;padding:0 16px;border-radius:10px;border:1px solid #CBD5E1;color:#102A43;font-weight:600;font-size:14px;display:flex;align-items:center">Explore subjects</a>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div class="lbl">Loading skeleton</div>
+<div aria-busy="true" aria-label="Loading lessons" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;gap:12px;align-items:center"><div style="width:48px;height:48px;border-radius:12px;background:#E2E8F0"></div><div style="flex:1;display:flex;flex-direction:column;gap:8px"><div style="height:12px;width:70%;border-radius:6px;background:#E2E8F0"></div><div style="height:10px;width:40%;border-radius:6px;background:#EEF2F6"></div></div></div>
+<div style="height:8px;border-radius:999px;background:#EEF2F6"></div>
+<div style="display:flex;gap:12px;align-items:center"><div style="width:48px;height:48px;border-radius:12px;background:#E2E8F0"></div><div style="flex:1;display:flex;flex-direction:column;gap:8px"><div style="height:12px;width:60%;border-radius:6px;background:#E2E8F0"></div><div style="height:10px;width:35%;border-radius:6px;background:#EEF2F6"></div></div></div>
+<div style="height:40px;border-radius:10px;background:#EEF2F6"></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div class="lbl">Toasts</div>
+<div role="status" style="background:#102A43;color:#FFFFFF;border-radius:12px;padding:14px 16px;font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 12px 32px rgba(16,42,67,.25)"><span style="display:flex;gap:10px;align-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6EE7B7" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Lesson marked as complete</span><a href="#" style="color:#93C5FD;font-weight:600">Undo</a></div>
+<div role="status" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;padding:14px 16px;font-size:14px;display:flex;gap:10px;align-items:flex-start;box-shadow:0 12px 32px rgba(15,23,42,.1)"><svg style="flex:none;margin-top:1px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 20h.01"></path><path d="M3 3l18 18"></path></svg><span style="line-height:1.5"><strong>You’re offline.</strong> Saved lessons still work. Progress will sync when you reconnect.</span></div>
+<div role="alert" style="background:#FFFFFF;border:1px solid #FECACA;border-radius:12px;padding:14px 16px;font-size:14px;display:flex;gap:10px;align-items:flex-start"><svg style="flex:none;margin-top:1px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B91C1C" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg><span style="line-height:1.5">Video couldn’t load. <a href="#" style="font-weight:600">Try audio only</a></span></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

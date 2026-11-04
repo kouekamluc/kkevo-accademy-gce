@@ -1,0 +1,15 @@
+{# Low-data mode switch from the sidebar mockup. Works with HTMX; falls back to a normal POST. #}
+<form id="low-data-toggle" method="post" action="{% url 'accounts:toggle_low_data' %}"
+      hx-post="{% url 'accounts:toggle_low_data' %}" hx-target="this" hx-swap="outerHTML"
+      class="flex flex-col gap-2.5 rounded-xl border border-surface-border bg-surface-bg p-3.5">
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ next_url|default:request.get_full_path }}">
+  <div class="flex items-center justify-between gap-3">
+    <span class="text-sm font-semibold text-ink-heading" id="low-data-label">Low-data mode</span>
+    <button type="submit" role="switch" aria-checked="{{ student.low_data_mode|yesno:'true,false' }}" aria-labelledby="low-data-label"
+            class="relative block h-6 w-10 shrink-0 rounded-full transition-colors focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-300 {% if student.low_data_mode %}bg-primary{% else %}bg-slate-300{% endif %}">
+      <span class="absolute top-[3px] h-[18px] w-[18px] rounded-full bg-white shadow transition-all {% if student.low_data_mode %}right-[3px]{% else %}left-[3px]{% endif %}"></span>
+    </button>
+  </div>
+  <p class="text-xs leading-normal text-ink-muted">{% if student.low_data_mode %}On — lessons will load lighter images and video.{% else %}Turn on to use less mobile data.{% endif %}</p>
+</form>
