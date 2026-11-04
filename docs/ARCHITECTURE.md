@@ -92,11 +92,26 @@ are entered by staff from official documents (`is_official` flags the source).
 
 ## Milestones
 
-1. ✅ **Foundation** — project, settings, custom user, academic + course models,
-   admin, Tailwind build, base layouts, landing page (DB-driven), tests.
-2. ✅ **Accounts & onboarding** — register / login / logout / profile, StudentProfile,
-   level + pathway selection.
-3. **Catalog & course overview** — subject catalog with HTMX filters, course page
-   with ordered modules/topics/lessons.
-4. **Dashboard** — enrolments, enrolled subjects, continue-learning, empty states.
-5. **Polish** — mobile bottom bar, accessibility pass, PostgreSQL verification.
+1. ✅ Foundation — project, custom user, academic + course models, admin, landing (01)
+2. ✅ Accounts — register, login, logout, profile, password change
+3. ✅ Onboarding wizard (07) and enrolments
+4. ✅ Explore subjects (08), course overview (03), my subjects, learning data model
+5. ✅ Lesson player: reading (04), interactive (05), video (06)
+6. ✅ Dashboard (02)
+7. ✅ Practice quiz (09)
+8. ✅ My progress (10), study planner (11), saved lessons
+9. ✅ Content studio (12) with review workflow
+
+## Apps added after phase 2 planning
+
+- `learning` — Enrollment, LessonProgress, DailyActivity, SavedLesson, LessonNote, StudySession;
+  `services.py` (progress maths), `analytics.py` (progress page / planner)
+- `practice` — PracticeSet, Question, Choice, Attempt, Answer
+- `studio` — staff lesson list and block editor (no models)
+
+## Known gaps
+
+- Offline downloads, phone-number sign-up, Google sign-in, notifications and media upload
+  (blocks take URLs) are shown in the mockups but not built.
+- Edits to blocks of an already-published lesson go live immediately (no draft versions yet).
+- No login rate limiting yet.

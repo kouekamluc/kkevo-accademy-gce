@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "apps.dashboard",
     "apps.learning",
     "apps.practice",
+    "apps.studio",
 ]
 
 MIDDLEWARE = [

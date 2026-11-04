@@ -8,6 +8,7 @@ admin.site.index_title = "Content management"
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("studio/", include("apps.studio.urls")),
     path("accounts/", include("apps.accounts.urls")),
     path("dashboard/", include("apps.dashboard.urls")),
     path("learn/", include("apps.learning.urls")),

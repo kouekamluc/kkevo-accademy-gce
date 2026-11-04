@@ -1,0 +1,109 @@
+{% extends "layouts/studio.html" %}
+{% load lesson_tags %}
+{% block title %}Editing {{ lesson.title }} — Content studio{% endblock %}
+{% block crumbs %}<a href="{% url 'studio:lessons' %}">Lessons</a><span class="mx-2 text-ink-muted">/</span><span class="text-ink-heading">{{ lesson.title }}</span>{% endblock %}
+{% block content %}
+<section class="card overflow-hidden">
+  <div class="flex flex-wrap items-center justify-between gap-4 border-b border-surface-border px-6 py-4">
+    <div>
+      <div class="text-[13px] text-ink-muted">Editing · {{ lesson.course.offering.subject.name }} / {{ lesson.topic.module.title }} / {{ lesson.topic.title }}</div>
+      <h1 class="text-xl font-bold">{{ lesson.title }}</h1>
+    </div>
+    <div class="flex flex-wrap items-center gap-3">
+      <span class="text-sm text-ink-muted">Saved {{ lesson.updated_at|date:"H:i" }}</span>
+      <a href="{{ lesson.get_absolute_url }}" target="_blank" rel="noopener" class="btn-secondary">Preview as student</a>
+      <form method="post" action="{% url 'studio:status' lesson.pk %}" class="flex gap-2">{% csrf_token %}
+        {% if lesson.status == 'draft' %}<button type="submit" name="status" value="review" class="btn-primary">Submit for review</button>{% endif %}
+        {% if can_publish and lesson.status != 'published' %}<button type="submit" name="status" value="published" class="btn bg-success text-white hover:bg-success-text">Publish</button>{% endif %}
+        {% if lesson.status != 'draft' %}<button type="submit" name="status" value="draft" class="btn-secondary">Back to draft</button>{% endif %}
+      </form>
+    </div>
+  </div>
+
+  <div class="grid lg:grid-cols-[224px_1fr_296px]">
+    {# Palette #}
+    <aside class="border-b border-surface-border p-5 lg:border-b-0 lg:border-r" aria-label="Add a block">
+      <div class="text-xs font-semibold uppercase tracking-[.08em] text-slate-500">Add a block</div>
+      <form method="post" action="{% url 'studio:block_add' lesson.pk %}" class="mt-3 grid grid-cols-3 gap-2 lg:grid-cols-2">
+        {% csrf_token %}
+        {% for type, label, icon in palette %}
+        <button type="submit" name="block_type" value="{{ type }}" class="flex min-h-[84px] flex-col items-center justify-center gap-1.5 rounded-xl border border-surface-border bg-white px-2 text-center text-[13px] font-semibold text-slate-700 hover:border-primary-300 hover:text-navy">{% include "components/icon.html" with name=icon class="h-5 w-5" %}{{ label }}</button>
+        {% endfor %}
+      </form>
+      <p class="mt-4 text-[13px] leading-relaxed text-ink-muted">New blocks are added at the end. Use the arrows to reorder.</p>
+    </aside>
+
+    {# Blocks #}
+    <div class="flex min-w-0 flex-col gap-4 bg-surface-bg p-5 nav:p-8">
+      {% for block in blocks %}
+      <article id="block-{{ block.pk }}" class="scroll-mt-24 rounded-card border-2 bg-white {% if selected == block.pk|stringformat:'s' %}border-primary{% else %}border-surface-border{% endif %}" x-data="{ editing: {% if selected == block.pk|stringformat:'s' %}true{% else %}false{% endif %} }">
+        <div class="flex items-center gap-2 border-b border-surface-border px-4 py-2">
+          <span class="rounded-md bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-700">{{ block.get_block_type_display }}</span>
+          <span class="flex-1"></span>
+          <form method="post" action="{% url 'studio:block_move' lesson.pk block.pk %}" class="flex">{% csrf_token %}
+            <button type="submit" name="direction" value="up" class="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-slate-100" aria-label="Move up" {% if forloop.first %}disabled{% endif %}>{% include "components/icon.html" with name="chevron-up" class="h-4 w-4" stroke="2" %}</button>
+            <button type="submit" name="direction" value="down" class="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-slate-100" aria-label="Move down" {% if forloop.last %}disabled{% endif %}>{% include "components/icon.html" with name="chevron-down" class="h-4 w-4" stroke="2" %}</button>
+          </form>
+          <button type="button" class="h-9 rounded-lg px-3 text-sm font-semibold text-primary hover:bg-primary-50" @click="editing = !editing" x-text="editing ? 'Close' : 'Edit'">Edit</button>
+          <form method="post" action="{% url 'studio:block_delete' lesson.pk block.pk %}" onsubmit="return confirm('Remove this block?')">{% csrf_token %}<button type="submit" class="flex h-9 w-9 items-center justify-center rounded-lg text-danger-text hover:bg-danger-50" aria-label="Delete block">{% include "components/icon.html" with name="close" class="h-4 w-4" stroke="2" %}</button></form>
+        </div>
+        <div class="p-5" x-show="!editing">{% include block.template_name with block=block lesson=lesson %}</div>
+        <form method="post" action="{% url 'studio:block_save' lesson.pk block.pk %}" x-show="editing" x-cloak class="flex flex-col gap-3 p-5">
+          {% csrf_token %}
+          {% if block.block_type != "text" and block.block_type != "formula" and block.block_type != "summary" and block.block_type != "practice" and block.block_type != "graph" and block.block_type != "simulation" %}
+          <label class="flex flex-col gap-1.5"><span class="form-label">Title</span><input name="title" value="{{ block.title }}" class="form-input"></label>
+          {% endif %}
+          {% if block.block_type == "formula" %}
+          <div class="grid gap-3 sm:grid-cols-2" x-data="latexPreview('{{ block.body|escapejs }}')">
+            <label class="flex flex-col gap-1.5"><span class="form-label">LaTeX</span><input name="body" x-model="src" class="form-input font-mono"></label>
+            <div class="flex items-center justify-center rounded-xl bg-surface-bg p-4 text-xl" x-ref="preview" aria-live="polite"></div>
+          </div>
+          {% elif block.block_type == "image" or block.block_type == "video" or block.block_type == "embed" %}
+          <label class="flex flex-col gap-1.5"><span class="form-label">Media URL</span><input name="media_url" type="url" value="{{ block.media_url }}" class="form-input"></label>
+          <label class="flex flex-col gap-1.5"><span class="form-label">Alt text <span class="font-normal text-ink-muted">(describe the image for screen readers)</span></span><input name="alt_text" value="{{ block.alt_text }}" class="form-input"></label>
+          <label class="flex flex-col gap-1.5"><span class="form-label">Caption</span><textarea name="body" rows="2" class="form-input py-2">{{ block.body }}</textarea></label>
+          {% elif block.block_type == "worked_example" %}
+          <label class="flex flex-col gap-1.5"><span class="form-label">Equation to solve <span class="font-normal text-ink-muted">(LaTeX, optional)</span></span><input name="body" value="{{ block.body }}" class="form-input font-mono"></label>
+          <label class="flex flex-col gap-1.5"><span class="form-label">Steps <span class="font-normal text-ink-muted">— one per line: Step title | LaTeX (optional)</span></span>
+            <textarea name="steps" rows="5" class="form-input py-2 font-mono text-sm">{% for step in block.data.steps %}{{ step.title }}{% if step.math %} | {{ step.math }}{% endif %}
+{% endfor %}</textarea></label>
+          {% elif block.block_type == "quiz" %}
+          <label class="flex flex-col gap-1.5"><span class="form-label">Question</span><textarea name="body" rows="2" class="form-input py-2">{{ block.body }}</textarea></label>
+          <label class="flex flex-col gap-1.5"><span class="form-label">Choices <span class="font-normal text-ink-muted">— one per line</span></span><textarea name="choices" rows="4" class="form-input py-2">{% for c in block.data.choices %}{{ c }}
+{% endfor %}</textarea></label>
+          <div class="grid gap-3 sm:grid-cols-[160px_1fr]"><label class="flex flex-col gap-1.5"><span class="form-label">Correct choice #</span><input name="correct" type="number" min="1" value="{{ block.data.correct|add:1 }}" class="form-input"></label><label class="flex flex-col gap-1.5"><span class="form-label">Explanation</span><input name="explanation" value="{{ block.data.explanation }}" class="form-input"></label></div>
+          {% else %}
+          <label class="flex flex-col gap-1.5"><span class="form-label">{% if block.block_type == "summary" %}Points — one per line{% else %}Text{% endif %} <span class="font-normal text-ink-muted">· **bold**, *italic*, $maths$</span></span><textarea name="body" rows="4" class="form-input py-2">{{ block.body }}</textarea></label>
+          {% if block.block_type == "practice" %}<label class="flex flex-col gap-1.5"><span class="form-label">Answer</span><textarea name="answer" rows="2" class="form-input py-2">{{ block.data.answer }}</textarea></label>{% endif %}
+          {% if block.block_type == "definition" %}<label class="flex flex-col gap-1.5"><span class="form-label">Formula <span class="font-normal text-ink-muted">(LaTeX, optional)</span></span><input name="formula" value="{{ block.data.formula }}" class="form-input font-mono"></label>{% endif %}
+          {% endif %}
+          <div class="flex items-center gap-3"><button type="submit" class="btn-primary">Save block</button><span id="saved-{{ block.pk }}"></span></div>
+        </form>
+      </article>
+      {% empty %}
+      <div class="rounded-card border-2 border-dashed border-slate-300 bg-white p-10 text-center text-slate-600">This lesson is empty. Add a block from the palette.</div>
+      {% endfor %}
+    </div>
+
+    {# Settings #}
+    <aside class="border-t border-surface-border p-5 lg:border-l lg:border-t-0" aria-label="Lesson settings">
+      <div class="text-xs font-semibold uppercase tracking-[.08em] text-slate-500">Lesson settings</div>
+      <div class="mt-3"><div class="form-label">Status</div><div class="mt-1.5">{% include "studio/_status.html" with status=lesson.status label=lesson.get_status_display %}</div></div>
+      <div class="mt-4"><div class="form-label">Academic level</div><div class="mt-1.5 rounded-input border border-surface-border bg-surface-bg px-3.5 py-2.5 text-[15px]">{{ lesson.course.offering.level.name }}</div></div>
+      <form method="post" class="mt-4 flex flex-col gap-4" novalidate>
+        {% csrf_token %}
+        {% include "components/field.html" with field=form.title %}
+        {% include "components/field.html" with field=form.summary %}
+        <div class="grid grid-cols-2 gap-3">{% include "components/field.html" with field=form.estimated_minutes %}{% include "components/field.html" with field=form.lesson_type %}</div>
+        {% include "components/field.html" with field=form.objectives %}
+        {% include "components/field.html" with field=form.key_concepts %}
+        {% include "components/field.html" with field=form.reviewer %}
+        <button type="submit" class="btn-secondary">Save settings</button>
+      </form>
+      <div class="mt-6"><div class="form-label">Checklist</div>
+        <ul class="mt-2 flex flex-col gap-1.5 text-sm">{% for item in checklist %}<li class="flex items-start gap-2 {% if item.ok %}text-success-text{% else %}text-warning-text{% endif %}">{% if item.ok %}{% include "components/icon.html" with name="check" class="mt-0.5 h-4 w-4 shrink-0" stroke="2.5" %}{% else %}<span class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-warning-text"></span>{% endif %}{{ item.label }}</li>{% endfor %}</ul>
+      </div>
+    </aside>
+  </div>
+</section>
+{% endblock %}

@@ -31,13 +31,42 @@ If `DATABASE_URL` is not set, a local SQLite file is used (handy for a first loo
 
 Landing page: http://127.0.0.1:8000/ · Admin: http://127.0.0.1:8000/admin/
 
+## Sample content (optional)
+
+The mockups' sample data (Form 5 Mathematics outline, three full demo lessons, a physics
+practice set) can be loaded to review every screen. It is **not** official GCE syllabus content.
+
+```bash
+.venv/Scripts/python manage.py seed_demo --with-student   # prints a one-time demo password
+.venv/Scripts/python manage.py seed_demo --remove
+```
+
+## Main URLs
+
+| Page | URL | Mockup |
+|---|---|---|
+| Landing | `/` | 01 |
+| Register → onboarding wizard | `/accounts/register/` | 07 |
+| Dashboard | `/dashboard/` | 02 |
+| Explore subjects | `/subjects/` | 08 |
+| Course overview | `/courses/<slug>/` | 03 |
+| Lesson (reading / interactive / video) | `/courses/<slug>/lessons/<id>/` | 04 / 05 / 06 |
+| Practice | `/practice/` | 09 |
+| My progress | `/learn/progress/` | 10 |
+| Study planner | `/learn/planner/` | 11 |
+| Content studio (staff) | `/studio/` | 12 |
+| Django admin (staff) | `/admin/` | — |
+
+Studio permissions: staff need `courses.change_lesson` to edit; publishing/archiving also
+needs `courses.publish_lesson` (give it to reviewers). Superusers have both.
+
 ## Front-end assets
 
 Built CSS and vendored JS are committed, so Node is only needed when templates change:
 
 ```bash
 npm install
-npm run build        # copies htmx/alpine/flowbite to static/vendor and builds static/css/app.css
+npm run build        # copies htmx/alpine/flowbite/katex to static/vendor and builds static/css/app.css
 npm run watch:css    # rebuild CSS while editing templates
 ```
 

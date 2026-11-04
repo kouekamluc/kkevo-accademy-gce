@@ -86,6 +86,23 @@
     };
   };
 
+  /* Live LaTeX preview for the content studio formula block. */
+  window.latexPreview = function (src) {
+    return {
+      src: src,
+      render: function () {
+        if (window.katex && this.$refs.preview) {
+          katex.render(this.src || "", this.$refs.preview, { displayMode: true, throwOnError: false });
+        }
+      },
+      init: function () {
+        var self = this;
+        this.$watch("src", function () { self.render(); });
+        if (window.katex) { this.render(); } else { window.addEventListener("load", function () { self.render(); }); }
+      },
+    };
+  };
+
   /* Learning-objective checklist remembered on this device. */
   window.checklist = function (key) {
     var stored = [];

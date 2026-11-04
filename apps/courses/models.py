@@ -116,6 +116,7 @@ class Lesson(OrderedModel, TimeStampedModel):
         constraints = [
             models.UniqueConstraint(fields=["topic", "slug"], name="unique_lesson_slug_per_topic"),
         ]
+        permissions = [("publish_lesson", "Can publish and archive lessons")]
 
     def __str__(self):
         return self.title

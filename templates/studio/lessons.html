@@ -1,0 +1,74 @@
+{% extends "layouts/studio.html" %}
+{% block title %}Lessons — Content studio{% endblock %}
+{% block content %}
+<div class="flex flex-wrap items-end justify-between gap-4">
+  <div>
+    <h1 class="text-[28px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">Content Management</h1>
+    <p class="mt-1 text-[17px] text-ink-muted">{{ total }} lesson{{ total|pluralize }} across {{ level_count }} level{{ level_count|pluralize }} and {{ subject_count }} subject{{ subject_count|pluralize }}.</p>
+  </div>
+  <div class="flex gap-3">
+    <a href="{% url 'admin:courses_lesson_changelist' %}" class="btn-secondary h-12">Advanced (admin)</a>
+    <a href="{% url 'studio:new' %}" class="btn-primary h-12">{% include "components/icon.html" with name="plus" class="h-5 w-5" stroke="2.2" %}Create New Lesson</a>
+  </div>
+</div>
+
+<section class="card mt-6 overflow-hidden" x-data="{ selected: [] }">
+  <nav aria-label="Status" class="flex gap-6 overflow-x-auto overflow-y-hidden border-b border-surface-border px-5">
+    <a href="?" class="studio-tab {% if not status %}studio-tab-active{% endif %}">All <span class="font-normal text-ink-muted">{{ total }}</span></a>
+    <a href="?status=draft" class="studio-tab {% if status == 'draft' %}studio-tab-active{% endif %}">Draft <span class="font-normal text-ink-muted">{{ counts.draft|default:0 }}</span></a>
+    <a href="?status=review" class="studio-tab {% if status == 'review' %}studio-tab-active{% endif %}">Under Review <span class="font-semibold text-warning-text">{{ counts.review|default:0 }}</span></a>
+    <a href="?status=published" class="studio-tab {% if status == 'published' %}studio-tab-active{% endif %}">Published <span class="font-normal text-ink-muted">{{ counts.published|default:0 }}</span></a>
+    <a href="?status=archived" class="studio-tab {% if status == 'archived' %}studio-tab-active{% endif %}">Archived <span class="font-normal text-ink-muted">{{ counts.archived|default:0 }}</span></a>
+  </nav>
+  <form method="get" class="flex flex-wrap items-center gap-3 px-5 py-4">
+    {% if status %}<input type="hidden" name="status" value="{{ status }}">{% endif %}
+    <label class="relative min-w-[220px] flex-1"><span class="sr-only">Search lesson titles</span><span class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted">{% include "components/icon.html" with name="search" class="h-[18px] w-[18px]" stroke="2" %}</span><input type="search" name="q" value="{{ q }}" placeholder="Search lesson titles" class="form-input pl-11"></label>
+    <select name="subject" class="form-input w-auto" aria-label="Subject" onchange="this.form.submit()"><option value="">All subjects</option>{% for s in subjects %}<option value="{{ s.pk }}" {% if subject == s.pk|stringformat:'s' %}selected{% endif %}>{{ s.name }}</option>{% endfor %}</select>
+    <select name="level" class="form-input w-auto" aria-label="Level" onchange="this.form.submit()"><option value="">All levels</option>{% for l in levels %}<option value="{{ l.pk }}" {% if level == l.pk|stringformat:'s' %}selected{% endif %}>{{ l.name }}</option>{% endfor %}</select>
+    <select name="author" class="form-input w-auto" aria-label="Author" onchange="this.form.submit()"><option value="">Any author</option><option value="me" {% if author == 'me' %}selected{% endif %}>Me</option>{% for a in authors %}<option value="{{ a.pk }}" {% if author == a.pk|stringformat:'s' %}selected{% endif %}>{{ a.display_name }}</option>{% endfor %}</select>
+    <noscript><button class="btn-secondary">Filter</button></noscript>
+    <span class="ml-auto text-sm text-ink-muted">Showing {{ page.start_index }}–{{ page.end_index }} of {{ page.paginator.count }}</span>
+  </form>
+  <form method="post" action="{% url 'studio:bulk' %}">
+    {% csrf_token %}<input type="hidden" name="return_to" value="{{ request.get_full_path }}">
+    <div class="overflow-x-auto">
+      <table class="w-full min-w-[960px] text-left text-[15px]">
+        <thead class="border-y border-surface-border bg-surface-bg text-xs uppercase tracking-[.06em] text-slate-500">
+          <tr><th class="w-12 py-3 pl-5"><span class="sr-only">Select</span></th><th class="py-3 font-semibold">Lesson title</th><th class="py-3 font-semibold">Subject</th><th class="py-3 font-semibold">Level</th><th class="py-3 font-semibold">Author</th><th class="py-3 font-semibold">Status</th><th class="py-3 font-semibold">Last updated</th><th class="py-3 pr-5 text-right font-semibold">Action</th></tr>
+        </thead>
+        <tbody class="divide-y divide-surface-border">
+          {% for lesson in page %}
+          <tr :class="selected.includes('{{ lesson.pk }}') && 'bg-primary-50'">
+            <td class="py-3.5 pl-5"><input type="checkbox" name="lessons" value="{{ lesson.pk }}" x-model="selected" class="h-5 w-5 rounded border-slate-300 text-primary" aria-label="Select {{ lesson.title }}"></td>
+            <td class="py-3.5"><a href="{% url 'studio:edit' lesson.pk %}" class="font-semibold text-ink-heading hover:text-navy">{{ lesson.title }}</a><div class="text-[13px] text-ink-muted">{{ lesson.topic.module.title }} · {{ lesson.topic.title }}{% if lesson.lesson_type != 'reading' %} · {{ lesson.get_lesson_type_display }}{% endif %}</div></td>
+            <td class="py-3.5">{{ lesson.topic.module.course.offering.subject.name }}</td>
+            <td class="py-3.5">{{ lesson.topic.module.course.offering.level.name }}</td>
+            <td class="py-3.5">{% if lesson.author %}<span class="flex items-center gap-2"><span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-50 text-xs font-bold text-primary-700">{{ lesson.author.initials }}</span>{{ lesson.author.display_name }}</span>{% else %}<span class="text-ink-muted">—</span>{% endif %}</td>
+            <td class="py-3.5">{% include "studio/_status.html" with status=lesson.status label=lesson.get_status_display %}</td>
+            <td class="py-3.5 text-slate-600">{{ lesson.updated_at|date:"j M Y" }}</td>
+            <td class="py-3.5 pr-5 text-right"><a href="{% url 'studio:edit' lesson.pk %}" class="font-semibold">{% if lesson.status == 'review' and can_publish %}Review{% else %}Edit{% endif %}</a></td>
+          </tr>
+          {% empty %}
+          <tr><td colspan="8" class="px-5 py-10 text-center text-ink-muted">No lessons match. <a href="{% url 'studio:new' %}" class="font-semibold">Create one</a></td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="flex flex-wrap items-center justify-between gap-4 border-t border-surface-border px-5 py-4">
+      <div class="text-[15px]" x-show="selected.length" x-cloak>
+        <strong x-text="selected.length + ' selected'"></strong> ·
+        <button type="submit" name="action" value="review" class="font-semibold text-primary">Submit for review</button>
+        {% if can_publish %} · <button type="submit" name="action" value="archive" class="font-semibold text-danger-text">Archive</button>{% endif %}
+      </div>
+      <span x-show="!selected.length"></span>
+      {% if page.has_other_pages %}
+      <nav aria-label="Pages" class="flex gap-2">
+        {% if page.has_previous %}<a href="?{% if q %}q={{ q|urlencode }}&{% endif %}{% if status %}status={{ status }}&{% endif %}page={{ page.previous_page_number }}" class="btn-secondary h-11">Previous</a>{% endif %}
+        {% for n in page.paginator.page_range %}<a href="?{% if q %}q={{ q|urlencode }}&{% endif %}{% if status %}status={{ status }}&{% endif %}page={{ n }}" class="flex h-11 w-11 items-center justify-center rounded-btn {% if n == page.number %}bg-navy font-semibold text-white hover:text-white{% else %}border border-surface-border text-ink-heading{% endif %}">{{ n }}</a>{% endfor %}
+        {% if page.has_next %}<a href="?{% if q %}q={{ q|urlencode }}&{% endif %}{% if status %}status={{ status }}&{% endif %}page={{ page.next_page_number }}" class="btn-secondary h-11">Next</a>{% endif %}
+      </nav>
+      {% endif %}
+    </div>
+  </form>
+</section>
+{% endblock %}

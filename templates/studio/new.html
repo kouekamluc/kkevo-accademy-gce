@@ -1,0 +1,16 @@
+{% extends "layouts/studio.html" %}
+{% block title %}New lesson — Content studio{% endblock %}
+{% block crumbs %}<a href="{% url 'studio:lessons' %}">Lessons</a><span class="mx-2 text-ink-muted">/</span><span class="text-ink-heading">New</span>{% endblock %}
+{% block content %}
+<section class="card max-w-xl p-6 nav:p-8">
+  <h1 class="text-[26px] font-bold text-navy">Create a new lesson</h1>
+  <p class="mt-1 text-slate-600">It starts as a draft. Nothing is shown to students until it is reviewed and published.</p>
+  <form method="post" class="mt-6 flex flex-col gap-5" novalidate>
+    {% csrf_token %}
+    {% include "components/field.html" with field=form.topic %}
+    {% include "components/field.html" with field=form.title %}
+    {% include "components/field.html" with field=form.lesson_type %}
+    <div class="flex gap-3"><button type="submit" class="btn-primary">Create draft</button><a href="{% url 'studio:lessons' %}" class="btn-secondary">Cancel</a></div>
+  </form>
+</section>
+{% endblock %}
