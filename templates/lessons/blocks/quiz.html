@@ -1,0 +1,21 @@
+{% load lesson_tags %}<section class="rounded-card border border-surface-border bg-white p-6" x-data="quickCheck({{ block.data.correct|default:0 }})" aria-labelledby="{{ block.anchor }}-q">
+  <h3 class="text-xl font-bold text-navy">{{ block.title|default:"Quick check" }}</h3>
+  <p id="{{ block.anchor }}-q" class="mt-3 text-[17px]">{{ block.body|inline }}</p>
+  <div role="radiogroup" aria-labelledby="{{ block.anchor }}-q" class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    {% for choice in block.data.choices %}
+    <button type="button" role="radio" :aria-checked="(picked === {{ forloop.counter0 }}).toString()" @click="pick({{ forloop.counter0 }})"
+            class="flex min-h-[60px] items-center gap-3.5 rounded-card border-[1.5px] px-4 text-left transition"
+            :class="{ 'border-surface-border bg-white': state({{ forloop.counter0 }}) === 'idle', 'border-2 border-primary bg-primary-50': state({{ forloop.counter0 }}) === 'picked', 'border-2 border-success bg-success-50 text-emerald-800': state({{ forloop.counter0 }}) === 'right', 'border-dashed border-red-400 text-red-800': state({{ forloop.counter0 }}) === 'wrong' }">
+      <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-[9px] border-[1.5px] border-slate-300 text-sm font-bold" :class="{ 'border-0 bg-primary text-white': state({{ forloop.counter0 }}) === 'picked', 'border-0 bg-success-text text-white': state({{ forloop.counter0 }}) === 'right' }">{% cycle 'A' 'B' 'C' 'D' 'E' 'F' %}</span>
+      <span class="font-math text-lg">{{ choice|inline }}</span>
+    </button>
+    {% endfor %}
+  </div>
+  <div class="mt-5 flex flex-wrap items-center justify-between gap-3">
+    <div class="text-sm" aria-live="polite">
+      <p x-show="checked && picked === correct" x-cloak class="font-semibold text-success-text">Correct. {{ block.data.explanation|inline }}</p>
+      <p x-show="checked && picked !== correct" x-cloak class="font-semibold text-danger-text">Not quite — try another option.</p>
+    </div>
+    <button type="button" @click="check()" :disabled="picked === null" class="btn h-12 px-7 disabled:cursor-not-allowed disabled:bg-surface-border disabled:text-ink-muted" :class="picked !== null && 'bg-primary text-white hover:bg-primary-700'">Check answer</button>
+  </div>
+</section>

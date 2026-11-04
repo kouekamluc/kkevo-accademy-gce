@@ -1,0 +1,18 @@
+{% if progress.is_completed %}
+<div class="flex flex-col gap-4 rounded-2xl bg-success-50 p-6 sm:flex-row sm:items-center sm:justify-between" role="status">
+  <div class="flex items-center gap-3">
+    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-success text-white">{% include "components/icon.html" with name="check" class="h-5 w-5" stroke="2.6" %}</span>
+    <div><div class="font-bold text-success-text">Lesson complete</div><div class="text-sm text-slate-600">Your progress has been saved.</div></div>
+  </div>
+  {% if next_lesson %}<a href="{{ next_lesson.get_absolute_url }}" class="btn-primary">Next: {{ next_lesson.title|truncatechars:34 }} {% include "components/icon.html" with name="arrow" class="h-4 w-4" stroke="2.2" %}</a>
+  {% else %}<a href="{{ course.get_absolute_url }}" class="btn-primary">Back to course</a>{% endif %}
+</div>
+{% else %}
+<div class="flex flex-col gap-4 rounded-2xl bg-navy p-6 text-white sm:flex-row sm:items-center sm:justify-between">
+  <div><div class="text-lg font-bold">Finished reading?</div><div class="mt-1 text-sm text-slate-300">Mark the lesson complete to update your progress{% if practice_set %} and unlock the practice set{% endif %}.</div></div>
+  <form method="post" action="{% url 'courses:lesson_complete' course.slug lesson.pk %}" hx-post="{% url 'courses:lesson_complete' course.slug lesson.pk %}" hx-target="#complete-card" hx-swap="innerHTML">
+    {% csrf_token %}
+    <button type="submit" class="btn h-12 bg-success px-6 text-[#052E1C] hover:bg-success-300">{% include "components/icon.html" with name="check" class="h-[18px] w-[18px]" stroke="2.5" %}Mark as Complete</button>
+  </form>
+</div>
+{% endif %}

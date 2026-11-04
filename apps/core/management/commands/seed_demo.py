@@ -97,7 +97,7 @@ def quadratics_blocks(lesson):
     b.append(block(lesson, next(n), "text", body="So if we can write a quadratic as $(x - p)(x - q) = 0$, its roots are simply $x = p$ and $x = q$."))
     b.append(block(lesson, next(n), "graph", body="Figure 1. The roots are where the curve crosses the $x$-axis, because that is where $y = 0$.",
                    alt_text="Graph of y = x squared minus 5x plus 6 crossing the x-axis at 2 and 3",
-                   coeffs=[1, -5, 6], xmin=0, xmax=5.5, ymin=-1, ymax=6.5, roots=[2, 3], label="y = x^2 - 5x + 6"))
+                   coeffs=[1, -5, 6], xmin=0, xmax=5.5, ymin=-1, ymax=6.5, roots=[2, 3], label="y = x² − 5x + 6"))
     b.append(block(lesson, next(n), "worked_example", "Worked example 1", body=r"x^2 - 5x + 6 = 0", badge="a = 1", steps=[
         {"title": "Check it equals zero and identify $b$ and $c$", "text": "The right-hand side is already 0. Here $b = -5$ and $c = 6$."},
         {"title": "Find two numbers that multiply to $c$ and add to $b$", "chips": ["1 × 6 → 7", "2 × 3 → 5", "−1 × −6 → −7", "−2 × −3 → −5 ✓"]},

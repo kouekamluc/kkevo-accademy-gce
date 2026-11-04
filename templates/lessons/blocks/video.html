@@ -1,0 +1,20 @@
+{% load lesson_tags %}{# Inline video in a reading lesson (04 "Watch:" section) #}
+<figure id="{{ block.anchor }}" {% if block.title %}data-toc="{{ block.title }}"{% endif %} class="scroll-mt-24 overflow-hidden rounded-card border border-surface-border bg-white">
+  {% if block.title %}<h3 class="sr-only">{{ block.title }}</h3>{% endif %}
+  {% if block.media_url %}
+  <video controls preload="none" playsinline class="aspect-video w-full bg-navy"
+         src="{% if media_note == 'low' and block.data.low_data_url %}{{ block.data.low_data_url }}{% else %}{{ block.media_url }}{% endif %}"
+         {% if block.data.poster %}poster="{{ block.data.poster }}"{% endif %}>
+    {% if block.data.captions %}<track kind="captions" src="{{ block.data.captions }}" srclang="en" label="English" default>{% endif %}
+  </video>
+  {% else %}
+  <div class="relative flex aspect-video w-full flex-col items-center justify-center gap-3 bg-navy text-center text-white">
+    <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/10">{% include "components/icon.html" with name="video" class="h-7 w-7" %}</span>
+    <span class="text-sm text-slate-300">Video coming soon</span>
+  </div>
+  {% endif %}
+  <figcaption class="flex flex-wrap items-center justify-between gap-2 px-4 py-2.5 text-[13px] text-ink-muted">
+    <span>{{ block.title }}{% if block.data.duration %} · {{ block.data.duration|mmss }}{% endif %}</span>
+    {% if block.data.transcript %}<a href="{{ lesson.get_absolute_url }}#transcript" class="font-semibold">Transcript</a>{% endif %}
+  </figcaption>
+</figure>

@@ -1,0 +1,68 @@
+{% load lesson_tags static %}
+<script src="{% static 'js/sims/newton-cart.js' %}"></script>
+<div x-data="newtonCart()" class="grid gap-6 lg:grid-cols-[1fr_400px]">
+  <section class="overflow-hidden rounded-panel border border-surface-border bg-white" aria-label="Cart simulation">
+    <div class="flex flex-wrap items-center justify-between gap-3 px-6 py-4 text-sm">
+      <span class="flex items-center gap-2 font-semibold" aria-live="polite"><span class="h-2 w-2 rounded-full" :class="statusColor"></span><span x-text="status">Ready — press Run</span></span>
+      <span class="flex flex-wrap gap-4 text-slate-600"><span class="flex items-center gap-1.5"><span class="h-1 w-5 rounded bg-primary"></span>Applied force</span><span class="flex items-center gap-1.5"><span class="h-1 w-5 rounded bg-success-text"></span>Acceleration</span><span>Friction: none</span></span>
+    </div>
+    <div class="relative h-[260px] border-y border-surface-border bg-[linear-gradient(#EEF2F7_1px,transparent_1px),linear-gradient(90deg,#EEF2F7_1px,transparent_1px)] bg-[size:40px_40px]" role="img" :aria-label="'Cart of ' + mass + ' kilograms pushed with ' + force + ' newtons, ' + distance.toFixed(1) + ' metres travelled'">
+      <div class="absolute bottom-[54px] left-[28%] top-6 border-l border-dashed border-slate-400"><span class="ml-2 text-xs font-medium text-slate-600">Start · 0 m</span></div>
+      <div class="absolute bottom-[54px] right-[4%] top-6 border-r border-dashed border-slate-400"><span class="mr-2 block -translate-x-full text-xs font-medium text-slate-600">Finish · 20 m</span></div>
+      <div class="absolute inset-x-0 bottom-[54px] h-1 bg-slate-500"></div>
+      <div class="absolute inset-x-0 bottom-[28px] h-[26px] bg-[repeating-linear-gradient(135deg,#E2E8F0_0_2px,transparent_2px_10px)]"></div>
+      <div class="absolute bottom-[58px]" :style="'left: calc(28% + ' + (position * 0.68) + '%)'">
+        <div class="absolute bottom-[calc(100%+6px)] left-0 flex items-center gap-1 text-success-text" x-show="accWidth > 0"><span class="h-1 rounded bg-success-text" :style="'width:' + accWidth + 'px'"></span><span class="font-math text-lg italic">a</span></div>
+        <div class="relative flex w-[140px] items-center justify-center rounded-xl bg-navy text-lg font-bold text-white" :style="'height:' + cartHeight + 'px'"><span x-text="mass + ' kg'">5 kg</span>
+          <span class="absolute -bottom-3 left-5 h-6 w-6 rounded-full border-4 border-white bg-slate-600"></span><span class="absolute -bottom-3 right-5 h-6 w-6 rounded-full border-4 border-white bg-slate-600"></span></div>
+        <div class="absolute bottom-6 right-full flex items-center text-primary"><span class="mr-1 font-math text-lg italic">F</span><span class="h-1.5 rounded bg-primary" :style="'width:' + forceWidth + 'px'"></span><span class="h-0 w-0 border-y-[8px] border-l-[12px] border-y-transparent border-l-primary"></span></div>
+      </div>
+      <div class="absolute bottom-1.5 left-6 flex gap-8 font-math text-[15px] text-slate-700"><span>t = <b x-text="t.toFixed(1)">0.0</b> s</span><span>v = <b x-text="velocity.toFixed(1)">0.0</b> m/s</span><span>distance = <b x-text="distance.toFixed(1)">0.0</b> m</span></div>
+    </div>
+    <div class="grid gap-6 px-6 py-5 sm:grid-cols-2">
+      <div>
+        <div class="flex items-center justify-between"><label for="sim-force" class="flex items-center gap-2 font-semibold"><span class="h-2.5 w-2.5 rounded-sm bg-primary"></span>Applied force <span class="font-math italic">F</span></label><span class="text-2xl font-bold text-primary"><span x-text="force">20</span> <span class="text-sm">N</span></span></div>
+        <div class="mt-3 flex items-center gap-3">
+          <button type="button" @click="stop({ force: force - 1 })" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border text-xl" aria-label="Decrease force">−</button>
+          <input id="sim-force" type="range" min="0" max="50" step="1" x-model.number="force" @input="stop()" class="sim-range flex-1" :style="fill(force, 0, 50, '#2563EB')">
+          <button type="button" @click="stop({ force: force + 1 })" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border text-xl" aria-label="Increase force">+</button>
+        </div>
+        <div class="mt-1 flex justify-between px-14 text-xs text-ink-muted"><span>0 N</span><span>50 N</span></div>
+      </div>
+      <div>
+        <div class="flex items-center justify-between"><label for="sim-mass" class="flex items-center gap-2 font-semibold"><span class="h-2.5 w-2.5 rounded-sm bg-navy"></span>Mass <span class="font-math italic">m</span></label><span class="text-2xl font-bold"><span x-text="mass">5</span> <span class="text-sm">kg</span></span></div>
+        <div class="mt-3 flex items-center gap-3">
+          <button type="button" @click="stop({ mass: mass - 1 })" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border text-xl" aria-label="Decrease mass">−</button>
+          <input id="sim-mass" type="range" min="1" max="20" step="1" x-model.number="mass" @input="stop()" class="sim-range sim-range-navy flex-1" :style="fill(mass, 1, 20, '#102A43')">
+          <button type="button" @click="stop({ mass: mass + 1 })" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border text-xl" aria-label="Increase mass">+</button>
+        </div>
+        <div class="mt-1 flex justify-between px-14 text-xs text-ink-muted"><span>1 kg</span><span>20 kg</span></div>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-3 border-t border-surface-border px-6 py-4">
+      <span class="text-sm text-slate-600">Try:</span>
+      <button type="button" @click="stop({ force: force * 2 })" class="h-10 rounded-full border border-surface-border px-4 text-sm font-semibold">Double the force</button>
+      <button type="button" @click="stop({ mass: mass * 2 })" class="h-10 rounded-full border border-surface-border px-4 text-sm font-semibold">Double the mass</button>
+      <span class="flex-1"></span>
+      <button type="button" @click="stop({ force: 20, mass: 5 })" class="btn-secondary">{% include "components/icon.html" with name="refresh" class="h-[18px] w-[18px]" stroke="2" %}Reset</button>
+      <button type="button" @click="run()" :disabled="running" class="btn-primary px-7 disabled:opacity-70"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span x-text="runLabel">Run</span></button>
+    </div>
+  </section>
+
+  <div class="flex flex-col gap-5">
+    <section class="rounded-panel bg-navy p-7 text-white" aria-label="The law">
+      <div class="text-xs font-semibold uppercase tracking-[.1em] text-success-300">The law</div>
+      <div class="mt-3 font-math text-[64px] italic leading-none" aria-label="F equals m a">{{ block.data.law|default:"F = ma" }}</div>
+      <dl class="mt-6 grid grid-cols-[28px_1fr] gap-y-2 text-[15px] text-slate-200">
+        {% for d in block.data.definitions %}<dt class="font-math text-lg italic">{{ d.0 }}</dt><dd>{{ d.1 }}</dd>{% endfor %}
+      </dl>
+    </section>
+    <section class="rounded-panel border border-surface-border bg-white p-6" aria-label="Live calculation" aria-live="polite">
+      <div class="text-xs font-semibold uppercase tracking-[.1em] text-slate-500">Live calculation</div>
+      <div class="mt-4 font-math text-2xl italic">a = F ÷ m</div>
+      <div class="mt-2 font-math text-2xl">= <span class="text-primary" x-text="force + ' N'">20 N</span> ÷ <span x-text="mass + ' kg'">5 kg</span></div>
+      <div class="mt-4 flex items-center justify-between rounded-card border border-success-200 bg-success-50 px-5 py-4"><span class="font-semibold text-success-text">Acceleration</span><span class="font-math text-3xl font-semibold text-success-text"><span x-text="a.toFixed(2)">4.00</span> <span class="text-base">m/s²</span></span></div>
+      <p class="mt-4 text-sm leading-relaxed text-slate-600" x-text="insight"></p>
+    </section>
+  </div>
+</div>

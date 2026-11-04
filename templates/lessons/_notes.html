@@ -1,0 +1,6 @@
+{% load lesson_tags %}{% if notes %}
+<ul class="flex flex-col gap-3">
+  {% for note in notes %}<li class="rounded-card border border-surface-border bg-white px-5 py-4"><div class="text-xs font-semibold text-primary-700">{% if note.video_time is not None %}{{ note.video_time|mmss }}{% else %}Note{% endif %}</div><p class="mt-1 whitespace-pre-line text-[15px] text-slate-700">{{ note.body }}</p></li>{% endfor %}
+</ul>
+<span hx-swap-oob="innerHTML:#note-count">{{ notes|length }}</span>
+{% else %}<p class="text-sm text-ink-muted">No notes yet. Add one while you watch.</p>{% endif %}

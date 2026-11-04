@@ -7,6 +7,7 @@ module.exports = {
     "./templates/**/*.html",
     "./apps/**/templates/**/*.html",
     "./apps/**/*.py",
+    "./static/js/**/*.js",
     "./node_modules/flowbite/**/*.js",
   ],
   // Classes assembled in templates from model values (e.g. accent-{{ subject.accent }}).

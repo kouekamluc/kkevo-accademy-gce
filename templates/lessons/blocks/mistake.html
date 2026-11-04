@@ -1,0 +1,4 @@
+{% load lesson_tags %}<aside class="rounded-card border border-warning-200 bg-warning-50 px-5 py-4">
+  <div class="flex items-center gap-2 text-sm font-semibold text-warning-text">{% include "components/icon.html" with name="warning" class="h-[18px] w-[18px]" %}{{ block.title|inline }}</div>
+  <div class="lesson-text mt-2 text-[15px]">{{ block.body|rich }}</div>
+</aside>

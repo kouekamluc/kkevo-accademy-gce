@@ -31,3 +31,19 @@
   .form-input { @apply block min-h-touch w-full rounded-input border border-slate-300 bg-white px-3.5 text-[15px] text-ink-heading placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary-100; }
   .form-input-error { @apply border-danger-text focus:border-danger-text focus:ring-danger-50; }
 }
+
+/* Lesson reading typography (text size switch in the lesson header) */
+.lesson-prose { font-size: 18px; line-height: 30px; }
+.text-size-sm .lesson-prose { font-size: 16px; line-height: 27px; }
+.text-size-lg .lesson-prose { font-size: 20px; line-height: 34px; }
+.lesson-text p + p { margin-top: 1em; }
+.lesson-text strong { font-weight: 600; color: theme("colors.ink.heading"); }
+.katex { font-size: 1.08em; }
+
+/* Simulation sliders */
+.sim-range { -webkit-appearance: none; appearance: none; height: 6px; border-radius: 999px; }
+.sim-range::-webkit-slider-thumb { -webkit-appearance: none; width: 30px; height: 30px; border-radius: 50%; background: #fff; border: 3px solid #2563EB; cursor: pointer; }
+.sim-range::-moz-range-thumb { width: 26px; height: 26px; border-radius: 50%; background: #fff; border: 3px solid #2563EB; cursor: pointer; }
+.sim-range-navy::-webkit-slider-thumb { border-color: #102A43; }
+.sim-range-navy::-moz-range-thumb { border-color: #102A43; }
+

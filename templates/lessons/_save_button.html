@@ -1,0 +1,14 @@
+<form method="post" action="{% url 'courses:lesson_save' lesson.course.slug lesson.pk %}" hx-post="{% url 'courses:lesson_save' lesson.course.slug lesson.pk %}" hx-swap="outerHTML" class="contents">
+  {% csrf_token %}<input type="hidden" name="variant" value="{{ variant }}">
+  {% if variant == "icon" %}
+  <button type="submit" aria-pressed="{{ is_saved|yesno:'true,false' }}" aria-label="{% if is_saved %}Remove from saved lessons{% else %}Save lesson{% endif %}"
+          class="flex h-12 w-14 items-center justify-center rounded-btn border border-surface-border bg-white {% if is_saved %}text-primary{% else %}text-navy{% endif %} hover:bg-slate-50">
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="{% if is_saved %}currentColor{% else %}none{% endif %}" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+  </button>
+  {% else %}
+  <button type="submit" aria-pressed="{{ is_saved|yesno:'true,false' }}" class="flex h-10 items-center gap-1.5 rounded-btn px-3 text-sm font-medium {% if is_saved %}text-primary-700{% else %}text-slate-700{% endif %} hover:bg-slate-100">
+    <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="{% if is_saved %}currentColor{% else %}none{% endif %}" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+    <span class="hidden sm:inline">{% if is_saved %}Saved{% else %}Save{% endif %}</span>
+  </button>
+  {% endif %}
+</form>

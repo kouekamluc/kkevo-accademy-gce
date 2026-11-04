@@ -1,0 +1,6 @@
+{% load lesson_tags %}<aside class="rounded-card border border-primary-100 bg-primary-50 px-5 py-4">
+  <div class="text-xs font-semibold uppercase tracking-[.08em] text-primary-700">{{ block.title|default:"Definition" }}</div>
+  <div class="lesson-text mt-2">{{ block.body|rich }}</div>
+  {% if block.data.formula %}<div class="my-3 overflow-x-auto text-center text-lg"><span data-latex="{{ block.data.formula }}">{{ block.data.formula }}</span></div>{% endif %}
+  {% if block.data.note %}<p class="text-sm text-slate-600">{{ block.data.note|inline }}</p>{% endif %}
+</aside>

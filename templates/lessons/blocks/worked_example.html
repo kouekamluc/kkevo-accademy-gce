@@ -1,0 +1,24 @@
+{% load lesson_tags %}<section id="{{ block.anchor }}" {% if block.title %}data-toc="{{ block.title }}"{% endif %} class="scroll-mt-24 overflow-hidden rounded-card border border-surface-border bg-white" aria-label="{{ block.title|default:'Worked example' }}">
+  {% if block.body %}
+  <div class="flex items-center justify-between gap-3 bg-navy px-5 py-3.5 text-white">
+    <div class="text-[15px] font-semibold">Solve <span data-latex="{{ block.body }}" data-display="inline">{{ block.body }}</span></div>
+    {% if block.data.badge %}<span class="rounded-md bg-navy-700 px-2 py-0.5 text-xs font-semibold text-primary-300"><span data-latex="{{ block.data.badge }}" data-display="inline">{{ block.data.badge }}</span></span>{% endif %}
+  </div>
+  {% else %}
+  <div class="px-5 pt-5"><h3 class="text-xl font-bold text-navy">{{ block.title|inline }}</h3>{% if block.data.intro %}<p class="mt-2 text-[15px] leading-relaxed text-slate-700">{{ block.data.intro|inline }}</p>{% endif %}</div>
+  {% endif %}
+  <ol class="divide-y divide-slate-100 px-5">
+    {% for step in block.data.steps %}
+    <li class="flex gap-4 py-4">
+      <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white {% if step.final %}bg-success-text{% else %}bg-navy{% endif %}">{{ forloop.counter }}</span>
+      <div class="min-w-0 flex-1">
+        <div class="text-[15px] font-semibold">{{ step.title|inline }}</div>
+        {% if step.text %}<div class="mt-1 text-sm text-slate-600">{{ step.text|inline }}</div>{% endif %}
+        {% if step.chips %}<div class="mt-2 flex flex-wrap gap-2">{% for chip in step.chips %}<span class="rounded-md border px-2.5 py-1 font-math text-[15px] {% if '✓' in chip %}border-success bg-success-50 text-success-text{% else %}border-surface-border text-slate-600{% endif %}">{{ chip }}</span>{% endfor %}</div>{% endif %}
+        {% if step.math %}<div class="mt-2 overflow-x-auto text-lg {% if step.final %}text-success-text{% endif %}"><span data-latex="{{ step.math }}" data-display="inline">{{ step.math }}</span></div>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+  {% if block.data.check %}<div class="flex items-center gap-2 border-t border-success-200 bg-success-50 px-5 py-3 text-sm font-semibold text-success-text">{% include "components/icon.html" with name="check" class="h-4 w-4" stroke="2.5" %}Check: <span data-latex="{{ block.data.check }}" data-display="inline">{{ block.data.check }}</span></div>{% endif %}
+</section>

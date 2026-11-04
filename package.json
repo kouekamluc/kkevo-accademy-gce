@@ -11,6 +11,7 @@
     "alpinejs": "3.14.9",
     "flowbite": "2.5.2",
     "htmx.org": "2.0.4",
+    "katex": "^0.16.11",
     "tailwindcss": "3.4.17"
   }
 }

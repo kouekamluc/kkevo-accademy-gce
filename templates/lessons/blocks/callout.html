@@ -1,0 +1,10 @@
+{% load lesson_tags %}<section class="rounded-card border border-surface-border bg-white p-6">
+  {% if block.title %}<h3 class="text-xl font-bold text-navy">{{ block.title|inline }}</h3>{% endif %}
+  <div class="lesson-text mt-2">{{ block.body|rich }}</div>
+  {% if block.data.cards %}
+  <div class="mt-4 grid gap-3 sm:grid-cols-2">
+    {% for card in block.data.cards %}<div class="rounded-xl {% cycle 'bg-primary-50' 'bg-slate-100' %} p-4"><div class="font-semibold {% cycle 'text-primary-700' 'text-navy' %}">{{ card.0|inline }}</div><div class="mt-1 text-sm text-slate-700">{{ card.1|inline }}</div></div>{% endfor %}
+  </div>
+  {% endif %}
+  {% if block.data.note %}<p class="mt-4 text-sm text-slate-600">{{ block.data.note|inline }}</p>{% endif %}
+</section>

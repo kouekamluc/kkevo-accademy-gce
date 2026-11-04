@@ -1,0 +1,16 @@
+{% load lesson_tags %}{% polynomial_plot block.data as g %}
+<figure class="rounded-card border border-surface-border bg-white p-3">
+  {% if g %}
+  <svg viewBox="0 0 {{ g.width }} {{ g.height }}" class="h-auto w-full" role="img" aria-label="{{ block.alt_text }}">
+    {% for t in g.xticks %}<line x1="{{ t.x }}" x2="{{ t.x }}" y1="{{ g.pad }}" y2="{{ g.bottom }}" stroke="#F1F5F9"/><text x="{{ t.x }}" y="{{ g.xlabel_y }}" font-size="12" text-anchor="middle" fill="#64748B">{{ t.label }}</text>{% endfor %}
+    {% for t in g.yticks %}<line x1="{{ g.pad }}" x2="{{ g.right }}" y1="{{ t.y }}" y2="{{ t.y }}" stroke="#F1F5F9"/><text x="{{ g.ylabel_x }}" y="{{ t.label_y }}" font-size="12" text-anchor="end" fill="#64748B">{{ t.label }}</text>{% endfor %}
+    <line x1="{{ g.pad }}" x2="{{ g.right }}" y1="{{ g.axis_y }}" y2="{{ g.axis_y }}" stroke="#94A3B8"/>
+    <line x1="{{ g.axis_x }}" x2="{{ g.axis_x }}" y1="16" y2="{{ g.bottom }}" stroke="#94A3B8"/>
+    <clipPath id="clip-{{ block.pk }}"><rect x="{{ g.pad }}" y="10" width="{{ g.plot_w }}" height="{{ g.plot_h }}"/></clipPath>
+    <polyline clip-path="url(#clip-{{ block.pk }})" points="{{ g.points }}" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linejoin="round"/>
+    {% for r in g.roots %}<circle cx="{{ r.x }}" cy="{{ r.y }}" r="6" fill="#10B981" stroke="#fff" stroke-width="2"/><text x="{{ r.x }}" y="{{ r.label_y }}" font-size="14" text-anchor="middle" fill="#047857" font-style="italic" font-family="STIX Two Text, serif">x = {{ r.label }}</text>{% endfor %}
+    {% if block.data.label %}<text x="{{ g.label_x }}" y="40" font-size="16" text-anchor="end" fill="#1D4ED8" font-style="italic" font-family="STIX Two Text, serif">{{ block.data.label }}</text>{% endif %}
+  </svg>
+  {% endif %}
+  {% if block.body %}<figcaption class="mt-1 px-2 text-[13px] text-ink-muted">{{ block.body|inline }}</figcaption>{% endif %}
+</figure>

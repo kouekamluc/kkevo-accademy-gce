@@ -1,0 +1,134 @@
+{% extends "layouts/lesson.html" %}
+{% load lesson_tags %}
+{% block title %}{{ lesson.title }} — {{ course.title }}{% endblock %}
+{% block progress_line %}{% endblock %}
+{% block header_actions %}{% endblock %}
+{% block lesson %}
+<main id="main" class="mx-auto grid max-w-[1440px] gap-8 px-0 pb-28 nav:grid-cols-[1fr_400px] nav:px-[86px] nav:py-9"
+      x-data="{ time: {{ progress.video_position }}, duration: {{ video.data.duration|default:0 }}, tab: 'chapters',
+                seek(t) { const v = $refs.video; if (v) { v.currentTime = t; v.play(); } this.time = t; },
+                get watched() { return this.duration ? Math.min(100, Math.round(this.time / this.duration * 100)) : 0 } }">
+  <div class="min-w-0">
+    {# Player #}
+    <div class="overflow-hidden bg-navy nav:rounded-panel nav:border nav:border-surface-border">
+      {% if video.media_url %}
+      <video x-ref="video" controls preload="metadata" playsinline class="aspect-video w-full"
+             src="{% if media_note == 'low' and video.data.low_data_url %}{{ video.data.low_data_url }}{% else %}{{ video.media_url }}{% endif %}"
+             @timeupdate="time = $event.target.currentTime" @loadedmetadata="duration = $event.target.duration || duration; if (time) $event.target.currentTime = time">
+        {% if video.data.captions %}<track kind="captions" src="{{ video.data.captions }}" srclang="en" label="English" default>{% endif %}
+      </video>
+      {% else %}
+      <div class="flex aspect-video w-full flex-col items-center justify-center gap-3 text-center text-white">
+        <span class="flex h-16 w-16 items-center justify-center rounded-full bg-white/10">{% include "components/icon.html" with name="video" class="h-8 w-8" %}</span>
+        <p class="font-semibold">The video for this lesson is being uploaded</p>
+        <p class="max-w-md px-4 text-sm text-slate-300">Read the chapters and key concepts below in the meantime.</p>
+      </div>
+      {% endif %}
+      {% if video.data.chapters and video.data.duration %}
+      <div class="relative h-1.5 bg-white/20" aria-hidden="true">
+        <div class="h-full bg-primary" :style="'width:' + watched + '%'"></div>
+        {% for ch in video.data.chapters %}{% if not forloop.first %}<span class="chapter-tick absolute top-0 h-1.5 w-0.5 bg-white" data-at="{{ ch.0 }}" data-duration="{{ video.data.duration }}"></span>{% endif %}{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="px-4 nav:px-0">
+      <div class="mt-5 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+        <div>
+          <div class="flex flex-wrap gap-2 text-[13px] font-semibold">
+            <span class="rounded-md px-2.5 py-1 accent-{{ subject.accent }}">{{ subject.name }}</span>
+            <span class="rounded-md bg-slate-100 px-2.5 py-1 text-slate-700">{{ level.name }} · {{ level.exam_level }} Level</span>
+            <span class="rounded-md bg-slate-100 px-2.5 py-1 text-slate-700">Module {{ module_index }} · {{ module.title }}</span>
+          </div>
+          <h1 class="mt-3 text-[28px] font-bold leading-tight tracking-[-.02em] text-navy nav:text-[38px]">{{ lesson.title }}</h1>
+          {% if lesson.summary %}<p class="mt-2 max-w-[600px] text-[17px] leading-relaxed text-slate-600">{{ lesson.summary }}</p>{% endif %}
+        </div>
+        <div class="flex shrink-0 gap-2.5">
+          {% include "lessons/_save_button.html" with variant="icon" %}
+          <form method="post" action="{% url 'courses:lesson_complete' course.slug lesson.pk %}">{% csrf_token %}
+            <button type="submit" class="btn h-12 px-6 {% if progress.is_completed %}border border-success-200 bg-success-50 text-success-text{% else %}bg-success text-white hover:bg-success-text hover:text-white{% endif %}">{% include "components/icon.html" with name="check" class="h-[18px] w-[18px]" stroke="2.5" %}{% if progress.is_completed %}Completed{% else %}Complete Lesson{% endif %}</button>
+          </form>
+        </div>
+      </div>
+
+      {# Tabs #}
+      <div role="tablist" aria-label="Lesson details" class="mt-7 flex gap-8 border-b border-surface-border">
+        <button type="button" role="tab" :aria-selected="(tab === 'chapters').toString()" @click="tab = 'chapters'" class="-mb-px border-b-2 pb-3 text-[15px]" :class="tab === 'chapters' ? 'border-primary font-semibold text-ink-heading' : 'border-transparent text-slate-600'">Chapters &amp; concepts</button>
+        <button type="button" role="tab" id="transcript" :aria-selected="(tab === 'transcript').toString()" @click="tab = 'transcript'" class="-mb-px border-b-2 pb-3 text-[15px]" :class="tab === 'transcript' ? 'border-primary font-semibold text-ink-heading' : 'border-transparent text-slate-600'">Transcript</button>
+        <button type="button" role="tab" id="notes" :aria-selected="(tab === 'notes').toString()" @click="tab = 'notes'" class="-mb-px border-b-2 pb-3 text-[15px]" :class="tab === 'notes' ? 'border-primary font-semibold text-ink-heading' : 'border-transparent text-slate-600'">My notes · <span id="note-count">{{ notes|length }}</span></button>
+      </div>
+
+      <div x-show="tab === 'chapters'" class="mt-6 grid gap-6 lg:grid-cols-2" role="tabpanel">
+        {% if video.data.chapters %}
+        <section class="rounded-card border border-surface-border bg-white p-6">
+          <h2 class="text-lg font-bold">Chapters</h2>
+          <ol class="mt-3 flex flex-col">
+            {% for ch in chapters %}
+            <li><button type="button" @click="seek({{ ch.start }})" class="flex min-h-[52px] w-full items-center gap-4 rounded-xl px-3 text-left hover:bg-slate-50"
+                        :class="time >= {{ ch.start }} && time < {{ ch.end }} && 'bg-primary-50 text-primary-700'">
+              <span class="w-14 font-mono text-sm text-ink-muted">{{ ch.start|mmss }}</span><span class="flex-1 text-[15px]">{{ ch.title }}</span>
+            </button></li>
+            {% endfor %}
+          </ol>
+        </section>
+        {% endif %}
+        {% if video.data.concepts %}
+        <section class="rounded-card border border-surface-border bg-white p-6">
+          <h2 class="text-lg font-bold">Key concepts</h2>
+          <dl class="mt-3 flex flex-col gap-4">{% for c in video.data.concepts %}<div><dt class="font-semibold">{{ c.0 }}</dt><dd class="mt-1 text-[15px] leading-relaxed text-slate-600">{{ c.1|inline }}</dd></div>{% endfor %}</dl>
+        </section>
+        {% endif %}
+      </div>
+      <div x-show="tab === 'transcript'" x-cloak class="mt-6 rounded-card border border-surface-border bg-white p-6 text-[15px] leading-relaxed text-slate-700" role="tabpanel">{{ video.data.transcript|default:"No transcript yet."|rich }}</div>
+      <div x-show="tab === 'notes'" x-cloak class="mt-6" role="tabpanel">
+        <form method="post" action="{% url 'courses:lesson_note' course.slug lesson.pk %}" hx-post="{% url 'courses:lesson_note' course.slug lesson.pk %}" hx-target="#note-list" hx-swap="innerHTML" @htmx:after-request="$el.reset()" class="flex flex-col gap-3 rounded-card border border-surface-border bg-white p-5">
+          {% csrf_token %}<input type="hidden" name="video_time" :value="Math.round(time)">
+          <label for="note-body" class="form-label">Add a note <span class="font-normal text-ink-muted">at <span x-text="new Date(time * 1000).toISOString().substr(14, 5)">00:00</span></span></label>
+          <textarea id="note-body" name="body" rows="3" maxlength="2000" required class="form-input py-3"></textarea>
+          <div><button type="submit" class="btn-primary">Save note</button></div>
+        </form>
+        <div id="note-list" class="mt-4">{% include "lessons/_notes.html" %}</div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="flex flex-col gap-5 px-4 nav:px-0" aria-label="Lesson progress and related content">
+    <section class="rounded-panel border border-surface-border bg-white p-5">
+      <div class="flex items-baseline justify-between"><h2 class="text-lg font-bold">Your progress</h2><span class="text-sm text-ink-muted">Lesson {{ lesson_index }} of {{ module_lesson_count }}</span></div>
+      <div class="mt-3 flex items-center gap-3"><div class="h-2 flex-1 rounded-full bg-surface-border"><div class="h-2 rounded-full bg-primary" :style="'width:' + watched + '%'"></div></div><span class="text-sm font-semibold"><span x-text="watched">0</span>% watched</span></div>
+      {% if practice_set %}<p class="mt-4 rounded-xl bg-surface-bg px-4 py-3 text-[15px] text-slate-600">After the video: a {{ practice_set.question_count }}-question check. <a href="{{ practice_set.get_absolute_url }}" class="font-semibold">Start</a></p>{% endif %}
+    </section>
+    {% if related_reading %}
+    <section class="rounded-panel border border-surface-border bg-white p-5">
+      <h2 class="text-lg font-bold">Related reading</h2>
+      <ul class="mt-3 divide-y divide-surface-border">
+        {% for item in related_reading %}
+        <li><a href="{{ item.get_absolute_url }}" class="flex items-start gap-3 py-3 text-ink-heading hover:text-ink-heading">
+          <span class="icon-tile h-10 w-10 accent-{{ subject.accent }}">{% if item.lesson_type == 'interactive' %}{% include "components/icon.html" with name="map" class="h-5 w-5" %}{% else %}{% include "components/icon.html" with name="message" class="h-5 w-5" %}{% endif %}</span>
+          <span><span class="block font-semibold leading-snug">{{ item.title }}</span><span class="block text-[13px] text-ink-muted">{{ item.type_label }}</span></span>
+        </a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+    {% if up_next %}
+    <section class="rounded-panel border border-surface-border bg-white p-5">
+      <h2 class="text-lg font-bold">Up next in this module</h2>
+      <ul class="mt-3 flex flex-col gap-3">
+        {% for item in up_next %}
+        <li><a href="{{ item.get_absolute_url }}" class="flex gap-3.5 text-ink-heading hover:text-ink-heading">
+          <span class="relative flex h-[72px] w-[120px] shrink-0 items-center justify-center rounded-xl bg-slate-100 accent-{{ subject.accent }}">{% if item.lesson_type == 'video' %}{% include "components/icon.html" with name="video" class="h-7 w-7" %}{% else %}{% include "components/icon.html" with name="book" class="h-7 w-7" %}{% endif %}<span class="absolute bottom-1.5 right-1.5 rounded bg-navy px-1.5 text-[11px] font-semibold text-white">{{ item.estimated_minutes }} min</span></span>
+          <span><span class="block font-semibold leading-snug">{{ item.title }}</span><span class="mt-0.5 block text-[13px] text-ink-muted">{{ item.type_label }}</span></span>
+        </a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  </aside>
+</main>
+<script>
+  document.querySelectorAll(".chapter-tick").forEach(function (el) {
+    el.style.left = (Number(el.dataset.at) / Number(el.dataset.duration) * 100) + "%";
+  });
+</script>
+{% endblock %}

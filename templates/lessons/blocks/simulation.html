@@ -1,0 +1,2 @@
+{% load lesson_tags %}{% if block.data.key == "newton-cart" %}{% include "lessons/sims/newton_cart.html" %}{% else %}
+<div class="rounded-card border border-dashed border-slate-300 bg-white p-6 text-center text-sm text-slate-600">Simulation “{{ block.data.key }}” is not available.</div>{% endif %}

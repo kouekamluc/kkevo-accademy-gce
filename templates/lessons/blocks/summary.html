@@ -1,0 +1,3 @@
+{% load lesson_tags %}<ol class="list-decimal rounded-card border border-surface-border bg-white py-5 pl-10 pr-5 text-[15px] leading-relaxed marker:text-ink-muted">
+  {% for line in block.body|lines %}<li class="py-1 pl-1">{{ line|inline }}</li>{% endfor %}
+</ol>

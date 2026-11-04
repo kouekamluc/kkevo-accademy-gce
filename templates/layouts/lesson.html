@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% comment %}
+Lesson player shell (mockups 04–06): slim header with breadcrumb and lesson actions,
+reading-progress line, and on phones a bottom bar with Previous · Mark as Complete · Next.
+{% endcomment %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'vendor/katex/katex.min.css' %}">
+<script defer src="{% static 'vendor/katex/katex.min.js' %}"></script>
+<script defer src="{% static 'vendor/katex/auto-render.min.js' %}"></script>
+<script src="{% static 'js/lesson.js' %}"></script>
+{% block lesson_head %}{% endblock %}
+{% endblock %}
+{% block body %}
+<div x-data="lessonPlayer({ heartbeatUrl: '{% url 'courses:lesson_heartbeat' course.slug lesson.pk %}', percent: {{ progress.percent }} })"
+     class="min-h-screen bg-surface-bg" :class="'text-size-' + textSize">
+  {% csrf_token %}
+  <header class="sticky top-0 z-30 border-b border-surface-border bg-white">
+    <div class="flex h-14 items-center gap-3 px-3 nav:h-header nav:gap-4 nav:px-6">
+      <a href="{{ course.get_absolute_url }}" class="flex h-11 w-11 items-center justify-center rounded-btn text-navy hover:bg-slate-100 nav:hidden" aria-label="Back to course">{% include "components/icon.html" with name="chevron-left" class="h-6 w-6" stroke="2.2" %}</a>
+      <a href="{% url 'dashboard:home' %}" class="hidden nav:block" aria-label="Dashboard">{% include "components/logo.html" %}</a>
+      <nav aria-label="Breadcrumb" class="min-w-0 flex-1 truncate text-[15px]">
+        <span class="nav:hidden font-semibold text-ink-heading">{{ subject.name }}</span>
+        <span class="hidden nav:inline">
+          <a href="{{ course.get_absolute_url }}">{{ course.title }}</a><span class="mx-2 text-ink-muted">/</span>
+          <a href="{{ course.get_absolute_url }}#module-{{ module_index }}">{{ module.title }}</a><span class="mx-2 text-ink-muted">/</span>
+          <span class="text-ink-heading" aria-current="page">{{ lesson.title }}</span>
+        </span>
+      </nav>
+      {% block header_actions %}{% endblock %}
+      <a href="{% url 'accounts:profile' %}" class="hidden h-10 w-10 items-center justify-center rounded-full bg-primary-100 text-sm font-bold text-primary-700 hover:text-primary-700 nav:flex" aria-label="Your profile">{{ user.initials }}</a>
+    </div>
+    {% block progress_line %}
+    <div class="h-[3px] bg-surface-border" aria-hidden="true"><div class="h-full bg-primary transition-[width] duration-300" :style="'width:' + percent + '%'" style="width: {{ progress.percent }}%"></div></div>
+    {% endblock %}
+  </header>
+
+  {% include "components/messages.html" %}
+  {% block lesson %}{% endblock %}
+
+  {# Phone bottom bar: Previous · Mark as Complete · Next #}
+  <nav aria-label="Lesson navigation" class="fixed inset-x-0 bottom-0 z-30 flex items-center gap-2 border-t border-surface-border bg-white px-3 pb-4 pt-2 nav:hidden">
+    {% if prev_lesson %}<a href="{{ prev_lesson.get_absolute_url }}" class="flex h-12 w-12 items-center justify-center rounded-btn border border-surface-border text-navy" aria-label="Previous: {{ prev_lesson.title }}">{% include "components/icon.html" with name="chevron-left" class="h-5 w-5" stroke="2.2" %}</a>{% else %}<span class="w-12"></span>{% endif %}
+    <form method="post" action="{% url 'courses:lesson_complete' course.slug lesson.pk %}" class="flex-1">{% csrf_token %}
+      <button type="submit" class="btn h-12 w-full {% if progress.is_completed %}border border-success-200 bg-success-50 text-success-text{% else %}bg-success text-white hover:bg-success-text hover:text-white{% endif %}">
+        {% include "components/icon.html" with name="check" class="h-[18px] w-[18px]" stroke="2.5" %}{% if progress.is_completed %}Completed{% else %}Mark as Complete{% endif %}
+      </button>
+    </form>
+    {% if next_lesson %}<a href="{{ next_lesson.get_absolute_url }}" class="flex h-12 w-12 items-center justify-center rounded-btn border border-surface-border text-navy" aria-label="Next: {{ next_lesson.title }}">{% include "components/icon.html" with name="chevron-right" class="h-5 w-5" stroke="2.2" %}</a>{% else %}<span class="w-12"></span>{% endif %}
+  </nav>
+</div>
+{% endblock %}

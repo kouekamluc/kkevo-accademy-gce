@@ -1,0 +1,4 @@
+{% load lesson_tags %}<figure class="overflow-hidden rounded-card border border-surface-border bg-white p-3">
+  <img src="{{ block.media_url }}" alt="{{ block.alt_text }}" loading="lazy" decoding="async" class="mx-auto h-auto max-w-full rounded-lg">
+  {% if block.body %}<figcaption class="mt-2 px-2 text-[13px] text-ink-muted">{{ block.body|inline }}</figcaption>{% endif %}
+</figure>

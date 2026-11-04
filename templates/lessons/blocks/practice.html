@@ -1,0 +1,8 @@
+{% load lesson_tags %}<div x-data="{ open: false }" class="rounded-card border bg-white px-5 py-4" :class="open ? 'border-success-200' : 'border-surface-border'">
+  <div class="flex items-center gap-3">
+    <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-xs font-bold" :class="open && 'bg-success-50 text-success-text'">?</span>
+    <div class="flex-1 text-[15px]">{{ block.body|inline }}</div>
+    <button type="button" @click="open = !open" :aria-expanded="open.toString()" class="text-sm font-semibold text-primary" x-text="open ? 'Hide answer' : 'Show answer'">Show answer</button>
+  </div>
+  <div x-show="open" x-cloak class="ml-10 mt-3 text-sm text-slate-700">{{ block.data.answer|inline }}</div>
+</div>

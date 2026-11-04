@@ -1,0 +1,116 @@
+{% extends "layouts/lesson.html" %}
+{% load lesson_tags %}
+{% block title %}{{ lesson.title }} — {{ course.title }}{% endblock %}
+{% block header_actions %}
+<button type="button" @click="cycleTextSize()" class="hidden h-10 items-center gap-1.5 rounded-btn px-3 text-sm font-medium text-slate-700 hover:bg-slate-100 sm:flex" :aria-label="'Text size: ' + textSize">
+  <span class="font-semibold">A<span class="text-xs">a</span></span> Text size
+</button>
+{% include "lessons/_save_button.html" with variant="header" %}
+{% endblock %}
+{% block lesson %}
+<div class="mx-auto flex max-w-[1440px] gap-8 px-4 pb-28 nav:px-6 nav:pb-16">
+  {# ---------- Course outline ---------- #}
+  <aside class="sticky top-[67px] hidden h-[calc(100vh-67px)] w-sidebar shrink-0 overflow-y-auto border-r border-surface-border py-6 pr-5 xl:block" aria-label="Course outline">
+    <a href="{{ course.get_absolute_url }}" class="flex items-center gap-1 text-[13px] font-semibold">{% include "components/icon.html" with name="chevron-left" class="h-4 w-4" stroke="2.2" %}Course overview</a>
+    <div class="mt-3 text-[15px] font-bold">{{ course.title }}</div>
+    <div class="mt-2 flex items-center gap-2"><div class="progress-track flex-1"><div class="progress-fill" style="width: {{ course_stat.percent }}%"></div></div><span class="text-xs font-semibold">{{ course_stat.percent }}%</span></div>
+    <nav class="mt-5 flex flex-col gap-1 text-sm" aria-label="Lessons in this course">
+      {% for m in outline %}
+        {% if m.current %}
+        <div class="mt-1 flex items-center justify-between font-bold text-ink-heading"><span>{{ forloop.counter }} · {{ m.module.title }}</span>{% include "components/icon.html" with name="chevron-up" class="h-4 w-4 text-ink-muted" stroke="2" %}</div>
+          {% for t in m.topics %}
+          <div class="mt-3 text-[11px] font-semibold uppercase tracking-[.06em] text-ink-muted">{{ forloop.parentloop.counter }}.{{ forloop.counter }} {{ t.topic.title }}</div>
+          {% for row in t.rows %}
+          <a href="{{ row.lesson.get_absolute_url }}" {% if row.lesson.pk == lesson.pk %}aria-current="page"{% endif %}
+             class="mt-1 flex min-h-[36px] items-center gap-2.5 rounded-lg px-2 {% if row.lesson.pk == lesson.pk %}border border-primary-300 bg-primary-50 font-semibold text-primary-700 hover:text-primary-700{% else %}text-slate-700 hover:bg-white hover:text-navy{% endif %}">
+            {% if row.done %}<span class="flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full bg-success text-white">{% include "components/icon.html" with name="check" class="h-3 w-3" stroke="3" %}</span>
+            {% elif row.lesson.pk == lesson.pk %}<span class="flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-2 border-primary"><span class="h-2 w-2 rounded-full bg-primary"></span></span>
+            {% else %}<span class="h-[18px] w-[18px] shrink-0 rounded-full border-2 border-slate-300"></span>{% endif %}
+            <span class="truncate">{{ row.lesson.title }}</span>
+          </a>
+          {% endfor %}
+          {% endfor %}
+        {% else %}
+        <a href="{{ course.get_absolute_url }}" class="mt-2 flex items-center justify-between border-t border-surface-border pt-3 font-semibold text-ink-heading hover:text-navy">
+          <span>{{ forloop.counter }} · {{ m.module.title }}</span>
+          {% if m.stat.is_complete %}<span class="text-xs font-semibold text-success-text">Done</span>{% elif m.stat %}<span class="text-xs text-ink-muted">{{ m.stat.percent }}%</span>{% endif %}
+        </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </aside>
+
+  {# ---------- Lesson ---------- #}
+  <main id="main" class="min-w-0 flex-1 py-6 nav:py-10">
+    <article class="mx-auto max-w-reading">
+      <div class="text-xs font-semibold uppercase tracking-[.08em] text-primary-700">Module {{ module_index }} · {{ module.title }} · Lesson {{ lesson_index }} of {{ module_lesson_count }}</div>
+      <h1 class="mt-2 text-[28px] font-bold leading-tight tracking-[-.02em] text-navy nav:text-[38px]">{{ lesson.title }}</h1>
+      {% if lesson.summary %}<p class="mt-3 text-[17px] leading-relaxed text-slate-600">{{ lesson.summary }}</p>{% endif %}
+      <ul class="mt-4 flex flex-wrap gap-x-5 gap-y-1.5 text-[13px] text-slate-600">
+        <li class="flex items-center gap-1.5">{% include "components/icon.html" with name="clock" class="h-4 w-4" %}{{ lesson.estimated_minutes }} min {% if video %}lesson{% else %}read{% endif %}</li>
+        {% if video and video.data.duration %}<li class="flex items-center gap-1.5">{% include "components/icon.html" with name="video" class="h-4 w-4" %}{{ video.data.duration|mmss }} video</li>{% endif %}
+        {% if practice_set %}<li class="flex items-center gap-1.5">{% include "components/icon.html" with name="target" class="h-4 w-4" %}{{ practice_set.question_count }} practice question{{ practice_set.question_count|pluralize }}</li>{% endif %}
+        {% for pre in lesson.prerequisites.all %}<li class="flex items-center gap-1.5">{% include "components/icon.html" with name="check" class="h-4 w-4" stroke="2.2" %}Requires: <a href="{{ pre.get_absolute_url }}">{{ pre.title }}</a></li>{% endfor %}
+      </ul>
+
+      {% if lesson.objectives_list %}
+      <section id="objectives" data-toc="Learning objectives" class="mt-7 scroll-mt-24 rounded-card border border-surface-border bg-surface-bg p-5 nav:bg-white" x-data="{ key: 'objectives-{{ lesson.pk }}', done: [] }"
+               x-init="try { done = JSON.parse(localStorage.getItem(key) || '[]') } catch (e) {}" @change="try { localStorage.setItem(key, JSON.stringify(done)) } catch (e) {}">
+        <h2 class="flex items-center gap-2 text-sm font-semibold text-ink-heading">{% include "components/icon.html" with name="target" class="h-[18px] w-[18px] text-primary" %}By the end of this lesson you will be able to</h2>
+        <ul class="mt-3 flex flex-col gap-2.5">
+          {% for objective in lesson.objectives_list %}
+          <li><label class="flex cursor-pointer items-start gap-3 text-sm text-slate-700"><input type="checkbox" value="{{ forloop.counter }}" x-model="done" class="mt-0.5 h-[18px] w-[18px] rounded border-slate-300 text-success focus:ring-success-200"><span>{{ objective|inline }}</span></label></li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      <div id="lesson-body" class="lesson-prose mt-8 flex flex-col gap-6">
+        {% for block in blocks %}
+          {% include block.template_name with block=block %}
+        {% empty %}
+          <div class="rounded-card border border-dashed border-slate-300 bg-white p-8 text-center text-slate-600">The content team is preparing this lesson. Check back soon.</div>
+        {% endfor %}
+      </div>
+
+      {% if practice_set %}
+      <a href="{{ practice_set.get_absolute_url }}" class="btn-secondary mt-6">Start the full practice set · {{ practice_set.question_count }} question{{ practice_set.question_count|pluralize }} {% include "components/icon.html" with name="arrow" class="h-4 w-4" stroke="2.2" %}</a>
+      {% endif %}
+
+      <div id="complete-card" class="mt-10">{% include "lessons/_complete_card.html" %}</div>
+
+      <nav class="mt-6 grid grid-cols-2 gap-4" aria-label="Previous and next lesson">
+        {% if prev_lesson %}<a href="{{ prev_lesson.get_absolute_url }}" class="rounded-card border border-surface-border bg-white p-4 text-ink-heading hover:border-primary-300 hover:text-ink-heading"><span class="flex items-center gap-1 text-xs text-ink-muted">{% include "components/icon.html" with name="chevron-left" class="h-3.5 w-3.5" stroke="2" %}Previous</span><span class="mt-1 block text-sm font-semibold">{{ prev_lesson.title }}</span></a>{% else %}<span></span>{% endif %}
+        {% if next_lesson %}<a href="{{ next_lesson.get_absolute_url }}" class="rounded-card border border-surface-border bg-white p-4 text-right text-ink-heading hover:border-primary-300 hover:text-ink-heading"><span class="flex items-center justify-end gap-1 text-xs text-ink-muted">Next{% include "components/icon.html" with name="chevron-right" class="h-3.5 w-3.5" stroke="2" %}</span><span class="mt-1 block text-sm font-semibold">{{ next_lesson.title }}</span></a>{% endif %}
+      </nav>
+    </article>
+  </main>
+
+  {# ---------- Right rail ---------- #}
+  <aside class="sticky top-[67px] hidden h-[calc(100vh-67px)] w-rail shrink-0 overflow-y-auto py-10 2xl:block lg:block" aria-label="On this page">
+    {% if toc %}
+    <div class="text-[11px] font-semibold uppercase tracking-[.08em] text-ink-muted">On this page</div>
+    <nav class="mt-3 flex flex-col border-l border-surface-border text-[13px]">
+      {% for item in toc %}
+      <a href="#{{ item.anchor }}" class="-ml-px border-l-2 py-1.5 pl-3" :class="activeAnchor === '{{ item.anchor }}' ? 'border-primary bg-primary-50 font-semibold text-primary-700' : 'border-transparent text-slate-600 hover:text-navy'">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+    {% endif %}
+    {% if lesson.key_concepts_list %}
+    <div class="mt-8 rounded-card border border-surface-border bg-white p-4">
+      <div class="text-[13px] font-semibold">Key concepts</div>
+      <div class="mt-3 flex flex-wrap gap-1.5">{% for c in lesson.key_concepts_list %}<span class="rounded-md border border-surface-border px-2 py-1 text-xs text-slate-700">{{ c }}</span>{% endfor %}</div>
+    </div>
+    {% endif %}
+    {% if related or course.resources.exists %}
+    <div class="mt-8">
+      <div class="text-[13px] font-semibold">Related resources</div>
+      <ul class="mt-3 flex flex-col gap-3 text-[13px]">
+        {% for item in related %}<li><a href="{{ item.get_absolute_url }}" class="flex items-start gap-2.5 text-slate-700 hover:text-navy"><span class="icon-tile h-8 w-8 accent-blue">{% if item.lesson_type == 'video' %}{% include "components/icon.html" with name="video" class="h-4 w-4" %}{% else %}{% include "components/icon.html" with name="progress" class="h-4 w-4" %}{% endif %}</span><span>{{ item.get_lesson_type_display }}: {{ item.title }}</span></a></li>{% endfor %}
+        {% for r in course.resources.all %}<li><a href="{{ r.href }}" class="flex items-start gap-2.5 text-slate-700 hover:text-navy"><span class="icon-tile h-8 w-8 accent-slate">{% include "components/icon.html" with name="file" class="h-4 w-4" %}</span><span>{{ r.title }}{% if r.detail %} ({{ r.detail }}){% endif %}</span></a></li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </aside>
+</div>
+{% endblock %}
