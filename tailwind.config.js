@@ -11,7 +11,8 @@ module.exports = {
     "./node_modules/flowbite/**/*.js",
   ],
   // Classes assembled in templates from model values (e.g. accent-{{ subject.accent }}).
-  safelist: ["accent-blue", "accent-emerald", "accent-amber", "accent-slate"],
+  safelist: ["accent-blue", "accent-emerald", "accent-amber", "accent-slate",
+    "session-blue", "session-emerald", "session-slate", "session-violet", "session-rose", "session-cyan", "session-amber", "session-plan"],
   theme: {
     extend: {
       colors: {

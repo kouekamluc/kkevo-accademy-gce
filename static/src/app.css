@@ -27,6 +27,15 @@
   .chip-toggle { @apply flex h-12 items-center justify-center whitespace-nowrap rounded-full border-[1.5px] border-slate-300 bg-white px-5 text-[15px] font-semibold text-slate-700 transition peer-checked:border-2 peer-checked:border-primary peer-checked:bg-primary-50 peer-checked:text-primary-700 peer-focus-visible:ring-4 peer-focus-visible:ring-primary-300 nav:h-[42px] nav:rounded-input nav:border-0 nav:bg-transparent nav:px-3 nav:font-medium nav:text-slate-600 nav:peer-checked:border-0 nav:peer-checked:bg-white nav:peer-checked:font-semibold nav:peer-checked:text-ink-heading nav:peer-checked:shadow-card; }
   .progress-track { @apply h-1.5 overflow-hidden rounded-full bg-surface-border; }
   .progress-fill { @apply h-full rounded-full bg-success; }
+  .session-card { @apply absolute inset-x-1 overflow-hidden rounded-lg px-2.5 py-1.5 text-left text-[13px] leading-snug transition hover:brightness-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary; }
+  .session-blue { @apply bg-primary-100 text-primary-700; }
+  .session-emerald { @apply bg-success-200/60 text-success-text; }
+  .session-slate { @apply bg-slate-200 text-navy; }
+  .session-violet { @apply bg-violet-100 text-violet-800; }
+  .session-rose { @apply bg-rose-100 text-rose-800; }
+  .session-cyan { @apply bg-cyan-100 text-cyan-800; }
+  .session-amber { @apply bg-warning-50 text-warning-text; }
+  .session-plan { @apply border border-dashed border-slate-400 bg-white text-navy; }
   .form-label { @apply text-sm font-semibold text-ink-heading; }
   .form-input { @apply block min-h-touch w-full rounded-input border border-slate-300 bg-white px-3.5 text-[15px] text-ink-heading placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary-100; }
   .form-input-error { @apply border-danger-text focus:border-danger-text focus:ring-danger-50; }

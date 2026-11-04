@@ -1,0 +1,127 @@
+{% extends "layouts/app.html" %}
+{% block title %}Study planner — GCE Learning Academy{% endblock %}
+{% block content %}
+<div class="flex flex-col gap-6 nav:mt-2" x-data="{ adding: false, selected: null }" @keydown.escape.window="adding = false; selected = null">
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">Study Planner</h1>
+      <p class="mt-1 text-base text-ink-muted">Plan short, regular sessions. Consistency beats cramming.</p>
+    </div>
+    <button type="button" class="btn-primary h-12 px-6 text-base" @click="adding = true">{% include "components/icon.html" with name="plus" class="h-5 w-5" stroke="2.2" %}Add Study Session</button>
+  </div>
+
+  <div class="grid gap-6 xl:grid-cols-[1fr_420px]">
+    <section class="card overflow-hidden" aria-labelledby="week-heading">
+      <div class="flex flex-wrap items-center gap-3 border-b border-surface-border px-5 py-4">
+        <a href="?view={{ view }}&date={{ prev }}" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border text-navy" aria-label="Previous {{ view }}">{% include "components/icon.html" with name="chevron-left" class="h-5 w-5" stroke="2" %}</a>
+        <a href="?view={{ view }}&date={{ next }}" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border text-navy" aria-label="Next {{ view }}">{% include "components/icon.html" with name="chevron-right" class="h-5 w-5" stroke="2" %}</a>
+        <h2 id="week-heading" class="text-xl font-bold">{% if view == "day" %}{{ anchor|date:"l j F Y" }}{% else %}{{ days.0|date:"j" }} – {{ days.6|date:"j F Y" }}{% endif %}</h2>
+        <span class="flex-1"></span>
+        <a href="?view={{ view }}&date={{ today.isoformat }}" class="btn-secondary h-11">Today</a>
+        <div class="flex rounded-btn bg-slate-100 p-[3px]">
+          <a href="?view=day&date={{ anchor.isoformat }}" class="flex h-10 items-center rounded-lg px-4 text-[15px] {% if view == 'day' %}bg-white font-semibold shadow-card{% else %}text-slate-600{% endif %}">Day</a>
+          <a href="?view=week&date={{ anchor.isoformat }}" class="flex h-10 items-center rounded-lg px-4 text-[15px] {% if view == 'week' %}bg-white font-semibold shadow-card{% else %}text-slate-600{% endif %}">Week</a>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <div class="{% if view == 'week' %}min-w-[760px]{% endif %}">
+          <div class="grid border-b border-surface-border" style="grid-template-columns: 64px repeat({{ columns|length }}, minmax(0, 1fr))">
+            <span></span>
+            {% for c in columns %}<a href="?view=day&date={{ c.date.isoformat }}" class="flex flex-col items-center py-3 text-ink-heading hover:text-navy {% if c.is_today %}bg-primary-50{% endif %}"><span class="text-sm {% if c.is_today %}font-semibold text-primary-700{% else %}text-slate-600{% endif %}">{{ c.label }}</span><span class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full text-lg font-bold {% if c.is_today %}bg-primary text-white{% endif %}">{{ c.date.day }}</span></a>{% endfor %}
+          </div>
+          <div class="relative grid" style="grid-template-columns: 64px repeat({{ columns|length }}, minmax(0, 1fr)); height: {{ grid_height }}px">
+            <div class="relative">{% for h in hours %}<span class="absolute right-3 -translate-y-1/2 text-xs text-ink-muted" style="top: {% widthratio forloop.counter0 1 hour_px %}px">{{ h|stringformat:"02d" }}:00</span>{% endfor %}</div>
+            {% for c in columns %}
+            <div class="relative border-l border-surface-border {% if c.is_today %}bg-primary-50/50{% endif %}">
+              {% for h in hours %}<div class="absolute inset-x-0 border-t border-surface-border" style="top: {% widthratio forloop.counter0 1 hour_px %}px"></div>{% endfor %}
+              {% if c.is_today and now_top is not None %}<div class="absolute inset-x-0 z-10 border-t-2 border-red-500" style="top: {{ now_top }}px"><span class="absolute -left-1 -top-[5px] h-2 w-2 rounded-full bg-red-500"></span></div>{% endif %}
+              {% for item in c.items %}
+              <button type="button" @click="selected = {{ item.session.pk }}" class="session-card session-{{ item.colour }} {% if item.session.is_completed %}opacity-60{% endif %} {% if item.is_now %}ring-2 ring-warning{% endif %}" style="top: {{ item.top }}px; height: {{ item.height }}px" aria-label="{{ item.session.title }}, {{ item.time }}, {{ item.session.duration_minutes }} minutes{% if item.session.is_completed %}, done{% endif %}">
+                <span class="block truncate font-semibold">{% if item.session.is_completed %}✓ {% endif %}{% if item.session.subject %}{{ item.session.subject.name }}{% else %}{{ item.session.get_kind_display }}{% endif %}{% if item.is_now %} · now{% endif %}</span>
+                <span class="block">{{ item.session.title }}</span>
+              </button>
+              {% endfor %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-x-5 gap-y-2 border-t border-surface-border px-5 py-3.5 text-sm text-slate-600">
+        {% for l in legend %}<span class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-sm session-{{ l.colour }}"></span>{{ l.subject.name }}</span>{% endfor %}
+        <span class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-sm session-amber"></span>Happening now</span>
+        <span>Faded = completed</span>
+      </div>
+    </section>
+
+    <div class="flex flex-col gap-6">
+      <section class="card p-6" aria-labelledby="today-heading">
+        <div class="flex items-baseline justify-between"><h2 id="today-heading" class="text-xl font-bold">Today’s study tasks</h2><span class="text-sm text-ink-muted">{{ today|date:"D j M" }}</span></div>
+        {% if todays %}
+        <div class="mt-3 flex items-center gap-3"><div class="progress-track h-2 flex-1"><div class="progress-fill" style="width: {% widthratio todays_done todays|length 100 %}%"></div></div><span class="text-sm font-semibold">{{ todays_done }} of {{ todays|length }}</span></div>
+        <ul class="mt-3 divide-y divide-surface-border">
+          {% for s in todays %}
+          <li class="flex items-center gap-2 py-2.5">
+            {% include "learning/_session_check.html" with session=s %}
+            <div class="min-w-0 flex-1"><div class="font-semibold {% if s.is_completed %}text-ink-muted line-through{% endif %}">{{ s.title }}</div><div class="text-sm text-ink-muted">{% if s.subject %}{{ s.subject.name }} · {% endif %}{{ s.starts_at|time:"H:i" }} · {{ s.duration_minutes }} min</div></div>
+            {% if s.lesson and not s.is_completed %}<a href="{{ s.lesson.get_absolute_url }}" class="text-[15px] font-semibold">Start</a>{% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}<p class="mt-3 text-sm text-ink-muted">Nothing planned today. <button type="button" class="font-semibold text-primary" @click="adding = true">Add a session</button></p>{% endif %}
+      </section>
+
+      <section class="card p-6" aria-labelledby="thisweek-heading">
+        <h2 id="thisweek-heading" class="text-xl font-bold">This week</h2>
+        <p class="mt-2"><span class="text-[30px] font-bold">{{ week_minutes }}</span> <span class="text-ink-muted">done of {{ week_goal }} goal</span></p>
+        <div class="progress-track mt-2 h-2"><div class="h-full rounded-full bg-primary" style="width: {{ week_percent }}%"></div></div>
+        <dl class="mt-4 grid grid-cols-[1fr_auto] gap-y-2 text-[15px]">
+          {% for name, v in per_subject %}<dt>{{ name }}</dt><dd class="text-slate-600">{{ v.count }} session{{ v.count|pluralize }} · {% widthratio v.minutes 1 1 %} min</dd>{% empty %}<dt class="col-span-2 text-sm text-ink-muted">No sessions planned this week.</dt>{% endfor %}
+        </dl>
+      </section>
+
+      <section class="rounded-2xl border border-warning-200 bg-warning-50 p-6" aria-labelledby="spaced-heading">
+        <h2 id="spaced-heading" class="text-xl font-bold text-warning-text">Upcoming revision</h2>
+        <p class="mt-1 text-[15px] text-warning-text">Spaced reviews of topics you found hard.</p>
+        <ul class="mt-4 flex flex-col gap-3">
+          {% for r in revision %}
+          <li><a href="{% if r.entry.practice_set.lesson %}{{ r.entry.practice_set.lesson.get_absolute_url }}{% else %}{{ r.entry.practice_set.get_absolute_url }}{% endif %}" class="flex items-start justify-between rounded-xl bg-white px-4 py-3 text-ink-heading hover:text-ink-heading">
+            <span><span class="block font-semibold">{{ r.entry.topic.title }}</span><span class="block text-sm text-ink-muted">{{ r.entry.subject.name }}</span></span>
+            <span class="text-[15px] {% if r.label == 'Tonight' %}font-semibold text-warning-text{% else %}text-slate-600{% endif %}">{{ r.label }}</span>
+          </a></li>
+          {% empty %}<li class="text-sm text-warning-text">No topics need revision right now.</li>{% endfor %}
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  {# Session details dialog #}
+  {% for c in columns %}{% for item in c.items %}
+  <div x-show="selected === {{ item.session.pk }}" x-cloak class="fixed inset-0 z-50 flex items-end justify-center bg-navy/40 p-4 sm:items-center" @click.self="selected = null" role="dialog" aria-modal="true" aria-labelledby="session-{{ item.session.pk }}-title">
+    <div class="w-full max-w-md rounded-panel bg-white p-6 shadow-raised">
+      <div class="text-sm text-ink-muted">{{ item.session.get_kind_display }}{% if item.session.subject %} · {{ item.session.subject.name }}{% endif %}</div>
+      <h3 id="session-{{ item.session.pk }}-title" class="mt-1 text-xl font-bold">{{ item.session.title }}</h3>
+      <p class="mt-1 text-[15px] text-slate-600">{{ c.date|date:"l j F" }} · {{ item.time }} · {{ item.session.duration_minutes }} min</p>
+      <div class="mt-5 flex flex-wrap gap-2">
+        {% if item.session.lesson %}<a href="{{ item.session.lesson.get_absolute_url }}" class="btn-primary">Open lesson</a>{% endif %}
+        <form method="post" action="{% url 'learning:session_toggle' item.session.pk %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}"><button type="submit" class="btn-secondary">{% if item.session.is_completed %}Mark not done{% else %}Mark done{% endif %}</button></form>
+        <form method="post" action="{% url 'learning:session_delete' item.session.pk %}">{% csrf_token %}<button type="submit" class="btn border border-danger-200 text-danger-text hover:bg-danger-50">Delete</button></form>
+        <button type="button" class="btn ml-auto text-slate-600" @click="selected = null">Close</button>
+      </div>
+    </div>
+  </div>
+  {% endfor %}{% endfor %}
+
+  {# Add session dialog #}
+  <div x-show="adding" x-cloak class="fixed inset-0 z-50 flex items-end justify-center bg-navy/40 p-4 sm:items-center" @click.self="adding = false" role="dialog" aria-modal="true" aria-labelledby="add-title">
+    <form method="post" action="{% url 'learning:session_create' %}" class="flex max-h-[90vh] w-full max-w-lg flex-col gap-4 overflow-y-auto rounded-panel bg-white p-6 shadow-raised">
+      {% csrf_token %}
+      <h3 id="add-title" class="text-xl font-bold">Add a study session</h3>
+      {% include "components/field.html" with field=form.title %}
+      <div class="grid gap-4 sm:grid-cols-2">{% include "components/field.html" with field=form.subject %}{% include "components/field.html" with field=form.kind %}</div>
+      {% include "components/field.html" with field=form.lesson %}
+      <div class="grid gap-4 sm:grid-cols-3">{% include "components/field.html" with field=form.date %}{% include "components/field.html" with field=form.start_time %}{% include "components/field.html" with field=form.duration_minutes %}</div>
+      <div class="flex justify-end gap-2"><button type="button" class="btn-secondary" @click="adding = false">Cancel</button><button type="submit" class="btn-primary">Add session</button></div>
+    </form>
+  </div>
+</div>
+{% endblock %}
