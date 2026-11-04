@@ -1,9 +1,10 @@
 from django.contrib import admin
+from unfold.admin import ModelAdmin, StackedInline, TabularInline
 
 from .models import Attempt, Choice, MistakeCard, PracticeSet, Question, ReviewSession
 
 
-class QuestionInline(admin.StackedInline):
+class QuestionInline(StackedInline):
     model = Question
     extra = 0
     fields = (("order", "kind", "concept", "skill"), "prompt", "hint", "feedback")
@@ -11,7 +12,7 @@ class QuestionInline(admin.StackedInline):
 
 
 @admin.register(PracticeSet)
-class PracticeSetAdmin(admin.ModelAdmin):
+class PracticeSetAdmin(ModelAdmin):
     list_display = ("title", "topic", "status", "order")
     list_editable = ("status", "order")
     list_filter = ("status", "topic__module__course__offering__level", "topic__module__course")
@@ -21,7 +22,7 @@ class PracticeSetAdmin(admin.ModelAdmin):
     inlines = [QuestionInline]
 
 
-class ChoiceInline(admin.TabularInline):
+class ChoiceInline(TabularInline):
     model = Choice
     extra = 4
     max_num = 8
@@ -29,7 +30,7 @@ class ChoiceInline(admin.TabularInline):
 
 
 @admin.register(Question)
-class QuestionAdmin(admin.ModelAdmin):
+class QuestionAdmin(ModelAdmin):
     list_display = ("__str__", "practice_set", "kind", "concept", "has_hint", "order")
     list_filter = ("kind", "practice_set__topic__module__course")
     list_select_related = ("practice_set",)
@@ -52,7 +53,7 @@ class QuestionAdmin(admin.ModelAdmin):
 
 
 @admin.register(Attempt)
-class AttemptAdmin(admin.ModelAdmin):
+class AttemptAdmin(ModelAdmin):
     list_display = ("user", "practice_set", "mode", "correct_count", "total", "completed_at")
     list_filter = ("mode",)
     list_select_related = ("user", "practice_set")
@@ -62,7 +63,7 @@ class AttemptAdmin(admin.ModelAdmin):
 
 
 @admin.register(MistakeCard)
-class MistakeCardAdmin(admin.ModelAdmin):
+class MistakeCardAdmin(ModelAdmin):
     list_display = ("user", "question", "step", "due_on", "reviews", "retired_at")
     list_filter = ("step",)
     list_select_related = ("user", "question")
@@ -71,7 +72,7 @@ class MistakeCardAdmin(admin.ModelAdmin):
 
 
 @admin.register(ReviewSession)
-class ReviewSessionAdmin(admin.ModelAdmin):
+class ReviewSessionAdmin(ModelAdmin):
     list_display = ("user", "started_at", "completed_at")
     list_select_related = ("user",)
     search_fields = ("user__email",)

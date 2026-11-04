@@ -52,5 +52,16 @@ def navigation(request):
         "nav_levels": SimpleLazyObject(lambda: list(AcademicLevel.objects.filter(is_active=True))),
         "current_profile": SimpleLazyObject(current_profile),
         "sidebar_items": SimpleLazyObject(lambda: _resolve(SIDEBAR)),
+        "staff_nav": SimpleLazyObject(lambda: _staff_nav(request)),
         "bottom_items": SimpleLazyObject(lambda: _resolve(BOTTOM_BAR)),
     }
+
+
+def _staff_nav(request):
+    user = getattr(request, "user", None)
+    if user is None or not user.is_authenticated or not user.is_staff:
+        return []
+    from .staff_nav import staff_navigation
+
+    return staff_navigation(request)
+

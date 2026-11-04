@@ -1,10 +1,11 @@
 from django.contrib import admin
+from unfold.admin import ModelAdmin
 from django.utils.html import format_html
 
 from .models import LessonDraft, LessonEvent, LessonRevision, MediaAsset
 
 
-class ReadOnlyAdmin(admin.ModelAdmin):
+class ReadOnlyAdmin(ModelAdmin):
     """History must not be rewritten: these records are created by the studio only."""
 
     def has_add_permission(self, request):
@@ -54,7 +55,7 @@ class LessonDraftAdmin(ReadOnlyAdmin):
 
 
 @admin.register(MediaAsset)
-class MediaAssetAdmin(admin.ModelAdmin):
+class MediaAssetAdmin(ModelAdmin):
     list_display = ("title", "content_type", "size", "uploaded_by", "created_at")
     search_fields = ("title", "alt_text")
     list_select_related = ("uploaded_by",)

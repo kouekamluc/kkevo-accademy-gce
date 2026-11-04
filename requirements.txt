@@ -5,3 +5,4 @@ django-htmx>=1.26
 whitenoise>=6.11
 pytest>=8.3
 pytest-django>=4.9
+django-unfold>=0.110,<0.111

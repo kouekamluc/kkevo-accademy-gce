@@ -26,6 +26,7 @@ ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS")
 CSRF_TRUSTED_ORIGINS = env("DJANGO_CSRF_TRUSTED_ORIGINS")
 
 INSTALLED_APPS = [
+    "unfold",  # admin theme; must come before django.contrib.admin
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -162,3 +163,40 @@ TRUSTED_PROXY_COUNT = env.int("DJANGO_TRUSTED_PROXY_COUNT", default=0)
 
 # "Keep me signed in": ticked = this many seconds; unticked = until the browser closes.
 SESSION_COOKIE_AGE = env.int("DJANGO_SESSION_COOKIE_AGE", default=60 * 60 * 24 * 30)
+
+
+# ---------------------------------------------------------------------------
+# Staff workspace: Django admin themed with Unfold to match the app design.
+# The sidebar is replaced by templates/staff/_sidebar.html (shared with the
+# content studio, driven by apps/core/staff_nav.py).
+# ---------------------------------------------------------------------------
+from django.templatetags.static import static  # noqa: E402
+from django.urls import reverse_lazy  # noqa: E402
+
+UNFOLD = {
+    "SITE_TITLE": "GCE Learning Academy",
+    "SITE_HEADER": "Staff workspace",
+    "SITE_URL": reverse_lazy("dashboard:home"),
+    "THEME": "light",  # the design system has no dark mode
+    "BORDER_RADIUS": "10px",  # --r-btn
+    "SHOW_HISTORY": True,
+    "SHOW_VIEW_ON_SITE": True,
+    "STYLES": [lambda request: static("css/staff.css")],
+    "COLORS": {
+        # Design tokens (tailwind.config.js): slate neutrals and the "learning blue" primary
+        "base": {
+            "50": "#F8FAFC", "100": "#F1F5F9", "200": "#E2E8F0", "300": "#CBD5E1", "400": "#94A3B8",
+            "500": "#64748B", "600": "#475569", "700": "#334155", "800": "#1E293B", "900": "#0F172A", "950": "#020617",
+        },
+        "primary": {
+            "50": "#EFF6FF", "100": "#DBEAFE", "200": "#BFDBFE", "300": "#93C5FD", "400": "#60A5FA",
+            "500": "#3B82F6", "600": "#2563EB", "700": "#1D4ED8", "800": "#1E40AF", "900": "#1E3A8A", "950": "#172554",
+        },
+        "font": {
+            "subtle-light": "#64748B", "subtle-dark": "#94A3B8",
+            "default-light": "#1E293B", "default-dark": "#CBD5E1",
+            "important-light": "#0F172A", "important-dark": "#F1F5F9",
+        },
+    },
+}
+

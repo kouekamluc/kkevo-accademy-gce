@@ -34,3 +34,22 @@ def landing(request):
 def planned(request, page, **kwargs):
     """Placeholder for pages delivered in a later milestone."""
     return render(request, "core/planned.html", {"page": page})
+
+
+def staff_login(request):
+    """The admin's login page redirects to the app's single login page (rate-limited, styled)."""
+    from urllib.parse import urlencode
+
+    from django.core.exceptions import PermissionDenied
+    from django.shortcuts import redirect
+    from django.urls import reverse
+
+    next_url = request.GET.get("next") or reverse("studio:overview")
+    if not next_url.startswith("/") or next_url.startswith("//"):
+        next_url = reverse("studio:overview")
+    if request.user.is_authenticated:
+        if request.user.is_staff:
+            return redirect(next_url)
+        raise PermissionDenied("This area is for staff only.")
+    return redirect(f"{reverse('accounts:login')}?{urlencode({'next': next_url})}")
+

@@ -1,23 +1,26 @@
 from django.contrib import admin
+from django.shortcuts import redirect
+from unfold.decorators import action
+from unfold.admin import ModelAdmin, StackedInline, TabularInline
 
 from .models import Course, CourseResource, Lesson, LessonBlock, Module, Topic
 
 
-class ModuleInline(admin.TabularInline):
+class ModuleInline(TabularInline):
     model = Module
     extra = 0
     fields = ("order", "title", "summary")
     show_change_link = True
 
 
-class CourseResourceInline(admin.TabularInline):
+class CourseResourceInline(TabularInline):
     model = CourseResource
     extra = 0
     fields = ("order", "title", "kind", "url", "file", "detail")
 
 
 @admin.register(Course)
-class CourseAdmin(admin.ModelAdmin):
+class CourseAdmin(ModelAdmin):
     list_display = ("title", "subject_name", "level_name", "status", "order", "updated_at")
     list_editable = ("status", "order")
     list_filter = ("status", "offering__level", "offering__pathways", "offering__subject")
@@ -36,7 +39,7 @@ class CourseAdmin(admin.ModelAdmin):
         return obj.offering.level.name
 
 
-class TopicInline(admin.TabularInline):
+class TopicInline(TabularInline):
     model = Topic
     extra = 0
     fields = ("order", "title", "summary")
@@ -44,7 +47,7 @@ class TopicInline(admin.TabularInline):
 
 
 @admin.register(Module)
-class ModuleAdmin(admin.ModelAdmin):
+class ModuleAdmin(ModelAdmin):
     list_display = ("title", "course", "order")
     list_editable = ("order",)
     list_filter = ("course__offering__level", "course__offering__subject", "course")
@@ -54,7 +57,7 @@ class ModuleAdmin(admin.ModelAdmin):
     inlines = [TopicInline]
 
 
-class LessonInline(admin.TabularInline):
+class LessonInline(TabularInline):
     model = Lesson
     extra = 0
     fields = ("order", "title", "slug", "lesson_type", "estimated_minutes", "status")
@@ -63,7 +66,7 @@ class LessonInline(admin.TabularInline):
 
 
 @admin.register(Topic)
-class TopicAdmin(admin.ModelAdmin):
+class TopicAdmin(ModelAdmin):
     list_display = ("title", "module", "course_title", "order")
     list_editable = ("order",)
     list_filter = ("module__course__offering__level", "module__course")
@@ -77,7 +80,7 @@ class TopicAdmin(admin.ModelAdmin):
         return obj.module.course.title
 
 
-class LessonBlockInline(admin.StackedInline):
+class LessonBlockInline(StackedInline):
     model = LessonBlock
     extra = 0
     fields = (("order", "block_type"), "title", "body", ("media_url", "alt_text"), "data")
@@ -99,7 +102,7 @@ class LessonBlockInline(admin.StackedInline):
 
 
 @admin.register(Lesson)
-class LessonAdmin(admin.ModelAdmin):
+class LessonAdmin(ModelAdmin):
     list_display = ("title", "topic", "lesson_type", "estimated_minutes", "status", "author", "order")
     list_editable = ("status", "order")
     list_filter = ("status", "lesson_type", "topic__module__course__offering__level", "topic__module__course")
@@ -113,3 +116,10 @@ class LessonAdmin(admin.ModelAdmin):
         ("Workflow", {"fields": ("status", "author", "reviewer")}),
     )
     inlines = [LessonBlockInline]
+    # Lesson content is written in the studio; these buttons keep staff in one workflow.
+    actions_detail = ["edit_in_studio"]
+    actions_row = ["edit_in_studio"]
+
+    @action(description="Edit in studio", icon="edit_note", url_path="edit-in-studio")
+    def edit_in_studio(self, request, object_id):
+        return redirect("studio:edit", pk=object_id)

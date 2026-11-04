@@ -1,6 +1,9 @@
 from django.contrib import admin
+from django.contrib.auth.admin import GroupAdmin as BaseGroupAdmin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from django.contrib.auth.forms import UserChangeForm, UserCreationForm
+from django.contrib.auth.models import Group
+from unfold.admin import ModelAdmin, StackedInline
+from unfold.forms import AdminPasswordChangeForm, UserChangeForm, UserCreationForm
 
 from .models import StudentProfile, User
 
@@ -17,16 +20,17 @@ class AdminUserChangeForm(UserChangeForm):
         fields = "__all__"
 
 
-class StudentProfileInline(admin.StackedInline):
+class StudentProfileInline(StackedInline):
     model = StudentProfile
     can_delete = False
     fields = ("level", "pathway", "low_data_mode", "onboarded_at")
 
 
 @admin.register(User)
-class UserAdmin(BaseUserAdmin):
+class UserAdmin(BaseUserAdmin, ModelAdmin):
     form = AdminUserChangeForm
     add_form = AdminUserCreationForm
+    change_password_form = AdminPasswordChangeForm
     inlines = [StudentProfileInline]
     ordering = ("email",)
     list_display = ("email", "first_name", "last_name", "is_staff", "is_active", "date_joined")
@@ -48,10 +52,20 @@ class UserAdmin(BaseUserAdmin):
 
 
 @admin.register(StudentProfile)
-class StudentProfileAdmin(admin.ModelAdmin):
+class StudentProfileAdmin(ModelAdmin):
     list_display = ("user", "level", "pathway", "low_data_mode", "onboarded_at")
     list_filter = ("level", "pathway", "low_data_mode")
     list_select_related = ("user", "level", "pathway")
     search_fields = ("user__email", "user__first_name", "user__last_name")
     autocomplete_fields = ("user",)
     readonly_fields = ("updated_at",)
+
+
+# Staff roles: Django's Group admin, re-registered with the Unfold theme.
+admin.site.unregister(Group)
+
+
+@admin.register(Group)
+class GroupAdmin(BaseGroupAdmin, ModelAdmin):
+    pass
+

@@ -1,4 +1,5 @@
 from django.contrib import admin
+from unfold.admin import ModelAdmin, TabularInline
 
 from .models import (
     AcademicLevel,
@@ -11,7 +12,7 @@ from .models import (
 
 
 @admin.register(AcademicLevel)
-class AcademicLevelAdmin(admin.ModelAdmin):
+class AcademicLevelAdmin(ModelAdmin):
     list_display = ("name", "code", "exam_level", "order", "is_active")
     list_editable = ("order", "is_active")
     list_filter = ("exam_level", "is_active")
@@ -20,14 +21,14 @@ class AcademicLevelAdmin(admin.ModelAdmin):
 
 
 @admin.register(AcademicPathway)
-class AcademicPathwayAdmin(admin.ModelAdmin):
+class AcademicPathwayAdmin(ModelAdmin):
     list_display = ("name", "order", "is_active")
     list_editable = ("order", "is_active")
     search_fields = ("name",)
     prepopulated_fields = {"slug": ("name",)}
 
 
-class SubjectOfferingInline(admin.TabularInline):
+class SubjectOfferingInline(TabularInline):
     model = SubjectOffering
     extra = 0
     fields = ("level", "pathways", "is_active")
@@ -35,7 +36,7 @@ class SubjectOfferingInline(admin.TabularInline):
 
 
 @admin.register(Subject)
-class SubjectAdmin(admin.ModelAdmin):
+class SubjectAdmin(ModelAdmin):
     list_display = ("name", "category", "icon_text", "accent", "is_featured", "order", "is_active")
     list_editable = ("is_featured", "order", "is_active")
     list_filter = ("category", "accent", "is_featured", "is_active", "offerings__level", "offerings__pathways")
@@ -45,7 +46,7 @@ class SubjectAdmin(admin.ModelAdmin):
 
 
 @admin.register(SubjectOffering)
-class SubjectOfferingAdmin(admin.ModelAdmin):
+class SubjectOfferingAdmin(ModelAdmin):
     list_display = ("__str__", "subject", "level", "pathway_list", "is_active")
     list_filter = ("level", "pathways", "is_active")
     list_select_related = ("subject", "level")
@@ -61,7 +62,7 @@ class SubjectOfferingAdmin(admin.ModelAdmin):
         return ", ".join(p.name for p in obj.pathways.all())
 
 
-class CurriculumReferenceInline(admin.TabularInline):
+class CurriculumReferenceInline(TabularInline):
     model = CurriculumReference
     extra = 0
     fields = ("code", "title", "parent", "order")
@@ -69,7 +70,7 @@ class CurriculumReferenceInline(admin.TabularInline):
 
 
 @admin.register(Syllabus)
-class SyllabusAdmin(admin.ModelAdmin):
+class SyllabusAdmin(ModelAdmin):
     list_display = ("__str__", "version", "is_official", "status", "effective_from", "effective_to")
     list_filter = ("status", "is_official", "offering__level", "offering__subject")
     list_select_related = ("offering__subject", "offering__level")
@@ -79,7 +80,7 @@ class SyllabusAdmin(admin.ModelAdmin):
 
 
 @admin.register(CurriculumReference)
-class CurriculumReferenceAdmin(admin.ModelAdmin):
+class CurriculumReferenceAdmin(ModelAdmin):
     list_display = ("code", "title", "syllabus", "parent", "order")
     list_filter = ("syllabus__offering__level", "syllabus__offering__subject", "syllabus")
     list_select_related = ("syllabus__offering__subject", "syllabus__offering__level", "parent")
