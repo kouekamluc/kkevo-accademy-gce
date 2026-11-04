@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newton’s Second Law mobile — Interactive lesson</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=STIX+Two+Text:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0F172A;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#2563EB;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.m{font-family:'STIX Two Text',Georgia,serif;white-space:nowrap}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:10px;border-radius:999px;outline:none;margin:0}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:32px;height:32px;border-radius:50%;background:#FFFFFF;border:3px solid #2563EB;box-shadow:0 2px 8px rgba(37,99,235,.35)}
+input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:#FFFFFF;border:3px solid #2563EB}
+.mass input[type=range]::-webkit-slider-thumb{border-color:#102A43}
+.stp{width:44px;height:44px;border-radius:10px;border:1px solid #CBD5E1;background:#FFFFFF;font-size:20px;font-weight:600;color:#102A43;display:flex;align-items:center;justify-content:center;flex:none}
+</style>
+<style>html{background:#CBD5E1}body{display:flex;justify-content:center;padding:24px 0}#dc-root>div{box-shadow:0 12px 40px rgba(15,23,42,.18);border-radius:28px}</style>
+</head>
+<body>
+<div id="dc-root">
+<div style="width:390px;height:1890px;background:#F8FAFC;position:relative;overflow:hidden">
+
+<header style="height:56px;background:#FFFFFF;border-bottom:1px solid #E2E8F0;display:flex;align-items:center;gap:4px;padding:0 4px 0 4px">
+<a href="02-dashboard-mobile.html" aria-label="Back" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#102A43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+<div style="flex:1;line-height:1.25"><div style="font-size:12px;color:#64748B">Physics · Step 2 of 4</div><div style="font-size:15px;font-weight:600">Newton’s Second Law</div></div>
+<div style="display:flex;gap:3px;padding-right:12px" aria-hidden="true"><span style="width:16px;height:5px;border-radius:999px;background:#10B981"></span><span style="width:16px;height:5px;border-radius:999px;background:#2563EB"></span><span style="width:16px;height:5px;border-radius:999px;background:#E2E8F0"></span><span style="width:16px;height:5px;border-radius:999px;background:#E2E8F0"></span></div>
+</header>
+
+<main style="padding:16px 16px 110px;display:flex;flex-direction:column;gap:14px">
+<div><h1 style="margin:0;font-size:24px;letter-spacing:-.02em;color:#102A43">Newton’s Second Law of Motion</h1><p style="margin:6px 0 0;font-size:15px;color:#475569;line-height:1.55">Adjust force and mass, then run the cart.</p></div>
+
+<section aria-label="Simulation" style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:18px;overflow:hidden">
+<div style="position:relative;height:210px;background:#F8FAFC">
+<div aria-hidden="true" style="position:absolute;inset:0;background-image:linear-gradient(#EEF2F6 1px,transparent 1px),linear-gradient(90deg,#EEF2F6 1px,transparent 1px);background-size:28px 28px"></div>
+<div style="position:absolute;left:12px;top:10px;display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:999px;padding:4px 10px"><span style="width:7px;height:7px;border-radius:50%;background:{{statusDot}}"></span>{{statusText}}</div>
+<div aria-hidden="true" style="position:absolute;right:16px;top:44px;bottom:56px;border-left:2px dashed #94A3B8"></div><span style="position:absolute;right:22px;top:40px;font-size:11px;color:#64748B;font-weight:600">20 m</span>
+<div style="position:absolute;left:110px;right:96px;bottom:56px;height:0">
+<div style="position:absolute;left:{{pos}}%;bottom:0;width:80px;display:flex;flex-direction:column;align-items:center">
+<div style="position:absolute;bottom:{{arrowBottom}}px;left:0;display:flex;align-items:center" aria-hidden="true"><div style="width:{{accW}}px;height:5px;background:#047857;border-radius:3px"></div><div style="width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:11px solid #047857"></div><span class="m" style="margin-left:4px;font-size:16px;color:#047857;font-weight:600;font-style:italic">a</span></div>
+<div style="position:absolute;right:80px;bottom:16px;display:flex;align-items:center" aria-hidden="true"><span class="m" style="margin-right:4px;font-size:16px;color:#1D4ED8;font-weight:600;font-style:italic">F</span><div style="width:{{forceW}}px;height:8px;background:#2563EB;border-radius:4px 0 0 4px"></div><div style="width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:13px solid #2563EB"></div></div>
+<div style="width:80px;height:{{cartH}}px;background:#102A43;border-radius:10px 10px 5px 5px;display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-weight:700;font-size:15px">{{mass}} kg</div>
+<div style="display:flex;gap:26px;margin-top:-6px" aria-hidden="true"><span style="width:20px;height:20px;border-radius:50%;background:#334E68;border:3px solid #FFFFFF;box-shadow:0 0 0 1px #CBD5E1"></span><span style="width:20px;height:20px;border-radius:50%;background:#334E68;border:3px solid #FFFFFF;box-shadow:0 0 0 1px #CBD5E1"></span></div>
+</div>
+</div>
+<div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:36px;height:20px;background:repeating-linear-gradient(135deg,#CBD5E1 0 2px,transparent 2px 9px);border-top:3px solid #64748B"></div>
+<div style="position:absolute;left:12px;right:12px;bottom:8px;display:flex;justify-content:space-between;font-size:13px;color:#334155"><span>t = <strong class="m">{{tTxt}}</strong> s</span><span>v = <strong class="m">{{vTxt}}</strong> m/s</span><span>d = <strong class="m">{{dTxt}}</strong> m</span></div>
+</div>
+
+<div style="padding:16px;display:flex;flex-direction:column;gap:18px;border-top:1px solid #E2E8F0">
+<div>
+<div style="display:flex;justify-content:space-between;align-items:baseline"><label for="mforce" style="font-size:15px;font-weight:600">Force <span class="m" style="font-style:italic">F</span></label><span style="font-size:20px;font-weight:700;color:#1D4ED8">{{force}} N</span></div>
+<div style="display:flex;align-items:center;gap:10px;margin-top:10px"><button class="stp" aria-label="Decrease force" data-on-click="{{forceDown}}">−</button><input id="mforce" type="range" min="0" max="50" step="1" value="{{force}}" data-on-change="{{onForce}}" style="background:{{forceFill}}"><button class="stp" aria-label="Increase force" data-on-click="{{forceUp}}">+</button></div>
+</div>
+<div class="mass">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><label for="mmass" style="font-size:15px;font-weight:600">Mass <span class="m" style="font-style:italic">m</span></label><span style="font-size:20px;font-weight:700;color:#102A43">{{mass}} kg</span></div>
+<div style="display:flex;align-items:center;gap:10px;margin-top:10px"><button class="stp" aria-label="Decrease mass" data-on-click="{{massDown}}">−</button><input id="mmass" type="range" min="1" max="20" step="1" value="{{mass}}" data-on-change="{{onMass}}" style="background:{{massFill}}"><button class="stp" aria-label="Increase mass" data-on-click="{{massUp}}">+</button></div>
+</div>
+<div style="display:flex;gap:10px">
+<button data-on-click="{{reset}}" style="height:48px;padding:0 16px;border-radius:12px;border:1px solid #CBD5E1;background:#FFFFFF;color:#102A43;font-weight:600;font-size:15px">Reset</button>
+<button data-on-click="{{run}}" style="flex:1;height:48px;border-radius:12px;border:0;background:#2563EB;color:#FFFFFF;font-weight:600;font-size:15px;display:flex;align-items:center;justify-content:center;gap:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>{{runLabel}}</button>
+</div>
+</div>
+</section>
+
+<section aria-live="polite" style="background:#102A43;border-radius:18px;padding:20px;color:#FFFFFF">
+<div style="display:flex;justify-content:space-between;align-items:center"><span class="m" style="font-size:40px;font-style:italic">F = ma</span><span style="text-align:right"><span style="display:block;font-size:12px;color:#6EE7B7;font-weight:600">ACCELERATION</span><span class="m" style="font-size:26px;font-weight:600">{{aTxt}} <span style="font-size:15px">m/s²</span></span></span></div>
+<div class="m" style="font-size:18px;margin-top:10px;color:#CBD5E1"><i>a</i> = {{force}} N ÷ {{mass}} kg</div>
+<p style="margin:10px 0 0;font-size:14px;color:#CBD5E1;line-height:1.55">{{insight}}</p>
+</section>
+
+<section style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:18px;padding:18px">
+<h2 style="margin:0;font-size:18px;color:#102A43">What it shows</h2>
+<p style="font-size:16px;line-height:1.7;color:#1E293B;margin:10px 0 12px">A resultant force makes an object accelerate. How much depends on force and mass:</p>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="background:#EFF6FF;border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.5"><strong style="color:#1D4ED8">Double F</strong> → double <i>a</i></div>
+<div style="background:#F1F5F9;border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.5"><strong style="color:#102A43">Double m</strong> → halve <i>a</i></div>
+</div>
+</section>
+
+<section style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:18px;padding:18px">
+<h2 style="margin:0;font-size:18px;color:#102A43">Worked example</h2>
+<p style="font-size:15px;line-height:1.6;margin:10px 0 6px">A <span class="m">60 kg</span> pushcart gets a resultant force of <span class="m">150 N</span>. Find <i>a</i>.</p>
+<div class="m" style="font-size:19px;line-height:1.9;padding:4px 0"><i>a</i> = <i>F</i> ÷ <i>m</i><br>= 150 ÷ 60<br><span style="color:#047857;font-weight:600">= 2.5 m/s²</span></div>
+</section>
+
+<section style="background:#FFFFFF;border:1px solid #E2E8F0;border-radius:18px;padding:18px">
+<div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0;font-size:18px;color:#102A43">Quick check</h2><span style="font-size:12px;color:#64748B">1 of 3</span></div>
+<p style="font-size:16px;line-height:1.55;margin:10px 0 14px">A <span class="m">4 kg</span> box is pushed with a net force of <span class="m">12 N</span>. What is its acceleration?</p>
+<div role="radiogroup" aria-label="Answer options" style="display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{options}}" as="o" hint-placeholder-count="4">
+<button role="radio" aria-checked="{{o.checked}}" data-on-click="{{o.pick}}" style="{{o.style}}"><span style="{{o.badge}}">{{o.key}}</span><span class="m" style="font-size:18px">{{o.label}}</span></button>
+</sc-for>
+</div>
+<sc-if value="{{showCorrect}}" hint-placeholder-val="{{ false }}">
+<div style="margin-top:12px;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:12px;padding:14px;font-size:14px;line-height:1.55;color:#065F46"><strong>Correct.</strong> 12 ÷ 4 = 3 m/s².</div>
+</sc-if>
+<sc-if value="{{showWrong}}" hint-placeholder-val="{{ false }}">
+<div style="margin-top:12px;background:#FFFFFF;border:1px solid #FECACA;border-radius:12px;padding:14px;font-size:14px;line-height:1.55;color:#334155"><strong style="color:#991B1B">Not quite.</strong> Divide force by mass. Try again.</div>
+</sc-if>
+</section>
+</main>
+
+<div style="position:absolute;left:0;right:0;bottom:0;background:#FFFFFF;border-top:1px solid #E2E8F0;padding:10px 16px 22px">
+<button data-on-click="{{check}}" style="width:100%;height:52px;border-radius:12px;border:0;background:{{checkBg}};color:{{checkColor}};font-weight:700;font-size:16px">{{checkLabel}}</button>
+</div>
+</div>
+</div>
+
+<script>
+/* Minimal runtime: renders the {{bindings}} of the design file in plain JavaScript. */
+class DCLogic { constructor(props){ this.props = props || {}; this.state = {}; }
+  setState(p){ Object.assign(this.state, typeof p === 'function' ? p(this.state) : p); window.__dcUpdate && window.__dcUpdate(); }
+  forceUpdate(){ window.__dcUpdate && window.__dcUpdate(); } }
+(function(){
+  const RE = /\{\{\s*([\w.$]+)\s*\}\}/g;
+  const whole = s => { const m = s.match(/^\s*\{\{\s*([\w.$]+)\s*\}\}\s*$/); return m ? m[1] : null; };
+  const get = (o, p) => p.split('.').reduce((a, k) => a == null ? undefined : a[k], o);
+  const interp = (s, sc) => s.replace(RE, (m, p) => { const v = get(sc, p); return v == null ? '' : v; });
+  function compile(root, binds){
+    const fors = [...root.querySelectorAll('sc-for')].filter(f => !f.parentElement.closest('sc-for'));
+    fors.forEach(f => { const tpl = f.innerHTML; f.innerHTML = ''; f.style.display = 'contents';
+      const listPath = whole(f.getAttribute('list')); const as = f.getAttribute('as') || 'item';
+      binds.push(sc => { const list = get(sc, listPath) || []; f.innerHTML = '';
+        list.forEach((it, i) => { const t = document.createElement('template'); t.innerHTML = tpl;
+          const local = Object.assign({}, sc, { [as]: it, $index: i }); const inner = [];
+          compile(t.content, inner); inner.forEach(b => b(local)); f.appendChild(t.content); }); }); });
+    const inFor = el => { const p = el.closest && el.closest('sc-for'); return p && fors.includes(p) && p !== el; };
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT);
+    const nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(n => {
+      if (n.nodeType === 3) { if (!n.nodeValue.includes('{{')) return; if (n.parentElement && inFor(n.parentElement)) return;
+        const orig = n.nodeValue; binds.push(sc => { n.nodeValue = interp(orig, sc); }); return; }
+      if (inFor(n) || fors.includes(n)) return;
+      if (n.tagName === 'SC-IF') { n.style.display = 'contents'; const p = whole(n.getAttribute('value'));
+        binds.push(sc => { n.style.display = get(sc, p) ? 'contents' : 'none'; }); }
+      [...n.attributes].forEach(a => {
+        if (!a.value.includes('{{') || a.name.startsWith('hint-') || (n.tagName === 'SC-IF' && a.name === 'value')) return;
+        const orig = a.value, name = a.name;
+        if (name === 'data-on-click' || name === 'data-on-change') { const p = whole(orig);
+          n.addEventListener(name === 'data-on-click' ? 'click' : 'input', e => { const f = n.__sc && get(n.__sc, p); f && f(e); });
+          binds.push(sc => { n.__sc = sc; }); return; }
+        if (name === 'value') { binds.push(sc => { const v = interp(orig, sc); if (n.value !== v) n.value = v; }); return; }
+        binds.push(sc => { n.setAttribute(name, interp(orig, sc)); });
+      });
+    });
+  }
+  window.__dcMount = function(Comp){
+    const root = document.getElementById('dc-root'); const binds = []; compile(root, binds);
+    const c = new Comp({});
+    window.__dcUpdate = () => { const v = c.renderVals(); window.__dcVals = v; binds.forEach(b => b(v)); };
+    window.__dcUpdate();
+  };
+})();
+</script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { force: 20, mass: 5, t: 0, running: false, picked: null, checked: false };
+    this.raf = null;
+  }
+  componentWillUnmount() { if (this.raf) cancelAnimationFrame(this.raf); }
+  stop(extra) {
+    if (this.raf) cancelAnimationFrame(this.raf);
+    this.raf = null;
+    this.setState(Object.assign({ running: false, t: 0 }, extra || {}));
+  }
+  clampF(v) { return Math.max(0, Math.min(50, v)); }
+  clampM(v) { return Math.max(1, Math.min(20, v)); }
+  run() {
+    const a = this.state.force / this.state.mass;
+    if (this.state.running || a <= 0) return;
+    const tEnd = Math.sqrt(40 / a);
+    const t0 = this.state.t >= tEnd - 0.001 ? 0 : this.state.t;
+    const start = performance.now() - t0 * 1000;
+    this.setState({ running: true, t: t0 });
+    const step = (now) => {
+      const t = (now - start) / 1000;
+      if (t >= tEnd) { this.raf = null; this.setState({ t: tEnd, running: false }); return; }
+      this.setState({ t: t });
+      this.raf = requestAnimationFrame(step);
+    };
+    this.raf = requestAnimationFrame(step);
+  }
+  renderVals() {
+    const F = this.state.force, m = this.state.mass, t = this.state.t;
+    const a = F / m;
+    const d = Math.min(0.5 * a * t * t, 20);
+    const v = a * t;
+    const fill = (val, min, max, col) => { const p = ((val - min) / (max - min)) * 100; return 'linear-gradient(to right,' + col + ' 0 ' + p + '%,#E2E8F0 ' + p + '% 100%)'; };
+    const done = d >= 19.999;
+    const correctKey = 'B';
+    const opts = [['A', '48 m/s²'], ['B', '3 m/s²'], ['C', '0.33 m/s²'], ['D', '16 m/s²']];
+    const picked = this.state.picked, checked = this.state.checked;
+    const options = opts.map((o) => {
+      const sel = picked === o[0];
+      let border = '1.5px solid #E2E8F0', bg = '#FFFFFF', bb = 'border:1.5px solid #CBD5E1;color:#334155;background:#FFFFFF', col = '#0F172A';
+      if (sel && !checked) { border = '2px solid #2563EB'; bg = '#EFF6FF'; bb = 'background:#2563EB;color:#FFFFFF;border:0'; }
+      if (checked && o[0] === correctKey && sel) { border = '2px solid #10B981'; bg = '#ECFDF5'; bb = 'background:#047857;color:#FFFFFF;border:0'; col = '#065F46'; }
+      if (checked && sel && o[0] !== correctKey) { border = '1.5px dashed #F87171'; bg = '#FFFFFF'; bb = 'border:1.5px solid #F87171;color:#991B1B;background:#FFFFFF'; col = '#991B1B'; }
+      return {
+        key: o[0], label: o[1], checked: sel ? 'true' : 'false',
+        style: 'min-height:56px;width:100%;display:flex;align-items:center;gap:12px;padding:0 14px;border-radius:12px;text-align:left;font-family:inherit;border:' + border + ';background:' + bg + ';color:' + col,
+        badge: 'width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none;' + bb,
+        pick: () => this.setState({ picked: o[0], checked: false })
+      };
+    });
+    let insight = 'Each newton adds ' + (1 / m).toFixed(2) + ' m/s² to this ' + m + ' kg cart.';
+    if (F === 0) insight = 'No resultant force, so no acceleration. The cart stays still.';
+    const correct = checked && picked === correctKey;
+    return {
+      force: F, mass: m,
+      aTxt: a.toFixed(2), tTxt: t.toFixed(1), vTxt: v.toFixed(1), dTxt: d.toFixed(1),
+      pos: (d / 20) * 100,
+      forceW: Math.max(6, F * 1.6),
+      accW: Math.max(0, Math.min(70, a * 8)),
+      cartH: 40 + m * 1.6,
+      arrowBottom: 52 + m * 1.6,
+      forceFill: fill(F, 0, 50, '#2563EB'),
+      massFill: fill(m, 1, 20, '#102A43'),
+      statusDot: this.state.running ? '#10B981' : (done ? '#2563EB' : '#94A3B8'),
+      statusText: this.state.running ? 'Running' : (done ? 'Reached 20 m' : 'Ready'),
+      runLabel: this.state.running ? 'Running' : (done ? 'Run again' : 'Run'),
+      insight: insight,
+      onForce: (e) => this.stop({ force: this.clampF(Number(e.target.value)) }),
+      onMass: (e) => this.stop({ mass: this.clampM(Number(e.target.value)) }),
+      forceUp: () => this.stop({ force: this.clampF(F + 1) }),
+      forceDown: () => this.stop({ force: this.clampF(F - 1) }),
+      massUp: () => this.stop({ mass: this.clampM(m + 1) }),
+      massDown: () => this.stop({ mass: this.clampM(m - 1) }),
+      reset: () => this.stop({ force: 20, mass: 5 }),
+      run: () => this.run(),
+      options: options,
+      check: () => { if (picked) this.setState({ checked: true }); },
+      checkBg: correct ? '#10B981' : (picked ? '#2563EB' : '#E2E8F0'),
+      checkColor: correct ? '#052E1C' : (picked ? '#FFFFFF' : '#64748B'),
+      checkLabel: correct ? 'Continue to step 3' : 'Check answer',
+      showCorrect: correct,
+      showWrong: checked && picked !== null && picked !== correctKey
+    };
+  }
+}
+window.__dcMount(Component);
+</script>
+</body>
+</html>

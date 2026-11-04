@@ -1,0 +1,12 @@
+{% extends "layouts/public.html" %}
+{% block title %}{{ page }} — GCE Learning Academy{% endblock %}
+{% block content %}
+<section class="wrap py-24">
+  <div class="card mx-auto max-w-xl p-10 text-center">
+    <div class="eyebrow">Coming soon</div>
+    <h1 class="mt-3 text-[28px] font-bold tracking-[-.02em] text-navy">{{ page }}</h1>
+    <p class="mt-3 text-slate-600">This page is being built in the next development milestone.</p>
+    <a href="{% url 'core:landing' %}" class="btn-primary mt-8">Back to home</a>
+  </div>
+</section>
+{% endblock %}

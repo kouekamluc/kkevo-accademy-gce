@@ -1,0 +1,167 @@
+{% extends "layouts/public.html" %}
+{% block title %}GCE Learning Academy — Understand every lesson{% endblock %}
+
+{% block content %}
+{# ---------- Hero ---------- #}
+<section class="border-b border-surface-border bg-white">
+  <div class="wrap grid items-center gap-14 pb-16 pt-12 nav:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)] nav:pb-24 nav:pt-[88px]">
+    <div>
+      <div class="inline-flex h-8 items-center gap-2 rounded-full bg-primary-50 px-3 text-[13px] font-semibold text-primary-700">
+        <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>For {% for level in levels %}{% if not forloop.first %}{% if forloop.last %} &amp; {% else %}, {% endif %}{% endif %}{{ level.name }}{% empty %}Form 5, Lower Sixth &amp; Upper Sixth{% endfor %}
+      </div>
+      <h1 class="mt-6 text-[40px] font-bold leading-[1.08] tracking-[-.03em] text-navy nav:text-[56px]">
+        Understand Every Lesson.<br><span class="text-primary">Build Your Future.</span>
+      </h1>
+      <p class="mt-6 max-w-[540px] text-[17px] leading-[1.65] text-slate-600 nav:text-[19px]">
+        Learn Mathematics, Physics, Chemistry, History, Geography, and more with clear explanations designed around the Cameroon GCE curriculum.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a href="{% if user.is_authenticated %}{% url 'dashboard:home' %}{% else %}{% url 'accounts:register' %}{% endif %}" class="btn-primary btn-lg shadow-cta">
+          Start Learning for Free {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}
+        </a>
+        <a href="{% url 'courses:catalog' %}" class="btn-secondary btn-lg">Explore Courses</a>
+      </div>
+      <ul class="mt-9 flex flex-wrap gap-6 text-sm text-slate-600">
+        <li class="flex items-center gap-2">{% include "components/icon.html" with name="check" class="h-[18px] w-[18px] text-success-text" stroke="2.5" %}Arts &amp; Science subjects</li>
+        <li class="flex items-center gap-2">{% include "components/icon.html" with name="check" class="h-[18px] w-[18px] text-success-text" stroke="2.5" %}Light, low-data pages</li>
+        <li class="flex items-center gap-2">{% include "components/icon.html" with name="check" class="h-[18px] w-[18px] text-success-text" stroke="2.5" %}Works on any phone</li>
+      </ul>
+    </div>
+
+    {# Illustrative product preview from the approved design (decorative, not course content) #}
+    <div class="relative pb-10 pl-5 pt-5" role="img" aria-label="Preview of a lesson in the app">
+      <div class="overflow-hidden rounded-panel border border-surface-border bg-surface-bg shadow-hero">
+        <div class="flex h-10 items-center gap-1.5 border-b border-surface-border bg-white px-4">
+          <span class="h-2.5 w-2.5 rounded-full bg-surface-border"></span><span class="h-2.5 w-2.5 rounded-full bg-surface-border"></span><span class="h-2.5 w-2.5 rounded-full bg-surface-border"></span>
+          <span class="ml-3 truncate text-xs text-ink-muted">Mathematics / Algebra / Factorization</span>
+        </div>
+        <div class="h-1 bg-surface-border"><div class="h-1 w-[58%] bg-primary"></div></div>
+        <div class="flex flex-col gap-4 bg-white px-5 py-6 sm:px-7">
+          <div class="text-xs font-semibold uppercase tracking-[.06em] text-primary-700">Lesson preview · Algebra</div>
+          <div class="text-[22px] font-bold leading-tight tracking-[-.01em]">Solving Quadratic Equations by Factorization</div>
+          <div class="grid grid-cols-[1.2fr_1fr] gap-4">
+            <div class="flex flex-col gap-2.5 rounded-xl border border-surface-border bg-surface-bg p-4 font-math text-[17px] sm:text-[19px]">
+              <div><i>x</i>² − 5<i>x</i> + 6 = 0</div>
+              <div class="text-primary-700">(<i>x</i> − 2)(<i>x</i> − 3) = 0</div>
+              <div class="flex flex-wrap items-center gap-2"><span class="rounded-md bg-success-50 px-2 py-0.5 font-sans text-xs font-semibold text-emerald-800">Roots</span><i>x</i> = 2 or <i>x</i> = 3</div>
+            </div>
+            <div class="rounded-xl border border-surface-border bg-white p-2">
+              <svg viewBox="0 0 160 120" width="100%" aria-hidden="true"><path d="M10 100H150M20 10V110" stroke="#CBD5E1" stroke-width="1"/><path d="M30 20 Q 85 175 140 20" fill="none" stroke="#2563EB" stroke-width="2.5"/><circle cx="74" cy="100" r="4" fill="#10B981"/><circle cx="96" cy="100" r="4" fill="#10B981"/><text x="66" y="116" font-size="9" fill="#475569" font-family="Inter">2</text><text x="93" y="116" font-size="9" fill="#475569" font-family="Inter">3</text></svg>
+            </div>
+          </div>
+          <div class="flex gap-2">
+            <span class="flex h-10 flex-1 items-center justify-center rounded-btn bg-primary text-sm font-semibold text-white">Next step</span>
+            <span class="flex h-10 items-center gap-1.5 rounded-btn border border-surface-border px-3.5 text-sm font-semibold text-slate-700"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch</span>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-[-12px] flex w-60 items-center gap-3 rounded-card border border-surface-border bg-white px-4 py-3.5 shadow-float">
+        <div class="flex h-12 w-12 items-center justify-center rounded-full" style="background:conic-gradient(#10B981 0 68%,#E2E8F0 68% 100%)"><div class="flex h-9 w-9 items-center justify-center rounded-full bg-white text-xs font-bold">68%</div></div>
+        <div><div class="text-sm font-semibold">Track every subject</div><div class="text-xs text-ink-muted">See lessons completed</div></div>
+      </div>
+      <div class="absolute right-[-8px] top-0 flex items-center gap-2 rounded-xl bg-navy px-3.5 py-2.5 text-[13px] font-semibold text-white shadow-float">
+        {% include "components/icon.html" with name="check" class="h-4 w-4 text-success-300" stroke="2.5" %}Practice after every lesson
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ---------- Choose your class ---------- #}
+<section class="wrap pt-16 nav:pt-[88px]" id="levels">
+  <div class="mx-auto max-w-[640px] text-center">
+    <div class="eyebrow">Choose your class</div>
+    <h2 class="section-title">Lessons built for where you are</h2>
+  </div>
+  {% if levels %}
+  <div class="mt-11 grid gap-6 nav:grid-cols-3">
+    {% for level in levels %}
+    <a href="{% url 'courses:catalog' %}?level={{ level.slug }}"
+       class="flex flex-col gap-3.5 rounded-2xl border p-7 transition hover:shadow-raised {% if forloop.last %}border-navy bg-navy text-white hover:text-white{% else %}border-surface-border bg-white text-ink-heading hover:border-primary-300 hover:text-ink-heading{% endif %}">
+      <div class="flex items-center justify-between">
+        <span class="rounded-md px-2.5 py-1 text-[13px] font-semibold {% if forloop.last %}bg-success-300 text-navy{% elif level.exam_level == 'O' %}bg-primary-50 text-primary-700{% else %}bg-success-50 text-success-text{% endif %}">{{ level.tagline|default:level.get_exam_level_display }}</span>
+        <span class="font-math text-[34px] {% if forloop.last %}text-navy-600{% else %}text-slate-300{% endif %}" aria-hidden="true">{{ level.code }}</span>
+      </div>
+      <div class="text-2xl font-bold tracking-[-.01em]">{{ level.name }}</div>
+      {% if level.description %}<div class="text-base leading-[1.55] {% if forloop.last %}text-slate-300{% else %}text-slate-600{% endif %}">{{ level.description }}</div>{% endif %}
+      <div class="flex flex-wrap gap-1.5">
+        <span class="chip {% if forloop.last %}border-navy-600 text-slate-300{% endif %}">{{ level.subject_count }} subject{{ level.subject_count|pluralize }}</span>
+        {% if pathway_label %}<span class="chip {% if forloop.last %}border-navy-600 text-slate-300{% endif %}">{{ pathway_label }}</span>{% endif %}
+      </div>
+      <div class="mt-1.5 flex items-center gap-1.5 text-[15px] font-semibold {% if forloop.last %}text-primary-300{% else %}text-primary{% endif %}">
+        See {{ level.name }} subjects {% include "components/icon.html" with name="arrow" class="h-4 w-4" stroke="2.2" %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="mt-11 rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center text-slate-600">Class levels will appear here once they are set up.</p>
+  {% endif %}
+</section>
+
+{# ---------- Why students choose us ---------- #}
+<section class="wrap pt-20 nav:pt-[104px]">
+  <div class="flex flex-wrap items-end justify-between gap-6">
+    <div class="max-w-[560px]"><div class="eyebrow">Why students choose us</div><h2 class="section-title">A clear path from confused to confident</h2></div>
+    <p class="m-0 max-w-[420px] text-[17px] leading-relaxed text-slate-600">Every topic is taught first, then practised. No memorising past papers without understanding.</p>
+  </div>
+  <div class="mt-11 grid gap-6 sm:grid-cols-2 nav:grid-cols-3">
+    {% include "core/_feature.html" with icon="book" accent="blue" title="Learn from scratch" text="Each course starts with the basics, so you can fill gaps from earlier classes before moving on." %}
+    {% include "core/_feature.html" with icon="bulb" accent="blue" title="Understand difficult concepts" text="Step-by-step explanations break hard ideas into small, clear pieces with worked examples." %}
+    {% include "core/_feature.html" with icon="video" accent="blue" title="Watch visual explanations" text="Short videos, diagrams and simulations show what the textbook only describes." %}
+    {% include "core/_feature.html" with icon="target" accent="emerald" title="Practise what you’ve learned" text="Questions after every lesson, with full worked solutions when you get one wrong." %}
+    {% include "core/_feature.html" with icon="progress" accent="emerald" title="Track your progress" text="See which topics you’ve mastered and which need another look before your exam." %}
+    {% include "core/_feature.html" with icon="download" accent="emerald" title="Learn anywhere" text="Light pages designed for phones and slow connections." %}
+  </div>
+</section>
+
+{# ---------- How it works ---------- #}
+<section id="how" class="mt-20 scroll-mt-4 border-y border-surface-border bg-white nav:mt-[104px]">
+  <div class="wrap py-16 nav:py-20">
+    <div class="eyebrow">How it works</div>
+    <h2 class="section-title">Learn, practise, repeat</h2>
+    <ol class="mt-10 grid gap-8 nav:grid-cols-3 nav:gap-6">
+      <li class="flex gap-4"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-navy font-bold text-white">1</span><div><div class="text-lg font-semibold">Pick your class and subjects</div><p class="mt-1.5 text-[15px] leading-relaxed text-slate-600">Tell us your level and whether you study Arts or Science.</p></div></li>
+      <li class="flex gap-4"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-primary font-bold text-white">2</span><div><div class="text-lg font-semibold">Study one lesson at a time</div><p class="mt-1.5 text-[15px] leading-relaxed text-slate-600">Read, watch and try the interactive examples at your own pace.</p></div></li>
+      <li class="flex gap-4"><span class="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-success-text font-bold text-white">3</span><div><div class="text-lg font-semibold">Check your understanding</div><p class="mt-1.5 text-[15px] leading-relaxed text-slate-600">Practise, see your mistakes explained and track what to revise.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+{# ---------- Featured subjects ---------- #}
+<section class="wrap pt-20 nav:pt-24" id="subjects">
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <div><div class="eyebrow">Featured subjects</div><h2 class="section-title">Start with the subject you need most</h2></div>
+    <a href="{% url 'courses:catalog' %}" class="flex h-11 items-center gap-1.5 text-[15px] font-semibold">View all subjects {% include "components/icon.html" with name="arrow" class="h-4 w-4" stroke="2.2" %}</a>
+  </div>
+  {% if featured_subjects %}
+  <div class="mt-10 grid grid-cols-2 gap-3 sm:gap-5 nav:grid-cols-4">
+    {% for subject in featured_subjects %}
+    <a href="{% url 'courses:catalog' %}?subject={{ subject.slug }}" class="card-link flex flex-col gap-3 rounded-card p-4 sm:p-[22px]">
+      {% include "components/subject_icon.html" with subject=subject size="lg" %}
+      <span class="text-[17px] font-semibold">{{ subject.name }}</span>
+      {% if subject.summary %}<span class="text-sm leading-normal text-ink-muted">{{ subject.summary }}</span>{% endif %}
+      {% with meta=subject.card_meta %}{% if meta %}<span class="mt-auto text-[13px] font-medium text-slate-600">{{ meta }}</span>{% endif %}{% endwith %}
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="mt-10 rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center">
+    <p class="font-semibold text-ink-heading">Subjects are being prepared</p>
+    <p class="mt-1 text-sm text-slate-600">Our content team is adding subjects now. Create an account to be ready when they go live.</p>
+  </div>
+  {% endif %}
+</section>
+
+{# ---------- CTA ---------- #}
+<section class="wrap py-20 nav:py-[104px]">
+  <div class="relative overflow-hidden rounded-3xl bg-navy px-6 py-14 text-center nav:px-12 nav:py-[72px]">
+    <div aria-hidden="true" class="absolute right-12 top-9 hidden font-math text-[64px] italic text-navy-700 sm:block">F = ma</div>
+    <div aria-hidden="true" class="absolute bottom-[30px] left-12 hidden font-math text-[52px] italic text-navy-700 sm:block">x = −b/2a</div>
+    <h2 class="relative mx-auto max-w-[640px] text-[30px] font-bold leading-tight tracking-[-.02em] text-white nav:text-[40px]">Your next breakthrough starts with understanding.</h2>
+    <p class="relative mx-auto mt-[18px] max-w-[480px] text-[17px] leading-relaxed text-slate-300">Create a free account and start your first lesson in under two minutes.</p>
+    <a href="{% if user.is_authenticated %}{% url 'dashboard:home' %}{% else %}{% url 'accounts:register' %}{% endif %}" class="btn btn-lg relative mx-auto mt-8 w-max bg-white font-bold text-navy hover:bg-slate-100 hover:text-navy">
+      Start Learning {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}
+    </a>
+  </div>
+</section>
+{% endblock %}

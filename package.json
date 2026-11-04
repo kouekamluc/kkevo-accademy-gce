@@ -1,0 +1,16 @@
+{
+  "name": "gce-learning-academy",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./static/src/app.css -o ./static/css/app.css --minify",
+    "watch:css": "tailwindcss -i ./static/src/app.css -o ./static/css/app.css --watch",
+    "vendor": "node scripts/copy-vendor.js",
+    "build": "npm run vendor && npm run build:css"
+  },
+  "devDependencies": {
+    "alpinejs": "3.14.9",
+    "flowbite": "2.5.2",
+    "htmx.org": "2.0.4",
+    "tailwindcss": "3.4.17"
+  }
+}

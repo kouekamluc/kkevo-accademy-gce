@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System — GCE Learning Academy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&amp;display=swap">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0F172A;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#2563EB;text-decoration:none}a:hover{color:#1D4ED8}
+button{font-family:inherit;cursor:pointer}
+.lbl{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#475569}
+.card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:14px}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:#475569}
+</style>
+
+</head>
+<body>
+<div id="dc-root">
+<div style="width:1440px;height:2400px;background:#F8FAFC;padding:64px 80px;display:flex;flex-direction:column;gap:48px">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid #E2E8F0;padding-bottom:32px">
+<div style="display:flex;align-items:center;gap:16px">
+<div style="width:48px;height:48px;border-radius:12px;background:#102A43;display:flex;align-items:flex-end;justify-content:center;gap:4px;padding:11px 0">
+<div style="width:6px;height:10px;border-radius:2px;background:#93C5FD"></div>
+<div style="width:6px;height:17px;border-radius:2px;background:#FFFFFF"></div>
+<div style="width:6px;height:26px;border-radius:2px;background:#10B981"></div>
+</div>
+<div>
+<div style="font-size:28px;font-weight:700;letter-spacing:-.02em;color:#102A43">GCE Learning Academy</div>
+<div style="font-size:15px;color:#64748B;margin-top:2px">Design system v1.0 — “Academic Clarity”</div>
+</div>
+</div>
+<div style="font-size:14px;color:#475569;max-width:440px;line-height:1.6">Built for Tailwind + Flowbite. Every token below maps to a Tailwind theme value. Light mode first, optimised for low-cost Android phones and slow connections.</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px">
+
+<div class="card" style="padding:28px;display:flex;flex-direction:column;gap:20px">
+<div class="lbl">Colour — roles</div>
+<div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px">
+<div><div style="height:72px;border-radius:10px;background:#102A43"></div><div style="font-size:13px;font-weight:600;margin-top:8px">Navy</div><div class="mono">#102A43</div><div style="font-size:12px;color:#64748B">Brand, navigation</div></div>
+<div><div style="height:72px;border-radius:10px;background:#2563EB"></div><div style="font-size:13px;font-weight:600;margin-top:8px">Blue</div><div class="mono">#2563EB</div><div style="font-size:12px;color:#64748B">Learning actions</div></div>
+<div><div style="height:72px;border-radius:10px;background:#10B981"></div><div style="font-size:13px;font-weight:600;margin-top:8px">Emerald</div><div class="mono">#10B981</div><div style="font-size:12px;color:#64748B">Completed (fills)</div></div>
+<div><div style="height:72px;border-radius:10px;background:#F59E0B"></div><div style="font-size:13px;font-weight:600;margin-top:8px">Amber</div><div class="mono">#F59E0B</div><div style="font-size:12px;color:#64748B">Warning, revise</div></div>
+<div><div style="height:72px;border-radius:10px;background:#EF4444"></div><div style="font-size:13px;font-weight:600;margin-top:8px">Red</div><div class="mono">#EF4444</div><div style="font-size:12px;color:#64748B">Error (sparingly)</div></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px">
+<div><div style="height:40px;border-radius:8px;background:#F8FAFC;border:1px solid #E2E8F0"></div><div class="mono" style="margin-top:6px">#F8FAFC bg</div></div>
+<div><div style="height:40px;border-radius:8px;background:#FFFFFF;border:1px solid #E2E8F0"></div><div class="mono" style="margin-top:6px">#FFFFFF card</div></div>
+<div><div style="height:40px;border-radius:8px;background:#E2E8F0"></div><div class="mono" style="margin-top:6px">#E2E8F0 border</div></div>
+<div><div style="height:40px;border-radius:8px;background:#0F172A"></div><div class="mono" style="margin-top:6px">#0F172A heading</div></div>
+<div><div style="height:40px;border-radius:8px;background:#64748B"></div><div class="mono" style="margin-top:6px">#64748B secondary</div></div>
+</div>
+<div style="background:#F8FAFC;border-radius:10px;padding:14px 16px;font-size:13px;line-height:1.6;color:#334155">
+<strong>Accessible text tints.</strong> Emerald, amber and red fail 4.5:1 as text on white, so text and icons use darker steps: <span style="color:#047857;font-weight:600">#047857 success</span> · <span style="color:#B45309;font-weight:600">#B45309 warning</span> · <span style="color:#B91C1C;font-weight:600">#B91C1C error</span>. Tints for surfaces: <span class="mono">#EFF6FF #ECFDF5 #FFFBEB #FEF2F2</span>.
+</div>
+</div>
+
+<div class="card" style="padding:28px;display:flex;flex-direction:column;gap:14px">
+<div class="lbl">Typography — Inter + STIX Two (maths)</div>
+<div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #F1F5F9;padding-bottom:10px"><span class="mono" style="width:120px">Display 48/56</span><span style="font-size:48px;line-height:56px;font-weight:700;letter-spacing:-.025em">Understand</span></div>
+<div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #F1F5F9;padding-bottom:10px"><span class="mono" style="width:120px">H1 36/44</span><span style="font-size:36px;line-height:44px;font-weight:700;letter-spacing:-.02em">Quadratic Equations</span></div>
+<div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #F1F5F9;padding-bottom:10px"><span class="mono" style="width:120px">H2 24/32</span><span style="font-size:24px;line-height:32px;font-weight:600;letter-spacing:-.01em">Worked example</span></div>
+<div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #F1F5F9;padding-bottom:10px"><span class="mono" style="width:120px">H3 18/28</span><span style="font-size:18px;line-height:28px;font-weight:600">Step 2 — Find the factor pair</span></div>
+<div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #F1F5F9;padding-bottom:10px"><span class="mono" style="width:120px">Lesson 18/30</span><span style="font-size:18px;line-height:30px;color:#1E293B">Reading text, max 68 characters wide.</span></div>
+<div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #F1F5F9;padding-bottom:10px"><span class="mono" style="width:120px">Body 16/24</span><span style="font-size:16px;line-height:24px">Interface copy and descriptions</span></div>
+<div style="display:flex;align-items:baseline;gap:20px;border-bottom:1px solid #F1F5F9;padding-bottom:10px"><span class="mono" style="width:120px">Small 14/20</span><span style="font-size:14px;line-height:20px;color:#64748B">Metadata · 12 min · Module 1</span></div>
+<div style="display:flex;align-items:baseline;gap:20px"><span class="mono" style="width:120px">Formula 24</span><span style="font-family:'STIX Two Text',serif;font-size:26px;letter-spacing:.02em"><i>ax</i>² + <i>bx</i> + <i>c</i> = 0</span></div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px">
+<div class="card" style="padding:28px;display:flex;flex-direction:column;gap:14px">
+<div class="lbl">Spacing — 4px base</div>
+<div style="display:flex;align-items:flex-end;gap:10px;height:72px">
+<div style="width:4px;height:4px;background:#2563EB"></div><div style="width:8px;height:8px;background:#2563EB"></div><div style="width:12px;height:12px;background:#2563EB"></div><div style="width:16px;height:16px;background:#2563EB"></div><div style="width:24px;height:24px;background:#2563EB"></div><div style="width:32px;height:32px;background:#2563EB"></div><div style="width:48px;height:48px;background:#2563EB"></div><div style="width:64px;height:64px;background:#2563EB"></div>
+</div>
+<div class="mono">4 · 8 · 12 · 16 · 24 · 32 · 48 · 64</div>
+<div style="font-size:13px;color:#475569;line-height:1.6">Card padding 24 (desktop) / 16 (mobile). Section gap 48 / 32. Grid gutter 24 / 16.</div>
+</div>
+<div class="card" style="padding:28px;display:flex;flex-direction:column;gap:14px">
+<div class="lbl">Radius &amp; elevation</div>
+<div style="display:flex;gap:14px;align-items:center">
+<div style="width:64px;height:56px;border:1px solid #CBD5E1;border-radius:8px;display:flex;align-items:center;justify-content:center" class="mono">8</div>
+<div style="width:64px;height:56px;border:1px solid #CBD5E1;border-radius:10px;display:flex;align-items:center;justify-content:center" class="mono">10</div>
+<div style="width:64px;height:56px;border:1px solid #CBD5E1;border-radius:14px;display:flex;align-items:center;justify-content:center" class="mono">14</div>
+<div style="width:64px;height:56px;border:1px solid #CBD5E1;border-radius:20px;display:flex;align-items:center;justify-content:center" class="mono">20</div>
+</div>
+<div style="font-size:13px;color:#475569;line-height:1.6">8 inputs &amp; chips · 10 buttons · 14 cards · 20 hero panels. Shadow: <span class="mono">0 1px 2px rgba(15,23,42,.05)</span>; raised: <span class="mono">0 8px 24px rgba(15,23,42,.08)</span>.</div>
+</div>
+<div class="card" style="padding:28px;display:flex;flex-direction:column;gap:10px">
+<div class="lbl">Layout tokens</div>
+<div style="display:grid;grid-template-columns:1fr auto;row-gap:8px;font-size:14px">
+<span>App header</span><span class="mono">64px / 56px mobile</span>
+<span>Sidebar</span><span class="mono">264px</span>
+<span>Content max-width</span><span class="mono">1200px</span>
+<span>Reading column</span><span class="mono">720px (68ch)</span>
+<span>Right rail</span><span class="mono">256px</span>
+<span>Bottom nav</span><span class="mono">64px + safe area</span>
+<span>Min touch target</span><span class="mono">44 × 44px</span>
+<span>Breakpoints</span><span class="mono">sm 640 · md 768 · lg 1024 · xl 1280</span>
+</div>
+</div>
+</div>
+
+<div class="card" style="padding:28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px">
+<div style="display:flex;flex-direction:column;gap:14px">
+<div class="lbl">Buttons</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button style="height:44px;padding:0 20px;border-radius:10px;border:0;background:#2563EB;color:#FFFFFF;font-weight:600;font-size:15px">Continue lesson</button>
+<button style="height:44px;padding:0 20px;border-radius:10px;border:1px solid #CBD5E1;background:#FFFFFF;color:#0F172A;font-weight:600;font-size:15px">Explore courses</button>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button style="height:44px;padding:0 20px;border-radius:10px;border:0;background:#047857;color:#FFFFFF;font-weight:600;font-size:15px;display:flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Completed</button>
+<button style="height:44px;padding:0 16px;border-radius:10px;border:0;background:transparent;color:#2563EB;font-weight:600;font-size:15px">Ghost link</button>
+<button disabled style="height:44px;padding:0 20px;border-radius:10px;border:0;background:#E2E8F0;color:#64748B;font-weight:600;font-size:15px">Disabled</button>
+</div>
+<div style="font-size:13px;color:#475569;line-height:1.6">Height 44 (40 dense, 52 hero). Focus ring: 3px <span class="mono">#93C5FD</span> offset 2px.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div class="lbl">Inputs</div>
+<label style="display:flex;align-items:center;gap:10px;height:44px;padding:0 14px;border:1px solid #CBD5E1;border-radius:10px;background:#FFFFFF;color:#64748B;font-size:15px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><input aria-label="Search lessons" placeholder="Search lessons, topics, formulas…" style="border:0;outline:0;font:inherit;flex:1;background:transparent"></label>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+<div><label for="ds-level" style="font-size:13px;font-weight:600;display:block;margin-bottom:6px">Academic level</label><div style="position:relative"><select id="ds-level" style="width:100%;height:44px;border:1px solid #CBD5E1;border-radius:10px;padding:0 12px;font:inherit;font-size:15px;background:#FFFFFF;appearance:none"><option>Form 5</option></select><svg style="position:absolute;right:12px;top:13px" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div></div>
+<div><label for="ds-email" style="font-size:13px;font-weight:600;display:block;margin-bottom:6px">Email</label><input id="ds-email" value="alex@example" style="width:100%;height:44px;border:1.5px solid #EF4444;border-radius:10px;padding:0 12px;font:inherit;font-size:15px"><div style="font-size:12px;color:#B91C1C;margin-top:4px">Enter a full email address</div></div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<div class="lbl">Tabs, chips, breadcrumb</div>
+<div style="display:flex;gap:24px;border-bottom:1px solid #E2E8F0;font-size:15px;font-weight:600">
+<span style="padding:10px 0;border-bottom:2px solid #2563EB;color:#0F172A">Overview</span><span style="padding:10px 0;color:#64748B">Transcript</span><span style="padding:10px 0;color:#64748B">My notes</span>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<span style="height:32px;padding:0 12px;border-radius:999px;background:#102A43;color:#FFFFFF;font-size:13px;font-weight:600;display:flex;align-items:center">All levels</span>
+<span style="height:32px;padding:0 12px;border-radius:999px;border:1px solid #CBD5E1;font-size:13px;font-weight:500;display:flex;align-items:center">Science</span>
+<span style="height:32px;padding:0 12px;border-radius:999px;border:1px solid #CBD5E1;font-size:13px;font-weight:500;display:flex;align-items:center">Arts</span>
+<span style="height:24px;padding:0 8px;border-radius:6px;background:#ECFDF5;color:#047857;font-size:12px;font-weight:600;display:flex;align-items:center">Completed</span>
+<span style="height:24px;padding:0 8px;border-radius:6px;background:#FFFBEB;color:#B45309;font-size:12px;font-weight:600;display:flex;align-items:center">Revise</span>
+</div>
+<div style="font-size:14px;color:#64748B;display:flex;gap:8px;align-items:center"><a href="#">Mathematics</a><span aria-hidden="true">/</span><a href="#">Algebra</a><span aria-hidden="true">/</span><span style="color:#0F172A;font-weight:500">Factorization</span></div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px">
+<div class="card" style="padding:24px;display:flex;flex-direction:column;gap:14px">
+<div class="lbl">Subject card</div>
+<div style="display:flex;gap:14px;align-items:center">
+<div style="width:52px;height:52px;border-radius:12px;background:#EFF6FF;color:#1D4ED8;display:flex;align-items:center;justify-content:center;font-family:'STIX Two Text',serif;font-size:26px;font-style:italic">x²</div>
+<div style="flex:1"><div style="font-size:17px;font-weight:600">Mathematics</div><div style="font-size:13px;color:#64748B">Form 5 · 4 modules · 38 lessons</div></div>
+</div>
+<div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:#64748B">Progress</span><span style="font-weight:600">68%</span></div>
+<div style="height:8px;border-radius:999px;background:#E2E8F0"><div style="width:68%;height:8px;border-radius:999px;background:#10B981"></div></div>
+</div>
+<div class="card" style="padding:24px;display:flex;flex-direction:column;gap:10px">
+<div class="lbl">Lesson rows — states</div>
+<div style="display:flex;align-items:center;gap:12px;height:48px"><span style="width:26px;height:26px;border-radius:50%;background:#10B981;color:#FFFFFF;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span><span style="flex:1;font-size:15px;color:#475569">Introduction to quadratics</span><span style="font-size:13px;color:#64748B">12 min</span></div>
+<div style="display:flex;align-items:center;gap:12px;height:48px;background:#EFF6FF;border-radius:10px;padding:0 10px;margin:0 -10px"><span style="width:26px;height:26px;border-radius:50%;border:2.5px solid #2563EB;display:flex;align-items:center;justify-content:center"><span style="width:10px;height:10px;border-radius:50%;background:#2563EB"></span></span><span style="flex:1;font-size:15px;font-weight:600">Solving by factorization</span><span style="font-size:13px;color:#1D4ED8;font-weight:600">In progress</span></div>
+<div style="display:flex;align-items:center;gap:12px;height:48px"><span style="width:26px;height:26px;border-radius:50%;border:2px solid #CBD5E1"></span><span style="flex:1;font-size:15px">Completing the square</span><span style="font-size:13px;color:#64748B">16 min</span></div>
+</div>
+<div class="card" style="padding:24px;display:flex;flex-direction:column;gap:10px">
+<div class="lbl">Statistic &amp; progress</div>
+<div style="display:flex;gap:16px;align-items:center">
+<div style="width:72px;height:72px;border-radius:50%;background:conic-gradient(#10B981 0 48%,#E2E8F0 48% 100%);display:flex;align-items:center;justify-content:center"><div style="width:56px;height:56px;border-radius:50%;background:#FFFFFF;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px">48%</div></div>
+<div><div style="font-size:28px;font-weight:700;letter-spacing:-.02em">5h 40m</div><div style="font-size:13px;color:#64748B">Learning time this week</div><div style="font-size:13px;color:#047857;font-weight:600;margin-top:2px">+50 min vs last week</div></div>
+</div>
+<div style="display:flex;gap:6px;align-items:center;font-size:13px;color:#475569"><span style="width:28px;height:28px;border-radius:8px;background:#FFFBEB;color:#B45309;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3 6.5 7 .9-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.9z"></path></svg></span>Achievement: <strong>7-day streak</strong></div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px">
+<div class="card" style="padding:24px;display:flex;flex-direction:column;gap:10px">
+<div class="lbl">Quiz options — states</div>
+<div style="display:flex;align-items:center;gap:12px;min-height:52px;padding:0 14px;border:1.5px solid #E2E8F0;border-radius:12px;font-size:15px"><span style="width:28px;height:28px;border-radius:8px;border:1.5px solid #CBD5E1;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px">A</span>Default</div>
+<div style="display:flex;align-items:center;gap:12px;min-height:52px;padding:0 14px;border:2px solid #2563EB;background:#EFF6FF;border-radius:12px;font-size:15px;font-weight:600"><span style="width:28px;height:28px;border-radius:8px;background:#2563EB;color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-size:13px">B</span>Selected</div>
+<div style="display:flex;align-items:center;gap:12px;min-height:52px;padding:0 14px;border:2px solid #10B981;background:#ECFDF5;border-radius:12px;font-size:15px;font-weight:600;color:#065F46"><span style="width:28px;height:28px;border-radius:8px;background:#047857;color:#FFFFFF;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span>Correct</div>
+<div style="display:flex;align-items:center;gap:12px;min-height:52px;padding:0 14px;border:1.5px dashed #F87171;border-radius:12px;font-size:15px;color:#991B1B"><span style="width:28px;height:28px;border-radius:8px;border:1.5px solid #F87171;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">D</span>Your answer — not quite</div>
+</div>
+<div class="card" style="padding:24px;display:flex;flex-direction:column;gap:12px">
+<div class="lbl">Lesson callouts</div>
+<div style="border-radius:12px;background:#EFF6FF;padding:14px 16px;font-size:14px;line-height:1.55"><div style="font-weight:700;color:#1D4ED8;font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px">Definition</div>A <strong>root</strong> is a value of <i>x</i> that makes the equation true.</div>
+<div style="border-radius:12px;background:#ECFDF5;padding:14px 16px;font-size:14px;line-height:1.55"><div style="font-weight:700;color:#047857;font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px">Tip</div>Always check your answer by substituting it back.</div>
+<div style="border-radius:12px;background:#FFFBEB;padding:14px 16px;font-size:14px;line-height:1.55"><div style="font-weight:700;color:#B45309;font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px">Common mistake</div>Never divide both sides by <i>x</i> — you lose a root.</div>
+</div>
+<div class="card" style="padding:24px;display:flex;flex-direction:column;gap:12px">
+<div class="lbl">Feedback, toast, skeleton, empty</div>
+<div style="border:1px solid #A7F3D0;background:#ECFDF5;border-radius:12px;padding:12px 14px;display:flex;gap:10px;font-size:14px;color:#065F46"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 3 3 5-6"></path></svg><span><strong>Correct!</strong> F = ma gives 3 m/s².</span></div>
+<div style="background:#102A43;color:#FFFFFF;border-radius:12px;padding:12px 14px;font-size:14px;display:flex;justify-content:space-between;align-items:center"><span>Lesson saved for offline</span><a href="#" style="color:#93C5FD;font-weight:600">Undo</a></div>
+<div style="display:flex;gap:12px;align-items:center"><div style="width:44px;height:44px;border-radius:10px;background:#E2E8F0"></div><div style="flex:1;display:flex;flex-direction:column;gap:8px"><div style="height:10px;width:70%;border-radius:6px;background:#E2E8F0"></div><div style="height:10px;width:45%;border-radius:6px;background:#EEF2F6"></div></div></div>
+<div style="border:1.5px dashed #CBD5E1;border-radius:12px;padding:14px;text-align:center;font-size:14px;color:#64748B">No saved lessons yet. Tap <strong style="color:#0F172A">Save</strong> on any lesson to find it here.</div>
+</div>
+</div>
+
+<div class="card" style="padding:24px 28px;display:flex;gap:40px;align-items:center;font-size:14px;color:#475569;line-height:1.6">
+<div class="lbl" style="flex:none">Icon style</div>
+<div style="display:flex;gap:18px;color:#102A43">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"></path><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"></path></svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="m7 15 4-4 3 3 5-6"></path></svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 10h18"></path></svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"></rect><path d="m17 10 5-3v10l-5-3z"></path></svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>
+</div>
+<div>Line icons, 24px grid, 1.8px stroke, round caps (Lucide-compatible, so Flowbite/Tailwind builds can use the Lucide set directly). Icons always paired with a text label in navigation.</div>
+</div>
+
+</div>
+</div>
+</body>
+</html>

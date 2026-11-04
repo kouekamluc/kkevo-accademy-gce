@@ -1,0 +1,17 @@
+{# Inline stroke icons from the design. Usage: {% include "components/icon.html" with name="arrow" class="h-4 w-4" %} #}
+<svg class="{{ class|default:'h-5 w-5' }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="{{ stroke|default:'1.8' }}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+{% if name == "arrow" %}<path d="M5 12h14M13 6l6 6-6 6"/>
+{% elif name == "check" %}<path d="M20 6 9 17l-5-5"/>
+{% elif name == "menu" %}<path d="M4 6h16M4 12h16M4 18h16"/>
+{% elif name == "close" %}<path d="M6 6l12 12M18 6 6 18"/>
+{% elif name == "book" %}<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/>
+{% elif name == "bulb" %}<path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/>
+{% elif name == "video" %}<rect x="2" y="5" width="15" height="14" rx="2"/><path d="m17 10 5-3v10l-5-3z"/>
+{% elif name == "target" %}<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>
+{% elif name == "progress" %}<path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/>
+{% elif name == "download" %}<path d="M12 3v12M7 10l5 5 5-5M5 21h14"/>
+{% elif name == "dna" %}<path d="M7 3c0 6 10 6 10 12s-10 6-10 6M17 3c0 6-10 6-10 12M8 7h8M8 17h8"/>
+{% elif name == "map" %}<path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3z"/><path d="M9 3v15M15 6v15"/>
+{% elif name == "chart" %}<path d="M3 20h18M4 4l6 10 4-5 6 8"/>
+{% endif %}
+</svg>

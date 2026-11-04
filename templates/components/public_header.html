@@ -1,0 +1,44 @@
+{% url 'core:landing' as home_url %}
+<header class="relative border-b border-surface-border bg-white" x-data="{ open: false }" @keydown.escape.window="open = false">
+  <div class="wrap flex h-[72px] items-center justify-between gap-6">
+    <a href="{{ home_url }}" class="flex items-center gap-2.5 text-navy hover:text-navy">
+      {% include "components/logo.html" %}
+      <span class="text-lg font-bold tracking-[-.01em]">GCE Learning Academy</span>
+    </a>
+    <nav aria-label="Main" class="hidden items-center gap-7 nav:flex">
+      <a href="{{ home_url }}" class="px-1 py-2.5 text-[15px] {% if request.path == home_url %}font-semibold text-navy{% else %}font-medium text-slate-700 hover:text-navy{% endif %}" {% if request.path == home_url %}aria-current="page"{% endif %}>Home</a>
+      <a href="{% url 'courses:catalog' %}" class="px-1 py-2.5 text-[15px] font-medium text-slate-700 hover:text-navy">Explore Courses</a>
+      <a href="{{ home_url }}#how" class="px-1 py-2.5 text-[15px] font-medium text-slate-700 hover:text-navy">How It Works</a>
+      <a href="{{ home_url }}#about" class="px-1 py-2.5 text-[15px] font-medium text-slate-700 hover:text-navy">About</a>
+    </nav>
+    <div class="hidden items-center gap-2.5 nav:flex">
+      {% if user.is_authenticated %}
+        <a href="{% url 'dashboard:home' %}" class="btn-primary">Go to dashboard</a>
+      {% else %}
+        <a href="{% url 'accounts:login' %}" class="flex h-11 items-center px-4 text-[15px] font-semibold text-navy hover:text-navy-700">Log In</a>
+        <a href="{% url 'accounts:register' %}" class="btn-primary">Get Started</a>
+      {% endif %}
+    </div>
+    <button type="button" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border bg-white text-navy nav:hidden"
+            @click="open = !open" :aria-expanded="open.toString()" aria-controls="mobile-menu" aria-label="Open menu">
+      <span x-show="!open">{% include "components/icon.html" with name="menu" class="h-[22px] w-[22px]" stroke="2" %}</span>
+      <span x-show="open" x-cloak>{% include "components/icon.html" with name="close" class="h-[22px] w-[22px]" stroke="2" %}</span>
+    </button>
+  </div>
+  <div id="mobile-menu" x-show="open" x-cloak x-transition.opacity class="absolute inset-x-0 top-full z-40 border-b border-surface-border bg-white shadow-raised nav:hidden">
+    <nav aria-label="Mobile" class="wrap flex flex-col gap-1 py-3">
+      <a href="{{ home_url }}" class="flex min-h-touch items-center font-semibold text-navy">Home</a>
+      <a href="{% url 'courses:catalog' %}" class="flex min-h-touch items-center font-medium text-slate-700">Explore Courses</a>
+      <a href="{{ home_url }}#how" @click="open = false" class="flex min-h-touch items-center font-medium text-slate-700">How It Works</a>
+      <a href="{{ home_url }}#about" @click="open = false" class="flex min-h-touch items-center font-medium text-slate-700">About</a>
+      <div class="mt-2 grid grid-cols-2 gap-2 border-t border-surface-border pt-3">
+        {% if user.is_authenticated %}
+          <a href="{% url 'dashboard:home' %}" class="btn-primary col-span-2">Go to dashboard</a>
+        {% else %}
+          <a href="{% url 'accounts:login' %}" class="btn-secondary">Log In</a>
+          <a href="{% url 'accounts:register' %}" class="btn-primary">Get Started</a>
+        {% endif %}
+      </div>
+    </nav>
+  </div>
+</header>

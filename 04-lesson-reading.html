@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solving Quadratic Equations by Factorization — Lesson</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=STIX+Two+Text:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:#0F172A;background:#FFFFFF;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#2563EB;text-decoration:none}a:hover{color:#1D4ED8}
+button{font-family:inherit;cursor:pointer}
+.m{font-family:'STIX Two Text',Georgia,serif;font-size:1.12em;letter-spacing:.01em;white-space:nowrap}
+.prose p{font-size:18px;line-height:1.75;color:#1E293B;margin:0 0 20px}
+.h2{font-size:26px;line-height:1.3;letter-spacing:-.015em;font-weight:700;color:#102A43;margin:56px 0 16px;scroll-margin-top:80px}
+.eq{font-family:'STIX Two Text',Georgia,serif;font-size:26px;text-align:center;padding:24px 16px;margin:8px 0 24px;letter-spacing:.02em}
+.toc a{display:flex;align-items:center;gap:10px;min-height:36px;padding:6px 10px;border-radius:8px;font-size:14px;color:#334155}
+.toc a:hover{background:#F1F5F9}
+.lnk{display:flex;gap:10px;align-items:center;min-height:40px;padding:6px 10px;border-radius:8px;font-size:14px;color:#334155;line-height:1.35}
+.lnk:hover{background:#F1F5F9}
+summary{list-style:none;cursor:pointer}summary::-webkit-details-marker{display:none}
+details[open] .chev{transform:rotate(180deg)}
+.step{display:grid;grid-template-columns:36px minmax(0,1fr);gap:16px;padding:18px 0;border-top:1px solid #E2E8F0}
+.sn{width:32px;height:32px;border-radius:50%;background:#102A43;color:#FFFFFF;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.rail{display:flex}
+.mtop{display:none}
+@media (max-width:1200px){.rail{display:none!important}}
+@media (max-width:900px){.side{display:none!important}.mtop{display:flex}.read{padding:28px 16px 64px!important}.hdr-actions span.t{display:none}}
+</style>
+
+</head>
+<body>
+<div id="dc-root">
+<div style="background:#FFFFFF;min-height:4300px">
+
+<header style="height:64px;background:#FFFFFF;border-bottom:1px solid #E2E8F0;display:flex;align-items:center;gap:16px;padding:0 20px;position:relative">
+<button class="mtop" aria-label="Open lesson menu" style="width:44px;height:44px;border:1px solid #E2E8F0;border-radius:10px;background:#FFFFFF;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#102A43" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+<a href="02-dashboard.html" aria-label="GCE Learning Academy home" style="width:32px;height:32px;border-radius:8px;background:#102A43;display:flex;align-items:flex-end;justify-content:center;gap:3px;padding:7px 0;flex:none"><span style="width:4px;height:6px;border-radius:1px;background:#93C5FD"></span><span style="width:4px;height:11px;border-radius:1px;background:#FFFFFF"></span><span style="width:4px;height:17px;border-radius:1px;background:#10B981"></span></a>
+<nav aria-label="Breadcrumb" style="display:flex;gap:8px;align-items:center;font-size:14px;color:#64748B;min-width:0;overflow:hidden;white-space:nowrap"><a href="03-subject-overview.html">Form 5 Mathematics</a><span aria-hidden="true">/</span><a href="03-subject-overview.html">Algebra</a><span aria-hidden="true">/</span><span style="color:#0F172A;font-weight:500;overflow:hidden;text-overflow:ellipsis">Factorization</span></nav>
+<div class="hdr-actions" style="margin-left:auto;display:flex;align-items:center;gap:4px">
+<button style="height:40px;padding:0 12px;border:0;border-radius:10px;background:transparent;display:flex;align-items:center;gap:8px;color:#334155;font-size:14px;font-weight:500" aria-label="Text size"><span style="font-family:'STIX Two Text',serif;font-size:18px">Aa</span><span class="t">Text size</span></button>
+<button style="height:40px;padding:0 12px;border:0;border-radius:10px;background:transparent;display:flex;align-items:center;gap:8px;color:#334155;font-size:14px;font-weight:500" aria-label="Save for offline"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg><span class="t">Offline</span></button>
+<button style="height:40px;padding:0 12px;border:0;border-radius:10px;background:transparent;display:flex;align-items:center;gap:8px;color:#334155;font-size:14px;font-weight:500" aria-label="Save lesson"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg><span class="t">Save</span></button>
+<span style="width:36px;height:36px;border-radius:50%;background:#DBEAFE;color:#1D4ED8;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;margin-left:8px" aria-label="Alex Nfor">AN</span>
+</div>
+<div style="position:absolute;left:0;right:0;bottom:-1px;height:3px;background:#F1F5F9" role="progressbar" aria-label="Reading progress" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100"><div style="width:58%;height:3px;background:#2563EB"></div></div>
+</header>
+
+<div style="display:flex;flex-wrap:wrap;align-items:flex-start">
+
+<aside class="side" aria-label="Course navigation" style="flex:1 1 264px;max-width:264px;border-right:1px solid #E2E8F0;background:#F8FAFC;padding:20px 12px;align-self:stretch">
+<a href="03-subject-overview.html" style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:0 8px;height:32px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>Course overview</a>
+<div style="padding:8px 8px 16px"><div style="font-size:16px;font-weight:700;color:#102A43">Form 5 Mathematics</div><div style="display:flex;align-items:center;gap:8px;margin-top:8px"><div style="flex:1;height:6px;border-radius:999px;background:#E2E8F0"><div style="width:68%;height:6px;border-radius:999px;background:#10B981"></div></div><span style="font-size:12px;font-weight:600">68%</span></div></div>
+<div style="border-top:1px solid #E2E8F0;padding-top:12px">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:6px 8px;font-size:14px;font-weight:700;color:#0F172A"><span>1 · Algebra</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" style="transform:rotate(180deg)" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></div>
+<div style="padding:8px 8px 4px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#64748B">1.1 Expressions</div>
+<a class="lnk" href="#"><span style="width:18px;height:18px;border-radius:50%;background:#10B981;flex:none"></span>Algebraic Expressions</a>
+<a class="lnk" href="#"><span style="width:18px;height:18px;border-radius:50%;background:#10B981;flex:none"></span>Expanding Brackets</a>
+<a class="lnk" href="#"><span style="width:18px;height:18px;border-radius:50%;background:#10B981;flex:none"></span>Common Factors</a>
+<a class="lnk" href="#"><span style="width:18px;height:18px;border-radius:50%;background:#10B981;flex:none"></span>Factorizing Quadratics</a>
+<div style="padding:12px 8px 4px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#64748B">1.2 Quadratic Equations</div>
+<a class="lnk" href="#"><span style="width:18px;height:18px;border-radius:50%;background:#10B981;flex:none"></span>Introduction</a>
+<a class="lnk" href="#" aria-current="page" style="background:#FFFFFF;border:1px solid #BFDBFE;color:#102A43;font-weight:600"><span style="width:18px;height:18px;border-radius:50%;border:2.5px solid #2563EB;flex:none;display:flex;align-items:center;justify-content:center"><span style="width:6px;height:6px;border-radius:50%;background:#2563EB"></span></span>Solving by Factorization</a>
+<a class="lnk" href="#"><span style="width:18px;height:18px;border-radius:50%;border:2px solid #CBD5E1;flex:none"></span>Completing the Square</a>
+<a class="lnk" href="#"><span style="width:18px;height:18px;border-radius:50%;border:2px solid #CBD5E1;flex:none"></span>The Quadratic Formula</a>
+<a class="lnk" href="#"><span style="width:18px;height:18px;border-radius:50%;border:2px solid #CBD5E1;flex:none"></span>Word Problems</a>
+<div style="padding:12px 8px 4px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#64748B">1.3 Simultaneous Equations</div>
+<a class="lnk" href="#"><span style="width:18px;height:18px;border-radius:50%;border:2px solid #CBD5E1;flex:none"></span>Elimination Method</a>
+</div>
+<div style="border-top:1px solid #E2E8F0;margin-top:12px;padding-top:8px;display:flex;flex-direction:column">
+<a class="lnk" href="#" style="justify-content:space-between;font-weight:600"><span>2 · Geometry</span><span style="font-size:12px;color:#047857">Done</span></a>
+<a class="lnk" href="#" style="justify-content:space-between;font-weight:600"><span>3 · Trigonometry</span><span style="font-size:12px;color:#64748B">88%</span></a>
+<a class="lnk" href="#" style="justify-content:space-between;font-weight:600"><span>4 · Statistics</span><span style="font-size:12px;color:#64748B">50%</span></a>
+</div>
+</aside>
+
+<main class="read" style="flex:999 1 560px;min-width:0;padding:48px 56px 96px;display:flex;justify-content:center">
+<article style="width:100%;max-width:720px">
+
+<div style="font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#1D4ED8">Module 1 · Algebra · Lesson 6 of 12</div>
+<h1 style="margin:12px 0 0;font-size:40px;line-height:1.15;letter-spacing:-.025em;color:#102A43">Solving Quadratic Equations by Factorization</h1>
+<p style="margin:16px 0 0;font-size:19px;line-height:1.6;color:#475569">Learn how to turn a quadratic equation into two simple linear equations, and find both of its solutions.</p>
+<div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;font-size:14px;color:#475569">
+<span style="display:flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>18 min read</span>
+<span style="display:flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"></rect><path d="m17 10 5-3v10l-5-3z"></path></svg>4 min video</span>
+<span style="display:flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle></svg>5 practice questions</span>
+<span style="display:flex;align-items:center;gap:6px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Requires: Factorizing Quadratics</span>
+</div>
+
+<section id="objectives" style="margin-top:36px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:16px;padding:24px 28px">
+<h2 style="margin:0 0 14px;font-size:16px;font-weight:700;color:#102A43;display:flex;align-items:center;gap:10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg>By the end of this lesson you will be able to</h2>
+<ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;font-size:16px;line-height:1.55;color:#1E293B">
+<li style="display:flex;gap:12px"><span style="flex:none;width:22px;height:22px;border-radius:6px;background:#10B981;color:#FFFFFF;display:flex;align-items:center;justify-content:center;margin-top:1px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span>Recognise a quadratic equation in standard form</li>
+<li style="display:flex;gap:12px"><span style="flex:none;width:22px;height:22px;border-radius:6px;background:#10B981;color:#FFFFFF;display:flex;align-items:center;justify-content:center;margin-top:1px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></span>Explain why the zero product property lets us split an equation</li>
+<li style="display:flex;gap:12px"><span style="flex:none;width:22px;height:22px;border-radius:6px;border:2px solid #CBD5E1;margin-top:1px"></span>Solve quadratics where <span class="m"><i>a</i> = 1</span> and where <span class="m"><i>a</i> ≠ 1</span></li>
+<li style="display:flex;gap:12px"><span style="flex:none;width:22px;height:22px;border-radius:6px;border:2px solid #CBD5E1;margin-top:1px"></span>Check your solutions by substitution</li>
+</ul>
+</section>
+
+<div class="prose">
+<h2 id="intro" class="h2">Introduction</h2>
+<p>In the last lesson you met equations like <span class="m"><i>x</i>² − 5<i>x</i> + 6 = 0</span>. Unlike a linear equation, a quadratic can have <strong>two</strong> solutions, so the usual “get <i>x</i> on its own” approach doesn’t work.</p>
+<p>Factorization gives us a different strategy: rewrite the left-hand side as a product of two brackets, then use one simple fact about multiplying by zero.</p>
+
+<div style="border-radius:14px;background:#EFF6FF;border:1px solid #DBEAFE;padding:20px 24px;margin:8px 0 24px">
+<div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1D4ED8;margin-bottom:8px">Definition</div>
+<div style="font-size:18px;line-height:1.7;color:#0F172A">A <strong>quadratic equation</strong> is any equation that can be written in the form</div>
+<div class="eq" style="margin:0;padding:14px 0 6px"><i>ax</i>² + <i>bx</i> + <i>c</i> = 0,&#160;&#160;&#160;<span style="font-size:20px">where <i>a</i> ≠ 0.</span></div>
+<div style="font-size:15px;line-height:1.6;color:#334155">The values of <i>x</i> that make it true are called its <strong>roots</strong> or <strong>solutions</strong>.</div>
+</div>
+
+<h2 id="key" class="h2">The key idea: the zero product property</h2>
+<p>If two numbers multiply to give zero, at least one of them must be zero. There is no other way to get zero from a multiplication.</p>
+<div style="border:1px solid #E2E8F0;border-radius:14px;margin:8px 0 24px">
+<div class="eq" style="margin:0">If&#160; <i>A</i> × <i>B</i> = 0,&#160; then&#160; <i>A</i> = 0&#160; or&#160; <i>B</i> = 0</div>
+</div>
+<p>So if we can write a quadratic as <span class="m">(<i>x</i> − <i>p</i>)(<i>x</i> − <i>q</i>) = 0</span>, its roots are simply <span class="m"><i>x</i> = <i>p</i></span> and <span class="m"><i>x</i> = <i>q</i></span>.</p>
+
+<figure style="margin:8px 0 32px;border:1px solid #E2E8F0;border-radius:16px;padding:20px 20px 12px;background:#FFFFFF">
+<svg viewBox="0 0 480 320" width="100%" role="img" aria-label="Graph of y equals x squared minus 5x plus 6. The curve crosses the x-axis at x equals 2 and x equals 3.">
+<g stroke="#F1F5F9" stroke-width="1"><path d="M120 10V310M200 10V310M280 10V310M360 10V310M440 10V310"></path><path d="M40 20H460M40 100H460M40 180H460"></path></g>
+<path d="M20 260H462" stroke="#94A3B8" stroke-width="1.5"></path><path d="M40 12V312" stroke="#94A3B8" stroke-width="1.5"></path>
+<g font-family="Inter" font-size="12" fill="#64748B"><text x="116" y="280">1</text><text x="196" y="280">2</text><text x="276" y="280">3</text><text x="356" y="280">4</text><text x="436" y="280">5</text><text x="22" y="184">2</text><text x="22" y="104">4</text><text x="22" y="24">6</text><text x="452" y="252" font-style="italic" font-family="STIX Two Text" font-size="16">x</text><text x="48" y="16" font-style="italic" font-family="STIX Two Text" font-size="16">y</text></g>
+<path d="M40 20 Q 240 520 440 20" fill="none" stroke="#2563EB" stroke-width="3"></path>
+<circle cx="200" cy="260" r="7" fill="#10B981" stroke="#FFFFFF" stroke-width="2.5"></circle><circle cx="280" cy="260" r="7" fill="#10B981" stroke="#FFFFFF" stroke-width="2.5"></circle>
+<g font-family="STIX Two Text" font-size="17" fill="#047857" font-weight="600"><text x="150" y="240">x = 2</text><text x="292" y="240">x = 3</text></g>
+<text x="318" y="66" font-family="STIX Two Text" font-size="18" fill="#1D4ED8" font-style="italic">y = x² − 5x + 6</text>
+</svg>
+<figcaption style="font-size:14px;color:#64748B;line-height:1.5;padding:8px 4px 4px;font-family:Inter">Figure 1. The roots are where the curve crosses the <i>x</i>-axis, because that is where <i>y</i> = 0.</figcaption>
+</figure>
+
+<h2 id="ex1" class="h2">Worked example 1</h2>
+<div style="border:1px solid #E2E8F0;border-radius:16px;overflow:hidden;margin-bottom:28px">
+<div style="background:#102A43;color:#FFFFFF;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-size:16px;font-weight:600">Solve&#160; <span class="m" style="font-size:22px"><i>x</i>² − 5<i>x</i> + 6 = 0</span></span><span style="font-size:12px;font-weight:600;background:#1E3A5F;border-radius:6px;padding:4px 10px;color:#CBD5E1"><i>a</i> = 1</span></div>
+<div style="padding:4px 24px 8px">
+<div class="step" style="border-top:0"><span class="sn">1</span><div><div style="font-weight:600;font-size:16px">Check it equals zero and identify <i>b</i> and <i>c</i></div><div style="font-size:16px;color:#475569;margin-top:4px;line-height:1.6">The right-hand side is already 0. Here <span class="m"><i>b</i> = −5</span> and <span class="m"><i>c</i> = 6</span>.</div></div></div>
+<div class="step"><span class="sn">2</span><div><div style="font-weight:600;font-size:16px">Find two numbers that multiply to <i>c</i> and add to <i>b</i></div><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;font-family:'STIX Two Text',serif;font-size:18px"><span style="border:1px solid #E2E8F0;border-radius:8px;padding:6px 12px;color:#64748B">1 × 6 → 7</span><span style="border:1px solid #E2E8F0;border-radius:8px;padding:6px 12px;color:#64748B">2 × 3 → 5</span><span style="border:1px solid #E2E8F0;border-radius:8px;padding:6px 12px;color:#64748B">−1 × −6 → −7</span><span style="border:2px solid #10B981;background:#ECFDF5;border-radius:8px;padding:6px 12px;color:#065F46;font-weight:600">−2 × −3 → −5 ✓</span></div></div></div>
+<div class="step"><span class="sn">3</span><div><div style="font-weight:600;font-size:16px">Write the factorized form</div><div class="eq" style="text-align:left;padding:10px 0 0;margin:0;font-size:24px">(<i>x</i> − 2)(<i>x</i> − 3) = 0</div></div></div>
+<div class="step"><span class="sn">4</span><div><div style="font-weight:600;font-size:16px">Apply the zero product property</div><div class="eq" style="text-align:left;padding:10px 0 0;margin:0;font-size:24px"><i>x</i> − 2 = 0&#160;&#160; or &#160;&#160;<i>x</i> − 3 = 0</div></div></div>
+<div class="step"><span class="sn" style="background:#047857">5</span><div><div style="font-weight:600;font-size:16px">Solve each linear equation</div><div class="eq" style="text-align:left;padding:10px 0 0;margin:0;font-size:24px;color:#047857;font-weight:600"><i>x</i> = 2&#160;&#160; or &#160;&#160;<i>x</i> = 3</div></div></div>
+</div>
+<div style="background:#ECFDF5;border-top:1px solid #A7F3D0;padding:14px 24px;font-size:15px;color:#065F46;display:flex;gap:10px;align-items:center;flex-wrap:wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><strong>Check:</strong><span class="m">2² − 5(2) + 6 = 4 − 10 + 6 = 0</span></div>
+</div>
+
+<div style="border-radius:14px;background:#ECFDF5;padding:18px 22px;margin:0 0 24px;display:flex;gap:14px">
+<svg style="flex:none" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"></path></svg>
+<div><div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#047857;margin-bottom:4px">Tip</div><div style="font-size:16px;line-height:1.65;color:#064E3B">If <i>c</i> is positive and <i>b</i> is negative, both numbers in your pair must be <strong>negative</strong>. This cuts your search in half.</div></div>
+</div>
+
+<h2 id="ex2" class="h2">Worked example 2: when <span class="m"><i>a</i> ≠ 1</span></h2>
+<p>When the <span class="m"><i>x</i>²</span> term has a coefficient, we look for two numbers that multiply to <span class="m"><i>a</i> × <i>c</i></span> instead, then split the middle term.</p>
+<div style="border:2px solid #2563EB;border-radius:16px;overflow:hidden;margin-bottom:28px;box-shadow:0 0 0 4px #EFF6FF">
+<div style="background:#EFF6FF;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-size:16px;font-weight:600;color:#102A43">Solve&#160; <span class="m" style="font-size:22px">2<i>x</i>² + 7<i>x</i> + 3 = 0</span></span><span style="font-size:12px;font-weight:600;color:#1D4ED8;background:#FFFFFF;border-radius:6px;padding:4px 10px">You are here</span></div>
+<div style="padding:4px 24px 8px">
+<div class="step" style="border-top:0"><span class="sn">1</span><div><div style="font-weight:600;font-size:16px">Multiply <i>a</i> by <i>c</i></div><div class="eq" style="text-align:left;padding:8px 0 0;margin:0;font-size:22px"><i>ac</i> = 2 × 3 = 6</div></div></div>
+<div class="step"><span class="sn">2</span><div><div style="font-weight:600;font-size:16px">Find two numbers that multiply to 6 and add to 7</div><div style="font-size:16px;color:#475569;margin-top:4px;line-height:1.6">They are <span class="m">6</span> and <span class="m">1</span>. Use them to split <span class="m">7<i>x</i></span> into <span class="m">6<i>x</i> + <i>x</i></span>.</div></div></div>
+<div class="step"><span class="sn">3</span><div><div style="font-weight:600;font-size:16px">Factorize in pairs</div><div class="eq" style="text-align:left;padding:8px 0 0;margin:0;font-size:22px;line-height:1.8">2<i>x</i>² + 6<i>x</i> + <i>x</i> + 3 = 0<br>2<i>x</i>(<i>x</i> + 3) + 1(<i>x</i> + 3) = 0<br><span style="color:#1D4ED8">(2<i>x</i> + 1)(<i>x</i> + 3) = 0</span></div></div></div>
+<div class="step"><span class="sn" style="background:#047857">4</span><div><div style="font-weight:600;font-size:16px">Solve each bracket</div><div class="eq" style="text-align:left;padding:8px 0 0;margin:0;font-size:22px;color:#047857;font-weight:600"><i>x</i> = −½&#160;&#160; or &#160;&#160;<i>x</i> = −3</div></div></div>
+</div>
+</div>
+
+<h2 id="video" class="h2">Watch: factorization in four minutes</h2>
+<div style="border-radius:16px;overflow:hidden;border:1px solid #E2E8F0;margin-bottom:12px">
+<div style="aspect-ratio:16/9;background:#102A43;position:relative;display:flex;align-items:center;justify-content:center">
+<div aria-hidden="true" style="position:absolute;left:32px;top:28px;font-family:'STIX Two Text',serif;font-size:30px;color:#93C5FD;font-style:italic;line-height:1.6">x² + 7x + 12 = 0<br><span style="color:#FFFFFF">(x + 3)(x + 4) = 0</span></div>
+<button aria-label="Play video, 4 minutes 12 seconds" style="width:76px;height:76px;border-radius:50%;border:0;background:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25)"><svg width="30" height="30" viewBox="0 0 24 24" fill="#102A43" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></button>
+<span style="position:absolute;right:16px;bottom:16px;background:rgba(15,23,42,.8);color:#FFFFFF;font-size:13px;font-weight:600;border-radius:6px;padding:4px 8px">4:12</span>
+<span style="position:absolute;left:16px;bottom:16px;background:#FFFFFF;color:#102A43;font-size:12px;font-weight:600;border-radius:6px;padding:4px 8px">Low-data · 6 MB</span>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;font-size:14px;color:#475569;flex-wrap:wrap;gap:8px"><span>Mr. Tabe Ashu · Mathematics teacher</span><span style="display:flex;gap:16px"><a href="#" style="font-weight:600">Audio only</a><a href="#" style="font-weight:600">Transcript</a></span></div>
+</div>
+
+<h2 id="mistakes" class="h2">Common mistakes</h2>
+<div style="display:flex;flex-direction:column;gap:12px;margin-bottom:8px">
+<div style="border-radius:14px;background:#FFFBEB;border:1px solid #FDE68A;padding:18px 22px">
+<div style="display:flex;gap:10px;align-items:center;font-weight:700;color:#92400E;font-size:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg>Not setting the equation to zero first</div>
+<div style="font-size:16px;line-height:1.65;color:#451A03;margin-top:8px"><span class="m"><i>x</i>(<i>x</i> − 5) = 6</span> does <strong>not</strong> mean <span class="m"><i>x</i> = 6</span> or <span class="m"><i>x</i> − 5 = 6</span>. Move everything to one side first: <span class="m"><i>x</i>² − 5<i>x</i> − 6 = 0</span>.</div>
+</div>
+<div style="border-radius:14px;background:#FFFBEB;border:1px solid #FDE68A;padding:18px 22px">
+<div style="display:flex;gap:10px;align-items:center;font-weight:700;color:#92400E;font-size:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg>Dividing both sides by <i>x</i></div>
+<div style="font-size:16px;line-height:1.65;color:#451A03;margin-top:8px">From <span class="m"><i>x</i>² = 3<i>x</i></span>, dividing by <i>x</i> gives only <span class="m"><i>x</i> = 3</span> and loses <span class="m"><i>x</i> = 0</span>. Factorize instead: <span class="m"><i>x</i>(<i>x</i> − 3) = 0</span>.</div>
+</div>
+<div style="border-radius:14px;background:#FFFBEB;border:1px solid #FDE68A;padding:18px 22px">
+<div style="display:flex;gap:10px;align-items:center;font-weight:700;color:#92400E;font-size:16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg>Getting the sign of the root wrong</div>
+<div style="font-size:16px;line-height:1.65;color:#451A03;margin-top:8px">The bracket <span class="m">(<i>x</i> + 3)</span> gives the root <span class="m"><i>x</i> = −3</span>, not <span class="m">+3</span>.</div>
+</div>
+</div>
+
+<h2 id="practice" class="h2">Practice questions</h2>
+<p style="font-size:16px!important;color:#475569!important">Try each one on paper first, then reveal the answer.</p>
+<div style="display:flex;flex-direction:column;gap:10px">
+<details style="border:1px solid #E2E8F0;border-radius:12px"><summary style="display:flex;align-items:center;gap:14px;min-height:60px;padding:0 18px"><span style="width:28px;height:28px;border-radius:8px;background:#F1F5F9;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">1</span><span style="flex:1">Solve&#160; <span class="m" style="font-size:20px"><i>x</i>² + 7<i>x</i> + 12 = 0</span></span><span style="font-size:14px;font-weight:600;color:#2563EB">Show answer</span></summary></details>
+<details open="open" style="border:1px solid #A7F3D0;border-radius:12px"><summary style="display:flex;align-items:center;gap:14px;min-height:60px;padding:0 18px"><span style="width:28px;height:28px;border-radius:8px;background:#ECFDF5;color:#047857;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">2</span><span style="flex:1">Solve&#160; <span class="m" style="font-size:20px"><i>x</i>² − 9 = 0</span></span><span style="font-size:14px;font-weight:600;color:#2563EB">Hide answer</span></summary><div style="padding:0 18px 18px 60px;font-size:16px;line-height:1.7;color:#334155">Difference of two squares: <span class="m">(<i>x</i> − 3)(<i>x</i> + 3) = 0</span>, so <span class="m" style="color:#047857;font-weight:600"><i>x</i> = 3 or <i>x</i> = −3</span>.</div></details>
+<details style="border:1px solid #E2E8F0;border-radius:12px"><summary style="display:flex;align-items:center;gap:14px;min-height:60px;padding:0 18px"><span style="width:28px;height:28px;border-radius:8px;background:#F1F5F9;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">3</span><span style="flex:1">Solve&#160; <span class="m" style="font-size:20px">3<i>x</i>² − 12<i>x</i> = 0</span></span><span style="font-size:14px;font-weight:600;color:#2563EB">Show answer</span></summary></details>
+</div>
+<a href="#" style="margin-top:16px;height:48px;width:max-content;padding:0 20px;border-radius:12px;border:1px solid #CBD5E1;color:#102A43;display:flex;align-items:center;gap:8px;font-weight:600;font-size:15px">Start the full practice set · 5 questions<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+
+<h2 id="summary" class="h2">Summary</h2>
+<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:16px;padding:22px 26px">
+<ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:10px;font-size:17px;line-height:1.6;color:#1E293B">
+<li>Rearrange so the equation equals zero.</li>
+<li>Factorize the quadratic into two brackets (use <span class="m"><i>ac</i></span> when <span class="m"><i>a</i> ≠ 1</span>).</li>
+<li>Set each bracket equal to zero and solve.</li>
+<li>Check both answers by substituting them back.</li>
+</ol>
+</div>
+</div>
+
+<div style="margin-top:48px;padding:28px;border-radius:16px;background:#102A43;color:#FFFFFF;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+<div style="flex:1;min-width:220px"><div style="font-size:18px;font-weight:700">Finished reading?</div><div style="font-size:14px;color:#CBD5E1;margin-top:4px">Mark the lesson complete to update your progress and unlock the practice set.</div></div>
+<button style="height:52px;padding:0 24px;border-radius:12px;border:0;background:#10B981;color:#052E1C;font-weight:700;font-size:16px;display:flex;align-items:center;gap:10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Mark as Complete</button>
+</div>
+
+<nav aria-label="Lesson navigation" style="margin-top:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+<a href="#" style="border:1px solid #E2E8F0;border-radius:14px;padding:16px 18px;color:#0F172A;display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;color:#64748B;display:flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>Previous</span><span style="font-weight:600;font-size:15px">Introduction to Quadratic Equations</span></a>
+<a href="#" style="border:1px solid #E2E8F0;border-radius:14px;padding:16px 18px;color:#0F172A;display:flex;flex-direction:column;gap:4px;text-align:right;align-items:flex-end"><span style="font-size:13px;color:#64748B;display:flex;align-items:center;gap:6px">Next<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span><span style="font-weight:600;font-size:15px">Completing the Square</span></a>
+</nav>
+</article>
+</main>
+
+<aside class="rail" aria-label="On this page" style="flex:1 1 256px;max-width:256px;padding:48px 20px 0 0;flex-direction:column;gap:28px">
+<div>
+<div style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#64748B;padding:0 10px 8px">On this page</div>
+<nav class="toc" style="display:flex;flex-direction:column;border-left:2px solid #E2E8F0">
+<a href="#objectives" style="margin-left:-2px;border-left:2px solid transparent;border-radius:0 8px 8px 0;color:#64748B">Learning objectives</a>
+<a href="#intro" style="margin-left:-2px;border-left:2px solid transparent;border-radius:0 8px 8px 0;color:#64748B">Introduction</a>
+<a href="#key" style="margin-left:-2px;border-left:2px solid transparent;border-radius:0 8px 8px 0;color:#64748B">Zero product property</a>
+<a href="#ex1" style="margin-left:-2px;border-left:2px solid transparent;border-radius:0 8px 8px 0;color:#64748B">Worked example 1</a>
+<a href="#ex2" aria-current="true" style="margin-left:-2px;border-left:2px solid #2563EB;border-radius:0 8px 8px 0;color:#1D4ED8;font-weight:600;background:#EFF6FF">Worked example 2</a>
+<a href="#video" style="margin-left:-2px;border-left:2px solid transparent;border-radius:0 8px 8px 0">Video</a>
+<a href="#mistakes" style="margin-left:-2px;border-left:2px solid transparent;border-radius:0 8px 8px 0">Common mistakes</a>
+<a href="#practice" style="margin-left:-2px;border-left:2px solid transparent;border-radius:0 8px 8px 0">Practice</a>
+<a href="#summary" style="margin-left:-2px;border-left:2px solid transparent;border-radius:0 8px 8px 0">Summary</a>
+</nav>
+</div>
+<div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:14px;padding:16px">
+<div style="font-size:14px;font-weight:700;margin-bottom:10px">Key concepts</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px">
+<a href="#" style="font-size:13px;font-weight:500;color:#334155;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:5px 10px">Quadratic equation</a>
+<a href="#" style="font-size:13px;font-weight:500;color:#334155;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:5px 10px">Root</a>
+<a href="#" style="font-size:13px;font-weight:500;color:#334155;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:5px 10px">Factorization</a>
+<a href="#" style="font-size:13px;font-weight:500;color:#334155;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:5px 10px">Zero product property</a>
+<a href="#" style="font-size:13px;font-weight:500;color:#334155;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:8px;padding:5px 10px">Difference of squares</a>
+</div>
+</div>
+<div>
+<div style="font-size:14px;font-weight:700;margin-bottom:6px;padding:0 10px">Related resources</div>
+<a class="lnk" href="#"><span style="width:32px;height:32px;border-radius:8px;background:#EFF6FF;color:#1D4ED8;display:flex;align-items:center;justify-content:center;flex:none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"></path><path d="M7 16c3-10 7-10 10 0"></path></svg></span>Interactive: graph any quadratic</a>
+<a class="lnk" href="#"><span style="width:32px;height:32px;border-radius:8px;background:#EFF6FF;color:#1D4ED8;display:flex;align-items:center;justify-content:center;flex:none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="2"></rect><path d="m17 10 5-3v10l-5-3z"></path></svg></span>Video: difference of two squares</a>
+<a class="lnk" href="#"><span style="width:32px;height:32px;border-radius:8px;background:#F1F5F9;color:#102A43;display:flex;align-items:center;justify-content:center;flex:none"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6"></path></svg></span>Algebra formula sheet (PDF)</a>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</body>
+</html>
