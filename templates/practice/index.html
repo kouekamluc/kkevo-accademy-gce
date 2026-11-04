@@ -6,6 +6,26 @@
     <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">Practice</h1>
     <p class="mt-1 text-base text-ink-muted">Check your understanding. Every question comes with a worked solution.</p>
   </div>
+
+  {% if review.due or review.upcoming or review.open_session %}
+  <section aria-labelledby="review-heading" class="card flex flex-wrap items-center gap-4 p-5 {% if review.due %}border-warning-200 bg-warning-50{% endif %}">
+    <span class="icon-tile accent-amber">{% include "components/icon.html" with name="refresh" class="h-5 w-5" stroke="2" %}</span>
+    <div class="min-w-0 flex-1">
+      <h2 id="review-heading" class="font-bold">Review my mistakes</h2>
+      <p class="text-sm text-slate-600">{% if review.due %}{{ review.due }} question{{ review.due|pluralize }} you missed {{ review.due|pluralize:"is,are" }} due today. A quick review now makes them stick.{% elif review.open_session %}You have a review in progress.{% else %}All caught up. Next review {{ review.next_due|date:"l j M" }}.{% endif %}</p>
+    </div>
+    <a href="{% url 'practice:review' %}" class="{% if review.due or review.open_session %}btn-primary{% else %}btn-secondary{% endif %} h-11">{% if review.due or review.open_session %}Review now{% else %}See schedule{% endif %}</a>
+  </section>
+  {% endif %}
+
+  {% if mastery_tally %}
+  <section aria-labelledby="mastery-heading" class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+    <h2 id="mastery-heading" class="font-semibold text-ink-heading">Topic mastery</h2>
+    {% for label, count in mastery_tally %}<span class="text-ink-muted"><strong class="text-ink-heading">{{ count }}</strong> {{ label|lower }}</span>{% endfor %}
+    <span class="w-full text-[13px] text-ink-muted nav:w-auto">Mastered = 80% or more on a topic’s set twice, including your latest try.</span>
+  </section>
+  {% endif %}
+
   {% for subject, sets in groups %}
   <section aria-labelledby="subject-{{ subject.pk }}">
     <h2 id="subject-{{ subject.pk }}" class="flex items-center gap-3 text-lg font-bold">{% include "components/subject_icon.html" with subject=subject %}{{ subject.name }}</h2>
@@ -14,6 +34,7 @@
       <li><a href="{{ s.get_absolute_url }}" class="card-link flex h-full flex-col gap-2 rounded-card p-5">
         <span class="font-semibold">{{ s.title }}</span>
         <span class="text-sm text-ink-muted">{{ s.topic.title }} · {{ s.question_count }} question{{ s.question_count|pluralize }}</span>
+        {% include "practice/_mastery.html" with mastery=s.mastery prefix="Topic" %}
         {% if s.last_attempt %}<span class="mt-auto text-sm font-semibold {% if s.last_attempt.score >= 60 %}text-success-text{% else %}text-warning-text{% endif %}">Last score {{ s.last_attempt.score }}%</span>
         {% else %}<span class="mt-auto text-sm font-semibold text-primary">Start →</span>{% endif %}
       </a></li>

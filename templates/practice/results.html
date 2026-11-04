@@ -1,6 +1,7 @@
 {% extends "layouts/quiz.html" %}
 {% load lesson_tags %}
 {% block title %}Results — {{ practice_set.title }}{% endblock %}
+{% block kicker %}{% if attempt.is_exam %}Timed exam{% else %}Practice set{% endif %}{% endblock %}
 {% block progress %}100{% endblock %}
 {% block content %}
 <section class="rounded-panel border border-surface-border bg-white p-6 text-center nav:p-10">
@@ -8,9 +9,20 @@
     <div class="flex h-[96px] w-[96px] flex-col items-center justify-center rounded-full bg-white"><span class="text-3xl font-bold">{{ attempt.score }}%</span></div>
   </div>
   <h1 class="mt-5 text-[26px] font-bold text-navy">{% if attempt.score >= 80 %}Great work!{% elif attempt.score >= 60 %}Good effort{% else %}Keep practising{% endif %}</h1>
-  <p class="mt-2 text-slate-600">You got <strong class="text-ink-heading">{{ attempt.correct_count }} of {{ attempt.total }}</strong> questions right.{% if attempt.score < 60 %} Re-read the lesson, then try again.{% endif %}</p>
+  <p class="mt-2 text-slate-600">You got <strong class="text-ink-heading">{{ attempt.correct_count }} of {{ attempt.total }}</strong> questions right{% if attempt.is_exam %} in exam conditions{% endif %}.{% if attempt.score < 60 %} Re-read the lesson, then try again.{% endif %}</p>
+  {% if hint_count or guess_count or unanswered_count %}
+  <p class="mt-1 text-sm text-ink-muted">{% if unanswered_count %}{{ unanswered_count }} not answered. {% endif %}{% if hint_count %}Hints used on {{ hint_count }} question{{ hint_count|pluralize }}. {% endif %}{% if guess_count %}{{ guess_count }} right answer{{ guess_count|pluralize }} you marked as a guess.{% endif %}</p>
+  {% endif %}
+
+  <div class="mx-auto mt-6 flex max-w-[520px] flex-col items-center gap-2 rounded-card bg-surface-bg px-5 py-4" aria-labelledby="mastery-heading">
+    <h2 id="mastery-heading" class="text-[13px] font-semibold uppercase tracking-[.08em] text-ink-muted">{{ practice_set.topic.title }} · topic mastery</h2>
+    {% include "practice/_mastery.html" with mastery=mastery size="lg" %}
+    <p class="text-sm text-slate-600">{{ mastery.next_step }}</p>
+  </div>
+
   <div class="mt-6 flex flex-wrap justify-center gap-3">
-    <form method="post" action="{% url 'practice:start' practice_set.pk %}">{% csrf_token %}<input type="hidden" name="restart" value="1"><button type="submit" class="btn-secondary h-12">{% include "components/icon.html" with name="refresh" class="h-[18px] w-[18px]" stroke="2" %}Try again</button></form>
+    {% if review_count %}<a href="{% url 'practice:review' %}" class="btn-secondary h-12">{% include "components/icon.html" with name="calendar" class="h-[18px] w-[18px]" stroke="2" %}{{ review_count }} to review from tomorrow</a>{% endif %}
+    <form method="post" action="{% url 'practice:start' practice_set.pk %}">{% csrf_token %}<input type="hidden" name="restart" value="1">{% if attempt.is_exam %}<input type="hidden" name="mode" value="exam">{% endif %}<button type="submit" class="btn-secondary h-12">{% include "components/icon.html" with name="refresh" class="h-[18px] w-[18px]" stroke="2" %}Try again</button></form>
     {% if practice_set.lesson %}<a href="{{ practice_set.lesson.get_absolute_url }}" class="btn-secondary h-12">Back to the lesson</a>{% endif %}
     <a href="{% url 'practice:index' %}" class="btn-primary h-12">More practice</a>
   </div>
@@ -18,12 +30,13 @@
 <section class="mt-6 rounded-panel border border-surface-border bg-white p-6 nav:p-8" aria-labelledby="review-heading">
   <h2 id="review-heading" class="text-lg font-bold">Review your answers</h2>
   <ol class="mt-4 divide-y divide-surface-border">
-    {% for a in answers %}
+    {% for row in rows %}{% with a=row.answer %}
     <li><a href="{% url 'practice:question' attempt.pk forloop.counter %}" class="flex items-start gap-4 py-4 text-ink-heading hover:text-ink-heading">
       <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-semibold {% if a.is_correct %}bg-success text-white{% else %}border-[1.5px] border-dashed border-red-400 text-danger-text{% endif %}">{{ forloop.counter }}</span>
-      <span class="flex-1"><span class="block text-[15px]">{{ a.question.prompt|inline }}</span><span class="mt-1 block text-sm {% if a.is_correct %}text-success-text{% else %}text-danger-text{% endif %}">Your answer: {{ a.choice.text|inline }}</span></span>
+      <span class="flex-1"><span class="block text-[15px]">{{ row.question.prompt|inline }}</span>
+        <span class="mt-1 block text-sm {% if a.is_correct %}text-success-text{% else %}text-danger-text{% endif %}">{% if a %}Your answer: {{ a.display|inline }}{% else %}Not answered{% endif %}{% if a.used_hint %} · <span class="text-warning-text">hint used</span>{% endif %}{% if a.lucky_guess %} · <span class="text-warning-text">you guessed</span>{% endif %}</span></span>
     </a></li>
-    {% endfor %}
+    {% endwith %}{% endfor %}
   </ol>
 </section>
 {% endblock %}

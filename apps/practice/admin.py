@@ -1,12 +1,12 @@
 from django.contrib import admin
 
-from .models import Attempt, Choice, PracticeSet, Question
+from .models import Attempt, Choice, MistakeCard, PracticeSet, Question, ReviewSession
 
 
 class QuestionInline(admin.StackedInline):
     model = Question
     extra = 0
-    fields = (("order", "concept", "skill"), "prompt", "feedback")
+    fields = (("order", "kind", "concept", "skill"), "prompt", "hint", "feedback")
     show_change_link = True
 
 
@@ -30,17 +30,49 @@ class ChoiceInline(admin.TabularInline):
 
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
-    list_display = ("__str__", "practice_set", "concept", "order")
-    list_filter = ("practice_set__topic__module__course",)
+    list_display = ("__str__", "practice_set", "kind", "concept", "has_hint", "order")
+    list_filter = ("kind", "practice_set__topic__module__course")
     list_select_related = ("practice_set",)
     search_fields = ("prompt", "concept")
     autocomplete_fields = ("practice_set",)
     inlines = [ChoiceInline]
+    fieldsets = (
+        (None, {"fields": ("practice_set", ("order", "kind"), "prompt", ("concept", "skill"),
+                           ("diagram_url", "diagram_alt"))}),
+        ("Hint", {"fields": ("hint",), "description": "Optional. Students can open it before answering; "
+                  "we record that they did."}),
+        ("Numeric answer", {"fields": (("numeric_answer", "tolerance", "unit"),),
+                            "description": "Only for “Numeric answer” questions. Leave the choices below empty."}),
+        ("Feedback", {"fields": ("feedback", "solution_steps")}),
+    )
+
+    @admin.display(boolean=True, description="Hint")
+    def has_hint(self, obj):
+        return bool(obj.hint)
 
 
 @admin.register(Attempt)
 class AttemptAdmin(admin.ModelAdmin):
-    list_display = ("user", "practice_set", "correct_count", "total", "completed_at")
+    list_display = ("user", "practice_set", "mode", "correct_count", "total", "completed_at")
+    list_filter = ("mode",)
     list_select_related = ("user", "practice_set")
     search_fields = ("user__email", "practice_set__title")
-    readonly_fields = ("user", "practice_set", "started_at", "completed_at", "correct_count", "total")
+    readonly_fields = ("user", "practice_set", "mode", "time_limit_seconds", "hints_used", "started_at",
+                       "completed_at", "correct_count", "total")
+
+
+@admin.register(MistakeCard)
+class MistakeCardAdmin(admin.ModelAdmin):
+    list_display = ("user", "question", "step", "due_on", "reviews", "retired_at")
+    list_filter = ("step",)
+    list_select_related = ("user", "question")
+    search_fields = ("user__email", "question__prompt")
+    readonly_fields = ("user", "question", "last_missed_at", "reviews")
+
+
+@admin.register(ReviewSession)
+class ReviewSessionAdmin(admin.ModelAdmin):
+    list_display = ("user", "started_at", "completed_at")
+    list_select_related = ("user",)
+    search_fields = ("user__email",)
+    readonly_fields = ("user", "question_ids", "hints_used", "started_at", "completed_at")

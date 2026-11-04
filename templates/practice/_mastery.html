@@ -1,0 +1,5 @@
+{% comment %}Topic mastery: a label plus a 4-segment meter. Context: mastery (apps.practice.mastery.Mastery), optional size="lg".{% endcomment %}
+<span class="inline-flex items-center gap-2" title="{{ mastery.next_step }}">
+  <span class="flex gap-0.5" aria-hidden="true">{% for filled in mastery.segments %}<span class="{% if size == 'lg' %}h-2.5 w-7{% else %}h-1.5 w-4{% endif %} rounded-full {% if filled %}{% if mastery.key == 'mastered' %}bg-success{% elif mastery.key == 'proficient' %}bg-primary{% elif mastery.key == 'familiar' %}bg-primary-300{% else %}bg-warning-text{% endif %}{% else %}bg-surface-border{% endif %}"></span>{% endfor %}</span>
+  <span class="{% if size == 'lg' %}text-[15px]{% else %}text-[13px]{% endif %} font-semibold {% if mastery.key == 'mastered' %}text-success-text{% elif mastery.key == 'proficient' or mastery.key == 'familiar' %}text-primary-700{% elif mastery.key == 'attempted' %}text-warning-text{% else %}text-ink-muted{% endif %}">{% if prefix %}<span class="font-normal text-ink-muted">{{ prefix }}: </span>{% else %}<span class="sr-only">Topic mastery: </span>{% endif %}{{ mastery.label }}</span>
+</span>

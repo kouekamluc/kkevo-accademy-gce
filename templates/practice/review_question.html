@@ -1,0 +1,11 @@
+{% extends "layouts/quiz.html" %}
+{% block title %}Review {{ number }} of {{ total }} — Review my mistakes{% endblock %}
+{% block close_url %}{% url 'practice:review' %}{% endblock %}
+{% block kicker %}Spaced review{% endblock %}
+{% block quiz_title %}Review my mistakes{% endblock %}
+{% block counter %}<div class="shrink-0 text-[15px] font-semibold" aria-live="polite">Question {{ number }} <span class="font-normal text-ink-muted">of {{ total }}</span></div>{% endblock %}
+{% block progress %}{{ progress_percent }}{% endblock %}
+{% block content %}
+<p class="mb-4 text-sm text-ink-muted">From <a href="{{ from_set.get_absolute_url }}" class="font-semibold text-primary">{{ from_set.title }}</a> · {{ from_set.topic.title }}</p>
+{% include "practice/_question.html" %}
+{% endblock %}
