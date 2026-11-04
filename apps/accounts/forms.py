@@ -1,10 +1,11 @@
 from django import forms
 from django.contrib.auth import password_validation
-from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm
+from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm, PasswordResetForm, SetPasswordForm
 
 from apps.academics.models import AcademicLevel, AcademicPathway
 
 from .models import StudentProfile, User
+from .ratelimit import login_limiter, password_reset_limiter
 
 PASSWORD_HELP = "At least 8 characters. Avoid common words, your name, or only numbers."
 
@@ -79,10 +80,21 @@ class RegistrationForm(StyledFormMixin, forms.ModelForm):
 
 
 class EmailAuthenticationForm(StyledFormMixin, AuthenticationForm):
+    """Email + password login with per email+IP brute-force protection and "keep me signed in"."""
+
     error_messages = {
         **AuthenticationForm.error_messages,
         "invalid_login": "That email and password don’t match. Check them and try again.",
+        "rate_limited": (
+            "Too many wrong attempts. For your safety, wait %(minutes)s minute(s) and try again, "
+            "or reset your password."
+        ),
     }
+
+    remember_me = forms.BooleanField(
+        label="Keep me signed in", required=False, initial=True,
+        help_text="Untick this on a shared phone or a cyber café computer.",
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -90,11 +102,88 @@ class EmailAuthenticationForm(StyledFormMixin, AuthenticationForm):
         self.fields["username"].widget = forms.EmailInput(
             attrs={"autocomplete": "email", "autofocus": True, "class": "form-input"}
         )
+        self.fields["password"].widget.attrs["autocomplete"] = "current-password"
+        self.rate_limited = False
+
+    def _rate_limit_error(self, limiter):
+        self.rate_limited = True
+        return forms.ValidationError(
+            self.error_messages["rate_limited"], code="rate_limited",
+            params={"minutes": limiter.retry_after_minutes()},
+        )
 
     def clean(self):
-        if self.cleaned_data.get("username"):
-            self.cleaned_data["username"] = self.cleaned_data["username"].strip().lower()
-        return super().clean()
+        email = (self.cleaned_data.get("username") or "").strip().lower()
+        if email:
+            self.cleaned_data["username"] = email
+        limiter = login_limiter(self.request, email) if email and self.request is not None else None
+        if limiter and limiter.is_blocked():
+            raise self._rate_limit_error(limiter)
+        try:
+            cleaned = super().clean()
+        except forms.ValidationError as error:
+            if limiter and error.code == "invalid_login":
+                limiter.hit()
+                if limiter.is_blocked():
+                    raise self._rate_limit_error(limiter) from error
+                if limiter.remaining <= 2:
+                    raise forms.ValidationError(
+                        f"{self.error_messages['invalid_login']} "
+                        f"{limiter.remaining} attempt(s) left before a short pause.",
+                        code="invalid_login",
+                    ) from error
+            raise
+        if limiter:
+            limiter.reset()
+        return cleaned
+
+
+class StyledPasswordResetForm(StyledFormMixin, PasswordResetForm):
+    """Asks for the account email. Limited per IP so it can't be used to flood inboxes."""
+
+    def __init__(self, *args, request=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.request = request
+        self.fields["email"].widget.attrs.update({"autofocus": True})
+
+    def clean_email(self):
+        email = self.cleaned_data["email"].strip().lower()
+        if self.request is not None:
+            limiter = password_reset_limiter(self.request)
+            if limiter.is_blocked():
+                raise forms.ValidationError(
+                    "You’ve asked for several reset links already. Check your inbox and spam folder, "
+                    f"or try again in {limiter.retry_after_minutes()} minute(s).",
+                    code="rate_limited",
+                )
+            limiter.hit()
+        return email
+
+
+class StyledSetPasswordForm(StyledFormMixin, SetPasswordForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["new_password1"].help_text = PASSWORD_HELP
+        self.fields["new_password1"].widget.attrs["autofocus"] = True
+
+
+class DeleteAccountForm(StyledFormMixin, forms.Form):
+    """Asks for the password before permanently deleting an account."""
+
+    password = forms.CharField(
+        label="Your password", strip=False,
+        widget=forms.PasswordInput(attrs={"autocomplete": "current-password"}),
+    )
+
+    def __init__(self, user, *args, **kwargs):
+        self.user = user
+        super().__init__(*args, **kwargs)
+
+    def clean_password(self):
+        password = self.cleaned_data["password"]
+        if not self.user.check_password(password):
+            raise forms.ValidationError("That password isn’t right.")
+        return password
 
 
 MIX = "mix"

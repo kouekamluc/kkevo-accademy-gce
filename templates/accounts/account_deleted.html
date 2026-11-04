@@ -1,0 +1,10 @@
+{% extends "layouts/auth.html" %}
+{% block title %}Account deleted — GCE Learning Academy{% endblock %}
+{% block content %}
+<div class="card mt-4 p-6 shadow-card sm:p-8">
+  <span class="icon-tile accent-emerald">{% include "components/icon.html" with name="check" class="h-5 w-5" stroke="2.5" %}</span>
+  <h1 class="mt-4 text-[28px] font-bold leading-tight tracking-[-.02em] text-navy">Your account has been deleted</h1>
+  <p class="mt-2 text-[15px] leading-relaxed text-slate-600">Your details and all your learning data have been removed. Good luck with your GCE exams — you’re welcome back any time.</p>
+  <a href="{% url 'core:landing' %}" class="btn-secondary btn-lg mt-7 w-full">Go to the home page</a>
+</div>
+{% endblock %}

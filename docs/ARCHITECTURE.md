@@ -114,4 +114,4 @@ are entered by staff from official documents (`is_official` flags the source).
 - Offline downloads, phone-number sign-up, Google sign-in, notifications and media upload
   (blocks take URLs) are shown in the mockups but not built.
 - Edits to blocks of an already-published lesson go live immediately (no draft versions yet).
-- No login rate limiting yet.
+- Login rate limiting uses the default cache; set `CACHE_URL` to a shared cache when running several workers (see docs/benchmarks/accounts-onboarding.md).
