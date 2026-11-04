@@ -76,6 +76,10 @@ class StudentProfile(models.Model):
         default=45, validators=[MinValueValidator(5), MaxValueValidator(480)],
         help_text="Daily learning goal shown on the dashboard chart.",
     )
+    exam_date = models.DateField(
+        null=True, blank=True,
+        help_text="Date of the student's first GCE paper (from their official timetable). Drives the countdown.",
+    )
     onboarded_at = models.DateTimeField(null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
 
