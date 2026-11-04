@@ -252,7 +252,7 @@ def test_profile_rejects_email_used_by_someone_else(client, onboarded):
 def test_profile_study_settings_allow_mix(client, onboarded):
     client.force_login(onboarded)
     l6 = AcademicLevel.objects.get(code="L6")
-    client.post(reverse("accounts:profile"), {"section": "study", "study-level": l6.pk, "study-pathway": ""})
+    client.post(reverse("accounts:profile"), {"section": "study", "study-level": l6.pk, "study-pathway": "", "study-daily_goal_minutes": 45})
     profile = StudentProfile.objects.get(user=onboarded)
     assert profile.pathway is None and profile.class_label == "Lower Sixth · Mixed"
 
@@ -263,7 +263,7 @@ def test_profile_updates_study_settings(client, onboarded):
     arts = AcademicPathway.objects.get(slug="arts")
     client.post(
         reverse("accounts:profile"),
-        {"section": "study", "study-level": l6.pk, "study-pathway": arts.pk, "study-low_data_mode": "on"},
+        {"section": "study", "study-level": l6.pk, "study-pathway": arts.pk, "study-low_data_mode": "on", "study-daily_goal_minutes": 60},
     )
     profile = StudentProfile.objects.get(user=onboarded)
     assert (profile.level, profile.pathway, profile.low_data_mode) == (l6, arts, True)

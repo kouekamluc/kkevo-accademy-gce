@@ -1,0 +1,10 @@
+{# Checkbox that ticks a planner session done. Swaps itself via HTMX. #}
+<form method="post" action="{% url 'learning:session_toggle' session.pk %}" hx-post="{% url 'learning:session_toggle' session.pk %}" hx-swap="outerHTML" class="contents">
+  {% csrf_token %}<input type="hidden" name="variant" value="{{ variant }}"><input type="hidden" name="next" value="{{ request.get_full_path }}">
+  <button type="submit" role="checkbox" aria-checked="{{ session.is_completed|yesno:'true,false' }}" aria-label="{% if session.is_completed %}Mark “{{ session.title }}” not done{% else %}Mark “{{ session.title }}” done{% endif %}"
+          class="flex h-11 w-11 shrink-0 items-center justify-center rounded-btn">
+    <span class="flex h-6 w-6 items-center justify-center rounded-md {% if session.is_completed %}bg-success text-white{% else %}border-2 border-slate-300 bg-white{% endif %}">
+      {% if session.is_completed %}{% include "components/icon.html" with name="check" class="h-4 w-4" stroke="3" %}{% endif %}
+    </span>
+  </button>
+</form>

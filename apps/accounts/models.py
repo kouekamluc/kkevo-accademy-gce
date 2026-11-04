@@ -1,4 +1,5 @@
 from django.contrib.auth.models import AbstractUser, BaseUserManager
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 
@@ -70,6 +71,10 @@ class StudentProfile(models.Model):
     )
     low_data_mode = models.BooleanField(
         default=False, help_text="Load lighter images and lower-quality video."
+    )
+    daily_goal_minutes = models.PositiveSmallIntegerField(
+        default=45, validators=[MinValueValidator(5), MaxValueValidator(480)],
+        help_text="Daily learning goal shown on the dashboard chart.",
     )
     onboarded_at = models.DateTimeField(null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True)

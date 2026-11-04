@@ -174,7 +174,8 @@ class StudyPreferencesForm(forms.ModelForm):
 
     class Meta:
         model = StudentProfile
-        fields = ("level", "pathway", "low_data_mode")
+        fields = ("level", "pathway", "daily_goal_minutes", "low_data_mode")
+        labels = {"daily_goal_minutes": "Daily learning goal (minutes)"}
 
 
 class StyledPasswordChangeForm(StyledFormMixin, PasswordChangeForm):

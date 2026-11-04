@@ -53,6 +53,11 @@
             {% for error in study_form.pathway.errors %}<p class="text-[13px] font-medium text-danger-text" role="alert">{{ error }}</p>{% endfor %}
           </div>
         </div>
+        <div class="flex max-w-xs flex-col gap-1.5">
+          <label for="{{ study_form.daily_goal_minutes.id_for_label }}" class="form-label">Daily learning goal (minutes)</label>
+          <input type="number" min="5" max="480" step="5" name="{{ study_form.daily_goal_minutes.html_name }}" id="{{ study_form.daily_goal_minutes.id_for_label }}" value="{{ study_form.daily_goal_minutes.value }}" class="form-input{% if study_form.daily_goal_minutes.errors %} form-input-error{% endif %}">
+          {% for error in study_form.daily_goal_minutes.errors %}<p class="text-[13px] font-medium text-danger-text" role="alert">{{ error }}</p>{% endfor %}
+        </div>
         <label class="flex min-h-touch cursor-pointer items-start gap-3 rounded-xl border border-surface-border bg-surface-bg p-4">
           <input type="checkbox" name="{{ study_form.low_data_mode.html_name }}" {% if study_form.low_data_mode.value %}checked{% endif %} class="mt-0.5 h-5 w-5 rounded border-slate-300 text-primary focus:ring-primary-300">
           <span><span class="block text-sm font-semibold text-ink-heading">Low-data mode</span><span class="block text-sm text-ink-muted">Load lighter images and lower-quality video to save mobile data.</span></span>

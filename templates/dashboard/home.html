@@ -1,19 +1,173 @@
 {% extends "layouts/app.html" %}
 {% block title %}Dashboard — GCE Learning Academy{% endblock %}
+{% block header_left %}
+<form action="{% url 'courses:catalog' %}" method="get" role="search" class="hidden max-w-[480px] nav:block">
+  <label class="flex h-[42px] items-center gap-2.5 rounded-btn border border-surface-border bg-surface-bg px-3.5 text-[15px] text-ink-muted">
+    {% include "components/icon.html" with name="search" class="h-[18px] w-[18px]" stroke="2" %}
+    <input name="q" type="search" placeholder="Search subjects, topics or lessons" aria-label="Search" class="min-w-0 flex-1 border-0 bg-transparent p-0 text-ink-heading placeholder:text-ink-muted focus:ring-0">
+  </label>
+</form>
+{% endblock %}
 {% block content %}
-<div class="mt-2 flex flex-col gap-6">
-  <div>
-    <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[30px]">Welcome, {{ user.first_name|default:user.display_name }}!</h1>
-    <p class="mt-1.5 text-base text-ink-muted">Every lesson you complete brings you closer to your goals.</p>
-  </div>
-  <section class="card flex flex-col items-start gap-4 p-6 shadow-card nav:p-8">
-    <div class="eyebrow">Your class</div>
-    <div class="text-2xl font-bold text-ink-heading">{{ student.class_label }}</div>
-    <p class="max-w-xl text-slate-600">Your subjects and the continue-learning section will appear here. Start by exploring the subjects available for your class.</p>
-    <div class="flex flex-wrap gap-3">
-      <a href="{% url 'courses:catalog' %}?level={{ student.level.slug }}" class="btn-primary">Explore {{ student.level.name }} subjects {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
-      <a href="{% url 'accounts:profile' %}" class="btn-secondary">Change class</a>
+<div class="flex flex-col gap-6 nav:mt-2">
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[30px]">{{ greeting }}, {{ user.first_name|default:user.display_name }}!</h1>
+      <p class="mt-1.5 text-base text-ink-muted">Every lesson you complete brings you closer to your goals.</p>
     </div>
+    {% if streak %}
+    <div class="hidden items-center gap-3 rounded-xl border border-surface-border bg-white px-4 py-3 nav:flex">
+      <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-warning-50 text-warning-text">{% include "components/icon.html" with name="star" class="h-[18px] w-[18px]" %}</span>
+      <span class="text-[15px]"><strong>{{ streak }}-day</strong> learning streak</span>
+    </div>
+    {% endif %}
+  </div>
+
+  {# ---------- Row 1: continue + recommended ---------- #}
+  <div class="grid gap-6 xl:grid-cols-3">
+    <section class="card p-6 shadow-card xl:col-span-2 nav:p-8" aria-labelledby="continue-heading">
+      <div class="flex items-baseline justify-between gap-3">
+        <h2 id="continue-heading" class="text-sm font-semibold uppercase tracking-[.06em] text-primary-700">Continue learning</h2>
+        {% if continue_card %}<span class="text-sm text-ink-muted"><span class="hidden sm:inline">Last opened {{ continue_card.last_opened|timesince }} ago</span><span class="sm:hidden">~{{ continue_card.minutes_left }} min left</span></span>{% endif %}
+      </div>
+      {% if continue_card %}
+      <div class="mt-5 flex flex-col gap-5 lg:flex-row lg:items-center lg:gap-7">
+        <div class="flex flex-1 gap-4 lg:gap-7">
+          <span class="flex h-[72px] w-[72px] shrink-0 flex-col items-center justify-center gap-1 rounded-2xl accent-{{ continue_card.subject.accent }} lg:h-[140px] lg:w-[140px]">
+            {% if continue_card.subject.icon %}{% include "components/icon.html" with name=continue_card.subject.icon class="h-8 w-8 lg:h-10 lg:w-10" %}{% else %}<span class="font-math text-[30px] lg:text-[40px] {% if continue_card.subject.icon_text|length <= 2 %}italic{% endif %}">{{ continue_card.subject.icon_text }}</span>{% endif %}
+            <span class="hidden text-sm font-semibold lg:block">Lesson {{ continue_card.index }} / {{ continue_card.count }}</span>
+          </span>
+          <div class="min-w-0 flex-1">
+            <div class="text-[15px] text-ink-muted">{{ continue_card.subject.name }} · Module {{ continue_card.module.order }}: {{ continue_card.module.title }}<span class="lg:hidden"> · Lesson {{ continue_card.index }}</span></div>
+            <div class="mt-1 text-xl font-bold leading-snug text-ink-heading lg:text-[26px]">{{ continue_card.lesson.title }}</div>
+            <p class="mt-1.5 hidden text-[15px] text-ink-muted lg:block">{% if continue_card.progress.position_label %}You stopped at <strong class="text-ink-heading">{{ continue_card.progress.position_label }}</strong> · {% endif %}about {{ continue_card.minutes_left }} min left</p>
+            <div class="mt-4 flex items-center gap-3"><div class="h-2 flex-1 rounded-full bg-surface-border"><div class="h-2 rounded-full bg-primary" style="width: {{ continue_card.progress.percent }}%"></div></div><span class="text-sm font-semibold">{{ continue_card.progress.percent }}%</span></div>
+          </div>
+        </div>
+        <a href="{{ continue_card.lesson.get_absolute_url }}" class="btn-primary h-14 text-lg lg:px-7">Resume lesson {% include "components/icon.html" with name="arrow" class="h-5 w-5" stroke="2.2" %}</a>
+      </div>
+      {% else %}
+      <div class="mt-5 flex flex-col items-start gap-3">
+        <p class="text-lg font-semibold">You haven’t started a lesson yet</p>
+        <p class="text-[15px] text-slate-600">{% if plan %}Open one of your subjects below to begin.{% else %}Add subjects to your plan, then start your first lesson.{% endif %}</p>
+        <a href="{% if plan %}{% url 'courses:my_subjects' %}{% else %}{% url 'courses:catalog' %}{% endif %}" class="btn-primary">{% if plan %}Go to my subjects{% else %}Explore subjects{% endif %}</a>
+      </div>
+      {% endif %}
+    </section>
+
+    <section class="flex flex-col rounded-2xl bg-navy p-6 text-white nav:p-8" aria-labelledby="recommended-heading">
+      <h2 id="recommended-heading" class="text-sm font-semibold uppercase tracking-[.06em] text-success-300">Recommended next</h2>
+      {% if recommended %}
+      <div class="mt-2 flex items-center gap-4">
+        <div class="min-w-0 flex-1">
+          <div class="text-xl font-bold leading-snug">{{ recommended.lesson.title }}</div>
+          <p class="mt-2 text-[15px] leading-relaxed text-slate-300">{{ recommended.subject.name }} · {{ recommended.lesson.get_lesson_type_display }} lesson · {{ recommended.lesson.estimated_minutes }} min.<span class="hidden nav:inline">{% if recommended.builds_on %} Builds on <em>{{ recommended.builds_on.title }}</em>, which you finished {{ recommended.finished_label }}.{% endif %}</span></p>
+        </div>
+        <a href="{{ recommended.lesson.get_absolute_url }}" class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-navy nav:hidden" aria-label="Start {{ recommended.lesson.title }}"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></a>
+      </div>
+      <div class="mt-4 hidden flex-wrap gap-2 nav:flex">
+        <span class="rounded-md bg-navy-700 px-2.5 py-1 text-sm">{{ recommended.lesson.get_lesson_type_display }}</span>
+        {% if recommended.questions %}<span class="rounded-md bg-navy-700 px-2.5 py-1 text-sm">{{ recommended.questions }} questions</span>{% endif %}
+      </div>
+      <a href="{{ recommended.lesson.get_absolute_url }}" class="btn mt-auto hidden h-12 bg-white text-base text-navy hover:bg-slate-100 hover:text-navy nav:mt-6 nav:flex">Start lesson</a>
+      {% else %}
+      <p class="mt-3 text-[15px] text-slate-300">Finish a lesson and we’ll suggest what to learn next.</p>
+      {% endif %}
+    </section>
+  </div>
+
+  {# ---------- Row 2: subjects + overall ---------- #}
+  <div class="grid gap-6 xl:grid-cols-3">
+    <section class="xl:col-span-2 nav:card nav:p-8 nav:shadow-card" aria-labelledby="subjects-heading">
+      <div class="flex items-center justify-between"><h2 id="subjects-heading" class="text-xl font-bold">My subjects</h2><a href="{% url 'courses:my_subjects' %}" class="text-[15px] font-semibold"><span class="hidden nav:inline">All subjects</span><span class="nav:hidden">See all</span></a></div>
+      <div class="mt-4 grid divide-y divide-surface-border rounded-2xl border border-surface-border bg-white px-5 nav:mt-6 nav:grid-cols-3 nav:gap-4 nav:divide-y-0 nav:border-0 nav:bg-transparent nav:px-0">
+        {% for p in plan %}
+        <a href="{% if p.course %}{{ p.course.get_absolute_url }}{% else %}{% url 'courses:my_subjects' %}{% endif %}" class="flex items-center gap-4 py-4 text-ink-heading hover:text-ink-heading nav:flex-col nav:items-stretch nav:gap-4 nav:rounded-card nav:border nav:border-surface-border nav:p-5 nav:hover:border-primary-300">
+          <div class="flex items-center gap-3.5">{% include "components/subject_icon.html" with subject=p.subject %}<div class="hidden min-w-0 nav:block"><div class="font-semibold">{{ p.subject.name }}</div><div class="text-[13px] text-ink-muted">{% if p.stat %}{{ p.stat.done }} / {{ p.stat.total }} lessons{% else %}Coming soon{% endif %}</div></div></div>
+          <div class="min-w-0 flex-1">
+            <div class="flex justify-between nav:hidden"><span class="font-semibold">{{ p.subject.name }}</span><span class="font-semibold">{{ p.stat.percent|default:0 }}%</span></div>
+            <div class="mt-2 flex items-center gap-3 nav:mt-0"><div class="progress-track h-2 flex-1"><div class="progress-fill" style="width: {{ p.stat.percent|default:0 }}%"></div></div><span class="hidden text-sm font-semibold nav:inline">{{ p.stat.percent|default:0 }}%</span></div>
+          </div>
+        </a>
+        {% endfor %}
+        <a href="{% url 'courses:catalog' %}" class="hidden min-h-[120px] items-center justify-center gap-2 rounded-card border-2 border-dashed border-surface-border text-[15px] font-semibold text-slate-600 hover:border-primary-300 hover:text-navy nav:flex">{% include "components/icon.html" with name="plus" class="h-5 w-5" stroke="2" %}Add a subject</a>
+      </div>
+      {% if not plan %}<p class="mt-3 text-sm text-ink-muted nav:hidden">No subjects yet. <a href="{% url 'courses:catalog' %}" class="font-semibold">Add a subject</a></p>{% endif %}
+    </section>
+
+    <section class="card hidden p-8 shadow-card nav:block" aria-labelledby="overall-heading">
+      <h2 id="overall-heading" class="text-xl font-bold">Overall progress</h2>
+      <div class="mt-5 flex items-center gap-6">
+        <div class="relative h-[140px] w-[140px] shrink-0 rounded-full" style="background: conic-gradient(#10B981 0 {{ overall.percent }}%, #E2E8F0 {{ overall.percent }}% 100%)" role="img" aria-label="{{ overall.percent }}% of lessons complete">
+          <div class="absolute inset-[14px] flex flex-col items-center justify-center rounded-full bg-white"><span class="text-[30px] font-bold">{{ overall.percent }}%</span><span class="text-xs text-ink-muted">complete</span></div>
+        </div>
+        <div class="flex flex-col gap-3 text-[15px] text-ink-muted">
+          <div><strong class="text-xl text-ink-heading">{{ overall.done }}</strong> of {{ overall.total }} lessons</div>
+          {% if avg_score is not None %}<div><strong class="text-xl text-ink-heading">{{ avg_score }}%</strong> avg. practice score</div>{% endif %}
+        </div>
+      </div>
+      {% if continue_card and continue_card.module_left %}
+      <p class="mt-6 rounded-xl bg-surface-bg px-4 py-3.5 text-[15px] leading-relaxed text-slate-700">{{ continue_card.module_left }} lesson{{ continue_card.module_left|pluralize }} left to finish <strong>{{ continue_card.module.title }}</strong>.</p>
+      {% endif %}
+    </section>
+  </div>
+
+  {# ---------- Row 3: activity + revision ---------- #}
+  <div class="grid gap-6 xl:grid-cols-3">
+    <section class="card p-6 shadow-card xl:col-span-2 nav:p-8" aria-labelledby="activity-heading">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <h2 id="activity-heading" class="text-xl font-bold"><span class="hidden nav:inline">Weekly learning activity</span><span class="nav:hidden">This week</span></h2>
+        <span class="text-[15px] text-ink-muted"><strong class="text-ink-heading">{{ week_total }}</strong> <span class="hidden nav:inline">in the last 7 days</span> · goal {{ week_goal }}</span>
+      </div>
+      <div class="relative mt-8 flex h-[220px] items-end gap-3 border-b border-surface-border nav:gap-8" role="img" aria-label="Minutes learned each day this week: {% for d in week.days %}{{ d.label }} {{ d.minutes }}{% if not forloop.last %}, {% endif %}{% endfor %}">
+        <div class="pointer-events-none absolute inset-x-0 border-t border-dashed border-slate-400" style="bottom: {{ week.goal_line }}%"><span class="absolute -top-5 right-0 hidden bg-white pl-2 text-xs text-ink-muted nav:inline">Daily goal · {{ student.daily_goal_minutes }} min</span></div>
+        {% for d in week.days %}
+        <div class="flex h-full flex-1 flex-col items-center justify-end">
+          <span class="mb-1 hidden text-sm {% if d.is_today %}font-semibold text-primary-700{% else %}text-slate-600{% endif %} nav:block">{{ d.minutes }}</span>
+          <div class="w-full max-w-[56px] rounded-t-lg {% if d.is_today %}bg-[repeating-linear-gradient(135deg,#2563EB_0_6px,#3B82F6_6px_12px)]{% elif d.reached %}bg-primary{% else %}bg-primary-100{% endif %}" style="height: {{ d.height }}%; min-height: 4px"></div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="mt-2 flex gap-3 nav:gap-8">{% for d in week.days %}<span class="flex-1 text-center text-sm {% if d.is_today %}font-bold text-ink-heading{% else %}text-slate-600{% endif %}"><span class="hidden nav:inline">{{ d.label }}</span><span class="nav:hidden">{{ d.short }}</span></span>{% endfor %}</div>
+      <div class="mt-4 hidden gap-5 text-sm text-slate-600 nav:flex"><span class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-sm bg-primary"></span>Goal reached</span><span class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-sm bg-primary-100"></span>Below goal</span></div>
+      <dl class="mt-6 grid grid-cols-3 gap-3 border-t border-surface-border pt-5 nav:hidden">
+        <div><dt class="sr-only">Overall</dt><dd class="text-2xl font-bold">{{ overall.percent }}%</dd><dd class="text-sm text-ink-muted">overall complete</dd></div>
+        <div><dt class="sr-only">Practice</dt><dd class="text-2xl font-bold">{% if avg_score is not None %}{{ avg_score }}%{% else %}—{% endif %}</dd><dd class="text-sm text-ink-muted">avg. practice score</dd></div>
+        <div><dt class="sr-only">Streak</dt><dd class="text-2xl font-bold">{{ streak }}</dd><dd class="text-sm text-ink-muted">day streak</dd></div>
+      </dl>
+    </section>
+
+    <section class="nav:card nav:p-8 nav:shadow-card" aria-labelledby="revision-heading">
+      <div class="flex items-center justify-between"><h2 id="revision-heading" class="text-xl font-bold">Upcoming revision</h2>{% url 'learning:planner' as planner_url %}{% if planner_url %}<a href="{{ planner_url }}" class="text-[15px] font-semibold">Planner</a>{% endif %}</div>
+      <ul class="mt-4 divide-y divide-surface-border rounded-2xl border border-surface-border bg-white px-3 nav:mt-5 nav:border-0 nav:px-0">
+        {% for item in upcoming %}
+        <li class="flex items-center gap-2 py-3">
+          {% include "learning/_session_check.html" with session=item.session %}
+          <div class="min-w-0 flex-1"><div class="font-medium text-ink-heading">{{ item.session.title }}</div><div class="text-sm text-ink-muted">{% if item.session.subject %}{{ item.session.subject.name }} · {% endif %}{{ item.session.duration_minutes }} min</div></div>
+          <span class="text-sm {% if item.day == 'Today' %}rounded-md bg-warning-50 px-2 py-0.5 font-semibold text-warning-text{% else %}text-ink-muted{% endif %}">{{ item.day }}</span>
+        </li>
+        {% empty %}
+        <li class="py-5 text-sm text-ink-muted">Nothing planned for the next 7 days.</li>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+
+  {# ---------- Row 4: recently completed ---------- #}
+  <section class="nav:card nav:p-8 nav:shadow-card" aria-labelledby="recent-heading">
+    <div class="flex items-center justify-between"><h2 id="recent-heading" class="text-xl font-bold">Recently completed</h2>{% url 'learning:progress' as progress_url %}{% if progress_url %}<a href="{{ progress_url }}" class="hidden text-[15px] font-semibold nav:inline">View history</a>{% endif %}</div>
+    {% if recent %}
+    <ul class="mt-4 divide-y divide-surface-border rounded-2xl border border-surface-border bg-white px-4 nav:mt-6 nav:grid nav:grid-cols-2 nav:gap-4 nav:divide-y-0 nav:border-0 nav:px-0 xl:grid-cols-4">
+      {% for r in recent %}
+      <li><a href="{{ r.lesson.get_absolute_url }}" class="flex gap-3.5 py-4 text-ink-heading hover:text-ink-heading nav:h-full nav:rounded-card nav:border nav:border-surface-border nav:p-5 nav:hover:border-primary-300">
+        <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-success text-white">{% include "components/icon.html" with name="check" class="h-4 w-4" stroke="3" %}</span>
+        <span><span class="block font-semibold leading-snug">{{ r.lesson.title }}</span><span class="mt-0.5 block text-sm text-ink-muted">{{ r.lesson.course.offering.subject.name }} · {{ r.day_label }}{% if r.attempt %}<span class="hidden nav:inline"> · {{ r.attempt.correct_count }}/{{ r.attempt.total }} correct</span>{% endif %}</span></span>
+      </a></li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="mt-4 text-sm text-ink-muted">Lessons you complete will appear here.</p>
+    {% endif %}
   </section>
 </div>
 {% endblock %}
