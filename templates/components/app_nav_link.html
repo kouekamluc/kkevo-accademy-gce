@@ -1,5 +1,0 @@
-{% url url_name as href %}
-<a href="{{ href }}" {% if nav_active == key %}aria-current="page"{% endif %}
-   class="flex h-11 items-center gap-3 rounded-btn px-3 text-[15px] {% if nav_active == key %}bg-navy font-semibold text-white hover:text-white{% else %}font-medium text-slate-700 hover:bg-slate-100 hover:text-navy{% endif %}">
-  {% include "components/icon.html" with name=icon %}{{ label }}
-</a>

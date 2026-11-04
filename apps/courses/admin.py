@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Course, Lesson, LessonBlock, Module, Topic
+from .models import Course, CourseResource, Lesson, LessonBlock, Module, Topic
 
 
 class ModuleInline(admin.TabularInline):
@@ -8,6 +8,12 @@ class ModuleInline(admin.TabularInline):
     extra = 0
     fields = ("order", "title", "summary")
     show_change_link = True
+
+
+class CourseResourceInline(admin.TabularInline):
+    model = CourseResource
+    extra = 0
+    fields = ("order", "title", "kind", "url", "file", "detail")
 
 
 @admin.register(Course)
@@ -19,7 +25,7 @@ class CourseAdmin(admin.ModelAdmin):
     search_fields = ("title", "summary", "offering__subject__name")
     prepopulated_fields = {"slug": ("title",)}
     autocomplete_fields = ("offering",)
-    inlines = [ModuleInline]
+    inlines = [ModuleInline, CourseResourceInline]
 
     @admin.display(description="Subject", ordering="offering__subject__name")
     def subject_name(self, obj):
@@ -74,16 +80,21 @@ class TopicAdmin(admin.ModelAdmin):
 class LessonBlockInline(admin.StackedInline):
     model = LessonBlock
     extra = 0
-    fields = (("order", "block_type"), "title", "body", "media_url", "data")
+    fields = (("order", "block_type"), "title", "body", ("media_url", "alt_text"), "data")
 
 
 @admin.register(Lesson)
 class LessonAdmin(admin.ModelAdmin):
-    list_display = ("title", "topic", "lesson_type", "estimated_minutes", "status", "order")
+    list_display = ("title", "topic", "lesson_type", "estimated_minutes", "status", "author", "order")
     list_editable = ("status", "order")
     list_filter = ("status", "lesson_type", "topic__module__course__offering__level", "topic__module__course")
     list_select_related = ("topic",)
     search_fields = ("title", "summary", "topic__title")
     prepopulated_fields = {"slug": ("title",)}
-    autocomplete_fields = ("topic", "curriculum_references")
+    autocomplete_fields = ("topic", "curriculum_references", "prerequisites", "author", "reviewer")
+    fieldsets = (
+        (None, {"fields": ("topic", "title", "slug", "summary", ("lesson_type", "estimated_minutes"), "order")}),
+        ("Learning design", {"fields": ("objectives", "key_concepts", "prerequisites", "curriculum_references")}),
+        ("Workflow", {"fields": ("status", "author", "reviewer")}),
+    )
     inlines = [LessonBlockInline]

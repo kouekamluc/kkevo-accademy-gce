@@ -1,0 +1,49 @@
+{% extends "layouts/app.html" %}
+{% block title %}Explore subjects — GCE Learning Academy{% endblock %}
+{% block content %}
+<div class="flex flex-col gap-6 nav:mt-2">
+  <div>
+    <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">Explore Your Subjects</h1>
+    <p class="mt-1 text-base text-ink-muted nav:text-lg">Find the right lessons for your class<span class="hidden nav:inline"> and build your knowledge</span>.</p>
+  </div>
+
+  <form method="get" action="{% url 'courses:catalog' %}" role="search" aria-label="Filter subjects"
+        hx-get="{% url 'courses:catalog' %}" hx-target="#catalog-results" hx-select="#catalog-results" hx-swap="outerHTML"
+        hx-trigger="change, input from:#catalog-q delay:350ms, submit" hx-push-url="true"
+        class="flex flex-wrap items-center gap-2 nav:grid nav:grid-cols-[1.1fr_1fr_.9fr_1.4fr] nav:items-end nav:gap-4 nav:rounded-2xl nav:border nav:border-surface-border nav:bg-white nav:p-6">
+    <div class="order-1 flex flex-col gap-2 nav:order-none">
+      <label for="catalog-level" class="form-label hidden nav:block">Academic level</label>
+      <select id="catalog-level" name="level" class="form-input w-max min-w-[140px] rounded-full border-navy bg-navy font-semibold text-white nav:w-full nav:rounded-input nav:border-slate-300 nav:bg-white nav:font-normal nav:text-ink-heading">
+        {% for lvl in levels %}<option value="{{ lvl.slug }}" {% if lvl == level %}selected{% endif %}>{{ lvl.name }} — {{ lvl.exam_level }} Level</option>{% endfor %}
+      </select>
+    </div>
+    <fieldset class="order-1 max-w-full overflow-x-auto nav:order-none nav:overflow-visible">
+      <legend class="form-label mb-2 hidden nav:block">Stream</legend>
+      <div class="flex w-max gap-2 nav:w-full nav:gap-0 nav:rounded-btn nav:bg-slate-100 nav:p-[3px]">
+        <label class="cursor-pointer nav:flex-1"><input type="radio" name="stream" value="all" class="peer sr-only" {% if stream == "all" %}checked{% endif %}><span class="chip-toggle">All</span></label>
+        {% for p in pathways %}
+        <label class="cursor-pointer nav:flex-1"><input type="radio" name="stream" value="{{ p.slug }}" class="peer sr-only" {% if stream == p.slug %}checked{% endif %}><span class="chip-toggle">{{ p.name }}</span></label>
+        {% endfor %}
+      </div>
+    </fieldset>
+    <div class="order-1 flex flex-col gap-2 nav:order-none">
+      <label for="catalog-category" class="form-label hidden nav:block">Category</label>
+      <select id="catalog-category" name="category" class="form-input w-max rounded-full nav:w-full nav:rounded-input" aria-label="Category">
+        <option value="">All categories</option>
+        {% for value, label in categories %}<option value="{{ value }}" {% if category == value %}selected{% endif %}>{{ label }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="-order-1 flex basis-full flex-col gap-2 nav:order-none">
+      <label for="catalog-q" class="form-label hidden nav:block">Search</label>
+      <div class="relative">
+        <span class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted">{% include "components/icon.html" with name="search" class="h-[18px] w-[18px]" stroke="2" %}</span>
+        <input id="catalog-q" type="search" name="q" value="{{ q }}" placeholder="Subject, topic or keyword" aria-label="Search subjects" class="form-input h-[52px] rounded-xl bg-slate-50 pl-11 nav:h-11 nav:rounded-input nav:bg-white">
+      </div>
+    </div>
+    <input type="hidden" name="sort" value="{{ sort }}">
+    <noscript><button type="submit" class="btn-primary">Apply filters</button></noscript>
+  </form>
+
+  {% include "courses/_catalog_results.html" %}
+</div>
+{% endblock %}

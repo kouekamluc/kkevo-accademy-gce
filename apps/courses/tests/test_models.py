@@ -48,4 +48,9 @@ def test_media_blocks_need_url_and_text_blocks_need_content(lesson):
     with pytest.raises(ValidationError):
         LessonBlock(lesson=lesson, block_type="text").full_clean()
     LessonBlock(lesson=lesson, block_type="text", body="Hello").full_clean()
-    LessonBlock(lesson=lesson, block_type="image", media_url="https://example.com/a.png").full_clean()
+    with pytest.raises(ValidationError):  # images need alt text
+        LessonBlock(lesson=lesson, block_type="image", media_url="https://example.com/a.png").full_clean()
+    LessonBlock(lesson=lesson, block_type="image", media_url="https://example.com/a.png", alt_text="A graph").full_clean()
+    with pytest.raises(ValidationError):  # structured blocks need their data
+        LessonBlock(lesson=lesson, block_type="worked_example", title="Solve").full_clean()
+    LessonBlock(lesson=lesson, block_type="worked_example", data={"steps": [{"title": "Step"}]}).full_clean()

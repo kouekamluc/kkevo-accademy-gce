@@ -7,3 +7,4 @@ node_modules/
 staticfiles/
 media/
 .pytest_cache/
+*.local.txt

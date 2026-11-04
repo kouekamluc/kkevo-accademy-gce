@@ -1,0 +1,172 @@
+{% extends "layouts/app.html" %}
+{% block title %}{{ course.title }} — GCE Learning Academy{% endblock %}
+{% block meta_description %}{{ course.summary|default:course.title }}{% endblock %}
+{% block header_left %}
+<nav aria-label="Breadcrumb" class="truncate text-[15px]">
+  {% if in_plan %}<a href="{% url 'courses:my_subjects' %}">My Subjects</a>{% else %}<a href="{% url 'courses:catalog' %}?level={{ level.slug }}">Explore</a>{% endif %}
+  <span class="mx-1.5 text-ink-muted">/</span><span class="text-ink-heading" aria-current="page">{{ course.title }}</span>
+</nav>
+{% endblock %}
+{% block main_class %}!max-w-none !p-0{% endblock %}
+{% block content %}
+{# ---------- Hero ---------- #}
+<section class="border-b border-surface-border bg-white">
+  <div class="mx-auto grid max-w-[1240px] gap-6 px-4 py-6 nav:grid-cols-[1fr_256px] nav:gap-10 nav:p-8 xl:grid-cols-[1fr_400px]">
+    <div class="flex flex-col gap-5 sm:flex-row sm:gap-6">
+      <div class="flex items-center gap-4 sm:block">
+        <span class="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-2xl sm:h-[76px] sm:w-[76px] accent-{{ subject.accent }}" aria-hidden="true">
+          {% if subject.icon %}{% include "components/icon.html" with name=subject.icon class="h-9 w-9" %}{% else %}<span class="font-math text-[34px] {% if subject.icon_text|length <= 2 %}italic{% endif %}">{{ subject.icon_text }}</span>{% endif %}
+        </span>
+        <div class="sm:hidden">
+          <div class="text-sm font-semibold text-primary-700">GCE {{ level.exam_level }} Level · {{ level.name }}</div>
+          <h1 class="text-[26px] font-bold leading-tight tracking-[-.02em] text-navy">{{ course.title }}</h1>
+        </div>
+      </div>
+      <div class="min-w-0">
+        <div class="hidden flex-wrap gap-2 sm:flex">
+          <span class="rounded-md bg-primary-50 px-2.5 py-1 text-[13px] font-semibold text-primary-700">GCE {{ level.exam_level }} Level · {{ level.name }}</span>
+          {% if pathway_label %}<span class="rounded-md bg-slate-100 px-2.5 py-1 text-[13px] font-semibold text-slate-700">{{ pathway_label }}</span>{% endif %}
+        </div>
+        <h1 class="mt-3 hidden text-[34px] font-bold leading-tight tracking-[-.02em] text-navy sm:block nav:text-[40px]">{{ course.title }}</h1>
+        {% if course.summary %}<p class="max-w-[760px] text-base leading-relaxed text-slate-600 sm:mt-3 sm:text-lg">{{ course.summary }}</p>{% endif %}
+        <ul class="mt-4 flex flex-wrap gap-x-7 gap-y-1 text-[15px] text-slate-600">
+          <li><strong class="text-ink-heading">{{ modules|length }}</strong> module{{ modules|length|pluralize }}</li>
+          <li class="hidden sm:list-item"><strong class="text-ink-heading">{{ topic_count }}</strong> topic{{ topic_count|pluralize }}</li>
+          <li><strong class="text-ink-heading">{{ total }}</strong> lesson{{ total|pluralize }}</li>
+          {% if minutes %}<li><strong class="text-ink-heading">{% if hours %}~{{ hours }} h{% else %}{{ minutes }} min{% endif %}</strong><span class="hidden sm:inline"> of learning</span></li>{% endif %}
+          {% if question_count %}<li class="hidden sm:list-item"><strong class="text-ink-heading">{{ question_count }}</strong> practice question{{ question_count|pluralize }}</li>{% endif %}
+        </ul>
+      </div>
+    </div>
+
+    {# Progress card #}
+    <div class="flex flex-col gap-4 rounded-2xl border border-surface-border bg-surface-bg p-5 nav:self-start nav:bg-white nav:p-6 nav:shadow-card">
+      {% if user.is_authenticated %}
+        <div class="flex items-baseline justify-between"><span class="text-[17px] font-semibold">Your progress</span><span class="text-2xl font-bold nav:text-[30px]">{{ percent }}%</span></div>
+        <div class="h-2.5 overflow-hidden rounded-full bg-surface-border" role="progressbar" aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="Course progress"><div class="h-full rounded-full bg-success" style="width: {{ percent }}%"></div></div>
+        <p class="text-sm text-ink-muted">{{ done }} of {{ total }} lessons complete</p>
+        {% if next_lesson %}
+        <a href="{{ next_lesson.get_absolute_url }}" class="btn-primary h-[52px] text-base">{% if done or next_progress %}Continue Learning{% else %}Start course{% endif %} {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
+        <p class="-mt-1 hidden text-center text-[13px] text-ink-muted nav:block">Next: {{ next_lesson.title }}</p>
+        {% endif %}
+        <form method="post" action="{% url 'courses:toggle_plan' course.offering.pk %}" class="text-center">
+          {% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}">
+          {% if in_plan %}<button type="submit" class="text-[13px] font-medium text-ink-muted underline-offset-2 hover:text-danger-text hover:underline">Remove from my plan</button>
+          {% else %}<button type="submit" class="btn-secondary w-full">{% include "components/icon.html" with name="plus" class="h-[18px] w-[18px]" stroke="2" %}Add to my plan</button>{% endif %}
+        </form>
+      {% else %}
+        <p class="text-[17px] font-semibold">Learn this course for free</p>
+        <p class="text-sm text-slate-600">Create an account to track your progress and continue where you stop.</p>
+        <a href="{% url 'accounts:register' %}" class="btn-primary h-[52px] text-base">Start learning {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
+        <a href="{% url 'accounts:login' %}?next={{ request.get_full_path|urlencode }}" class="text-center text-sm font-semibold">I already have an account</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{# ---------- Content + rail ---------- #}
+<div class="mx-auto grid max-w-[1240px] gap-6 px-4 pb-28 pt-6 nav:grid-cols-[1fr_256px] nav:gap-10 nav:p-8 xl:grid-cols-[1fr_400px]">
+  <section aria-labelledby="content-heading" x-data="courseOutline({{ open_module|default:'null' }})" class="flex min-w-0 flex-col gap-3.5">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <h2 id="content-heading" class="text-xl font-bold">Course content</h2>
+      {% if user.is_authenticated %}
+      <div class="flex items-center gap-2">
+        <div role="tablist" aria-label="Filter lessons" class="flex rounded-btn bg-slate-100 p-[3px]">
+          <template x-for="tab in tabs" :key="tab.key">
+            <button type="button" role="tab" :aria-selected="(filter === tab.key).toString()" @click="filter = tab.key"
+                    class="h-9 rounded-lg px-3.5 text-sm" :class="filter === tab.key ? 'bg-white font-semibold shadow-card' : 'font-medium text-slate-600'" x-text="tab.label"></button>
+          </template>
+        </div>
+        <button type="button" class="hidden h-10 px-3 text-sm font-semibold text-primary sm:block" @click="toggleAll()" x-text="allOpen ? 'Collapse all' : 'Expand all'">Expand all</button>
+      </div>
+      {% endif %}
+    </div>
+
+    {% for m in modules %}
+    <div class="overflow-hidden rounded-card border-[1.5px] bg-white {% if m.status == 'progress' %}border-primary-100{% else %}border-surface-border{% endif %}"
+         x-show="moduleVisible({{ m.done }}, {{ m.total }})">
+      <button type="button" class="flex w-full items-center gap-4 p-4 text-left sm:p-5" @click="toggle({{ m.number }})" :aria-expanded="isOpen({{ m.number }}).toString()" aria-controls="module-{{ m.number }}">
+        <span class="flex h-11 w-11 flex-none items-center justify-center rounded-xl font-bold {% if m.status == 'complete' %}bg-success text-white{% elif m.status == 'progress' %}bg-primary text-white{% else %}bg-slate-100 text-navy{% endif %}">
+          {% if m.status == 'complete' %}{% include "components/icon.html" with name="check" class="h-5 w-5" stroke="2.6" %}{% else %}{{ m.number }}{% endif %}
+        </span>
+        <span class="min-w-0 flex-1">
+          <span class="flex flex-wrap items-center gap-2.5">
+            <span class="text-lg font-bold">{{ m.module.title }}</span>
+            {% if m.status == 'progress' %}<span class="hidden rounded-md bg-primary-50 px-2 py-0.5 text-xs font-semibold text-primary-700 sm:inline">In progress</span>
+            {% elif m.status == 'complete' %}<span class="hidden rounded-md bg-success-50 px-2 py-0.5 text-xs font-semibold text-success-text sm:inline">Completed</span>{% endif %}
+          </span>
+          <span class="mt-0.5 block text-sm {% if m.status == 'complete' %}font-semibold text-success-text sm:font-normal sm:text-ink-muted{% else %}text-ink-muted{% endif %}">
+            <span class="sm:hidden">{% if m.status == 'complete' %}Completed · {{ m.total }} lessons{% else %}{{ m.total }} lessons · {{ m.done }} done · {{ m.percent }}%{% endif %}</span>
+            <span class="hidden sm:inline">{{ m.topics|length }} topic{{ m.topics|length|pluralize }} · {{ m.total }} lesson{{ m.total|pluralize }} · {% if m.status == 'progress' %}{{ m.done }} complete{% else %}{{ m.module.summary|default:"" }}{% endif %}</span>
+          </span>
+        </span>
+        {% if user.is_authenticated %}
+        <span class="hidden w-[140px] items-center gap-2.5 sm:flex"><span class="h-1.5 flex-1 rounded-full bg-surface-border"><span class="block h-1.5 rounded-full bg-success" style="width: {{ m.percent }}%"></span></span><span class="text-[13px] font-semibold">{{ m.percent }}%</span></span>
+        {% endif %}
+        <span class="text-slate-500" :class="isOpen({{ m.number }}) && 'rotate-180'">{% include "components/icon.html" with name="chevron-down" class="h-5 w-5" stroke="2" %}</span>
+      </button>
+      <div id="module-{{ m.number }}" x-show="isOpen({{ m.number }})" {% if m.number != open_module %}x-cloak{% endif %}>
+        {% for t in m.topics %}
+        <div class="flex justify-between border-t border-slate-100 bg-surface-bg px-4 py-2.5 text-[13px] font-semibold uppercase tracking-[.04em] text-slate-600 sm:pl-20 sm:pr-5"
+             x-show="topicVisible({{ t.done }}, {{ t.total }})">
+          <span>{{ t.number }} {{ t.topic.title }}</span>
+          <span class="{% if t.total and t.done == t.total %}text-success-text{% endif %}">{{ t.done }} / {{ t.total }}</span>
+        </div>
+        {% for row in t.rows %}{% include "courses/_lesson_row.html" %}{% endfor %}
+        {% endfor %}
+        {% if not m.total %}<p class="border-t border-slate-100 px-5 py-4 text-sm text-ink-muted sm:pl-20">Lessons for this module are being prepared.</p>{% endif %}
+      </div>
+    </div>
+    {% empty %}
+    <div class="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center text-slate-600">The content team is building this course. Check back soon.</div>
+    {% endfor %}
+    {% if modules and not has_syllabus_mapping %}<p class="mt-2 text-sm text-ink-muted">Module structure is not yet mapped to the official GCE syllabus. Mapping is set by the content team.</p>{% endif %}
+  </section>
+
+  <aside class="flex flex-col gap-5" aria-label="Course details">
+    {% if user.is_authenticated and modules %}
+    <div class="hidden rounded-card border border-surface-border bg-white p-6 nav:block">
+      <h2 class="text-lg font-bold">Progress by module</h2>
+      <ul class="mt-4 flex flex-col gap-4">
+        {% for m in modules %}<li><div class="flex justify-between text-[15px]"><span>{{ m.module.title }}</span><strong>{{ m.done }} / {{ m.total }}</strong></div><div class="progress-track mt-2"><div class="progress-fill" style="width: {{ m.percent }}%"></div></div></li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    {% if course.outcomes_list %}
+    <div class="hidden rounded-card border border-surface-border bg-white p-6 nav:block">
+      <h2 class="text-lg font-bold">What you’ll learn</h2>
+      <ul class="mt-4 flex flex-col gap-3">
+        {% for outcome in course.outcomes_list %}<li class="flex gap-3 text-[15px] leading-snug">{% include "components/icon.html" with name="check" class="mt-0.5 h-[18px] w-[18px] shrink-0 text-success-text" stroke="2.4" %}{{ outcome }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    {% with resources=course.resources.all %}{% if resources %}
+    <div class="rounded-card border border-surface-border bg-white px-6 py-2">
+      {% for r in resources %}
+      <a href="{{ r.href }}" class="flex items-center gap-3.5 py-4 text-ink-heading hover:text-ink-heading {% if not forloop.last %}border-b border-surface-border{% endif %}" {% if r.kind == 'pdf' %}download{% endif %}>
+        <span class="icon-tile accent-slate">{% if r.kind == "glossary" %}{% include "components/icon.html" with name="message" %}{% else %}{% include "components/icon.html" with name="file" %}{% endif %}</span>
+        <span class="flex-1"><span class="block font-semibold">{{ r.title }}</span>{% if r.detail %}<span class="block text-[13px] text-ink-muted">{{ r.detail }}</span>{% endif %}</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}{% endwith %}
+  </aside>
+</div>
+
+<script>
+  function courseOutline(openModule) {
+    return {
+      filter: "all",
+      open: openModule ? [openModule] : [],
+      allOpen: false,
+      tabs: [{ key: "all", label: "All" }, { key: "todo", label: "To do" }, { key: "done", label: "Completed" }],
+      isOpen(n) { return this.filter !== "all" || this.open.includes(n); },
+      toggle(n) { this.open = this.open.includes(n) ? this.open.filter(x => x !== n) : [...this.open, n]; },
+      toggleAll() { this.allOpen = !this.allOpen; this.open = this.allOpen ? Array.from({ length: {{ modules|length }} }, (_, i) => i + 1) : []; },
+      moduleVisible(done, total) { return this.filter === "all" || (this.filter === "done" ? done > 0 : done < total); },
+      topicVisible(done, total) { return this.filter === "all" || (this.filter === "done" ? done > 0 : done < total); },
+      rowVisible(state) { return this.filter === "all" || (this.filter === "done" ? state === "done" : state !== "done"); },
+    };
+  }
+</script>
+{% endblock %}

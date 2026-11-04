@@ -25,6 +25,7 @@ class OrderedModel(models.Model):
 
 class PublicationStatus(models.TextChoices):
     DRAFT = "draft", "Draft"
+    REVIEW = "review", "Under review"
     PUBLISHED = "published", "Published"
     ARCHIVED = "archived", "Archived"
 
