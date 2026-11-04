@@ -1,3 +1,4 @@
 <div class="overflow-hidden rounded-card border border-surface-border bg-white">
-  <iframe src="{{ block.media_url }}" title="{{ block.title|default:'Interactive content' }}" loading="lazy" class="aspect-video w-full" sandbox="allow-scripts allow-same-origin"></iframe>
+  {% if low_data %}{% include "lessons/_low_data_gate.html" with media="lessons/players/embed.html" kind="embed" label=block.title href=block.media_url size=block.data.size_mb %}
+  {% else %}{% include "lessons/players/embed.html" %}{% endif %}
 </div>

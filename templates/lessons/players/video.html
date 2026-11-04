@@ -1,0 +1,5 @@
+<video controls {% if low_data %}preload="metadata" autoplay{% else %}preload="none"{% endif %} playsinline class="aspect-video w-full bg-navy"
+       src="{% if low_data and block.data.low_data_url %}{{ block.data.low_data_url }}{% else %}{{ block.media_url }}{% endif %}"
+       {% if block.data.poster and not low_data %}poster="{{ block.data.poster }}"{% endif %}>
+  {% if block.data.captions %}<track kind="captions" src="{{ block.data.captions }}" srclang="en" label="English" default>{% endif %}
+</video>

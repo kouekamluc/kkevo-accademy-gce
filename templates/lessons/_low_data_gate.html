@@ -1,0 +1,16 @@
+{% comment %}
+Low-data placeholder. The real media element (`media` template) sits inside a <template>,
+so the browser downloads nothing until the student taps "Load". Without JavaScript the
+student can still open the file directly.
+Params: media (template name), kind ("image" / "video" / "embed"), label (what it shows).
+{% endcomment %}
+<div x-data="{ loaded: false }" data-low-data-placeholder="{{ kind }}">
+  <template x-if="loaded">{% include media %}</template>
+  <div x-show="!loaded" class="flex flex-col items-center justify-center gap-3 rounded-card border border-dashed border-slate-300 bg-surface-bg px-5 py-8 text-center {% if kind != 'image' %}aspect-video{% endif %}">
+    <span class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-slate-500 print:hidden">{% if kind == "video" %}{% include "components/icon.html" with name="video" class="h-5 w-5" %}{% elif kind == "image" %}{% include "components/icon.html" with name="diagram" class="h-5 w-5" %}{% else %}{% include "components/icon.html" with name="layers" class="h-5 w-5" %}{% endif %}</span>
+    {% if label %}<p class="max-w-md text-sm text-slate-700"><span class="font-semibold">{% if kind == "image" %}Image{% elif kind == "video" %}Video{% else %}Interactive{% endif %}:</span> {{ label }}</p>{% endif %}
+    <p class="text-xs text-ink-muted print:hidden">Low-data mode is on, so this {% if kind == "embed" %}content{% else %}{{ kind }}{% endif %} has not been downloaded{% if size %} (about {{ size }} MB){% endif %}.</p>
+    <button type="button" @click="loaded = true" class="btn-secondary h-11 print:hidden">Load {% if kind == "embed" %}interactive content{% else %}{{ kind }}{% endif %}</button>
+    <noscript><a href="{{ href }}" class="text-sm font-semibold">Open the {{ kind }}</a></noscript>
+  </div>
+</div>
