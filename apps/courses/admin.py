@@ -81,6 +81,21 @@ class LessonBlockInline(admin.StackedInline):
     model = LessonBlock
     extra = 0
     fields = (("order", "block_type"), "title", "body", ("media_url", "alt_text"), "data")
+    verbose_name_plural = "Lesson blocks (published lessons: edit in the content studio so changes are reviewed)"
+
+    @staticmethod
+    def _locked(request, obj):
+        # Blocks of a published lesson are what students see: only the studio's draft/review flow may change them.
+        return obj is not None and obj.status == "published" and not request.user.is_superuser
+
+    def has_add_permission(self, request, obj=None):
+        return not self._locked(request, obj) and super().has_add_permission(request, obj)
+
+    def has_change_permission(self, request, obj=None):
+        return not self._locked(request, obj) and super().has_change_permission(request, obj)
+
+    def has_delete_permission(self, request, obj=None):
+        return not self._locked(request, obj) and super().has_delete_permission(request, obj)
 
 
 @admin.register(Lesson)
