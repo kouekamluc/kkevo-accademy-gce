@@ -21,9 +21,9 @@ What is left for MVP 1 and the pilot, in order:
 | # | Work | Why now | Status |
 |---|---|---|---|
 | 1 | **Feature 9: video & resource library** | Roadmap acceptance test: an approved video appears in its lesson, an unapproved one stays hidden. Before this, a video block was just a URL with no source, rights or review. | Done |
-| 2 | **Run the suite on PostgreSQL** | Tests run on SQLite, which ignores column lengths and some constraints. Production will be PostgreSQL. | Done: 278 tests pass on PostgreSQL 17.5 at `fe72357` (run with `DATABASE_URL` set to PostgreSQL and `--create-db`) |
+| 2 | **Run the suite on PostgreSQL** | Tests run on SQLite, which ignores column lengths and some constraints. Production will be PostgreSQL. | Done: 288 tests pass on PostgreSQL 17.5 at `db71d37` (run with `DATABASE_URL` set to PostgreSQL and `--create-db`) |
 | 3 | **Feature 17: measure the lesson pages** | Page weight and request count of dashboard, course and lesson pages on a throttled 3G profile; fix the heaviest. | Done (`fe72357`; `manage.py measure_pages`, `docs/benchmarks/page-weight.md`) |
-| 4 | **First real module: Form 5 General Mathematics** | The platform has outlines but no real lessons. One excellent module (e.g. Quadratic functions & equations) is the first thing worth showing students. Written by KKEVO staff and checked against the official GCE syllabus; the platform must not invent curriculum content. | Needs the author (you) |
+| 4 | **First real module: Form 5 General Mathematics** | One excellent, reviewed module (e.g. Quadratic functions & equations) is the first thing worth showing students. Since `9c39360` / `db71d37` there are 115 draft lessons and 115 draft practice sets (AI-assisted, loaded by `load_lessons` / `load_practice`) across the 13 outline courses, all hidden from students. They must be checked against the official GCE syllabus, corrected and published by a reviewer, one module at a time; nothing is published automatically. | Drafts exist; needs your review (start with one Form 5 Maths module) |
 | 5 | **Feature 18: deployment** | Production settings, hosting, backups, error monitoring. Start close to the pilot (after April 2027) so hosting is not paid for early. | Later |
 
 ## Feature 9 design
