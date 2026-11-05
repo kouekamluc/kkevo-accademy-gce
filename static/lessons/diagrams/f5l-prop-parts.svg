@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="36" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102A43">The parts of a categorical proposition</text>
+<rect x="20" y="130" width="120" height="56" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="80" y="165" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102A43">All</text>
+<rect x="150" y="130" width="140" height="56" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="220" y="165" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102A43">farmers</text>
+<rect x="300" y="130" width="80" height="56" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="340" y="165" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102A43">are</text>
+<rect x="390" y="130" width="150" height="56" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="465" y="165" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102A43">hard workers</text>
+<path d="M80 190 L80 240 M220 190 L220 240 M340 190 L340 240 M465 190 L465 240" stroke="#102A43" stroke-width="2"/>
+<text x="80" y="262" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB">Quantifier</text>
+<text x="220" y="262" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#047857">Subject term</text>
+<text x="340" y="262" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB">Copula</text>
+<text x="465" y="262" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#047857">Predicate term</text>
+<text x="80" y="284" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">how many</text>
+<text x="220" y="284" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">what we talk about</text>
+<text x="340" y="284" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">links the terms</text>
+<text x="465" y="284" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">what we say about it</text>
+<text x="280" y="330" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43">The whole sentence is true or false.</text>
+</svg>

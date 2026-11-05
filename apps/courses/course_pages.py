@@ -84,6 +84,19 @@ PAGES = {
             "Describe the physical, human and economic geography of Cameroon",
             "Answer Paper 1 multiple choice and plan Paper 2 map-reading and essay questions",
         ]),
+    ("logic", "form-5"): dict(
+        summary="GCE O Level Logic, built on the Board's revised 0590 syllabus: ideas and terms, definitions, "
+                "propositions, symbolic logic and truth tables, inference and syllogisms, other arguments and "
+                "fallacies, with Paper 1 and Paper 2 practice and timed mock papers.",
+        outcomes=[
+            "Explain what logic is, its laws of thought and the three operations of the mind",
+            "Classify terms and write and test definitions and logical divisions",
+            "Write categorical, hypothetical, disjunctive and modal propositions in standard form",
+            "Use symbols and truth tables to test statements",
+            "Test syllogisms and other arguments for validity and soundness",
+            "Spot formal and informal fallacies in everyday reasoning",
+            "Answer Paper 1 multiple choice and plan Paper 2 structured and problem-solving questions",
+        ]),
     ("pure-mathematics-with-mechanics", "lower-sixth"): dict(
         summary="The core pure mathematics of GCE A Level Pure Mathematics with Mechanics: proof, algebra and "
                 "functions, trigonometry, conic sections, calculus, series, differential equations and 3D vectors.",

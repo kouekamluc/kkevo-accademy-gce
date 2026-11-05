@@ -264,6 +264,84 @@ SYLLABI = {
             ("Paper 2", "Seven essay and problem-solving questions, four to be answered, in 2 hours 30 minutes (65%); the map reading question is compulsory."),
         ]),
     ]),
+    ("logic", "form-5"): ("Logic (O Level, 0590)",
+                          "Outline taken from the GCE Board's revised 0590 Logic syllabus (first examined June 2025, "
+                          "dated March 2024), published at camgceb.org. The Board gives a list of nine modules and "
+                          "their topics. Paper 1 is 50 multiple-choice questions in 1 hour 30 minutes; Paper 2 has six "
+                          "questions in 2 hours 30 minutes, five to be answered.", [
+        ("The Foundation of Logic", [
+            ("Definition and origin of Logic", "What logic is and where it comes from."),
+            ("Purpose (value) and division (types) of Logic", "Why logic is studied and its main types."),
+            ("Logic and related fields", "How logic relates to other subjects."),
+            ("Laws of thought", "The laws of thought."),
+            ("Operations of the mind", "The three operations of the mind: simple apprehension, judging and reasoning."),
+        ]),
+        ("First Operation of the Mind: Simple Apprehension (Ideas, Words and Terms)", [
+            ("Properties of ideas and terms", "Properties of ideas and of terms."),
+            ("Classification of terms according to quantity and quality", "Classifying terms by quantity and quality."),
+            ("Classification of terms according to definiteness of meaning and relation", "Classifying terms by definiteness of meaning and by relation."),
+        ]),
+        ("Definitions and Logical Division", [
+            ("The basic functions of language", "What language is used for."),
+            ("Basic notions of definition", "What a definition is and what it is for."),
+            ("Kinds of definition", "The kinds of definition."),
+            ("Rules and fallacies of definition", "The rules of good definition and the fallacies that break them."),
+            ("Structure and rules of logical division", "The structure of logical division and its rules."),
+        ]),
+        ("The Second Operation of the Mind: Judging (Propositions)", [
+            ("Definition and components of a proposition", "What a proposition is and its parts."),
+            ("Properties of categorical propositions", "Properties of categorical propositions."),
+            ("Distribution of terms in categorical propositions", "Which terms are distributed in each categorical proposition."),
+            ("Symbolization and Venn diagramming of categorical propositions", "Symbols and Venn diagrams for categorical propositions."),
+            ("Hypothetical proposition and types", "Hypothetical propositions and their types."),
+            ("Disjunctive proposition and types", "Disjunctive propositions and their types."),
+            ("Modal proposition and types", "Modal propositions and their types."),
+            ("Translating ordinary propositions into standard forms", "Translating ordinary sentences into standard forms, and propositions from one form to another."),
+        ]),
+        ("Introduction to Symbolic Logic", [
+            ("Basic notions and the importance of symbolic logic", "What symbolic logic is and why it matters."),
+            ("Connectives and symbols in symbolic logic", "Connectives and the selected symbols: negation, conjunction, disjunction, material implication and biconditional."),
+            ("Logical constants (truth-functional statements)", "Logical constants and truth-functional statements."),
+            ("Punctuation in symbolic logic", "Punctuation in symbolic formulas."),
+            ("Structure of truth tables and their uses", "How a truth table is built and what it is used for."),
+            ("Truth tables and logical constants", "Truth tables for truth-functional statements."),
+        ]),
+        ("The Third Operation of the Mind: Reasoning (Inference)", [
+            ("Methods of reasoning", "Methods of reasoning."),
+            ("Definition and types of inference", "What inference is and its types."),
+            ("Forms of opposition", "The forms of opposition between propositions."),
+            ("Squares and truth table for opposition", "The square of opposition and the truth table for opposition."),
+            ("Forms of eduction", "The forms of eduction."),
+        ]),
+        ("Mediate Inference (Arguments)", [
+            ("Structure of an argument", "Premises and conclusion."),
+            ("Validity and soundness", "Validity and soundness of arguments."),
+            ("Value of the syllogism and structure of the categorical syllogism", "Why the syllogism matters and the structure of the categorical syllogism."),
+            ("The figures of the categorical syllogism", "The figures of the categorical syllogism."),
+            ("The moods of the categorical syllogism", "The moods of the categorical syllogism."),
+            ("Representing categorical syllogisms on the Venn diagram", "Testing categorical syllogisms with Venn diagrams."),
+            ("Translating categorical arguments into standard forms", "Putting categorical arguments into standard form."),
+            ("The general rules of the syllogism and fallacies", "The general rules of the syllogism and the fallacies from breaking them."),
+        ]),
+        ("Other Types of Arguments", [
+            ("The enthymeme", "The enthymeme."),
+            ("The hypothetical syllogism", "The hypothetical syllogism."),
+            ("The disjunctive syllogism", "The disjunctive syllogism."),
+            ("Definition, nature and importance of the dilemma", "What a dilemma is and why it matters."),
+            ("Constructive dilemma", "The constructive dilemma."),
+            ("Destructive dilemma", "The destructive dilemma."),
+        ]),
+        ("Informal Fallacies", [
+            ("Definition, classification and significance of fallacies", "What fallacies are, how they are classified and why they matter."),
+            ("Fallacies of relevance: fallacies of no evidence", "Fallacies of relevance that offer no evidence."),
+            ("Fallacies of relevance: fallacies of little evidence", "Fallacies of relevance that offer little evidence."),
+            ("Fallacies of ambiguity", "Fallacies of ambiguity."),
+        ]),
+        ("Examination", [
+            ("Paper 1", "50 multiple-choice questions, all to be answered, in 1 hour 30 minutes; one mark each (40% of the marks)."),
+            ("Paper 2", "Six questions in 2 hours 30 minutes: Section A structural (three questions, all answered) and Section B problem-solving (three questions, any two answered); 20 marks each (60%)."),
+        ]),
+    ]),
     ("computer-science", "lower-sixth"): ("Computer Science (A Level, 795) — Year 1", "", [
         ("Computer Organization & Architecture", [
             ("Machine models", "Von Neumann vs Harvard; data, address and control buses."),

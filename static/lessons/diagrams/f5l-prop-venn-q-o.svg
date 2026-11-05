@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="210" cy="175" r="110" fill="none" stroke="#102A43" stroke-width="3"/>
+<circle cx="350" cy="175" r="110" fill="none" stroke="#102A43" stroke-width="3"/>
+<text x="140" y="58" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#2563EB">S</text>
+<text x="420" y="58" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#2563EB">P</text>
+<path d="M153 163 L177 187 M177 163 L153 187" stroke="#B45309" stroke-width="4" stroke-linecap="round"/>
+<text x="280" y="338" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43">Green shading = empty region. X = at least one member.</text>
+</svg>

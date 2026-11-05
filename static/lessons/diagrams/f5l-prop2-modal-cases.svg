@@ -1,0 +1,16 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="#102A43">Five possible cases: is the statement true in each?</text>
+<g stroke="#102A43" stroke-width="2">
+<circle cx="290" cy="100" r="18" fill="#047857"/><circle cx="342" cy="100" r="18" fill="#047857"/><circle cx="394" cy="100" r="18" fill="#047857"/><circle cx="446" cy="100" r="18" fill="#047857"/><circle cx="498" cy="100" r="18" fill="#047857"/>
+<circle cx="290" cy="190" r="18" fill="#047857"/><circle cx="342" cy="190" r="18" fill="#047857"/><circle cx="394" cy="190" r="18" fill="#047857"/><circle cx="446" cy="190" r="18" fill="#ffffff"/><circle cx="498" cy="190" r="18" fill="#ffffff"/>
+<circle cx="290" cy="280" r="18" fill="#ffffff"/><circle cx="342" cy="280" r="18" fill="#ffffff"/><circle cx="394" cy="280" r="18" fill="#ffffff"/><circle cx="446" cy="280" r="18" fill="#ffffff"/><circle cx="498" cy="280" r="18" fill="#ffffff"/>
+</g>
+<text x="24" y="106" font-size="15" font-weight="700" fill="#2563EB">Necessary</text>
+<text x="24" y="196" font-size="15" font-weight="700" fill="#2563EB">Contingent</text>
+<text x="24" y="286" font-size="15" font-weight="700" fill="#2563EB">Impossible</text>
+<text x="24" y="124" font-size="13" fill="#102A43">true in every case</text>
+<text x="24" y="214" font-size="13" fill="#102A43">true in some, false in some</text>
+<text x="24" y="304" font-size="13" fill="#102A43">true in no case</text>
+<text x="280" y="344" text-anchor="middle" font-size="13" fill="#102A43">Green = true in that case. White = false in that case.</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="200" y="14" width="160" height="40" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="40" text-anchor="middle" font-size="16" font-weight="700" fill="#102A43">Fallacies</text>
+<path d="M250 54 L130 100 M310 54 L430 100" stroke="#102A43" stroke-width="2" fill="none"/>
+<rect x="50" y="100" width="160" height="44" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="130" y="127" text-anchor="middle" font-size="15" fill="#102A43">Formal fallacies</text>
+<rect x="350" y="100" width="160" height="44" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="430" y="127" text-anchor="middle" font-size="15" font-weight="700" fill="#047857">Informal fallacies</text>
+<text x="130" y="172" text-anchor="middle" font-size="13" fill="#102A43">wrong FORM</text>
+<text x="130" y="192" text-anchor="middle" font-size="13" fill="#102A43">(e.g. invalid syllogisms)</text>
+<path d="M430 144 L430 170 M430 170 L110 220 M430 170 L280 220 M430 170 L450 220" stroke="#047857" stroke-width="2" fill="none"/>
+<rect x="20" y="220" width="180" height="70" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="110" y="244" text-anchor="middle" font-size="14" font-weight="700" fill="#102A43">No evidence</text>
+<text x="110" y="264" text-anchor="middle" font-size="13" fill="#102A43">premises give</text>
+<text x="110" y="281" text-anchor="middle" font-size="13" fill="#102A43">no real support</text>
+<rect x="215" y="220" width="160" height="70" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="295" y="244" text-anchor="middle" font-size="14" font-weight="700" fill="#102A43">Little evidence</text>
+<text x="295" y="264" text-anchor="middle" font-size="13" fill="#102A43">some support,</text>
+<text x="295" y="281" text-anchor="middle" font-size="13" fill="#102A43">but too weak</text>
+<rect x="390" y="220" width="160" height="70" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="470" y="244" text-anchor="middle" font-size="14" font-weight="700" fill="#102A43">Ambiguity</text>
+<text x="470" y="264" text-anchor="middle" font-size="13" fill="#102A43">a word or phrase</text>
+<text x="470" y="281" text-anchor="middle" font-size="13" fill="#102A43">changes meaning</text>
+<text x="280" y="328" text-anchor="middle" font-size="13" fill="#B45309">The first two groups are the Board's "relevance" groups.</text>
+<text x="280" y="346" text-anchor="middle" font-size="13" fill="#B45309">Textbooks group the fallacies differently.</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="560" height="360" fill="#ffffff"/><text x="280" y="38" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">Paper 1: a plan for 90 minutes</text>
+<rect x="30" y="90" width="330" height="70" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="360" y="90" width="150" height="70" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<rect x="510" y="90" width="20" height="70" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<text x="195" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Pass 1</text>
+<text x="195" y="144" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">easy marks, about 55 min</text>
+<text x="435" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#047857">Pass 2</text>
+<text x="435" y="144" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">ticked ones, 25 min</text>
+<line x1="30" y1="180" x2="30" y2="196" stroke="#102A43" stroke-width="2"/><line x1="360" y1="180" x2="360" y2="196" stroke="#102A43" stroke-width="2"/><line x1="510" y1="180" x2="510" y2="196" stroke="#102A43" stroke-width="2"/><line x1="530" y1="180" x2="530" y2="196" stroke="#102A43" stroke-width="2"/>
+<text x="30" y="218" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">0</text><text x="360" y="218" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">55</text><text x="510" y="218" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">80</text><text x="535" y="218" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">90</text>
+<text x="530" y="250" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="14" fill="#B45309">last 10 min: check every answer is filled</text>
+<text x="280" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">50 questions in 90 minutes is 1.8 minutes a question on average</text>
+<text x="280" y="336" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">KKEVO study advice, not an official rule</text></svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A syllogism layout in which the middle term M is the subject of the major premise and the subject of the minor premise</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="34" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle">A syllogism layout</text>
+<rect x="150" y="60" width="262" height="160" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="164" y="128" font-size="13" fill="#102A43">Major</text>
+<text x="262" y="128" font-size="20" font-weight="700" fill="#B45309" text-anchor="middle">M</text>
+<text x="302" y="128" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="350" y="128" font-size="20" font-weight="700" fill="#2563EB" text-anchor="middle">P</text>
+<text x="164" y="164" font-size="13" fill="#102A43">Minor</text>
+<text x="262" y="164" font-size="20" font-weight="700" fill="#B45309" text-anchor="middle">M</text>
+<text x="302" y="164" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="350" y="164" font-size="20" font-weight="700" fill="#047857" text-anchor="middle">S</text>
+<path d="M262 134 L262 142" stroke="#B45309" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+<line x1="164" y1="176" x2="398" y2="176" stroke="#102A43" stroke-width="2"/>
+<text x="164" y="204" font-size="13" fill="#102A43">Conclusion</text>
+<text x="262" y="204" font-size="20" font-weight="700" fill="#047857" text-anchor="middle">S</text>
+<text x="302" y="204" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="350" y="204" font-size="20" font-weight="700" fill="#2563EB" text-anchor="middle">P</text>
+<text x="280" y="260" font-size="14" fill="#102A43" text-anchor="middle">S = minor term, P = major term, M = middle term.</text>
+<text x="280" y="284" font-size="14" fill="#102A43" text-anchor="middle">The dashed line joins the two places where M stands.</text>
+</svg>

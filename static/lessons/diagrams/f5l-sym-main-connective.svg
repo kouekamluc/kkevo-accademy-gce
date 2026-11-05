@@ -1,0 +1,42 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif">
+  <rect width="560" height="360" fill="#ffffff"/>
+  <text x="140" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#102A43">(p . q) v r</text>
+  <text x="420" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#102A43">p . (q v r)</text>
+  <line x1="280" y1="50" x2="280" y2="340" stroke="#102A43" stroke-width="2" stroke-dasharray="6 6"/>
+  <!-- left tree -->
+  <g stroke="#102A43" stroke-width="2" fill="none">
+    <line x1="140" y1="104" x2="85" y2="168"/>
+    <line x1="140" y1="104" x2="205" y2="168"/>
+    <line x1="85" y1="208" x2="50" y2="268"/>
+    <line x1="85" y1="208" x2="120" y2="268"/>
+  </g>
+  <circle cx="140" cy="86" r="24" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+  <text x="140" y="94" text-anchor="middle" font-size="22" font-weight="700" fill="#047857">v</text>
+  <circle cx="85" cy="188" r="22" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="85" y="196" text-anchor="middle" font-size="22" font-weight="700" fill="#2563EB">.</text>
+  <circle cx="205" cy="188" r="20" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+  <text x="205" y="195" text-anchor="middle" font-size="18" fill="#102A43">r</text>
+  <circle cx="50" cy="288" r="20" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+  <text x="50" y="295" text-anchor="middle" font-size="18" fill="#102A43">p</text>
+  <circle cx="120" cy="288" r="20" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+  <text x="120" y="295" text-anchor="middle" font-size="18" fill="#102A43">q</text>
+  <!-- right tree -->
+  <g stroke="#102A43" stroke-width="2" fill="none">
+    <line x1="420" y1="104" x2="365" y2="168"/>
+    <line x1="420" y1="104" x2="485" y2="168"/>
+    <line x1="485" y1="208" x2="450" y2="268"/>
+    <line x1="485" y1="208" x2="520" y2="268"/>
+  </g>
+  <circle cx="420" cy="86" r="24" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+  <text x="420" y="94" text-anchor="middle" font-size="22" font-weight="700" fill="#047857">.</text>
+  <circle cx="365" cy="188" r="20" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+  <text x="365" y="195" text-anchor="middle" font-size="18" fill="#102A43">p</text>
+  <circle cx="485" cy="188" r="22" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="485" y="196" text-anchor="middle" font-size="22" font-weight="700" fill="#2563EB">v</text>
+  <circle cx="450" cy="288" r="20" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+  <text x="450" y="295" text-anchor="middle" font-size="18" fill="#102A43">q</text>
+  <circle cx="520" cy="288" r="20" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+  <text x="520" y="295" text-anchor="middle" font-size="18" fill="#102A43">r</text>
+  <text x="140" y="342" text-anchor="middle" font-size="14" fill="#102A43">main connective: v (disjunction)</text>
+  <text x="420" y="342" text-anchor="middle" font-size="14" fill="#102A43">main connective: . (conjunction)</text>
+</svg>

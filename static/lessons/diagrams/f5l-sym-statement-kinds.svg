@@ -1,0 +1,31 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif">
+  <rect width="560" height="360" fill="#ffffff"/>
+  <text x="280" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#102A43">Read the final column of the truth table</text>
+  <!-- tautology -->
+  <rect x="20" y="52" width="165" height="280" rx="10" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+  <text x="102" y="82" text-anchor="middle" font-size="16" font-weight="700" fill="#047857">Tautology</text>
+  <text x="102" y="108" text-anchor="middle" font-size="13" fill="#102A43">p v ~p</text>
+  <g font-size="18" font-weight="700" text-anchor="middle" fill="#047857">
+    <text x="102" y="150">T</text><text x="102" y="180">T</text><text x="102" y="210">T</text><text x="102" y="240">T</text>
+  </g>
+  <text x="102" y="282" text-anchor="middle" font-size="14" fill="#102A43">always true</text>
+  <text x="102" y="304" text-anchor="middle" font-size="14" fill="#102A43">(all T)</text>
+  <!-- contradiction -->
+  <rect x="197" y="52" width="165" height="280" rx="10" fill="#EFF6FF" stroke="#B45309" stroke-width="2"/>
+  <text x="280" y="82" text-anchor="middle" font-size="16" font-weight="700" fill="#B45309">Contradiction</text>
+  <text x="280" y="108" text-anchor="middle" font-size="13" fill="#102A43">p . ~p</text>
+  <g font-size="18" font-weight="700" text-anchor="middle" fill="#B45309">
+    <text x="280" y="150">F</text><text x="280" y="180">F</text><text x="280" y="210">F</text><text x="280" y="240">F</text>
+  </g>
+  <text x="280" y="282" text-anchor="middle" font-size="14" fill="#102A43">always false</text>
+  <text x="280" y="304" text-anchor="middle" font-size="14" fill="#102A43">(all F)</text>
+  <!-- contingent -->
+  <rect x="375" y="52" width="165" height="280" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  <text x="457" y="82" text-anchor="middle" font-size="16" font-weight="700" fill="#2563EB">Contingent</text>
+  <text x="457" y="108" text-anchor="middle" font-size="13" fill="#102A43">p &#8835; q</text>
+  <g font-size="18" font-weight="700" text-anchor="middle" fill="#2563EB">
+    <text x="457" y="150">T</text><text x="457" y="180">F</text><text x="457" y="210">T</text><text x="457" y="240">T</text>
+  </g>
+  <text x="457" y="282" text-anchor="middle" font-size="14" fill="#102A43">sometimes true,</text>
+  <text x="457" y="304" text-anchor="middle" font-size="14" fill="#102A43">sometimes false</text>
+</svg>

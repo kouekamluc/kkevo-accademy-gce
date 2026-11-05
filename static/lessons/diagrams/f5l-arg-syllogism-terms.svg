@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A syllogism about traders at Mokolo market with the major term in blue, minor term in green and middle term in orange</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="30" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle">A categorical syllogism in standard form</text>
+<rect x="20" y="46" width="380" height="58" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="34" y="70" font-size="13" font-weight="700" fill="#102A43">MAJOR PREMISE (first)</text>
+<text x="34" y="92" font-size="15"><tspan fill="#102A43" font-weight="400">All </tspan><tspan fill="#B45309" font-weight="700">traders at Mokolo market</tspan><tspan fill="#102A43" font-weight="400"> pay </tspan><tspan fill="#2563EB" font-weight="700">a daily fee</tspan><tspan fill="#102A43" font-weight="400">.</tspan></text>
+<rect x="20" y="116" width="380" height="58" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="34" y="140" font-size="13" font-weight="700" fill="#102A43">MINOR PREMISE (second)</text>
+<text x="34" y="162" font-size="15"><tspan fill="#102A43" font-weight="400">All </tspan><tspan fill="#047857" font-weight="700">fish sellers</tspan><tspan fill="#102A43" font-weight="400"> are </tspan><tspan fill="#B45309" font-weight="700">traders at Mokolo market</tspan><tspan fill="#102A43" font-weight="400">.</tspan></text>
+<line x1="20" y1="188" x2="400" y2="188" stroke="#102A43" stroke-width="3"/>
+<rect x="20" y="198" width="380" height="58" rx="8" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="34" y="222" font-size="13" font-weight="700" fill="#102A43">CONCLUSION (last)</text>
+<text x="34" y="244" font-size="15"><tspan fill="#102A43" font-weight="400">All </tspan><tspan fill="#047857" font-weight="700">fish sellers</tspan><tspan fill="#102A43" font-weight="400"> pay </tspan><tspan fill="#2563EB" font-weight="700">a daily fee</tspan><tspan fill="#102A43" font-weight="400">.</tspan></text>
+<text x="416" y="78" font-size="15" font-weight="700" fill="#2563EB">P = major term</text>
+<text x="416" y="98" font-size="13" fill="#102A43">predicate of the</text>
+<text x="416" y="115" font-size="13" fill="#102A43">conclusion</text>
+<text x="416" y="150" font-size="15" font-weight="700" fill="#047857">S = minor term</text>
+<text x="416" y="170" font-size="13" fill="#102A43">subject of the</text>
+<text x="416" y="187" font-size="13" fill="#102A43">conclusion</text>
+<text x="416" y="222" font-size="15" font-weight="700" fill="#B45309">M = middle term</text>
+<text x="416" y="242" font-size="13" fill="#102A43">in both premises,</text>
+<text x="416" y="259" font-size="13" fill="#102A43">never in the conclusion</text>
+<text x="20" y="292" font-size="14" fill="#102A43">The major premise contains P and the middle term M.</text>
+<text x="20" y="314" font-size="14" fill="#102A43">The minor premise contains S and the middle term M.</text>
+<text x="20" y="336" font-size="14" fill="#102A43">The conclusion joins S and P. The middle term links them.</text>
+</svg>

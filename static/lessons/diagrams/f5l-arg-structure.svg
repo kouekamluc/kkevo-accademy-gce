@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>An argument: two premises, marked in blue, lead to a conclusion, marked in green, with lists of indicator words</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#102A43"/></marker></defs>
+<text x="280" y="30" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle">The shape of an argument</text>
+<rect x="24" y="52" width="250" height="62" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="38" y="76" font-size="13" font-weight="700" fill="#2563EB">PREMISE 1</text>
+<text x="38" y="98" font-size="15" fill="#102A43">All pupils must wear uniform.</text>
+<rect x="24" y="134" width="250" height="62" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="38" y="158" font-size="13" font-weight="700" fill="#2563EB">PREMISE 2</text>
+<text x="38" y="180" font-size="15" fill="#102A43">Ayuk is a pupil.</text>
+<path d="M274 83 L330 118" stroke="#102A43" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+<path d="M274 165 L330 130" stroke="#102A43" stroke-width="2.5" fill="none" marker-end="url(#a)"/>
+<text x="436" y="80" font-size="15" font-weight="700" fill="#B45309" text-anchor="middle">therefore</text>
+<rect x="336" y="92" width="200" height="62" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+<text x="350" y="116" font-size="13" font-weight="700" fill="#047857">CONCLUSION</text>
+<text x="350" y="138" font-size="15" fill="#102A43">Ayuk must wear uniform.</text>
+<rect x="24" y="226" width="512" height="110" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="40" y="252" font-size="14" font-weight="700" fill="#047857">Words that often point to a conclusion</text>
+<text x="40" y="274" font-size="15" fill="#102A43">therefore, so, thus, hence, consequently</text>
+<text x="40" y="304" font-size="14" font-weight="700" fill="#2563EB">Words that often point to a premise</text>
+<text x="40" y="326" font-size="15" fill="#102A43">because, since, for, as, given that</text>
+</svg>

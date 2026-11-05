@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>The four figures of the categorical syllogism: the middle term M is placed as subject or predicate in the major and minor premises</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="12" y="12" width="262" height="160" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="26" y="38" font-size="15" font-weight="700" fill="#102A43">Figure 1: sub-pre</text>
+<text x="26" y="80" font-size="13" fill="#102A43">Major</text>
+<text x="124" y="80" font-size="20" font-weight="700" fill="#B45309" text-anchor="middle">M</text>
+<text x="164" y="80" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="212" y="80" font-size="20" font-weight="700" fill="#2563EB" text-anchor="middle">P</text>
+<text x="26" y="116" font-size="13" fill="#102A43">Minor</text>
+<text x="124" y="116" font-size="20" font-weight="700" fill="#047857" text-anchor="middle">S</text>
+<text x="164" y="116" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="212" y="116" font-size="20" font-weight="700" fill="#B45309" text-anchor="middle">M</text>
+<path d="M124 86 L212 94" stroke="#B45309" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+<line x1="26" y1="128" x2="260" y2="128" stroke="#102A43" stroke-width="2"/>
+<text x="26" y="156" font-size="13" fill="#102A43">Conclusion</text>
+<text x="124" y="156" font-size="20" font-weight="700" fill="#047857" text-anchor="middle">S</text>
+<text x="164" y="156" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="212" y="156" font-size="20" font-weight="700" fill="#2563EB" text-anchor="middle">P</text>
+<rect x="286" y="12" width="262" height="160" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="300" y="38" font-size="15" font-weight="700" fill="#102A43">Figure 2: pre-pre</text>
+<text x="300" y="80" font-size="13" fill="#102A43">Major</text>
+<text x="398" y="80" font-size="20" font-weight="700" fill="#2563EB" text-anchor="middle">P</text>
+<text x="438" y="80" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="486" y="80" font-size="20" font-weight="700" fill="#B45309" text-anchor="middle">M</text>
+<text x="300" y="116" font-size="13" fill="#102A43">Minor</text>
+<text x="398" y="116" font-size="20" font-weight="700" fill="#047857" text-anchor="middle">S</text>
+<text x="438" y="116" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="486" y="116" font-size="20" font-weight="700" fill="#B45309" text-anchor="middle">M</text>
+<path d="M486 86 L486 94" stroke="#B45309" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+<line x1="300" y1="128" x2="534" y2="128" stroke="#102A43" stroke-width="2"/>
+<text x="300" y="156" font-size="13" fill="#102A43">Conclusion</text>
+<text x="398" y="156" font-size="20" font-weight="700" fill="#047857" text-anchor="middle">S</text>
+<text x="438" y="156" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="486" y="156" font-size="20" font-weight="700" fill="#2563EB" text-anchor="middle">P</text>
+<rect x="12" y="184" width="262" height="160" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="26" y="210" font-size="15" font-weight="700" fill="#102A43">Figure 3: sub-sub</text>
+<text x="26" y="252" font-size="13" fill="#102A43">Major</text>
+<text x="124" y="252" font-size="20" font-weight="700" fill="#B45309" text-anchor="middle">M</text>
+<text x="164" y="252" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="212" y="252" font-size="20" font-weight="700" fill="#2563EB" text-anchor="middle">P</text>
+<text x="26" y="288" font-size="13" fill="#102A43">Minor</text>
+<text x="124" y="288" font-size="20" font-weight="700" fill="#B45309" text-anchor="middle">M</text>
+<text x="164" y="288" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="212" y="288" font-size="20" font-weight="700" fill="#047857" text-anchor="middle">S</text>
+<path d="M124 258 L124 266" stroke="#B45309" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+<line x1="26" y1="300" x2="260" y2="300" stroke="#102A43" stroke-width="2"/>
+<text x="26" y="328" font-size="13" fill="#102A43">Conclusion</text>
+<text x="124" y="328" font-size="20" font-weight="700" fill="#047857" text-anchor="middle">S</text>
+<text x="164" y="328" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="212" y="328" font-size="20" font-weight="700" fill="#2563EB" text-anchor="middle">P</text>
+<rect x="286" y="184" width="262" height="160" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="300" y="210" font-size="15" font-weight="700" fill="#102A43">Figure 4: pre-sub</text>
+<text x="300" y="252" font-size="13" fill="#102A43">Major</text>
+<text x="398" y="252" font-size="20" font-weight="700" fill="#2563EB" text-anchor="middle">P</text>
+<text x="438" y="252" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="486" y="252" font-size="20" font-weight="700" fill="#B45309" text-anchor="middle">M</text>
+<text x="300" y="288" font-size="13" fill="#102A43">Minor</text>
+<text x="398" y="288" font-size="20" font-weight="700" fill="#B45309" text-anchor="middle">M</text>
+<text x="438" y="288" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="486" y="288" font-size="20" font-weight="700" fill="#047857" text-anchor="middle">S</text>
+<path d="M486 258 L398 266" stroke="#B45309" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+<line x1="300" y1="300" x2="534" y2="300" stroke="#102A43" stroke-width="2"/>
+<text x="300" y="328" font-size="13" fill="#102A43">Conclusion</text>
+<text x="398" y="328" font-size="20" font-weight="700" fill="#047857" text-anchor="middle">S</text>
+<text x="438" y="328" font-size="13" fill="#102A43" text-anchor="middle">are</text>
+<text x="486" y="328" font-size="20" font-weight="700" fill="#2563EB" text-anchor="middle">P</text>
+</svg>
