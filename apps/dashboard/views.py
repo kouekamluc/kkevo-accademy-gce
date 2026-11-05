@@ -147,7 +147,8 @@ def home(request):
         .select_related("subject").order_by("starts_at")[:4]
     )
     recent = list(
-        LessonProgress.objects.filter(user=user, completed_at__isnull=False)
+        LessonProgress.objects.filter(user=user, completed_at__isnull=False, lesson__status="published",
+                                      lesson__topic__module__course__status="published")  # only lessons students can open
         .select_related("lesson__topic__module__course__offering__subject").order_by("-completed_at")[:4]
     )
     last_scores = {}

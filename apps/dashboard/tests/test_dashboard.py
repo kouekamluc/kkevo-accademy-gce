@@ -85,3 +85,22 @@ def test_session_toggle_only_for_owner(client, student):
     assert 'aria-checked="true"' in response.content.decode()
     mine.refresh_from_db()
     assert mine.is_completed
+
+
+def test_recent_lessons_skip_courses_that_are_no_longer_published(client, django_user_model, lesson):
+    from django.utils import timezone
+    from apps.learning.models import LessonProgress
+
+    lesson.status = "published"
+    lesson.save()
+    user = django_user_model.objects.create_user(email="old@example.com", password="pw-Strong-123")
+    profile = user.profile
+    profile.level, profile.onboarded_at = lesson.course.offering.level, timezone.now()
+    profile.save()
+    LessonProgress.objects.create(user=user, lesson=lesson, completed_at=timezone.now())
+    client.force_login(user)
+    assert lesson.get_absolute_url() in client.get("/dashboard/").content.decode()
+    course = lesson.course
+    course.status = "draft"  # e.g. a retired demo course
+    course.save()
+    assert lesson.get_absolute_url() not in client.get("/dashboard/").content.decode()
