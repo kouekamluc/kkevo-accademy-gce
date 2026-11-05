@@ -58,6 +58,19 @@ never overwrites existing subjects, offerings or courses.
 
 Check each syllabus against the official GCE Board text before publishing anything built on it.
 
+## Draft lessons
+
+`load_lessons` loads KKEVO's draft lessons (one per syllabus topic, in
+`apps/courses/lesson_content/`) into the GCE outline courses. They are created as **drafts**:
+staff check each one against the official syllabus and publish it in the studio. How to write
+lessons: [docs/curriculum/LESSON_AUTHORING.md](docs/curriculum/LESSON_AUTHORING.md).
+
+```bash
+.venv/Scripts/python manage.py check_lessons            # validate the content files, no database
+.venv/Scripts/python manage.py load_lessons             # create the missing drafts
+.venv/Scripts/python manage.py load_lessons --refresh   # rewrite drafts nobody has edited in the studio
+```
+
 ## Main URLs
 
 | Page | URL | Mockup |

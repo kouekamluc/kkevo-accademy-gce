@@ -158,6 +158,7 @@ class BlockType(models.TextChoices):
     PRACTICE = "practice", "Practice question (show answer)"
     QUIZ = "quiz", "Quick check (multiple choice)"
     SUMMARY = "summary", "Summary list"
+    CODE = "code", "Code listing"
     IMAGE = "image", "Image / diagram"
     GRAPH = "graph", "Function graph (polynomial)"
     VIDEO = "video", "Video"
@@ -172,6 +173,7 @@ DATA_REQUIREMENTS = {
     BlockType.SIMULATION: ("key", "the simulation key"),
     BlockType.GRAPH: ("coeffs", "polynomial coefficients, highest power first"),
 }
+CODE_LANGUAGES = ("python", "c", "cpp", "java", "html", "css", "javascript", "sql", "pseudocode", "text", "bash", "vba")
 
 
 class LessonBlock(OrderedModel):
@@ -213,6 +215,9 @@ class LessonBlock(OrderedModel):
             raise ValidationError({"media_url": "This block type needs a media URL or a video from the library."})
         if self.block_type == BlockType.IMAGE and not self.alt_text:
             raise ValidationError({"alt_text": "Describe the image for students using screen readers."})
+        language = (self.data or {}).get("language")
+        if self.block_type == BlockType.CODE and language and language not in CODE_LANGUAGES:
+            raise ValidationError({"data": f"Unknown code language '{language}'."})
         requirement = DATA_REQUIREMENTS.get(self.block_type)
         if requirement and not (self.data or {}).get(requirement[0]):
             raise ValidationError({"data": f"This block needs {requirement[1]} in data['{requirement[0]}']."})

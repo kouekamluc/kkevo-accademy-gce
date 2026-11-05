@@ -183,6 +183,8 @@ class Command(BaseCommand):
 
     def make_course(self, offering, title, sections, refs):
         name = f"{offering.level.name} {offering.subject.name}"
+        if offering.courses.filter(title=name).exists():  # e.g. the demo course already uses the name
+            name = f"{name} (GCE outline)"
         slug = base = slugify(name)
         n = 2
         while Course.objects.filter(slug=slug).exists():

@@ -26,7 +26,7 @@ from django.utils.text import slugify
 from django.views.decorators.http import require_POST
 
 from apps.academics.models import AcademicLevel, CurriculumReference, Subject
-from apps.courses.models import BlockType, Lesson, LessonBlock, LessonType, Topic, VideoResource, attach_videos
+from apps.courses.models import BlockType, CODE_LANGUAGES, Lesson, LessonBlock, LessonType, Topic, VideoResource, attach_videos
 from apps.practice.models import Question
 
 from . import revisions
@@ -40,6 +40,7 @@ PALETTE = [  # (block_type, label, icon)
     ("definition", "Information Box", "info"), ("worked_example", "Worked example", "list"),
     ("tip", "Tip", "lightbulb"), ("mistake", "Common mistake", "warning"),
     ("practice", "Practice question", "message"), ("summary", "Summary", "check"),
+    ("code", "Code", "code"),
 ]
 NEW_BLOCK_DEFAULTS = {
     "text": {"body": "New paragraph."}, "heading": {"title": "New section"},
@@ -373,7 +374,7 @@ def lesson_edit(request, pk):
         block.stored_media_url = block.media_url
     blocks = attach_videos(blocks, show_hidden=True)
     return render(request, "studio/editor.html", _context(
-        request, lesson=lesson, blocks=blocks, form=form, palette=PALETTE, checklist=lesson_checklist,
+        request, lesson=lesson, blocks=blocks, form=form, palette=PALETTE, code_languages=CODE_LANGUAGES, checklist=lesson_checklist,
         library_videos=VideoResource.objects.only("pk", "title", "review_status", "rights_status"),
         draft=draft, removed=removed, reordered=reordered,
         changed_count=sum(1 for b in blocks if getattr(b, "change", None)),
@@ -423,6 +424,9 @@ def _apply_post(block, post):
         data["answer"] = post.get("answer", "")
     elif block.block_type == BlockType.DEFINITION:
         data["formula"] = post.get("formula", "")
+    elif block.block_type == BlockType.CODE:
+        data["language"] = post.get("language", data.get("language", "text")).strip().lower()
+        data["caption"] = post.get("caption", data.get("caption", "")).strip()
     elif block.block_type == BlockType.VIDEO and "resource" in post:
         choice = post.get("resource", "")
         if choice.isdigit():

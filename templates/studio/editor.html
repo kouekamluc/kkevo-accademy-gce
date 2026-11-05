@@ -75,6 +75,10 @@
           <label class="flex flex-col gap-1.5"><span class="form-label">Steps <span class="font-normal text-ink-muted">— one per line: Step title | LaTeX (optional)</span></span>
             <textarea name="steps" rows="5" class="form-input py-2 font-mono text-sm">{% for step in block.data.steps %}{{ step.title }}{% if step.math %} | {{ step.math }}{% endif %}
 {% endfor %}</textarea></label>
+          {% elif block.block_type == "code" %}
+          <label class="flex flex-col gap-1.5"><span class="form-label">Language</span><select name="language" class="form-input">{% for lang in code_languages %}<option value="{{ lang }}" {% if block.data.language == lang %}selected{% endif %}>{{ lang }}</option>{% endfor %}</select></label>
+          <label class="flex flex-col gap-1.5"><span class="form-label">Code</span><textarea name="body" rows="8" class="form-input py-2 font-mono text-sm" spellcheck="false">{{ block.body }}</textarea></label>
+          <label class="flex flex-col gap-1.5"><span class="form-label">Caption <span class="font-normal text-ink-muted">(optional)</span></span><input name="caption" value="{{ block.data.caption|default:'' }}" class="form-input"></label>
           {% elif block.block_type == "quiz" %}
           <label class="flex flex-col gap-1.5"><span class="form-label">Question</span><textarea name="body" rows="2" class="form-input py-2">{{ block.body }}</textarea></label>
           <label class="flex flex-col gap-1.5"><span class="form-label">Choices <span class="font-normal text-ink-muted">— one per line</span></span><textarea name="choices" rows="4" class="form-input py-2">{% for c in block.data.choices %}{{ c }}

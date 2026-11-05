@@ -1,0 +1,8 @@
+{% load lesson_tags %}<figure class="no-math overflow-hidden rounded-card border border-surface-border bg-white" {% if block.title %}aria-label="{{ block.title }}"{% endif %}>
+  <figcaption class="flex items-center justify-between gap-3 bg-navy px-4 py-2 text-white">
+    <span class="text-sm font-semibold">{{ block.title|default:"Code" }}</span>
+    {% if block.data.language %}<span class="rounded-md bg-navy-700 px-2 py-0.5 font-mono text-xs uppercase tracking-wide text-primary-300">{{ block.data.language }}</span>{% endif %}
+  </figcaption>
+  <pre class="overflow-x-auto bg-surface-bg px-4 py-4 font-mono text-sm leading-relaxed text-ink"><code{% if block.data.language %} class="language-{{ block.data.language }}"{% endif %}>{{ block.body }}</code></pre>
+  {% if block.data.caption %}<p class="border-t border-surface-border px-4 py-2 text-[13px] text-ink-muted">{{ block.data.caption|inline }}</p>{% endif %}
+</figure>
