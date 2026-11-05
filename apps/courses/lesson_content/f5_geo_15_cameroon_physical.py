@@ -428,7 +428,7 @@ Sahelian      1 short (Jun-Sep)       under 900
         EX("Worked example 1: read station A", intro="Describe the climate shown for station A (rainfall in mm: 50, 90, 190, 200, 220, 160, 70, 90, 250, 300, 150, 40 from January to December).", steps=[
             S("Annual rainfall total", math=r"50 + 90 + 190 + 200 + 220 + 160 + 70 + 90 + 250 + 300 + 150 + 40 = 1\,810 \text{ mm}"),
             S("Rainfall pattern", text="There are two peaks: about 220 mm in May and 300 mm in October. There is a short drier spell in July and August and a longer dry spell from December to February."),
-            S("Temperature", math=r"\text{range} = 25.8 - 23.8 = 2.0\,^{\circ}\text{C}", text="The warmest month is February (25.8 °C) and the coolest are July and August (23.8 °C)."),
+            S("Temperature", math=r"\text{range} = 25.8 - 23.8 = 2.0\,{}^{\circ}\text{C}", text="The warmest month is February (25.8 °C) and the coolest are July and August (23.8 °C)."),
             S("Conclusion", text="Two rainy seasons, high rainfall and a very small temperature range are typical of the equatorial (Guinean) climate of the south."),
         ]),
         IMG("f5g-cmr-climate-graph-b.svg",
@@ -437,7 +437,7 @@ Sahelian      1 short (Jun-Sep)       under 900
         EX("Worked example 2: read station B", intro="Describe the climate shown for station B (rainfall in mm: 0, 0, 5, 25, 60, 110, 170, 220, 110, 25, 0, 0 from January to December; hottest month April 34 °C, coolest January 24 °C).", steps=[
             S("Annual rainfall total", math=r"0 + 0 + 5 + 25 + 60 + 110 + 170 + 220 + 110 + 25 + 0 + 0 = 725 \text{ mm}"),
             S("Rainfall pattern", text="There is one peak, in August (220 mm). Only four months (June to September) have more than 100 mm. Six months have almost no rain."),
-            S("Temperature", math=r"\text{range} = 34 - 24 = 10\,^{\circ}\text{C}", text="April is hottest, just before the rains. August is cooler because of cloud and rain."),
+            S("Temperature", math=r"\text{range} = 34 - 24 = 10\,{}^{\circ}\text{C}", text="April is hottest, just before the rains. August is cooler because of cloud and rain."),
             S("Conclusion", text="One short rainy season, a total below about 900 mm and a large temperature range are typical of the Sahelian climate of the Far North."),
         ]),
         H("Vegetation types"),

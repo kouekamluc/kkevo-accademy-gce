@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="A row of dominoes labelled P(1), P(2), P(3), P(k), P(k+1), with arrows showing each domino knocks over the next">
+<rect width="560" height="360" fill="#ffffff"/>
+<g font-family="Inter, Arial, sans-serif" font-size="14">
+<text x="280" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#102A43">Induction is like a line of dominoes</text>
+<rect x="40" y="110" width="40" height="110" rx="4" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5"/>
+<text x="60" y="252" text-anchor="middle" font-size="15" font-weight="700" fill="#2563EB">P(1)</text>
+<rect x="125" y="110" width="40" height="110" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<text x="145" y="252" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">P(2)</text>
+<rect x="210" y="110" width="40" height="110" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<text x="230" y="252" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">P(3)</text>
+<rect x="340" y="110" width="40" height="110" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<text x="360" y="252" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">P(k)</text>
+<rect x="425" y="110" width="40" height="110" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<text x="445" y="252" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">P(k+1)</text>
+<path d="M88 150 L118 150" stroke="#047857" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<path d="M173 150 L203 150" stroke="#047857" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<path d="M388 150 L417 150" stroke="#047857" stroke-width="3" fill="none" marker-end="url(#a)"/>
+<text x="295" y="170" text-anchor="middle" font-size="22" fill="#102A43">...</text>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#047857"/></marker></defs>
+<text x="60" y="92" text-anchor="middle" font-size="14" font-weight="700" fill="#2563EB">1. Base case</text>
+<text x="60" y="280" text-anchor="middle" font-size="13" fill="#2563EB">push this one</text>
+<text x="395" y="92" text-anchor="middle" font-size="14" font-weight="700" fill="#047857">2. Inductive step</text>
+<text x="395" y="280" text-anchor="middle" font-size="13" fill="#047857">P(k) true implies P(k+1) true</text>
+<rect x="40" y="304" width="480" height="38" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280" y="329" text-anchor="middle" font-size="15" font-weight="700" fill="#047857">Conclusion: P(n) is true for every n = 1, 2, 3, ...</text>
+</g>
+</svg>

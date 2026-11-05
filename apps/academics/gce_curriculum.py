@@ -472,6 +472,10 @@ _PURE_CORE = [
     ("3D Vectors", [
         ("Vectors in space", "Scalar product; vector equations of lines and planes; intersections and distances."),
     ]),
+    ("Examination", [
+        ("Paper 1", "Multiple-choice paper covering the whole core (KKEVO practice setting; check the paper format with your teacher)."),
+        ("Paper 2", "Structured pure mathematics paper (KKEVO practice setting; check the paper format with your teacher)."),
+    ]),
 ]
 _PURE_NOTE = "Core pure syllabus; the guide does not split it between Lower and Upper Sixth."
 SYLLABI[("pure-mathematics-with-mechanics", "lower-sixth")] = (
