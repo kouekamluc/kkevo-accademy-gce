@@ -34,28 +34,34 @@ PAGES = {
             "Solve straight-line motion and force problems, or work with discrete probability distributions",
         ]),
     ("computer-science", "form-5"): dict(
-        summary="GCE O Level Computer Science topics on building web pages with HTML5 and CSS, and on the legal, "
-                "ethical and social side of computing, including Cameroon's cybersecurity laws.",
+        summary="GCE O Level Computer Science: build and style web pages with HTML5 and CSS, learn the legal, "
+                "ethical and social side of computing, and practise the exam skills (logic circuits, pseudo-code, "
+                "trace tables, database design, the practical lab) with timed mock papers.",
         outcomes=[
             "Write a correctly structured HTML5 page with text, links, images, tables and forms",
             "Style pages with inline, internal and external CSS, selectors and the box model",
             "Explain copyright, software piracy and open-source licences",
-            "Describe Cameroon's legal framework for cybersecurity, cybercrime and data",
+            "Describe Cameroon's legal framework for cybersecurity and cybercrime, in general terms",
             "Discuss the social and economic effects of ICT",
+            "Draw logic circuits and truth tables, write pseudo-code and complete trace tables",
+            "Design a simple database and prepare for the timed practical paper",
         ]),
     ("ict", "form-5"): dict(
         summary="Hands-on GCE O Level ICT: build and style web pages, use word processors, spreadsheets and "
-                "databases, and understand the laws and social effects of technology in Cameroon.",
+                "databases, understand the laws and social effects of technology in Cameroon, and prepare for "
+                "the theory and practical papers with timed mock papers.",
         outcomes=[
             "Build and style a simple business web page with HTML5 and CSS",
             "Use word processing and spreadsheet formulas and charts to solve everyday problems",
-            "Create and query a small relational database",
-            "Respect copyright and licences, and stay within Cameroon's cyber laws",
+            "Create, query and report from a small relational database",
+            "Respect copyright and licences, and follow Cameroon's cyber rules in general terms",
             "Explain how ICT changes work, business and society",
+            "Plan your time and work through typical tasks in the practical lab",
         ]),
     ("history", "form-5"): dict(
         summary="GCE O Level History: nationalism and independence in French Cameroun and the Southern Cameroons, "
-                "reunification, Cameroon since 1961, African decolonization and the Cold War world.",
+                "reunification, Cameroon since 1961, African decolonization and the Cold War world, with "
+                "exam-technique lessons and a timed multiple-choice mock paper.",
         outcomes=[
             "Explain the rise of nationalism in French Cameroun and the road to independence in 1960",
             "Trace Southern Cameroons politics from 1953 to the plebiscite and reunification in 1961",

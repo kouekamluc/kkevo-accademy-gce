@@ -112,6 +112,11 @@ SYLLABI = {
             ("Office productivity", "Word processing and spreadsheet modelling."),
             ("Databases", "Creating and querying a relational database."),
         ]),
+        ("Examination", [
+            ("Paper 1", "Multiple choice."),
+            ("Paper 2", "Structured theory."),
+            ("Paper 3 (practical)", "Practical lab: word processing, spreadsheets, databases and basic web design."),
+        ]),
     ]),
     ("mathematics", "form-5"): ("General Mathematics (O Level, 570)", "", [
         ("Set Theory & Logic", [
@@ -186,6 +191,10 @@ SYLLABI = {
             ("African decolonization", "Peaceful transfers vs armed struggles; OAU (1963) and AU (2002)."),
             ("Cold War", "Containment, Cuban Missile Crisis, proxy wars, collapse of the USSR."),
             ("Post-Cold War world", "Arab–Israeli conflict and the post-Cold War order."),
+        ]),
+        ("Examination", [
+            ("Paper 1", "Multiple choice."),
+            ("Paper 2", "Structured essays."),
         ]),
     ]),
     ("computer-science", "lower-sixth"): ("Computer Science (A Level, 795) — Year 1", "", [

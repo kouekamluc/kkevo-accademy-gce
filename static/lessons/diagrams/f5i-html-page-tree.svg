@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="16">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="24" text-anchor="middle" font-size="18" fill="#102A43" font-weight="bold">The skeleton of a web page</text>
+<line x1="258" y1="88" x2="95" y2="132" stroke="#102A43" stroke-width="2"/>
+<line x1="258" y1="88" x2="420" y2="132" stroke="#102A43" stroke-width="2"/>
+<line x1="95" y1="168" x2="50" y2="222" stroke="#102A43" stroke-width="2"/>
+<line x1="95" y1="168" x2="140" y2="222" stroke="#102A43" stroke-width="2"/>
+<line x1="420" y1="168" x2="330" y2="222" stroke="#102A43" stroke-width="2"/>
+<line x1="420" y1="168" x2="420" y2="222" stroke="#102A43" stroke-width="2"/>
+<line x1="420" y1="168" x2="510" y2="222" stroke="#102A43" stroke-width="2"/>
+<rect x="203.0" y="52.0" width="110" height="36" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/><text x="258" y="75" text-anchor="middle" font-size="16" fill="#102A43">&lt;html&gt;</text>
+<rect x="40.0" y="132.0" width="110" height="36" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/><text x="95" y="155" text-anchor="middle" font-size="16" fill="#102A43">&lt;head&gt;</text>
+<rect x="365.0" y="132.0" width="110" height="36" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/><text x="420" y="155" text-anchor="middle" font-size="16" fill="#102A43">&lt;body&gt;</text>
+<rect x="10.0" y="222.0" width="80" height="36" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/><text x="50" y="245" text-anchor="middle" font-size="16" fill="#102A43">&lt;meta&gt;</text>
+<rect x="100.0" y="222.0" width="80" height="36" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/><text x="140" y="245" text-anchor="middle" font-size="16" fill="#102A43">&lt;title&gt;</text>
+<rect x="290.0" y="222.0" width="80" height="36" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/><text x="330" y="245" text-anchor="middle" font-size="16" fill="#102A43">&lt;h1&gt;</text>
+<rect x="380.0" y="222.0" width="80" height="36" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/><text x="420" y="245" text-anchor="middle" font-size="16" fill="#102A43">&lt;p&gt;</text>
+<rect x="470.0" y="222.0" width="80" height="36" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/><text x="510" y="245" text-anchor="middle" font-size="16" fill="#102A43">&lt;ul&gt;</text>
+<text x="95" y="205" text-anchor="middle" font-size="14" fill="#2563EB" >information about the page</text>
+<text x="420" y="205" text-anchor="middle" font-size="14" fill="#047857" >what visitors see</text>
+<text x="140" y="296" text-anchor="middle" font-size="14" fill="#102A43" >title: shown on the tab</text>
+<text x="50" y="320" text-anchor="start" font-size="14" fill="#102A43" >meta: UTF-8 characters</text>
+<text x="330" y="296" text-anchor="middle" font-size="14" fill="#102A43" >heading</text>
+<text x="420" y="320" text-anchor="middle" font-size="14" fill="#102A43" >paragraph</text>
+<text x="510" y="296" text-anchor="middle" font-size="14" fill="#102A43" >list</text>
+<text x="280" y="350" text-anchor="middle" font-size="14" fill="#102A43" >Start the file with &lt;!DOCTYPE html&gt; above &lt;html&gt;</text>
+</svg>

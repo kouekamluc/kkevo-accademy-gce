@@ -1,0 +1,44 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#102A43">French Cameroun: road to independence</text>
+<line x1="30" y1="190" x2="530" y2="190" stroke="#102A43" stroke-width="3"/>
+<line x1="50" y1="190" x2="50" y2="140" stroke="#102A43" stroke-width="2"/>
+<circle cx="50" cy="190" r="7" fill="#ECFDF5" stroke="#102A43" stroke-width="3"/>
+<text x="30" y="96" text-anchor="start" font-size="14" font-weight="700" fill="#102A43">Jun 1956</text>
+<text x="30" y="116" text-anchor="start" font-size="14" fill="#102A43">Loi-Cadre</text>
+<text x="30" y="134" text-anchor="start" font-size="14" fill="#102A43">passed</text>
+<line x1="116" y1="190" x2="116" y2="240" stroke="#102A43" stroke-width="2"/>
+<circle cx="116" cy="190" r="7" fill="#ECFDF5" stroke="#102A43" stroke-width="3"/>
+<text x="116" y="262" text-anchor="middle" font-size="14" font-weight="700" fill="#102A43">Dec 1956</text>
+<text x="116" y="282" text-anchor="middle" font-size="14" fill="#102A43">Elections</text>
+<text x="116" y="300" text-anchor="middle" font-size="14" fill="#102A43">held</text>
+<line x1="181" y1="190" x2="181" y2="140" stroke="#102A43" stroke-width="2"/>
+<circle cx="181" cy="190" r="7" fill="#ECFDF5" stroke="#102A43" stroke-width="3"/>
+<text x="181" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#102A43">1957</text>
+<text x="181" y="116" text-anchor="middle" font-size="14" fill="#102A43">Mbida first</text>
+<text x="181" y="134" text-anchor="middle" font-size="14" fill="#102A43">Prime Minister</text>
+<line x1="247" y1="190" x2="247" y2="240" stroke="#102A43" stroke-width="2"/>
+<circle cx="247" cy="190" r="7" fill="#ECFDF5" stroke="#102A43" stroke-width="3"/>
+<text x="247" y="262" text-anchor="middle" font-size="14" font-weight="700" fill="#102A43">Feb 1958</text>
+<text x="247" y="282" text-anchor="middle" font-size="14" fill="#102A43">Ahidjo replaces</text>
+<text x="247" y="300" text-anchor="middle" font-size="14" fill="#102A43">Mbida</text>
+<line x1="313" y1="190" x2="313" y2="140" stroke="#102A43" stroke-width="2"/>
+<circle cx="313" cy="190" r="7" fill="#ECFDF5" stroke="#102A43" stroke-width="3"/>
+<text x="313" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#102A43">1 Jan 1959</text>
+<text x="313" y="116" text-anchor="middle" font-size="14" fill="#102A43">Internal</text>
+<text x="313" y="134" text-anchor="middle" font-size="14" fill="#102A43">autonomy</text>
+<line x1="379" y1="190" x2="379" y2="240" stroke="#102A43" stroke-width="2"/>
+<circle cx="379" cy="190" r="7" fill="#ECFDF5" stroke="#102A43" stroke-width="3"/>
+<text x="379" y="262" text-anchor="middle" font-size="14" font-weight="700" fill="#102A43">Mar 1959</text>
+<text x="379" y="282" text-anchor="middle" font-size="14" fill="#102A43">UN agrees to end</text>
+<text x="379" y="300" text-anchor="middle" font-size="14" fill="#102A43">trusteeship</text>
+<line x1="444" y1="190" x2="444" y2="140" stroke="#2563EB" stroke-width="2"/>
+<circle cx="444" cy="190" r="7" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<text x="444" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#2563EB">1 Jan 1960</text>
+<text x="444" y="116" text-anchor="middle" font-size="14" fill="#102A43">Independence</text>
+<line x1="510" y1="190" x2="510" y2="240" stroke="#102A43" stroke-width="2"/>
+<circle cx="510" cy="190" r="7" fill="#ECFDF5" stroke="#102A43" stroke-width="3"/>
+<text x="530" y="262" text-anchor="end" font-size="14" font-weight="700" fill="#102A43">May 1960</text>
+<text x="530" y="282" text-anchor="end" font-size="14" fill="#102A43">Ahidjo</text>
+<text x="530" y="300" text-anchor="end" font-size="14" fill="#102A43">elected</text><text x="530" y="318" text-anchor="end" font-size="14" fill="#102A43">President</text>
+<text x="280" y="345" text-anchor="middle" font-size="14" fill="#102A43">Events are evenly spaced, not drawn to scale</text></svg>

@@ -33,12 +33,12 @@ from apps.courses.models import Course, Lesson, LessonBlock, Module, Topic
 
 
 def untouched(lesson):
-    """A lesson nobody has worked on in the studio and no student has opened."""
+    """A lesson nobody has worked on in the studio and no student has opened (staff previews do not count)."""
     from apps.learning.models import LessonProgress
     from apps.studio.models import LessonDraft, LessonEvent, LessonRevision
 
-    return not any(model.objects.filter(lesson=lesson).exists()
-                   for model in (LessonDraft, LessonRevision, LessonEvent, LessonProgress))
+    return not any(model.objects.filter(lesson=lesson).exists() for model in (LessonDraft, LessonRevision, LessonEvent)) \
+        and not LessonProgress.objects.filter(lesson=lesson, user__is_staff=False).exists()
 
 
 class Command(BaseCommand):
@@ -163,10 +163,11 @@ class Command(BaseCommand):
         return topic
 
     def apply_page(self, course, key, refresh):
-        """Fill in a draft outline course's page text from course_pages.PAGES (once, or again with --refresh)."""
+        """Fill in an outline course's page text from course_pages.PAGES: once when the course is new, or again
+        with --refresh (which overwrites the summary and outcomes, so admin edits to them are replaced)."""
         page = course_pages.PAGES.get(key)
         fresh = not course.summary or course.summary.startswith("Outline from the GCE curriculum guide")
-        if page is None or course.status != "draft" or not (fresh or refresh):
+        if page is None or not (fresh or refresh):
             return 0
         course.summary = page["summary"]
         course.learning_outcomes = "\n".join(page["outcomes"])

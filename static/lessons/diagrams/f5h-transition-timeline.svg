@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" font-family="Inter, Arial, sans-serif">
+<title>Timeline of the Ahidjo to Biya transition, 1982 to 1985</title>
+<rect width="560" height="300" fill="#FFFFFF"/>
+<line x1="20" y1="150" x2="540" y2="150" stroke="#102A43" stroke-width="3"/>
+<text x="540" y="172" font-size="14" fill="#102A43" text-anchor="end">time</text>
+<line x1="60" y1="116" x2="60" y2="150" stroke="#2563EB" stroke-width="2"/>
+<rect x="8" y="36" width="140" height="80" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="78" y="60" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">4-6 Nov 1982</text>
+<text x="78" y="82" font-size="14" fill="#102A43" text-anchor="middle">Ahidjo resigns;</text>
+<text x="78" y="104" font-size="14" fill="#102A43" text-anchor="middle">Biya sworn in</text>
+<circle cx="60" cy="150" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="170" y1="150" x2="170" y2="184" stroke="#2563EB" stroke-width="2"/>
+<rect x="80" y="184" width="180" height="80" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="170" y="208" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">Feb 1984</text>
+<text x="170" y="230" font-size="14" fill="#102A43" text-anchor="middle">Name becomes</text>
+<text x="170" y="252" font-size="14" fill="#102A43" text-anchor="middle">Republic of Cameroon</text>
+<circle cx="170" cy="150" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="280" y1="116" x2="280" y2="150" stroke="#2563EB" stroke-width="2"/>
+<rect x="206" y="36" width="148" height="80" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="60" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">6 Apr 1984</text>
+<text x="280" y="82" font-size="14" fill="#102A43" text-anchor="middle">Coup attempt</text>
+<text x="280" y="104" font-size="14" fill="#102A43" text-anchor="middle">fails in Yaounde</text>
+<circle cx="280" cy="150" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="400" y1="150" x2="400" y2="184" stroke="#047857" stroke-width="2"/>
+<rect x="346" y="184" width="108" height="80" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="400" y="208" font-size="16" font-weight="700" fill="#047857" text-anchor="middle">1985</text>
+<text x="400" y="230" font-size="14" fill="#102A43" text-anchor="middle">CNU becomes</text>
+<text x="400" y="252" font-size="14" fill="#102A43" text-anchor="middle">the CPDM</text>
+<circle cx="400" cy="150" r="8" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<text x="20" y="290" font-size="14" fill="#102A43">Not drawn to scale</text>
+</svg>

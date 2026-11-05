@@ -1,0 +1,27 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif" font-size="15">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="28" text-anchor="middle" font-size="17" font-weight="700" fill="#102A43">Cameroon dates that are easy to mix up</text>
+<line x1="150" y1="58" x2="150" y2="320" stroke="#102A43" stroke-width="3"/>
+<text x="136" y="63" text-anchor="end" font-weight="700" fill="#102A43">1 Jan 1959</text>
+<circle cx="150" cy="58" r="7" fill="#ffffff" stroke="#102A43" stroke-width="3"/>
+<text x="168" y="63" fill="#102A43">Full internal autonomy</text>
+<text x="136" y="107" text-anchor="end" font-weight="700" fill="#102A43">1 Jan 1960</text>
+<circle cx="150" cy="102" r="7" fill="#ffffff" stroke="#102A43" stroke-width="3"/>
+<text x="168" y="107" fill="#102A43">Independence (Republic of Cameroun)</text>
+<text x="136" y="150" text-anchor="end" font-weight="700" fill="#102A43">11 Feb 1961</text>
+<circle cx="150" cy="145" r="7" fill="#ffffff" stroke="#102A43" stroke-width="3"/>
+<text x="168" y="150" fill="#102A43">UN plebiscites held</text>
+<text x="136" y="194" text-anchor="end" font-weight="700" fill="#102A43">July 1961</text>
+<circle cx="150" cy="189" r="7" fill="#ffffff" stroke="#102A43" stroke-width="3"/>
+<text x="168" y="194" fill="#102A43">Foumban Conference</text>
+<text x="136" y="238" text-anchor="end" font-weight="700" fill="#2563EB">1 Oct 1961</text>
+<circle cx="150" cy="233" r="7" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<text x="168" y="238" fill="#102A43">Reunification (federation)</text>
+<text x="136" y="281" text-anchor="end" font-weight="700" fill="#102A43">1 Sep 1966</text>
+<circle cx="150" cy="276" r="7" fill="#ffffff" stroke="#102A43" stroke-width="3"/>
+<text x="168" y="281" fill="#102A43">CNU single party formed</text>
+<text x="136" y="325" text-anchor="end" font-weight="700" fill="#2563EB">20 May 1972</text>
+<circle cx="150" cy="320" r="7" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<text x="168" y="325" fill="#102A43">Referendum: unitary state</text>
+<text x="280" y="352" text-anchor="middle" font-size="14" fill="#2563EB">Blue: two dates students most often swap with others</text>
+</svg>

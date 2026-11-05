@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" font-family="Inter, Arial, sans-serif">
+<title>Timeline from federation to unitary state, 1961 to 1972</title>
+<rect width="560" height="300" fill="#FFFFFF"/>
+<line x1="20" y1="150" x2="540" y2="150" stroke="#102A43" stroke-width="3"/>
+<text x="540" y="172" font-size="14" fill="#102A43" text-anchor="end">time</text>
+<line x1="70" y1="116" x2="70" y2="150" stroke="#2563EB" stroke-width="2"/>
+<rect x="12" y="36" width="116" height="80" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="70" y="60" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">1 Oct 1961</text>
+<text x="70" y="82" font-size="14" fill="#102A43" text-anchor="middle">Federal</text>
+<text x="70" y="104" font-size="14" fill="#102A43" text-anchor="middle">constitution</text>
+<circle cx="70" cy="150" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="200" y1="150" x2="200" y2="184" stroke="#2563EB" stroke-width="2"/>
+<rect x="142" y="184" width="116" height="80" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="200" y="208" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">1 Sep 1966</text>
+<text x="200" y="230" font-size="14" fill="#102A43" text-anchor="middle">CNU single</text>
+<text x="200" y="252" font-size="14" fill="#102A43" text-anchor="middle">party formed</text>
+<circle cx="200" cy="150" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="340" y1="116" x2="340" y2="150" stroke="#2563EB" stroke-width="2"/>
+<rect x="270" y="36" width="140" height="80" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="340" y="60" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">20 May 1972</text>
+<text x="340" y="82" font-size="14" fill="#102A43" text-anchor="middle">Referendum on a</text>
+<text x="340" y="104" font-size="14" fill="#102A43" text-anchor="middle">unitary state</text>
+<circle cx="340" cy="150" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="480" y1="150" x2="480" y2="184" stroke="#047857" stroke-width="2"/>
+<rect x="396" y="184" width="156" height="80" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="474" y="208" font-size="16" font-weight="700" fill="#047857" text-anchor="middle">June 1972</text>
+<text x="474" y="230" font-size="14" fill="#102A43" text-anchor="middle">New constitution:</text>
+<text x="474" y="252" font-size="14" fill="#102A43" text-anchor="middle">United Republic</text>
+<circle cx="480" cy="150" r="8" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<text x="20" y="290" font-size="14" fill="#102A43">Not drawn to scale</text>
+</svg>

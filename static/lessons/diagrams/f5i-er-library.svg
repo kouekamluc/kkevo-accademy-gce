@@ -1,0 +1,22 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif" font-size="16">
+<rect width="560" height="360" fill="#fff"/>
+<rect x="20" y="60" width="200" height="190" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="20" y="60" width="200" height="36" rx="6" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<text x="120" y="84" text-anchor="middle" fill="#fff" font-weight="700" font-size="18">Students</text>
+<text x="34" y="124" fill="#102A43" font-weight="700">StudentID</text><text x="206" y="124" text-anchor="end" fill="#2563EB" font-weight="700">PK</text>
+<text x="34" y="156" fill="#102A43">Surname</text>
+<text x="34" y="188" fill="#102A43">FirstName</text>
+<text x="34" y="220" fill="#102A43">Class</text>
+<rect x="340" y="60" width="200" height="190" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="340" y="60" width="200" height="36" rx="6" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<text x="440" y="84" text-anchor="middle" fill="#fff" font-weight="700" font-size="18">Loans</text>
+<text x="354" y="124" fill="#102A43" font-weight="700">LoanID</text><text x="526" y="124" text-anchor="end" fill="#2563EB" font-weight="700">PK</text>
+<text x="354" y="156" fill="#102A43" font-weight="700">StudentID</text><text x="526" y="156" text-anchor="end" fill="#047857" font-weight="700">FK</text>
+<text x="354" y="188" fill="#102A43">BookTitle</text>
+<text x="354" y="220" fill="#102A43">DateBorrowed</text>
+<line x1="220" y1="124" x2="340" y2="156" stroke="#047857" stroke-width="3"/>
+<text x="230" y="116" fill="#047857" font-weight="700" font-size="18">1</text>
+<text x="290" y="182" text-anchor="middle" fill="#047857" font-weight="700" font-size="16">many</text>
+<rect x="60" y="290" width="440" height="42" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280" y="316" text-anchor="middle" fill="#102A43">One student can have many loans (one-to-many)</text>
+</svg>

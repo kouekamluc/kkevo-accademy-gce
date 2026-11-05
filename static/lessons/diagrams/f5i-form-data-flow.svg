@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="16">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="24" text-anchor="middle" font-size="18" fill="#102A43" font-weight="bold">What happens when a customer clicks Order</text>
+<rect x="20.0" y="75.0" width="150" height="70" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/><text x="95" y="115" text-anchor="middle" font-size="16" fill="#102A43"></text>
+<text x="95" y="98" text-anchor="middle" font-size="16" fill="#102A43" font-weight="bold">Browser</text>
+<text x="95" y="120" text-anchor="middle" font-size="14" fill="#102A43" >form filled in</text>
+<rect x="390.0" y="75.0" width="150" height="70" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/><text x="465" y="115" text-anchor="middle" font-size="16" fill="#102A43"></text>
+<text x="465" y="98" text-anchor="middle" font-size="16" fill="#102A43" font-weight="bold">Web server</text>
+<text x="465" y="120" text-anchor="middle" font-size="14" fill="#102A43" >order program</text>
+<line x1="170" y1="100" x2="390" y2="100" stroke="#2563EB" stroke-width="2"/>
+<polygon points="390,94 402,100 390,106" fill="#2563EB"/>
+<text x="280" y="84" text-anchor="middle" font-size="14" fill="#2563EB" >1. data sent to the action address</text>
+<line x1="390" y1="125" x2="170" y2="125" stroke="#047857" stroke-width="2"/>
+<polygon points="170,119 158,125 170,131" fill="#047857"/>
+<text x="280" y="148" text-anchor="middle" font-size="14" fill="#047857" >3. reply: a thank-you page</text>
+<rect x="100" y="190" width="360" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="214" text-anchor="middle" font-size="14" fill="#102A43" font-weight="bold">2. The data travels as name = value pairs</text>
+<text x="280" y="242" text-anchor="middle" font-size="16" fill="#102A43" >cname = Ada</text>
+<text x="280" y="266" text-anchor="middle" font-size="16" fill="#102A43" >item = Meat pie</text>
+<text x="280" y="290" text-anchor="middle" font-size="16" fill="#102A43" >qty = 3</text>
+<text x="280" y="340" text-anchor="middle" font-size="14" fill="#102A43" >The server program reads the pairs and saves or sends the order.</text>
+</svg>

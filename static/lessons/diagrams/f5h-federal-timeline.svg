@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" font-family="Inter, Arial, sans-serif">
+<title>Timeline of the Federal Republic of Cameroon, 1961 to 1972</title>
+<rect width="560" height="300" fill="#FFFFFF"/>
+<line x1="20" y1="150" x2="540" y2="150" stroke="#102A43" stroke-width="3"/>
+<text x="540" y="172" font-size="14" fill="#102A43" text-anchor="end">time</text>
+<line x1="90" y1="116" x2="90" y2="150" stroke="#2563EB" stroke-width="2"/>
+<rect x="16" y="14" width="148" height="102" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="90" y="38" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">1 Oct 1961</text>
+<text x="90" y="60" font-size="14" fill="#102A43" text-anchor="middle">Federal Republic</text>
+<text x="90" y="82" font-size="14" fill="#102A43" text-anchor="middle">begins; Foncha</text>
+<text x="90" y="104" font-size="14" fill="#102A43" text-anchor="middle">is West PM</text>
+<circle cx="90" cy="150" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="230" y1="150" x2="230" y2="184" stroke="#2563EB" stroke-width="2"/>
+<rect x="156" y="184" width="148" height="80" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="230" y="208" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">1965</text>
+<text x="230" y="230" font-size="14" fill="#102A43" text-anchor="middle">Ngom Jua becomes</text>
+<text x="230" y="252" font-size="14" fill="#102A43" text-anchor="middle">West Cameroon PM</text>
+<circle cx="230" cy="150" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="370" y1="116" x2="370" y2="150" stroke="#2563EB" stroke-width="2"/>
+<rect x="296" y="36" width="148" height="80" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="370" y="60" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">1968</text>
+<text x="370" y="82" font-size="14" fill="#102A43" text-anchor="middle">Muna becomes</text>
+<text x="370" y="104" font-size="14" fill="#102A43" text-anchor="middle">West Cameroon PM</text>
+<circle cx="370" cy="150" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="490" y1="150" x2="490" y2="184" stroke="#047857" stroke-width="2"/>
+<rect x="440" y="184" width="100" height="80" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="490" y="208" font-size="16" font-weight="700" fill="#047857" text-anchor="middle">1972</text>
+<text x="490" y="230" font-size="14" fill="#102A43" text-anchor="middle">Federation</text>
+<text x="490" y="252" font-size="14" fill="#102A43" text-anchor="middle">ends</text>
+<circle cx="490" cy="150" r="8" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<text x="20" y="290" font-size="14" fill="#102A43">Not drawn to scale</text>
+</svg>

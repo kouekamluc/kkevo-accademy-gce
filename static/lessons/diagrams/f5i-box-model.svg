@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="16">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="22" text-anchor="middle" font-size="18" fill="#102A43" font-weight="bold">The box model: four layers around the content</text>
+<rect x="40" y="36" width="480" height="300" fill="#EFF6FF" stroke="#102A43" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="280" y="60" text-anchor="middle" font-size="16" fill="#102A43" >margin: space outside the border</text>
+<rect x="90" y="74" width="380" height="210" fill="#ffffff" stroke="#2563EB" stroke-width="6"/>
+<text x="280" y="102" text-anchor="middle" font-size="16" fill="#2563EB" >border: the line round the box</text>
+<rect x="100" y="114" width="360" height="160" fill="#ECFDF5" stroke="none"/>
+<text x="280" y="138" text-anchor="middle" font-size="16" fill="#047857" >padding: space inside the border</text>
+<rect x="170" y="156" width="220" height="86" fill="#ffffff" stroke="#047857" stroke-width="2"/>
+<text x="280" y="194" text-anchor="middle" font-size="18" fill="#102A43" font-weight="bold">content</text>
+<text x="280" y="216" text-anchor="middle" font-size="14" fill="#102A43" >text, image, list</text>
+<text x="280" y="352" text-anchor="middle" font-size="14" fill="#102A43" >Total width = content + padding + border + margin, counted on both sides</text>
+</svg>

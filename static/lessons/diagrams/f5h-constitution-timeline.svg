@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 300" font-family="Inter, Arial, sans-serif">
+<title>Timeline of the 1993 conference, the 1996 constitution and the 2008 amendment</title>
+<rect width="560" height="300" fill="#FFFFFF"/>
+<line x1="20" y1="150" x2="540" y2="150" stroke="#102A43" stroke-width="3"/>
+<text x="540" y="172" font-size="14" fill="#102A43" text-anchor="end">time</text>
+<line x1="110" y1="116" x2="110" y2="150" stroke="#2563EB" stroke-width="2"/>
+<rect x="36" y="36" width="148" height="80" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="110" y="60" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">1993</text>
+<text x="110" y="82" font-size="14" fill="#102A43" text-anchor="middle">All Anglophone</text>
+<text x="110" y="104" font-size="14" fill="#102A43" text-anchor="middle">Conference, Buea</text>
+<circle cx="110" cy="150" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="280" y1="150" x2="280" y2="184" stroke="#047857" stroke-width="2"/>
+<rect x="206" y="184" width="148" height="80" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280" y="208" font-size="16" font-weight="700" fill="#047857" text-anchor="middle">18 Jan 1996</text>
+<text x="280" y="230" font-size="14" fill="#102A43" text-anchor="middle">Constitution</text>
+<text x="280" y="252" font-size="14" fill="#102A43" text-anchor="middle">amends 1972 text</text>
+<circle cx="280" cy="150" r="8" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="450" y1="116" x2="450" y2="150" stroke="#2563EB" stroke-width="2"/>
+<rect x="356" y="36" width="188" height="80" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="450" y="60" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">2008</text>
+<text x="450" y="82" font-size="14" fill="#102A43" text-anchor="middle">Limit on presidential</text>
+<text x="450" y="104" font-size="14" fill="#102A43" text-anchor="middle">terms removed</text>
+<circle cx="450" cy="150" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<text x="20" y="290" font-size="14" fill="#102A43">Not drawn to scale</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#102A43">From plebiscite to reunification, 1961</text>
+<line x1="30" y1="190" x2="530" y2="190" stroke="#102A43" stroke-width="3"/>
+<line x1="50" y1="190" x2="50" y2="140" stroke="#102A43" stroke-width="2"/>
+<circle cx="50" cy="190" r="7" fill="#ECFDF5" stroke="#102A43" stroke-width="3"/>
+<text x="30" y="96" text-anchor="start" font-size="14" font-weight="700" fill="#102A43">11 Feb 1961</text>
+<text x="30" y="116" text-anchor="start" font-size="14" fill="#102A43">Plebiscites held</text>
+<line x1="203" y1="190" x2="203" y2="240" stroke="#102A43" stroke-width="2"/>
+<circle cx="203" cy="190" r="7" fill="#ECFDF5" stroke="#102A43" stroke-width="3"/>
+<text x="203" y="262" text-anchor="middle" font-size="14" font-weight="700" fill="#102A43">1 Jun 1961</text>
+<text x="203" y="282" text-anchor="middle" font-size="14" fill="#102A43">Northern Cameroons</text>
+<text x="203" y="300" text-anchor="middle" font-size="14" fill="#102A43">joins Nigeria</text>
+<line x1="357" y1="190" x2="357" y2="140" stroke="#102A43" stroke-width="2"/>
+<circle cx="357" cy="190" r="7" fill="#ECFDF5" stroke="#102A43" stroke-width="3"/>
+<text x="357" y="96" text-anchor="middle" font-size="14" font-weight="700" fill="#102A43">Jul 1961</text>
+<text x="357" y="116" text-anchor="middle" font-size="14" fill="#102A43">Foumban</text>
+<text x="357" y="134" text-anchor="middle" font-size="14" fill="#102A43">Conference</text>
+<line x1="510" y1="190" x2="510" y2="240" stroke="#2563EB" stroke-width="2"/>
+<circle cx="510" cy="190" r="7" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<text x="530" y="262" text-anchor="end" font-size="14" font-weight="700" fill="#2563EB">1 Oct 1961</text>
+<text x="530" y="282" text-anchor="end" font-size="14" fill="#102A43">Reunification</text>
+<text x="280" y="345" text-anchor="middle" font-size="14" fill="#102A43">Events are evenly spaced, not drawn to scale</text></svg>
