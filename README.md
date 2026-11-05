@@ -1,4 +1,4 @@
-# GCE Learning Academy — Django platform
+# KKEVO Academy — Django platform
 
 Learning platform for the Cameroon GCE curriculum (Form 5, Lower Sixth, Upper Sixth).
 Architecture, schema and milestones: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
@@ -71,6 +71,8 @@ lessons: [docs/curriculum/LESSON_AUTHORING.md](docs/curriculum/LESSON_AUTHORING.
 .venv/Scripts/python manage.py load_lessons --refresh   # rewrite drafts nobody has edited in the studio
 .venv/Scripts/python manage.py check_practice           # validate the practice-set files
 .venv/Scripts/python manage.py load_practice            # create the missing draft practice sets
+.venv/Scripts/python manage.py load_lessons --prune     # also delete untouched drafts no longer in the files
+.venv/Scripts/python manage.py load_practice --prune
 ```
 
 ## Main URLs

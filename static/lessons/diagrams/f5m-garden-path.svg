@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="100" y="40" width="360" height="260" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="140" y="80" width="280" height="180" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="166.0" font-size="18" text-anchor="middle" fill="#047857" font-weight="bold">Garden</text>
+<text x="280" y="190.0" font-size="15" text-anchor="middle" fill="#047857">10 m by 6 m</text>
+<text x="280" y="68" font-size="16" text-anchor="middle" fill="#2563EB">path</text>
+<text x="280" y="102" font-size="16" text-anchor="middle" fill="#102A43">10 m</text>
+<text x="150" y="175.0" font-size="16" fill="#102A43">6 m</text>
+<line x1="420" y1="170.0" x2="460" y2="170.0" stroke="#2563EB" stroke-width="2"/>
+<text x="440.0" y="162.0" font-size="17" text-anchor="middle" fill="#2563EB" font-style="italic">x</text>
+<text x="280" y="330" font-size="16" text-anchor="middle" fill="#102A43">(10 + 2x) m</text>
+<text x="88" y="175.0" font-size="16" text-anchor="end" fill="#102A43">(6 + 2x) m</text>
+</svg>

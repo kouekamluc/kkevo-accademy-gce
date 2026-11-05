@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Vectors a and b drawn on a grid, with a + b completing the triangle</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="30" y1="320" x2="30" y2="56" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="74" y1="320" x2="74" y2="56" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="118" y1="320" x2="118" y2="56" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="162" y1="320" x2="162" y2="56" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="206" y1="320" x2="206" y2="56" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="250" y1="320" x2="250" y2="56" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="294" y1="320" x2="294" y2="56" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="338" y1="320" x2="338" y2="56" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="30" y1="320" x2="338" y2="320" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="30" y1="276" x2="338" y2="276" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="30" y1="232" x2="338" y2="232" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="30" y1="188" x2="338" y2="188" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="30" y1="144" x2="338" y2="144" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="30" y1="100" x2="338" y2="100" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="30" y1="56" x2="338" y2="56" stroke="#D9E2EC" stroke-width="1"/>
+<line x1="74.0" y1="232.0" x2="239.3" y2="273.3" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<polygon points="250.0,276.0 238.1,278.1 240.5,268.5" fill="#047857"/>
+<line x1="74.0" y1="232.0" x2="196.8" y2="150.1" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+<polygon points="206.0,144.0 199.6,154.2 194.1,146.0" fill="#2563EB"/>
+<line x1="206.0" y1="144.0" x2="246.5" y2="265.6" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+<polygon points="250.0,276.0 241.8,267.1 251.2,264.0" fill="#2563EB"/>
+<circle cx="74" cy="232" r="4" fill="#102A43"/>
+<circle cx="206" cy="144" r="4" fill="#102A43"/>
+<circle cx="250" cy="276" r="4" fill="#102A43"/>
+<polyline points="74,232 206,232 206,144" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="140.0" y="220.0" font-size="14" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">3</text>
+<text x="194.0" y="188.0" font-size="14" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">2</text>
+<text x="130.0" y="172.0" font-size="18" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">a</text>
+<text x="244.0" y="210.0" font-size="18" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">b</text>
+<text x="162.0" y="274.0" font-size="17" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">a + b</text>
+<text x="370.0" y="70.0" font-size="17" fill="#2563EB" text-anchor="start" dominant-baseline="middle" font-weight="700">a =</text>
+<text x="432.0" y="59.0" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle">3</text>
+<text x="432.0" y="81.0" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle">2</text>
+<path d="M422.0,48.0 Q415.0,70.0 422.0,92.0" fill="none" stroke="#2563EB" stroke-width="2"/>
+<path d="M442.0,48.0 Q449.0,70.0 442.0,92.0" fill="none" stroke="#2563EB" stroke-width="2"/>
+<text x="370.0" y="140.0" font-size="17" fill="#2563EB" text-anchor="start" dominant-baseline="middle" font-weight="700">b =</text>
+<text x="432.0" y="129.0" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle">1</text>
+<text x="432.0" y="151.0" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle">−3</text>
+<path d="M422.0,118.0 Q415.0,140.0 422.0,162.0" fill="none" stroke="#2563EB" stroke-width="2"/>
+<path d="M442.0,118.0 Q449.0,140.0 442.0,162.0" fill="none" stroke="#2563EB" stroke-width="2"/>
+<text x="370.0" y="210.0" font-size="17" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="700">a + b =</text>
+<text x="468.0" y="199.0" font-size="16" fill="#047857" text-anchor="middle" dominant-baseline="middle">4</text>
+<text x="468.0" y="221.0" font-size="16" fill="#047857" text-anchor="middle" dominant-baseline="middle">−1</text>
+<path d="M458.0,188.0 Q451.0,210.0 458.0,232.0" fill="none" stroke="#047857" stroke-width="2"/>
+<path d="M478.0,188.0 Q485.0,210.0 478.0,232.0" fill="none" stroke="#047857" stroke-width="2"/>
+<text x="370.0" y="262.0" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle">Join a and b nose to tail.</text>
+<text x="370.0" y="284.0" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle">a + b goes from the start</text>
+<text x="370.0" y="306.0" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle">of a to the end of b.</text>
+</svg>

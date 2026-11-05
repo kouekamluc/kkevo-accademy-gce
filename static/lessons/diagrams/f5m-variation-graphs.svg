@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Graphs of direct, square and inverse variation</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="20" y="22" width="170" height="295" rx="10" fill="#EFF6FF" stroke="none"/>
+<text x="105.0" y="48" font-size="16" font-weight="600" fill="#102A43" text-anchor="middle">Direct: y = kx</text>
+<line x1="30" y1="257" x2="180" y2="257" stroke="#102A43" stroke-width="2"/>
+<line x1="30" y1="257" x2="30" y2="62" stroke="#102A43" stroke-width="2"/>
+<text x="176" y="277" font-size="15" fill="#102A43">x</text>
+<text x="14" y="74" font-size="15" fill="#102A43">y</text>
+<text x="16" y="275" font-size="14" fill="#102A43">O</text>
+<path d="M30.0,257.0 L170.0,72.0" fill="none" stroke="#2563EB" stroke-width="3"/>
+<rect x="200" y="22" width="170" height="295" rx="10" fill="#EFF6FF" stroke="none"/>
+<text x="285.0" y="48" font-size="16" font-weight="600" fill="#102A43" text-anchor="middle">Direct: y = kx²</text>
+<line x1="210" y1="257" x2="360" y2="257" stroke="#102A43" stroke-width="2"/>
+<line x1="210" y1="257" x2="210" y2="62" stroke="#102A43" stroke-width="2"/>
+<text x="356" y="277" font-size="15" fill="#102A43">x</text>
+<text x="194" y="74" font-size="15" fill="#102A43">y</text>
+<text x="196" y="275" font-size="14" fill="#102A43">O</text>
+<path d="M210.0,257.0 L213.5,256.9 L217.0,256.5 L220.5,256.0 L224.0,255.2 L227.5,254.1 L231.0,252.8 L234.5,251.3 L238.0,249.6 L241.5,247.6 L245.0,245.4 L248.5,243.0 L252.0,240.3 L255.5,237.5 L259.0,234.3 L262.5,231.0 L266.0,227.4 L269.5,223.6 L273.0,219.5 L276.5,215.3 L280.0,210.8 L283.5,206.0 L287.0,201.0 L290.5,195.8 L294.0,190.4 L297.5,184.7 L301.0,178.8 L304.5,172.7 L308.0,166.4 L311.5,159.8 L315.0,152.9 L318.5,145.9 L322.0,138.6 L325.5,131.1 L329.0,123.3 L332.5,115.4 L336.0,107.1 L339.5,98.7 L343.0,90.0 L346.5,81.1 L350.0,72.0" fill="none" stroke="#2563EB" stroke-width="3"/>
+<rect x="380" y="22" width="170" height="295" rx="10" fill="#EFF6FF" stroke="none"/>
+<text x="465.0" y="48" font-size="16" font-weight="600" fill="#102A43" text-anchor="middle">Inverse: y = k/x</text>
+<line x1="390" y1="257" x2="540" y2="257" stroke="#102A43" stroke-width="2"/>
+<line x1="390" y1="257" x2="390" y2="62" stroke="#102A43" stroke-width="2"/>
+<text x="536" y="277" font-size="15" fill="#102A43">x</text>
+<text x="374" y="74" font-size="15" fill="#102A43">y</text>
+<text x="376" y="275" font-size="14" fill="#102A43">O</text>
+<path d="M404.0,72.0 L406.8,102.8 L409.6,124.9 L412.4,141.4 L415.2,154.2 L418.0,164.5 L420.8,172.9 L423.6,179.9 L426.4,185.8 L429.2,190.9 L432.0,195.3 L434.8,199.2 L437.6,202.6 L440.4,205.6 L443.2,208.3 L446.0,210.8 L448.8,213.0 L451.6,215.0 L454.4,216.8 L457.2,218.5 L460.0,220.0 L462.8,221.4 L465.6,222.7 L468.4,224.0 L471.2,225.1 L474.0,226.2 L476.8,227.2 L479.6,228.1 L482.4,229.0 L485.2,229.8 L488.0,230.6 L490.8,231.3 L493.6,232.0 L496.4,232.7 L499.2,233.3 L502.0,233.9 L504.8,234.4 L507.6,235.0 L510.4,235.5 L513.2,236.0 L516.0,236.4 L518.8,236.9 L521.6,237.3 L524.4,237.7 L527.2,238.1 L530.0,238.5" fill="none" stroke="#2563EB" stroke-width="3"/>
+<text x="105.0" y="303" font-size="14" fill="#047857" text-anchor="middle">Straight line through O</text>
+<text x="285.0" y="303" font-size="14" fill="#047857" text-anchor="middle">Curve through O</text>
+<text x="465.0" y="303" font-size="14" fill="#047857" text-anchor="middle">Never meets the axes</text>
+</svg>

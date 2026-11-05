@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Count, Prefetch, Q
+from django.db.models import Count, F, Max, Prefetch, Q
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.decorators.http import require_POST
@@ -9,7 +9,7 @@ from apps.academics.models import AcademicLevel, AcademicPathway, SubjectCategor
 from apps.accounts.utils import get_profile
 from apps.learning import services
 from apps.learning.models import Enrollment, LessonProgress
-from apps.practice.models import Question
+from apps.practice.models import Attempt, PracticeSet, Question
 
 from .models import Course, Lesson, Module, Topic
 
@@ -135,6 +135,28 @@ def toggle_plan(request, offering_pk):
     return redirect("courses:my_subjects")
 
 
+def _course_practice(user, course):
+    """Practice sets of a course for its outline: ({topic_id: [row]}, [mock rows]).
+
+    Students see published sets; staff also see drafts. Each row has the set, its question count,
+    its timed-exam length and the user's best score so far.
+    """
+    sets = PracticeSet.objects.exclude(status="archived") if user.is_staff else PracticeSet.objects.published()
+    sets = list(sets.filter(topic__module__course=course).annotate(question_count=Count("questions"))
+                .filter(question_count__gt=0).order_by("topic__module__order", "topic__order", "order", "pk"))
+    best = {}
+    if user.is_authenticated:
+        for row in (Attempt.objects.filter(user=user, practice_set__in=sets, completed_at__isnull=False, total__gt=0)
+                    .values("practice_set").annotate(best=Max(F("correct_count") * 100 / F("total")))):
+            best[row["practice_set"]] = round(row["best"])
+    by_topic, mocks = {}, []
+    for ps in sets:
+        row = {"set": ps, "count": ps.question_count, "best": best.get(ps.pk),
+               "minutes": round(ps.exam_seconds_for(ps.question_count) / 60)}
+        (mocks if ps.is_mock else by_topic.setdefault(ps.topic_id, [])).append(row)  # mocks: own card, not in topics
+    return by_topic, mocks
+
+
 def course_detail(request, slug):
     """Course overview (mockup 03)."""
     course = get_object_or_404(
@@ -154,6 +176,7 @@ def course_detail(request, slug):
     progress = services.progress_by_lesson(request.user, all_lessons)
     next_lesson, next_progress = services.next_lesson(request.user, course)
 
+    sets_by_topic, mocks = _course_practice(request.user, course)
     module_rows, done_total = [], 0
     for m_i, module in enumerate(modules, 1):
         topics, m_done, m_total = [], 0, 0
@@ -163,8 +186,14 @@ def course_detail(request, slug):
                 p = progress.get(lesson.pk)
                 state = "done" if p and p.is_completed else "current" if next_lesson and lesson.pk == next_lesson.pk and p else "todo"
                 t_done += state == "done"
-                rows.append({"lesson": lesson, "progress": p, "state": state})
-            topics.append({"topic": topic, "number": f"{m_i}.{t_i}", "rows": rows, "done": t_done, "total": len(rows)})
+                rows.append({"lesson": lesson, "progress": p, "state": state, "sets": []})
+            # Each practice set sits right after its lesson; sets not tied to a shown lesson go at the end.
+            loose, by_lesson = [], {row["lesson"].pk: row for row in rows}
+            for set_row in sets_by_topic.get(topic.pk, []):
+                owner = by_lesson.get(set_row["set"].lesson_id)
+                (owner["sets"] if owner else loose).append(set_row)
+            topics.append({"topic": topic, "number": f"{m_i}.{t_i}", "rows": rows, "done": t_done, "total": len(rows),
+                           "sets": loose})
             m_done += t_done
             m_total += len(rows)
         done_total += m_done
@@ -192,6 +221,7 @@ def course_detail(request, slug):
         "topic_count": sum(len(m["topics"]) for m in module_rows), "hours": round(minutes / 60) if minutes >= 60 else None,
         "minutes": minutes, "question_count": question_count, "next_lesson": next_lesson, "next_progress": next_progress,
         "has_syllabus_mapping": has_syllabus_mapping, "in_plan": in_plan, "pathway_label": pathway_label,
+        "mocks": mocks,
         "nav_active": "subjects" if in_plan else "explore",
         "open_module": next(
             (m["number"] for m in module_rows if m["status"] == "progress"),

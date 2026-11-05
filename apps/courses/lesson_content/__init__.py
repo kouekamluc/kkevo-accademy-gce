@@ -64,10 +64,14 @@ def collect(names=None):
     return rows
 
 
-def outline(key):
-    """{module title: [topic titles]} for a course key, skipping the Examination section."""
+EXAM_SECTION = "Examination"  # optional: exam-preparation lessons and mock papers (Paper 1, Paper 2…)
+
+
+def outline(key, include_exam=False):
+    """{module title: [topic titles]} for a course key. The Examination section is optional content,
+    so it is only included when `include_exam` is set (validation), not in coverage reports."""
     sections = gce_curriculum.SYLLABI[key][2]
-    return {s: [i[0] for i in items] for s, items in sections if s != "Examination"}
+    return {s: [i[0] for i in items] for s, items in sections if include_exam or s != EXAM_SECTION}
 
 
 def _block_problems(block):
@@ -115,7 +119,7 @@ def validate(rows=None):
         if key not in gce_curriculum.SYLLABI:
             errors.append(f"{where}: no syllabus outline for {key}.")
             continue
-        topics = outline(key)
+        topics = outline(key, include_exam=True)
         module, topic = spec.get("module"), spec.get("topic")
         if module not in topics:
             errors.append(f"{where}: module '{module}' is not in the {key} outline ({', '.join(topics)}).")

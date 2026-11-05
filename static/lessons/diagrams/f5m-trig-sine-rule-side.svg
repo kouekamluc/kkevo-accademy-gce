@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Triangle ABC with angle A 40 degrees, angle B 65 degrees, side a 12 cm, side b unknown</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="97.6,300 462.4,300 359.8,80" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="97.6" y1="300" x2="359.8" y2="80" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+<path d="M131.3,271.7 A44,44 0 0 1 141.6,300" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<text x="161.5" y="276.7" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">40°</text>
+<path d="M422.4,300 A40,40 0 0 1 445.5,263.7" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<text x="408.4" y="265.6" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">65°</text>
+<text x="79.6" y="308" font-size="20" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<text x="480.4" y="308" font-size="20" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<text x="359.8" y="60" font-size="20" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<text x="452.8" y="170.6" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">a = 12 cm</text>
+<text x="248" y="213" font-size="18" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">b = ?</text>
+<text x="20" y="30" font-size="16" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Pair: a = 12 cm with A = 40°</text>
+<text x="20" y="54" font-size="16" fill="#2563EB" text-anchor="start" dominant-baseline="middle" font-weight="700">Want: b, opposite B = 65°</text>
+</svg>

@@ -22,7 +22,7 @@
   <section aria-labelledby="mastery-heading" class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
     <h2 id="mastery-heading" class="font-semibold text-ink-heading">Topic mastery</h2>
     {% for label, count in mastery_tally %}<span class="text-ink-muted"><strong class="text-ink-heading">{{ count }}</strong> {{ label|lower }}</span>{% endfor %}
-    <span class="w-full text-[13px] text-ink-muted nav:w-auto">Mastered = 80% or more on a topic’s set twice, including your latest try.</span>
+    <span class="w-full text-[13px] text-ink-muted nav:w-auto">Mastered = 80% or more on a topic’s practice twice, including your latest try.</span>
   </section>
   {% endif %}
 
@@ -33,8 +33,12 @@
       {% for s in sets %}
       <li><a href="{{ s.get_absolute_url }}" class="card-link flex h-full flex-col gap-2 rounded-card p-5">
         <span class="font-semibold">{{ s.title }}</span>
+        {% if s.is_mock %}
+        <span class="text-sm text-ink-muted">Mock exam · {{ s.question_count }} questions · {{ s.exam_minutes }} min timed</span>
+        {% else %}
         <span class="text-sm text-ink-muted">{{ s.topic.title }} · {{ s.question_count }} question{{ s.question_count|pluralize }}</span>
         {% include "practice/_mastery.html" with mastery=s.mastery prefix="Topic" %}
+        {% endif %}
         {% if s.last_attempt %}<span class="mt-auto text-sm font-semibold {% if s.last_attempt.score >= 60 %}text-success-text{% else %}text-warning-text{% endif %}">Last score {{ s.last_attempt.score }}%</span>
         {% else %}<span class="mt-auto text-sm font-semibold text-primary">Start →</span>{% endif %}
       </a></li>

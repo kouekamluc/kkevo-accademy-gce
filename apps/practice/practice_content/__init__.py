@@ -85,7 +85,7 @@ def validate(rows=None):
         if key not in lesson_content.gce_curriculum.SYLLABI:
             errors.append(f"{where}: no syllabus outline for {key}.")
             continue
-        topics = lesson_content.outline(key)
+        topics = lesson_content.outline(key, include_exam=True)
         module, topic = spec.get("module"), spec.get("topic")
         if module not in topics or topic not in topics.get(module, []):
             errors.append(f"{where}: '{module}' / '{topic}' is not a topic of the {key} outline.")
@@ -96,6 +96,9 @@ def validate(rows=None):
         seen.add((key, module, topic, spec.get("title")))
         if spec.get("lesson") and lessons.get((key, spec["lesson"])) != (module, topic):
             errors.append(f"{where}: lesson '{spec['lesson']}' is not a lesson of this topic.")
+        limit = spec.get("time_limit_minutes")
+        if limit is not None and (not isinstance(limit, int) or not 5 <= limit <= 300):
+            errors.append(f"{where}: time_limit_minutes must be a whole number from 5 to 300.")
         questions = spec.get("questions") or []
         if len(questions) < MIN_QUESTIONS:
             errors.append(f"{where}: needs at least {MIN_QUESTIONS} questions.")

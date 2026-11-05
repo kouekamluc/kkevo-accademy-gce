@@ -12,6 +12,7 @@ from django.utils import timezone
 
 from apps.academics.models import SubjectOffering
 from apps.courses.models import Lesson
+from apps.learning import services
 from apps.learning.models import Enrollment
 
 from .forms import MIX, LevelForm, StreamForm, SubjectsForm
@@ -108,10 +109,11 @@ def done(request):
     enrollments = list(
         Enrollment.objects.filter(user=request.user, offering__level=profile.level).select_related("offering__subject")
     )
+    # Start in each subject's main course (an offering can have more than one, e.g. a retired demo course).
+    main_courses = [services.primary_course(list(e.offering.courses.all())) for e in enrollments]
     first_lesson = (
         Lesson.objects.published()
-        .filter(topic__module__course__offering__in=[e.offering for e in enrollments],
-                topic__module__course__status="published")
+        .filter(topic__module__course__in=[c for c in main_courses if c])
         .select_related("topic__module__course__offering__subject")
         .order_by("topic__module__course__offering__subject__order", "topic__module__order", "topic__order", "order")
         .first()

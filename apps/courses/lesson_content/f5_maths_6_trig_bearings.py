@@ -1,0 +1,566 @@
+"""Form 5 General Mathematics (O Level 570): Trigonometry & Bearings.
+Draft content for review in the studio."""
+from .dsl import *  # noqa: F403
+
+COURSE = ("mathematics", "form-5")
+
+MODULE = "Trigonometry & Bearings"
+
+LESSONS = [
+    # ------------------------------------------------------------------ 1. The sine rule
+    lesson(
+        module=MODULE,
+        topic="Sine and cosine rules",
+        title="The sine rule",
+        slug="sine-rule-finding-sides-and-angles",
+        minutes=20,
+        summary="Label any triangle correctly and use the sine rule to find a missing side or a missing angle when you know a side and the angle opposite it.",
+        objectives=[
+            "Label a triangle with sides a, b, c opposite angles A, B, C",
+            "Use the sine rule to find a missing side",
+            "Use the sine rule to find a missing angle",
+            "Recognise when the sine rule can be used",
+        ],
+        key_concepts=["Sine rule", "Opposite side and angle", "Angle sum of a triangle", "Degree mode"],
+        blocks=[
+            H("Introduction"),
+            T("In Form 3 and Form 4 you used SOH CAH TOA. It is very useful, but it only works in a "
+              "**right-angled** triangle."),
+            T("Most real triangles have no right angle. Think of three villages near Dschang joined by straight "
+              "paths, or a radio mast seen from two points on a road. This lesson gives the first new rule, the **sine rule**; "
+              "the next lesson gives the cosine rule."),
+            H("Labelling a triangle"),
+            KEY("The labelling rule", "Label the triangle before you write any formula.",
+                cards=[["Angles", "Capital letters $A$, $B$, $C$ at the corners."],
+                       ["Sides", "Small letters $a$, $b$, $c$. Side $a$ is **opposite** angle $A$, side $b$ is opposite $B$, side $c$ is opposite $C$."]],
+                note=r"The angles of a triangle add up to $180^\circ$, so two known angles always give the third."),
+            IMG("f5-triangle-abc-labels.svg",
+                "Triangle ABC with corners labelled A, B and C. Side a is BC, opposite angle A, and is highlighted in blue together with angle A. Side b is AC, opposite angle B. Side c is AB, opposite angle C.",
+                "Figure 1. Side a is opposite angle A, side b is opposite angle B and side c is opposite angle C."),
+            H("The sine rule"),
+            D("In any triangle $ABC$, each side divided by the sine of the angle opposite it gives the same number.",
+              title="Sine rule", formula=r"\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}",
+              note=r"To find an angle, turn it upside down: $\dfrac{\sin A}{a} = \dfrac{\sin B}{b} = \dfrac{\sin C}{c}$."),
+            T("You never use all three parts at once. You choose the **two** fractions that contain three things you "
+              "know and the one thing you want."),
+            KEY("When can I use the sine rule?", "You need a **pair**: a side and the angle opposite it, both known.",
+                cards=[["Finding a side", "Pair known + one more angle. Use $\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B}$ (unknown on top)."],
+                       ["Finding an angle", "Pair known + one more side. Use $\\dfrac{\\sin A}{a} = \\dfrac{\\sin B}{b}$ (unknown on top)."]]),
+            TIP("Before you start, check that your calculator shows D or DEG. In radian mode every answer will be wrong."),
+            H("Finding a side"),
+            EX("Worked example 1: finding a side", intro=(
+                r"In triangle $ABC$, $A = 40^\circ$, $B = 65^\circ$ and $a = 12$ cm. Find $b$, correct to 1 decimal place."),
+               steps=[
+                   S("Find the pair", text=r"We know $a = 12$ cm and the angle opposite it, $A = 40^\circ$. We want $b$, opposite $B = 65^\circ$."),
+                   S("Write the two fractions you need", math=r"\frac{b}{\sin B} = \frac{a}{\sin A}"),
+                   S("Substitute", math=r"\frac{b}{\sin 65^\circ} = \frac{12}{\sin 40^\circ}"),
+                   S("Multiply both sides by sin 65°", math=r"b = \frac{12 \sin 65^\circ}{\sin 40^\circ} = \frac{12 \times 0.9063}{0.6428}"),
+                   S("Calculate", math=r"b \approx 16.9 \text{ cm}"),
+               ], check=r"B > A \text{ and } b > a: \text{ the larger angle faces the longer side}"),
+            IMG("f5m-trig-sine-rule-side.svg",
+                "Triangle ABC with angle A of 40 degrees and angle B of 65 degrees. Side a, from B to C, is 12 cm. Side b, from A to C, is highlighted in blue and marked b = ?.",
+                "Figure 2. Worked example 1: the pair is a = 12 cm with A = 40°, and we want b, opposite B = 65°."),
+            H("Finding an angle"),
+            EX("Worked example 2: finding an angle", intro=(
+                r"In triangle $PQR$, $p = 10$ cm, $q = 7$ cm and $P = 80^\circ$. Find angle $Q$, then angle $R$."),
+               steps=[
+                   S("Find the pair", text=r"We know $p = 10$ cm and its opposite angle $P = 80^\circ$. We want $Q$, opposite $q = 7$ cm."),
+                   S("Use the upside-down form (unknown on top)", math=r"\frac{\sin Q}{q} = \frac{\sin P}{p}"),
+                   S("Substitute", math=r"\frac{\sin Q}{7} = \frac{\sin 80^\circ}{10}"),
+                   S("Multiply both sides by 7", math=r"\sin Q = \frac{7 \times 0.9848}{10} = 0.6894"),
+                   S("Use the inverse sine key", math=r"Q = \sin^{-1}(0.6894) \approx 43.6^\circ"),
+                   S("Use the angle sum for R", math=r"R = 180^\circ - 80^\circ - 43.6^\circ = 56.4^\circ"),
+               ]),
+            TIP(r"An angle found with the sine rule is acute when the side opposite it is **shorter** than the known side. Here $q = 7 < p = 10$, so $Q$ must be smaller than $P = 80^\circ$."),
+            QUIZ(r"In triangle $ABC$ you know $a$, $A$ and $B$. Which equation finds $b$?",
+                 [r"$\dfrac{b}{\sin B} = \dfrac{a}{\sin A}$", r"$\dfrac{b}{\sin A} = \dfrac{a}{\sin B}$",
+                  r"$b^2 = a^2 + c^2$", r"$\dfrac{b}{B} = \dfrac{a}{A}$"], 0,
+                 r"Each side is paired with the sine of its **opposite** angle: $b$ with $\sin B$ and $a$ with $\sin A$.",
+                 hint="Side b goes with the angle opposite it.",
+                 feedback=["", r"The pairs are crossed. $b$ must go with $\sin B$, not $\sin A$.",
+                           "That is Pythagoras, which needs a right angle and is not the sine rule.",
+                           "You must use the sines of the angles, not the angles themselves."]),
+            EX("Worked example 3: a radio mast", intro=(
+                r"Two villages A and B are 5 km apart on a straight road. A radio mast M stands off the road. "
+                r"Angle $MAB = 48^\circ$ and angle $MBA = 62^\circ$. Find the distance AM, correct to 2 decimal places."),
+               steps=[
+                   S("Find the third angle", math=r"\angle AMB = 180^\circ - 48^\circ - 62^\circ = 70^\circ"),
+                   S("Find the pair", text=r"AB = 5 km is opposite $M = 70^\circ$. AM is opposite angle $B = 62^\circ$."),
+                   S("Write the sine rule", math=r"\frac{AM}{\sin 62^\circ} = \frac{5}{\sin 70^\circ}"),
+                   S("Rearrange", math=r"AM = \frac{5 \sin 62^\circ}{\sin 70^\circ} = \frac{5 \times 0.8829}{0.9397}"),
+                   S("Calculate", math=r"AM \approx 4.70 \text{ km}"),
+               ]),
+            MISTAKE("Pairing a side with the wrong angle",
+                    "Side $a$ always goes with angle $A$, the angle **opposite** it, not an angle next to it. Label the triangle first."),
+            MISTAKE("Using the angles instead of their sines",
+                    r"$\dfrac{b}{65} = \dfrac{12}{40}$ is wrong. You must press sin: $\dfrac{b}{\sin 65^\circ} = \dfrac{12}{\sin 40^\circ}$."),
+            QUIZ(r"In triangle $ABC$, $A = 30^\circ$, $B = 45^\circ$ and $a = 8$ cm. Find $b$.",
+                 [r"$5.7$ cm", r"$12.0$ cm", r"$11.3$ cm", r"$16.0$ cm"], 2,
+                 r"$b = \dfrac{8 \sin 45^\circ}{\sin 30^\circ} = \dfrac{8 \times 0.7071}{0.5} \approx 11.3$ cm.",
+                 hint=r"Write $\dfrac{b}{\sin 45^\circ} = \dfrac{8}{\sin 30^\circ}$.",
+                 feedback=[r"You turned the sines upside down: $\dfrac{8 \sin 30^\circ}{\sin 45^\circ}$. $B$ is the larger angle, so $b$ must be longer than 8 cm.",
+                           r"You used the angles: $8 \times \dfrac{45}{30}$. Use their sines.", "",
+                           r"You worked out $\dfrac{8}{\sin 30^\circ}$ and stopped. Multiply by $\sin 45^\circ$."]),
+            H("Practice questions"),
+            PQ(r"In triangle $ABC$, $A = 50^\circ$, $B = 70^\circ$ and $a = 10$ cm. Find $c$, correct to 1 decimal place.",
+               r"First find $C = 180^\circ - 50^\circ - 70^\circ = 60^\circ$. Then $\dfrac{c}{\sin 60^\circ} = \dfrac{10}{\sin 50^\circ}$, "
+               r"so $c = \dfrac{10 \times 0.8660}{0.7660} \approx 11.3$ cm."),
+            PQ(r"In triangle $XYZ$, $x = 9$ cm, $y = 7$ cm and $X = 48^\circ$. Find angle $Y$, correct to 1 decimal place.",
+               r"$\dfrac{\sin Y}{7} = \dfrac{\sin 48^\circ}{9}$, so $\sin Y = \dfrac{7 \times 0.7431}{9} = 0.5780$. "
+               r"$Y = \sin^{-1}(0.5780) \approx 35.3^\circ$. ($Y$ is acute because $y < x$.)"),
+            PQ(r"Two surveyors stand at A and B, 40 m apart on one bank of a river. A tree C stands on the other bank. "
+               r"Angle $CAB = 48^\circ$ and angle $CBA = 67^\circ$. Find the distance BC, correct to 1 decimal place.",
+               r"Angle $C = 180^\circ - 48^\circ - 67^\circ = 65^\circ$, and it is opposite AB = 40 m. BC is opposite angle $A = 48^\circ$. "
+               r"$BC = \dfrac{40 \sin 48^\circ}{\sin 65^\circ} = \dfrac{40 \times 0.7431}{0.9063} \approx 32.8$ m."),
+            PQ(r"A student uses the sine rule in a triangle with $a = 6$ cm, $b = 4$ cm and $A = 70^\circ$ and gets $B = 141.2^\circ$. Explain the error and give the correct angle.",
+               r"$\sin B = \dfrac{4 \sin 70^\circ}{6} = 0.6265$, which gives $B = 38.8^\circ$. The student took $180^\circ - 38.8^\circ$. "
+               r"That is impossible: $70^\circ + 141.2^\circ$ is more than $180^\circ$, and $b < a$ means $B < A$. So $B \approx 38.8^\circ$."),
+            SUM("Label the triangle first: side $a$ is opposite angle $A$, and so on.",
+                r"Sine rule: $\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C}$. Use only two parts at a time.",
+                "You need a known pair: a side and the angle opposite it.",
+                r"To find an angle, use $\dfrac{\sin A}{a} = \dfrac{\sin B}{b}$, then press $\sin^{-1}$.",
+                r"Use the angle sum $180^\circ$ to find a third angle, keep the calculator in degrees, and check that the longest side faces the largest angle."),
+        ],
+    ),
+    # ------------------------------------------------------------------ 2. The cosine rule
+    lesson(
+        module=MODULE,
+        topic="Sine and cosine rules",
+        title="The cosine rule",
+        slug="cosine-rule-finding-sides-and-angles",
+        minutes=22,
+        summary="Use the cosine rule to find the third side from two sides and the included angle, or an angle from three sides, and decide when to use the sine rule instead.",
+        objectives=[
+            "Use the cosine rule to find a side from two sides and the included angle",
+            "Use the rearranged cosine rule to find an angle from three sides",
+            "Recognise an obtuse angle from a negative cosine",
+            "Choose between the sine rule and the cosine rule",
+        ],
+        key_concepts=["Cosine rule", "Included angle", "Obtuse angle", "Choosing the rule"],
+        blocks=[
+            H("Introduction"),
+            T("In the previous lesson the sine rule needed a known **pair**: a side and the angle opposite it. "
+              "Sometimes you do not have a pair."),
+            T(r"Two moto-taxis leave a roundabout in Bafoussam on straight roads. One goes 5 km and the other 6 km, and the "
+              r"roads make an angle of $120^\circ$. How far apart are they? No side is paired with its opposite angle, so the "
+              "sine rule cannot start. We need the **cosine rule**."),
+            H("The cosine rule for a side"),
+            D("Use this form when you know two sides and the angle **between** them (the included angle).",
+              title="Cosine rule", formula=r"a^2 = b^2 + c^2 - 2bc\cos A",
+              note=r"The same pattern works for every side: $b^2 = a^2 + c^2 - 2ac\cos B$ and $c^2 = a^2 + b^2 - 2ab\cos C$."),
+            T("Look at the pattern. The side on the left is opposite the angle in the cosine. The other two sides appear "
+              "squared and in the product $2bc$."),
+            EX("Worked example 1: finding a side", intro=(
+                r"In triangle $ABC$, $b = 8$ cm, $c = 11$ cm and $A = 50^\circ$. Find $a$, correct to 2 decimal places."),
+               steps=[
+                   S("Check the information", text=r"Two sides, $b$ and $c$, and the angle $A$ between them: cosine rule."),
+                   S("Write the rule", math=r"a^2 = b^2 + c^2 - 2bc\cos A"),
+                   S("Substitute", math=r"a^2 = 8^2 + 11^2 - 2(8)(11)\cos 50^\circ"),
+                   S("Work out 2bc cos A as one number", math=r"2(8)(11)\cos 50^\circ = 176 \times 0.6428 = 113.13"),
+                   S("Subtract", math=r"a^2 = 64 + 121 - 113.13 = 71.87"),
+                   S("Take the square root", math=r"a \approx 8.48 \text{ cm}"),
+               ]),
+            MISTAKE("Subtracting before multiplying",
+                    r"Work out $2bc\cos A$ completely, then subtract it from $b^2 + c^2$. In worked example 1 that is $185 - 113.13$, not $(185 - 176) \times 0.6428$."),
+            H("The cosine rule for an angle"),
+            D("Use this form when you know all three sides.", title="Cosine rule for an angle",
+              formula=r"\cos A = \frac{b^2 + c^2 - a^2}{2bc}",
+              note="The side opposite the angle you want is the one that is subtracted."),
+            EX("Worked example 2: finding an angle", intro=(
+                "A triangular field has sides 7 m, 8 m and 9 m. Find its largest angle, correct to 1 decimal place."),
+               steps=[
+                   S("The largest angle is opposite the longest side", text="Let $c = 9$ m, $a = 7$ m, $b = 8$ m, and find angle $C$."),
+                   S("Write the rule", math=r"\cos C = \frac{a^2 + b^2 - c^2}{2ab}"),
+                   S("Substitute", math=r"\cos C = \frac{49 + 64 - 81}{2 \times 7 \times 8} = \frac{32}{112}"),
+                   S("Simplify", math=r"\cos C = 0.2857"),
+                   S("Use the inverse cosine key", math=r"C = \cos^{-1}(0.2857) \approx 73.4^\circ"),
+               ]),
+            H("Obtuse angles and a negative cosine"),
+            T(r"For an angle between $90^\circ$ and $180^\circ$, the cosine is **negative**. For example, $\cos 120^\circ = -0.5$."),
+            T("So if the top of the fraction is negative, the angle is obtuse. Keep the minus sign and the calculator gives the obtuse angle directly."),
+            EX("Worked example 3: an obtuse angle", intro=(
+                "A triangle has sides 4 cm, 6 cm and 8 cm. Find the angle opposite the 8 cm side, correct to 1 decimal place."),
+               steps=[
+                   S("Label", text="Let $c = 8$ cm, $a = 4$ cm, $b = 6$ cm. We want angle $C$."),
+                   S("Substitute", math=r"\cos C = \frac{16 + 36 - 64}{2 \times 4 \times 6} = \frac{-12}{48}"),
+                   S("Simplify", math=r"\cos C = -0.25"),
+                   S("Negative cosine, so C is obtuse", math=r"C = \cos^{-1}(-0.25) \approx 104.5^\circ"),
+               ]),
+            IMG("f5m-trig-cosine-rule-obtuse.svg",
+                "Triangle ABC with sides b = 6 cm (A to C), a = 4 cm (B to C) and c = 8 cm (A to B, the longest side, highlighted). The angle at C is marked C = ?. Text: cos C = (16 + 36 − 64) ÷ 48 = −0.25, so C is obtuse and equals 104.5 degrees.",
+                "Figure 1. Worked example 3: a negative cosine gives an obtuse angle, C = 104.5°."),
+            EX("Worked example 4: the moto-taxis", intro=(
+                r"Two moto-taxis leave a roundabout on roads that make an angle of $120^\circ$. One rides 5 km and the other 6 km. How far apart are they?"),
+               steps=[
+                   S("Two sides and the included angle", math=r"d^2 = 5^2 + 6^2 - 2(5)(6)\cos 120^\circ"),
+                   S("cos 120° = −0.5", math=r"d^2 = 25 + 36 - 60(-0.5) = 61 + 30 = 91"),
+                   S("Square root", math=r"d = \sqrt{91} \approx 9.54 \text{ km}"),
+               ], check=r"\text{An obtuse angle makes the third side longer than } \sqrt{5^2 + 6^2} = 7.81"),
+            QUIZ(r"A triangle has sides 3 cm, 5 cm and 7 cm. The rearranged cosine rule gives $\cos C = -0.5$ for the largest angle. What is $C$?",
+                 [r"$60^\circ$", r"$120^\circ$", r"$30^\circ$", r"It is impossible, because a cosine cannot be negative"], 1,
+                 r"$\cos^{-1}(-0.5) = 120^\circ$. A negative cosine means an obtuse angle.",
+                 hint="What sign does the cosine of an obtuse angle have?",
+                 feedback=[r"$60^\circ$ has $\cos 60^\circ = +0.5$. You dropped the minus sign.", "",
+                           r"$\cos 30^\circ \approx 0.866$, not $-0.5$.",
+                           r"Cosines of angles between $90^\circ$ and $180^\circ$ are negative. That is how we spot an obtuse angle."]),
+            H("Sine rule or cosine rule?"),
+            KEY("Choosing the rule", "Look at what you know before you write anything.",
+                cards=[["Sine rule", "You know a side **and its opposite angle** (a pair), plus one more side or angle."],
+                       ["Cosine rule", "You know two sides and the angle **between** them, or all three sides."]],
+                note="Right angle in the triangle? SOH CAH TOA and Pythagoras are still the quickest."),
+            MISTAKE("Dropping the minus sign of an obtuse angle's cosine",
+                    r"$\cos 120^\circ = -0.5$, so $-2bc\cos 120^\circ$ becomes $+$. Type the angle into the calculator and let it give the sign."),
+            MISTAKE("Using an angle that is not between the two sides",
+                    r"In $a^2 = b^2 + c^2 - 2bc\cos A$, angle $A$ must be between $b$ and $c$. If the angle is opposite a known side, use the sine rule."),
+            QUIZ(r"In triangle $PQR$ you know $PQ$, $QR$ and angle $P$. Which rule finds angle $R$ most directly?",
+                 ["The cosine rule", "Pythagoras' theorem", "The sine rule", r"The area formula $\tfrac{1}{2}ab\sin C$"], 2,
+                 r"$QR$ is opposite angle $P$, so you have a pair. $PQ$ is opposite $R$. Use $\dfrac{\sin R}{PQ} = \dfrac{\sin P}{QR}$.",
+                 hint="Is any known side opposite a known angle?",
+                 feedback=["The cosine rule needs the angle between the two known sides (that would be angle Q) or three sides.",
+                           "Pythagoras needs a right angle.", "",
+                           "The area formula gives an area, not an angle, and needs the included angle."]),
+            H("Practice questions"),
+            PQ("A triangle has sides 6 cm, 7 cm and 10 cm. Find its largest angle, correct to 1 decimal place.",
+               r"The largest angle is opposite 10 cm. $\cos C = \dfrac{36 + 49 - 100}{2 \times 6 \times 7} = \dfrac{-15}{84} = -0.1786$. "
+               r"The cosine is negative, so the angle is obtuse: $C = \cos^{-1}(-0.1786) \approx 100.3^\circ$."),
+            PQ(r"A moto-taxi driver in Garoua rides 3.5 km along one road, and his friend rides 4.2 km along another road from the same junction. "
+               r"The angle between the roads is $75^\circ$. How far apart are they, correct to 2 decimal places?",
+               r"$d^2 = 3.5^2 + 4.2^2 - 2(3.5)(4.2)\cos 75^\circ = 29.89 - 7.61 = 22.28$, so $d \approx 4.72$ km."),
+            PQ(r"In triangle $ABC$, $b = 6$ cm, $c = 9$ cm and $A = 40^\circ$. (a) Which rule finds $a$? Why? (b) Find $a$.",
+               r"(a) The cosine rule: we know two sides and the angle between them, and no pair. "
+               r"(b) $a^2 = 36 + 81 - 108\cos 40^\circ = 117 - 82.73 = 34.27$, so $a \approx 5.85$ cm."),
+            SUM(r"Cosine rule for a side: $a^2 = b^2 + c^2 - 2bc\cos A$ (two sides and the included angle).",
+                r"Cosine rule for an angle: $\cos A = \dfrac{b^2 + c^2 - a^2}{2bc}$ (three sides).",
+                "Work out $2bc\\cos A$ as one number before subtracting.",
+                "A negative cosine means the angle is obtuse; keep the minus sign.",
+                "Known pair: sine rule. Two sides and the included angle, or three sides: cosine rule."),
+        ],
+    ),
+    # ------------------------------------------------------------------ 3. Area of a triangle and mixed problems
+    lesson(
+        module=MODULE,
+        topic="Sine and cosine rules",
+        title="Area of a triangle and mixed problems",
+        slug="area-of-triangle-half-ab-sin-c",
+        minutes=22,
+        summary="Find the area of any triangle with ½ab sin C, work backwards from an area to a side or an angle, and combine the sine and cosine rules in multi-step problems.",
+        objectives=[
+            "Find the area of a triangle using ½ab sin C",
+            "Find a missing side or angle when the area is given",
+            "Combine the sine rule, cosine rule and area formula in multi-step problems",
+        ],
+        key_concepts=["Area of a triangle", "Included angle", "Working backwards from the area", "Multi-step problems"],
+        blocks=[
+            H("Introduction"),
+            T(r"You know that the area of a triangle is $\tfrac{1}{2} \times \text{base} \times \text{height}$. But a farmer measuring a "
+              "plot near Foumban usually knows the lengths of the sides, not the height."),
+            T("With trigonometry we can find the area straight from two sides and the angle between them. This lesson also "
+              "brings together the sine rule and the cosine rule from the previous two lessons."),
+            H("The area formula"),
+            D("When you know two sides and the angle **between** them:", title="Area of a triangle",
+              formula=r"\text{Area} = \tfrac{1}{2}ab\sin C",
+              note=r"It works for any pair of sides: $\tfrac{1}{2}bc\sin A$ and $\tfrac{1}{2}ac\sin B$ too. The angle must be the one between the two sides."),
+            T(r"Why does it work? The height from the third corner is $b\sin C$, so the area is $\tfrac{1}{2} \times a \times b\sin C$."),
+            EX("Worked example 1: a farm plot", intro=(
+                r"A farmer in Foumban has a triangular plot. Two sides are 30 m and 40 m, and the angle between them is $60^\circ$. "
+                r"One bag of fertiliser covers $100 \text{ m}^2$. How many bags does she need?"),
+               steps=[
+                   S("Write the formula", math=r"\text{Area} = \tfrac{1}{2}ab\sin C"),
+                   S("Substitute", math=r"\text{Area} = \tfrac{1}{2} \times 30 \times 40 \times \sin 60^\circ = 600 \times 0.8660"),
+                   S("Calculate", math=r"\text{Area} \approx 519.6 \text{ m}^2"),
+                   S("Divide by 100 and round up", text=r"$519.6 \div 100 = 5.196$. Five bags are not enough, so she needs **6 bags**."),
+               ]),
+            IMG("f5m-trig-area-plot.svg",
+                "Triangular plot ABC, shaded green. Side AC is 30 m, side AB is 40 m, and the angle at A between them is 60 degrees. Text: Area = ½ × 30 × 40 × sin 60°, about 519.6 square metres.",
+                "Figure 1. Worked example 1: the 60° angle is between the 30 m and 40 m sides."),
+            QUIZ(r"Find the area of a triangle with $a = 6$ cm, $b = 10$ cm and $C = 30^\circ$.",
+                 [r"$30 \text{ cm}^2$", r"$26 \text{ cm}^2$", r"$60 \text{ cm}^2$", r"$15 \text{ cm}^2$"], 3,
+                 r"$\tfrac{1}{2} \times 6 \times 10 \times \sin 30^\circ = 30 \times 0.5 = 15 \text{ cm}^2$.",
+                 hint=r"Use $\tfrac{1}{2}ab\sin C$ with $\sin 30^\circ = 0.5$.",
+                 feedback=[r"You forgot to multiply by $\sin 30^\circ = 0.5$.",
+                           r"You used $\cos 30^\circ$ instead of $\sin 30^\circ$.",
+                           r"You forgot the $\tfrac{1}{2}$ and the $\sin 30^\circ$.", ""]),
+            H("Working backwards from the area"),
+            T("If the area is given, the same formula becomes an equation. Substitute what you know and solve for the missing side or angle."),
+            EX("Worked example 2: finding an angle from the area", intro=(
+                r"Triangle $ABC$ has area $40 \text{ cm}^2$, $a = 10$ cm and $b = 12$ cm. Angle $C$ is acute. Find $C$."),
+               steps=[
+                   S("Write the formula with the area", math=r"40 = \tfrac{1}{2} \times 10 \times 12 \times \sin C"),
+                   S("Simplify", math=r"40 = 60\sin C"),
+                   S("Divide by 60", math=r"\sin C = 0.6667"),
+                   S("Inverse sine", math=r"C = \sin^{-1}(0.6667) \approx 41.8^\circ"),
+               ]),
+            TIP(r"$\sin 138.2^\circ$ is also $0.6667$, so a triangle with $C = 138.2^\circ$ has the same area. That is why the question says which kind of angle it wants."),
+            EX("Worked example 3: finding a side from the area", intro=(
+                r"Triangle $ABC$ has area $30 \text{ cm}^2$, $a = 8$ cm and $C = 50^\circ$. Find $b$, correct to 2 decimal places."),
+               steps=[
+                   S("Write the formula", math=r"30 = \tfrac{1}{2} \times 8 \times b \times \sin 50^\circ"),
+                   S("Simplify", math=r"30 = 4b \times 0.7660 = 3.064b"),
+                   S("Divide", math=r"b = \frac{30}{3.064} \approx 9.79 \text{ cm}"),
+               ]),
+            H("Multi-step problems"),
+            T("In Paper 2 you often need two rules one after the other. First find the missing side or angle you need, then use it."),
+            EX("Worked example 4: sine rule, then area", intro=(
+                r"In triangle $ABC$, $A = 40^\circ$, $B = 65^\circ$ and $a = 12$ cm. Find the area of the triangle."),
+               steps=[
+                   S("Find the third angle", math=r"C = 180^\circ - 40^\circ - 65^\circ = 75^\circ"),
+                   S("Find side b with the sine rule (lesson 1)", math=r"b = \frac{12 \sin 65^\circ}{\sin 40^\circ} \approx 16.92 \text{ cm}"),
+                   S("Angle C is between sides a and b", math=r"\text{Area} = \tfrac{1}{2} \times 12 \times 16.92 \times \sin 75^\circ"),
+                   S("Calculate", math=r"\text{Area} \approx 98.1 \text{ cm}^2"),
+               ]),
+            EX("Worked example 5: cosine rule, then area", intro=(
+                "A triangle has sides 7 cm, 8 cm and 9 cm. Find its area."),
+               steps=[
+                   S("Find any angle with the cosine rule", math=r"\cos C = \frac{49 + 64 - 81}{2 \times 7 \times 8} = 0.2857, \quad C \approx 73.4^\circ"),
+                   S("C is between the 7 cm and 8 cm sides", math=r"\text{Area} = \tfrac{1}{2} \times 7 \times 8 \times \sin 73.4^\circ"),
+                   S("Calculate", math=r"\text{Area} = 28 \times 0.9583 \approx 26.8 \text{ cm}^2"),
+               ]),
+            MISTAKE("Using an angle that is not between the two sides",
+                    r"In $\tfrac{1}{2}ab\sin C$, angle $C$ must be the angle **between** $a$ and $b$. In worked example 4, using $\sin 40^\circ$ with sides 12 and 16.92 gives a wrong area."),
+            MISTAKE("Forgetting the half", r"$ab\sin C$ alone is twice the area. Always write the $\tfrac{1}{2}$."),
+            MISTAKE("Rounding too early", "Keep at least 4 significant figures (or use the calculator memory) in the middle steps. Round only the final answer."),
+            QUIZ(r"Find the area of a triangle with sides 8 cm and 12 cm and an angle of $150^\circ$ between them.",
+                 [r"$24 \text{ cm}^2$", r"$48 \text{ cm}^2$", r"$-41.6 \text{ cm}^2$", r"$96 \text{ cm}^2$"], 0,
+                 r"$\tfrac{1}{2} \times 8 \times 12 \times \sin 150^\circ = 48 \times 0.5 = 24 \text{ cm}^2$. The sine of an obtuse angle is positive.",
+                 hint=r"$\sin 150^\circ = \sin 30^\circ$.",
+                 feedback=["", r"You forgot the $\tfrac{1}{2}$.",
+                           r"You used $\cos 150^\circ$, which is negative. An area can never be negative; the formula uses sine.",
+                           r"You worked out $8 \times 12$ only."]),
+            H("Practice questions"),
+            PQ(r"A plot of land has two sides of 50 m and 70 m with an angle of $110^\circ$ between them. "
+               r"(a) Find its area. (b) If land in the area sells for 2 000 FCFA per square metre (an example price), find the value of the plot.",
+               r"(a) Area $= \tfrac{1}{2} \times 50 \times 70 \times \sin 110^\circ = 1750 \times 0.9397 \approx 1644.5 \text{ m}^2$. "
+               r"(b) $1644.5 \times 2000 \approx 3\ 289\ 000$ FCFA."),
+            PQ(r"Triangle $PQR$ has area $24 \text{ cm}^2$, $PQ = 6$ cm and $PR = 10$ cm. Angle $P$ is acute. Find angle $P$.",
+               r"$24 = \tfrac{1}{2} \times 6 \times 10 \times \sin P = 30\sin P$, so $\sin P = 0.8$ and $P = \sin^{-1}(0.8) \approx 53.1^\circ$."),
+            PQ("Find the area of an equilateral triangle with sides 10 cm.",
+               r"Every angle is $60^\circ$. Area $= \tfrac{1}{2} \times 10 \times 10 \times \sin 60^\circ = 50 \times 0.8660 \approx 43.3 \text{ cm}^2$."),
+            PQ(r"In triangle $ABC$, $A = 50^\circ$, $B = 60^\circ$ and $a = 10$ cm. (a) Find $b$. (b) Find the area of the triangle.",
+               r"(a) $b = \dfrac{10 \sin 60^\circ}{\sin 50^\circ} \approx 11.31$ cm. "
+               r"(b) $C = 70^\circ$, which is between $a$ and $b$. Area $= \tfrac{1}{2} \times 10 \times 11.31 \times \sin 70^\circ \approx 53.1 \text{ cm}^2$."),
+            SUM(r"Area $= \tfrac{1}{2}ab\sin C$, where $C$ is the angle between sides $a$ and $b$.",
+                "If the area is given, substitute it and solve for the missing side or angle.",
+                "For an angle from the area, check whether the question wants the acute or the obtuse angle.",
+                "Multi-step problems: find the side or included angle you need first (sine or cosine rule), then the area.",
+                "Keep full accuracy in the middle steps and round only at the end."),
+        ],
+    ),
+    # ------------------------------------------------------------------ 4. Three-figure bearings and back bearings
+    lesson(
+        module=MODULE,
+        topic="Bearings",
+        title="Three-figure bearings and back bearings",
+        slug="three-figure-bearings-and-back-bearings",
+        minutes=20,
+        summary="Give a direction as a three-figure bearing measured clockwise from north, read bearings from a diagram, and find a back bearing by adding or subtracting 180°.",
+        objectives=[
+            "Give a direction as a three-figure bearing measured clockwise from north",
+            "Read the bearing of one point from another on a diagram",
+            "Find a back bearing by adding or subtracting 180°",
+            "Find the angle between two bearings from the same point",
+        ],
+        key_concepts=["Bearing", "Three-figure bearing", "Back bearing", "North line"],
+        blocks=[
+            H("Introduction"),
+            T("Pilots at Douala airport, fishermen at Limbe and surveyors all need to describe a direction exactly. "
+              "Saying 'go north-east' is not precise enough. Instead they use **bearings**."),
+            T("A bearing is just an angle, but it is always measured in the same way. Once you know the rule, every bearing question starts the same way."),
+            D("A **bearing** is an angle measured **clockwise** from the **north** direction. It is always written "
+              "with **three figures**, from $000^\\circ$ to $360^\\circ$.", title="Three-figure bearing",
+              note=r"An angle of $45^\circ$ is written $045^\circ$, and an angle of $8^\circ$ is written $008^\circ$."),
+            IMG("f5m-bearing-compass.svg",
+                "Compass rose. North is 000 degrees, north-east 045, east 090, south-east 135, south 180, south-west 225, west 270 and north-west 315. A green arrow turns clockwise from north to south-east.",
+                "Figure 1. The eight compass directions as three-figure bearings, measured clockwise from north."),
+            KEY("Three rules for every bearing", "Check these each time you draw or read a bearing.",
+                cards=[["1. Start at north", "Draw a north line at the point you are measuring **from**."],
+                       ["2. Turn clockwise", "Measure the angle clockwise from that north line."],
+                       ["3. Three figures", r"Write $45^\circ$ as $045^\circ$ and $7^\circ$ as $007^\circ$."]]),
+            T("The word 'from' tells you where to stand. 'The bearing of B **from** A' means: stand at A, face north, "
+              "and turn clockwise until you face B."),
+            QUIZ("What is the three-figure bearing of south-west?",
+                 [r"$045^\circ$", r"$135^\circ$", r"$225^\circ$", r"$315^\circ$"], 2,
+                 r"South is $180^\circ$; south-west is halfway between south ($180^\circ$) and west ($270^\circ$), which is $225^\circ$.",
+                 hint="Turn clockwise from north: east, then south, then halfway to west.",
+                 feedback=[r"$045^\circ$ is north-east.", r"$135^\circ$ is south-east.", "", r"$315^\circ$ is north-west."]),
+            H("Reading bearings from a diagram"),
+            T("Diagrams often show a small angle measured from the north line or the south line, not the bearing itself. "
+              "You must turn it into a clockwise angle from north."),
+            EX("Worked example 1: bearings from a diagram", intro=(
+                r"In a diagram, the line from A to B makes an angle of $50^\circ$ **anticlockwise** from north. The line from A to C makes "
+                r"an angle of $35^\circ$ on the west side of the south line. Find the bearings of B and C from A."),
+               steps=[
+                   S("B: a full turn is 360°", text=r"Going clockwise from north to B is a full turn minus the $50^\circ$ gap."),
+                   S("Bearing of B from A", math=r"360^\circ - 50^\circ = 310^\circ"),
+                   S("C: south is 180°", text=r"Turn clockwise to south ($180^\circ$), then $35^\circ$ more towards the west."),
+                   S("Bearing of C from A", math=r"180^\circ + 35^\circ = 215^\circ"),
+               ]),
+            IMG("f5m-bearing-reading.svg",
+                "Two diagrams. Left: point A with a north line; B is 50 degrees anticlockwise from north, and a green clockwise arc from north shows the bearing 310 degrees. Right: point A with north and south lines; C is 35 degrees west of the south line, and a green clockwise arc shows the bearing 215 degrees.",
+                "Figure 2. Worked example 1: always measure clockwise from north. 360° − 50° = 310° and 180° + 35° = 215°."),
+            H("Back bearings"),
+            D(r"If the bearing of B from A is $\theta$, the bearing of A from B points in exactly the opposite direction.",
+              title="Back bearing",
+              formula=r"\text{back bearing} = \theta + 180^\circ \ (\text{if } \theta < 180^\circ) \quad\text{or}\quad \theta - 180^\circ \ (\text{if } \theta \ge 180^\circ)"),
+            T(r"Why? The north lines at A and B are parallel, and AB crosses them. Turning to face the other way is always a half turn, $180^\circ$."),
+            IMG("f5m-bearing-back-bearing.svg",
+                "Points A and B, each with a north line. A blue clockwise arc at A shows the bearing of B from A, 065 degrees. A green clockwise arc at B shows the bearing of A from B, 245 degrees.",
+                "Figure 3. The bearing of B from A is 065°; the back bearing, of A from B, is 065° + 180° = 245°."),
+            EX("Worked example 2: back bearings", intro=(
+                r"(a) The bearing of a fishing boat from Kribi is $065^\circ$. Find the bearing of Kribi from the boat. "
+                r"(b) The bearing of Q from P is $310^\circ$. Find the bearing of P from Q."),
+               steps=[
+                   S("(a) 065° is less than 180°, so add", math=r"065^\circ + 180^\circ = 245^\circ"),
+                   S("(b) 310° is more than 180°, so subtract", math=r"310^\circ - 180^\circ = 130^\circ"),
+               ], check=r"\text{The two bearings always differ by exactly } 180^\circ"),
+            EX("Worked example 3: the angle between two bearings", intro=(
+                r"From a farmhouse F, a well W is on a bearing of $070^\circ$ and a barn B is on a bearing of $155^\circ$. Find angle WFB."),
+               steps=[
+                   S("Both bearings are measured from the same north line at F", text="So the angle between the two directions is their difference."),
+                   S("Subtract", math=r"\angle WFB = 155^\circ - 70^\circ = 85^\circ"),
+               ]),
+            MISTAKE("Measuring from the wrong point", "The bearing of B from A uses the north line at **A**. Read the word 'from' carefully."),
+            MISTAKE("Measuring anticlockwise or from east", "Bearings are always clockwise from north. Turn a small angle on the diagram into a clockwise angle from north."),
+            MISTAKE("Writing two figures", r"Write $078^\circ$, not $78^\circ$. Examiners expect three figures."),
+            QUIZ(r"The bearing of Q from P is $230^\circ$. What is the bearing of P from Q?",
+                 [r"$130^\circ$", r"$410^\circ$", r"$050^\circ$", r"$310^\circ$"], 2,
+                 r"$230^\circ$ is more than $180^\circ$, so subtract: $230^\circ - 180^\circ = 050^\circ$.",
+                 hint=r"Is $230^\circ$ more or less than $180^\circ$?",
+                 feedback=[r"That is $360^\circ - 230^\circ$. A back bearing differs by exactly $180^\circ$.",
+                           r"A bearing cannot be more than $360^\circ$. Subtract $180^\circ$ when the bearing is $180^\circ$ or more.", "",
+                           r"You added $80^\circ$. The difference must be $180^\circ$."]),
+            H("Practice questions"),
+            PQ(r"The bearing of a radio mast from Buea is $300^\circ$. What is the bearing of Buea from the mast?",
+               r"$300^\circ \ge 180^\circ$, so subtract $180^\circ$: $300^\circ - 180^\circ = 120^\circ$."),
+            PQ(r"Point B is $20^\circ$ east of south from point A. (a) Give the bearing of B from A. (b) Give the bearing of A from B.",
+               r"(a) South is $180^\circ$; east of south is back towards east, so subtract: $180^\circ - 20^\circ = 160^\circ$. "
+               r"(b) $160^\circ + 180^\circ = 340^\circ$."),
+            PQ(r"From a school S, the market M is on a bearing of $040^\circ$ and the hospital H is on a bearing of $290^\circ$. Find the angle MSH inside the triangle.",
+               r"Going clockwise from $290^\circ$ round to $040^\circ$ passes north: $360^\circ - 290^\circ + 40^\circ = 110^\circ$. "
+               r"(The other way, $290^\circ - 40^\circ = 250^\circ$, is the reflex angle.) So angle MSH $= 110^\circ$."),
+            SUM("A bearing is measured clockwise from north and written with three figures.",
+                "'The bearing of B from A' means stand at A and face north.",
+                r"Turn a diagram angle into a clockwise angle from north, for example $360^\circ - 50^\circ$ or $180^\circ + 35^\circ$.",
+                r"Back bearing: add $180^\circ$ if the bearing is under $180^\circ$, otherwise subtract $180^\circ$.",
+                "The angle between two bearings from the same point is their difference."),
+        ],
+    ),
+    # ------------------------------------------------------------------ 5. Journey problems with bearings
+    lesson(
+        module=MODULE,
+        topic="Bearings",
+        title="Journey problems with bearings",
+        slug="bearings-journey-problems",
+        minutes=25,
+        summary="Solve two-leg journey problems by sketching north lines, finding the angle at the turning point, and using right-angled trigonometry or the sine and cosine rules to find distances and bearings.",
+        objectives=[
+            "Draw a clear sketch of a two-leg journey with a north line at every point",
+            "Find the angle at the turning point using back bearings",
+            "Use Pythagoras, SOH CAH TOA and the sine and cosine rules to find a distance",
+            "Find the bearing of the end point from the start, and the bearing back to the start",
+        ],
+        key_concepts=["Journey sketch", "Angle at the turning point", "Bearing back to the start", "Choosing the method"],
+        blocks=[
+            H("Introduction"),
+            T("A lorry leaves a depot in Douala, drives east, then turns south. A fishing boat leaves Limbe on one bearing, then changes course. "
+              "How far are they from where they started, and in which direction must they go to get back?"),
+            T("In the previous lesson you learned to read bearings and back bearings. Now you will combine them with the trigonometry "
+              "from the first topic: SOH CAH TOA, the sine rule and the cosine rule."),
+            KEY("Four steps for every journey problem", "Follow them in order.",
+                cards=[["1. Sketch", "Mark each point and draw a north line at **every** point where the direction changes."],
+                       ["2. Angle at the turn", "Use the back bearing at the turning point to find the angle inside the triangle."],
+                       ["3. Solve the triangle", "Right angle: Pythagoras and SOH CAH TOA. Otherwise: sine or cosine rule."],
+                       ["4. Back to a bearing", "Add the angle you found to (or subtract it from) a known bearing."]]),
+            H("Right-angled journeys"),
+            EX("Worked example 1: east then south", intro=(
+                r"A lorry leaves a depot at D and travels 30 km due east to E. It then travels 40 km due south to F. "
+                "Find (a) the distance DF, (b) the bearing of F from D."),
+               steps=[
+                   S("Sketch", text="East then south gives a right angle at E."),
+                   S("Pythagoras for DF", math=r"DF = \sqrt{30^2 + 40^2} = \sqrt{2500} = 50 \text{ km}"),
+                   S("Find angle EDF", math=r"\tan(\angle EDF) = \frac{40}{30}, \quad \angle EDF \approx 53.1^\circ"),
+                   S("DE points east (090°), so add", math=r"\text{bearing of F from D} = 090^\circ + 53.1^\circ = 143.1^\circ"),
+               ], check=r"F \text{ is south-east of D, so the bearing lies between } 090^\circ \text{ and } 180^\circ"),
+            IMG("f5-bearings-lorry.svg",
+                "Sketch with north arrows at D and E. D to E is 30 km due east, E to F is 40 km due south, with a right angle at E. DF is 50 km. At D, angle EDF is 53.1 degrees, and the bearing of F from D, measured clockwise from north, is 143.1 degrees.",
+                "Figure 1. Worked example 1: the bearing of F from D is 090° + 53.1° = 143.1°."),
+            EX("Worked example 2: finding the angle at the turn", intro=(
+                r"A boat sails 12 km from P to Q on a bearing of $050^\circ$. It then sails 9 km from Q to R on a bearing of $140^\circ$. "
+                "Find the distance PR, the bearing of R from P, and the bearing on which the boat must sail to return to P."),
+               steps=[
+                   S("Bearing of P from Q (back bearing)", math=r"050^\circ + 180^\circ = 230^\circ"),
+                   S("Angle at the turn", math=r"\angle PQR = 230^\circ - 140^\circ = 90^\circ"),
+                   S("Right angle at Q, so use Pythagoras", math=r"PR = \sqrt{12^2 + 9^2} = \sqrt{225} = 15 \text{ km}"),
+                   S("Find angle QPR", math=r"\tan(\angle QPR) = \frac{9}{12}, \quad \angle QPR \approx 36.9^\circ"),
+                   S("Bearing of R from P", math=r"050^\circ + 36.9^\circ = 086.9^\circ"),
+                   S("Bearing back to P from R (back bearing)", math=r"086.9^\circ + 180^\circ = 266.9^\circ"),
+               ]),
+            IMG("f5-bearings-boat.svg",
+                "Sketch with north arrows at P and Q. P to Q is 12 km on a bearing of 050 degrees; Q to R is 9 km on a bearing of 140 degrees, measured clockwise from north at Q. The angle at Q is a right angle. PR is 15 km, angle QPR is 36.9 degrees, and the bearing of R from P is 086.9 degrees.",
+                "Figure 2. Worked example 2: the back bearing 230° at Q shows that angle PQR is 90°."),
+            QUIZ(r"A boat sails from P to Q on a bearing of $030^\circ$, then from Q to R on a bearing of $150^\circ$. Find angle $PQR$.",
+                 [r"$120^\circ$", r"$60^\circ$", r"$30^\circ$", r"$90^\circ$"], 1,
+                 r"Bearing of P from Q $= 030^\circ + 180^\circ = 210^\circ$. Angle $PQR = 210^\circ - 150^\circ = 60^\circ$.",
+                 hint="Find the bearing of P from Q first.",
+                 feedback=[r"You subtracted the two bearings, $150^\circ - 30^\circ$. Compare the back bearing $210^\circ$ with $150^\circ$ instead.", "",
+                           r"$030^\circ$ is measured at P. The angle you want is at Q.",
+                           "Do not assume a right angle. Work it out from the back bearing."]),
+            H("Journeys without a right angle"),
+            EX("Worked example 3: the cosine rule, then the sine rule", intro=(
+                r"A hiker walks 8 km from A to B on a bearing of $060^\circ$, then 6 km from B to C on a bearing of $120^\circ$. "
+                "Find (a) angle ABC, (b) the distance AC, (c) the bearing of C from A, (d) the bearing of A from C."),
+               steps=[
+                   S("(a) Back bearing at B", math=r"\text{bearing of A from B} = 240^\circ, \quad \angle ABC = 240^\circ - 120^\circ = 120^\circ"),
+                   S("(b) Two sides and the included angle: cosine rule", math=r"AC^2 = 8^2 + 6^2 - 2(8)(6)\cos 120^\circ = 100 + 48 = 148"),
+                   S("Square root", math=r"AC = \sqrt{148} \approx 12.17 \text{ km}"),
+                   S("(c) Angle BAC with the sine rule", math=r"\sin(\angle BAC) = \frac{6 \sin 120^\circ}{12.17} = 0.4271, \quad \angle BAC \approx 25.3^\circ"),
+                   S("Add to the first bearing", math=r"\text{bearing of C from A} = 060^\circ + 25.3^\circ = 085.3^\circ"),
+                   S("(d) Back bearing", math=r"085.3^\circ + 180^\circ = 265.3^\circ"),
+               ]),
+            IMG("f5-bearings-hiker.svg",
+                "Sketch with north arrows at A and B. A to B is 8 km on a bearing of 060 degrees; B to C is 6 km on a bearing of 120 degrees, each measured clockwise from north. A dashed line joins A to C, marked AC = ?.",
+                "Figure 3. Worked example 3: draw a north line at A and at B before finding angle ABC."),
+            EX("Worked example 4: the sine rule with two bearings", intro=(
+                r"A ship at P sees a lighthouse L on a bearing of $040^\circ$. The ship sails 10 km due east to Q, where L is on a bearing of $330^\circ$. "
+                "Find the distance QL, correct to 2 decimal places."),
+               steps=[
+                   S("Angle at P", text=r"PQ points east ($090^\circ$), so $\angle LPQ = 90^\circ - 40^\circ = 50^\circ$."),
+                   S("Angle at Q", text=r"QP points west ($270^\circ$), so $\angle PQL = 330^\circ - 270^\circ = 60^\circ$."),
+                   S("Angle at L", math=r"\angle PLQ = 180^\circ - 50^\circ - 60^\circ = 70^\circ"),
+                   S("Pair: PQ = 10 km is opposite L. QL is opposite P", math=r"\frac{QL}{\sin 50^\circ} = \frac{10}{\sin 70^\circ}"),
+                   S("Calculate", math=r"QL = \frac{10 \sin 50^\circ}{\sin 70^\circ} \approx 8.15 \text{ km}"),
+               ]),
+            IMG("f5m-bearing-lighthouse.svg",
+                "Triangle PQL with north lines at P and Q. PQ is 10 km due east. At P the bearing of L is 040 degrees and angle LPQ is 50 degrees. At Q, L is 30 degrees anticlockwise from north (bearing 330 degrees) and angle PQL is 60 degrees. The angle at L is 70 degrees. QL is marked QL = ?.",
+                "Figure 4. Worked example 4: turn each bearing into an angle inside the triangle, then use the sine rule."),
+            MISTAKE("Using the distance travelled", "The straight-line distance AC is not 8 + 6. Solve the triangle."),
+            MISTAKE("Assuming a right angle", "Only use Pythagoras when you have shown that the angle at the turn is 90°."),
+            MISTAKE("Giving the angle inside the triangle as the bearing", r"$\angle BAC = 25.3^\circ$ is not a bearing. Add it to the bearing $060^\circ$ of AB."),
+            QUIZ(r"The bearing of C from A is $078^\circ$. On what bearing must a traveller at C go to return to A?",
+                 [r"$078^\circ$", r"$282^\circ$", r"$102^\circ$", r"$258^\circ$"], 3,
+                 r"The return direction is the back bearing: $078^\circ + 180^\circ = 258^\circ$.",
+                 hint="Going back is the opposite direction.",
+                 feedback=["That is the direction from A to C, not back to A.",
+                           r"That is $360^\circ - 78^\circ$. The opposite direction is $180^\circ$ away.",
+                           r"That is $180^\circ - 78^\circ$. Add $180^\circ$ instead.", ""]),
+            H("Practice questions"),
+            PQ("Village Y is 5 km due north of village X. Village Z is 12 km due east of X. Find (a) the distance YZ, (b) the bearing of Z from Y.",
+               r"(a) The angle at X is $90^\circ$, so $YZ = \sqrt{5^2 + 12^2} = 13$ km. "
+               r"(b) At Y, X is due south ($180^\circ$). $\tan(\angle XYZ) = \dfrac{12}{5}$, so $\angle XYZ \approx 67.4^\circ$. "
+               r"Z is east of the south line, so the bearing is $180^\circ - 67.4^\circ = 112.6^\circ$."),
+            PQ(r"A cyclist rides 8 km from A to B on a bearing of $040^\circ$, then 5 km from B to C on a bearing of $160^\circ$. "
+               "Find (a) angle ABC, (b) AC, (c) the bearing of C from A, (d) the bearing of A from C.",
+               r"(a) Bearing of A from B $= 220^\circ$, so $\angle ABC = 220^\circ - 160^\circ = 60^\circ$. "
+               r"(b) $AC^2 = 64 + 25 - 80\cos 60^\circ = 49$, so $AC = 7$ km. "
+               r"(c) $\sin(\angle BAC) = \dfrac{5 \sin 60^\circ}{7} = 0.6186$, so $\angle BAC \approx 38.2^\circ$ and the bearing is $040^\circ + 38.2^\circ = 078.2^\circ$. "
+               r"(d) $078.2^\circ + 180^\circ = 258.2^\circ$."),
+            PQ(r"A fishing boat sails 12 km due north from X to Y. A rock R is on a bearing of $050^\circ$ from X and $110^\circ$ from Y. Find the distance YR.",
+               r"Angle $RXY = 50^\circ$. At Y, X is due south ($180^\circ$), so $\angle XYR = 180^\circ - 110^\circ = 70^\circ$. Then $\angle R = 60^\circ$. "
+               r"$YR = \dfrac{12 \sin 50^\circ}{\sin 60^\circ} \approx 10.61$ km."),
+            SUM("Sketch the journey with a north line at every turning point.",
+                "Find the angle at the turn from the back bearing at that point.",
+                "Right angle: Pythagoras and SOH CAH TOA. Otherwise: cosine rule for two sides and the included angle, sine rule for a known pair.",
+                "Turn angles inside the triangle back into bearings by adding to or subtracting from a known bearing.",
+                r"The bearing back to the start is the back bearing: add or subtract $180^\circ$."),
+        ],
+    ),
+]

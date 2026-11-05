@@ -33,6 +33,11 @@ def NUM(prompt, answer, steps, tolerance=0, unit="", concept="", skill="", hint=
             "steps": _steps(steps), "concept": concept, "skill": skill, "hint": hint, "feedback": feedback}
 
 
-def practice_set(module, topic, title, lesson, questions):
-    """A practice set for one syllabus topic. `lesson` is the slug of the lesson it follows."""
-    return {"module": module, "topic": topic, "title": title, "lesson": lesson, "questions": list(questions)}
+def practice_set(module, topic, title, lesson, questions, mock=False, time_limit_minutes=None):
+    """A practice set for one syllabus topic. `lesson` is the slug of the lesson it follows.
+
+    `mock=True` marks a full mock exam paper (listed under "Mock exams", kept out of topic mastery);
+    `time_limit_minutes` sets its timed-exam length (e.g. 90 for Paper 1) instead of 1½ minutes a question.
+    """
+    return {"module": module, "topic": topic, "title": title, "lesson": lesson, "questions": list(questions),
+            "mock": bool(mock), "time_limit_minutes": time_limit_minutes}

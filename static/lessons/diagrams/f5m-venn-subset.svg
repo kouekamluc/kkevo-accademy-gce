@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Venn diagram showing B, the multiples of 4, as a subset inside A, the even numbers, within the universal set 1 to 10</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="30" y="24" width="500" height="312" rx="6" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<text x="46" y="52" font-size="17" font-weight="700" fill="#102A43">ξ = {1, 2, 3, …, 10}</text>
+<ellipse cx="290" cy="190" rx="180" ry="120" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<ellipse cx="330" cy="200" rx="80" ry="60" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+<text x="250" y="108" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">A (even numbers)</text>
+<text x="330" y="184" font-size="14" font-weight="700" fill="#047857" text-anchor="middle">B (multiples of 4)</text>
+<text x="175" y="175" font-size="18" fill="#102A43" text-anchor="middle">2</text>
+<text x="200" y="240" font-size="18" fill="#102A43" text-anchor="middle">6</text>
+<text x="250" y="285" font-size="18" fill="#102A43" text-anchor="middle">10</text>
+<text x="305" y="228" font-size="18" fill="#102A43" text-anchor="middle">4</text>
+<text x="355" y="228" font-size="18" fill="#102A43" text-anchor="middle">8</text>
+<text x="70" y="120" font-size="18" fill="#102A43" text-anchor="middle">1</text>
+<text x="80" y="220" font-size="18" fill="#102A43" text-anchor="middle">3</text>
+<text x="70" y="300" font-size="18" fill="#102A43" text-anchor="middle">5</text>
+<text x="490" y="110" font-size="18" fill="#102A43" text-anchor="middle">7</text>
+<text x="490" y="280" font-size="18" fill="#102A43" text-anchor="middle">9</text>
+</svg>

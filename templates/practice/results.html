@@ -14,17 +14,34 @@
   <p class="mt-1 text-sm text-ink-muted">{% if unanswered_count %}{{ unanswered_count }} not answered. {% endif %}{% if hint_count %}Hints used on {{ hint_count }} question{{ hint_count|pluralize }}. {% endif %}{% if guess_count %}{{ guess_count }} right answer{{ guess_count|pluralize }} you marked as a guess.{% endif %}</p>
   {% endif %}
 
+  {% if topic_breakdown %}
+  <div class="mx-auto mt-6 max-w-[560px] rounded-card bg-surface-bg px-5 py-4 text-left" aria-labelledby="topics-heading">
+    <h2 id="topics-heading" class="text-center text-[13px] font-semibold uppercase tracking-[.08em] text-ink-muted">Your score by topic</h2>
+    <p class="mt-1 text-center text-sm text-slate-600">Revise the topics at the top first: they cost you the most marks.</p>
+    <ul class="mt-3 flex flex-col divide-y divide-surface-border">
+      {% for t in topic_breakdown %}
+      <li class="flex items-center gap-3 py-2.5">
+        <span class="min-w-0 flex-1 text-[15px]">{{ t.concept }}</span>
+        <span class="text-sm font-semibold {% if t.percent >= 80 %}text-success-text{% elif t.percent >= 60 %}text-primary-700{% else %}text-warning-text{% endif %}">{{ t.correct }}/{{ t.total }}</span>
+        {% if t.lesson and t.percent < 80 %}<a href="{{ t.lesson.get_absolute_url }}" class="text-sm font-semibold text-primary">Revise</a>{% else %}<span class="w-[52px]"></span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% else %}
   <div class="mx-auto mt-6 flex max-w-[520px] flex-col items-center gap-2 rounded-card bg-surface-bg px-5 py-4" aria-labelledby="mastery-heading">
     <h2 id="mastery-heading" class="text-[13px] font-semibold uppercase tracking-[.08em] text-ink-muted">{{ practice_set.topic.title }} · topic mastery</h2>
     {% include "practice/_mastery.html" with mastery=mastery size="lg" %}
     <p class="text-sm text-slate-600">{{ mastery.next_step }}</p>
   </div>
+  {% endif %}
 
   <div class="mt-6 flex flex-wrap justify-center gap-3">
     {% if review_count %}<a href="{% url 'practice:review' %}" class="btn-secondary h-12">{% include "components/icon.html" with name="calendar" class="h-[18px] w-[18px]" stroke="2" %}{{ review_count }} to review from tomorrow</a>{% endif %}
     <form method="post" action="{% url 'practice:start' practice_set.pk %}">{% csrf_token %}<input type="hidden" name="restart" value="1">{% if attempt.is_exam %}<input type="hidden" name="mode" value="exam">{% endif %}<button type="submit" class="btn-secondary h-12">{% include "components/icon.html" with name="refresh" class="h-[18px] w-[18px]" stroke="2" %}Try again</button></form>
     {% if practice_set.lesson %}<a href="{{ practice_set.lesson.get_absolute_url }}" class="btn-secondary h-12">Back to the lesson</a>{% endif %}
-    <a href="{% url 'practice:index' %}" class="btn-primary h-12">More practice</a>
+    {% if next_lesson and attempt.score >= 60 %}<a href="{{ next_lesson.get_absolute_url }}" class="btn-primary h-12">Next lesson: {{ next_lesson.title|truncatechars:40 }}</a>
+    {% else %}<a href="{% url 'practice:index' %}" class="{% if next_lesson %}btn-secondary{% else %}btn-primary{% endif %} h-12">More practice</a>{% endif %}
   </div>
 </section>
 <section class="mt-6 rounded-panel border border-surface-border bg-white p-6 nav:p-8" aria-labelledby="review-heading">

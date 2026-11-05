@@ -125,7 +125,16 @@ Every question has a short worked solution, a hint that points to the first step
 a `concept` tag (max 80 characters) and a `skill` tag (Recall, Concept, Calculation, Reasoning, Application,
 Interpretation; max 40). Questions test what the linked lesson teaches.
 
+Mock exam papers go in the syllabus "Examination" section (topics such as "Paper 1"), which is optional
+content: `practice_set(..., mock=True, time_limit_minutes=90)`. Tag each mock question's `concept` with the
+syllabus topic title it tests; the results page then shows the score by topic with links to revise.
+Mocks are listed under "Mock exams" on the course and practice pages and do not count towards topic mastery.
+
+Give every lesson its own practice set (`lesson=<its slug>`): the lesson links to it, the course page
+shows it right after the lesson, and the results page offers the next lesson.
+
 ```bash
-.venv/Scripts/python manage.py check_practice f5_mathematics_a
+.venv/Scripts/python manage.py check_practice f5_maths_3_quadratics
 .venv/Scripts/python manage.py load_practice
+.venv/Scripts/python manage.py load_lessons --prune --only mathematics:form-5   # drop drafts no longer in the files
 ```

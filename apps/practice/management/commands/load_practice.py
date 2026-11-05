@@ -4,6 +4,7 @@
     python manage.py load_practice --dry-run    # validate and report, save nothing
     python manage.py load_practice --refresh    # also rewrite draft sets nobody has attempted
     python manage.py load_practice --remove     # delete draft sets from the files that nobody has attempted
+    python manage.py load_practice --prune      # also delete such sets that are no longer in the files
     python manage.py load_practice --only mathematics:form-5
 
 Run `load_lessons` first: sets go into the same "[gce-guide]" outline courses and link to their lesson.
@@ -14,6 +15,7 @@ from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
 
 from apps.academics.management.commands.load_gce_curriculum import COURSE_TAG
+from apps.courses.management.commands.load_lessons import Command as LessonsCommand
 from apps.courses.models import Course, Lesson
 from apps.practice import practice_content
 from apps.practice.models import Choice, PracticeSet, Question
@@ -31,6 +33,8 @@ class Command(BaseCommand):
         parser.add_argument("--dry-run", action="store_true")
         parser.add_argument("--refresh", action="store_true", help="Rewrite draft sets nobody has attempted.")
         parser.add_argument("--remove", action="store_true", help="Delete draft sets nobody has attempted.")
+        parser.add_argument("--prune", action="store_true",
+                            help="Delete draft sets nobody has attempted that are no longer in the files.")
         parser.add_argument("--only", action="append", default=[], metavar="SUBJECT:LEVEL")
 
     @transaction.atomic
@@ -43,8 +47,8 @@ class Command(BaseCommand):
         if errors:
             raise CommandError("The practice content has problems; nothing was loaded:\n  - " + "\n  - ".join(errors))
 
-        counts = dict.fromkeys(["created", "refreshed", "removed", "kept", "questions"], 0)
-        orders = {}
+        counts = dict.fromkeys(["created", "refreshed", "removed", "pruned", "kept", "questions"], 0)
+        orders, courses = {}, {}
         for key, spec, _source in rows:
             course = Course.objects.filter(offering__subject__slug=key[0], offering__level__slug=key[1],
                                            description=COURSE_TAG).first()
@@ -52,7 +56,8 @@ class Command(BaseCommand):
                 if options["remove"]:
                     continue
                 raise CommandError(f"No GCE outline course for {key[0]} / {key[1]}: run load_lessons first.")
-            topic = course.modules.get(title=spec["module"]).topics.get(title=spec["topic"])
+            courses[key] = course
+            topic = LessonsCommand().topic_for(course, key, spec["module"], spec["topic"])
             orders[topic.pk] = orders.get(topic.pk, 0) + 1
             existing = PracticeSet.objects.filter(topic=topic, title=spec["title"]).first()
             if options["remove"]:
@@ -72,6 +77,13 @@ class Command(BaseCommand):
             else:
                 counts["kept"] += 1
 
+        if options["prune"] and not options["remove"]:
+            wanted = {(key, spec["module"], spec["topic"], spec["title"]) for key, spec, _ in rows}
+            for key, course in courses.items():
+                for stale in PracticeSet.objects.filter(topic__module__course=course).select_related("topic__module"):
+                    if (key, stale.topic.module.title, stale.topic.title, stale.title) not in wanted and untouched(stale):
+                        stale.delete()
+                        counts["pruned"] += 1
         summary = ", ".join(f"{n} {k}" for k, n in counts.items() if n or k == "created")
         self.stdout.write(self.style.SUCCESS(("Dry run: " if options["dry_run"] else "Practice sets: ") + summary + "."))
         if options["dry_run"]:
@@ -81,6 +93,8 @@ class Command(BaseCommand):
     def write_set(self, practice_set, spec, order):
         practice_set.order = order - 1
         practice_set.lesson = Lesson.objects.filter(topic=practice_set.topic, slug=spec.get("lesson") or "").first()
+        practice_set.is_mock = bool(spec.get("mock"))
+        practice_set.time_limit_minutes = spec.get("time_limit_minutes") or None
         practice_set.save()
         practice_set.attempts.filter(user__is_staff=True).delete()  # staff previews of the old questions
         practice_set.questions.all().delete()

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>The angle in a semicircle is a right angle</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="280.0" cy="180.0" r="140.0" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="140.0,180.0 420.0,180.0 210.0,58.8" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="140.0" y1="180.0" x2="420.0" y2="180.0" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<path d="M202.0,72.6 L215.9,80.6 L223.9,66.8" fill="none" stroke="#047857" stroke-width="2.5"/>
+<circle cx="280.0" cy="180.0" r="4" fill="#102A43"/>
+<text x="280.0" y="200.0" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">O</text>
+<circle cx="140.0" cy="180.0" r="4" fill="#102A43"/>
+<text x="120.0" y="180.0" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<circle cx="420.0" cy="180.0" r="4" fill="#102A43"/>
+<text x="440.0" y="180.0" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<circle cx="210.0" cy="58.8" r="4" fill="#102A43"/>
+<text x="200.0" y="41.4" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<text x="350.0" y="202.0" font-size="15" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="400">diameter</text>
+<text x="20.0" y="30.0" font-size="18" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="700">∠ACB = 90°</text>
+</svg>

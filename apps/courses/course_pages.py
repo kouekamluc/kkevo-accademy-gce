@@ -9,7 +9,7 @@ KKEVO draft text: check against the official GCE syllabus before publishing the 
 
 PAGES = {
     ("mathematics", "form-5"): dict(
-        title="Form 5 General Mathematics", slug="form-5-general-mathematics",
+        title="Form 5 General Mathematics", slug="form-5-general-mathematics", primary=True,
         summary="Everything for GCE O Level General Mathematics: sets and logic, commercial maths, quadratics, "
                 "sequences, matrices and vectors, trigonometry and bearings, circle theorems, statistics and "
                 "probability. Each lesson explains, works examples, then lets you practise.",

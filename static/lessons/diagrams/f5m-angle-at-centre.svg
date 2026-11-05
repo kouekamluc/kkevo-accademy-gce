@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Angle at the centre is twice the angle at the circumference</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="280.0" cy="180.0" r="140.0" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<line x1="255.7" y1="42.1" x2="165.3" y2="260.3" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="255.7" y1="42.1" x2="394.7" y2="260.3" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="280.0" y1="180.0" x2="165.3" y2="260.3" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="280.0" y1="180.0" x2="394.7" y2="260.3" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M280.0,180.0 L304.6,197.2 A30,30 0 0 1 255.4,197.2 Z" fill="#DBEAFE" stroke="none"/>
+<path d="M304.6,197.2 A30,30 0 0 1 255.4,197.2" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="280.0" y="230.0" font-size="17" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="600">2x</text>
+<path d="M255.7,42.1 L274.0,70.8 A34,34 0 0 1 242.7,73.5 Z" fill="#D1FAE5" stroke="none"/>
+<path d="M274.0,70.8 A34,34 0 0 1 242.7,73.5" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="260.2" y="93.9" font-size="17" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">x</text>
+<circle cx="280.0" cy="180.0" r="4" fill="#102A43"/>
+<text x="280.0" y="160.0" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">O</text>
+<circle cx="165.3" cy="260.3" r="4" fill="#102A43"/>
+<text x="148.9" y="271.8" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<circle cx="394.7" cy="260.3" r="4" fill="#102A43"/>
+<text x="411.1" y="271.8" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<circle cx="255.7" cy="42.1" r="4" fill="#102A43"/>
+<text x="252.2" y="22.4" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<text x="20.0" y="30.0" font-size="18" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="700">∠AOB = 2 × ∠ACB</text>
+</svg>

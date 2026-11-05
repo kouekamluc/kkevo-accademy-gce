@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Triangle with sides 4 cm, 6 cm and 8 cm; the angle C opposite the 8 cm side is obtuse, 104.5 degrees</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="70,286.2 490,286.2 345.6,133.8" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="70" y1="286.2" x2="490" y2="286.2" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+<path d="M366.2,155.5 A30,30 0 0 1 319.4,148.3" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="337.7" y="185.1" font-size="16" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">C = ?</text>
+<text x="52" y="294.2" font-size="20" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<text x="508" y="294.2" font-size="20" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<text x="345.6" y="113.8" font-size="20" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<text x="222.3" y="236.2" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">b = 6 cm</text>
+<text x="396" y="230.6" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">a = 4 cm</text>
+<text x="280" y="312.2" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">c = 8 cm (longest side)</text>
+<text x="20" y="30" font-size="16" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">cos C = (16 + 36 − 64) ÷ 48 = −0.25</text>
+<text x="20" y="56" font-size="16" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="700">Negative cosine, so C is obtuse: C = 104.5°</text>
+</svg>

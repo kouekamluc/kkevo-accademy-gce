@@ -86,3 +86,27 @@ def test_image_block_can_use_a_bundled_diagram(settings, tmp_path):
     for bad in ("missing.svg", "../secret.svg", "x.png"):
         with pytest.raises(ValidationError):
             LessonBlock(block_type="image", alt_text="A figure", data={"diagram": bad}).clean()
+
+
+@pytest.mark.django_db
+def test_prune_removes_untouched_drafts_that_left_the_files(monkeypatch):
+    call_command("load_gce_curriculum")
+    monkeypatch.setattr(lesson_content, "collect", lambda names=None: [(KEY, spec(), "t"), (KEY, spec(slug="old-one"), "t")])
+    call_command("load_lessons")
+    kept = Lesson.objects.get(slug="old-one")
+    monkeypatch.setattr(lesson_content, "collect", lambda names=None: [(KEY, spec(), "t")])
+    call_command("load_lessons", "--prune")
+    assert not Lesson.objects.filter(slug="old-one").exists()
+    assert Lesson.objects.filter(slug="what-is-html").exists()
+    assert kept.pk  # (the pruned lesson was an untouched draft)
+
+
+@pytest.mark.django_db
+def test_examination_topics_are_created_when_content_uses_them(monkeypatch):
+    call_command("load_gce_curriculum")
+    exam = spec(module="Examination", topic="Paper 1", slug="paper-1-guide")
+    monkeypatch.setattr(lesson_content, "collect", lambda names=None: [(KEY, exam, "t")])
+    call_command("load_lessons")
+    lesson_obj = Lesson.objects.get(slug="paper-1-guide")
+    assert lesson_obj.topic.module.title == "Examination"
+    assert lesson_obj.topic.module.order == lesson_obj.course.modules.order_by("-order").first().order

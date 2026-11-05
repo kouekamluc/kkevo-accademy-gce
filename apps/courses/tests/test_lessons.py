@@ -127,3 +127,12 @@ def test_polynomial_plot_geometry():
     g = polynomial_plot({"coeffs": [1, -5, 6], "xmin": 0, "xmax": 5, "ymin": -1, "ymax": 6, "roots": [2, 3]})
     assert len(g["roots"]) == 2 and g["points"]
     assert polynomial_plot({"coeffs": []}) is None
+
+
+def test_polynomial_plot_keeps_a_small_number_of_ticks():
+    small = polynomial_plot({"coeffs": [1, -5, 6], "xmin": -5, "xmax": 5, "ymin": -5, "ymax": 5})
+    assert [t["label"] for t in small["xticks"]] == [-4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+    assert [t["label"] for t in small["yticks"]] == [-4, -2, 2, 4]
+    big = polynomial_plot({"coeffs": [2000, 50000], "xmin": 0, "xmax": 120, "ymin": 0, "ymax": 300000})
+    assert len(big["xticks"]) <= 12 and len(big["yticks"]) <= 8
+    assert big["yticks"][0]["label"] == "50\u202f000"

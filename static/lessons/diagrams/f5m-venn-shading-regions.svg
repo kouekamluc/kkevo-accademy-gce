@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Four Venn diagrams shading A intersect B, A union B, A complement and A only</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<clipPath id="c1"><circle cx="175" cy="78" r="46"/></clipPath>
+<circle cx="115" cy="78" r="46" fill="#93C5FD" clip-path="url(#c1)"/>
+<rect x="22" y="14" width="246" height="128" fill="none" stroke="#102A43" stroke-width="2"/>
+<circle cx="115" cy="78" r="46" fill="none" stroke="#102A43" stroke-width="2"/>
+<circle cx="175" cy="78" r="46" fill="none" stroke="#102A43" stroke-width="2"/>
+<text x="30" y="32" font-size="15" fill="#102A43">ξ</text>
+<text x="71" y="38" font-size="16" font-weight="700" fill="#102A43" text-anchor="end">A</text>
+<text x="219" y="38" font-size="16" font-weight="700" fill="#102A43">B</text>
+<text x="145" y="166" font-size="17" font-weight="700" fill="#2563EB" text-anchor="middle">A ∩ B (both)</text>
+<circle cx="385" cy="78" r="46" fill="#93C5FD"/><circle cx="445" cy="78" r="46" fill="#93C5FD"/>
+<rect x="292" y="14" width="246" height="128" fill="none" stroke="#102A43" stroke-width="2"/>
+<circle cx="385" cy="78" r="46" fill="none" stroke="#102A43" stroke-width="2"/>
+<circle cx="445" cy="78" r="46" fill="none" stroke="#102A43" stroke-width="2"/>
+<text x="300" y="32" font-size="15" fill="#102A43">ξ</text>
+<text x="341" y="38" font-size="16" font-weight="700" fill="#102A43" text-anchor="end">A</text>
+<text x="489" y="38" font-size="16" font-weight="700" fill="#102A43">B</text>
+<text x="415" y="166" font-size="17" font-weight="700" fill="#2563EB" text-anchor="middle">A ∪ B (either)</text>
+<rect x="22" y="192" width="246" height="128" fill="#93C5FD"/><circle cx="115" cy="256" r="46" fill="#FFFFFF"/>
+<rect x="22" y="192" width="246" height="128" fill="none" stroke="#102A43" stroke-width="2"/>
+<circle cx="115" cy="256" r="46" fill="none" stroke="#102A43" stroke-width="2"/>
+<circle cx="175" cy="256" r="46" fill="none" stroke="#102A43" stroke-width="2"/>
+<text x="30" y="210" font-size="15" fill="#102A43">ξ</text>
+<text x="71" y="216" font-size="16" font-weight="700" fill="#102A43" text-anchor="end">A</text>
+<text x="219" y="216" font-size="16" font-weight="700" fill="#102A43">B</text>
+<text x="145" y="344" font-size="17" font-weight="700" fill="#2563EB" text-anchor="middle">A′ (not in A)</text>
+<circle cx="385" cy="256" r="46" fill="#93C5FD"/><circle cx="445" cy="256" r="46" fill="#FFFFFF"/>
+<rect x="292" y="192" width="246" height="128" fill="none" stroke="#102A43" stroke-width="2"/>
+<circle cx="385" cy="256" r="46" fill="none" stroke="#102A43" stroke-width="2"/>
+<circle cx="445" cy="256" r="46" fill="none" stroke="#102A43" stroke-width="2"/>
+<text x="300" y="210" font-size="15" fill="#102A43">ξ</text>
+<text x="341" y="216" font-size="16" font-weight="700" fill="#102A43" text-anchor="end">A</text>
+<text x="489" y="216" font-size="16" font-weight="700" fill="#102A43">B</text>
+<text x="415" y="344" font-size="17" font-weight="700" fill="#2563EB" text-anchor="middle">A ∩ B′ (A only)</text>
+</svg>

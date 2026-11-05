@@ -63,11 +63,11 @@ def weekly_hours(user, today, weeks=8):
 def topic_scores(user):
     """Latest score per topic and mastery counts: {topic_id: {...}}."""
     by_topic = {}
-    for attempt in completed_attempts(user).order_by("completed_at"):
+    for attempt in completed_attempts(user).filter(practice_set__is_mock=False).order_by("completed_at"):
         topic = attempt.practice_set.topic
         entry = by_topic.setdefault(topic.pk, {"topic": topic, "subject": attempt.practice_set.subject,
-                                               "latest": None, "last_at": None, "mastered_runs": 0,
-                                               "practice_set": attempt.practice_set})
+                                               "latest": None, "last_at": None, "mastered_runs": 0})
+        entry["practice_set"] = attempt.practice_set  # the set attempted most recently (revise links use it)
         entry["latest"] = attempt.score
         entry["last_at"] = attempt.completed_at
         if attempt.score >= MASTERY_MARK:

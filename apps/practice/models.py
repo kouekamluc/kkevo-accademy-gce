@@ -30,6 +30,10 @@ class PracticeSet(OrderedModel, TimeStampedModel):
     )
     title = models.CharField(max_length=200)
     status = models.CharField(max_length=10, choices=PublicationStatus.choices, default=PublicationStatus.DRAFT)
+    is_mock = models.BooleanField(
+        default=False, help_text="A full mock exam paper: listed under Mock exams and kept out of topic mastery.")
+    time_limit_minutes = models.PositiveSmallIntegerField(
+        null=True, blank=True, help_text="Timed exam length. Empty: 1½ minutes a question (at least 5 minutes).")
 
     objects = PublishedQuerySet.as_manager()
 
@@ -53,6 +57,12 @@ class PracticeSet(OrderedModel, TimeStampedModel):
     @staticmethod
     def exam_seconds(question_count):
         return max(EXAM_MIN_SECONDS, question_count * EXAM_SECONDS_PER_QUESTION)
+
+    def exam_seconds_for(self, question_count):
+        """This set's timed-exam length: its own time limit (mock papers) or the per-question pace."""
+        if self.time_limit_minutes:
+            return self.time_limit_minutes * 60
+        return self.exam_seconds(question_count)
 
 
 def parse_number(text):

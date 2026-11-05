@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Triangular plot with sides 30 m and 40 m and an angle of 60 degrees between them</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="133.7,295 426.3,295 243.4,105" fill="#ECFDF5" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M155.7,256.9 A44,44 0 0 1 177.7,295" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="192.6" y="261" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">60°</text>
+<text x="115.7" y="303" font-size="20" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<text x="444.3" y="303" font-size="20" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<text x="243.4" y="85" font-size="20" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<text x="211.1" y="213" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">30 m</text>
+<text x="280" y="321" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">40 m</text>
+<text x="277.8" y="237.7" font-size="16" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">Area ≈ 519.6 m²</text>
+<text x="20" y="30" font-size="16" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Area = ½ × 30 × 40 × sin 60°</text>
+<text x="540" y="30" font-size="15" fill="#2563EB" text-anchor="end" dominant-baseline="middle">The 60° angle is</text>
+<text x="540" y="52" font-size="15" fill="#2563EB" text-anchor="end" dominant-baseline="middle">between the two sides</text>
+</svg>

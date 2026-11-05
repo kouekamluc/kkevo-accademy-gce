@@ -14,6 +14,7 @@ from django.urls import reverse
 from django.utils import timezone
 from django.views.decorators.http import require_POST
 
+from apps.courses.models import Lesson
 from apps.learning.models import Enrollment
 
 from .mastery import LEVELS, NOT_STARTED, mastery_for_topic, topic_mastery
@@ -112,10 +113,13 @@ def index(request):
     groups = {}
     tally = dict.fromkeys(LEVELS, 0)
     seen_topics = set()
+    sets.sort(key=lambda s: s.is_mock)  # mock papers after topic practice (the sort is stable)
     for s in sets:
         s.last_attempt = last.get(s.pk)
         s.mastery = mastery.get(s.topic_id, NOT_STARTED)
-        if s.topic_id not in seen_topics:
+        if s.is_mock:
+            s.exam_minutes = round(s.exam_seconds_for(s.question_count) / 60)
+        elif s.topic_id not in seen_topics:
             seen_topics.add(s.topic_id)
             tally[s.mastery.label] += 1
         groups.setdefault(s.subject, []).append(s)
@@ -143,7 +147,7 @@ def start(request, pk):
         open_attempts.filter(completed_at__isnull=True).delete()
         attempt = Attempt.objects.create(
             user=request.user, practice_set=practice_set, total=count, mode=mode,
-            time_limit_seconds=PracticeSet.exam_seconds(count) if mode == Attempt.Mode.EXAM else None)
+            time_limit_seconds=practice_set.exam_seconds_for(count) if mode == Attempt.Mode.EXAM else None)
     answered = attempt.answers.count()
     return redirect("practice:question", attempt=attempt.pk, number=min(answered + 1, attempt.total))
 
@@ -162,7 +166,7 @@ def start_page(request, pk):
     return render(request, "practice/start.html", {
         "practice_set": practice_set, "question_count": questions, "ongoing": ongoing, "ongoing_exam": ongoing_exam,
         "best": best, "nav_active": "practice", "mastery": mastery_for_topic(request.user, practice_set.topic_id),
-        "exam_minutes": round(PracticeSet.exam_seconds(questions) / 60),
+        "exam_minutes": round(practice_set.exam_seconds_for(questions) / 60),
     })
 
 
@@ -228,6 +232,42 @@ def question(request, attempt, number):
     })
 
 
+def _course_lessons(request, course):
+    qs = Lesson.objects.filter(topic__module__course=course)
+    qs = qs.exclude(status="archived") if request.user.is_staff else qs.filter(status="published")
+    return list(qs.select_related("topic__module").order_by("topic__module__order", "topic__order", "order", "pk"))
+
+
+def _lesson_after(request, practice_set):
+    """The lesson that follows this set's lesson in the course, so students can carry on after practising."""
+    if not practice_set.lesson_id:
+        return None
+    lessons = _course_lessons(request, practice_set.topic.module.course)
+    index = next((i for i, item in enumerate(lessons) if item.pk == practice_set.lesson_id), None)
+    return lessons[index + 1] if index is not None and index + 1 < len(lessons) else None
+
+
+def _topic_breakdown(request, practice_set, rows):
+    """Mock exam results by topic (questions are tagged with their syllabus topic in `concept`), weakest first.
+
+    Each row links to the first lesson of that topic in the same course when the tag matches a topic title.
+    """
+    course = practice_set.topic.module.course
+    first_lesson = {}
+    for lesson in _course_lessons(request, course):
+        first_lesson.setdefault(lesson.topic.title, lesson)
+    tally = {}
+    for row in rows:
+        concept = row["question"].concept or "Other"
+        entry = tally.setdefault(concept, {"concept": concept, "correct": 0, "total": 0,
+                                           "lesson": first_lesson.get(concept)})
+        entry["total"] += 1
+        entry["correct"] += bool(row["answer"] and row["answer"].is_correct)
+    for entry in tally.values():
+        entry["percent"] = round(100 * entry["correct"] / entry["total"])
+    return sorted(tally.values(), key=lambda e: (e["percent"], e["concept"]))
+
+
 @login_required
 def finish(request, attempt):
     attempt = _attempt_for(request, attempt)
@@ -245,8 +285,11 @@ def finish(request, attempt):
         return redirect("practice:finish", attempt=attempt.pk)
     by_question = {a.question_id: a for a in attempt.answers.select_related("choice", "question")}
     rows = [{"question": q, "answer": by_question.get(q.pk)} for q in attempt.practice_set.questions.all()]
+    practice_set = attempt.practice_set
     return render(request, "practice/results.html", {
-        "attempt": attempt, "practice_set": attempt.practice_set, "rows": rows, "nav_active": "practice",
+        "attempt": attempt, "practice_set": practice_set, "rows": rows, "nav_active": "practice",
+        "topic_breakdown": _topic_breakdown(request, practice_set, rows) if practice_set.is_mock else None,
+        "next_lesson": None if practice_set.is_mock else _lesson_after(request, practice_set),
         "mastery": mastery_for_topic(request.user, attempt.practice_set.topic_id),
         "hint_count": sum(a.used_hint for a in by_question.values()),
         "guess_count": sum(a.lucky_guess for a in by_question.values()),

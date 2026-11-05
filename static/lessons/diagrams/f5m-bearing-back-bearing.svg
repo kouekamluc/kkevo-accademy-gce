@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>North lines at A and B. The bearing of B from A is 065 degrees and the bearing of A from B is 245 degrees</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="130" y1="270" x2="130" y2="180" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<polygon points="130,180 134.3,190 125.7,190" fill="#102A43"/>
+<text x="130" y="168" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">N</text>
+<line x1="401.9" y1="143.2" x2="401.9" y2="53.2" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<polygon points="401.9,53.2 406.2,63.2 397.6,63.2" fill="#102A43"/>
+<text x="401.9" y="41.2" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">N</text>
+<line x1="130" y1="270" x2="401.9" y2="143.2" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M130,224 A46,46 0 0 1 171.7,250.6" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<polygon points="171.7,250.6 172,239.4 162.9,243.6" fill="#2563EB"/>
+<text x="165" y="214" font-size="15" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">065°</text>
+<path d="M401.9,109.2 A34,34 0 1 1 371.1,157.6" fill="none" stroke="#047857" stroke-width="2.5"/>
+<polygon points="371.1,157.6 370.8,168.8 379.8,164.5" fill="#047857"/>
+<text x="448.7" y="170.2" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">245°</text>
+<circle cx="130" cy="270" r="4" fill="#102A43"/>
+<circle cx="401.9" cy="143.2" r="4" fill="#102A43"/>
+<text x="112" y="276" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<text x="419.9" y="141.2" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<text x="20" y="316" font-size="15" fill="#2563EB" text-anchor="start" dominant-baseline="middle" font-weight="700">Bearing of B from A = 065°</text>
+<text x="20" y="340" font-size="15" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="700">Bearing of A from B = 065° + 180° = 245°</text>
+</svg>

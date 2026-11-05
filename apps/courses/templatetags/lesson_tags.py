@@ -4,6 +4,7 @@
 *italic* and blank-line paragraphs are applied. $...$ is left for KaTeX in the browser.
 """
 
+import math
 import re
 
 from django import template
@@ -64,6 +65,23 @@ def mmss(seconds):
     return f"{seconds // 60:02d}:{seconds % 60:02d}" if seconds < 3600 else f"{seconds // 3600}:{seconds % 3600 // 60:02d}:{seconds % 60:02d}"
 
 
+def _ticks(low, high, target):
+    """About `target` evenly spaced tick values strictly above `low` up to `high`, on a 1-2-5 step
+    (1 for x from −5 to 5, 2 for y from −5 to 5, 50 000 for y up to 300 000)."""
+    raw = (high - low) / target
+    magnitude = 10 ** math.floor(math.log10(raw)) if raw > 0 else 1
+    step = next((m * magnitude for m in (1, 2, 5, 10) if m * magnitude >= raw), 10 * magnitude)
+    step = max(step, 1)  # graphs here use whole-number ticks
+    first = math.floor(low / step) * step + step
+    count = int((high - first) // step) + 1
+    return [first + i * step for i in range(max(0, min(count, 50)))]
+
+
+def _tick_label(value):
+    value = int(value) if float(value).is_integer() else round(value, 2)
+    return f"{value:,}".replace(",", "\u202f") if abs(value) >= 10000 else value
+
+
 @register.simple_tag
 def polynomial_plot(data, width=560, height=300, pad=34):
     """SVG geometry for a graph block: {'coeffs': [1, -5, 6], 'xmin', 'xmax', 'ymin', 'ymax', 'roots'}."""
@@ -89,9 +107,8 @@ def polynomial_plot(data, width=560, height=300, pad=34):
             points.append(f"{sx(x):.1f},{sy(y):.1f}")
     axis_y = sy(0) if ymin <= 0 <= ymax else height - pad
     axis_x = sx(0) if xmin <= 0 <= xmax else pad
-    xticks = [{"x": sx(v), "label": v} for v in range(int(xmin) + 1, int(xmax) + 1)]
-    yticks = [{"y": sy(v), "label_y": sy(v) + 4, "label": v}
-              for v in range(int(ymin) + 1, int(ymax) + 1) if v and v % 2 == 0]
+    xticks = [{"x": sx(v), "label": _tick_label(v)} for v in _ticks(xmin, xmax, 10)]
+    yticks = [{"y": sy(v), "label_y": sy(v) + 4, "label": _tick_label(v)} for v in _ticks(ymin, ymax, 6) if v]
     roots = [{"x": sx(float(r)), "y": sy(0), "label_y": sy(0) - 12, "label": r} for r in data.get("roots", [])]
     return {
         "width": width, "height": height, "points": " ".join(points), "pad": pad,
