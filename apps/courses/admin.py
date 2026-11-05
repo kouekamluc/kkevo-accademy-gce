@@ -3,7 +3,7 @@ from django.shortcuts import redirect
 from unfold.decorators import action
 from unfold.admin import ModelAdmin, StackedInline, TabularInline
 
-from .models import Course, CourseResource, Lesson, LessonBlock, Module, Topic
+from .models import Course, CourseResource, Lesson, LessonBlock, Module, Topic, VideoResource
 
 
 class ModuleInline(TabularInline):
@@ -123,3 +123,33 @@ class LessonAdmin(ModelAdmin):
     @action(description="Edit in studio", icon="edit_note", url_path="edit-in-studio")
     def edit_in_studio(self, request, object_id):
         return redirect("studio:edit", pk=object_id)
+
+
+@admin.register(VideoResource)
+class VideoResourceAdmin(ModelAdmin):
+    """Same rules as the studio's video library: only reviewers (publish permission) approve."""
+
+    list_display = ("title", "kind", "rights_status", "review_status", "duration_seconds", "updated_at")
+    list_filter = ("review_status", "rights_status", "kind")
+    search_fields = ("title", "source", "creator", "url")
+    autocomplete_fields = ("topics",)
+    readonly_fields = ("reviewed_by", "reviewed_at", "added_by", "created_at", "updated_at")
+    fieldsets = (
+        (None, {"fields": ("title", ("kind", "duration_seconds"), "url", "topics")}),
+        ("Source and rights", {"fields": (("source", "creator"), ("rights_status", "licence_note"))}),
+        ("Low data and accessibility", {"fields": (("low_data_url", "size_mb"), "captions_url", "transcript")}),
+        ("Review", {"fields": ("review_status", "review_note", ("reviewed_by", "reviewed_at"), ("added_by", "created_at", "updated_at"))}),
+    )
+
+    def get_readonly_fields(self, request, obj=None):
+        fields = super().get_readonly_fields(request, obj)
+        if not request.user.has_perm("courses.publish_lesson"):
+            fields = (*fields, "review_status", "review_note")
+        return fields
+
+    def save_model(self, request, obj, form, change):
+        if not change:
+            obj.added_by = request.user
+        if "review_status" in form.changed_data:
+            obj.set_review(obj.review_status, request.user, obj.review_note)
+        super().save_model(request, obj, form, change)

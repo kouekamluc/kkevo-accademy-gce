@@ -26,7 +26,7 @@ from django.utils.text import slugify
 from django.views.decorators.http import require_POST
 
 from apps.academics.models import AcademicLevel, CurriculumReference, Subject
-from apps.courses.models import BlockType, Lesson, LessonBlock, LessonType, Topic
+from apps.courses.models import BlockType, Lesson, LessonBlock, LessonType, Topic, VideoResource, attach_videos
 from apps.practice.models import Question
 
 from . import revisions
@@ -71,13 +71,19 @@ def checklist(lesson, blocks=None):
     blocks = list(lesson.blocks.all()) if blocks is None else blocks
     questions = Question.objects.filter(practice_set__topic=lesson.topic).count()
     images = [b for b in blocks if b.block_type == BlockType.IMAGE]
-    return [
+    video_ids = {b.data.get("resource") for b in blocks if isinstance(b.data, dict) and b.data.get("resource")}
+    hidden_videos = len(video_ids) - VideoResource.objects.visible().filter(pk__in=video_ids).count()
+    items = [
         {"ok": bool(lesson.objectives_list), "label": "Learning objectives added"},
         {"ok": any(b.block_type == BlockType.WORKED_EXAMPLE for b in blocks), "label": "At least one worked example"},
         {"ok": questions >= 3, "label": "Practice set has 3+ questions" if questions >= 3 else f"Add a practice set (3+ questions, {questions} so far)"},
         {"ok": all(b.alt_text for b in images), "label": "All diagrams have alt text" if all(b.alt_text for b in images)
          else f"Add alt text to {sum(1 for b in images if not b.alt_text)} diagram(s)"},
     ]
+    if video_ids:
+        items.append({"ok": not hidden_videos, "label": "All library videos approved" if not hidden_videos
+                      else f"{hidden_videos} library video(s) not approved: students will not see them"})
+    return items
 
 
 def _review_count():
@@ -362,8 +368,13 @@ def lesson_edit(request, pk):
         marks, removed, reordered = revisions.changes(draft, lesson)
         for block in blocks:
             block.change = marks.get(block.pk)
+    lesson_checklist = checklist(lesson, blocks)
+    for block in blocks:  # keep the stored link for the edit form before library videos fill media_url
+        block.stored_media_url = block.media_url
+    blocks = attach_videos(blocks, show_hidden=True)
     return render(request, "studio/editor.html", _context(
-        request, lesson=lesson, blocks=blocks, form=form, palette=PALETTE, checklist=checklist(lesson, blocks),
+        request, lesson=lesson, blocks=blocks, form=form, palette=PALETTE, checklist=lesson_checklist,
+        library_videos=VideoResource.objects.only("pk", "title", "review_status", "rights_status"),
         draft=draft, removed=removed, reordered=reordered,
         changed_count=sum(1 for b in blocks if getattr(b, "change", None)),
         events=LessonEvent.objects.filter(lesson=lesson).select_related("actor")[:6],
@@ -412,6 +423,13 @@ def _apply_post(block, post):
         data["answer"] = post.get("answer", "")
     elif block.block_type == BlockType.DEFINITION:
         data["formula"] = post.get("formula", "")
+    elif block.block_type == BlockType.VIDEO and "resource" in post:
+        choice = post.get("resource", "")
+        if choice.isdigit():
+            data["resource"] = int(choice)
+            block.media_url = ""  # the library video supplies the link
+        else:
+            data.pop("resource", None)
     block.data = data
 
 
@@ -653,3 +671,113 @@ def block_media(request, pk, block_pk):
         workspace.save(block)
         messages.success(request, f"Inserted “{asset.title}”.")
     return redirect(_block_url(pk, block.pk))
+
+
+# ------------------------------------------------------------------ video library (feature 9)
+VIDEOS_PER_PAGE = 20
+REVIEW_FIELDS = ("kind", "url", "rights_status")  # editing these sends an approved video back to review
+
+
+def _parse_duration(value):
+    """'7:45', '1:02:03' or '465' -> seconds; '' -> None."""
+    value = (value or "").strip()
+    if not value:
+        return None
+    parts = value.split(":")
+    if len(parts) > 3 or not all(p.isdigit() for p in parts):
+        raise ValidationError("Write the duration as minutes:seconds, e.g. 7:45.")
+    seconds = 0
+    for part in parts:
+        seconds = seconds * 60 + int(part)
+    return seconds
+
+
+class VideoForm(forms.ModelForm):
+    duration = forms.CharField(required=False, label="Duration", help_text="minutes:seconds, e.g. 7:45")
+
+    class Meta:
+        model = VideoResource
+        fields = ["title", "kind", "url", "source", "creator", "rights_status", "licence_note", "topics",
+                  "captions_url", "low_data_url", "size_mb", "transcript"]
+        widgets = {"transcript": forms.Textarea(attrs={"rows": 5}), "topics": forms.SelectMultiple(attrs={"size": 8})}
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["topics"].queryset = Topic.objects.select_related("module__course").order_by(
+            "module__course__title", "module__order", "order")
+        self.fields["topics"].label_from_instance = lambda t: f"{t.module.course.title} › {t.module.title} › {t.title}"
+        self.fields["topics"].help_text = "Topics this video explains (hold Ctrl to pick several)."
+        if self.instance.duration_seconds:
+            m, s = divmod(self.instance.duration_seconds, 60)
+            self.fields["duration"].initial = f"{m}:{s:02d}"
+        for f in self.fields.values():
+            f.widget.attrs.setdefault("class", "form-input")
+        self.fields["transcript"].widget.attrs["class"] = "form-input py-2"
+
+    def clean_duration(self):
+        return _parse_duration(self.cleaned_data.get("duration"))
+
+    def save(self, commit=True):
+        self.instance.duration_seconds = self.cleaned_data.get("duration")
+        return super().save(commit)
+
+
+def _videos_using(video):
+    return (Lesson.objects.filter(blocks__data__resource=video.pk).select_related("topic__module__course")
+            .distinct().order_by("title"))
+
+
+@staff_required
+def video_library(request):
+    q = request.GET.get("q", "").strip()
+    status = request.GET.get("status", "")
+    qs = VideoResource.objects.select_related("added_by", "reviewed_by")
+    if q:
+        qs = qs.filter(Q(title__icontains=q) | Q(source__icontains=q) | Q(creator__icontains=q))
+    if status in VideoResource.Review.values:
+        qs = qs.filter(review_status=status)
+    counts = dict(VideoResource.objects.values_list("review_status").annotate(n=Count("pk")))
+    page = Paginator(qs, VIDEOS_PER_PAGE).get_page(request.GET.get("page"))
+    return render(request, "studio/videos.html", _context(
+        request, page=page, q=q, status=status, studio_active="videos",
+        tabs=[("", "All", sum(counts.values()))] + [(v, label, counts.get(v, 0)) for v, label in VideoResource.Review.choices]))
+
+
+@staff_required
+def video_edit(request, pk=None):
+    video = get_object_or_404(VideoResource, pk=pk) if pk else VideoResource(added_by=request.user)
+    before = {f: getattr(video, f) for f in REVIEW_FIELDS}
+    form = VideoForm(request.POST or None, instance=video)
+    if request.method == "POST" and form.is_valid():
+        changed = [f for f in REVIEW_FIELDS if getattr(form.instance, f) != before[f]]
+        if pk and video.review_status == VideoResource.Review.APPROVED and changed and not can_publish(request.user):
+            form.instance.review_status = VideoResource.Review.PENDING
+            form.instance.review_note = "Link, type or rights changed: needs a new review."
+            messages.warning(request, "The link, type or rights changed, so the video is back in review.")
+        form.save()
+        messages.success(request, f"“{form.instance.title}” saved.")
+        return redirect("studio:video_edit", pk=form.instance.pk)
+    return render(request, "studio/video_form.html", _context(
+        request, form=form, video=video, studio_active="videos",
+        lessons=_videos_using(video) if video.pk else []))
+
+
+@staff_required
+@require_POST
+def video_review(request, pk):
+    if not can_publish(request.user):
+        raise PermissionDenied
+    video = get_object_or_404(VideoResource, pk=pk)
+    target = request.POST.get("status", "")
+    if target not in VideoResource.Review.values:
+        messages.error(request, "Unknown review decision.")
+        return redirect("studio:video_edit", pk=pk)
+    video.set_review(target, request.user, request.POST.get("note", "").strip())
+    try:
+        video.full_clean()
+    except ValidationError as error:
+        messages.error(request, "Not changed: " + "; ".join(m for msgs in error.message_dict.values() for m in msgs))
+        return redirect("studio:video_edit", pk=pk)
+    video.save()
+    messages.success(request, f"“{video.title}”: {video.get_review_status_display().lower()}.")
+    return redirect("studio:video_edit", pk=pk)

@@ -11,13 +11,15 @@
   <div class="min-w-0">
     {# Player #}
     <div class="overflow-hidden bg-navy nav:rounded-panel nav:border nav:border-surface-border">
+      {% if video.hidden_from_students %}{% include "lessons/_hidden_video_notice.html" with video=video.resource %}{% endif %}
       {% if video.media_url %}
       {% if low_data %}<template x-if="loaded">{% endif %}
+      {% if video.resource.is_embed %}{% include "lessons/players/youtube.html" with block=video %}{% else %}
       <video x-ref="video" controls preload="metadata" playsinline class="aspect-video w-full" {% if low_data %}autoplay{% endif %}
              src="{% if low_data and video.data.low_data_url %}{{ video.data.low_data_url }}{% else %}{{ video.media_url }}{% endif %}"
              @timeupdate="time = $event.target.currentTime" @loadedmetadata="duration = $event.target.duration || duration; if (time) $event.target.currentTime = time">
         {% if video.data.captions %}<track kind="captions" src="{{ video.data.captions }}" srclang="en" label="English" default>{% endif %}
-      </video>
+      </video>{% endif %}
       {% if low_data %}</template>
       <div x-show="!loaded" data-low-data-placeholder="video" class="flex aspect-video w-full flex-col items-center justify-center gap-3 px-4 text-center text-white">
         <span class="flex h-16 w-16 items-center justify-center rounded-full bg-white/10">{% include "components/icon.html" with name="video" class="h-8 w-8" %}</span>
@@ -95,6 +97,7 @@
         {% endif %}
       </div>
       <div x-show="tab === 'transcript'" x-cloak class="mt-6 rounded-card border border-surface-border bg-white p-6 text-[15px] leading-relaxed text-slate-700" role="tabpanel">{{ video.data.transcript|default:"No transcript yet."|rich }}</div>
+      {% if video.resource.creator or video.resource.licence_note %}<p class="mt-4 text-[13px] text-ink-muted">{% if video.resource.creator %}Video by {{ video.resource.creator }}{% endif %}{% if video.resource.creator and video.resource.licence_note %} · {% endif %}{{ video.resource.licence_note }}</p>{% endif %}
       <div x-show="tab === 'notes'" x-cloak class="mt-6" role="tabpanel">
         <form method="post" action="{% url 'courses:lesson_note' course.slug lesson.pk %}" hx-post="{% url 'courses:lesson_note' course.slug lesson.pk %}" hx-target="#note-list" hx-swap="innerHTML" @htmx:after-request="$el.reset()" class="flex flex-col gap-3 rounded-card border border-surface-border bg-white p-5">
           {% csrf_token %}<input type="hidden" name="video_time" :value="Math.round(time)">

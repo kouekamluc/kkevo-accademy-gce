@@ -1,0 +1,5 @@
+{# Staff preview only: the library video is not approved (or its rights are unchecked), so students do not see it. #}
+<p class="flex items-start gap-2 border-b border-warning-200 bg-warning-50 px-4 py-2.5 text-[13px] font-semibold text-warning-text" role="note">
+  {% include "components/icon.html" with name="info" class="mt-0.5 h-4 w-4 shrink-0" stroke="2" %}
+  <span>Hidden from students: this library video is “{{ video.get_review_status_display|lower }}”{% if video.rights_status == "unknown" %} and its rights are not checked{% endif %}. Approve it in the video library to show it.</span>
+</p>

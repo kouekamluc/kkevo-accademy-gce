@@ -1,9 +1,11 @@
-{% load lesson_tags %}{# Inline video in a reading lesson (04 "Watch:" section) #}
+{% load lesson_tags %}{# Inline video in a reading lesson (04 "Watch:" section). Library videos arrive resolved by attach_videos. #}
 <figure id="{{ block.anchor }}" {% if block.title %}data-toc="{{ block.title }}"{% endif %} class="scroll-mt-24 overflow-hidden rounded-card border border-surface-border bg-white">
   {% if block.title %}<h3 class="sr-only">{{ block.title }}</h3>{% endif %}
+  {% if block.hidden_from_students %}{% include "lessons/_hidden_video_notice.html" with video=block.resource %}{% endif %}
   {% if block.media_url %}
-  {% if low_data %}{% include "lessons/_low_data_gate.html" with media="lessons/players/video.html" kind="video" label=block.title href=block.data.low_data_url|default:block.media_url size=block.data.size_mb %}
-  {% else %}{% include "lessons/players/video.html" %}{% endif %}
+  {% if block.resource.is_embed %}{% firstof "lessons/players/youtube.html" as player %}{% else %}{% firstof "lessons/players/video.html" as player %}{% endif %}
+  {% if low_data %}{% include "lessons/_low_data_gate.html" with media=player kind="video" label=block.title href=block.data.low_data_url|default:block.media_url size=block.data.size_mb %}
+  {% else %}{% include player %}{% endif %}
   {% else %}
   <div class="relative flex aspect-video w-full flex-col items-center justify-center gap-3 bg-navy text-center text-white">
     <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/10">{% include "components/icon.html" with name="video" class="h-7 w-7" %}</span>
@@ -14,4 +16,7 @@
     <span>{{ block.title }}{% if block.data.duration %} · {{ block.data.duration|mmss }}{% endif %}</span>
     {% if block.data.transcript %}<a href="{{ lesson.get_absolute_url }}#transcript" class="font-semibold">Transcript</a>{% endif %}
   </figcaption>
+  {% if block.resource and block.resource.creator or block.resource.licence_note %}
+  <p class="border-t border-surface-border px-4 py-2 text-[12px] text-ink-muted">{% if block.resource.creator %}Video by {{ block.resource.creator }}{% endif %}{% if block.resource.creator and block.resource.licence_note %} · {% endif %}{{ block.resource.licence_note }}</p>
+  {% endif %}
 </figure>

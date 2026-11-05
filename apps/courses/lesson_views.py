@@ -13,7 +13,7 @@ from apps.learning import services
 from apps.learning.models import DailyActivity, LessonNote, LessonProgress, SavedLesson
 from apps.practice.models import PracticeSet
 
-from .models import BlockType, Lesson, LessonType, Topic
+from .models import BlockType, Lesson, LessonType, Topic, attach_videos
 
 MAX_HEARTBEAT_SECONDS = 120  # ignore larger gaps (tab left open)
 ANCHOR_RE = re.compile(r"^[A-Za-z0-9_-]{1,60}$")
@@ -83,7 +83,8 @@ def lesson_detail(request, course_slug, pk):
 
     module = lesson.topic.module
     module_lessons = [item for item in lessons if item.topic.module_id == module.pk]
-    blocks = list(lesson.blocks.all())
+    # Library videos students may not see yet are dropped; staff previews keep them, flagged.
+    blocks = attach_videos(list(lesson.blocks.all()), show_hidden=request.user.is_staff)
     toc = [{"anchor": "objectives", "title": "Learning objectives"}] if lesson.objectives_list else []
     toc += [{"anchor": b.anchor, "title": b.title} for b in blocks
             if b.title and b.block_type in (BlockType.HEADING, BlockType.WORKED_EXAMPLE, BlockType.VIDEO)]

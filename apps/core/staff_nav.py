@@ -15,6 +15,7 @@ STAFF_NAV = [
         ("Content reviews", "rate_review", "studio:lessons", "status=review", "courses.change_lesson"),
         ("Pending changes", "difference", "studio:lessons", "status=changes", "courses.change_lesson"),
         ("Media library", "photo_library", "studio:media", "", "courses.change_lesson"),
+        ("Video library", "video_library", "studio:videos", "", "courses.change_lesson"),
     ]),
     ("Curriculum", [
         ("Academic levels", "school", "admin:academics_academiclevel_changelist", "", "academics.view_academiclevel"),

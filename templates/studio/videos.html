@@ -1,0 +1,55 @@
+{% extends "layouts/studio.html" %}
+{% load lesson_tags %}
+{% block title %}Video library — Content studio{% endblock %}
+{% block crumbs %}<span class="text-ink-heading">Video library</span>{% endblock %}
+{% block content %}
+<div class="flex flex-wrap items-end justify-between gap-4">
+  <div>
+    <h1 class="text-[28px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">Video Library</h1>
+    <p class="mt-1 max-w-2xl text-[17px] text-ink-muted">NotebookLM overviews, KKEVO videos and YouTube links, reused in any lesson’s video blocks. Students only see a video once it is approved and its rights are checked.</p>
+  </div>
+  <a href="{% url 'studio:video_new' %}" class="btn-primary">{% include "components/icon.html" with name="plus" class="h-[18px] w-[18px]" stroke="2" %}Add a video</a>
+</div>
+
+<section class="card mt-6 min-w-0 overflow-hidden" aria-labelledby="videos-h">
+  <h2 id="videos-h" class="sr-only">Videos</h2>
+  <div class="flex flex-wrap items-center gap-3 border-b border-surface-border px-5 py-4">
+    <nav aria-label="Filter by review status" class="flex flex-wrap gap-2">
+      {% for value, label, n in tabs %}
+      <a href="?{% if value %}status={{ value }}{% endif %}{% if q %}{% if value %}&{% endif %}q={{ q|urlencode }}{% endif %}"
+         class="inline-flex h-10 items-center gap-2 rounded-full px-4 text-sm font-semibold {% if status == value %}bg-navy text-white hover:text-white{% else %}bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-800{% endif %}"
+         {% if status == value %}aria-current="page"{% endif %}>{{ label }} <span class="{% if status == value %}text-slate-300{% else %}text-ink-muted{% endif %}">{{ n }}</span></a>
+      {% endfor %}
+    </nav>
+    <form method="get" class="ml-auto min-w-[220px] flex-1 sm:max-w-sm">{% if status %}<input type="hidden" name="status" value="{{ status }}">{% endif %}
+      <label class="relative block"><span class="sr-only">Search videos</span><span class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-muted">{% include "components/icon.html" with name="search" class="h-[18px] w-[18px]" stroke="2" %}</span><input type="search" name="q" value="{{ q }}" placeholder="Search by title, source or creator" class="form-input pl-11"></label>
+    </form>
+  </div>
+  <ul class="divide-y divide-surface-border">
+    {% for video in page %}
+    <li><a href="{% url 'studio:video_edit' video.pk %}" class="flex items-center gap-4 px-5 py-4 text-ink-heading hover:bg-slate-50 hover:text-ink-heading">
+      <span class="relative flex h-[60px] w-[100px] shrink-0 items-center justify-center overflow-hidden rounded-lg bg-navy text-white">
+        {% if video.thumbnail_url %}<img src="{{ video.thumbnail_url }}" alt="" loading="lazy" class="h-full w-full object-cover">{% else %}{% include "components/icon.html" with name="video" class="h-6 w-6" %}{% endif %}
+        {% if video.duration_seconds %}<span class="absolute bottom-1 right-1 rounded bg-navy/90 px-1 text-[11px] font-semibold">{{ video.duration_seconds|mmss }}</span>{% endif %}
+      </span>
+      <span class="min-w-0 flex-1">
+        <span class="block truncate font-semibold">{{ video.title }}</span>
+        <span class="block truncate text-[13px] text-ink-muted">{{ video.get_kind_display }}{% if video.source %} · {{ video.source }}{% endif %}{% if video.creator %} · {{ video.creator }}{% endif %}</span>
+      </span>
+      <span class="hidden shrink-0 flex-col items-end gap-1 sm:flex">
+        {% include "studio/_video_status.html" %}
+        {% if video.rights_status == "unknown" %}<span class="text-[13px] font-semibold text-warning-text">Rights not checked</span>{% else %}<span class="text-[13px] text-ink-muted">{{ video.get_rights_status_display }}</span>{% endif %}
+      </span>
+    </a></li>
+    {% empty %}
+    <li class="px-5 py-12 text-center text-ink-muted">{% if q or status %}No videos match.{% else %}No videos yet. Add the first one.{% endif %}</li>
+    {% endfor %}
+  </ul>
+  {% if page.has_other_pages %}
+  <nav aria-label="Pages" class="flex justify-end gap-2 border-t border-surface-border px-5 py-4">
+    {% if page.has_previous %}<a href="?{% if status %}status={{ status }}&{% endif %}{% if q %}q={{ q|urlencode }}&{% endif %}page={{ page.previous_page_number }}" class="btn-secondary h-11">Previous</a>{% endif %}
+    {% if page.has_next %}<a href="?{% if status %}status={{ status }}&{% endif %}{% if q %}q={{ q|urlencode }}&{% endif %}page={{ page.next_page_number }}" class="btn-secondary h-11">Next</a>{% endif %}
+  </nav>
+  {% endif %}
+</section>
+{% endblock %}

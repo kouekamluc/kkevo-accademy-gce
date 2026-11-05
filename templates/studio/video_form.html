@@ -1,0 +1,66 @@
+{% extends "layouts/studio.html" %}
+{% block title %}{% if video.pk %}{{ video.title }}{% else %}Add a video{% endif %} — Video library{% endblock %}
+{% block crumbs %}<a href="{% url 'studio:videos' %}">Video library</a> <span aria-hidden="true">/</span> <span class="text-ink-heading">{% if video.pk %}{{ video.title }}{% else %}Add a video{% endif %}</span>{% endblock %}
+{% block content %}
+<div class="flex flex-wrap items-center gap-3">
+  <h1 class="text-[28px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">{% if video.pk %}{{ video.title }}{% else %}Add a video{% endif %}</h1>
+  {% if video.pk %}{% include "studio/_video_status.html" %}{% endif %}
+</div>
+<div class="mt-6 grid gap-6 xl:grid-cols-[1fr_400px]">
+  <form method="post" class="card flex flex-col gap-5 p-5 nav:p-6" novalidate>
+    {% csrf_token %}
+    {% if form.non_field_errors %}<div class="rounded-xl bg-danger-50 px-4 py-3 text-sm font-medium text-danger-text" role="alert">{{ form.non_field_errors|join:" " }}</div>{% endif %}
+    <fieldset class="flex flex-col gap-4">
+      <legend class="text-lg font-bold">The video</legend>
+      {% include "components/field.html" with field=form.title %}
+      <div class="grid gap-4 sm:grid-cols-2">{% include "components/field.html" with field=form.kind %}{% include "components/field.html" with field=form.duration %}</div>
+      {% include "components/field.html" with field=form.url %}
+      {% include "components/field.html" with field=form.topics %}
+    </fieldset>
+    <fieldset class="flex flex-col gap-4 border-t border-surface-border pt-5">
+      <legend class="text-lg font-bold">Source and rights</legend>
+      <p class="-mt-1 text-[13px] text-ink-muted">Only use videos KKEVO made, has permission for, or that are under a licence allowing it. YouTube videos may be embedded under YouTube’s terms; do not download and re-upload them.</p>
+      <div class="grid gap-4 sm:grid-cols-2">{% include "components/field.html" with field=form.source %}{% include "components/field.html" with field=form.creator %}</div>
+      <div class="grid gap-4 sm:grid-cols-2">{% include "components/field.html" with field=form.rights_status %}{% include "components/field.html" with field=form.licence_note %}</div>
+    </fieldset>
+    <fieldset class="flex flex-col gap-4 border-t border-surface-border pt-5">
+      <legend class="text-lg font-bold">Low data and accessibility</legend>
+      <div class="grid gap-4 sm:grid-cols-2">{% include "components/field.html" with field=form.low_data_url %}{% include "components/field.html" with field=form.size_mb %}</div>
+      {% include "components/field.html" with field=form.captions_url %}
+      {% include "components/field.html" with field=form.transcript %}
+    </fieldset>
+    <div class="flex gap-3"><button type="submit" class="btn-primary">Save video</button><a href="{% url 'studio:videos' %}" class="btn-secondary">Back to the library</a></div>
+  </form>
+
+  <div class="flex flex-col gap-6 self-start">
+    {% if video.pk %}
+    <section class="card p-5" aria-labelledby="review-h">
+      <h2 id="review-h" class="text-lg font-bold">Review</h2>
+      <p class="mt-2 text-[15px] text-slate-600">{% if video.reviewed_at %}{{ video.get_review_status_display }} by {{ video.reviewed_by.display_name|default:"a reviewer" }} on {{ video.reviewed_at|date:"j M Y" }}.{% else %}Not reviewed yet.{% endif %}</p>
+      {% if video.review_note %}<p class="mt-2 rounded-xl bg-surface-bg px-3 py-2 text-[14px] text-slate-700">{{ video.review_note }}</p>{% endif %}
+      {% if can_publish %}
+      <form method="post" action="{% url 'studio:video_review' video.pk %}" class="mt-4 flex flex-col gap-3">
+        {% csrf_token %}
+        <label class="flex flex-col gap-1.5"><span class="form-label">Note <span class="font-normal text-ink-muted">(optional)</span></span><input name="note" maxlength="300" class="form-input"></label>
+        <div class="flex flex-wrap gap-2">
+          <button type="submit" name="status" value="approved" class="btn h-11 bg-success px-4 text-white hover:bg-success-text hover:text-white">Approve</button>
+          <button type="submit" name="status" value="rejected" class="btn h-11 border border-danger-200 bg-white px-4 text-danger-text hover:bg-danger-50">Reject</button>
+          {% if video.review_status != "pending" %}<button type="submit" name="status" value="pending" class="btn-secondary h-11">Back to review</button>{% endif %}
+        </div>
+        <p class="text-[13px] text-ink-muted">Approving needs the rights to be checked first.</p>
+      </form>
+      {% else %}
+      <p class="mt-3 text-[13px] text-ink-muted">A reviewer with publishing rights approves videos.</p>
+      {% endif %}
+    </section>
+    <section class="card p-5" aria-labelledby="used-h">
+      <h2 id="used-h" class="text-lg font-bold">Used in</h2>
+      <ul class="mt-2 flex flex-col gap-2 text-[15px]">
+        {% for lesson in lessons %}<li><a href="{% url 'studio:edit' lesson.pk %}" class="font-semibold">{{ lesson.title }}</a><span class="block text-[13px] text-ink-muted">{{ lesson.topic.module.course.title }}</span></li>
+        {% empty %}<li class="text-ink-muted">No lesson uses this video yet. Pick it in a lesson’s video block.</li>{% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

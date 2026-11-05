@@ -22,4 +22,8 @@ urlpatterns = [
     path("lessons/<int:pk>/blocks/<int:block_pk>/media/", views.media_picker, name="media_picker"),
     path("lessons/<int:pk>/blocks/<int:block_pk>/media/insert/", views.block_media, name="block_media"),
     path("media/", views.media_library, name="media"),
+    path("videos/", views.video_library, name="videos"),
+    path("videos/new/", views.video_edit, name="video_new"),
+    path("videos/<int:pk>/", views.video_edit, name="video_edit"),
+    path("videos/<int:pk>/review/", views.video_review, name="video_review"),
 ]

@@ -58,7 +58,16 @@
             <div class="flex items-center justify-center rounded-xl bg-surface-bg p-4 text-xl" x-ref="preview" aria-live="polite"></div>
           </div>
           {% elif block.block_type == "image" or block.block_type == "video" or block.block_type == "embed" %}
-          <label class="flex flex-col gap-1.5"><span class="form-label">Media URL</span><input name="media_url" type="url" value="{{ block.media_url }}" class="form-input"></label>
+          {% if block.block_type == "video" %}
+          <label class="flex flex-col gap-1.5"><span class="form-label">Video from the library</span>
+            <select name="resource" class="form-input">
+              <option value="">None: use the link below</option>
+              {% for v in library_videos %}<option value="{{ v.pk }}" {% if block.data.resource == v.pk %}selected{% endif %}>{{ v.title }} · {{ v.get_review_status_display }}{% if v.rights_status == "unknown" %}, rights not checked{% endif %}</option>{% endfor %}
+            </select>
+            <span class="text-[13px] text-ink-muted">Students only see approved library videos. <a href="{% url 'studio:videos' %}" class="font-semibold">Open the video library</a></span>
+          </label>
+          {% endif %}
+          <label class="flex flex-col gap-1.5"><span class="form-label">{% if block.block_type == "video" %}Or a direct link{% else %}Media URL{% endif %}</span><input name="media_url" type="url" value="{{ block.stored_media_url|default_if_none:block.media_url }}" class="form-input"></label>
           <label class="flex flex-col gap-1.5"><span class="form-label">Alt text <span class="font-normal text-ink-muted">(describe the image for screen readers)</span></span><input name="alt_text" value="{{ block.alt_text }}" class="form-input"></label>
           <label class="flex flex-col gap-1.5"><span class="form-label">Caption</span><textarea name="body" rows="2" class="form-input py-2">{{ block.body }}</textarea></label>
           {% elif block.block_type == "worked_example" %}
