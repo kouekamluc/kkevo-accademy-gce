@@ -21,8 +21,8 @@ What is left for MVP 1 and the pilot, in order:
 | # | Work | Why now | Status |
 |---|---|---|---|
 | 1 | **Feature 9: video & resource library** | Roadmap acceptance test: an approved video appears in its lesson, an unapproved one stays hidden. Before this, a video block was just a URL with no source, rights or review. | Done |
-| 2 | **Run the suite on PostgreSQL** | Tests run on SQLite, which ignores column lengths and some constraints. Production will be PostgreSQL. | To do (a stuck test run holds the PostgreSQL test database) |
-| 3 | **Feature 17: measure the lesson pages** | Page weight and request count of dashboard, course and lesson pages on a throttled 3G profile; fix the heaviest. | Done in a parallel session, not committed yet (`measure_pages`, `docs/benchmarks/page-weight.md`) |
+| 2 | **Run the suite on PostgreSQL** | Tests run on SQLite, which ignores column lengths and some constraints. Production will be PostgreSQL. | Done: 278 tests pass on PostgreSQL 17.5 at `fe72357` (run with `DATABASE_URL` set to PostgreSQL and `--create-db`) |
+| 3 | **Feature 17: measure the lesson pages** | Page weight and request count of dashboard, course and lesson pages on a throttled 3G profile; fix the heaviest. | Done (`fe72357`; `manage.py measure_pages`, `docs/benchmarks/page-weight.md`) |
 | 4 | **First real module: Form 5 General Mathematics** | The platform has outlines but no real lessons. One excellent module (e.g. Quadratic functions & equations) is the first thing worth showing students. Written by KKEVO staff and checked against the official GCE syllabus; the platform must not invent curriculum content. | Needs the author (you) |
 | 5 | **Feature 18: deployment** | Production settings, hosting, backups, error monitoring. Start close to the pilot (after April 2027) so hosting is not paid for early. | Later |
 
