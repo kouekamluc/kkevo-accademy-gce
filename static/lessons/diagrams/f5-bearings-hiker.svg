@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Practice: A to B 8 km on 060, B to C 6 km on 120</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="70" y1="240" x2="70" y2="130" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<polygon points="70,130 74.3,140.1 65.7,140.1" fill="#102A43"/>
+<text x="70" y="118" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">N</text>
+<line x1="277.8" y1="120" x2="277.8" y2="35" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<polygon points="277.8,35 282.1,45.1 273.6,45.1" fill="#102A43"/>
+<text x="277.8" y="23" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">N</text>
+<line x1="70" y1="240" x2="277.8" y2="120" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="277.8" y1="120" x2="433.7" y2="210" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="70" y1="240" x2="433.7" y2="210" stroke="#047857" stroke-width="2.5" stroke-dasharray="8 6" stroke-linecap="round"/>
+<path d="M70,198 A42,42 0 0 1 106.4,219" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="102" y="184.6" font-size="15" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">060°</text>
+<path d="M277.8,86 A34,34 0 0 1 307.3,137" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="326.3" y="92" font-size="15" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">120°</text>
+<circle cx="70" cy="240" r="4" fill="#102A43"/>
+<text x="50" y="246" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<circle cx="277.8" cy="120" r="4" fill="#102A43"/>
+<text x="259.8" y="122" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<circle cx="433.7" cy="210" r="4" fill="#102A43"/>
+<text x="453.7" y="216" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<text x="195.9" y="204" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle">8 km</text>
+<text x="385.8" y="157" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle">6 km</text>
+<text x="251.9" y="249" font-size="16" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">AC = ?</text>
+</svg>

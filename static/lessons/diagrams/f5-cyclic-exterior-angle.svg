@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Exterior angle of a cyclic quadrilateral equals the interior opposite angle</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="230" cy="165" r="125" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="141.6,253.4 318.4,253.4 343.3,112.2 158.3,62.6" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="318.4" y1="253.4" x2="448.4" y2="253.4" stroke="#102A43" stroke-width="2.5" stroke-dasharray="8 6" stroke-linecap="round"/>
+<path d="M318.4,253.4 L323.6,223.8 A30,30 0 0 1 348.4,253.4 Z" fill="#D1FAE5" stroke="none"/>
+<path d="M323.6,223.8 A30,30 0 0 1 348.4,253.4" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="355.2" y="222.5" font-size="18" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">x</text>
+<path d="M158.3,62.6 L187.3,70.4 A30,30 0 0 1 155.7,92.5 Z" fill="#D1FAE5" stroke="none"/>
+<path d="M187.3,70.4 A30,30 0 0 1 155.7,92.5" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="185.8" y="101.9" font-size="18" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">x</text>
+<circle cx="141.6" cy="253.4" r="4" fill="#102A43"/>
+<text x="127.5" y="267.5" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<circle cx="318.4" cy="253.4" r="4" fill="#102A43"/>
+<text x="332.5" y="267.5" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<circle cx="343.3" cy="112.2" r="4" fill="#102A43"/>
+<text x="361.4" y="103.7" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<circle cx="158.3" cy="62.6" r="4" fill="#102A43"/>
+<text x="146.8" y="46.2" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">D</text>
+<circle cx="448.4" cy="253.4" r="4" fill="#102A43"/>
+<text x="452.4" y="273.4" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">E</text>
+<text x="400" y="60" font-size="16" fill="#102A43" text-anchor="start" dominant-baseline="middle">AB is extended to E.</text>
+<text x="400" y="95" font-size="18" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="700">∠CBE = ∠ADC</text>
+</svg>

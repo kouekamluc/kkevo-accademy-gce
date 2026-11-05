@@ -23,7 +23,7 @@ from apps.academics import gce_curriculum
 from apps.academics.management.commands.load_gce_curriculum import COURSE_TAG
 from apps.academics.management.commands.load_gce_curriculum import Command as CurriculumCommand
 from apps.academics.models import SubjectOffering, Syllabus
-from apps.courses import lesson_content
+from apps.courses import course_pages, lesson_content
 from apps.courses.models import Course, Lesson, LessonBlock
 
 
@@ -57,11 +57,13 @@ class Command(BaseCommand):
         if errors:
             raise CommandError("The lesson content has problems; nothing was loaded:\n  - " + "\n  - ".join(errors))
 
-        counts = dict.fromkeys(["created", "refreshed", "removed", "kept"], 0)
+        counts = dict.fromkeys(["created", "refreshed", "removed", "kept", "course pages"], 0)
         courses, orders = {}, {}
         for key, spec, _source in rows:
             if key not in courses:
                 courses[key] = self.outline_course(key, create=not options["remove"])
+                if courses[key] and not options["remove"]:
+                    counts["course pages"] += self.apply_page(courses[key], key, options["refresh"])
             course = courses[key]
             if course is None:
                 continue
@@ -113,6 +115,21 @@ class Command(BaseCommand):
         course = CurriculumCommand().make_course(offering, title, sections, refs)
         self.stdout.write(f"Created outline course '{course.title}' ({course.slug}).")
         return course
+
+    def apply_page(self, course, key, refresh):
+        """Fill in a draft outline course's page text from course_pages.PAGES (once, or again with --refresh)."""
+        page = course_pages.PAGES.get(key)
+        fresh = not course.summary or course.summary.startswith("Outline from the GCE curriculum guide")
+        if page is None or course.status != "draft" or not (fresh or refresh):
+            return 0
+        course.summary = page["summary"]
+        course.learning_outcomes = "\n".join(page["outcomes"])
+        if page.get("title") and not course.offering.courses.exclude(pk=course.pk).filter(title=page["title"]).exists():
+            course.title = page["title"]
+        if page.get("slug") and not Course.objects.exclude(pk=course.pk).filter(slug=page["slug"]).exists():
+            course.slug = page["slug"]
+        course.save()
+        return 1
 
     def write_lesson(self, lesson, spec, order):
         lesson.title = spec["title"]

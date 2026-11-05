@@ -24,11 +24,12 @@ from .models import (
 from .reviews import live_cards, review_summary, sync_mistake_cards
 
 
-def _published_set(pk):
-    return get_object_or_404(
-        PracticeSet.objects.select_related("topic__module__course__offering__subject", "lesson"),
-        pk=pk, status="published", topic__module__course__status="published",
-    )
+def _published_set(pk, user=None):
+    """A set students may open. Staff may also open draft sets (and sets in draft courses) to preview them."""
+    qs = PracticeSet.objects.select_related("topic__module__course__offering__subject", "lesson")
+    if user is not None and user.is_staff:
+        return get_object_or_404(qs.exclude(status="archived"), pk=pk)
+    return get_object_or_404(qs, pk=pk, status="published", topic__module__course__status="published")
 
 
 def _with_choices(qs):
@@ -127,7 +128,7 @@ def index(request):
 @login_required
 @require_POST
 def start(request, pk):
-    practice_set = _published_set(pk)
+    practice_set = _published_set(pk, request.user)
     count = practice_set.questions.count()
     if not count:
         raise Http404
@@ -150,7 +151,7 @@ def start(request, pk):
 @login_required
 def start_page(request, pk):
     """GET landing for a practice set: summary, mastery level, Start and Timed exam buttons."""
-    practice_set = _published_set(pk)
+    practice_set = _published_set(pk, request.user)
     questions = practice_set.questions.count()
     attempts = Attempt.objects.filter(user=request.user, practice_set=practice_set)
     ongoing = attempts.filter(completed_at__isnull=True, mode=Attempt.Mode.PRACTICE).first()

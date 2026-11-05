@@ -1,5 +1,5 @@
 {% load lesson_tags %}<figure class="overflow-hidden rounded-card border border-surface-border bg-white p-3">
-  {% if low_data %}{% include "lessons/_low_data_gate.html" with media="lessons/players/image.html" kind="image" label=block.alt_text href=block.media_url size=block.data.size_mb %}
+  {% if low_data %}{% include "lessons/_low_data_gate.html" with media="lessons/players/image.html" kind="image" label=block.alt_text href=block.image_src size=block.data.size_mb %}
   {% else %}{% include "lessons/players/image.html" %}{% endif %}
   {% if block.body %}<figcaption class="mt-2 px-2 text-[13px] text-ink-muted">{{ block.body|inline }}</figcaption>{% endif %}
 </figure>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Cyclic quadrilateral ABCD: opposite angles add up to 180 degrees</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="210" cy="180" r="140" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="88.8,250 234.3,317.9 347.9,204.3 257.9,48.4" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M88.8,250 L108,227 A30,30 0 0 1 115.9,262.7 Z" fill="#DBEAFE" stroke="none"/>
+<path d="M108,227 A30,30 0 0 1 115.9,262.7" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<path d="M347.9,204.3 L326.7,225.5 A30,30 0 0 1 332.9,178.3 Z" fill="#DBEAFE" stroke="none"/>
+<path d="M326.7,225.5 A30,30 0 0 1 332.9,178.3" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<path d="M234.3,317.9 L212.6,307.7 A24,24 0 0 1 251.3,300.9 Z" fill="#D1FAE5" stroke="none"/>
+<path d="M212.6,307.7 A24,24 0 0 1 251.3,300.9" fill="none" stroke="#047857" stroke-width="2.5"/>
+<path d="M257.9,48.4 L269.9,69.2 A24,24 0 0 1 242.5,66.8 Z" fill="#D1FAE5" stroke="none"/>
+<path d="M269.9,69.2 A24,24 0 0 1 242.5,66.8" fill="none" stroke="#047857" stroke-width="2.5"/>
+<circle cx="88.8" cy="250" r="4" fill="#102A43"/>
+<text x="71.4" y="260" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<circle cx="234.3" cy="317.9" r="4" fill="#102A43"/>
+<text x="237.8" y="337.6" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<circle cx="347.9" cy="204.3" r="4" fill="#102A43"/>
+<text x="367.6" y="207.8" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<circle cx="257.9" cy="48.4" r="4" fill="#102A43"/>
+<text x="264.7" y="29.6" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">D</text>
+<text x="395" y="130" font-size="17" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Opposite angles:</text>
+<text x="395" y="170" font-size="18" fill="#2563EB" text-anchor="start" dominant-baseline="middle" font-weight="700">∠A + ∠C = 180°</text>
+<text x="395" y="205" font-size="18" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="700">∠B + ∠D = 180°</text>
+</svg>

@@ -52,6 +52,9 @@ LESSONS.append(lesson(
                 ["Harvard", r"Separate instruction and data memories and buses. Instruction fetch and data access can happen at the same time, so it is faster for fixed tasks. More complex, and spare program memory cannot be used for data."],
             ],
             note=r"Many modern CPUs are a mix: separate instruction and data caches (Harvard-like) in front of one shared main memory (Von Neumann)."),
+        IMG("cs-von-neumann-vs-harvard.svg",
+            "Von Neumann: one CPU joined to one memory, holding instructions and data, by a single set of buses. Harvard: one CPU joined to an instruction memory and a data memory, each by its own buses, so both can be used at the same time.",
+            caption="Figure 1. Von Neumann uses one memory and one set of buses; Harvard uses separate instruction and data memories, each with its own buses."),
         D(r"The **Von Neumann bottleneck** is the limit on performance caused by instructions and data sharing a single "
           r"bus to memory. The CPU often waits for memory transfers rather than doing useful work.",
           title="Von Neumann bottleneck"),
@@ -64,6 +67,9 @@ LESSONS.append(lesson(
                 ["Data bus", r"Carries data and instructions being transferred. **Bidirectional**: CPU to memory when writing, memory to CPU when reading. Its width decides how many bits move per transfer."],
                 ["Control bus", r"Carries control and timing signals such as memory read, memory write, clock, interrupt request and bus request. Individual lines go in either direction, so the bus as a whole is **bidirectional**."],
             ]),
+        IMG("cs-system-buses.svg",
+            "CPU, memory and I/O joined to three buses. Address bus arrows go only from the CPU to memory and I/O (one-way). Data bus and control bus links have arrows at both ends (two-way).",
+            caption="Figure 2. The address bus is one-way (CPU to memory and I/O); the data and control buses are two-way."),
         D(r"With $n$ address lines, the CPU can form $2^n$ different addresses. If each address holds one byte, the "
           r"addressable memory is $2^n$ bytes.",
           title="Address bus width", formula=r"\text{number of addresses} = 2^{n}"),
@@ -210,6 +216,9 @@ LESSONS.append(lesson(
                 ["CIR (Current Instruction Register)", r"Holds the **instruction being decoded and executed**, split into opcode and operand."],
                 ["ACC (Accumulator)", r"A general working register that holds the **result** of ALU operations."],
             ]),
+        IMG("cs-cpu-registers.svg",
+            "CPU containing the control unit, ALU, ACC, PC, MAR, CIR and MDR. Arrows: PC to MAR, MDR to CIR, CIR to control unit. MAR sends addresses to main memory on the address bus; MDR uses the two-way data bus; the control bus links the control unit and memory.",
+            caption="Figure 1. The special-purpose registers and how they connect to main memory. Blue arrows show the path of an instruction during fetch."),
         D(r"Square brackets mean **the contents of**. So $[\text{PC}]$ is the value held in the PC, and "
           r"$[[\text{MAR}]]$ is the contents of the memory location whose address is in the MAR. The arrow "
           r"$\leftarrow$ means **is copied into**.",
@@ -221,6 +230,9 @@ LESSONS.append(lesson(
           r"In the **decode** stage the control unit splits the instruction in the CIR into its **opcode** (what to "
           r"do) and **operand** (what to do it to). In the **execute** stage the control unit sends signals to carry "
           r"it out, for example loading a value, using the ALU, or changing the PC for a jump."),
+        IMG("cs-fde-cycle.svg",
+            "Three boxes in a loop. Fetch: MAR gets [PC]; PC gets [PC] + 1 and MDR gets [[MAR]]; CIR gets [MDR]. Decode: the CU splits the CIR into opcode and operand. Execute: the CU sends signals to load, use the ALU, store or jump. Then back to fetch.",
+            caption="Figure 2. The fetch–decode–execute cycle repeats for every instruction."),
         TIP(r"A jump instruction is executed by copying its operand into the PC: $\text{PC} \leftarrow$ operand. The next fetch then starts from the new address."),
         T(r"The trace below shows a short program on an accumulator machine. Each row is one register transfer. A dash means the register value is not yet known or not relevant."),
         CODE(CPU_TRACE, "text", title="Trace of LDA 200 then ADD 201",
@@ -371,6 +383,9 @@ LESSONS.append(lesson(
           formula=r"S = A \oplus B = \overline{A}\cdot B + A\cdot\overline{B}, \qquad C = A \cdot B"),
         CODE(HALF_ADDER_TT, "text", title="Truth table: half adder",
              caption="1 + 1 = 10 in binary: sum 0, carry 1. S matches XOR and C matches AND, so a half adder is one XOR gate and one AND gate."),
+        IMG("cs-half-adder.svg",
+            "Half adder circuit. Inputs A and B go to an XOR gate giving the sum S = A XOR B, and to an AND gate giving the carry C = A AND B.",
+            caption="Figure 1. A half adder: one XOR gate gives S and one AND gate gives C."),
         H("The full adder"),
         D(r"A **full adder** adds three bits: $A$, $B$ and a carry in $C_{in}$. It produces $S$ and a carry out $C_{out}$.",
           title="Full adder",
@@ -386,6 +401,9 @@ LESSONS.append(lesson(
                S("Carry out", math=r"C_{out} = 0 + 1 = 1", text=r"Row 1 0 1 of the table gives S = 0, Cout = 1. It matches: $1 + 0 + 1 = 10_2$."),
            ]),
         TIP(r"A full adder can be built from **two half adders and an OR gate**: the first half adder adds $A$ and $B$, the second adds that sum to $C_{in}$, and the two carries are ORed together."),
+        IMG("cs-full-adder.svg",
+            "Full adder circuit. A XOR B, then XOR with Cin, gives S. One AND gate gives Cin AND (A XOR B), another gives A AND B, and an OR gate combines them to give Cout.",
+            caption="Figure 2. A full adder built from two half adders (XOR and AND pairs) and an OR gate: S = A ⊕ B ⊕ Cin, Cout = A·B + Cin·(A ⊕ B)."),
         H("The ripple carry adder"),
         T(r"To add $n$-bit numbers, connect $n$ full adders in a chain. The carry out of each column becomes the carry in of the next. Because each carry must ripple through before the next column is final, this adder is simple but slow for long words."),
         CODE(RIPPLE_ADD, "text", title="Worked example 2: tracing a ripple carry adder"),
@@ -393,6 +411,9 @@ LESSONS.append(lesson(
         D(r"A **multiplexer** (MUX) has $2^n$ data inputs, $n$ **select lines** and one output. The binary number on the select lines chooses which input is passed to the output.",
           title="Multiplexer",
           formula=r"Y = \overline{S}\cdot I_0 + S\cdot I_1 \quad \text{(2-to-1 MUX)}"),
+        IMG("cs-mux-2-to-1.svg",
+            "2-to-1 multiplexer circuit. S goes through a NOT gate. NOT S and I0 feed one AND gate; S and I1 feed another. An OR gate combines them into Y. S = 0 gives Y = I0; S = 1 gives Y = I1.",
+            caption="Figure 3. A 2-to-1 multiplexer built from NOT, AND and OR gates: Y = (NOT S)·I0 + S·I1."),
         D(r"A **decoder** has $n$ inputs and up to $2^n$ outputs. For each input combination exactly **one** output is 1 (active). Decoders are used to select one memory chip or device from an address.",
           title="Decoder",
           formula=r"D_0 = \overline{A}\cdot\overline{B},\ D_1 = \overline{A}\cdot B,\ D_2 = A\cdot\overline{B},\ D_3 = A\cdot B"),
@@ -522,6 +543,9 @@ LESSONS.append(lesson(
           r"$Q = 0$. When both are 0 the latch **holds** its previous value: this is the memory. $S = R = 1$ is not "
           r"allowed, because both NOR outputs become 0, so $Q$ and $\overline{Q}$ are no longer complements, and the "
           r"final state is unpredictable when both inputs return to 0."),
+        IMG("cs-sr-latch-nor.svg",
+            "Two cross-coupled NOR gates. R and Q-bar feed the top gate, whose output is Q. S and Q feed the bottom gate, whose output is Q-bar. S = 1 sets, R = 1 resets, S = R = 0 holds, S = R = 1 is not allowed.",
+            caption="Figure 1. An SR latch: each NOR output is fed back into the other NOR gate, which lets the circuit remember one bit."),
         CODE(SR_TRACE, "text", title="Worked example 1: SR latch trace"),
         EX("Worked example 1: reading the SR trace",
            intro=r"Explain why $Q$ is different at $t_2$ and $t_4$ even though the inputs are the same ($S = R = 0$).",
@@ -702,6 +726,9 @@ LESSONS.append(lesson(
            ],
            check=r"m3: \overline{0}\cdot 1 = 1, \quad m6: 1\cdot 1 = 1, \quad m4: \overline{1}\cdot 0 + 1\cdot 0 = 0"),
         CODE(KMAP_4VAR, "text", title="Worked example 4: a 4-variable K-map"),
+        IMG("cs-kmap-4var.svg",
+            "4-variable K-map, rows AB and columns CD in order 00, 01, 11, 10. 1s at m0, m2, m8, m10 (corners) and m5, m7, m13, m15 (centre). Corner quad gives NOT B AND NOT D; centre quad gives B AND D. F = NOT B . NOT D + B . D.",
+            caption="Figure 1. Worked example 4 on the K-map: the corner quad (wrapping round the edges) gives B̄·D̄ and the centre quad gives B·D."),
         EX("Worked example 4: the steps",
            intro=r"Simplify $F(A, B, C, D) = \sum m(0, 2, 5, 7, 8, 10, 13, 15)$.",
            steps=[

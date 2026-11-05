@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Worked example 3: tangent TS at A, angle TAB 58, angle BAC 70</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="280" cy="160" r="135" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="280,295 158.7,100.8 411,127.3" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="50" y1="295" x2="510" y2="295" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<path d="M234,295 A46,46 0 0 1 255.6,256" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="222.3" y="263" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="600">58°</text>
+<path d="M262,266.2 A34,34 0 0 1 300.9,268.2" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="282.8" y="241.1" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="600">70°</text>
+<path d="M411,127.3 L391.3,152.6 A32,32 0 0 1 379.2,124 Z" fill="#D1FAE5" stroke="none"/>
+<path d="M391.3,152.6 A32,32 0 0 1 379.2,124" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="361.3" y="148.4" font-size="16" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">58°</text>
+<path d="M158.7,100.8 L190.5,104.2 A32,32 0 0 1 175.6,128 Z" fill="#D1FAE5" stroke="none"/>
+<path d="M190.5,104.2 A32,32 0 0 1 175.6,128" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="204.5" y="129.4" font-size="16" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">52°</text>
+<circle cx="158.7" cy="100.8" r="4" fill="#102A43"/>
+<text x="140.7" y="92.1" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<circle cx="411" cy="127.3" r="4" fill="#102A43"/>
+<text x="430.4" y="122.5" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<circle cx="280" cy="295" r="4" fill="#102A43"/>
+<text x="280" y="315" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<text x="60" y="279" font-size="18" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">T</text>
+<text x="500" y="279" font-size="18" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">S</text>
+<text x="14" y="24" font-size="15" fill="#2563EB" text-anchor="start" dominant-baseline="middle" font-weight="700">Given</text>
+<text x="14" y="46" font-size="15" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="700">Found</text>
+</svg>

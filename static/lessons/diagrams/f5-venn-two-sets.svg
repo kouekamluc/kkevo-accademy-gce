@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Two-set Venn diagram: Maths Club and French Club, 40 students</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="30" y="30" width="500" height="300" rx="6" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<circle cx="215" cy="198" r="108" fill="#EFF6FF" fill-opacity="0.9" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="345" cy="198" r="108" fill="#ECFDF5" fill-opacity="0.6" stroke="#047857" stroke-width="2.5"/>
+<circle cx="215" cy="198" r="108" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="48" y="52" font-size="17" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">ξ = 40</text>
+<text x="155" y="76" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">Maths Club (M)</text>
+<text x="405" y="76" font-size="16" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">French Club (F)</text>
+<text x="162" y="200" font-size="22" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">18</text>
+<text x="280" y="200" font-size="22" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">7</text>
+<text x="398" y="200" font-size="22" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">11</text>
+<text x="490" y="305" font-size="22" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">4</text>
+</svg>

@@ -168,6 +168,8 @@ LESSONS = [
                    S("Compare them", math=r"\overrightarrow{AC} = 3\begin{pmatrix} 2 \\ 3 \end{pmatrix} = 3\,\overrightarrow{AB}"),
                    S("Conclude", text="AB and AC are parallel and both pass through A, so A, B and C lie on one straight line."),
                ]),
+            IMG('f5-collinear-points.svg', 'Grid with points A(1, 2), B(3, 5) and C(7, 11) on one straight line. A blue arrow from A to B goes 2 right and 3 up; a green arrow from A to C goes 6 right and 9 up. Beside the grid: AB = (2, 3) and AC = (6, 9) = 3 times (2, 3).',
+                'Figure 1. AC is 3 times AB and both start at A, so A, B and C are collinear.'),
             MISTAKE("Subtracting in the wrong order", r"$\overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA}$ (end minus start). Doing start minus end gives $\overrightarrow{BA}$, which points the other way."),
             MISTAKE("Saying 'parallel' is enough for collinear", "Parallel lines can be far apart. You must also say that the two vectors share a common point."),
             QUIZ(r"Which vector is parallel to $\begin{pmatrix} 2 \\ -3 \end{pmatrix}$?",
@@ -221,6 +223,8 @@ LESSONS = [
             KEY("Labelling the triangle", "Always label the triangle before you start.",
                 cards=[["Angles", "Capital letters $A$, $B$, $C$ at the corners."],
                        ["Sides", "Small letters $a$, $b$, $c$. Side $a$ is **opposite** angle $A$, and so on."]]),
+            IMG('f5-triangle-abc-labels.svg', 'Triangle ABC with corners labelled A, B and C. Side a is BC, opposite angle A, and is highlighted in blue together with angle A. Side b is AC, opposite angle B. Side c is AB, opposite angle C.',
+                'Figure 1. Side a is opposite angle A, side b is opposite angle B and side c is opposite angle C.'),
             H("The sine rule"),
             D("In any triangle $ABC$, each side divided by the sine of its opposite angle gives the same value.",
               title="Sine rule", formula=r"\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}",
@@ -361,6 +365,8 @@ LESSONS = [
                    S("Find angle EDF", math=r"\tan(\angle EDF) = \frac{40}{30}, \quad \angle EDF = 53.1^\circ"),
                    S("East is already 90° from north, so add", math=r"\text{bearing of F from D} = 90^\circ + 53.1^\circ = 143.1^\circ"),
                ], check=r"F \text{ is south-east of D, so the bearing lies between } 090^\circ \text{ and } 180^\circ"),
+            IMG('f5-bearings-lorry.svg', 'Sketch with north arrows at D and E. D to E is 30 km due east, E to F is 40 km due south, with a right angle at E. DF is 50 km. At D, angle EDF is 53.1 degrees, and the bearing of F from D, measured clockwise from north, is 143.1 degrees.',
+                'Figure 1. Worked example 2: the bearing of F from D is 090° + 53.1° = 143.1°.'),
             EX("Worked example 3: finding the angle between two stages", intro=(
                 r"A boat sails 12 km from P to Q on a bearing of $050^\circ$. It then sails 9 km from Q to R on a bearing of $140^\circ$. "
                 "Find the distance PR and the bearing of R from P."),
@@ -371,6 +377,8 @@ LESSONS = [
                    S("Find angle QPR", math=r"\tan(\angle QPR) = \frac{9}{12}, \quad \angle QPR = 36.9^\circ"),
                    S("Add to the first bearing", math=r"\text{bearing of R from P} = 050^\circ + 36.9^\circ = 086.9^\circ"),
                ]),
+            IMG('f5-bearings-boat.svg', 'Sketch with north arrows at P and Q. P to Q is 12 km on a bearing of 050 degrees; Q to R is 9 km on a bearing of 140 degrees, measured clockwise from north at Q. The angle at Q is a right angle. PR is 15 km, angle QPR is 36.9 degrees, and the bearing of R from P is 086.9 degrees.',
+                'Figure 2. Worked example 3: angle PQR is 90°, so PR = 15 km and the bearing of R from P is 086.9°.'),
             MISTAKE("Measuring from the wrong point", "The bearing of B from A uses the north line at **A**. Read the word 'from' carefully."),
             MISTAKE("Measuring anticlockwise or from east", "Bearings are always clockwise from north. An angle measured from east or anticlockwise is not a bearing."),
             MISTAKE("Writing two figures", r"Write $078^\circ$, not $78^\circ$. Examiners expect three figures."),
@@ -393,6 +401,8 @@ LESSONS = [
                r"(b) Cosine rule: $AC^2 = 8^2 + 6^2 - 2(8)(6)\cos 120^\circ = 100 + 48 = 148$, so $AC = \sqrt{148} \approx 12.2$ km. "
                r"(c) Sine rule: $\sin(\angle BAC) = \dfrac{6 \sin 120^\circ}{12.17} = 0.4271$, so $\angle BAC \approx 25.3^\circ$. "
                r"Bearing of C from A $= 060^\circ + 25.3^\circ = 085.3^\circ$."),
+            IMG('f5-bearings-hiker.svg', 'Sketch with north arrows at A and B. A to B is 8 km on a bearing of 060 degrees; B to C is 6 km on a bearing of 120 degrees, each measured clockwise from north. A dashed line joins A to C, marked AC = ?.',
+                "Figure 3. The hiker's journey: draw a north line at A and at B before finding angle ABC."),
             SUM("A bearing is measured clockwise from north and written with three figures.",
                 "'The bearing of B from A' means stand at A and face north.",
                 r"Back bearing: add $180^\circ$ if the bearing is under $180^\circ$, otherwise subtract $180^\circ$.",
@@ -432,9 +442,13 @@ LESSONS = [
             D("The **opposite angles** of a cyclic quadrilateral add up to $180^\\circ$.",
               title="Theorem 1: opposite angles", formula=r"\angle A + \angle C = 180^\circ, \qquad \angle B + \angle D = 180^\circ",
               note="Diagram in words: draw a circle and mark four points A, B, C, D in order around it. Join them to make the quadrilateral ABCD. Angle A and angle C are opposite each other; so are angle B and angle D."),
+            IMG('f5-cyclic-quadrilateral.svg', 'Circle with four points A, B, C and D on it, joined to make quadrilateral ABCD. Angles A and C are marked in blue and angles B and D in green. Text: angle A plus angle C = 180 degrees, angle B plus angle D = 180 degrees.',
+                'Figure 1. Opposite angles of a cyclic quadrilateral add up to 180°.'),
             D("If one side of a cyclic quadrilateral is extended, the **exterior angle** equals the **interior opposite angle**.",
               title="Theorem 2: exterior angle",
               note="Diagram in words: in cyclic quadrilateral ABCD, extend side AB beyond B to a point E. The angle CBE (outside the shape) is equal to angle ADC (the angle at the opposite corner D)."),
+            IMG('f5-cyclic-exterior-angle.svg', 'Cyclic quadrilateral ABCD in a circle, with side AB extended beyond B to a point E as a dashed line. The exterior angle CBE and the interior opposite angle ADC are both marked x.',
+                'Figure 2. The exterior angle CBE equals the interior opposite angle ADC.'),
             EX("Worked example 1: opposite angles", intro=(
                 r"ABCD is a cyclic quadrilateral with $\angle A = 75^\circ$ and $\angle B = 110^\circ$. Find $\angle C$ and $\angle D$."),
                steps=[
@@ -459,6 +473,8 @@ LESSONS = [
               "**alternate segment** (the angle subtended by the chord at the circumference on the other side).",
               title="Theorem 3: alternate segment theorem",
               note="Diagram in words: a circle with a point A on it. A straight line TS touches the circle only at A (the tangent). From A draw a chord AB. Mark a point C on the circle on the opposite side of AB from T, and join CA and CB. Then angle TAB (between the tangent and the chord) equals angle ACB."),
+            IMG('f5-alternate-segment.svg', 'Circle with a tangent line TS touching it at A at the bottom. Chord AB goes up to the left; point C is on the circle on the other side of AB from T, and triangle ABC is drawn. Angle TAB, between the tangent and the chord, and angle ACB are both marked x.',
+                'Figure 3. Alternate segment theorem: angle TAB = angle ACB.'),
             TIP("To find the 'alternate' angle: the angle between the tangent and the chord sits on one side of the chord. The equal angle is in the triangle on the **other** side of that chord, at the point opposite the chord."),
             EX("Worked example 3: alternate segment theorem", intro=(
                 r"A tangent TS touches a circle at A. Chords AB and AC are drawn and BC is joined. $\angle TAB = 58^\circ$, where T is on the "
@@ -467,6 +483,8 @@ LESSONS = [
                    S("Angle between tangent TA and chord AB", math=r"\angle ACB = \angle TAB = 58^\circ", text="Reason: alternate segment theorem."),
                    S("Use the angle sum of triangle ABC", math=r"\angle ABC = 180^\circ - 70^\circ - 58^\circ = 52^\circ", text="Reason: angles in a triangle add up to 180°."),
                ]),
+            IMG('f5-alternate-segment-example.svg', 'Circle with tangent TS touching at A and triangle ABC inside. Given angles in blue: angle TAB = 58 degrees and angle BAC = 70 degrees. Found angles in green: angle ACB = 58 degrees and angle ABC = 52 degrees.',
+                'Figure 4. Worked example 3: angle ACB = 58° (alternate segment) and angle ABC = 52°.'),
             MISTAKE("Using the wrong chord", "The equal angle must stand on the **same chord** that makes the angle with the tangent. If the tangent angle is with chord AB, look for the angle that AB makes at C, which is angle ACB."),
             MISTAKE("Calling a quadrilateral cyclic without checking", "Opposite angles add to 180° only when all four corners are on the circle. A quadrilateral with a corner at the centre O is not cyclic."),
             MISTAKE("Giving no reasons", "Write a short reason after each step, for example 'opposite angles of a cyclic quadrilateral' or 'alternate segment theorem'. Answers without reasons can lose marks."),
@@ -486,9 +504,13 @@ LESSONS = [
                r"Alternate segment theorem: $\angle ACB = 62^\circ$ (it stands on chord AB) and $\angle ABC = 48^\circ$ (it stands on chord AC). "
                r"The angles on the straight tangent line give $\angle BAC = 180^\circ - 62^\circ - 48^\circ = 70^\circ$. "
                r"Check: $62^\circ + 48^\circ + 70^\circ = 180^\circ$."),
+            IMG('f5-alternate-segment-practice.svg', 'Circle with a tangent touching at A and triangle ABC inside, B on the left and C on the right. The tangent makes 62 degrees with AB on the left and 48 degrees with AC on the right. The three angles of triangle ABC are marked with question marks.',
+                'Figure 5. Practice question 2: the tangent at A makes 62° with AB and 48° with AC.'),
             PQ(r"O is the centre of a circle. A, B, C and D lie on the circle in that order, with B on the minor arc AC. $\angle AOC = 140^\circ$. Find $\angle ADC$ and $\angle ABC$.",
                r"$\angle ADC = \tfrac{1}{2} \times 140^\circ = 70^\circ$ (angle at the centre is twice the angle at the circumference). "
                r"ABCD is cyclic, so $\angle ABC = 180^\circ - 70^\circ = 110^\circ$ (opposite angles of a cyclic quadrilateral)."),
+            IMG('f5-centre-angle-cyclic.svg', 'Circle with centre O and points A, B, C, D on it, with B at the bottom on the minor arc AC and D at the top. Radii OA and OC make an angle of 140 degrees at O. Angles ADC and ABC are marked with question marks.',
+                'Figure 6. Practice question 3: angle AOC = 140°, with B on the minor arc AC.'),
             PQ(r"A quadrilateral has angles $88^\circ$, $97^\circ$, $92^\circ$ and $83^\circ$ in order. Can it be a cyclic quadrilateral?",
                r"Opposite pairs: $88^\circ + 92^\circ = 180^\circ$ and $97^\circ + 83^\circ = 180^\circ$. Both pairs add up to $180^\circ$, so yes, its corners can lie on one circle."),
             SUM(r"A cyclic quadrilateral has all four corners on a circle.",
@@ -550,6 +572,8 @@ LESSONS = [
                    S("Divide each frequency by its width", math=r"\tfrac{6}{2} = 3,\quad \tfrac{9}{1} = 9,\quad \tfrac{12}{1} = 12,\quad \tfrac{10}{2} = 5,\quad \tfrac{8}{4} = 2"),
                    S("Describe the histogram", text="Draw earnings on the horizontal axis and frequency density on the vertical axis. The bar for 0–2 is 2 units wide and 3 units tall; the bar for 6–10 is 4 units wide but only 2 units tall."),
                ]),
+            IMG('f5-histogram-earnings.svg', 'Histogram of daily earnings in thousands of FCFA, with no gaps between bars. Bar 0 to 2 has frequency density 3, bar 2 to 3 has 9, bar 3 to 4 has 12, bar 4 to 6 has 5 and bar 6 to 10 has 2. The frequencies 6, 9, 12, 10 and 8 are written inside the bars.',
+                'Figure 1. Worked example 2: bar height is frequency density, so the wide 6–10 class is only 2 units tall.'),
             QUIZ("A class $10 < x \\le 25$ has a frequency of 30. What is its frequency density?",
                  ["$2$", "$3$", "$1.2$", "$450$"], 0,
                  r"The class width is $25 - 10 = 15$, so the frequency density is $30 \div 15 = 2$.",
@@ -576,6 +600,8 @@ LESSONS = [
                    S("Upper quartile: the 30th value lies in 30–40 (cumulative 28 to 36)", math=r"Q_3 = 30 + \frac{30 - 28}{8} \times 10 = 32.5 \text{ min}"),
                    S("Interquartile range", math=r"Q_3 - Q_1 = 32.5 - 16 = 16.5 \text{ min}"),
                ]),
+            IMG('f5-ogive-journey-times.svg', 'Cumulative frequency curve of journey times, a stretched S-shape through the points (0, 0), (10, 4), (20, 14), (30, 28), (40, 36) and (50, 40). Dashed lines read across from cumulative frequencies 10, 20 and 30 to the curve and down to the time axis at 16, 24.3 and 32.5 minutes.',
+                'Figure 2. Reading the ogive: Q₁ = 16 min, median ≈ 24.3 min and Q₃ = 32.5 min.'),
             MISTAKE("Plotting at mid-points", "Cumulative frequency is plotted at the **upper** class boundary, because by the end of the class all those values have been counted."),
             MISTAKE("Using frequency as bar height with unequal widths", "With unequal class widths, the bar height must be frequency density, or wide classes will look far too important."),
             MISTAKE("Dividing by the number of classes", r"The mean is $\sum fx \div \sum f$ (the total frequency), not $\sum fx$ divided by the number of classes."),
@@ -656,6 +682,8 @@ LESSONS = [
                    S("(b) Exactly one late: add two paths", math=r"0.3 \times 0.9 + 0.7 \times 0.1 = 0.27 + 0.07 = 0.34"),
                    S("(c) At least one late: use the complement of 'neither late'", math=r"1 - 0.7 \times 0.9 = 1 - 0.63 = 0.37"),
                ], check=r"0.03 + 0.34 + 0.63 = 1"),
+            IMG('f5-tree-bus-taxi.svg', 'Tree diagram. First branches for the bus: late 0.3, on time 0.7. From each, branches for the taxi: late 0.1, on time 0.9. The four path probabilities are 0.03, 0.27, 0.07 and 0.63.',
+                'Figure 1. Worked example 2: multiply along each path; the four results add up to 1.'),
             EX("Worked example 3: without replacement", intro=(
                 "A trader in Mokolo market has a basket of 10 mangoes: 4 are ripe and 6 are not ripe. A customer picks two mangoes at random, one after the other, "
                 "without putting the first back. Find the probability that (a) both are ripe, (b) one is ripe and one is not."),
@@ -665,6 +693,8 @@ LESSONS = [
                    S("(a) Both ripe", math=r"\frac{4}{10} \times \frac{3}{9} = \frac{12}{90} = \frac{2}{15}"),
                    S("(b) Ripe then not ripe, OR not ripe then ripe", math=r"\frac{4}{10} \times \frac{6}{9} + \frac{6}{10} \times \frac{4}{9} = \frac{24}{90} + \frac{24}{90} = \frac{48}{90} = \frac{8}{15}"),
                ], check=r"P(\text{both not ripe}) = \tfrac{6}{10} \times \tfrac{5}{9} = \tfrac{1}{3}, \text{ and } \tfrac{2}{15} + \tfrac{8}{15} + \tfrac{5}{15} = 1"),
+            IMG('f5-tree-mangoes.svg', 'Tree diagram for two mangoes picked without replacement. First pick: ripe 4/10, not ripe 6/10. After a ripe mango: ripe 3/9, not ripe 6/9. After an unripe mango: ripe 4/9, not ripe 5/9. Path probabilities: 12/90, 24/90, 24/90 and 30/90.',
+                'Figure 2. Worked example 3: the second-pick probabilities change because only 9 mangoes are left.'),
             MISTAKE("Forgetting that the total changes", "Without replacement, the second pick has one item fewer, so the denominator goes down by 1, and the count of the chosen type may change too."),
             MISTAKE("Adding along a path", "Along one path you **multiply**. You only **add** when you combine different paths."),
             MISTAKE("Counting only one order", "'One ripe and one not ripe' can happen in two orders. Include both paths."),

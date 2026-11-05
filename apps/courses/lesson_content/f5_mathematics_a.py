@@ -46,6 +46,8 @@ LESSONS = [
                 S("Add the regions inside the circles", math=r"18 + 7 + 11 = 36"),
                 S("Subtract from the total", math=r"40 - 36 = 4 \text{ students in neither club}"),
             ], check=r"18 + 7 + 11 + 4 = 40"),
+            IMG('f5-venn-two-sets.svg', 'Venn diagram in a rectangle labelled xi = 40, with two overlapping circles: Maths Club (M) and French Club (F). M only is 18, the overlap is 7, F only is 11 and 4 are outside both circles.',
+                'Figure 1. Worked example 1: 18 + 7 + 11 + 4 = 40.'),
             TIP("Always fill a Venn diagram **from the middle outwards**. Write the intersection first, then the 'only' regions."),
             EX("Worked example 2: an unknown region", intro=(
                 "30 students were asked about sport. 18 play football, 15 play basketball and 2 play neither. "
@@ -55,6 +57,8 @@ LESSONS = [
                 S("Simplify", math=r"35 - x = 30"),
                 S("Solve", math=r"x = 5"),
             ], check=r"13 + 5 + 10 + 2 = 30"),
+            IMG('f5-venn-unknown-region.svg', 'Venn diagram in a rectangle labelled xi = 30, with two overlapping circles: Football and Basketball. Football only is 18 minus x, the overlap is x, Basketball only is 15 minus x and 2 are outside both circles.',
+                'Figure 2. Worked example 2: write every region in terms of x.'),
             H("Three-set Venn diagrams"),
             T("With three sets there are 8 regions: the centre (all three), three 'two only' regions, three 'one only' regions, and the outside."),
             EX("Worked example 3: three sets", intro=(
@@ -68,6 +72,8 @@ LESSONS = [
                 S("Total inside the circles", math=r"12 + 9 + 8 + 5 + 3 + 4 + 3 = 44"),
                 S("None of the three", math=r"50 - 44 = 6", text="12 sell rice only and 6 sell none."),
             ]),
+            IMG('f5-venn-three-sets.svg', 'Three-set Venn diagram in a rectangle labelled xi = 50, with circles Rice (R), Beans (B) and Oil (O). Rice only 12, beans only 9, oil only 8, rice and beans only 5, beans and oil only 3, rice and oil only 4, all three 3, and 6 outside all circles.',
+                'Figure 3. Worked example 3: fill from the centre outwards; 6 traders sell none of the three.'),
             H("Laws of set algebra"),
             KEY("Laws you should know", "Each law can be checked by shading a Venn diagram.", cards=[
                 ["Commutative", r"$A \cup B = B \cup A$ and $A \cap B = B \cap A$"],

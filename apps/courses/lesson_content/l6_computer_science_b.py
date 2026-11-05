@@ -60,21 +60,9 @@ Layer  Name           Main job                                        PDU       
             H("The TCP/IP model"),
             T("The **TCP/IP model** is the model the internet actually uses. It has four layers. It merges the top three OSI "
               "layers into one Application layer, and the bottom two into one Network access (link) layer."),
-            CODE("""
-        OSI model                      TCP/IP model
-  +-------------------+          +----------------------+
-  | 7  Application    |          |                      |
-  | 6  Presentation   |   --->   |  Application         |  HTTP, DNS, SMTP, FTP
-  | 5  Session        |          |                      |
-  +-------------------+          +----------------------+
-  | 4  Transport      |   --->   |  Transport           |  TCP, UDP
-  +-------------------+          +----------------------+
-  | 3  Network        |   --->   |  Internet            |  IP, ICMP
-  +-------------------+          +----------------------+
-  | 2  Data link      |   --->   |  Network access      |  Ethernet, Wi-Fi
-  | 1  Physical       |          |  (link)              |
-  +-------------------+          +----------------------+
-""", "text", title="Figure 2. Mapping the OSI layers onto the TCP/IP layers"),
+            IMG("cs-osi-vs-tcpip.svg",
+                "OSI layers 7 to 1 on the left, TCP/IP layers on the right. Application, presentation and session map to Application (HTTP, DNS, SMTP, FTP); transport to Transport (TCP, UDP); network to Internet (IP, ICMP); data link and physical to Network access (Ethernet, Wi-Fi).",
+                caption="Figure 2. Mapping the OSI layers onto the TCP/IP layers."),
             D("**Encapsulation** is the process in which each layer, on the sending side, adds its own **header** (and the data "
               "link layer also adds a **trailer**) to the data it receives from the layer above. The unit of data at each layer is "
               "its **protocol data unit (PDU)**. On the receiving side each layer removes its header and passes the rest up: "
@@ -380,19 +368,9 @@ Remainder (last 3 bits):       111
                 S("Connect them with labelled data flows", text="Every flow is labelled with the data it carries; data never flows "
                   "directly between two entities or two stores without a process in between. The result is shown in Figure 2."),
             ]),
-            CODE("""
- [Parent] --payment details--> [Payment app] --confirmation--> (1 Record payment)
-                                                                   |        |
-                                                       payment rec |        | student ID, amount
-                                                                   v        v
-                                                     =|D2 Payments|   (2 Update fee balance) <--> =|D1 Students|
-                                                                            |
-                                                                            | new balance
-                                                                            v
-                                                                   (3 Produce receipt) --receipt--> [Bursar]
-
- [ ] external entity    ( ) process    =|  | data store    --label--> data flow
-""", "text", title="Figure 2. Level 1 DFD for school fee payment"),
+            IMG("cs-dfd-school-fees.svg",
+                "Level 1 DFD. Parent sends payment details to Payment app, which sends a confirmation to 1 Record payment. It writes to D2 Payments and sends student ID and amount to 2 Update fee balance, which uses D1 Students and sends the new balance to 3 Produce receipt, which sends a receipt to Bursar.",
+                caption="Figure 2. Level 1 DFD for school fee payment. The dashed flow happens outside the school system."),
             D("An **entity-relationship diagram (ERD)** shows the **entities** (things about which data is stored, such as Student or "
               "Subject), their **attributes**, and the **relationships** between them, with their degree: one-to-one (1:1), one-to-many "
               "(1:M) or many-to-many (M:N). A many-to-many relationship cannot be stored directly in a relational database, so it is "
@@ -418,6 +396,9 @@ Remainder (last 3 bits):       111
               "shows **actors** (users or other systems, drawn as stick figures) and the **use cases** (functions, drawn as ovals) they "
               "can carry out, inside a system boundary. A **class diagram** shows classes as boxes with three parts: name, attributes "
               "and methods, joined by associations. Other UML diagrams include sequence and activity diagrams."),
+            IMG("cs-uml-student-payment.svg",
+                "Two UML class boxes. Student: private studentID, name, feeBalance; public recordPayment(amount) and getBalance(). Payment: private paymentID, amount, date; public printReceipt(). One Student makes 0..* Payments.",
+                caption="Figure 4. A small UML class diagram for the school fees system: one Student makes 0..* Payments (- private, + public)."),
             H("Common mistakes"),
             MISTAKE("Saying Agile means no planning or documentation", "Agile plans every sprint and keeps a backlog. It prefers working software over heavy documents, but it is still disciplined."),
             MISTAKE("Drawing data flows between two external entities in a DFD", "Every data flow must start or end at a process. Flows between entities are outside the system and are not shown."),
@@ -573,21 +554,9 @@ int factorial(int n)
                 S("Unwinding", text="The n = 2 frame computes 2 times 1 = 2 and is popped; n = 3 computes 3 times 2 = 6; n = 4 computes 4 times 6 = 24."),
                 S("Result", text="factorial(4) returns 24 to main. Every frame has been popped. See Figure 1."),
             ]),
-            CODE("""
- Stack at its deepest              Values returned while unwinding
- +----------------------+
- | factorial  n = 1     |  <- top    returns 1
- +----------------------+
- | factorial  n = 2     |            returns 2 * 1 = 2
- +----------------------+
- | factorial  n = 3     |            returns 3 * 2 = 6
- +----------------------+
- | factorial  n = 4     |            returns 4 * 6 = 24
- +----------------------+
- | main                 |            receives 24
- +----------------------+
- Each frame holds: return address, parameter n, local data
-""", "text", title="Figure 1. The call stack for factorial(4)"),
+            IMG("cs-factorial-call-stack.svg",
+                "Call stack at its deepest, top to bottom: factorial n = 1, n = 2, n = 3, n = 4, main. While unwinding the frames return 1, then 2 x 1 = 2, then 3 x 2 = 6, then 4 x 6 = 24, and main receives 24.",
+                caption="Figure 1. The call stack for factorial(4). Each frame holds the return address, the parameter n and local data."),
             EX("Worked example 3: work done before and after the recursive call", intro=(
                 "State the output of show(3) for the Python function in Listing 5."), steps=[
                 S("Winding", text="show(3) prints 3, then calls show(2), which prints 2, then calls show(1), which prints 1, then calls show(0)."),

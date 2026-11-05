@@ -97,6 +97,11 @@ def GRAPH(coeffs, alt, caption="", xmin=-5, xmax=5, ymin=-5, ymax=5, roots=None,
                   ymin=ymin, ymax=ymax, roots=list(roots or []), label=label)
 
 
+def IMG(diagram, alt, caption=""):
+    """A bundled SVG diagram from static/lessons/diagrams/<diagram> (file name only, e.g. "cyclic-quad.svg")."""
+    return _block("image", "", caption, alt_text=alt, diagram=diagram)
+
+
 def lesson(module, topic, title, slug, minutes, summary, objectives, key_concepts, blocks):
     """One lesson. `module` and `topic` must match the syllabus outline titles exactly."""
     return {"module": module, "topic": topic, "title": title, "slug": slug, "minutes": minutes,

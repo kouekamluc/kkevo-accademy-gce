@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Alternate segment theorem: angle between tangent and chord equals angle in alternate segment</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="280" cy="160" r="135" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="280,295 163.1,92.5 383.4,73.2" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="50" y1="295" x2="510" y2="295" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<path d="M280,295 L240,295 A40,40 0 0 1 260,260.4 Z" fill="#D1FAE5" stroke="none"/>
+<path d="M240,295 A40,40 0 0 1 260,260.4" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="229.8" y="266" font-size="18" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">x</text>
+<path d="M383.4,73.2 L369,104 A34,34 0 0 1 349.5,76.2 Z" fill="#D1FAE5" stroke="none"/>
+<path d="M369,104 A34,34 0 0 1 349.5,76.2" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="339.2" y="104.2" font-size="18" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">x</text>
+<circle cx="163.1" cy="92.5" r="4" fill="#102A43"/>
+<text x="145.8" y="82.5" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<circle cx="383.4" cy="73.2" r="4" fill="#102A43"/>
+<text x="398.7" y="60.4" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<circle cx="280" cy="295" r="4" fill="#102A43"/>
+<text x="280" y="315" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<text x="60" y="279" font-size="18" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">T</text>
+<text x="500" y="279" font-size="18" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">S</text>
+<text x="450" y="315" font-size="15" fill="#2563EB" text-anchor="middle" dominant-baseline="middle">tangent</text>
+<text x="20" y="30" font-size="18" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="700">∠TAB = ∠ACB</text>
+</svg>

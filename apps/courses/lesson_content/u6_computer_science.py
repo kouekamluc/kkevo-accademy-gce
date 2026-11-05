@@ -97,13 +97,9 @@ head -> [Abega | o-]-> [Eto | o-]-> [Fon | o-]-> [Ngono | null]
             S("In-order (left, root, right)", text="12, 23, 34, 45, 56, 67, 89. In-order always gives the keys in ascending order."),
             S("Pre-order (root, left, right) and post-order (left, right, root)", text="Pre-order: 45, 23, 12, 34, 67, 56, 89. Post-order: 12, 34, 23, 56, 89, 67, 45."),
         ]),
-        CODE(r'''
-            45
-          /    \
-        23      67
-       /  \    /  \
-     12   34  56   89
-''', "text", title="The tree from worked example 3"),
+        IMG("cs-bst-worked-example.svg",
+            "Binary search tree with root 45. Left child 23 has children 12 and 34. Right child 67 has children 56 and 89. In-order traversal: 12, 23, 34, 45, 56, 67, 89.",
+            caption="Figure 1. The binary search tree from worked example 3."),
         MISTAKE("Mixing up pre-order and post-order", "Remember where the root goes: pre-order visits the root before its subtrees, post-order after them. The root of the whole tree is first in pre-order and last in post-order."),
         MISTAKE("Forgetting overflow and underflow checks", "Examiners expect push to test for a full stack and pop to test for an empty one. The same applies to enqueue and dequeue."),
         QUIZ("A word processor lets a user undo the most recent action first. Which ADT is the best choice for storing the actions?",
@@ -873,48 +869,18 @@ LESSONS.append(lesson(
             ["- private", "Accessible only inside the class itself. Normal for attributes."],
             ["# protected", "Accessible inside the class and its subclasses (in Java, also within the same package)."],
         ]),
-        CODE('''
-+----------------------------------------+
-|              FeeAccount                |
-+----------------------------------------+
-| - studentId : String                   |
-| - balance : Integer                    |
-+----------------------------------------+
-| + FeeAccount(studentId : String,       |
-|              fees : Integer)           |
-| + pay(amount : Integer) : void         |
-| + getBalance() : Integer               |
-+----------------------------------------+
-''', "text", title="Figure 1: the FeeAccount class in UML"),
+        IMG("cs-uml-feeaccount.svg",
+            "UML class box FeeAccount. Attributes: private studentId : String, private balance : Integer. Methods: public FeeAccount(studentId : String, fees : Integer), public pay(amount : Integer) : void, public getBalance() : Integer.",
+            caption="Figure 1. The FeeAccount class in UML."),
         EX("Worked example 1: drawing a class hierarchy", intro="Every person in the school has a name and a phone number. A student also has a class and a fee account; a teacher also has a staff number and teaches several classes. Draw the class diagram.", steps=[
             S("Find the superclass", text="Person holds what is common: - name : String, - phone : String, + getName() : String."),
             S("Find the subclasses", text="Student adds - form : String; Teacher adds - staffNo : String. Both inherit from Person."),
             S("Show inheritance", text="Draw a line from each subclass to Person ending in a hollow triangle pointing at Person."),
             S("Show associations with multiplicity", text="Each Student has exactly 1 FeeAccount (1 to 1). A Teacher teaches one or more (1..many) SchoolClass objects, and each SchoolClass has 1 class teacher."),
         ]),
-        CODE('''
-                 +------------------+
-                 |      Person      |
-                 +------------------+
-                 | - name : String  |
-                 | - phone : String |
-                 +------------------+
-                 | + getName()      |
-                 +------------------+
-                    /_\\        /_\\
-                     |          |
-      +--------------+--+    +--+----------------+
-      |     Student     |    |      Teacher      |
-      +-----------------+    +-------------------+
-      | - form : String |    | - staffNo : String|
-      +-----------------+    +-------------------+
-          1 |                    1 |
-            | owns                 | teaches
-          1 |                 1..* |
-      +-----------------+    +-------------------+
-      |   FeeAccount    |    |    SchoolClass    |
-      +-----------------+    +-------------------+
-''', "text", title="Figure 2: the class diagram from worked example 1"),
+        IMG("cs-uml-person-hierarchy.svg",
+            "Person (private name, phone; public getName() : String) is the superclass of Student (private form) and Teacher (private staffNo), shown by a hollow triangle. Each Student owns 1 FeeAccount. Each Teacher teaches 1..* SchoolClass objects.",
+            caption="Figure 2. The class diagram from worked example 1."),
         H("Constructors and destructors"),
         D("A **constructor** is a special method that runs automatically when an object is created. It has the same name as the class in Java and C++ (__init__ in Python) and sets the initial attribute values. A **destructor** runs when an object is destroyed and releases resources such as files or memory.",
           title="Constructor and destructor", note="C++ has explicit destructors (~ClassName). Java and Python free memory automatically with a garbage collector, so destructors are rarely written there."),

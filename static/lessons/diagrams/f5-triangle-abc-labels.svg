@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Triangle ABC with side a opposite angle A, side b opposite angle B, side c opposite angle C</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="90,300 470,300 340,70" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="470" y1="300" x2="340" y2="70" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+<path d="M90,300 L116.5,275.6 A36,36 0 0 1 126,300 Z" fill="#DBEAFE" stroke="none"/>
+<path d="M116.5,275.6 A36,36 0 0 1 126,300" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<path d="M440,300 A30,30 0 0 1 455.2,273.9" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<path d="M354.8,96.1 A30,30 0 0 1 317.9,90.3" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<text x="68" y="308" font-size="20" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<text x="492" y="308" font-size="20" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<text x="340" y="48" font-size="20" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<text x="427.5" y="176.8" font-size="22" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700" font-style="italic">a</text>
+<text x="193.1" y="175.1" font-size="22" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700" font-style="italic">b</text>
+<text x="273.9" y="323.2" font-size="22" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700" font-style="italic">c</text>
+<text x="20" y="30" font-size="16" fill="#2563EB" text-anchor="start" dominant-baseline="middle" font-weight="700">Side a is opposite angle A</text>
+<text x="20" y="54" font-size="15" fill="#102A43" text-anchor="start" dominant-baseline="middle">(b opposite B, c opposite C)</text>
+</svg>

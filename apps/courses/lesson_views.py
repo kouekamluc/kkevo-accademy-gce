@@ -106,9 +106,8 @@ def lesson_detail(request, course_slug, pk):
     course_stat = services.course_stats(request.user, [course])[course.pk]
 
     related = [item for item in module_lessons if item.pk != lesson.pk and item.lesson_type in ("video", "interactive")][:3]
-    practice_set = (
-        PracticeSet.objects.published().filter(topic=lesson.topic).annotate(question_count=Count("questions")).first()
-    )
+    sets = PracticeSet.objects.exclude(status="archived") if request.user.is_staff else PracticeSet.objects.published()
+    practice_set = sets.filter(topic=lesson.topic).annotate(question_count=Count("questions")).first()
     context = {
         "lesson": lesson, "course": course, "module": module, "subject": course.offering.subject,
         "level": course.offering.level, "blocks": blocks, "toc": toc, "video": video,

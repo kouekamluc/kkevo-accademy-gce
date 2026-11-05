@@ -69,6 +69,8 @@ lessons: [docs/curriculum/LESSON_AUTHORING.md](docs/curriculum/LESSON_AUTHORING.
 .venv/Scripts/python manage.py check_lessons            # validate the content files, no database
 .venv/Scripts/python manage.py load_lessons             # create the missing drafts
 .venv/Scripts/python manage.py load_lessons --refresh   # rewrite drafts nobody has edited in the studio
+.venv/Scripts/python manage.py check_practice           # validate the practice-set files
+.venv/Scripts/python manage.py load_practice            # create the missing draft practice sets
 ```
 
 ## Main URLs

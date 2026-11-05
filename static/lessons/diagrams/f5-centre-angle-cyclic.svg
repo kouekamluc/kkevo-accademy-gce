@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Practice: centre O, angle AOC 140 degrees, cyclic quadrilateral ABCD</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="280" cy="175" r="140" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="148.4,222.9 280,315 411.6,222.9 243.8,39.8" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="280" y1="175" x2="148.4" y2="222.9" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="280" y1="175" x2="411.6" y2="222.9" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="280" cy="175" r="4" fill="#102A43"/>
+<text x="280" y="157" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">O</text>
+<path d="M280,175 L304.4,183.9 A26,26 0 0 1 255.6,183.9 Z" fill="#DBEAFE" stroke="none"/>
+<path d="M304.4,183.9 A26,26 0 0 1 255.6,183.9" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="280" y="219" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="600">140°</text>
+<path d="M264,61.9 A30,30 0 0 1 229.9,66.4" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="250" y="87.4" font-size="18" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">?</text>
+<path d="M258.7,300.1 A26,26 0 0 1 301.3,300.1" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="280" y="275" font-size="18" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">?</text>
+<circle cx="148.4" cy="222.9" r="4" fill="#102A43"/>
+<text x="129.6" y="229.7" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<circle cx="280" cy="315" r="4" fill="#102A43"/>
+<text x="280" y="335" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<circle cx="411.6" cy="222.9" r="4" fill="#102A43"/>
+<text x="430.4" y="229.7" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<circle cx="243.8" cy="39.8" r="4" fill="#102A43"/>
+<text x="238.6" y="20.5" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">D</text>
+</svg>

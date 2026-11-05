@@ -26,6 +26,19 @@ from apps.academics import gce_curriculum
 SLUG = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 LIMITS = {"title": 200, "slug": 200, "summary": 300}
 SKIP_MODULES = {"dsl"}
+# Characters a missing r"" prefix produces: "\text" becomes a tab, "\frac" a form feed, "\beta" a backspace.
+CONTROL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
+
+
+def control_characters(value, allow_tabs=False):
+    """True if any string inside `value` contains a control character (usually LaTeX written without r"")."""
+    if isinstance(value, str):
+        return bool(CONTROL.search(value) or (not allow_tabs and "\t" in value))
+    if isinstance(value, dict):
+        return any(control_characters(v, allow_tabs) for v in value.values())
+    if isinstance(value, (list, tuple)):
+        return any(control_characters(v, allow_tabs) for v in value)
+    return False
 
 
 def content_modules(names=None):
@@ -70,6 +83,8 @@ def _block_problems(block):
     except ValidationError as error:
         problems += [m for msgs in error.message_dict.values() for m in msgs]
     kind = obj.block_type
+    if control_characters(block, allow_tabs=kind == "code"):
+        problems.append('contains a control character: LaTeX such as \\text or \\frac needs a raw string r"..."')
     if kind == "heading" and not obj.title:
         problems.append("heading has no title")
     if kind == "quiz":

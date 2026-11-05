@@ -1,0 +1,99 @@
+"""Load KKEVO's draft practice sets from apps/practice/practice_content/ into the GCE outline courses.
+
+    python manage.py load_practice              # create missing sets (as drafts)
+    python manage.py load_practice --dry-run    # validate and report, save nothing
+    python manage.py load_practice --refresh    # also rewrite draft sets nobody has attempted
+    python manage.py load_practice --remove     # delete draft sets from the files that nobody has attempted
+    python manage.py load_practice --only mathematics:form-5
+
+Run `load_lessons` first: sets go into the same "[gce-guide]" outline courses and link to their lesson.
+Sets are drafts: staff check and publish them. Published or attempted sets are never changed.
+"""
+
+from django.core.management.base import BaseCommand, CommandError
+from django.db import transaction
+
+from apps.academics.management.commands.load_gce_curriculum import COURSE_TAG
+from apps.courses.models import Course, Lesson
+from apps.practice import practice_content
+from apps.practice.models import Choice, PracticeSet, Question
+
+
+def untouched(practice_set):
+    """A draft no student has attempted (staff previews do not count)."""
+    return practice_set.status == "draft" and not practice_set.attempts.filter(user__is_staff=False).exists()
+
+
+class Command(BaseCommand):
+    help = "Load KKEVO's draft practice sets into the GCE course outlines."
+
+    def add_arguments(self, parser):
+        parser.add_argument("--dry-run", action="store_true")
+        parser.add_argument("--refresh", action="store_true", help="Rewrite draft sets nobody has attempted.")
+        parser.add_argument("--remove", action="store_true", help="Delete draft sets nobody has attempted.")
+        parser.add_argument("--only", action="append", default=[], metavar="SUBJECT:LEVEL")
+
+    @transaction.atomic
+    def handle(self, *args, **options):
+        rows = practice_content.collect()
+        if options["only"]:
+            wanted = {tuple(o.split(":", 1)) for o in options["only"]}
+            rows = [r for r in rows if r[0] in wanted]
+        errors = practice_content.validate(rows)
+        if errors:
+            raise CommandError("The practice content has problems; nothing was loaded:\n  - " + "\n  - ".join(errors))
+
+        counts = dict.fromkeys(["created", "refreshed", "removed", "kept", "questions"], 0)
+        orders = {}
+        for key, spec, _source in rows:
+            course = Course.objects.filter(offering__subject__slug=key[0], offering__level__slug=key[1],
+                                           description=COURSE_TAG).first()
+            if course is None:
+                if options["remove"]:
+                    continue
+                raise CommandError(f"No GCE outline course for {key[0]} / {key[1]}: run load_lessons first.")
+            topic = course.modules.get(title=spec["module"]).topics.get(title=spec["topic"])
+            orders[topic.pk] = orders.get(topic.pk, 0) + 1
+            existing = PracticeSet.objects.filter(topic=topic, title=spec["title"]).first()
+            if options["remove"]:
+                if existing and untouched(existing):
+                    existing.delete()
+                    counts["removed"] += 1
+                elif existing:
+                    counts["kept"] += 1
+                continue
+            if existing is None:
+                counts["questions"] += self.write_set(PracticeSet(topic=topic, title=spec["title"], status="draft"),
+                                                      spec, orders[topic.pk])
+                counts["created"] += 1
+            elif options["refresh"] and untouched(existing):
+                counts["questions"] += self.write_set(existing, spec, orders[topic.pk])
+                counts["refreshed"] += 1
+            else:
+                counts["kept"] += 1
+
+        summary = ", ".join(f"{n} {k}" for k, n in counts.items() if n or k == "created")
+        self.stdout.write(self.style.SUCCESS(("Dry run: " if options["dry_run"] else "Practice sets: ") + summary + "."))
+        if options["dry_run"]:
+            transaction.set_rollback(True)
+            self.stdout.write(self.style.WARNING("Dry run: nothing was saved."))
+
+    def write_set(self, practice_set, spec, order):
+        practice_set.order = order - 1
+        practice_set.lesson = Lesson.objects.filter(topic=practice_set.topic, slug=spec.get("lesson") or "").first()
+        practice_set.save()
+        practice_set.attempts.filter(user__is_staff=True).delete()  # staff previews of the old questions
+        practice_set.questions.all().delete()
+        for q_i, q in enumerate(spec["questions"]):
+            numeric = q["kind"] == "numeric"
+            question = Question.objects.create(
+                practice_set=practice_set, order=q_i, kind=q["kind"], prompt=q["prompt"], concept=q.get("concept", ""),
+                skill=q.get("skill", ""), hint=q.get("hint", ""), feedback=q.get("feedback", ""),
+                solution_steps=q["steps"], numeric_answer=q["answer"] if numeric else None,
+                tolerance=q.get("tolerance", 0) if numeric else 0, unit=q.get("unit", "") if numeric else "")
+            if not numeric:
+                Choice.objects.bulk_create([
+                    Choice(question=question, order=c_i, text=c["text"], is_correct=bool(c.get("correct")),
+                           why_wrong="" if c.get("correct") else c.get("why", ""))
+                    for c_i, c in enumerate(q["choices"])])
+        return len(spec["questions"])

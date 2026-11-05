@@ -85,4 +85,47 @@ may be French or a home language: short sentences, one idea per paragraph.
 - No markdown tables, headings (`#`) or bullet lists inside text: use `H`, `SUM`, `KEY` cards
   and separate `T` blocks instead. `CODE` blocks show text exactly as written (no maths).
 - `GRAPH` only draws polynomials.
-- Images and videos are added later by staff from the media and video libraries.
+- Diagrams: draw a small SVG (viewBox about 560 wide, no width/height, readable 14px+ labels) in
+  `static/lessons/diagrams/`, then add `IMG("name.svg", alt="what it shows", caption="Figure 1. ...")`.
+  Photos and videos are added by staff from the media and video libraries.
+
+## Practice sets
+
+Each topic also gets a practice set in `apps/practice/practice_content/<same file name as the lessons>.py`.
+Students answer them in practice mode (hints, instant feedback) or timed exam mode; missed questions come
+back in spaced review, and scores drive topic mastery. They load as drafts with `load_practice`.
+
+```python
+from .dsl import *  # noqa: F403
+
+COURSE = ("mathematics", "form-5")
+
+SETS = [
+    practice_set(
+        module="Quadratic Functions & Equations", topic="Solving quadratics",
+        title="Solving quadratic equations", lesson="solving-quadratics-three-methods",
+        questions=[
+            MC(r"Solve $x^2 - 5x + 6 = 0$.", [
+                C("$x = 2$ or $x = 3$", correct=True),
+                C("$x = -2$ or $x = -3$", why="The brackets $(x - 2)(x - 3)$ give positive roots."),
+                C("$x = 1$ or $x = 6$", why="1 × 6 = 6 but 1 + 6 is not 5."),
+                C("$x = 5$ or $x = 6$", why="These are the coefficients, not the roots."),
+            ], steps=[S("Factorize", math=r"(x - 2)(x - 3) = 0"), S("Solve each bracket", math=r"x = 2 \text{ or } x = 3")],
+               concept="Factorization", skill="Calculation", hint="Find two numbers that multiply to 6 and add to −5.",
+               feedback="You factorized and used the zero product property."),
+            NUM(r"Find the positive root of $x^2 = 49$.", 7, steps=[S("Square root", math=r"x = \pm 7")],
+                concept="Square roots", skill="Calculation", hint="Which number squared gives 49?"),
+        ]),
+]
+```
+
+Rules: 8 questions per set (at least 3), mostly 4-option `MC` in GCE Paper 1 style, `NUM` where a typed
+number is natural. Exactly one correct option; every wrong option is a real mistake and says why it is wrong.
+Every question has a short worked solution, a hint that points to the first step without giving the answer,
+a `concept` tag (max 80 characters) and a `skill` tag (Recall, Concept, Calculation, Reasoning, Application,
+Interpretation; max 40). Questions test what the linked lesson teaches.
+
+```bash
+.venv/Scripts/python manage.py check_practice f5_mathematics_a
+.venv/Scripts/python manage.py load_practice
+```

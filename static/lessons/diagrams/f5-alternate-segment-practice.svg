@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Practice: tangent at A makes 62 degrees with AB and 48 degrees with AC</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="280" cy="160" r="135" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="280,295 168.1,84.5 414.3,145.9" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="50" y1="295" x2="510" y2="295" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<path d="M234,295 A46,46 0 0 1 258.4,254.4" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="221.7" y="260" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="600">62°</text>
+<path d="M310.8,260.8 A46,46 0 0 1 326,295" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="342.1" y="267.3" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="600">48°</text>
+<path d="M265.9,268.5 A30,30 0 0 1 300.1,272.7" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="285.8" y="247.4" font-size="18" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">?</text>
+<path d="M195.2,91.3 A28,28 0 0 1 181.2,109.2" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="204.3" y="112.8" font-size="18" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">?</text>
+<path d="M395.5,166.7 A28,28 0 0 1 387.1,139.1" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="370.3" y="159.3" font-size="18" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">?</text>
+<circle cx="168.1" cy="84.5" r="4" fill="#102A43"/>
+<text x="151.5" y="73.3" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<circle cx="414.3" cy="145.9" r="4" fill="#102A43"/>
+<text x="434.2" y="143.8" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<circle cx="280" cy="295" r="4" fill="#102A43"/>
+<text x="280" y="315" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<text x="90" y="315" font-size="15" fill="#2563EB" text-anchor="middle" dominant-baseline="middle">tangent</text>
+</svg>

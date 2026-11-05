@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Three-set Venn diagram for 50 traders selling rice, beans and oil</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="20" y="16" width="520" height="330" rx="6" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<circle cx="228" cy="132" r="96" fill="#EFF6FF" fill-opacity="0.8" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="332" cy="132" r="96" fill="#ECFDF5" fill-opacity="0.6" stroke="#047857" stroke-width="2.5"/>
+<circle cx="280" cy="222" r="96" fill="#FFFBEB" fill-opacity="0.5" stroke="#B45309" stroke-width="2.5"/>
+<circle cx="228" cy="132" r="96" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="332" cy="132" r="96" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="36" y="38" font-size="17" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">ξ = 50</text>
+<text x="100" y="62" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">Rice (R)</text>
+<text x="462" y="62" font-size="16" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">Beans (B)</text>
+<text x="450" y="300" font-size="16" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">Oil (O)</text>
+<text x="178" y="112" font-size="21" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">12</text>
+<text x="382" y="112" font-size="21" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">9</text>
+<text x="280" y="280" font-size="21" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">8</text>
+<text x="280" y="95" font-size="21" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">5</text>
+<text x="222" y="200" font-size="21" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">4</text>
+<text x="338" y="200" font-size="21" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">3</text>
+<text x="280" y="165" font-size="21" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">3</text>
+<text x="500" y="326" font-size="21" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">6</text>
+</svg>

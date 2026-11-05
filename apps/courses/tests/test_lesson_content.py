@@ -70,3 +70,19 @@ def test_load_lessons_creates_outline_when_offering_has_another_course(monkeypat
     call_command("load_lessons")
     assert Course.objects.filter(offering=off, description="[gce-guide]").exists()
     assert Lesson.objects.get(slug="venn").course.description == "[gce-guide]"
+
+
+def test_image_block_can_use_a_bundled_diagram(settings, tmp_path):
+    from django.core.exceptions import ValidationError
+    from apps.courses.models import LessonBlock
+
+    folder = tmp_path / "lessons" / "diagrams"
+    folder.mkdir(parents=True)
+    (folder / "test-figure.svg").write_text("<svg xmlns='http://www.w3.org/2000/svg'/>")
+    settings.STATICFILES_DIRS = [str(tmp_path)]
+    ok = LessonBlock(block_type="image", alt_text="A figure", data={"diagram": "test-figure.svg"})
+    ok.clean()
+    assert ok.image_src.endswith("lessons/diagrams/test-figure.svg")
+    for bad in ("missing.svg", "../secret.svg", "x.png"):
+        with pytest.raises(ValidationError):
+            LessonBlock(block_type="image", alt_text="A figure", data={"diagram": bad}).clean()

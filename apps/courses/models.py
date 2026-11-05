@@ -205,13 +205,29 @@ class LessonBlock(OrderedModel):
     def anchor(self):
         return f"block-{self.pk}"
 
+    @property
+    def image_src(self):
+        """Image URL: a diagram bundled in static/lessons/diagrams/ (data["diagram"]) or media_url."""
+        diagram = (self.data or {}).get("diagram") if isinstance(self.data, dict) else None
+        if diagram:
+            from django.templatetags.static import static
+            return static(f"lessons/diagrams/{diagram}")
+        return self.media_url
+
     def clean(self):
         resource_id = (self.data or {}).get("resource")
         if resource_id and self.block_type != BlockType.VIDEO:
             raise ValidationError({"data": "Only video blocks can use a video from the library."})
         if resource_id and not VideoResource.objects.filter(pk=resource_id).exists():
             raise ValidationError({"data": "The chosen library video no longer exists."})
-        if self.block_type in MEDIA_BLOCK_TYPES and not self.media_url and not resource_id:
+        diagram = (self.data or {}).get("diagram")
+        if diagram:
+            from django.contrib.staticfiles import finders
+            if self.block_type != BlockType.IMAGE:
+                raise ValidationError({"data": "Only image blocks can show a bundled diagram."})
+            if "/" in diagram or "\\" in diagram or not diagram.endswith(".svg") or not finders.find(f"lessons/diagrams/{diagram}"):
+                raise ValidationError({"data": f"No diagram called '{diagram}' in static/lessons/diagrams/."})
+        if self.block_type in MEDIA_BLOCK_TYPES and not self.media_url and not resource_id and not diagram:
             raise ValidationError({"media_url": "This block type needs a media URL or a video from the library."})
         if self.block_type == BlockType.IMAGE and not self.alt_text:
             raise ValidationError({"alt_text": "Describe the image for students using screen readers."})

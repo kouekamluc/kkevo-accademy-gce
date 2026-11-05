@@ -153,7 +153,7 @@ LESSONS.append(lesson(
             S("Sum and product", math=r"\alpha + \beta = \tfrac{3}{2}, \qquad \alpha\beta = \tfrac{5}{2}"),
             S("Sum of new roots", math=r"\alpha^2 + \beta^2 = \left(\tfrac{3}{2}\right)^2 - 2\left(\tfrac{5}{2}\right) = \tfrac{9}{4} - 5 = -\tfrac{11}{4}"),
             S("Product of new roots", math=r"\alpha^2\beta^2 = \left(\tfrac{5}{2}\right)^2 = \tfrac{25}{4}"),
-            S("Use $x^2 - (\text{sum})x + (\text{product}) = 0$", math=r"x^2 + \tfrac{11}{4}x + \tfrac{25}{4} = 0"),
+            S(r"Use $x^2 - (\text{sum})x + (\text{product}) = 0$", math=r"x^2 + \tfrac{11}{4}x + \tfrac{25}{4} = 0"),
             S("Multiply by 4", math=r"4x^2 + 11x + 25 = 0"),
         ]),
         H("Common mistakes"),
