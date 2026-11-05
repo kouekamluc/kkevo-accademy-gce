@@ -13,7 +13,7 @@ exam_open, review_note. Works without JavaScript: answers and hint requests are 
     </div>
     <h1 id="q-prompt" class="mt-4 text-xl font-semibold leading-relaxed text-ink-heading nav:text-[26px] nav:leading-[1.5]">{{ question.prompt|inline }}</h1>
   </div>
-  {% if question.diagram_url %}<img src="{{ question.diagram_url }}" alt="{{ question.diagram_alt }}" loading="lazy" class="w-full rounded-card border border-surface-border bg-surface-bg">{% endif %}
+  {% if question.diagram_url %}<div>{% include "components/zoomable_figure.html" with src=question.diagram_url alt=question.diagram_alt class="w-full rounded-card border border-surface-border bg-surface-bg" %}</div>{% endif %}
 </section>
 
 <form method="post" class="mt-6" x-data="{ picked: null }">

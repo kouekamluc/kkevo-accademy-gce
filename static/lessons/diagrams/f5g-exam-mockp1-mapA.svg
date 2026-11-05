@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" font-family="Inter, Arial, sans-serif" role="img">
+<title>Fictitious map of Njanga district (not a real place)</title>
+<rect width="640" height="480" fill="#FFFFFF"/>
+<defs><clipPath id="c"><rect x="40" y="26" width="480" height="400"/></clipPath></defs>
+<rect x="40" y="26" width="480" height="400" fill="#FFFFFF"/>
+<g clip-path="url(#c)">
+<path d="M40,138C53.3,128.7 104,116.7 120,122C136,127.3 149.3,160.7 136,170C122.7,179.3 56,183.3 40,178C24,172.7 26.7,147.3 40,138Z" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M424,26C437.3,15.3 504,15.3 520,26C536,36.7 533.3,79.3 520,90C506.7,100.7 456,100.7 440,90C424,79.3 410.7,36.7 424,26Z" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<line x1="40" y1="26" x2="40" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="120" y1="26" x2="120" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="200" y1="26" x2="200" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="280" y1="26" x2="280" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="360" y1="26" x2="360" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="440" y1="26" x2="440" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="520" y1="26" x2="520" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="40" y1="26" x2="520" y2="26" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="40" y1="106" x2="520" y2="106" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="40" y1="186" x2="520" y2="186" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="40" y1="266" x2="520" y2="266" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="40" y1="346" x2="520" y2="346" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="40" y1="426" x2="520" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<path d="M40,266C53.3,256.7 93.3,215.3 120,210C146.7,204.7 173.3,240.7 200,234C226.7,227.3 250.7,176.7 280,170C309.3,163.3 346.7,180.7 376,194C405.3,207.3 432,236.7 456,250C480,263.3 509.3,270 520,274" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<path d="M248,26C250.7,39.3 258.7,82 264,106C269.3,130 273.3,143.3 280,170C286.7,196.7 296,236.7 304,266C312,295.3 318.7,326 328,346C337.3,366 350.7,372.7 360,386C369.3,399.3 380,419.3 384,426" fill="none" stroke="#102A43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40,314 L240,322 L520,298" fill="none" stroke="#102A43" stroke-width="3"/>
+<path d="M40,314 L240,322 L520,298" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="8 8"/>
+</g>
+<circle cx="120" cy="66" r="9" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="120" y="66.5" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">S</text>
+<circle cx="360" cy="386" r="9" fill="#B45309" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="360" y="386.5" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">M</text>
+<rect x="243" y="249" width="10" height="9" fill="#102A43"/>
+<path d="M248,239 L248,249 M244,243 L252,243" stroke="#102A43" stroke-width="2.5"/>
+<circle cx="440" cy="146" r="9" fill="#047857" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="440" y="146.5" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">H</text>
+<rect x="273" y="163" width="14" height="14" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/>
+<rect x="321" y="102" width="6" height="6" fill="#102A43"/>
+<rect x="329" y="100" width="6" height="6" fill="#102A43"/>
+<rect x="326" y="109" width="6" height="6" fill="#102A43"/>
+<rect x="334" y="108" width="6" height="6" fill="#102A43"/>
+<rect x="319" y="110" width="6" height="6" fill="#102A43"/>
+<text x="328" y="92" font-size="13" font-weight="600" fill="#102A43" text-anchor="middle" stroke="#FFFFFF" stroke-width="4" paint-order="stroke">Njanga</text>
+<rect x="40" y="26" width="480" height="400" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<text x="40" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">20</text>
+<text x="40" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">20</text>
+<text x="120" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">21</text>
+<text x="120" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">21</text>
+<text x="200" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">22</text>
+<text x="200" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">22</text>
+<text x="280" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">23</text>
+<text x="280" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">23</text>
+<text x="360" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">24</text>
+<text x="360" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">24</text>
+<text x="440" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">25</text>
+<text x="440" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">25</text>
+<text x="520" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">26</text>
+<text x="520" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">26</text>
+<text x="34" y="30" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">43</text>
+<text x="34" y="110" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">42</text>
+<text x="34" y="190" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">41</text>
+<text x="34" y="270" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">40</text>
+<text x="34" y="350" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">39</text>
+<text x="34" y="430" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">38</text>
+<rect x="40" y="452" width="80" height="9" fill="#102A43"/><rect x="120" y="452" width="80" height="9" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="40" y="476" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">0</text>
+<text x="120" y="476" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">1</text>
+<text x="200" y="476" font-size="13" font-weight="700" fill="#102A43" text-anchor="start">2 km</text>
+<text x="256" y="461" font-size="13" font-weight="700" fill="#102A43">1 grid square = 1 km. Fictitious map.</text>
+<path d="M574,60 L574,28" stroke="#102A43" stroke-width="3"/><polygon points="574,26 568,38 580,38" fill="#102A43"/>
+<text x="588" y="48" font-size="15" font-weight="700" fill="#102A43">N</text>
+<text x="534" y="90" font-size="13" font-weight="700" fill="#102A43">KEY</text>
+<path d="M534,108 L562,108" stroke="#2563EB" stroke-width="3"/>
+<text x="570" y="112.5" font-size="13" fill="#102A43">River</text>
+<path d="M534,132 L562,132" stroke="#102A43" stroke-width="3"/>
+<text x="570" y="136.5" font-size="13" fill="#102A43">Road</text>
+<path d="M534,156 L562,156" stroke="#102A43" stroke-width="3"/><path d="M534,156 L562,156" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="6 6"/>
+<text x="570" y="160.5" font-size="13" fill="#102A43">Railway</text>
+<rect x="534" y="173" width="28" height="14" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="570" y="184.5" font-size="13" fill="#102A43">Forest</text>
+<rect x="534" y="197" width="28" height="14" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="570" y="208.5" font-size="13" fill="#102A43">Swamp</text>
+<rect x="541" y="224" width="6" height="6" fill="#102A43"/>
+<rect x="549" y="222" width="6" height="6" fill="#102A43"/>
+<rect x="546" y="231" width="6" height="6" fill="#102A43"/>
+<rect x="554" y="230" width="6" height="6" fill="#102A43"/>
+<text x="570" y="232.5" font-size="13" fill="#102A43">Village</text>
+<rect x="543" y="251" width="10" height="9" fill="#102A43"/><path d="M548,242 L548,251 M544,245 L552,245" stroke="#102A43" stroke-width="2.5"/>
+<text x="570" y="256.5" font-size="13" fill="#102A43">Church</text>
+<circle cx="548" cy="276" r="9" fill="#2563EB"/><text x="548" y="276.5" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">S</text>
+<text x="570" y="280.5" font-size="13" fill="#102A43">School</text>
+<circle cx="548" cy="300" r="9" fill="#B45309"/><text x="548" y="300.5" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">M</text>
+<text x="570" y="304.5" font-size="13" fill="#102A43">Market</text>
+<circle cx="548" cy="324" r="9" fill="#047857"/><text x="548" y="324.5" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">H</text>
+<text x="570" y="328.5" font-size="13" fill="#102A43">Hospital</text>
+<rect x="541" y="341" width="14" height="14" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/>
+<text x="570" y="352.5" font-size="13" fill="#102A43">Bridge</text>
+</svg>

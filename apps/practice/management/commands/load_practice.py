@@ -16,6 +16,7 @@ rewritten or deleted.
 
 from django.core.management.base import BaseCommand, CommandError
 from django.db import transaction
+from django.templatetags.static import static
 
 from apps.academics.management.commands.load_gce_curriculum import COURSE_TAG
 from apps.courses.management.commands.load_lessons import Command as LessonsCommand
@@ -108,6 +109,8 @@ class Command(BaseCommand):
             question = Question.objects.create(
                 practice_set=practice_set, order=q_i, kind=q["kind"], prompt=q["prompt"], concept=q.get("concept", ""),
                 skill=q.get("skill", ""), hint=q.get("hint", ""), feedback=q.get("feedback", ""),
+                diagram_url=static(f"lessons/diagrams/{q['diagram']}") if q.get("diagram") else "",
+                diagram_alt=q.get("diagram_alt", "") if q.get("diagram") else "",
                 solution_steps=q["steps"], numeric_answer=q["answer"] if numeric else None,
                 tolerance=q.get("tolerance", 0) if numeric else 0, unit=q.get("unit", "") if numeric else "")
             if not numeric:

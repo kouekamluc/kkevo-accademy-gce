@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="Inter, Arial, sans-serif">
+<title>Sketch map of the world's main fishing grounds</title>
+<rect width="640" height="400" fill="#FFFFFF"/>
+<rect x="0.5" y="4.0" width="639.0" height="249.8" rx="0" fill="#EFF6FF" stroke="#CBD5E1" stroke-width="1"/>
+<polygon points="21.3,29.3 35.6,22.2 71.1,22.2 97.8,22.2 151.1,18.7 174.2,25.8 204.4,40.0 220.4,54.2 202.7,66.7 184.9,79.1 176.0,91.6 177.8,102.2 168.9,93.3 147.6,98.7 147.6,111.1 156.4,114.7 165.3,109.3 163.6,118.2 172.4,128.9 179.6,130.7 167.1,125.3 156.4,120.0 133.3,111.1 124.4,104.0 115.6,93.3 110.2,86.2 99.6,75.6 99.6,61.3 80.0,43.6 53.3,40.0 26.7,40.0" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="222.2,40.0 240.0,40.0 284.4,22.2 284.4,8.0 213.3,8.0 195.6,11.6" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="181.3,132.4 192.0,125.3 209.8,128.9 227.6,137.8 231.1,146.7 257.8,155.6 250.7,171.6 234.7,192.9 216.9,210.7 204.4,221.3 199.1,239.1 192.0,239.1 188.4,226.7 193.8,200.0 195.6,178.7 184.9,171.6 176.0,155.6 177.8,146.7" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="289.8,109.3 296.9,96.9 309.3,82.7 337.8,80.9 339.6,88.0 355.6,91.6 376.9,91.6 380.4,98.7 396.4,125.3 410.7,125.3 391.1,152.0 391.1,173.3 382.2,189.3 376.9,198.2 364.4,207.1 352.0,207.1 341.3,178.7 343.1,160.9 336.0,148.4 336.0,139.6 328.9,136.0 312.9,137.8 305.8,139.6 296.9,132.4 289.8,121.8" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="302.2,82.7 304.0,70.2 318.2,64.9 312.9,61.3 323.6,56.0 334.2,50.7 334.2,43.6 328.9,36.4 346.7,24.0 364.4,20.4 391.1,25.8 426.7,22.2 462.2,16.9 497.8,9.8 524.4,16.9 568.9,18.7 604.4,22.2 640.0,25.8 640.0,31.1 622.2,40.0 604.4,48.9 597.3,56.0 568.9,54.2 560.0,70.2 547.6,75.6 544.0,84.4 536.9,75.6 536.9,91.6 533.3,102.2 515.6,111.1 512.0,120.0 508.4,130.7 497.8,123.6 503.1,144.9 494.2,132.4 492.4,116.4 483.6,107.6 476.4,107.6 462.2,120.0 456.9,132.4 449.8,116.4 444.4,107.6 430.2,102.2 421.3,100.4 419.6,102.2 423.1,111.1 412.4,118.2 396.4,125.3 389.3,109.3 380.4,96.9 382.2,88.0 384.0,82.7 368.0,80.9 366.2,75.6 360.9,75.6 359.1,80.9 353.8,73.8 343.1,66.7 348.4,73.8 352.0,75.6 348.4,79.1 341.3,72.0 334.2,68.4 325.3,70.2 318.2,79.1 309.3,82.7" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="522.7,185.8 536.9,178.7 551.1,168.0 563.6,168.0 572.4,166.2 579.6,180.4 592.0,192.9 586.7,212.4 570.7,214.2 560.0,207.1 549.3,201.8 524.4,207.1" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="311.1,57.8 321.8,56.0 316.4,47.1 311.1,43.6 309.3,48.9" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="551.1,91.6 560.0,86.2 570.7,82.7 572.4,73.8 568.9,75.6 561.8,82.7 552.9,86.2" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="398.2,191.1 403.6,191.1 408.9,173.3 407.1,168.0 398.2,176.9" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="627.6,208.9 636.4,214.2 631.1,219.6 625.8,219.6" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="488.9,137.8 494.2,139.6 506.7,152.0 504.9,155.6 497.8,150.2" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="513.8,144.9 524.4,137.8 531.6,137.8 528.0,152.0 517.3,152.0" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="552.9,148.4 570.7,152.0 586.7,164.4 572.4,162.7 560.0,153.8" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="508.4,157.3 522.7,159.1 522.7,161.8 508.4,160.0" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<line x1="1.0" y1="146.7" x2="639.0" y2="146.7" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="1.0" y1="104.9" x2="639.0" y2="104.9" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="1.0" y1="188.4" x2="639.0" y2="188.4" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="6.0" y="142.7" font-size="13" fill="#64748B" text-anchor="start">Equator</text>
+<text x="6.0" y="100.9" font-size="13" fill="#64748B" text-anchor="start">Tropic of Cancer</text>
+<text x="6.0" y="184.4" font-size="13" fill="#64748B" text-anchor="start">Tropic of Capricorn</text>
+<circle cx="323.6" cy="43.6" r="19.6" fill="#2563EB" fill-opacity="0.35" stroke="#2563EB" stroke-width="2"/>
+<circle cx="227.6" cy="66.7" r="19.6" fill="#2563EB" fill-opacity="0.35" stroke="#2563EB" stroke-width="2"/>
+<circle cx="586.7" cy="64.9" r="26.7" fill="#2563EB" fill-opacity="0.35" stroke="#2563EB" stroke-width="2"/>
+<circle cx="44.4" cy="50.7" r="19.6" fill="#2563EB" fill-opacity="0.35" stroke="#2563EB" stroke-width="2"/>
+<circle cx="174.2" cy="178.7" r="23.1" fill="#2563EB" fill-opacity="0.35" stroke="#2563EB" stroke-width="2"/>
+<circle cx="284.4" cy="109.3" r="17.8" fill="#2563EB" fill-opacity="0.35" stroke="#2563EB" stroke-width="2"/>
+<circle cx="323.6" cy="144.9" r="14.2" fill="#2563EB" fill-opacity="0.35" stroke="#2563EB" stroke-width="2"/>
+<circle cx="330.7" cy="185.8" r="19.6" fill="#2563EB" fill-opacity="0.35" stroke="#2563EB" stroke-width="2"/>
+<circle cx="323.6" cy="43.6" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="323.6" y="48.1" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">1</text>
+<circle cx="227.6" cy="66.7" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="227.6" y="71.2" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">2</text>
+<circle cx="586.7" cy="64.9" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="586.7" y="69.4" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">3</text>
+<circle cx="44.4" cy="50.7" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="44.4" y="55.2" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">4</text>
+<circle cx="174.2" cy="178.7" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="174.2" y="183.2" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">5</text>
+<circle cx="284.4" cy="109.3" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="284.4" y="113.8" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">6</text>
+<circle cx="323.6" cy="144.9" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="323.6" y="149.4" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">6</text>
+<circle cx="330.7" cy="185.8" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="330.7" y="190.3" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">7</text>
+<polygon points="342.2,130.6 344.6,136.3 350.8,136.8 346.1,140.8 347.5,146.8 342.2,143.6 336.9,146.8 338.4,140.8 333.7,136.8 339.8,136.3" fill="#DC2626" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="14.0" y="275.8" font-size="13" fill="#64748B" text-anchor="start">Simplified sketch: blue circles mark the main fishing grounds (positions approximate).</text>
+<text x="14.0" y="301.8" font-size="14" fill="#102A43" text-anchor="start">1  North-East Atlantic (North Sea)</text>
+<text x="14.0" y="325.8" font-size="14" fill="#102A43" text-anchor="start">2  North-West Atlantic (Grand Banks)</text>
+<text x="14.0" y="349.8" font-size="14" fill="#102A43" text-anchor="start">3  North-West Pacific (Japan, China)</text>
+<text x="14.0" y="373.8" font-size="14" fill="#102A43" text-anchor="start">4  North-East Pacific (Alaska)</text>
+<text x="330.0" y="301.8" font-size="14" fill="#102A43" text-anchor="start">5  South-East Pacific (Peru, Chile)</text>
+<text x="330.0" y="325.8" font-size="14" fill="#102A43" text-anchor="start">6  West Africa (Gulf of Guinea coast)</text>
+<text x="330.0" y="349.8" font-size="14" fill="#102A43" text-anchor="start">7  South-West Africa (Benguela)</text>
+<polygon points="339.0,361.8 341.1,366.9 346.6,367.3 342.4,370.9 343.7,376.2 339.0,373.4 334.3,376.2 335.6,370.9 331.4,367.3 336.9,366.9" fill="#DC2626" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="352.0" y="373.8" font-size="14" fill="#102A43" text-anchor="start">Cameroon coast</text>
+</svg>

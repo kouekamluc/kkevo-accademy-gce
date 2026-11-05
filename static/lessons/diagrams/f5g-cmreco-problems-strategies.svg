@@ -1,0 +1,37 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<text x="280" y="24" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Problems of agriculture and strategies to solve them</text>
+<rect x="14" y="44" width="220" height="40" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="124" y="69" font-size="14" fill="#102A43" text-anchor="middle">Poor farm roads</text>
+<line x1="238" y1="64" x2="302" y2="64" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="306" y="44" width="240" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="426" y="69" font-size="14" fill="#102A43" text-anchor="middle">Build and repair rural roads</text>
+<rect x="14" y="96" width="220" height="40" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="124" y="121" font-size="14" fill="#102A43" text-anchor="middle">Pests, disease, low yields</text>
+<line x1="238" y1="116" x2="302" y2="116" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="306" y="96" width="240" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="426" y="121" font-size="14" fill="#102A43" text-anchor="middle">Better seeds, research, advice</text>
+<rect x="14" y="148" width="220" height="40" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="124" y="173" font-size="14" fill="#102A43" text-anchor="middle">Lack of credit and inputs</text>
+<line x1="238" y1="168" x2="302" y2="168" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="306" y="148" width="240" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="426" y="173" font-size="14" fill="#102A43" text-anchor="middle">Loans, co-operatives, fertiliser</text>
+<rect x="14" y="200" width="220" height="40" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="124" y="225" font-size="14" fill="#102A43" text-anchor="middle">Small farms, old tools</text>
+<line x1="238" y1="220" x2="302" y2="220" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="306" y="200" width="240" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="426" y="225" font-size="14" fill="#102A43" text-anchor="middle">Training, simple machines</text>
+<rect x="14" y="252" width="220" height="40" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="124" y="277" font-size="14" fill="#102A43" text-anchor="middle">Drought, floods, soil loss</text>
+<line x1="238" y1="272" x2="302" y2="272" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="306" y="252" width="240" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="426" y="277" font-size="14" fill="#102A43" text-anchor="middle">Climate-smart farming</text>
+<rect x="14" y="304" width="220" height="40" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="124" y="329" font-size="14" fill="#102A43" text-anchor="middle">Poor storage and markets</text>
+<line x1="238" y1="324" x2="302" y2="324" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="306" y="304" width="240" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="426" y="329" font-size="14" fill="#102A43" text-anchor="middle">Stores, processing, markets</text>
+<text x="124" y="358" font-size="13" fill="#B45309" text-anchor="middle" font-weight="700">Problem</text>
+<text x="426" y="358" font-size="13" fill="#047857" text-anchor="middle" font-weight="700">Strategy</text>
+</svg>

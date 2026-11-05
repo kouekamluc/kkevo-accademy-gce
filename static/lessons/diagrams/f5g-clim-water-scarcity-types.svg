@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+
+<text x="280" y="24" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700" >Two kinds of water scarcity</text>
+<rect x="20" y="50" width="245" height="40" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2" />
+<text x="142.5" y="75.2" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700" >Physical scarcity</text>
+<rect x="295" y="50" width="245" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" />
+<text x="417.5" y="75.2" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700" >Economic scarcity</text>
+<rect x="20" y="90" width="245" height="190" rx="8" fill="#FFFFFF" stroke="#B45309" stroke-width="2" />
+<rect x="295" y="90" width="245" height="190" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="2" />
+<text x="34" y="118" font-size="14" text-anchor="start" fill="#102A43" font-weight="700" >There is not enough</text>
+<text x="34" y="140" font-size="14" text-anchor="start" fill="#102A43" font-weight="700" >water in the region</text>
+<text x="34" y="162" font-size="14" text-anchor="start" fill="#102A43" font-weight="700" >(dry climate, drought).</text>
+<text x="34" y="184" font-size="14" text-anchor="start" fill="#102A43" font-weight="400" ></text>
+<text x="34" y="206" font-size="14" text-anchor="start" fill="#102A43" font-weight="400" >Example: the Sahel and</text>
+<text x="34" y="228" font-size="14" text-anchor="start" fill="#102A43" font-weight="400" >the Lake Chad area.</text>
+<text x="309" y="118" font-size="14" text-anchor="start" fill="#102A43" font-weight="700" >Water exists, but people</text>
+<text x="309" y="140" font-size="14" text-anchor="start" fill="#102A43" font-weight="700" >lack wells, pipes, money</text>
+<text x="309" y="162" font-size="14" text-anchor="start" fill="#102A43" font-weight="700" >or clean sources.</text>
+<text x="309" y="184" font-size="14" text-anchor="start" fill="#102A43" font-weight="400" ></text>
+<text x="309" y="206" font-size="14" text-anchor="start" fill="#102A43" font-weight="400" >Example: villages and city</text>
+<text x="309" y="228" font-size="14" text-anchor="start" fill="#102A43" font-weight="400" >districts without a tap.</text>
+<rect x="20" y="296" width="520" height="48" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2" />
+<text x="280" y="316" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >Both leave people short of safe water for drinking, washing,</text>
+<text x="280" y="334" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >farming and industry.</text>
+</svg>

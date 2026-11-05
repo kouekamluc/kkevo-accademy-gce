@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280.0" y="24.0" font-size="16" text-anchor="middle" font-weight="700" fill="#102A43" >World population, 1800 to 2022 (approximate)</text>
+<line x1="70.0" y1="300.0" x2="520.0" y2="300.0" stroke="#E2E8F0" stroke-width="1" />
+<text x="62.0" y="305.0" font-size="13" text-anchor="end" font-weight="400" fill="#64748B" >0</text>
+<line x1="70.0" y1="272.2" x2="520.0" y2="272.2" stroke="#E2E8F0" stroke-width="1" />
+<line x1="70.0" y1="244.4" x2="520.0" y2="244.4" stroke="#E2E8F0" stroke-width="1" />
+<text x="62.0" y="249.4" font-size="13" text-anchor="end" font-weight="400" fill="#64748B" >2</text>
+<line x1="70.0" y1="216.7" x2="520.0" y2="216.7" stroke="#E2E8F0" stroke-width="1" />
+<line x1="70.0" y1="188.9" x2="520.0" y2="188.9" stroke="#E2E8F0" stroke-width="1" />
+<text x="62.0" y="193.9" font-size="13" text-anchor="end" font-weight="400" fill="#64748B" >4</text>
+<line x1="70.0" y1="161.1" x2="520.0" y2="161.1" stroke="#E2E8F0" stroke-width="1" />
+<line x1="70.0" y1="133.3" x2="520.0" y2="133.3" stroke="#E2E8F0" stroke-width="1" />
+<text x="62.0" y="138.3" font-size="13" text-anchor="end" font-weight="400" fill="#64748B" >6</text>
+<line x1="70.0" y1="105.6" x2="520.0" y2="105.6" stroke="#E2E8F0" stroke-width="1" />
+<line x1="70.0" y1="77.8" x2="520.0" y2="77.8" stroke="#E2E8F0" stroke-width="1" />
+<text x="62.0" y="82.8" font-size="13" text-anchor="end" font-weight="400" fill="#64748B" >8</text>
+<line x1="70.0" y1="50.0" x2="520.0" y2="50.0" stroke="#E2E8F0" stroke-width="1" />
+<line x1="70.0" y1="300.0" x2="520.0" y2="300.0" stroke="#102A43" stroke-width="2" />
+<line x1="70.0" y1="300.0" x2="70.0" y2="46.0" stroke="#102A43" stroke-width="2" />
+<line x1="70.0" y1="300.0" x2="70.0" y2="306.0" stroke="#102A43" stroke-width="2" />
+<text x="70.0" y="324.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >1800</text>
+<line x1="167.8" y1="300.0" x2="167.8" y2="306.0" stroke="#102A43" stroke-width="2" />
+<text x="167.8" y="324.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >1850</text>
+<line x1="265.7" y1="300.0" x2="265.7" y2="306.0" stroke="#102A43" stroke-width="2" />
+<text x="265.7" y="324.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >1900</text>
+<line x1="363.5" y1="300.0" x2="363.5" y2="306.0" stroke="#102A43" stroke-width="2" />
+<text x="363.5" y="324.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >1950</text>
+<line x1="461.3" y1="300.0" x2="461.3" y2="306.0" stroke="#102A43" stroke-width="2" />
+<text x="461.3" y="324.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >2000</text>
+<text x="90.0" y="44.0" font-size="13" text-anchor="start" font-weight="400" fill="#64748B" >Billions of people</text>
+<path d="M70.0,272.2 C111.4,267.6 266.3,253.7 318.5,244.4 C370.7,235.2 367.7,225.9 383.0,216.7 C398.4,207.4 401.6,198.1 410.4,188.9 C419.2,179.6 427.7,170.4 435.9,161.1 C444.0,151.9 451.5,142.6 459.3,133.3 C467.2,124.1 475.3,114.8 482.8,105.6 C490.3,96.3 500.8,82.4 504.3,77.8" fill="none" stroke="#2563EB" stroke-width="3"/>
+<circle cx="70.0" cy="272.2" r="4" fill="#2563EB"/>
+<circle cx="318.5" cy="244.4" r="4" fill="#2563EB"/>
+<circle cx="383.0" cy="216.7" r="4" fill="#2563EB"/>
+<circle cx="410.4" cy="188.9" r="4" fill="#2563EB"/>
+<circle cx="435.9" cy="161.1" r="4" fill="#2563EB"/>
+<circle cx="459.3" cy="133.3" r="4" fill="#2563EB"/>
+<circle cx="482.8" cy="105.6" r="4" fill="#2563EB"/>
+<circle cx="504.3" cy="77.8" r="4" fill="#2563EB"/>
+<text x="76.0" y="260.2" font-size="13" text-anchor="start" font-weight="700" fill="#102A43" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">about 1 billion</text>
+<text x="310.5" y="232.4" font-size="13" text-anchor="end" font-weight="700" fill="#102A43" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">about 2</text>
+<text x="375.0" y="206.7" font-size="13" text-anchor="end" font-weight="700" fill="#102A43" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">3</text>
+<text x="402.4" y="178.9" font-size="13" text-anchor="end" font-weight="700" fill="#102A43" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">4</text>
+<text x="427.9" y="151.1" font-size="13" text-anchor="end" font-weight="700" fill="#102A43" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">5</text>
+<text x="451.3" y="123.3" font-size="13" text-anchor="end" font-weight="700" fill="#102A43" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">6</text>
+<text x="474.8" y="95.6" font-size="13" text-anchor="end" font-weight="700" fill="#102A43" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">7</text>
+<text x="496.3" y="65.8" font-size="13" text-anchor="end" font-weight="700" fill="#102A43" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">about 8</text>
+<text x="167.8" y="219.4" font-size="14" text-anchor="middle" font-weight="700" fill="#047857" >Slow growth</text>
+<text x="450.0" y="213.3" font-size="14" text-anchor="middle" font-weight="700" fill="#B45309" >Rapid growth</text>
+<text x="280.0" y="345.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >Rounded values for the year each billion was passed.</text>
+</svg>

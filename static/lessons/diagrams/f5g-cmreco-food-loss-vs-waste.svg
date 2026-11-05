@@ -1,0 +1,36 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<text x="280" y="24" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Food loss and food waste along the food chain</text>
+<rect x="9" y="150" width="82" height="46" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="50.0" y="178" font-size="13" fill="#102A43" text-anchor="middle">Farm</text>
+<line x1="92" y1="173" x2="100" y2="173" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="101" y="150" width="82" height="46" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="142.0" y="178" font-size="13" fill="#102A43" text-anchor="middle">Storage</text>
+<line x1="184" y1="173" x2="192" y2="173" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="193" y="150" width="82" height="46" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="234.0" y="178" font-size="13" fill="#102A43" text-anchor="middle">Transport</text>
+<line x1="276" y1="173" x2="284" y2="173" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="285" y="150" width="82" height="46" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="326.0" y="178" font-size="13" fill="#102A43" text-anchor="middle">Processing</text>
+<line x1="368" y1="173" x2="376" y2="173" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="377" y="150" width="82" height="46" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="418.0" y="178" font-size="13" fill="#102A43" text-anchor="middle">Market</text>
+<line x1="460" y1="173" x2="468" y2="173" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="469" y="150" width="82" height="46" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="510.0" y="178" font-size="13" fill="#102A43" text-anchor="middle">Household</text>
+<path d="M9,146 L9,134 L367,134 L367,146" fill="none" stroke="#B45309" stroke-width="2.5"/>
+<text x="188.0" y="124" font-size="16" fill="#B45309" text-anchor="middle" font-weight="700">FOOD LOSS</text>
+<text x="188.0" y="56" font-size="13" fill="#102A43" text-anchor="middle">Food is lost before it reaches</text>
+<text x="188.0" y="74" font-size="13" fill="#102A43" text-anchor="middle">the shop: rot, pests, spills,</text>
+<text x="188.0" y="92" font-size="13" fill="#102A43" text-anchor="middle">bad roads, poor storage</text>
+<path d="M377,146 L377,134 L551,134 L551,146" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="464.0" y="124" font-size="16" fill="#2563EB" text-anchor="middle" font-weight="700">FOOD WASTE</text>
+<text x="464.0" y="56" font-size="13" fill="#102A43" text-anchor="middle">Good food is thrown away</text>
+<text x="464.0" y="74" font-size="13" fill="#102A43" text-anchor="middle">by sellers or families:</text>
+<text x="464.0" y="92" font-size="13" fill="#102A43" text-anchor="middle">left-overs, unsold, expired</text>
+<rect x="10" y="236" width="540" height="88" rx="8" fill="#F8FAFC" stroke="#64748B" stroke-width="2"/>
+<text x="280" y="262" font-size="14" fill="#102A43" text-anchor="middle">Loss: caused by weak storage, roads and processing (supply side).</text>
+<text x="280" y="288" font-size="14" fill="#102A43" text-anchor="middle">Waste: caused by choices and habits of sellers and consumers.</text>
+<text x="280" y="312" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">Both mean food that was grown is not eaten.</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<title>Three ways of showing the same scale: statement, representative fraction and bar scale</title>
+<style>.h{stroke:#FFFFFF;stroke-width:4;paint-order:stroke;stroke-linejoin:round}</style>
+<defs><circle id="t" r="4" fill="none" stroke="#047857" stroke-width="2"/><circle id="p" r="2.5" fill="#047857"/></defs>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="20" y="20" width="520" height="84" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="36" y="46" font-size="15" fill="#2563EB" font-weight="700">Statement</text>
+<text x="36" y="80" font-size="18" fill="#102A43" font-weight="700">1 cm on the map is 0.5 km on the ground</text>
+<rect x="20" y="120" width="520" height="84" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="36" y="146" font-size="15" fill="#2563EB" font-weight="700">Representative fraction</text>
+<text x="36" y="180" font-size="18" fill="#102A43" font-weight="700">1 : 50 000</text>
+<rect x="20" y="220" width="520" height="84" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="36" y="246" font-size="15" fill="#2563EB" font-weight="700">Bar (linear) scale</text>
+<rect x="60" y="268" width="96" height="12" rx="0" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<rect x="156" y="268" width="96" height="12" rx="0" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<rect x="252" y="268" width="96" height="12" rx="0" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="60" y="300" font-size="14" fill="#102A43" text-anchor="middle">0</text>
+<text x="156" y="300" font-size="14" fill="#102A43" text-anchor="middle">1</text>
+<text x="252" y="300" font-size="14" fill="#102A43" text-anchor="middle">2</text>
+<text x="348" y="300" font-size="14" fill="#102A43" text-anchor="middle">3 km</text>
+<text x="400" y="278" font-size="13" fill="#102A43"></text>
+</svg>

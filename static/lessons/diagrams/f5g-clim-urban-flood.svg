@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a2563EB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker></defs>
+<text x="280" y="24" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700" >Why floods are worse in a built-up area</text>
+<text x="140" y="56" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >Vegetated land</text>
+<rect x="10" y="70" width="260" height="250" rx="0" fill="none" stroke="#CBD5E1" stroke-width="2" />
+<line x1="40" y1="82" x2="32" y2="112" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="80" y1="82" x2="72" y2="112" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="120" y1="82" x2="112" y2="112" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="160" y1="82" x2="152" y2="112" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="200" y1="82" x2="192" y2="112" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="240" y1="82" x2="232" y2="112" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<text x="24" y="130" font-size="13" text-anchor="start" fill="#2563EB" font-weight="700" >Heavy rain</text>
+<rect x="10" y="200" width="260" height="120" rx="0" fill="#D9C7A0" stroke="none" stroke-width="2" />
+<rect x="10" y="200" width="260" height="14" rx="0" fill="#ECFDF5" stroke="#047857" stroke-width="2" />
+<line x1="40" y1="200" x2="40" y2="178" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<circle cx="40" cy="170" r="12" fill="#A7F3D0" stroke="#047857" stroke-width="2"/>
+<line x1="90" y1="200" x2="90" y2="178" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<circle cx="90" cy="170" r="12" fill="#A7F3D0" stroke="#047857" stroke-width="2"/>
+<line x1="140" y1="200" x2="140" y2="178" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<circle cx="140" cy="170" r="12" fill="#A7F3D0" stroke="#047857" stroke-width="2"/>
+<line x1="190" y1="200" x2="190" y2="178" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<circle cx="190" cy="170" r="12" fill="#A7F3D0" stroke="#047857" stroke-width="2"/>
+<line x1="240" y1="200" x2="240" y2="178" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<circle cx="240" cy="170" r="12" fill="#A7F3D0" stroke="#047857" stroke-width="2"/>
+<line x1="55" y1="218" x2="55" y2="262" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="110" y1="218" x2="110" y2="262" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="165" y1="218" x2="165" y2="262" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="220" y1="218" x2="220" y2="262" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<text x="140" y="288" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >Water soaks into the soil</text>
+<text x="140" y="308" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >(infiltration): slow runoff</text>
+<text x="420" y="56" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >Paved town with blocked drains</text>
+<rect x="290" y="70" width="260" height="250" rx="0" fill="none" stroke="#CBD5E1" stroke-width="2" />
+<line x1="320" y1="82" x2="312" y2="112" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="360" y1="82" x2="352" y2="112" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="400" y1="82" x2="392" y2="112" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="440" y1="82" x2="432" y2="112" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="480" y1="82" x2="472" y2="112" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="520" y1="82" x2="512" y2="112" stroke="#2563EB" stroke-width="3" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<text x="304" y="130" font-size="13" text-anchor="start" fill="#2563EB" font-weight="700" >Heavy rain</text>
+<rect x="290" y="200" width="260" height="120" rx="0" fill="#94A3B8" stroke="none" stroke-width="2" />
+<rect x="290" y="200" width="260" height="14" rx="0" fill="#475569" stroke="none" stroke-width="2" />
+<rect x="310" y="150" width="44" height="50" rx="0" fill="#FEF3C7" stroke="#B45309" stroke-width="2" />
+<rect x="390" y="150" width="44" height="50" rx="0" fill="#FEF3C7" stroke="#B45309" stroke-width="2" />
+<rect x="470" y="150" width="44" height="50" rx="0" fill="#FEF3C7" stroke="#B45309" stroke-width="2" />
+<line x1="310" y1="190" x2="530" y2="190" stroke="#2563EB" stroke-width="4" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<rect x="470" y="214" width="50" height="40" rx="0" fill="#1E293B" stroke="#102A43" stroke-width="2" />
+<text x="495" y="238" font-size="13" text-anchor="middle" fill="#FFFFFF" font-weight="700" >Drain</text>
+<text x="495" y="268" font-size="13" text-anchor="middle" fill="#B91C1C" font-weight="700" >blocked</text>
+<text x="420" y="292" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >Water cannot soak in:</text>
+<text x="420" y="310" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >fast runoff, flooded streets</text>
+<text x="280" y="346" font-size="13" text-anchor="middle" fill="#64748B" font-weight="400" >Paving, buildings and rubbish in drains all increase flood risk.</text>
+</svg>

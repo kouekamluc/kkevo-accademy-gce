@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 345" font-family="Inter, Arial, sans-serif">
+<title>Traditional and modern sources of power, renewable and non-renewable</title>
+<rect width="560" height="345" fill="#FFFFFF"/>
+<rect x="120.0" y="40.0" width="215.0" height="34.0" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="227.0" y="63.0" font-size="16" fill="#047857" text-anchor="middle" font-weight="700">RENEWABLE</text>
+<rect x="345.0" y="40.0" width="205.0" height="34.0" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="2"/>
+<text x="447.0" y="63.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">NON-RENEWABLE</text>
+<rect x="10.0" y="84.0" width="100.0" height="110.0" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="60.0" y="132.0" font-size="13" fill="#B45309" text-anchor="middle" font-weight="700">TRADITIONAL</text>
+<text x="60.0" y="152.0" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700">sources</text>
+<rect x="10.0" y="204.0" width="100.0" height="130.0" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="60.0" y="258.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">MODERN</text>
+<text x="60.0" y="278.0" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700">sources</text>
+<rect x="120.0" y="84.0" width="215.0" height="110.0" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="132.0" y="110.0" font-size="14" fill="#102A43" text-anchor="start">Firewood (if replanted)</text>
+<text x="132.0" y="132.0" font-size="14" fill="#102A43" text-anchor="start">Charcoal</text>
+<text x="132.0" y="154.0" font-size="14" fill="#102A43" text-anchor="start">Animal power</text>
+<text x="132.0" y="176.0" font-size="14" fill="#102A43" text-anchor="start">Human power</text>
+<rect x="345.0" y="84.0" width="205.0" height="110.0" rx="8" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+<text x="357.0" y="110.0" font-size="14" fill="#102A43" text-anchor="start">Few traditional sources</text>
+<text x="357.0" y="132.0" font-size="14" fill="#102A43" text-anchor="start">are non-renewable.</text>
+<text x="357.0" y="154.0" font-size="14" fill="#102A43" text-anchor="start">(Peat is an example.)</text>
+<rect x="120.0" y="204.0" width="215.0" height="130.0" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="132.0" y="230.0" font-size="14" fill="#102A43" text-anchor="start">Hydroelectricity</text>
+<text x="132.0" y="252.0" font-size="14" fill="#102A43" text-anchor="start">Solar power</text>
+<text x="132.0" y="274.0" font-size="14" fill="#102A43" text-anchor="start">Wind power</text>
+<text x="132.0" y="296.0" font-size="14" fill="#102A43" text-anchor="start">Geothermal power</text>
+<text x="132.0" y="318.0" font-size="14" fill="#102A43" text-anchor="start">Biomass and biofuels</text>
+<rect x="345.0" y="204.0" width="205.0" height="130.0" rx="8" fill="#FFFFFF" stroke="#64748B" stroke-width="2"/>
+<text x="357.0" y="230.0" font-size="14" fill="#102A43" text-anchor="start">Coal</text>
+<text x="357.0" y="252.0" font-size="14" fill="#102A43" text-anchor="start">Oil (petroleum)</text>
+<text x="357.0" y="274.0" font-size="14" fill="#102A43" text-anchor="start">Natural gas</text>
+<text x="357.0" y="296.0" font-size="14" fill="#102A43" text-anchor="start">Nuclear power</text>
+<text x="357.0" y="318.0" font-size="14" fill="#102A43" text-anchor="start">(uranium fuel)</text>
+</svg>

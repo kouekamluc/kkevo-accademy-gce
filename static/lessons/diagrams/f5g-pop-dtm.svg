@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" font-family="Inter, Arial, sans-serif">
+<rect width="640" height="400" fill="#FFFFFF"/>
+<text x="310.0" y="24.0" font-size="16" text-anchor="middle" font-weight="700" fill="#102A43" >Demographic transition model (stages 1 to 5)</text>
+<line x1="160.0" y1="44.0" x2="160.0" y2="374.0" stroke="#CBD5E1" stroke-width="1" />
+<line x1="260.0" y1="44.0" x2="260.0" y2="374.0" stroke="#CBD5E1" stroke-width="1" />
+<line x1="360.0" y1="44.0" x2="360.0" y2="374.0" stroke="#CBD5E1" stroke-width="1" />
+<line x1="460.0" y1="44.0" x2="460.0" y2="374.0" stroke="#CBD5E1" stroke-width="1" />
+<line x1="60.0" y1="250.0" x2="560.0" y2="250.0" stroke="#102A43" stroke-width="2" />
+<line x1="60.0" y1="44.0" x2="60.0" y2="250.0" stroke="#102A43" stroke-width="2" />
+<text x="52.0" y="255.0" font-size="13" text-anchor="end" font-weight="400" fill="#64748B" >0</text>
+<text x="52.0" y="215.4" font-size="13" text-anchor="end" font-weight="400" fill="#64748B" >10</text>
+<text x="52.0" y="175.8" font-size="13" text-anchor="end" font-weight="400" fill="#64748B" >20</text>
+<text x="52.0" y="136.2" font-size="13" text-anchor="end" font-weight="400" fill="#64748B" >30</text>
+<text x="52.0" y="96.6" font-size="13" text-anchor="end" font-weight="400" fill="#64748B" >40</text>
+<text x="52.0" y="57.0" font-size="13" text-anchor="end" font-weight="400" fill="#64748B" >50</text>
+<text x="18.0" y="150.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" transform="rotate(-90 18 150)">Rate per 1 000</text>
+<path d="M60.0,99.5 C68.3,99.5 93.3,99.5 110.0,99.5 C126.7,99.5 143.3,98.9 160.0,99.5 C176.7,100.2 193.3,100.8 210.0,103.5 C226.7,106.1 243.3,110.1 260.0,115.4 C276.7,120.6 293.3,127.2 310.0,135.2 C326.7,143.1 343.3,154.3 360.0,162.9 C376.7,171.5 393.3,180.0 410.0,186.6 C426.7,193.2 443.3,199.2 460.0,202.5 C476.7,205.8 493.3,205.1 510.0,206.4 C526.7,207.8 551.7,209.7 560.0,210.4 L560.0,202.5 " fill="none"/>
+<path d="M60.0,99.5 C68.3,99.5 93.3,99.5 110.0,99.5 C126.7,99.5 143.3,98.9 160.0,99.5 C176.7,100.2 193.3,100.8 210.0,103.5 C226.7,106.1 243.3,110.1 260.0,115.4 C276.7,120.6 293.3,127.2 310.0,135.2 C326.7,143.1 343.3,154.3 360.0,162.9 C376.7,171.5 393.3,180.0 410.0,186.6 C426.7,193.2 443.3,199.2 460.0,202.5 C476.7,205.8 493.3,205.1 510.0,206.4 C526.7,207.8 551.7,209.7 560.0,210.4 L560.0,202.5 L510.0,206.4 L460.0,210.4 L410.0,210.4 L360.0,210.4 L310.0,206.4 L260.0,190.6 L210.0,155.0 L160.0,119.3 L130.0,99.5 L100.0,111.4 L60.0,103.5 Z" fill="#ECFDF5" stroke="none"/>
+<path d="M60.0,99.5 C68.3,99.5 93.3,99.5 110.0,99.5 C126.7,99.5 143.3,98.9 160.0,99.5 C176.7,100.2 193.3,100.8 210.0,103.5 C226.7,106.1 243.3,110.1 260.0,115.4 C276.7,120.6 293.3,127.2 310.0,135.2 C326.7,143.1 343.3,154.3 360.0,162.9 C376.7,171.5 393.3,180.0 410.0,186.6 C426.7,193.2 443.3,199.2 460.0,202.5 C476.7,205.8 493.3,205.1 510.0,206.4 C526.7,207.8 551.7,209.7 560.0,210.4" fill="none" stroke="#2563EB" stroke-width="3"/>
+<path d="M60.0,103.5 C66.7,104.8 88.3,112.1 100.0,111.4 C111.7,110.7 120.0,98.2 130.0,99.5 C140.0,100.8 146.7,110.1 160.0,119.3 C173.3,128.6 193.3,143.1 210.0,155.0 C226.7,166.8 243.3,182.0 260.0,190.6 C276.7,199.2 293.3,203.1 310.0,206.4 C326.7,209.7 343.3,209.7 360.0,210.4 C376.7,211.1 393.3,210.4 410.0,210.4 C426.7,210.4 443.3,211.1 460.0,210.4 C476.7,209.7 493.3,207.8 510.0,206.4 C526.7,205.1 551.7,203.1 560.0,202.5" fill="none" stroke="#B45309" stroke-width="3"/>
+<text x="110.0" y="91.5" font-size="14" text-anchor="middle" font-weight="700" fill="#2563EB" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Birth rate</text>
+<text x="120.0" y="159.3" font-size="14" text-anchor="middle" font-weight="700" fill="#B45309" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Death rate</text>
+<text x="260.0" y="111.4" font-size="13" text-anchor="middle" font-weight="700" fill="#102A43" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke"></text>
+<text x="235.0" y="151.0" font-size="13" text-anchor="middle" font-weight="700" fill="#047857" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Natural increase</text>
+<line x1="60.0" y1="372.0" x2="560.0" y2="372.0" stroke="#102A43" stroke-width="2" />
+<line x1="60.0" y1="292.0" x2="60.0" y2="372.0" stroke="#102A43" stroke-width="2" />
+<text x="18.0" y="332.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" transform="rotate(-90 18 332)">Total population</text>
+<path d="M60.0,363.1 C76.7,362.6 135.0,362.1 160.0,360.2 C185.0,358.2 193.3,355.5 210.0,351.3 C226.7,347.1 243.3,340.8 260.0,335.0 C276.7,329.2 293.3,321.4 310.0,316.5 C326.7,311.6 343.3,308.1 360.0,305.4 C376.7,302.7 393.3,301.5 410.0,300.2 C426.7,299.0 443.3,298.4 460.0,298.0 C476.7,297.6 493.3,297.5 510.0,298.0 C526.7,298.5 551.7,300.5 560.0,301.0" fill="none" stroke="#047857" stroke-width="3"/>
+<text x="110.0" y="38.0" font-size="14" text-anchor="middle" font-weight="700" fill="#102A43" >Stage 1</text>
+<text x="110.0" y="270.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >High</text>
+<text x="110.0" y="286.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >stationary</text>
+<text x="210.0" y="38.0" font-size="14" text-anchor="middle" font-weight="700" fill="#102A43" >Stage 2</text>
+<text x="210.0" y="270.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >Early</text>
+<text x="210.0" y="286.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >expanding</text>
+<text x="310.0" y="38.0" font-size="14" text-anchor="middle" font-weight="700" fill="#102A43" >Stage 3</text>
+<text x="310.0" y="270.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >Late</text>
+<text x="310.0" y="286.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >expanding</text>
+<text x="410.0" y="38.0" font-size="14" text-anchor="middle" font-weight="700" fill="#102A43" >Stage 4</text>
+<text x="410.0" y="270.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >Low</text>
+<text x="410.0" y="286.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >stationary</text>
+<text x="510.0" y="38.0" font-size="14" text-anchor="middle" font-weight="700" fill="#102A43" >Stage 5</text>
+<text x="510.0" y="270.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >Declining</text>
+<text x="510.0" y="286.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >(some books)</text>
+</svg>

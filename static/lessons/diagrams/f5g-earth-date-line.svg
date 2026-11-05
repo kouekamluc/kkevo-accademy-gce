@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" role="img" aria-label="A world strip showing the International Date Line near 180 degrees, with an earlier date east of it and a later date west of it">
+<rect width="560" height="340" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker></defs>
+<rect x="50" y="80" width="460" height="130" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<line x1="88.3" y1="80" x2="88.3" y2="210" stroke="#94A3B8" stroke-width="1.2"/>
+<line x1="126.7" y1="80" x2="126.7" y2="210" stroke="#94A3B8" stroke-width="1.2"/>
+<line x1="165" y1="80" x2="165" y2="210" stroke="#94A3B8" stroke-width="1.2"/>
+<line x1="203.3" y1="80" x2="203.3" y2="210" stroke="#94A3B8" stroke-width="1.2"/>
+<line x1="241.7" y1="80" x2="241.7" y2="210" stroke="#94A3B8" stroke-width="1.2"/>
+<line x1="280" y1="80" x2="280" y2="210" stroke="#94A3B8" stroke-width="1.2"/>
+<line x1="318.3" y1="80" x2="318.3" y2="210" stroke="#94A3B8" stroke-width="1.2"/>
+<line x1="356.7" y1="80" x2="356.7" y2="210" stroke="#94A3B8" stroke-width="1.2"/>
+<line x1="395" y1="80" x2="395" y2="210" stroke="#94A3B8" stroke-width="1.2"/>
+<line x1="433.3" y1="80" x2="433.3" y2="210" stroke="#94A3B8" stroke-width="1.2"/>
+<line x1="471.7" y1="80" x2="471.7" y2="210" stroke="#94A3B8" stroke-width="1.2"/>
+<text x="50" y="230" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >180°</text>
+<text x="126.7" y="230" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >120°W</text>
+<text x="203.3" y="230" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >60°W</text>
+<text x="280" y="230" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >0°</text>
+<text x="356.7" y="230" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >60°E</text>
+<text x="433.3" y="230" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >120°E</text>
+<text x="510" y="230" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >180°</text>
+<line x1="280" y1="80" x2="280" y2="210" stroke="#B91C1C" stroke-width="3.5"/>
+<text x="280" y="72" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B91C1C" text-anchor="middle" >Greenwich 0°</text>
+<line x1="50" y1="80" x2="50" y2="210" stroke="#2563EB" stroke-width="5"/>
+<line x1="510" y1="80" x2="510" y2="210" stroke="#2563EB" stroke-width="5"/>
+<text x="54" y="44" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="start" >International Date Line</text>
+<text x="506" y="44" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="end" >International Date Line</text>
+<text x="54" y="60" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#2563EB" text-anchor="start" >(near 180°)</text>
+<text x="506" y="60" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#2563EB" text-anchor="end" >(near 180°)</text>
+<text x="110" y="125" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="middle" >EARLIER</text>
+<text x="110" y="145" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="middle" >date</text>
+<text x="450" y="125" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#B45309" text-anchor="middle" >LATER</text>
+<text x="450" y="145" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#B45309" text-anchor="middle" >date</text>
+<text x="110" y="165" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#047857" text-anchor="middle" >(e.g. Sunday)</text>
+<text x="450" y="165" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#B45309" text-anchor="middle" >(e.g. Monday)</text>
+<text x="280" y="262" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle" >Crossing the line going EAST (right to left on this strip):  go back one day</text>
+<text x="280" y="286" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="middle" >Crossing the line going WEST (left to right on this strip):  go forward one day</text>
+<text x="280" y="322" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle" >Flat strip of the world from 180°W to 180°E. The real line bends around some countries.</text>
+</svg>

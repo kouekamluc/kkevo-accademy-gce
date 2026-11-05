@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<title>Counting whole and half grid squares to find the area of the forest reserve</title>
+<style>.h{stroke:#FFFFFF;stroke-width:4;paint-order:stroke;stroke-linejoin:round}</style>
+<defs><circle id="t" r="4" fill="none" stroke="#047857" stroke-width="2"/><circle id="p" r="2.5" fill="#047857"/></defs>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="56" y="216" width="90" height="90" fill="#ECFDF5"/>
+<rect x="146" y="216" width="90" height="90" fill="#ECFDF5"/>
+<rect x="56" y="126" width="90" height="90" fill="#ECFDF5"/>
+<polygon points="146,216 236,216 146,126" fill="#FEF3C7"/>
+<line x1="56" y1="36" x2="56" y2="306" stroke="#64748B" stroke-width="2" stroke-opacity="0.5"/>
+<text x="56" y="325" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">31</text>
+<line x1="146" y1="36" x2="146" y2="306" stroke="#64748B" stroke-width="2" stroke-opacity="0.5"/>
+<text x="146" y="325" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">32</text>
+<line x1="236" y1="36" x2="236" y2="306" stroke="#64748B" stroke-width="2" stroke-opacity="0.5"/>
+<text x="236" y="325" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">33</text>
+<line x1="326" y1="36" x2="326" y2="306" stroke="#64748B" stroke-width="2" stroke-opacity="0.5"/>
+<text x="326" y="325" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">34</text>
+<line x1="56" y1="306" x2="326" y2="306" stroke="#64748B" stroke-width="2" stroke-opacity="0.5"/>
+<text x="48" y="311" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">52</text>
+<line x1="56" y1="216" x2="326" y2="216" stroke="#64748B" stroke-width="2" stroke-opacity="0.5"/>
+<text x="48" y="221" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">53</text>
+<line x1="56" y1="126" x2="326" y2="126" stroke="#64748B" stroke-width="2" stroke-opacity="0.5"/>
+<text x="48" y="131" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">54</text>
+<line x1="56" y1="36" x2="326" y2="36" stroke="#64748B" stroke-width="2" stroke-opacity="0.5"/>
+<text x="48" y="41" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">55</text>
+<polygon points="56,306 236,306 236,216 146,126 56,126" fill="none" stroke="#047857" stroke-width="4" stroke-linejoin="round"/>
+<rect x="56" y="36" width="270" height="270" rx="0" fill="none" stroke="#102A43" stroke-width="3"/>
+<text x="101" y="267" font-size="20" fill="#047857" text-anchor="middle" font-weight="700">1</text>
+<text x="191" y="267" font-size="20" fill="#047857" text-anchor="middle" font-weight="700">2</text>
+<text x="101" y="177" font-size="20" fill="#047857" text-anchor="middle" font-weight="700">3</text>
+<text x="176" y="186" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700">half</text>
+<text x="340" y="70" font-size="15" fill="#047857" font-weight="700">Whole squares: 3</text>
+<text x="340" y="100" font-size="15" fill="#B45309" font-weight="700">Half square: 1</text>
+<text x="340" y="130" font-size="14" fill="#102A43">(counts as 0.5)</text>
+<text x="340" y="172" font-size="15" fill="#102A43" font-weight="700">Total = 3.5 squares</text>
+<text x="340" y="214" font-size="14" fill="#102A43">1 square = 1 km × 1 km</text>
+<text x="340" y="238" font-size="14" fill="#102A43">= 1 km²</text>
+<rect x="332" y="262" width="200" height="44" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="432" y="291" font-size="17" fill="#047857" text-anchor="middle" font-weight="700">Area = 3.5 km²</text>
+</svg>

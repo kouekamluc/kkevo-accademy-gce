@@ -49,6 +49,15 @@ def _question_problems(q):
         problems.append("no prompt")
     if not q.get("steps"):
         problems.append("no worked solution steps")
+    diagram = q.get("diagram") or ""
+    if diagram:
+        from django.contrib.staticfiles import finders
+        if "/" in diagram or "\\" in diagram or not diagram.endswith(".svg") or not finders.find(f"lessons/diagrams/{diagram}"):
+            problems.append(f"no diagram called '{diagram}' in static/lessons/diagrams/")
+        if not (q.get("diagram_alt") or "").strip():
+            problems.append("a diagram needs diagram_alt (a description for screen readers)")
+        elif len(q["diagram_alt"]) > _limit(Question, "diagram_alt"):
+            problems.append("diagram_alt is longer than 300 characters")
     if q.get("prompt", "").count("$") % 2:
         problems.append("odd number of $ in the prompt")
     if q.get("kind") == "choice":

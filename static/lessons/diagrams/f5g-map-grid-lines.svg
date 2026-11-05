@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<title>Grid with eastings and northings and the grid square 3455</title>
+<style>.h{stroke:#FFFFFF;stroke-width:4;paint-order:stroke;stroke-linejoin:round}</style>
+<defs><circle id="t" r="4" fill="none" stroke="#047857" stroke-width="2"/><circle id="p" r="2.5" fill="#047857"/></defs>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="116" y="162" width="56" height="56" rx="0" fill="#FEF3C7" stroke="none" stroke-width="0"/>
+<line x1="60" y1="50" x2="60" y2="274" stroke="#64748B" stroke-width="2"/>
+<text x="60" y="42" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">33</text>
+<line x1="116" y1="50" x2="116" y2="274" stroke="#64748B" stroke-width="2"/>
+<text x="116" y="42" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">34</text>
+<line x1="172" y1="50" x2="172" y2="274" stroke="#64748B" stroke-width="2"/>
+<text x="172" y="42" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">35</text>
+<line x1="228" y1="50" x2="228" y2="274" stroke="#64748B" stroke-width="2"/>
+<text x="228" y="42" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">36</text>
+<line x1="284" y1="50" x2="284" y2="274" stroke="#64748B" stroke-width="2"/>
+<text x="284" y="42" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">37</text>
+<line x1="340" y1="50" x2="340" y2="274" stroke="#64748B" stroke-width="2"/>
+<text x="340" y="42" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">38</text>
+<line x1="60" y1="274" x2="340" y2="274" stroke="#64748B" stroke-width="2"/>
+<text x="52" y="279" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">54</text>
+<line x1="60" y1="218" x2="340" y2="218" stroke="#64748B" stroke-width="2"/>
+<text x="52" y="223" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">55</text>
+<line x1="60" y1="162" x2="340" y2="162" stroke="#64748B" stroke-width="2"/>
+<text x="52" y="167" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">56</text>
+<line x1="60" y1="106" x2="340" y2="106" stroke="#64748B" stroke-width="2"/>
+<text x="52" y="111" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">57</text>
+<line x1="60" y1="50" x2="340" y2="50" stroke="#64748B" stroke-width="2"/>
+<text x="52" y="55" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">58</text>
+<rect x="60" y="50" width="280" height="224" rx="0" fill="none" stroke="#102A43" stroke-width="3"/>
+<rect x="116" y="162" width="56" height="56" rx="0" fill="none" stroke="#B45309" stroke-width="4"/>
+<text x="144" y="195" font-size="15" fill="#B45309" text-anchor="middle" font-weight="700">3455</text>
+<line x1="66" y1="22" x2="112" y2="22" stroke="#2563EB" stroke-width="3"/>
+<polygon points="114,22 104.8,25.9 104.8,18.1" fill="#2563EB"/>
+<line x1="18" y1="268" x2="18" y2="222" stroke="#2563EB" stroke-width="3"/>
+<polygon points="18,220 21.9,229.2 14.1,229.2" fill="#2563EB"/>
+<text x="66" y="14" font-size="13" fill="#2563EB" font-weight="700">1 along</text>
+<text x="8" y="206" font-size="13" fill="#2563EB" font-weight="700">2 up</text>
+<text x="388" y="80" font-size="14" fill="#2563EB" font-weight="700">Eastings</text>
+<text x="388" y="102" font-size="14" fill="#102A43">vertical lines,</text>
+<text x="388" y="124" font-size="14" fill="#102A43">rise to the east</text>
+<text x="388" y="160" font-size="14" fill="#2563EB" font-weight="700">Northings</text>
+<text x="388" y="182" font-size="14" fill="#102A43">horizontal lines,</text>
+<text x="388" y="204" font-size="14" fill="#102A43">rise to the north</text>
+<text x="388" y="250" font-size="14" fill="#B45309" font-weight="700">Square 3455:</text>
+<text x="388" y="272" font-size="14" fill="#102A43">easting 34 first,</text>
+<text x="388" y="294" font-size="14" fill="#102A43">then northing 55</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<text x="280" y="24" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Exploiting the forest: gains and costs</text>
+<rect x="14" y="44" width="256" height="290" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<rect x="290" y="44" width="256" height="290" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="142" y="72" font-size="16" fill="#047857" text-anchor="middle" font-weight="700">Economic gains</text>
+<text x="418" y="72" font-size="16" fill="#B45309" text-anchor="middle" font-weight="700">Costs to people and nature</text>
+<text x="142" y="106" font-size="14" fill="#102A43" text-anchor="middle">Timber for sale and export</text>
+<text x="418" y="106" font-size="14" fill="#102A43" text-anchor="middle">Deforestation</text>
+<text x="142" y="146" font-size="14" fill="#102A43" text-anchor="middle">Jobs in logging and sawmills</text>
+<text x="418" y="146" font-size="14" fill="#102A43" text-anchor="middle">Soil erosion and floods</text>
+<text x="142" y="186" font-size="14" fill="#102A43" text-anchor="middle">Taxes for government</text>
+<text x="418" y="186" font-size="14" fill="#102A43" text-anchor="middle">Loss of animal habitat</text>
+<text x="142" y="226" font-size="14" fill="#102A43" text-anchor="middle">Fuelwood, food, medicine</text>
+<text x="418" y="226" font-size="14" fill="#102A43" text-anchor="middle">Illegal logging</text>
+<text x="142" y="266" font-size="14" fill="#102A43" text-anchor="middle">Cleared land for farming</text>
+<text x="418" y="266" font-size="14" fill="#102A43" text-anchor="middle">Less carbon storage</text>
+<text x="142" y="306" font-size="14" fill="#102A43" text-anchor="middle">Income for local villages</text>
+<text x="418" y="306" font-size="14" fill="#102A43" text-anchor="middle">Conflicts over land</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<title>The 16 points of the compass with bearings of the eight main points</title>
+<style>.h{stroke:#FFFFFF;stroke-width:4;paint-order:stroke;stroke-linejoin:round}</style>
+<defs><circle id="t" r="4" fill="none" stroke="#047857" stroke-width="2"/><circle id="p" r="2.5" fill="#047857"/></defs>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="280" cy="182" r="118" fill="#EFF6FF" stroke="#102A43" stroke-width="3"/>
+<line x1="280" y1="182" x2="280" y2="64" stroke="#102A43" stroke-width="3"/>
+<text x="280" y="54" font-size="16" fill="#2563EB" text-anchor="middle" font-weight="700">N</text>
+<line x1="280" y1="182" x2="317" y2="92.6" stroke="#64748B" stroke-width="2"/>
+<text x="332.8" y="63.6" font-size="13" fill="#102A43" text-anchor="middle">NNE</text>
+<line x1="280" y1="182" x2="363.4" y2="98.6" stroke="#102A43" stroke-width="2"/>
+<text x="387.3" y="90.9" font-size="13" fill="#102A43" text-anchor="middle">NE</text>
+<line x1="280" y1="182" x2="369.4" y2="145" stroke="#64748B" stroke-width="2"/>
+<text x="421.5" y="138.8" font-size="13" fill="#102A43" text-anchor="middle">ENE</text>
+<line x1="280" y1="182" x2="398" y2="182" stroke="#102A43" stroke-width="3"/>
+<text x="426" y="187" font-size="16" fill="#2563EB" text-anchor="middle" font-weight="700">E</text>
+<line x1="280" y1="182" x2="369.4" y2="219" stroke="#64748B" stroke-width="2"/>
+<text x="421.5" y="235.2" font-size="13" fill="#102A43" text-anchor="middle">ESE</text>
+<line x1="280" y1="182" x2="363.4" y2="265.4" stroke="#102A43" stroke-width="2"/>
+<text x="387.3" y="277.1" font-size="13" fill="#102A43" text-anchor="middle">SE</text>
+<line x1="280" y1="182" x2="317" y2="271.4" stroke="#64748B" stroke-width="2"/>
+<text x="332.8" y="304.4" font-size="13" fill="#102A43" text-anchor="middle">SSE</text>
+<line x1="280" y1="182" x2="280" y2="300" stroke="#102A43" stroke-width="3"/>
+<text x="280" y="314" font-size="16" fill="#2563EB" text-anchor="middle" font-weight="700">S</text>
+<line x1="280" y1="182" x2="243" y2="271.4" stroke="#64748B" stroke-width="2"/>
+<text x="227.2" y="304.4" font-size="13" fill="#102A43" text-anchor="middle">SSW</text>
+<line x1="280" y1="182" x2="196.6" y2="265.4" stroke="#102A43" stroke-width="2"/>
+<text x="172.7" y="277.1" font-size="13" fill="#102A43" text-anchor="middle">SW</text>
+<line x1="280" y1="182" x2="190.6" y2="219" stroke="#64748B" stroke-width="2"/>
+<text x="138.5" y="235.2" font-size="13" fill="#102A43" text-anchor="middle">WSW</text>
+<line x1="280" y1="182" x2="162" y2="182" stroke="#102A43" stroke-width="3"/>
+<text x="134" y="187" font-size="16" fill="#2563EB" text-anchor="middle" font-weight="700">W</text>
+<line x1="280" y1="182" x2="190.6" y2="145" stroke="#64748B" stroke-width="2"/>
+<text x="138.5" y="138.8" font-size="13" fill="#102A43" text-anchor="middle">WNW</text>
+<line x1="280" y1="182" x2="196.6" y2="98.6" stroke="#102A43" stroke-width="2"/>
+<text x="172.7" y="90.9" font-size="13" fill="#102A43" text-anchor="middle">NW</text>
+<line x1="280" y1="182" x2="243" y2="92.6" stroke="#64748B" stroke-width="2"/>
+<text x="227.2" y="63.6" font-size="13" fill="#102A43" text-anchor="middle">NNW</text>
+<text x="280" y="105" font-size="13" fill="#B45309" text-anchor="middle" font-weight="700" class="h">000</text>
+<text x="338" y="129" font-size="13" fill="#B45309" text-anchor="middle" font-weight="700" class="h">045</text>
+<text x="362" y="187" font-size="13" fill="#B45309" text-anchor="middle" font-weight="700" class="h">090</text>
+<text x="338" y="245" font-size="13" fill="#B45309" text-anchor="middle" font-weight="700" class="h">135</text>
+<text x="280" y="269" font-size="13" fill="#B45309" text-anchor="middle" font-weight="700" class="h">180</text>
+<text x="222" y="245" font-size="13" fill="#B45309" text-anchor="middle" font-weight="700" class="h">225</text>
+<text x="198" y="187" font-size="13" fill="#B45309" text-anchor="middle" font-weight="700" class="h">270</text>
+<text x="222" y="129" font-size="13" fill="#B45309" text-anchor="middle" font-weight="700" class="h">315</text>
+<circle cx="280" cy="182" r="5" fill="#102A43"/>
+</svg>

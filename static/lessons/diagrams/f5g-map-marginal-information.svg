@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" font-family="Inter, Arial, sans-serif">
+<title>A map sheet with its marginal information numbered 1 to 7</title>
+<style>.h{stroke:#FFFFFF;stroke-width:4;paint-order:stroke;stroke-linejoin:round}</style>
+<defs><circle id="t" r="4" fill="none" stroke="#047857" stroke-width="2"/><circle id="p" r="2.5" fill="#047857"/></defs>
+<rect width="640" height="480" fill="#FFFFFF"/>
+<rect x="24" y="14" width="352" height="452" rx="0" fill="#F8FAFC" stroke="#102A43" stroke-width="3"/>
+<text x="200" y="44" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">MBANGA PLAIN</text>
+<text x="364" y="44" font-size="13" fill="#102A43" text-anchor="end">Sheet 14</text>
+<rect x="58" y="60" width="298" height="250" rx="0" fill="#FFFFFF" stroke="#102A43" stroke-width="3"/>
+<line x1="117.6" y1="60" x2="117.6" y2="310" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="177.2" y1="60" x2="177.2" y2="310" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="236.8" y1="60" x2="236.8" y2="310" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="296.4" y1="60" x2="296.4" y2="310" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="58" y1="110" x2="356" y2="110" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="58" y1="160" x2="356" y2="160" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="58" y1="210" x2="356" y2="210" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="58" y1="260" x2="356" y2="260" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<text x="58" y="55" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700">31</text>
+<text x="117.6" y="55" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700">32</text>
+<text x="177.2" y="55" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700">33</text>
+<text x="236.8" y="55" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700">34</text>
+<text x="296.4" y="55" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700">35</text>
+<text x="356" y="55" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700">36</text>
+<text x="53" y="315" font-size="13" fill="#102A43" text-anchor="end" font-weight="700">52</text>
+<text x="53" y="265" font-size="13" fill="#102A43" text-anchor="end" font-weight="700">53</text>
+<text x="53" y="215" font-size="13" fill="#102A43" text-anchor="end" font-weight="700">54</text>
+<text x="53" y="165" font-size="13" fill="#102A43" text-anchor="end" font-weight="700">55</text>
+<text x="53" y="115" font-size="13" fill="#102A43" text-anchor="end" font-weight="700">56</text>
+<text x="53" y="65" font-size="13" fill="#102A43" text-anchor="end" font-weight="700">57</text>
+<path d="M120 60 C150 130 100 190 160 220 S 190 280 200 310" fill="none" stroke="#2563EB" stroke-width="3.5"/>
+<polyline points="58,200 150,190 230,170 356,150" fill="none" stroke="#102A43" stroke-width="5"/>
+<polygon points="270,230 330,230 330,290 290,290" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<path d="M236 80l8 14h-16z" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/>
+<rect x="50" y="326" width="32" height="9" fill="#102A43" stroke="#102A43" stroke-width="2"/><rect x="82" y="326" width="32" height="9" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/><rect x="114" y="326" width="32" height="9" fill="#102A43" stroke="#102A43" stroke-width="2"/><text x="50" y="354" font-size="13" fill="#102A43" text-anchor="middle">0</text>
+<text x="82" y="354" font-size="13" fill="#102A43" text-anchor="middle">1</text>
+<text x="114" y="354" font-size="13" fill="#102A43" text-anchor="middle">2</text>
+<text x="146" y="354" font-size="13" fill="#102A43" text-anchor="middle">3 km</text>
+
+<text x="50" y="376" font-size="13" fill="#102A43">Scale 1:50 000</text>
+<path d="M340 330l7 28l-7 -8.4l-7 8.4z" fill="#102A43"/><text x="340" y="326" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">N</text>
+<rect x="44" y="388" width="148" height="66" rx="0" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="52" y="406" font-size="13" fill="#102A43" font-weight="700">KEY</text>
+<line x1="52" y1="424" x2="82" y2="424" stroke="#102A43" stroke-width="5"/>
+<text x="90" y="429" font-size="13" fill="#102A43">road</text>
+<path d="M52 442q7 -8 15 0t15 0" fill="none" stroke="#2563EB" stroke-width="3.5"/>
+<text x="90" y="447" font-size="13" fill="#102A43">river</text>
+<text x="364" y="410" font-size="13" fill="#102A43" text-anchor="end">Surveyed 2020</text>
+<text x="364" y="428" font-size="13" fill="#102A43" text-anchor="end">Printed 2024</text>
+<text x="364" y="446" font-size="13" fill="#102A43" text-anchor="end">Mbanga Survey Dept</text>
+<circle cx="122" cy="32" r="12" fill="#2563EB"/><text x="122" y="37" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<circle cx="286" cy="34" r="12" fill="#2563EB"/><text x="286" y="39" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<circle cx="344" cy="84" r="12" fill="#2563EB"/><text x="344" y="89" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<circle cx="176" cy="330" r="12" fill="#2563EB"/><text x="176" y="335" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<circle cx="312" cy="346" r="12" fill="#2563EB"/><text x="312" y="351" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<circle cx="214" cy="410" r="12" fill="#2563EB"/><text x="214" y="415" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+<circle cx="268" cy="428" r="12" fill="#2563EB"/><text x="268" y="433" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">7</text>
+<circle cx="412" cy="44" r="12" fill="#2563EB"/><text x="412" y="49" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="432" y="43" font-size="14" fill="#102A43" font-weight="700">Title</text>
+<text x="432" y="61" font-size="13" fill="#102A43">tells you what area it shows</text>
+<circle cx="412" cy="107" r="12" fill="#2563EB"/><text x="412" y="112" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="432" y="106" font-size="14" fill="#102A43" font-weight="700">Sheet number</text>
+<text x="432" y="124" font-size="13" fill="#102A43">finds it in a series of maps</text>
+<circle cx="412" cy="170" r="12" fill="#2563EB"/><text x="412" y="175" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="432" y="169" font-size="14" fill="#102A43" font-weight="700">Grid lines</text>
+<text x="432" y="187" font-size="13" fill="#102A43">give grid references</text>
+<circle cx="412" cy="233" r="12" fill="#2563EB"/><text x="412" y="238" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="432" y="232" font-size="14" fill="#102A43" font-weight="700">Scale</text>
+<text x="432" y="250" font-size="13" fill="#102A43">turns map into real distance</text>
+<circle cx="412" cy="296" r="12" fill="#2563EB"/><text x="412" y="301" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="432" y="295" font-size="14" fill="#102A43" font-weight="700">North arrow</text>
+<text x="432" y="313" font-size="13" fill="#102A43">gives direction</text>
+<circle cx="412" cy="359" r="12" fill="#2563EB"/><text x="412" y="364" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+<text x="432" y="358" font-size="14" fill="#102A43" font-weight="700">Key</text>
+<text x="432" y="376" font-size="13" fill="#102A43">explains signs and colours</text>
+<circle cx="412" cy="422" r="12" fill="#2563EB"/><text x="412" y="427" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">7</text>
+<text x="432" y="421" font-size="14" fill="#102A43" font-weight="700">Date, authority</text>
+<text x="432" y="439" font-size="13" fill="#102A43">how recent, who made it</text>
+</svg>

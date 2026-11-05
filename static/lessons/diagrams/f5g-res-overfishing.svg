@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 340" font-family="Inter, Arial, sans-serif">
+<title>Graph showing how overfishing makes the fish stock and the catch fall</title>
+<rect width="560" height="340" fill="#FFFFFF"/>
+<line x1="70.0" y1="290.0" x2="530.0" y2="290.0" stroke="#102A43" stroke-width="2.5"/>
+<line x1="70.0" y1="290.0" x2="70.0" y2="40.0" stroke="#102A43" stroke-width="2.5"/>
+<text x="300.0" y="328.0" font-size="14" fill="#102A43" text-anchor="middle">Time (years)</text>
+<text x="22" y="165" font-size="14" fill="#102A43" text-anchor="middle" transform="rotate(-90 22 165)">Fish stock and catch (illustration)</text>
+<polyline fill="none" stroke="#2563EB" stroke-width="3.5" points="70.0,60.8 77.7,61.0 85.3,61.1 93.0,61.3 100.7,61.5 108.3,61.7 116.0,62.0 123.7,62.3 131.3,62.7 139.0,63.2 146.7,63.7 154.3,64.2 162.0,64.9 169.7,65.7 177.3,66.6 185.0,67.6 192.7,68.8 200.3,70.1 208.0,71.7 215.7,73.5 223.3,75.5 231.0,77.8 238.7,80.4 246.3,83.4 254.0,86.7 261.7,90.4 269.3,94.6 277.0,99.2 284.7,104.2 292.3,109.8 300.0,115.8 307.7,122.2 315.3,129.2 323.0,136.5 330.7,144.1 338.3,152.0 346.0,160.1 353.7,168.4 361.3,176.6 369.0,184.8 376.7,192.8 384.3,200.5 392.0,208.0 399.7,215.0 407.3,221.7 415.0,227.9 422.7,233.6 430.3,238.9 438.0,243.7 445.7,248.0 453.3,251.9 461.0,255.3 468.7,258.4 476.3,261.2 484.0,263.6 491.7,265.8 499.3,267.6 507.0,269.3 514.7,270.7 522.3,271.9 530.0,273.0"/>
+<polyline fill="none" stroke="#B45309" stroke-width="3.5" stroke-dasharray="8 5" points="70.0,240.1 77.7,235.7 85.3,231.3 93.0,226.9 100.7,222.5 108.3,218.1 116.0,213.7 123.7,209.3 131.3,205.0 139.0,200.7 146.7,196.4 154.3,192.1 162.0,187.9 169.7,183.7 177.3,179.6 185.0,175.6 192.7,171.6 200.3,167.7 208.0,163.9 215.7,160.2 223.3,156.6 231.0,153.2 238.7,150.0 246.3,147.0 254.0,144.3 261.7,141.8 269.3,139.6 277.0,137.8 284.7,140.2 292.3,142.8 300.0,145.7 307.7,148.9 315.3,152.4 323.0,156.2 330.7,160.2 338.3,164.4 346.0,168.9 353.7,173.5 361.3,178.3 369.0,183.2 376.7,188.2 384.3,193.1 392.0,198.1 399.7,203.0 407.3,207.9 415.0,212.6 422.7,217.1 430.3,221.5 438.0,225.7 445.7,229.7 453.3,233.4 461.0,237.0 468.7,240.3 476.3,243.4 484.0,246.3 491.7,249.0 499.3,251.5 507.0,253.9 514.7,256.0 522.3,258.0 530.0,259.8"/>
+<text x="372.0" y="50.0" font-size="14" fill="#2563EB" text-anchor="start" font-weight="700">Fish stock (breeding fish)</text>
+<text x="372.0" y="72.0" font-size="14" fill="#B45309" text-anchor="start" font-weight="700">Annual catch</text>
+<line x1="340.0" y1="46.0" x2="366.0" y2="46.0" stroke="#2563EB" stroke-width="3.5"/>
+<line x1="340.0" y1="68.0" x2="366.0" y2="68.0" stroke="#B45309" stroke-width="3.5" stroke-dasharray="8 5"/>
+<text x="165.0" y="118.0" font-size="14" fill="#102A43" text-anchor="middle">1 Small boats:</text>
+<text x="165.0" y="136.0" font-size="14" fill="#102A43" text-anchor="middle">stock is healthy</text>
+<text x="235.0" y="246.0" font-size="14" fill="#102A43" text-anchor="middle">2 Too many large boats</text>
+<text x="235.0" y="264.0" font-size="14" fill="#102A43" text-anchor="middle">take young fish</text>
+<text x="470.0" y="150.0" font-size="14" fill="#B91C1C" text-anchor="middle" font-weight="700">3 Stock collapses;</text>
+<text x="470.0" y="168.0" font-size="14" fill="#B91C1C" text-anchor="middle" font-weight="700">catch falls</text>
+</svg>

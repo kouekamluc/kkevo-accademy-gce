@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 410" role="img" aria-label="Polar view showing a great-circle route between two places on 50 degrees north bending towards the pole, shorter than the route along the parallel">
+<rect width="600" height="410" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker></defs>
+<circle cx="200" cy="200" r="160" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<circle cx="200" cy="200" r="106.7" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
+<circle cx="200" cy="200" r="53.3" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="200" y1="200" x2="200" y2="40" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="200" y1="200" x2="280" y2="61.4" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="200" y1="200" x2="338.6" y2="120" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="200" y1="200" x2="360" y2="200" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="200" y1="200" x2="338.6" y2="280" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="200" y1="200" x2="280" y2="338.6" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="200" y1="200" x2="200" y2="360" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="200" y1="200" x2="120" y2="338.6" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="200" y1="200" x2="61.4" y2="280" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="200" y1="200" x2="40" y2="200" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="200" y1="200" x2="61.4" y2="120" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="200" y1="200" x2="120" y2="61.4" stroke="#94A3B8" stroke-width="1.5"/>
+<text x="315.2" y="337.2" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle" ></text>
+<text x="97.3" y="194" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#64748B" text-anchor="start" >30°N</text>
+<text x="150.7" y="194" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#64748B" text-anchor="start" >60°N</text>
+<text x="200" y="380" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle" >Equator (outer blue circle)</text>
+<text x="200" y="218" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle" >Pole</text>
+<path d="M200 128.9 L203.1 129 L206.2 129.2 L209.3 129.5 L212.3 130 L215.4 130.6 L218.4 131.3 L221.4 132.2 L224.3 133.2 L227.2 134.3 L230.1 135.6 L232.8 136.9 L235.6 138.4 L238.2 140 L240.8 141.7 L243.3 143.6 L245.7 145.5 L248 147.6 L250.3 149.7 L252.4 152 L254.5 154.3 L256.4 156.7 L258.3 159.2 L260 161.8 L261.6 164.4 L263.1 167.2 L264.4 169.9 L265.7 172.8 L266.8 175.7 L267.8 178.6 L268.7 181.6 L269.4 184.6 L270 187.7 L270.5 190.7 L270.8 193.8 L271 196.9 L271.1 200 L271 203.1 L270.8 206.2 L270.5 209.3 L270 212.3" fill="none" stroke="#B45309" stroke-width="3.5" stroke-dasharray="7 5"/>
+<path d="M200 128.9 L202.1 130.7 L204.2 132.5 L206.2 134.3 L208.3 136.1 L210.3 138 L212.3 139.8 L214.3 141.7 L216.3 143.6 L218.2 145.5 L220.2 147.4 L222.1 149.4 L224 151.4 L225.9 153.3 L227.7 155.3 L229.6 157.3 L231.4 159.4 L233.2 161.4 L235 163.5 L236.8 165.5 L238.6 167.6 L240.3 169.7 L242.1 171.8 L243.8 174 L245.5 176.1 L247.2 178.3 L248.8 180.4 L250.5 182.6 L252.1 184.8 L253.7 187 L255.3 189.3 L256.8 191.5 L258.4 193.8 L259.9 196 L261.4 198.3 L262.9 200.6 L264.4 202.9 L265.8 205.3 L267.2 207.6 L268.6 210 L270 212.3" fill="none" stroke="#047857" stroke-width="4"/>
+<circle cx="200" cy="128.9" r="7" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="270" cy="212.3" r="7" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="188" y="116.9" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="end" >A</text>
+<text x="282" y="208.3" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="start" >B</text>
+<text x="400" y="50" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="start" >Seen from above</text>
+<text x="400" y="70" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="start" >the North Pole</text>
+<line x1="400" y1="95" x2="440" y2="95" stroke="#047857" stroke-width="4"/>
+<text x="448" y="100" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="start" >Great-circle route</text>
+<text x="448" y="118" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#047857" text-anchor="start" >(the shortest)</text>
+<line x1="400" y1="150" x2="440" y2="150" stroke="#B45309" stroke-width="3.5" stroke-dasharray="7 5"/>
+<text x="448" y="155" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="start" >Along latitude 50°N</text>
+<text x="448" y="173" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#B45309" text-anchor="start" >(a longer route)</text>
+<text x="400" y="230" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" >A and B are on 50°N,</text>
+<text x="400" y="250" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" >100° of longitude apart.</text>
+<text x="400" y="285" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" >Great-circle route bends</text>
+<text x="400" y="305" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" >towards the pole.</text>
+<text x="200" y="398" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle" >Only the equator is a great circle among the parallels.</text>
+</svg>

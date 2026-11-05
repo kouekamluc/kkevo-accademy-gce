@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Annotated sketch: relief rainfall on a mountain near the sea</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="28" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle">Relief rainfall (sketch)</text>
+<rect x="20" y="250" width="150" height="60" fill="#BFDBFE"/>
+<text x="95" y="286" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="middle">Atlantic Ocean</text>
+<polygon points="170,250 215,238 260,205 330,120 365,95 400,125 450,205 500,238 540,250 540,310 170,310" fill="#FEF3C7" stroke="#B45309" stroke-width="3" stroke-linejoin="round"/>
+<text x="365" y="86" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="middle">Mountain top</text>
+<path d="M40,232 C120,222 190,205 260,170 C300,148 320,125 336,108" fill="none" stroke="#2563EB" stroke-width="3.5" stroke-dasharray="8 6"/>
+<line x1="326" y1="117" x2="340.1" y2="105" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="346,100 341.6,110.1 335.4,102.8" fill="#2563EB"/>
+<text x="26" y="196" font-size="13.5" font-weight="700" fill="#2563EB" text-anchor="start">Moist air</text>
+<text x="26" y="213" font-size="13.5" font-weight="700" fill="#2563EB" text-anchor="start">from the sea</text>
+<ellipse cx="300" cy="62" rx="40" ry="14" fill="#FFFFFF" stroke="#64748B" stroke-width="2.5"/>
+<text x="300" y="67" font-size="13" font-weight="600" fill="#102A43" text-anchor="middle">cloud</text>
+<line x1="262" y1="134" x2="256" y2="150" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="276" y1="148" x2="270" y2="164" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="290" y1="162" x2="284" y2="178" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="304" y1="176" x2="298" y2="192" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<text x="236" y="150" font-size="13.5" font-weight="700" fill="#2563EB" text-anchor="end">Heavy rain</text>
+<path d="M392,96 C430,104 470,130 512,160" fill="none" stroke="#B45309" stroke-width="3.5" stroke-dasharray="8 6"/>
+<line x1="494" y1="148" x2="507.7" y2="157.6" stroke="#B45309" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="514,162 503.1,160.2 508.6,152.4" fill="#B45309"/>
+<text x="440" y="84" font-size="13.5" font-weight="700" fill="#B45309" text-anchor="start">Dry air sinks</text>
+<text x="440" y="101" font-size="13.5" font-weight="700" fill="#B45309" text-anchor="start">and warms</text>
+<text x="470" y="262" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="middle">Leeward side:</text>
+<text x="470" y="280" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="middle">little rain</text>
+<text x="262" y="262" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="middle">Windward side</text>
+<text x="280" y="338" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">Steps: 1 air rises  2 cools  3 condenses  4 rain falls on the windward side</text>
+</svg>

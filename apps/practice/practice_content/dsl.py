@@ -21,16 +21,24 @@ def _steps(steps):
     return steps
 
 
-def MC(prompt, choices, steps, concept="", skill="", hint="", feedback=""):
-    """Multiple-choice question: 4 options (C(...)), exactly one correct."""
+def MC(prompt, choices, steps, concept="", skill="", hint="", feedback="", diagram="", diagram_alt=""):
+    """Multiple-choice question: 4 options (C(...)), exactly one correct.
+
+    `diagram`: file name of a bundled SVG in static/lessons/diagrams/ shown beside the question (a map,
+    a graph...); `diagram_alt` (required with it) describes it for screen readers.
+    """
     return {"kind": "choice", "prompt": prompt, "choices": list(choices), "steps": _steps(steps),
-            "concept": concept, "skill": skill, "hint": hint, "feedback": feedback}
+            "concept": concept, "skill": skill, "hint": hint, "feedback": feedback,
+            "diagram": diagram, "diagram_alt": diagram_alt}
 
 
-def NUM(prompt, answer, steps, tolerance=0, unit="", concept="", skill="", hint="", feedback=""):
-    """Typed numeric answer. `tolerance` is the accepted distance from `answer` (e.g. 0.05)."""
+def NUM(prompt, answer, steps, tolerance=0, unit="", concept="", skill="", hint="", feedback="",
+        diagram="", diagram_alt=""):
+    """Typed numeric answer. `tolerance` is the accepted distance from `answer` (e.g. 0.05).
+    `diagram` / `diagram_alt`: as for MC."""
     return {"kind": "numeric", "prompt": prompt, "answer": answer, "tolerance": tolerance, "unit": unit,
-            "steps": _steps(steps), "concept": concept, "skill": skill, "hint": hint, "feedback": feedback}
+            "steps": _steps(steps), "concept": concept, "skill": skill, "hint": hint, "feedback": feedback,
+            "diagram": diagram, "diagram_alt": diagram_alt}
 
 
 def practice_set(module, topic, title, lesson, questions, mock=False, time_limit_minutes=None):

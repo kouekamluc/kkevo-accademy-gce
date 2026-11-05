@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" font-family="Inter, Arial, sans-serif">
+<title>Diagram of a hydroelectric power station</title>
+<rect width="560" height="320" fill="#FFFFFF"/>
+<polygon points="0,130 205,130 205,282 0,282" fill="#FFFFFF"/>
+<polygon points="20,118 205,118 205,262 160,250 100,206 55,160 20,138" fill="#2563EB" fill-opacity="0.35" stroke="#2563EB" stroke-width="2"/>
+<polygon points="0,138 20,138 55,160 100,206 160,250 205,262 205,300 0,300" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<polygon points="205,104 245,104 262,262 205,262" fill="#CBD5E1" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="262,262 540,262 540,300 205,300 205,262" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<polygon points="400,262 540,262 540,276 400,276" fill="#2563EB" fill-opacity="0.5"/>
+<polyline points="210,226 252,236 292,248" fill="none" stroke="#102A43" stroke-width="7"/>
+<rect x="268.0" y="214.0" width="112.0" height="48.0" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<circle cx="300" cy="240" r="13" fill="#FFFFFF" stroke="#047857" stroke-width="3"/>
+<rect x="328.0" y="228.0" width="38.0" height="24.0" rx="3" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+<line x1="313.0" y1="240.0" x2="328.0" y2="240.0" stroke="#102A43" stroke-width="3"/>
+<polyline points="380,256 400,262" fill="none" stroke="#2563EB" stroke-width="4"/>
+<line x1="440.0" y1="262.0" x2="440.0" y2="190.0" stroke="#102A43" stroke-width="3"/>
+<line x1="425.0" y1="204.0" x2="455.0" y2="204.0" stroke="#102A43" stroke-width="3"/>
+<line x1="430.0" y1="262.0" x2="440.0" y2="218.0" stroke="#102A43" stroke-width="2"/>
+<line x1="450.0" y1="262.0" x2="440.0" y2="218.0" stroke="#102A43" stroke-width="2"/>
+<line x1="366.0" y1="214.0" x2="425.0" y2="204.0" stroke="#DC2626" stroke-width="2.5"/>
+<line x1="455.0" y1="204.0" x2="540.0" y2="232.0" stroke="#DC2626" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="112.0" y="94.0" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700">Reservoir (stored water)</text>
+<line x1="112.0" y1="100.0" x2="112.0" y2="128.0" stroke="#2563EB" stroke-width="2"/>
+<text x="225.0" y="78.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Dam</text>
+<line x1="225.0" y1="84.0" x2="225.0" y2="102.0" stroke="#102A43" stroke-width="2"/>
+<text x="130.0" y="232.0" font-size="14" fill="#102A43" text-anchor="end">1 Water enters</text>
+<text x="130.0" y="250.0" font-size="14" fill="#102A43" text-anchor="end">the intake</text>
+<line x1="134.0" y1="234.0" x2="207.0" y2="226.0" stroke="#102A43" stroke-width="1.5"/>
+<text x="218.0" y="289.0" font-size="14" fill="#102A43" text-anchor="start">2 Penstock (pipe)</text>
+<line x1="245.0" y1="274.0" x2="247.0" y2="236.0" stroke="#102A43" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="300.0" y="196.0" font-size="14" fill="#102A43" text-anchor="middle">3 Turbine spins</text>
+<line x1="300.0" y1="200.0" x2="300.0" y2="226.0" stroke="#102A43" stroke-width="1.5"/>
+<text x="380.0" y="152.0" font-size="14" fill="#102A43" text-anchor="middle">4 Generator</text>
+<text x="380.0" y="170.0" font-size="14" fill="#102A43" text-anchor="middle">makes electricity</text>
+<line x1="358.0" y1="176.0" x2="348.0" y2="226.0" stroke="#102A43" stroke-width="1.5"/>
+<text x="498.0" y="188.0" font-size="14" fill="#B91C1C" text-anchor="middle">5 Power lines</text>
+<text x="470.0" y="296.0" font-size="14" fill="#2563EB" text-anchor="middle">River below dam</text>
+<text x="280.0" y="28.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Hydroelectric power station</text>
+</svg>

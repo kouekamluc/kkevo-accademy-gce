@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="Inter, Arial, sans-serif">
+<title>Sketch map of the world's main forest regions</title>
+<rect width="640" height="400" fill="#FFFFFF"/>
+<rect x="0.5" y="4.0" width="639.0" height="249.8" rx="0" fill="#EFF6FF" stroke="#CBD5E1" stroke-width="1"/>
+<polygon points="21.3,29.3 35.6,22.2 71.1,22.2 97.8,22.2 151.1,18.7 174.2,25.8 204.4,40.0 220.4,54.2 202.7,66.7 184.9,79.1 176.0,91.6 177.8,102.2 168.9,93.3 147.6,98.7 147.6,111.1 156.4,114.7 165.3,109.3 163.6,118.2 172.4,128.9 179.6,130.7 167.1,125.3 156.4,120.0 133.3,111.1 124.4,104.0 115.6,93.3 110.2,86.2 99.6,75.6 99.6,61.3 80.0,43.6 53.3,40.0 26.7,40.0" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="222.2,40.0 240.0,40.0 284.4,22.2 284.4,8.0 213.3,8.0 195.6,11.6" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="181.3,132.4 192.0,125.3 209.8,128.9 227.6,137.8 231.1,146.7 257.8,155.6 250.7,171.6 234.7,192.9 216.9,210.7 204.4,221.3 199.1,239.1 192.0,239.1 188.4,226.7 193.8,200.0 195.6,178.7 184.9,171.6 176.0,155.6 177.8,146.7" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="289.8,109.3 296.9,96.9 309.3,82.7 337.8,80.9 339.6,88.0 355.6,91.6 376.9,91.6 380.4,98.7 396.4,125.3 410.7,125.3 391.1,152.0 391.1,173.3 382.2,189.3 376.9,198.2 364.4,207.1 352.0,207.1 341.3,178.7 343.1,160.9 336.0,148.4 336.0,139.6 328.9,136.0 312.9,137.8 305.8,139.6 296.9,132.4 289.8,121.8" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="302.2,82.7 304.0,70.2 318.2,64.9 312.9,61.3 323.6,56.0 334.2,50.7 334.2,43.6 328.9,36.4 346.7,24.0 364.4,20.4 391.1,25.8 426.7,22.2 462.2,16.9 497.8,9.8 524.4,16.9 568.9,18.7 604.4,22.2 640.0,25.8 640.0,31.1 622.2,40.0 604.4,48.9 597.3,56.0 568.9,54.2 560.0,70.2 547.6,75.6 544.0,84.4 536.9,75.6 536.9,91.6 533.3,102.2 515.6,111.1 512.0,120.0 508.4,130.7 497.8,123.6 503.1,144.9 494.2,132.4 492.4,116.4 483.6,107.6 476.4,107.6 462.2,120.0 456.9,132.4 449.8,116.4 444.4,107.6 430.2,102.2 421.3,100.4 419.6,102.2 423.1,111.1 412.4,118.2 396.4,125.3 389.3,109.3 380.4,96.9 382.2,88.0 384.0,82.7 368.0,80.9 366.2,75.6 360.9,75.6 359.1,80.9 353.8,73.8 343.1,66.7 348.4,73.8 352.0,75.6 348.4,79.1 341.3,72.0 334.2,68.4 325.3,70.2 318.2,79.1 309.3,82.7" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="522.7,185.8 536.9,178.7 551.1,168.0 563.6,168.0 572.4,166.2 579.6,180.4 592.0,192.9 586.7,212.4 570.7,214.2 560.0,207.1 549.3,201.8 524.4,207.1" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="311.1,57.8 321.8,56.0 316.4,47.1 311.1,43.6 309.3,48.9" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="551.1,91.6 560.0,86.2 570.7,82.7 572.4,73.8 568.9,75.6 561.8,82.7 552.9,86.2" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="398.2,191.1 403.6,191.1 408.9,173.3 407.1,168.0 398.2,176.9" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="627.6,208.9 636.4,214.2 631.1,219.6 625.8,219.6" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="488.9,137.8 494.2,139.6 506.7,152.0 504.9,155.6 497.8,150.2" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="513.8,144.9 524.4,137.8 531.6,137.8 528.0,152.0 517.3,152.0" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="552.9,148.4 570.7,152.0 586.7,164.4 572.4,162.7 560.0,153.8" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<polygon points="508.4,157.3 522.7,159.1 522.7,161.8 508.4,160.0" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+<line x1="1.0" y1="146.7" x2="639.0" y2="146.7" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="1.0" y1="104.9" x2="639.0" y2="104.9" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="1.0" y1="188.4" x2="639.0" y2="188.4" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="6.0" y="142.7" font-size="13" fill="#64748B" text-anchor="start">Equator</text>
+<text x="6.0" y="100.9" font-size="13" fill="#64748B" text-anchor="start">Tropic of Cancer</text>
+<text x="6.0" y="184.4" font-size="13" fill="#64748B" text-anchor="start">Tropic of Capricorn</text>
+<polygon points="156.4,68.4 181.3,66.7 195.6,68.4 184.9,82.7 160.0,86.2" fill="#047857" stroke="#047857" stroke-width="1.5" fill-opacity="0.28"/>
+<polygon points="311.1,68.4 328.9,57.8 355.6,54.2 373.3,57.8 355.6,66.7 328.9,70.2" fill="#047857" stroke="#047857" stroke-width="1.5" fill-opacity="0.28"/>
+<polygon points="515.6,89.8 533.3,75.6 551.1,68.4 542.2,84.4" fill="#047857" stroke="#047857" stroke-width="1.5" fill-opacity="0.28"/>
+<polygon points="26.7,32.9 71.1,29.3 106.7,34.7 151.1,40.0 186.7,43.6 213.3,50.7 209.8,57.8 177.8,61.3 142.2,54.2 97.8,50.7 53.3,40.0" fill="#047857" stroke="#047857" stroke-width="1.5" fill-opacity="0.55"/>
+<polygon points="328.9,40.0 337.8,29.3 373.3,25.8 426.7,29.3 497.8,29.3 551.1,32.9 586.7,40.0 568.9,48.9 515.6,52.4 462.2,47.1 417.8,43.6 373.3,43.6 346.7,43.6" fill="#047857" stroke="#047857" stroke-width="1.5" fill-opacity="0.55"/>
+<polygon points="184.9,143.1 199.1,137.8 213.3,137.8 227.6,143.1 231.1,150.2 227.6,159.1 213.3,168.0 199.1,166.2 188.4,160.9 183.1,152.0" fill="#047857" stroke="#064E3B" stroke-width="1.5" fill-opacity="0.95"/>
+<polygon points="336.0,141.3 346.7,141.3 362.7,139.6 373.3,143.1 371.6,153.8 362.7,159.1 352.0,157.3 343.1,153.8 337.8,148.4" fill="#047857" stroke="#064E3B" stroke-width="1.5" fill-opacity="0.95"/>
+<polygon points="488.9,137.8 494.2,139.6 506.7,152.0 504.9,155.6 497.8,150.2" fill="#047857" stroke="#064E3B" stroke-width="1.5" fill-opacity="0.95"/>
+<polygon points="513.8,144.9 524.4,137.8 531.6,137.8 528.0,152.0 517.3,152.0" fill="#047857" stroke="#064E3B" stroke-width="1.5" fill-opacity="0.95"/>
+<polygon points="552.9,148.4 570.7,152.0 586.7,164.4 572.4,162.7 560.0,153.8" fill="#047857" stroke="#064E3B" stroke-width="1.5" fill-opacity="0.95"/>
+<polygon points="494.2,111.1 508.4,109.3 512.0,125.3 503.1,128.9 496.0,121.8" fill="#047857" stroke="#064E3B" stroke-width="1.5" fill-opacity="0.95"/>
+<polygon points="342.2,125.9 345.1,132.9 352.7,133.5 346.9,138.4 348.7,145.8 342.2,141.8 335.8,145.8 337.5,138.4 331.8,133.5 339.3,132.9" fill="#DC2626" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="208.0" cy="152.0" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="208.0" y="156.5" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">1</text>
+<circle cx="357.3" cy="148.4" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="357.3" y="152.9" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">2</text>
+<circle cx="519.1" cy="146.7" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="519.1" y="151.2" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">3</text>
+<circle cx="133.3" cy="43.6" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="133.3" y="48.1" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">4</text>
+<circle cx="453.3" cy="36.4" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="453.3" y="40.9" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">4</text>
+<circle cx="172.4" cy="75.6" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="172.4" y="80.1" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">5</text>
+<circle cx="346.7" cy="59.6" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="346.7" y="64.1" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">5</text>
+<circle cx="536.9" cy="80.9" r="10" fill="#102A43" stroke="#FFFFFF" stroke-width="2"/><text x="536.9" y="85.4" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="700">5</text>
+<text x="14.0" y="275.8" font-size="13" fill="#64748B" text-anchor="start">Simplified sketch: shapes and positions are approximate.</text>
+<rect x="14" y="290.77777777777777" width="26" height="16" fill="#047857" fill-opacity="0.95" stroke="#047857" stroke-width="1.5"/>
+<text x="48.0" y="303.8" font-size="14" fill="#102A43" text-anchor="start">1  Amazon basin (rainforest)</text>
+<rect x="14" y="316.77777777777777" width="26" height="16" fill="#047857" fill-opacity="0.95" stroke="#047857" stroke-width="1.5"/>
+<text x="48.0" y="329.8" font-size="14" fill="#102A43" text-anchor="start">2  Congo basin (rainforest)</text>
+<rect x="14" y="342.77777777777777" width="26" height="16" fill="#047857" fill-opacity="0.95" stroke="#047857" stroke-width="1.5"/>
+<text x="48.0" y="355.8" font-size="14" fill="#102A43" text-anchor="start">3  South-East Asia (rainforest)</text>
+<rect x="330" y="290.77777777777777" width="26" height="16" fill="#047857" fill-opacity="0.55" stroke="#047857" stroke-width="1.5"/>
+<text x="364.0" y="303.8" font-size="14" fill="#102A43" text-anchor="start">4  Northern coniferous (boreal)</text>
+<rect x="330" y="316.77777777777777" width="26" height="16" fill="#047857" fill-opacity="0.28" stroke="#047857" stroke-width="1.5"/>
+<text x="364.0" y="329.8" font-size="14" fill="#102A43" text-anchor="start">5  Temperate broadleaf and mixed</text>
+<polygon points="343.0,348.8 345.4,354.5 351.6,355.0 346.9,359.0 348.3,365.1 343.0,361.8 337.7,365.1 339.1,359.0 334.4,355.0 340.6,354.5" fill="#DC2626" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="364.0" y="361.8" font-size="14" fill="#102A43" text-anchor="start">Cameroon (forest in south and east)</text>
+</svg>

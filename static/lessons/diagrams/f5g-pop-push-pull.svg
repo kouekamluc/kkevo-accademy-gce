@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<text x="280.0" y="26.0" font-size="16" text-anchor="middle" font-weight="700" fill="#102A43" >Push and pull factors of migration</text>
+<rect x="20.0" y="50.0" width="190.0" height="230.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2" />
+<rect x="350.0" y="50.0" width="190.0" height="230.0" fill="#ECFDF5" stroke="#047857" stroke-width="2" />
+<text x="115.0" y="78.0" font-size="15" text-anchor="middle" font-weight="700" fill="#B45309" >SOURCE (origin)</text>
+<text x="445.0" y="78.0" font-size="15" text-anchor="middle" font-weight="700" fill="#047857" >DESTINATION</text>
+<text x="115.0" y="102.0" font-size="14" text-anchor="middle" font-weight="700" fill="#102A43" >PUSH factors</text>
+<text x="115.0" y="132.0" font-size="14" text-anchor="middle" font-weight="400" fill="#102A43" >Few jobs</text>
+<text x="115.0" y="166.0" font-size="14" text-anchor="middle" font-weight="400" fill="#102A43" >Poor soil, small farms</text>
+<text x="115.0" y="200.0" font-size="14" text-anchor="middle" font-weight="400" fill="#102A43" >Conflict or flood</text>
+<text x="115.0" y="234.0" font-size="14" text-anchor="middle" font-weight="400" fill="#102A43" >Few schools and clinics</text>
+<text x="445.0" y="102.0" font-size="14" text-anchor="middle" font-weight="700" fill="#102A43" >PULL factors</text>
+<text x="445.0" y="132.0" font-size="14" text-anchor="middle" font-weight="400" fill="#102A43" >Jobs and higher pay</text>
+<text x="445.0" y="166.0" font-size="14" text-anchor="middle" font-weight="400" fill="#102A43" >Schools and clinics</text>
+<text x="445.0" y="200.0" font-size="14" text-anchor="middle" font-weight="400" fill="#102A43" >Safety and peace</text>
+<text x="445.0" y="234.0" font-size="14" text-anchor="middle" font-weight="400" fill="#102A43" >Family and friends</text>
+<line x1="215" y1="165" x2="345" y2="165" stroke="#102A43" stroke-width="3" marker-end="url(#ar)"/>
+<text x="280.0" y="150.0" font-size="14" text-anchor="middle" font-weight="700" fill="#102A43" >Migrants move</text>
+<text x="280.0" y="190.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >Obstacles:</text>
+<text x="280.0" y="208.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >cost, distance,</text>
+<text x="280.0" y="226.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >laws, fear</text>
+<text x="280.0" y="320.0" font-size="14" text-anchor="middle" font-weight="400" fill="#64748B" >People weigh the push and pull factors before they move.</text>
+</svg>

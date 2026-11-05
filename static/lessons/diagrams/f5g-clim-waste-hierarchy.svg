@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+
+<text x="280" y="24" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700" >The waste hierarchy: best choice at the top</text>
+<polygon points="20,48 540,48 518,100 42,100" fill="#D1FAE5" stroke="#047857" stroke-width="2" stroke-linejoin="round" />
+<text x="280" y="71" font-size="15" text-anchor="middle" fill="#047857" font-weight="700" >REDUCE</text>
+<text x="280" y="90" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400" >Make less waste</text>
+<polygon points="42,104 518,104 496,156 64,156" fill="#ECFDF5" stroke="#047857" stroke-width="2" stroke-linejoin="round" />
+<text x="280" y="127" font-size="15" text-anchor="middle" fill="#047857" font-weight="700" >REUSE</text>
+<text x="280" y="146" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400" >Use things again</text>
+<polygon points="64,160 496,160 474,212 86,212" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" stroke-linejoin="round" />
+<text x="280" y="183" font-size="15" text-anchor="middle" fill="#2563EB" font-weight="700" >RECYCLE</text>
+<text x="280" y="202" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400" >Make new things from waste</text>
+<polygon points="86,216 474,216 452,268 108,268" fill="#FEF3C7" stroke="#B45309" stroke-width="2" stroke-linejoin="round" />
+<text x="280" y="239" font-size="15" text-anchor="middle" fill="#B45309" font-weight="700" >COMPOST / RECOVER</text>
+<text x="280" y="258" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400" >Rot food waste; get energy</text>
+<polygon points="108,272 452,272 430,324 130,324" fill="#FEE2E2" stroke="#B91C1C" stroke-width="2" stroke-linejoin="round" />
+<text x="280" y="295" font-size="15" text-anchor="middle" fill="#B91C1C" font-weight="700" >DISPOSE</text>
+<text x="280" y="314" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400" >Landfill or dumping: worst</text>
+</svg>

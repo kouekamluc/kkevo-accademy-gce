@@ -197,6 +197,73 @@ SYLLABI = {
             ("Paper 2", "Structured essays."),
         ]),
     ]),
+    ("geography", "form-5"): ("Geography (O Level, 0550)",
+                              "Outline summarised from the GCE Board's revised 0550 Geography syllabus (first examined "
+                              "June 2025), published at camgceb.org. Paper 1 is 50 multiple-choice questions in 1 hour "
+                              "30 minutes; Paper 2 has seven questions, four to be answered, in 2 hours 30 minutes, and "
+                              "the map reading question is compulsory.", [
+        ("Map Reading and Interpretation", [
+            ("Map reading", "Definition and importance of maps; marginal information; conventional signs and colours; grid references; directions and bearings; scales; measuring distance and area; copying, reducing and enlarging."),
+            ("Map interpretation", "Relief and contours, drainage, vegetation, settlement, communication, location of economic activity and land use; sketch maps; links between the physical environment and human activities."),
+        ]),
+        ("The Earth as a Planet", [
+            ("The earth in the solar system", "The solar system and the planets; the shape of the earth and the evidence for it."),
+            ("Location and time", "Latitude, longitude, great circles and the International Date Line; distances; local time, standard time and time zones."),
+            ("Rotation and revolution", "The difference between rotation and revolution, and the effects of each."),
+        ]),
+        ("Hydrology, Meteorology and Climatology", [
+            ("The hydrological cycle", "Global water resources; the water cycle as a system at global and drainage-basin scale; inputs, outputs, flows and stores."),
+            ("The earth's atmosphere", "Definition and structure of the atmosphere; the main characteristics of the troposphere and stratosphere."),
+            ("Weather and climate", "Weather versus climate; weather elements and instruments; observing, recording and presenting weather data; simple weather maps."),
+            ("Forms of condensation", "Precipitation and its forms (rain, hail, snow, fog, mist, dew, sleet); the three main types of rainfall."),
+            ("Pressure and winds", "Atmospheric pressure and the planetary pressure belts and winds; local winds (land and sea breezes, mountain and valley winds, monsoons)."),
+            ("Basic concepts of climate", "Tropical humid, tropical wet and dry and tropical dry climates; the factors that influence weather and climate."),
+            ("Environmental hazards", "Global warming; floods, droughts and desertification; water scarcity; waste management: causes, effects, adaptation and mitigation."),
+        ]),
+        ("Biogeography", [
+            ("Soil", "Meaning and components of soil; main soil types and climatic zones; the soil profile; soil erosion and conservation."),
+            ("Vegetation", "Classification of world vegetation; tropical rainforest, tropical grassland and tropical desert; factors, problems and solutions."),
+            ("Ecosystems", "Meaning, structure (biotic and abiotic parts) and functioning of ecosystems; food chains and food webs."),
+        ]),
+        ("Geomorphology", [
+            ("The structure of the Earth", "Structure of the earth; rocks by origin; volcanic eruptions, earthquakes and geo-hazards; landscape formation at plate margins."),
+            ("Denudational processes and landforms", "Weathering; erosion, transport and deposition by running water, wind and waves; dendritic, trellised and radial drainage; denudational hazards."),
+        ]),
+        ("Development", [
+            ("Concept of development and economic growth", "Development, economic growth, underdevelopment and poverty; indicators of development; LICs, AICs, NICs and oil-rich countries; sustainable development."),
+            ("The process of development", "Causes of and solutions to underdevelopment and poverty (MDGs and SDGs); the economic miracle of NICs (one case study); Rostow's model of economic growth."),
+        ]),
+        ("Economic Activities", [
+            ("Agriculture", "Classifying agriculture; intensive and extensive farming systems and their forms; agriculture as a system; changes over time (green revolution, climate-smart agriculture); the Von Thunen model."),
+            ("Management of primary resources", "Meaning, classification and conservation of resources; forest, fish and mineral resources: distribution, importance, problems and solutions."),
+            ("Major sources of power", "Traditional and modern sources of power; renewable and non-renewable energy; global distribution; energy sources of the future."),
+            ("Secondary industries", "Classifying manufacturing; global distribution of industry; industrialisation in LICs, NICs and AICs; Weber's model of industrial location."),
+            ("Tertiary industries", "Globalisation; trade; transport and telecommunication; the internet; tourism."),
+        ]),
+        ("Population Geography", [
+            ("Population distribution", "Population data and sources; population density and distribution; the global pattern."),
+            ("Population composition and structure", "Age groups and their characteristics; the basic age-sex pyramids."),
+            ("Population change", "World population growth; fertility and mortality; the demographic transition model; migration."),
+            ("Population and resources", "Optimum, over- and under-population; Malthus's model of population and resources."),
+        ]),
+        ("Settlement Geography", [
+            ("General concepts of settlement", "Settlement and its types; site and situation; factors in siting; rural and urban settlement."),
+            ("Settlement types and their morphology", "Types and patterns of rural settlement; urbanisation; types of urban settlement; urban problems and solutions; urban fields."),
+        ]),
+        ("Human Activities and the Environment", [
+            ("Development and environmental management", "Land reclamation; multi-purpose river development projects; pollution: types, causes and solutions."),
+        ]),
+        ("The Geography of Cameroon", [
+            ("Background of Cameroon", "Location of Cameroon in Africa; the administrative map and regional headquarters."),
+            ("Physical characteristics", "Relief units, drainage systems and watersheds, climatic types, vegetation and soils of Cameroon."),
+            ("Human characteristics", "Population growth, structure, distribution and migration; settlement and urbanisation; town and countryside relationships."),
+            ("Economic development potentials", "Agriculture; forest, fish, mineral and energy resources; multi-purpose river development; manufacturing; the informal sector; transport; tourism; economic growth and constraints."),
+        ]),
+        ("Examination", [
+            ("Paper 1", "50 multiple-choice questions, all to be answered, in 1 hour 30 minutes (35% of the marks)."),
+            ("Paper 2", "Seven essay and problem-solving questions, four to be answered, in 2 hours 30 minutes (65%); the map reading question is compulsory."),
+        ]),
+    ]),
     ("computer-science", "lower-sixth"): ("Computer Science (A Level, 795) — Year 1", "", [
         ("Computer Organization & Architecture", [
             ("Machine models", "Von Neumann vs Harvard; data, address and control buses."),

@@ -1,0 +1,348 @@
+"""Practice sets for Form 5 Geography: Economic Activities, Agriculture (one set per lesson)."""
+
+from .dsl import *  # noqa: F403
+
+COURSE = ("geography", "form-5")
+
+MODULE = "Economic Activities"
+TOPIC = "Agriculture"
+
+SETS = []
+
+# ------------------------------------------------------------------ 1. Defining and classifying agriculture
+SETS.append(practice_set(
+    module=MODULE, topic=TOPIC,
+    title="Defining and classifying agriculture: systems and inputs",
+    lesson="agri-defining-and-classifying-agriculture",
+    questions=[
+        MC("Which statement best defines agriculture?", [
+            C("The mining of minerals from the ground", why="This is mining, another primary industry."),
+            C("The growing of crops and the rearing of animals on land to produce food and raw materials", correct=True),
+            C("The making of goods in factories", why="This is manufacturing, a secondary industry."),
+            C("The selling of goods in shops", why="This is trade, a tertiary activity."),
+        ], steps=[S("Recall", text="Agriculture is a primary industry: growing crops and rearing animals for food and raw materials.")],
+           concept="Definition of agriculture", skill="Recall",
+           hint="It is a primary industry that works directly with the land."),
+        MC("Into which two major systems does the revised syllabus classify agriculture?", [
+            C("Subsistence and commercial", why="These describe the purpose of farming, not the two major systems in the syllabus."),
+            C("Arable and pastoral", why="These describe crops against animals."),
+            C("Intensive and extensive", correct=True),
+            C("Plantation and nomadic", why="These are single forms, not the two systems."),
+        ], steps=[S("Recall", text="The syllabus uses intensive and extensive farming as the two major systems.")],
+           concept="Two farming systems", skill="Recall",
+           hint="The two systems differ in how much is put into each hectare."),
+        MC("Which feature describes extensive farming?", [
+            C("Small farm and many workers per hectare", why="This describes intensive farming."),
+            C("High yield on every hectare", why="High yields per hectare are typical of intensive farming."),
+            C("Large amounts of fertiliser on each field", why="Heavy use of fertiliser is intensive."),
+            C("Large area with a small input of labour and capital per hectare", correct=True),
+        ], steps=[S("Compare", text="Extensive farming spreads little labour and capital over a large area, so the yield per hectare is low.")],
+           concept="Extensive farming characteristics", skill="Concept",
+           hint="Think of a large farm with few workers."),
+        NUM("A vegetable farm of 4 hectares employs 12 workers. How many workers are there per hectare?", 3,
+            steps=[S("Divide workers by area", math=r"12 \div 4 = 3")],
+            unit="workers per hectare", concept="Labour input per hectare", skill="Calculation",
+            hint="Divide the number of workers by the number of hectares."),
+        MC("In the diagram of a cocoa farm as a system, what is shown by the arrow from OUTPUTS back to INPUTS?", [
+            C("The process of weeding", why="Weeding is a process, shown in the middle box."),
+            C("Rainfall", why="Rainfall is a physical input, not an arrow back from outputs."),
+            C("The cocoa beans", why="The beans are an output."),
+            C("Feedback: income from sales is used to buy new inputs", correct=True),
+        ], steps=[S("Read the figure", text="The return arrow shows feedback: part of the income from outputs is spent on inputs such as seedlings and spray.")],
+           concept="Feedback in a farm system", skill="Interpretation",
+           hint="What does a farmer do with money from selling the crop?",
+           diagram="f5g-agri-system.svg", diagram_alt="Diagram of a cocoa farm as a system: inputs, processes and outputs in three boxes with a feedback arrow from outputs back to inputs"),
+        MC("Which of these is a PHYSICAL input of a farm?", [
+            C("Hired labour", why="Labour is a human input."),
+            C("Soil and rainfall", correct=True),
+            C("A tractor", why="Machines are capital, a human input."),
+            C("Fertiliser bought in a shop", why="Fertiliser is a capital (human) input."),
+        ], steps=[S("Sort", text="Physical inputs come from nature: relief, soil, rainfall and temperature. Labour, machines and fertiliser are human inputs.")],
+           concept="Physical and human inputs", skill="Concept",
+           hint="Which input exists without human effort?"),
+        MC("Farm X has 1 hectare of vegetables and 5 workers near Yaounde. Farm Y has 2 000 hectares of grass with 6 herders in the Adamawa plateau. Which classification is correct?", [
+            C("X is extensive and Y is intensive", why="This reverses the pattern: many workers on a small area is intensive."),
+            C("Both are intensive", why="Y has very low inputs per hectare."),
+            C("X is intensive and Y is extensive", correct=True),
+            C("Both are extensive", why="X uses much labour on a tiny area."),
+        ], steps=[S("Workers per hectare", text="X has 5 workers per hectare. Y has 6 herders on 2 000 hectares, which is 0.003 per hectare."),
+                  S("Classify", text="X is intensive and Y is extensive.")],
+           concept="Classifying farms", skill="Application",
+           hint="Work out the number of workers for each hectare."),
+        NUM("A farm of 3 hectares harvests 6 000 kg of maize. What is the yield in kg per hectare?", 2000,
+            steps=[S("Divide the harvest by the area", math=r"6000 \div 3 = 2000")],
+            unit="kg per hectare", concept="Yield per hectare", skill="Calculation",
+            hint="Yield means the amount harvested from each hectare."),
+    ]))
+
+# ------------------------------------------------------------------ 2. Intensive farming
+SETS.append(practice_set(
+    module=MODULE, topic=TOPIC,
+    title="Intensive farming: characteristics and forms",
+    lesson="agri-intensive-farming-systems-and-forms",
+    questions=[
+        MC("Which of these is a characteristic of intensive farming?", [
+            C("Very large farms with few workers", why="This describes extensive farming."),
+            C("Low yield per hectare", why="Intensive farming gives high yields per hectare."),
+            C("A large input of labour or capital on a small area", correct=True),
+            C("Land left fallow for many years", why="Fallow is typical of shifting cultivation."),
+        ], steps=[S("Recall", text="Intensive farming means a large input per hectare on a small area, giving high yields.")],
+           concept="Characteristics of intensive farming", skill="Recall",
+           hint="Think of input per hectare."),
+        MC("Where is intensive subsistence rice farming typical?", [
+            C("The prairies of Canada", why="Canada's prairies are for wheat on large mechanised farms."),
+            C("The Sahel", why="The Sahel is dry; nomadic pastoralism is typical."),
+            C("The pampas of Argentina", why="The pampas are for ranching."),
+            C("The dense, monsoon river deltas of Asia", correct=True),
+        ], steps=[S("Link", text="Rice needs warm, wet, flat land and many workers. The crowded monsoon deltas of Asia suit it.")],
+           concept="Rice farming", skill="Recall",
+           hint="Rice needs warm weather, flooded fields and many workers."),
+        MC("Why are market gardens usually near large towns?", [
+            C("The soil is always best there", why="Soil quality does not decide the location; market access does."),
+            C("Vegetables are perishable and need a short, cheap journey to the market", correct=True),
+            C("There is no other use for land near towns", why="Land near towns has many uses and is costly."),
+            C("Rainfall is highest near towns", why="Rainfall is unrelated to the location of gardens."),
+        ], steps=[S("Reason", text="Vegetables, fruit and flowers spoil quickly. Growers stay near the market to cut transport costs and time.")],
+           concept="Location of market gardening", skill="Reasoning",
+           hint="Think of how fast tomatoes spoil."),
+        MC("Which statement best defines plantation agriculture?", [
+            C("Large-scale growing of a single cash crop on an estate, with hired workers and processing, mainly for export", correct=True),
+            C("Growing food on a tiny plot for the family", why="This describes subsistence farming."),
+            C("Moving herds to find water", why="This is nomadic pastoralism."),
+            C("Clearing a plot and abandoning it after a few years", why="This is shifting cultivation."),
+        ], steps=[S("Recall", text="A plantation is a large estate growing one cash crop for export, with a factory and hired workers.")],
+           concept="Plantation agriculture", skill="Recall",
+           hint="Think of the oil palm, rubber or tea estates."),
+        MC("Which pairing of farming form and country is correct?", [
+            C("Market gardening and the Sahel", why="The Sahel is a dry region for herding."),
+            C("Intensive dairy farming and the Sahara", why="The Sahara is too dry for dairy farming."),
+            C("Plantation agriculture and Malaysian oil palm", correct=True),
+            C("Rice farming and the Canadian prairies", why="The prairies grow wheat."),
+        ], steps=[S("Check each pair", text="Malaysia (an NIC) has large oil palm plantations. The other pairs match forms with the wrong environment.")],
+           concept="Examples of forms", skill="Application",
+           hint="Match the crop to a warm, wet region."),
+        NUM("A plantation of 800 hectares employs 2 400 workers. How many workers are there per hectare?", 3,
+            steps=[S("Divide", math=r"2400 \div 800 = 3")],
+            unit="workers per hectare", concept="Labour on plantations", skill="Calculation",
+            hint="Divide the number of workers by the number of hectares."),
+        MC("Which is a problem of plantation farming for a LIC that depends on one export crop?", [
+            C("A fall in the world price can cut the income of the workers and the country", correct=True),
+            C("There are too many rainy days", why="Plantations are usually in wet regions because crops need rain."),
+            C("It uses too few workers", why="Plantations use many workers."),
+            C("There is no market", why="Plantations grow for a market, mainly export."),
+        ], steps=[S("Reason", text="Depending on one crop is risky. If its world price falls, wages and export income fall.")],
+           concept="Problems of plantations", skill="Reasoning",
+           hint="Think of what happens if the price of the one crop drops."),
+        MC("Which statement explains why a plantation near Mount Cameroon is classed as intensive?", [
+            C("It covers a large area", why="Area alone does not decide the system."),
+            C("It is far from the market", why="Distance is not the test."),
+            C("It uses much labour and capital on each hectare, and gives a high yield per hectare", correct=True),
+            C("It grows crops only for the family", why="Plantations grow cash crops for sale."),
+        ], steps=[S("Judge by input", text="A plantation puts much labour, fertiliser and capital on each hectare, so it is intensive despite its size.")],
+           concept="Plantations as intensive farming", skill="Analysis",
+           hint="Look at input per hectare, not the size."),
+    ]))
+
+# ------------------------------------------------------------------ 3. Extensive farming
+SETS.append(practice_set(
+    module=MODULE, topic=TOPIC,
+    title="Extensive farming: characteristics and forms",
+    lesson="agri-extensive-farming-systems-and-forms",
+    questions=[
+        MC("What is shifting cultivation?", [
+            C("Keeping herds that move to find grass and water", why="This is nomadic pastoralism."),
+            C("Clearing a plot, farming it for a few years, then leaving it fallow and moving on", correct=True),
+            C("Growing one cash crop on a large estate", why="This is plantation agriculture."),
+            C("Growing wheat with combine harvesters", why="This is prairie wheat farming."),
+        ], steps=[S("Recall", text="In shifting cultivation farmers clear and burn a plot, use it for a few years and move on while it recovers.")],
+           concept="Shifting cultivation", skill="Recall",
+           hint="Think of the cycle of clearing, planting and moving."),
+        MC("In shifting cultivation, what does the word fallow mean?", [
+            C("Land that is flooded for rice", why="Flooding is for rice paddies."),
+            C("Land planted with trees for timber", why="Fallow land is left to regrow naturally."),
+            C("Land left uncultivated so that vegetation and soil fertility recover", correct=True),
+            C("Land used for grazing cattle", why="Grazing is not fallow."),
+        ], steps=[S("Recall", text="Fallow means land left uncultivated so that natural vegetation and soil fertility can recover.")],
+           concept="Fallow", skill="Recall",
+           hint="Think of what happens to a plot after the farmer moves away."),
+        MC("In which type of region is nomadic pastoralism typical?", [
+            C("Dry and semi-dry regions such as the Sahel", correct=True),
+            C("Crowded river deltas", why="These are for intensive rice farming."),
+            C("Cool, wet lowlands near large cities", why="These suit dairy farming."),
+            C("Heated glasshouses in the Netherlands", why="Glasshouses are for horticulture."),
+        ], steps=[S("Link", text="In dry lands the grass is thin and rain is unreliable, so herders move to find food and water for the animals.")],
+           concept="Nomadic pastoralism", skill="Concept",
+           hint="Where is rain too unreliable for crops?"),
+        MC("Which feature describes commercial ranching?", [
+            C("Tiny plots farmed by many family workers", why="This is intensive farming."),
+            C("Herds moved by families with no fixed home", why="This is nomadic pastoralism."),
+            C("Very large farms with few workers, rearing cattle or sheep for sale", correct=True),
+            C("Glasshouses growing flowers", why="This is horticulture."),
+        ], steps=[S("Recall", text="Ranches are huge fenced farms in Argentina, Australia and the USA, rearing animals for meat or wool, with few workers.")],
+           concept="Commercial ranching", skill="Concept",
+           hint="Think of the pampas and the outback."),
+        NUM("A ranch of 3 000 hectares keeps 1 500 cattle. How many hectares are there for each animal?", 2,
+            steps=[S("Divide the area by the number of animals", math=r"3000 \div 1500 = 2")],
+            unit="hectares per animal", concept="Land per animal on a ranch", skill="Calculation",
+            hint="Divide the area by the number of animals."),
+        MC("A farm of 1 800 hectares on flat grassland uses a few machines and 4 workers to grow wheat for sale. Which form is it?", [
+            C("Market gardening", why="Market gardens are tiny and use many workers."),
+            C("Intensive subsistence rice farming", why="Rice farms are tiny and produce food for families."),
+            C("Shifting cultivation", why="Shifting cultivation moves between plots and does not use combine harvesters."),
+            C("Prairie wheat farming", correct=True),
+        ], steps=[S("Match the clues", text="Large area, flat land, few workers and wheat for sale point to prairie wheat farming.")],
+           concept="Prairie wheat farming", skill="Application",
+           hint="Look at the crop, the size and the number of workers."),
+        MC("Why does shifting cultivation become less successful when population increases?", [
+            C("More rainfall falls on the plots", why="Rainfall is unrelated to the population."),
+            C("Machines become cheaper", why="Shifting cultivation uses hand tools."),
+            C("The fallow period becomes shorter, so the soil cannot recover and yields fall", correct=True),
+            C("Crops grow too fast", why="The problem is poor soil, not fast growth."),
+        ], steps=[S("Reason", text="More people need more plots, so each plot returns to farming sooner. The soil has no time to recover.")],
+           concept="Problems of shifting cultivation", skill="Reasoning",
+           hint="What happens to the length of the rest period when land is scarce?"),
+        MC("Look at the line. Which form sits at the most extensive end of the line?", [
+            C("Market gardening", why="Market gardening is at the intensive end."),
+            C("Nomadic pastoralism", correct=True),
+            C("Rice farming", why="Rice farming is toward the intensive end."),
+            C("Plantation", why="Plantations are toward the intensive end."),
+        ], steps=[S("Read the figure", text="The left end of the line is the most extensive. Nomadic pastoralism uses the most land and the least input per hectare.")],
+           concept="Extensive and intensive spectrum", skill="Interpretation",
+           hint="Find the end of the line labelled EXTENSIVE.",
+           diagram="f5g-agri-spectrum.svg", diagram_alt="Line from extensive on the left to intensive on the right with farm forms placed along it: nomadic pastoralism, shifting cultivation, commercial ranching, plantation, rice farming and market gardening"),
+    ]))
+
+# ------------------------------------------------------------------ 4. Changes in agriculture
+SETS.append(practice_set(
+    module=MODULE, topic=TOPIC,
+    title="Changes in agriculture: green revolution and climate-smart farming",
+    lesson="agri-changes-in-agriculture-green-revolution-and-climate-smart",
+    questions=[
+        MC("What is mechanisation in farming?", [
+            C("The use of machines in place of human or animal labour", correct=True),
+            C("Growing crops without water", why="This is not mechanisation."),
+            C("Moving herds with the seasons", why="This is nomadic pastoralism."),
+            C("Leaving land fallow", why="Fallow is resting the land."),
+        ], steps=[S("Recall", text="Mechanisation is the use of machines such as tractors and combine harvesters instead of human or animal labour.")],
+           concept="Mechanisation", skill="Recall",
+           hint="Think of tractors."),
+        MC("The green revolution is best described as", [
+            C("a movement to plant more forests", why="It was about raising crop yields."),
+            C("a return to traditional hand tools", why="It used modern science."),
+            C("a switch from crops to animals", why="It was about crops, mostly wheat and rice."),
+            C("the use of high-yielding crop varieties with fertiliser and irrigation to raise yields", correct=True),
+        ], steps=[S("Recall", text="From the 1960s, high-yielding wheat and rice with fertiliser, pesticide and water greatly raised yields.")],
+           concept="Green revolution", skill="Recall",
+           hint="Think of new seeds."),
+        MC("Which was a benefit of the green revolution?", [
+            C("Lower costs for poor farmers", why="Seeds, chemicals and water raised costs for poor farmers."),
+            C("Cleaner rivers", why="Chemicals often polluted water."),
+            C("Higher yields and more food, so less hunger in many areas", correct=True),
+            C("More crop varieties", why="Fewer crop varieties were grown."),
+        ], steps=[S("Recall", text="Higher yields were the main benefit. Costs, pollution and loss of variety were problems.")],
+           concept="Benefits of the green revolution", skill="Concept",
+           hint="What happened to the harvest per hectare?"),
+        NUM("After the use of new seed, the yield of a farm rose from 2 tonnes per hectare to 5 tonnes per hectare. What was the percentage increase?", 150,
+            steps=[S("Find the increase", math=r"5 - 2 = 3"), S("Divide by the old yield and multiply by 100", math=r"\frac{3}{2} \times 100 = 150")],
+            unit="%", concept="Percentage increase in yield", skill="Calculation",
+            hint="Subtract the old yield from the new one, then divide by the old yield."),
+        MC("Which of these is the best definition of climate-smart agriculture?", [
+            C("Farming only in cool climates", why="It is not about a particular climate."),
+            C("An approach that raises productivity, helps farmers adapt to climate change and reduces greenhouse gases where possible", correct=True),
+            C("A method that uses more fertiliser every year", why="Heavy fertiliser can add emissions."),
+            C("Farming without any trees", why="Trees are encouraged, as in agroforestry."),
+        ], steps=[S("Recall", text="The three aims are productivity and income, adaptation to climate change and mitigation (reducing greenhouse gases).")],
+           concept="Climate-smart agriculture", skill="Recall",
+           hint="Think of the three boxes in the diagram.",
+           diagram="f5g-agri-csa.svg", diagram_alt="Diagram of climate-smart agriculture with three aims: productivity, adaptation and mitigation, each with example practices"),
+        MC("What is conservation tillage?", [
+            C("Ploughing deeply and burning crop residues", why="This exposes soil and releases gases."),
+            C("Planting only trees", why="That is forestry, not tillage."),
+            C("Catching rainwater in tanks", why="That is water harvesting."),
+            C("Ploughing little or not at all and leaving crop residues on the soil", correct=True),
+        ], steps=[S("Recall", text="Conservation tillage keeps the soil covered, saves moisture and cuts erosion and fuel use.")],
+           concept="Conservation tillage", skill="Concept",
+           hint="Think of what happens when ploughing is reduced."),
+        MC("A farmer plants trees among his maize. The trees shade the soil and store carbon. Which aims of climate-smart agriculture does this help?", [
+            C("Productivity only", why="It also helps adaptation and mitigation."),
+            C("Mitigation only", why="Shade also helps the farmer adapt to heat and dry spells."),
+            C("Neither", why="Agroforestry is a classic climate-smart practice."),
+            C("Adaptation and mitigation", correct=True),
+        ], steps=[S("Link", text="Shade and soil protection help the farmer adapt. Stored carbon in trees helps to reduce greenhouse gases (mitigation).")],
+           concept="Agroforestry", skill="Application",
+           hint="One effect helps the farmer; the other helps the air."),
+        MC("Which is a challenge to adopting climate-smart practices for small farmers in Cameroon?", [
+            C("Training and the cost of seed, tanks and seedlings", correct=True),
+            C("Too many advisers", why="Advisers are usually too few and too far."),
+            C("Higher rainfall everywhere", why="This is not a feature of every region."),
+            C("No need to change", why="Climate change is already affecting farming."),
+        ], steps=[S("Reason", text="Many farmers lack money, training and information, and benefits such as tree growth take years.")],
+           concept="Challenges of climate-smart agriculture", skill="Reasoning",
+           hint="Think of what small farmers lack."),
+    ]))
+
+# ------------------------------------------------------------------ 5. Von Thunen model
+SETS.append(practice_set(
+    module=MODULE, topic=TOPIC,
+    title="The Von Thunen model: rings, rent and limits",
+    lesson="agri-the-von-thunen-model",
+    questions=[
+        MC("What does the Von Thunen model explain?", [
+            C("How farmland use changes with distance from a market town", correct=True),
+            C("How rivers form valleys", why="This is physical geography, not the model."),
+            C("How climate changes with height", why="The model assumes the same climate everywhere."),
+            C("How population grows", why="The model is about land use."),
+        ], steps=[S("Recall", text="The model explains the pattern of farming around a market, with land use in rings.")],
+           concept="Aim of the model", skill="Recall",
+           hint="Think of the pattern around a town."),
+        MC("In the diagram, which land use is in ring 1, next to the market?", [
+            C("Ranching", why="Ranching is in ring 4."),
+            C("Forestry", why="Forestry is in ring 2."),
+            C("Market gardening and dairy", correct=True),
+            C("Crops", why="Crops are in ring 3."),
+        ], steps=[S("Read the figure", text="Ring 1, nearest the market, is market gardening and dairying.")],
+           concept="Rings of the model", skill="Interpretation",
+           hint="Look at the key beside the figure.",
+           diagram="f5g-agri-thunen-rings.svg", diagram_alt="Four concentric rings around a market: market gardening and dairy, forestry, crops and ranching, with the distances 2 km, 4 km, 8 km and 18 km marked"),
+        MC("Which of these is an assumption of the model?", [
+            C("Many markets", why="The model has one market town."),
+            C("Modern refrigerated lorries", why="Transport is by horse and cart in the model."),
+            C("Government subsidies for crops", why="The isolated state has no government policy."),
+            C("Flat land with the same soil and climate everywhere", correct=True),
+        ], steps=[S("Recall", text="The model assumes an isolated state, flat and uniform land, one market and rational farmers.")],
+           concept="Assumptions", skill="Recall",
+           hint="The model is a simplified, ideal landscape."),
+        NUM("A ring boundary lies 12 km from the market. On a drawing at a scale of 1 cm to 3 km, what is the radius in centimetres?", 4,
+            steps=[S("Divide by the scale", math=r"12 \div 3 = 4")],
+            unit="cm", concept="Drawing rings to scale", skill="Calculation",
+            hint="Divide the real distance by the number of km that 1 cm stands for."),
+        MC("Using the figure, which land use pays the highest rent at 3 km from the market? (Rent at 3 km: gardening 30, forestry 50, crops 45, ranching 30.)", [
+            C("Market gardening and dairy", why="Its rent has already fallen to 30 at 3 km."),
+            C("Crops", why="Crops pay 45, which is below forestry."),
+            C("Ranching", why="Ranching pays only 30 at 3 km."),
+            C("Forestry", correct=True),
+        ], steps=[S("Compare rents", text="At 3 km the rents are 30, 50, 45 and 30. Forestry is highest, so it takes the land. This agrees with ring 2 (2 to 4 km).")],
+           concept="Highest rent decides land use", skill="Interpretation",
+           hint="Read the highest line at 3 km on the graph.",
+           diagram="f5g-agri-thunen-rent.svg", diagram_alt="Graph of rent against distance with four sloping lines for market gardening and dairy, forestry, crops and ranching"),
+        NUM("In the model, the rent for crops is 60 minus 5 times the distance in km. What is the rent at 6 km?", 30,
+            steps=[S("Substitute", math=r"60 - 5 \times 6 = 30")],
+            unit="units per hectare", concept="Calculating land rent", skill="Calculation",
+            hint="Multiply 5 by the distance, then subtract from 60."),
+        MC("Why is ranching in the outermost ring?", [
+            C("Animals can walk to market and ranching needs a large area at low rent", correct=True),
+            C("Ranching spoils very quickly", why="It is vegetables and milk that spoil quickly."),
+            C("Land near the market is free", why="Land near the market has the highest rent."),
+            C("Cattle cannot survive near towns", why="This is not the reason."),
+        ], steps=[S("Reason", text="Ranching is extensive and needs much land. Animals walk to market, so transport cost is lower, and it pays only the low rent of distant land.")],
+           concept="Why ranching is outermost", skill="Reasoning",
+           hint="What does extensive farming need most, and what is cheaper far from the market?"),
+        MC("Which is a limit of the Von Thunen model today?", [
+            C("Farmers always know prices", why="This is an assumption of the model, not a limit."),
+            C("Refrigeration and modern transport reduce the effect of distance and perishability", correct=True),
+            C("There is only one town", why="This is an assumption, and it is not true in the real world."),
+            C("All land is flat and uniform", why="This is an assumption; in reality land is uneven."),
+        ], steps=[S("Reason", text="Today, lorries and refrigeration allow fresh food to travel long distances, so rings are less clear. The other options are model assumptions, not limits.")],
+           concept="Limits of the model", skill="Analysis",
+           hint="Ask which option shows the real world differing from the model."),
+    ]))

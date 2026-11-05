@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" font-family="Inter, Arial, sans-serif">
+<title>One grid square divided into tenths to give the six-figure reference 343554</title>
+<style>.h{stroke:#FFFFFF;stroke-width:4;paint-order:stroke;stroke-linejoin:round}</style>
+<defs><circle id="t" r="4" fill="none" stroke="#047857" stroke-width="2"/><circle id="p" r="2.5" fill="#047857"/></defs>
+<rect width="640" height="480" fill="#FFFFFF"/>
+<rect x="70" y="50" width="360" height="360" rx="0" fill="#FFFFFF" stroke="#102A43" stroke-width="3"/>
+<line x1="106" y1="50" x2="106" y2="410" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="70" y1="374" x2="430" y2="374" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="142" y1="50" x2="142" y2="410" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="70" y1="338" x2="430" y2="338" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="178" y1="50" x2="178" y2="410" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="70" y1="302" x2="430" y2="302" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="214" y1="50" x2="214" y2="410" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="70" y1="266" x2="430" y2="266" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="250" y1="50" x2="250" y2="410" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="70" y1="230" x2="430" y2="230" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="286" y1="50" x2="286" y2="410" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="70" y1="194" x2="430" y2="194" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="322" y1="50" x2="322" y2="410" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="70" y1="158" x2="430" y2="158" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="358" y1="50" x2="358" y2="410" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="70" y1="122" x2="430" y2="122" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="394" y1="50" x2="394" y2="410" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<line x1="70" y1="86" x2="430" y2="86" stroke="#64748B" stroke-width="2" stroke-opacity="0.4"/>
+<text x="70" y="430" font-size="13" fill="#102A43" text-anchor="middle">0</text>
+<text x="62" y="415" font-size="13" fill="#102A43" text-anchor="end">0</text>
+<text x="106" y="430" font-size="13" fill="#102A43" text-anchor="middle">1</text>
+<text x="62" y="379" font-size="13" fill="#102A43" text-anchor="end">1</text>
+<text x="142" y="430" font-size="13" fill="#102A43" text-anchor="middle">2</text>
+<text x="62" y="343" font-size="13" fill="#102A43" text-anchor="end">2</text>
+<text x="178" y="430" font-size="13" fill="#102A43" text-anchor="middle">3</text>
+<text x="62" y="307" font-size="13" fill="#102A43" text-anchor="end">3</text>
+<text x="214" y="430" font-size="13" fill="#102A43" text-anchor="middle">4</text>
+<text x="62" y="271" font-size="13" fill="#102A43" text-anchor="end">4</text>
+<text x="250" y="430" font-size="13" fill="#102A43" text-anchor="middle">5</text>
+<text x="62" y="235" font-size="13" fill="#102A43" text-anchor="end">5</text>
+<text x="286" y="430" font-size="13" fill="#102A43" text-anchor="middle">6</text>
+<text x="62" y="199" font-size="13" fill="#102A43" text-anchor="end">6</text>
+<text x="322" y="430" font-size="13" fill="#102A43" text-anchor="middle">7</text>
+<text x="62" y="163" font-size="13" fill="#102A43" text-anchor="end">7</text>
+<text x="358" y="430" font-size="13" fill="#102A43" text-anchor="middle">8</text>
+<text x="62" y="127" font-size="13" fill="#102A43" text-anchor="end">8</text>
+<text x="394" y="430" font-size="13" fill="#102A43" text-anchor="middle">9</text>
+<text x="62" y="91" font-size="13" fill="#102A43" text-anchor="end">9</text>
+<text x="430" y="430" font-size="13" fill="#102A43" text-anchor="middle">10</text>
+<text x="62" y="55" font-size="13" fill="#102A43" text-anchor="end">10</text>
+<text x="70" y="40" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">34</text>
+<text x="430" y="40" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">35</text>
+<text x="440" y="55" font-size="15" fill="#102A43" font-weight="700">56</text>
+<text x="440" y="415" font-size="15" fill="#102A43" font-weight="700">55</text>
+<text x="250" y="454" font-size="13" fill="#64748B" text-anchor="middle">tenths of a square along (easting)</text>
+<line x1="178" y1="410" x2="178" y2="266" stroke="#2563EB" stroke-width="3" stroke-dasharray="6 4"/>
+<line x1="70" y1="266" x2="178" y2="266" stroke="#2563EB" stroke-width="3" stroke-dasharray="6 4"/>
+<path d="M178 258v16M173 263h10" stroke="#102A43" stroke-width="2.5" fill="none"/>
+<text x="188" y="254" font-size="14" fill="#102A43" font-weight="700" class="h">church</text>
+<text x="458" y="80" font-size="15" fill="#2563EB" font-weight="700">Easting</text>
+<text x="458" y="102" font-size="14" fill="#102A43">34 and 3 tenths</text>
+<text x="458" y="124" font-size="15" fill="#102A43" font-weight="700">= 343</text>
+<text x="458" y="170" font-size="15" fill="#2563EB" font-weight="700">Northing</text>
+<text x="458" y="192" font-size="14" fill="#102A43">55 and 4 tenths</text>
+<text x="458" y="214" font-size="15" fill="#102A43" font-weight="700">= 554</text>
+<rect x="450" y="244" width="176" height="44" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="538" y="273" font-size="20" fill="#047857" text-anchor="middle" font-weight="700">343554</text>
+<text x="458" y="316" font-size="14" fill="#102A43">Always: along</text>
+<text x="458" y="336" font-size="14" fill="#102A43">first, then up.</text>
+</svg>

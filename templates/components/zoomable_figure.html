@@ -1,0 +1,13 @@
+{% comment %}
+A figure (map, diagram, graph) that opens full-width in a scrollable panel when tapped, so dense maps stay
+readable on a phone. Params: src, alt, class (classes for the small image).
+{% endcomment %}
+<div x-data="{ zoom: false }" @keydown.escape.window="zoom = false">
+  <img src="{{ src }}" alt="{{ alt }}" loading="lazy" decoding="async" class="cursor-zoom-in {{ class }}"
+       tabindex="0" role="button" aria-haspopup="dialog" title="Tap to enlarge" @click="zoom = true" @keydown.enter="zoom = true">
+  <span class="mt-1 block text-center text-xs text-ink-muted print:hidden">Tap the figure to enlarge it</span>
+  <div x-show="zoom" x-cloak role="dialog" aria-modal="true" aria-label="Enlarged figure" class="fixed inset-0 z-50 overflow-auto bg-white print:hidden">
+    <button type="button" @click="zoom = false" class="sticky left-0 top-0 z-10 m-3 flex h-11 items-center rounded-btn border border-surface-border bg-white px-4 text-sm font-semibold text-navy shadow-card">Close figure</button>
+    <img src="{{ src }}" alt="{{ alt }}" class="mx-auto -mt-14 block h-auto w-[900px] max-w-none px-3 pb-6 pt-16">
+  </div>
+</div>

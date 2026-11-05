@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 350" role="img" aria-label="Strip of longitudes from 60 degrees west to 60 degrees east with the local time at each 15 degrees when it is noon at Greenwich">
+<rect width="560" height="350" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker></defs>
+<rect x="-20.0" y="95" width="600.0" height="105" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<line x1="40" y1="95" x2="40" y2="200" stroke="#94A3B8" stroke-width="1.5"/>
+<text x="40" y="220" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >60°W</text>
+<text x="40" y="85" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle" >08:00</text>
+<line x1="100" y1="95" x2="100" y2="200" stroke="#94A3B8" stroke-width="1.5"/>
+<text x="100" y="220" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >45°W</text>
+<text x="100" y="85" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle" >09:00</text>
+<line x1="160" y1="95" x2="160" y2="200" stroke="#94A3B8" stroke-width="1.5"/>
+<text x="160" y="220" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >30°W</text>
+<text x="160" y="85" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle" >10:00</text>
+<line x1="220" y1="95" x2="220" y2="200" stroke="#94A3B8" stroke-width="1.5"/>
+<text x="220" y="220" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >15°W</text>
+<text x="220" y="85" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle" >11:00</text>
+<line x1="280" y1="95" x2="280" y2="200" stroke="#B91C1C" stroke-width="3.5"/>
+<text x="280" y="220" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >0°</text>
+<text x="280" y="85" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B91C1C" text-anchor="middle" >12:00</text>
+<line x1="340" y1="95" x2="340" y2="200" stroke="#94A3B8" stroke-width="1.5"/>
+<text x="340" y="220" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >15°E</text>
+<text x="340" y="85" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle" >13:00</text>
+<line x1="400" y1="95" x2="400" y2="200" stroke="#94A3B8" stroke-width="1.5"/>
+<text x="400" y="220" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >30°E</text>
+<text x="400" y="85" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle" >14:00</text>
+<line x1="460" y1="95" x2="460" y2="200" stroke="#94A3B8" stroke-width="1.5"/>
+<text x="460" y="220" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >45°E</text>
+<text x="460" y="85" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle" >15:00</text>
+<line x1="520" y1="95" x2="520" y2="200" stroke="#94A3B8" stroke-width="1.5"/>
+<text x="520" y="220" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >60°E</text>
+<text x="520" y="85" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle" >16:00</text>
+<text x="280" y="30" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle" >Local time when it is 12:00 noon at Greenwich</text>
+<text x="280" y="52" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="middle" >Each 15° of longitude is 1 hour.</text>
+<line x1="150" y1="245" x2="80" y2="245" stroke="#64748B" stroke-width="3" marker-end="url(#ah)"/>
+<text x="78" y="268" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#64748B" text-anchor="start" >EARLIER</text>
+<text x="78" y="286" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="start" >(behind) West</text>
+<line x1="410" y1="245" x2="480" y2="245" stroke="#64748B" stroke-width="3" marker-end="url(#ah)"/>
+<text x="482" y="268" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#64748B" text-anchor="end" >LATER</text>
+<text x="482" y="286" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="end" >(ahead) East</text>
+<text x="280" y="262" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" >Sun reaches the east first</text>
+<path d="M328 198 l-8 -16 l16 0 z" fill="#B45309" stroke="#102A43" stroke-width="1.5"/>
+<rect x="336" y="132" width="86" height="38" fill="#ffffff" stroke="#B45309" stroke-width="1.5"/>
+<text x="342" y="148" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#B45309" text-anchor="start" >Yaoundé</text>
+<text x="342" y="164" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#B45309" text-anchor="start" >about 12°E</text>
+<text x="280" y="326" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >1° = 4 minutes of time.   Example: 12°E is 12 × 4 = 48 minutes ahead of Greenwich.</text>
+</svg>

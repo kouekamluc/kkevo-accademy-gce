@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 366" font-family="Inter, Arial, sans-serif">
+<title>Classification of resources into natural and non-natural, renewable and non-renewable</title>
+<rect width="560" height="366" fill="#FFFFFF"/>
+<rect x="190.0" y="14.0" width="180.0" height="44.0" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280.0" y="42.0" font-size="17" fill="#2563EB" text-anchor="middle" font-weight="700">RESOURCES</text>
+<line x1="280.0" y1="58.0" x2="280.0" y2="76.0" stroke="#102A43" stroke-width="2"/>
+<line x1="140.0" y1="76.0" x2="420.0" y2="76.0" stroke="#102A43" stroke-width="2"/>
+<line x1="140.0" y1="76.0" x2="140.0" y2="96.0" stroke="#102A43" stroke-width="2"/>
+<line x1="420.0" y1="76.0" x2="420.0" y2="96.0" stroke="#102A43" stroke-width="2"/>
+<rect x="40.0" y="96.0" width="200.0" height="44.0" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="140.0" y="124.0" font-size="16" fill="#047857" text-anchor="middle" font-weight="700">Natural resources</text>
+<rect x="320.0" y="96.0" width="200.0" height="44.0" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="420.0" y="124.0" font-size="16" fill="#B45309" text-anchor="middle" font-weight="700">Non-natural resources</text>
+<text x="140.0" y="160.0" font-size="14" fill="#64748B" text-anchor="middle">(made by nature)</text>
+<text x="420.0" y="160.0" font-size="14" fill="#64748B" text-anchor="middle">(made or developed by people)</text>
+<line x1="140.0" y1="168.0" x2="140.0" y2="186.0" stroke="#102A43" stroke-width="2"/>
+<line x1="75.0" y1="186.0" x2="205.0" y2="186.0" stroke="#102A43" stroke-width="2"/>
+<line x1="75.0" y1="186.0" x2="75.0" y2="204.0" stroke="#102A43" stroke-width="2"/>
+<line x1="205.0" y1="186.0" x2="205.0" y2="204.0" stroke="#102A43" stroke-width="2"/>
+<rect x="10.0" y="204.0" width="130.0" height="150.0" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<rect x="145.0" y="204.0" width="130.0" height="150.0" rx="8" fill="#F1F5F9" stroke="#64748B" stroke-width="2"/>
+<text x="75.0" y="228.0" font-size="15" fill="#047857" text-anchor="middle" font-weight="700">Renewable</text>
+<text x="75.0" y="252.0" font-size="14" fill="#102A43" text-anchor="middle">can be replaced</text>
+<text x="75.0" y="273.0" font-size="14" fill="#102A43" text-anchor="middle">forests, fish,</text>
+<text x="75.0" y="294.0" font-size="14" fill="#102A43" text-anchor="middle">water, wind,</text>
+<text x="75.0" y="315.0" font-size="14" fill="#102A43" text-anchor="middle">sunshine, soil</text>
+<text x="210.0" y="228.0" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">Non-renewable</text>
+<text x="210.0" y="252.0" font-size="14" fill="#102A43" text-anchor="middle">cannot be</text>
+<text x="210.0" y="273.0" font-size="14" fill="#102A43" text-anchor="middle">replaced quickly</text>
+<text x="210.0" y="294.0" font-size="14" fill="#102A43" text-anchor="middle">oil, coal, gas,</text>
+<text x="210.0" y="315.0" font-size="14" fill="#102A43" text-anchor="middle">iron, copper,</text>
+<text x="210.0" y="336.0" font-size="14" fill="#102A43" text-anchor="middle">gold, bauxite</text>
+<line x1="420.0" y1="168.0" x2="420.0" y2="204.0" stroke="#102A43" stroke-width="2"/>
+<rect x="320.0" y="204.0" width="200.0" height="150.0" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="420.0" y="232.0" font-size="14" fill="#102A43" text-anchor="middle">Human skills and labour</text>
+<text x="420.0" y="254.0" font-size="14" fill="#102A43" text-anchor="middle">Capital (money, machines)</text>
+<text x="420.0" y="276.0" font-size="14" fill="#102A43" text-anchor="middle">Roads, ports, railways</text>
+<text x="420.0" y="298.0" font-size="14" fill="#102A43" text-anchor="middle">Factories and buildings</text>
+<text x="420.0" y="320.0" font-size="14" fill="#102A43" text-anchor="middle">Knowledge and technology</text>
+</svg>

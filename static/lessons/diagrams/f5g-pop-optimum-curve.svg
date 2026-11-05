@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<text x="290.0" y="26.0" font-size="16" text-anchor="middle" font-weight="700" fill="#102A43" >Population size and standard of living (idea only)</text>
+<line x1="70.0" y1="290.0" x2="530.0" y2="290.0" stroke="#102A43" stroke-width="2" />
+<line x1="70.0" y1="290.0" x2="70.0" y2="54.0" stroke="#102A43" stroke-width="2" />
+<text x="300.0" y="324.0" font-size="14" text-anchor="middle" font-weight="400" fill="#102A43" >Number of people living in the area</text>
+<text x="14.0" y="48.0" font-size="13" text-anchor="start" font-weight="400" fill="#64748B" >Standard of living (output per person)</text>
+<path d="M80.0,259.6 L102.0,254.6 L124.0,246.0 L146.0,232.7 L168.0,213.7 L190.0,189.1 L212.0,160.4 L234.0,130.8 L256.0,104.6 L278.0,86.5 L300.0,80.0 L322.0,86.5 L344.0,104.6 L366.0,130.8 L388.0,160.4 L410.0,189.1 L432.0,213.7 L454.0,232.7 L476.0,246.0 L498.0,254.6 L520.0,259.6" fill="none" stroke="#2563EB" stroke-width="3"/>
+<line x1="300.0" y1="290.0" x2="300.0" y2="80.0" stroke="#047857" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="300.0" cy="80.0" r="6" fill="#047857"/>
+<text x="300.0" y="56.0" font-size="15" text-anchor="middle" font-weight="700" fill="#047857" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">OPTIMUM</text>
+<text x="165.0" y="85.0" font-size="15" text-anchor="middle" font-weight="700" fill="#B45309" >UNDER-</text>
+<text x="165.0" y="103.0" font-size="15" text-anchor="middle" font-weight="700" fill="#B45309" >POPULATION</text>
+<text x="165.0" y="123.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >resources not</text>
+<text x="165.0" y="139.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >fully used</text>
+<text x="455.0" y="85.0" font-size="15" text-anchor="middle" font-weight="700" fill="#B45309" >OVER-</text>
+<text x="455.0" y="103.0" font-size="15" text-anchor="middle" font-weight="700" fill="#B45309" >POPULATION</text>
+<text x="455.0" y="123.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >too many people</text>
+<text x="455.0" y="139.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >for the resources</text>
+<text x="290.0" y="352.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >Idea diagram: no numbers. The best population depends on resources and technology.</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 385" role="img" aria-label="Winds moving north are deflected to the right in the Northern Hemisphere and to the left in the Southern Hemisphere, with no deflection at the equator">
+<rect width="580" height="385" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker></defs>
+<line x1="30" y1="200" x2="330" y2="200" stroke="#2563EB" stroke-width="3.5"/>
+<text x="326" y="190" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563EB" text-anchor="end" >Equator: no deflection</text>
+<text x="180" y="28" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" >Deflection of winds and currents</text>
+<line x1="120" y1="190" x2="120" y2="70" stroke="#64748B" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M120 190 Q120 90 220 68" fill="none" stroke="#047857" stroke-width="4" marker-end="url(#ag)"/>
+<text x="160" y="120" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle" ></text>
+<text x="228" y="90" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="start" >bends to the RIGHT</text>
+<text x="70" y="56" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="start" >Northern Hemisphere</text>
+<line x1="220" y1="340" x2="220" y2="220" stroke="#64748B" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#ah)"/>
+<path d="M220 340 Q220 240 120 218" fill="none" stroke="#047857" stroke-width="4" marker-end="url(#ag)"/>
+<text x="50" y="258" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="start" >bends to the LEFT</text>
+<text x="150" y="366" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="start" >Southern Hemisphere</text>
+<line x1="360" y1="95" x2="395" y2="95" stroke="#64748B" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="402" y="100" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#64748B" text-anchor="start" >Straight path</text>
+<text x="402" y="118" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="start" >(no rotation)</text>
+<line x1="360" y1="160" x2="395" y2="160" stroke="#047857" stroke-width="4"/>
+<text x="402" y="165" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="start" >Actual path</text>
+<text x="402" y="183" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#047857" text-anchor="start" >(turning earth)</text>
+<text x="360" y="250" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" >Both arrows head north</text>
+<text x="360" y="270" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" >(up the page).</text>
+</svg>

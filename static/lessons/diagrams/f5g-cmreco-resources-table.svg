@@ -1,0 +1,37 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<text x="280" y="22" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Selected resources and where they are found</text>
+<rect x="10" y="40" width="540" height="30" rx="6" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="70" y="61" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="700">Resource</text>
+<text x="250" y="61" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="700">Area</text>
+<text x="450" y="61" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="700">Main use</text>
+<rect x="10" y="74" width="540" height="36" rx="4" fill="#EFF6FF" stroke="#CBD5E1" stroke-width="1"/>
+<text x="70" y="98" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Oil</text>
+<text x="250" y="98" font-size="14" fill="#102A43" text-anchor="middle">Offshore, south-west coast</text>
+<text x="450" y="98" font-size="14" fill="#102A43" text-anchor="middle">Fuel, export income</text>
+<rect x="10" y="114" width="540" height="36" rx="4" fill="#ffffff" stroke="#CBD5E1" stroke-width="1"/>
+<text x="70" y="138" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Gas</text>
+<text x="250" y="138" font-size="14" fill="#102A43" text-anchor="middle">Douala and Kribi coast</text>
+<text x="450" y="138" font-size="14" fill="#102A43" text-anchor="middle">Power, industry</text>
+<rect x="10" y="154" width="540" height="36" rx="4" fill="#EFF6FF" stroke="#CBD5E1" stroke-width="1"/>
+<text x="70" y="178" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Hydropower</text>
+<text x="250" y="178" font-size="14" fill="#102A43" text-anchor="middle">Sanaga and Benue rivers</text>
+<text x="450" y="178" font-size="14" fill="#102A43" text-anchor="middle">Electricity</text>
+<rect x="10" y="194" width="540" height="36" rx="4" fill="#ffffff" stroke="#CBD5E1" stroke-width="1"/>
+<text x="70" y="218" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Bauxite</text>
+<text x="250" y="218" font-size="14" fill="#102A43" text-anchor="middle">Adamawa highlands</text>
+<text x="450" y="218" font-size="14" fill="#102A43" text-anchor="middle">Aluminium (future)</text>
+<rect x="10" y="234" width="540" height="36" rx="4" fill="#EFF6FF" stroke="#CBD5E1" stroke-width="1"/>
+<text x="70" y="258" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Iron ore</text>
+<text x="250" y="258" font-size="14" fill="#102A43" text-anchor="middle">East and south</text>
+<text x="450" y="258" font-size="14" fill="#102A43" text-anchor="middle">Steel (future)</text>
+<rect x="10" y="274" width="540" height="36" rx="4" fill="#ffffff" stroke="#CBD5E1" stroke-width="1"/>
+<text x="70" y="298" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Limestone</text>
+<text x="250" y="298" font-size="14" fill="#102A43" text-anchor="middle">North (Figuil)</text>
+<text x="450" y="298" font-size="14" fill="#102A43" text-anchor="middle">Cement</text>
+<rect x="10" y="314" width="540" height="36" rx="4" fill="#EFF6FF" stroke="#CBD5E1" stroke-width="1"/>
+<text x="70" y="338" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Gold</text>
+<text x="250" y="338" font-size="14" fill="#102A43" text-anchor="middle">East (small mines)</text>
+<text x="450" y="338" font-size="14" fill="#102A43" text-anchor="middle">Jewellery, sale</text>
+</svg>

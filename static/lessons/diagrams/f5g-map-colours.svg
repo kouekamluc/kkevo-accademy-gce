@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<title>Colours used on topographic maps and what they usually mean</title>
+<style>.h{stroke:#FFFFFF;stroke-width:4;paint-order:stroke;stroke-linejoin:round}</style>
+<defs><circle id="t" r="4" fill="none" stroke="#047857" stroke-width="2"/><circle id="p" r="2.5" fill="#047857"/></defs>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="24" y="20" width="70" height="34" rx="4" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<text x="110" y="35" font-size="15" fill="#102A43" font-weight="700">Blue</text>
+<text x="110" y="53" font-size="14" fill="#102A43">Water: rivers, lakes, swamps, sea</text>
+<rect x="24" y="68" width="70" height="34" rx="4" fill="#047857" stroke="#102A43" stroke-width="2"/>
+<text x="110" y="83" font-size="15" fill="#102A43" font-weight="700">Green</text>
+<text x="110" y="101" font-size="14" fill="#102A43">Vegetation: forest, plantations, farms</text>
+<rect x="24" y="116" width="70" height="34" rx="4" fill="#B45309" stroke="#102A43" stroke-width="2"/>
+<text x="110" y="131" font-size="15" fill="#102A43" font-weight="700">Brown</text>
+<text x="110" y="149" font-size="14" fill="#102A43">Relief: contours and spot heights</text>
+<rect x="24" y="164" width="70" height="34" rx="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="110" y="179" font-size="15" fill="#102A43" font-weight="700">Black</text>
+<text x="110" y="197" font-size="14" fill="#102A43">Man-made features: roads, rail, names</text>
+<rect x="24" y="212" width="70" height="34" rx="4" fill="#B91C1C" stroke="#102A43" stroke-width="2"/>
+<text x="110" y="227" font-size="15" fill="#102A43" font-weight="700">Red</text>
+<text x="110" y="245" font-size="14" fill="#102A43">Main roads and built-up areas (on some maps)</text>
+<rect x="24" y="260" width="70" height="34" rx="4" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="110" y="275" font-size="15" fill="#102A43" font-weight="700">White</text>
+<text x="110" y="293" font-size="14" fill="#102A43">Open land with no special feature</text>
+<text x="24" y="328" font-size="15" fill="#2563EB" font-weight="700">Colours change from map to map. Always read the KEY.</text>
+</svg>

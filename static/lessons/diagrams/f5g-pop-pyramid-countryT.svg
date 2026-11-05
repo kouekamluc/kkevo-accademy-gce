@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280.0" y="26.0" font-size="16" text-anchor="middle" font-weight="700" fill="#102A43" >Country T: completed age-sex pyramid (exercise data)</text>
+<line x1="246.0" y1="52.0" x2="246.0" y2="280.0" stroke="#CBD5E1" stroke-width="1" />
+<text x="246.0" y="300.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >0</text>
+<line x1="314.0" y1="52.0" x2="314.0" y2="280.0" stroke="#CBD5E1" stroke-width="1" />
+<line x1="193.5" y1="52.0" x2="193.5" y2="280.0" stroke="#CBD5E1" stroke-width="1" />
+<text x="193.5" y="300.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >5</text>
+<line x1="366.5" y1="52.0" x2="366.5" y2="280.0" stroke="#CBD5E1" stroke-width="1" />
+<text x="366.5" y="300.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >5</text>
+<line x1="141.0" y1="52.0" x2="141.0" y2="280.0" stroke="#CBD5E1" stroke-width="1" />
+<text x="141.0" y="300.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >10</text>
+<line x1="419.0" y1="52.0" x2="419.0" y2="280.0" stroke="#CBD5E1" stroke-width="1" />
+<text x="419.0" y="300.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >10</text>
+<line x1="88.5" y1="52.0" x2="88.5" y2="280.0" stroke="#CBD5E1" stroke-width="1" />
+<text x="88.5" y="300.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >15</text>
+<line x1="471.5" y1="52.0" x2="471.5" y2="280.0" stroke="#CBD5E1" stroke-width="1" />
+<text x="471.5" y="300.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >15</text>
+<line x1="36.0" y1="52.0" x2="36.0" y2="280.0" stroke="#CBD5E1" stroke-width="1" />
+<text x="36.0" y="300.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >20</text>
+<line x1="524.0" y1="52.0" x2="524.0" y2="280.0" stroke="#CBD5E1" stroke-width="1" />
+<text x="524.0" y="300.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >20</text>
+<rect x="46.5" y="232.0" width="199.5" height="42.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" />
+<rect x="314.0" y="232.0" width="189.0" height="42.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2" />
+<text x="280.0" y="257.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >0-14</text>
+<rect x="99.0" y="188.0" width="147.0" height="42.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" />
+<rect x="314.0" y="188.0" width="147.0" height="42.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2" />
+<text x="280.0" y="213.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >15-29</text>
+<rect x="141.0" y="144.0" width="105.0" height="42.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" />
+<rect x="314.0" y="144.0" width="105.0" height="42.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2" />
+<text x="280.0" y="169.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >30-44</text>
+<rect x="183.0" y="100.0" width="63.0" height="42.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" />
+<rect x="314.0" y="100.0" width="63.0" height="42.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2" />
+<text x="280.0" y="125.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >45-59</text>
+<rect x="230.2" y="56.0" width="15.8" height="42.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" />
+<rect x="314.0" y="56.0" width="15.8" height="42.0" fill="#FEF3C7" stroke="#B45309" stroke-width="2" />
+<text x="280.0" y="81.0" font-size="13" text-anchor="middle" font-weight="400" fill="#102A43" >60+</text>
+<text x="160.0" y="44.0" font-size="14" text-anchor="middle" font-weight="700" fill="#2563EB" >Males (%)</text>
+<text x="400.0" y="44.0" font-size="14" text-anchor="middle" font-weight="700" fill="#B45309" >Females (%)</text>
+<text x="280.0" y="324.0" font-size="13" text-anchor="middle" font-weight="400" fill="#64748B" >Percentage of the total population. Under 15: 37%.</text>
+</svg>

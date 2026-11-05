@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Paper 2: sections A to D and which questions are answered</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="34" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle">Paper 2: 7 questions, 4 answered, 2 hours 30 minutes</text>
+<rect x="21" y="62" width="122" height="200" rx="10" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="82" y="100" font-size="16" font-weight="700" fill="#B45309" text-anchor="middle">Section A</text>
+<text x="82" y="134" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">Map reading</text>
+<text x="82" y="154" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">and</text>
+<text x="82" y="174" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">interpretation</text>
+<text x="82" y="222" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">1 question</text>
+<text x="82" y="246" font-size="14" font-weight="700" fill="#B45309" text-anchor="middle">COMPULSORY</text>
+<rect x="153" y="62" width="122" height="200" rx="10" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+<text x="214" y="100" font-size="16" font-weight="700" fill="#047857" text-anchor="middle">Section B</text>
+<text x="214" y="134" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">Physical</text>
+<text x="214" y="154" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">geography</text>
+<text x="214" y="222" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">2 questions</text>
+<text x="214" y="246" font-size="14" font-weight="700" fill="#047857" text-anchor="middle">answer 1</text>
+<rect x="285" y="62" width="122" height="200" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="346" y="100" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle">Section C</text>
+<text x="346" y="134" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">Human</text>
+<text x="346" y="154" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">geography</text>
+<text x="346" y="174" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">(LICs, NICs,</text>
+<text x="346" y="194" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">AICs)</text>
+<text x="346" y="222" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">2 questions</text>
+<text x="346" y="246" font-size="14" font-weight="700" fill="#2563EB" text-anchor="middle">answer 1</text>
+<rect x="417" y="62" width="122" height="200" rx="10" fill="#F8FAFC" stroke="#102A43" stroke-width="2.5"/>
+<text x="478" y="100" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">Section D</text>
+<text x="478" y="134" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">Geography</text>
+<text x="478" y="154" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">of Cameroon</text>
+<text x="478" y="222" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">2 questions</text>
+<text x="478" y="246" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">answer 1</text>
+<text x="280" y="296" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">1 + 1 + 1 + 1 = 4 questions answered</text>
+<text x="280" y="322" font-size="14" font-weight="400" fill="#64748B" text-anchor="middle">Section A is 25% of the marks for the whole examination.</text>
+<text x="280" y="342" font-size="14" font-weight="400" fill="#64748B" text-anchor="middle">Paper 2 is 65% of the marks (90 marks in all).</text>
+</svg>

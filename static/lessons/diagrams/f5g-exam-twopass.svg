@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A suggested plan for the 90 minutes of Paper 1</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="34" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle">A study plan for the 90 minutes (a suggestion)</text>
+<rect x="30" y="56" width="305.6" height="46" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="182.8" y="85" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">Pass 1</text>
+<rect x="335.6" y="56" width="138.9" height="46" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="405" y="85" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">Pass 2</text>
+<rect x="474.4" y="56" width="55.6" height="46" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+<text x="502.2" y="85" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">Check</text>
+<text x="30" y="124" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">0</text>
+<text x="335.6" y="124" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">55</text>
+<text x="474.4" y="124" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">80</text>
+<text x="530" y="124" font-size="13" font-weight="600" fill="#64748B" text-anchor="middle">90</text>
+<text x="530" y="142" font-size="13" font-weight="400" fill="#64748B" text-anchor="end">minutes</text>
+<rect x="30" y="150" width="16" height="16" rx="3" fill="#2563EB"/>
+<text x="56" y="164" font-size="15" font-weight="700" fill="#102A43" text-anchor="start">Pass 1: about 55 minutes</text>
+<text x="56" y="186" font-size="13.5" font-weight="400" fill="#102A43" text-anchor="start">Answer every question you find easy. Mark each doubtful question</text>
+<text x="56" y="205" font-size="13.5" font-weight="400" fill="#102A43" text-anchor="start">with a small tick beside its number and move on.</text>
+<rect x="30" y="210" width="16" height="16" rx="3" fill="#B45309"/>
+<text x="56" y="224" font-size="15" font-weight="700" fill="#102A43" text-anchor="start">Pass 2: about 25 minutes</text>
+<text x="56" y="246" font-size="13.5" font-weight="400" fill="#102A43" text-anchor="start">Return to the marked questions. Cross out options you can</text>
+<text x="56" y="265" font-size="13.5" font-weight="400" fill="#102A43" text-anchor="start">prove wrong, then choose the best of those left.</text>
+<rect x="30" y="270" width="16" height="16" rx="3" fill="#047857"/>
+<text x="56" y="284" font-size="15" font-weight="700" fill="#102A43" text-anchor="start">Check: about 10 minutes</text>
+<text x="56" y="306" font-size="13.5" font-weight="400" fill="#102A43" text-anchor="start">Make sure no question is blank. Re-read questions that use</text>
+<text x="56" y="325" font-size="13.5" font-weight="400" fill="#102A43" text-anchor="start">words like NOT, only, always, never.</text>
+<text x="280" y="352" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">Check the instructions on your own paper for how to mark answers.</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<text x="280" y="22" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">A multipurpose dam: one structure, many uses</text>
+<polygon points="0,200 190,200 190,300 0,300" fill="#FEF3C7"/>
+<polygon points="190,250 560,250 560,300 190,300" fill="#FEF3C7"/>
+<polygon points="0,110 170,110 170,200 0,200" fill="#BFDBFE" stroke="none"/>
+<polygon points="0,110 0,200 170,200" fill="none"/>
+<polygon points="170,100 200,100 215,250 160,250 160,200" fill="#94A3B8" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="170,110 0,110" fill="none"/>
+<polygon points="215,235 560,235 560,250 215,250" fill="#BFDBFE" stroke="none"/>
+<rect x="222" y="190" width="70" height="60" rx="4" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="257" y="225" font-size="13" fill="#2563EB" text-anchor="middle" font-weight="700">Turbine</text>
+<line x1="320" y1="250" x2="320" y2="170" stroke="#102A43" stroke-width="3"/><line x1="305" y1="185" x2="335" y2="185" stroke="#102A43" stroke-width="3"/><line x1="310" y1="200" x2="330" y2="200" stroke="#102A43" stroke-width="3"/>
+<line x1="320" y1="180" x2="400" y2="205" stroke="#102A43" stroke-width="2"/>
+<text x="430" y="160" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Electricity to towns</text>
+<text x="85" y="150" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700">RESERVOIR (lake)</text>
+<text x="80" y="172" font-size="13" fill="#102A43" text-anchor="middle">stores water</text>
+<text x="205" y="76" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Dam wall</text>
+<text x="440" y="232" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700">River flow is controlled</text>
+<line x1="400" y1="285" x2="540" y2="285" stroke="#2563EB" stroke-width="5"/>
+<line x1="410" y1="272" x2="410" y2="280" stroke="#047857" stroke-width="3"/>
+<line x1="432" y1="272" x2="432" y2="280" stroke="#047857" stroke-width="3"/>
+<line x1="454" y1="272" x2="454" y2="280" stroke="#047857" stroke-width="3"/>
+<line x1="476" y1="272" x2="476" y2="280" stroke="#047857" stroke-width="3"/>
+<line x1="498" y1="272" x2="498" y2="280" stroke="#047857" stroke-width="3"/>
+<line x1="520" y1="272" x2="520" y2="280" stroke="#047857" stroke-width="3"/>
+<text x="450" y="312" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">Canals water the fields</text>
+<ellipse cx="60" cy="190" rx="14" ry="6" fill="#047857"/><polygon points="74,190 84,183 84,197" fill="#047857"/>
+<text x="60" y="224" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">Fishing</text>
+<text x="280" y="52" font-size="14" fill="#102A43" text-anchor="middle">Also: flood control, drinking water, navigation and tourism</text>
+<path d="M190,258 L190,262" stroke="none"/>
+</svg>

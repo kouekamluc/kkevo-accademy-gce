@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 350" font-family="Inter, Arial, sans-serif">
+<title>Preservation compared with conservation of natural resources</title>
+<rect width="560" height="350" fill="#FFFFFF"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<text x="280.0" y="28.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">How much human use is allowed?</text>
+<rect x="40.0" y="46" width="12.5" height="22" fill="#047857"/>
+<rect x="52.0" y="46" width="12.5" height="22" fill="#087755"/>
+<rect x="64.0" y="46" width="12.5" height="22" fill="#0D7653"/>
+<rect x="76.0" y="46" width="12.5" height="22" fill="#117551"/>
+<rect x="88.0" y="46" width="12.5" height="22" fill="#16744F"/>
+<rect x="100.0" y="46" width="12.5" height="22" fill="#1A734D"/>
+<rect x="112.0" y="46" width="12.5" height="22" fill="#1F724B"/>
+<rect x="124.0" y="46" width="12.5" height="22" fill="#237149"/>
+<rect x="136.0" y="46" width="12.5" height="22" fill="#287047"/>
+<rect x="148.0" y="46" width="12.5" height="22" fill="#2C6F45"/>
+<rect x="160.0" y="46" width="12.5" height="22" fill="#316E43"/>
+<rect x="172.0" y="46" width="12.5" height="22" fill="#356D41"/>
+<rect x="184.0" y="46" width="12.5" height="22" fill="#3A6C3F"/>
+<rect x="196.0" y="46" width="12.5" height="22" fill="#3E6B3D"/>
+<rect x="208.0" y="46" width="12.5" height="22" fill="#436A3B"/>
+<rect x="220.0" y="46" width="12.5" height="22" fill="#476939"/>
+<rect x="232.0" y="46" width="12.5" height="22" fill="#4C6837"/>
+<rect x="244.0" y="46" width="12.5" height="22" fill="#506735"/>
+<rect x="256.0" y="46" width="12.5" height="22" fill="#556633"/>
+<rect x="268.0" y="46" width="12.5" height="22" fill="#596531"/>
+<rect x="280.0" y="46" width="12.5" height="22" fill="#5E652F"/>
+<rect x="292.0" y="46" width="12.5" height="22" fill="#62642D"/>
+<rect x="304.0" y="46" width="12.5" height="22" fill="#67632B"/>
+<rect x="316.0" y="46" width="12.5" height="22" fill="#6B6229"/>
+<rect x="328.0" y="46" width="12.5" height="22" fill="#706127"/>
+<rect x="340.0" y="46" width="12.5" height="22" fill="#746024"/>
+<rect x="352.0" y="46" width="12.5" height="22" fill="#795F23"/>
+<rect x="364.0" y="46" width="12.5" height="22" fill="#7D5E21"/>
+<rect x="376.0" y="46" width="12.5" height="22" fill="#825D1F"/>
+<rect x="388.0" y="46" width="12.5" height="22" fill="#865C1D"/>
+<rect x="400.0" y="46" width="12.5" height="22" fill="#8B5B1B"/>
+<rect x="412.0" y="46" width="12.5" height="22" fill="#8F5A19"/>
+<rect x="424.0" y="46" width="12.5" height="22" fill="#945917"/>
+<rect x="436.0" y="46" width="12.5" height="22" fill="#985815"/>
+<rect x="448.0" y="46" width="12.5" height="22" fill="#9D5713"/>
+<rect x="460.0" y="46" width="12.5" height="22" fill="#A15611"/>
+<rect x="472.0" y="46" width="12.5" height="22" fill="#A6550F"/>
+<rect x="484.0" y="46" width="12.5" height="22" fill="#AA540D"/>
+<rect x="496.0" y="46" width="12.5" height="22" fill="#AF530B"/>
+<rect x="508.0" y="46" width="12.5" height="22" fill="#B45309"/>
+<text x="40.0" y="92.0" font-size="14" fill="#047857" text-anchor="start" font-weight="700">No use</text>
+<text x="520.0" y="92.0" font-size="14" fill="#B45309" text-anchor="end" font-weight="700">Heavy use</text>
+<text x="280.0" y="92.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Wise (sustainable) use</text>
+<line x1="280.0" y1="68.0" x2="280.0" y2="78.0" stroke="#102A43" stroke-width="2"/>
+<rect x="20.0" y="112.0" width="240.0" height="150.0" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="140.0" y="138.0" font-size="16" fill="#047857" text-anchor="middle" font-weight="700">PRESERVATION</text>
+<text x="140.0" y="164.0" font-size="14" fill="#102A43" text-anchor="middle">Keep nature untouched.</text>
+<text x="140.0" y="186.0" font-size="14" fill="#102A43" text-anchor="middle">No cutting, fishing or mining.</text>
+<text x="140.0" y="208.0" font-size="14" fill="#102A43" text-anchor="middle">Example: a strict nature</text>
+<text x="140.0" y="230.0" font-size="14" fill="#102A43" text-anchor="middle">reserve or national park core.</text>
+<rect x="300.0" y="112.0" width="240.0" height="150.0" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="420.0" y="138.0" font-size="16" fill="#B45309" text-anchor="middle" font-weight="700">CONSERVATION</text>
+<text x="420.0" y="164.0" font-size="14" fill="#102A43" text-anchor="middle">Use resources carefully</text>
+<text x="420.0" y="186.0" font-size="14" fill="#102A43" text-anchor="middle">so they last.</text>
+<text x="420.0" y="208.0" font-size="14" fill="#102A43" text-anchor="middle">Examples: replanting trees,</text>
+<text x="420.0" y="230.0" font-size="14" fill="#102A43" text-anchor="middle">fishing quotas, recycling.</text>
+<rect x="20.0" y="282.0" width="520.0" height="52.0" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280.0" y="306.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Both protect resources for future generations.</text>
+<text x="280.0" y="326.0" font-size="14" fill="#102A43" text-anchor="middle">Conservation allows use; preservation does not.</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Sun, Earth and Moon in line: the Earth casts a round shadow on the Moon, shown as a curved edge">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker></defs>
+<circle cx="60" cy="140" r="44" fill="#FEF3C7" stroke="#B45309" stroke-width="3"/>
+<text x="60" y="205" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="middle" >Sun</text>
+<line x1="104" y1="106" x2="212" y2="106" stroke="#B45309" stroke-width="2"/>
+<line x1="104" y1="123" x2="212" y2="123" stroke="#B45309" stroke-width="2"/>
+<line x1="104" y1="140" x2="212" y2="140" stroke="#B45309" stroke-width="2"/>
+<line x1="104" y1="157" x2="212" y2="157" stroke="#B45309" stroke-width="2"/>
+<line x1="104" y1="174" x2="212" y2="174" stroke="#B45309" stroke-width="2"/>
+<path d="M250 106 L500 106 L500 174 L250 174 Z" fill="#CBD5E1" opacity="0.7"/>
+<circle cx="250" cy="140" r="34" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<text x="250" y="205" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="middle" >Earth</text>
+<text x="400" y="70" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#64748B" text-anchor="middle" >Earth's shadow</text>
+<circle cx="440" cy="140" r="20" fill="#E2E8F0" stroke="#102A43" stroke-width="2"/>
+<text x="440" y="205" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >Moon</text>
+<defs><clipPath id="m"><circle cx="150" cy="295" r="38"/></clipPath></defs>
+<circle cx="150" cy="295" r="38" fill="#F8FAFC" stroke="#102A43" stroke-width="2"/>
+<circle cx="102" cy="301" r="42" fill="#475569" clip-path="url(#m)" opacity="0.85"/>
+<circle cx="150" cy="295" r="38" fill="none" stroke="#102A43" stroke-width="2"/>
+<text x="150" y="355" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle" ></text>
+<text x="330" y="285" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >The edge of the shadow on the Moon</text>
+<text x="330" y="305" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" >is always CURVED, whatever the</text>
+<text x="330" y="325" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" >position of the Moon. Only a sphere</text>
+<text x="330" y="345" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" >always casts a round shadow.</text>
+<text x="280" y="28" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" >Lunar eclipse: the Earth's round shadow falls on the Moon</text>
+<text x="480" y="238" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle" >Not to scale</text>
+</svg>

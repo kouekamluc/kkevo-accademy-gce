@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" font-family="Inter, Arial, sans-serif" role="img">
+<title>Fictitious map of Mbeka Valley (not a real place)</title>
+<rect width="640" height="480" fill="#FFFFFF"/>
+<defs><clipPath id="c"><rect x="40" y="26" width="480" height="400"/></clipPath></defs>
+<rect x="40" y="26" width="480" height="400" fill="#FFFFFF"/>
+<g clip-path="url(#c)">
+<path d="M472,354C484,342 525.3,347.3 536,362C546.7,376.7 548,430 536,442C524,454 474.7,448.7 464,434C453.3,419.3 460,366 472,354Z" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" stroke-dasharray="5 3"/>
+<path d="M40,26C60,10 134.7,18 160,26C185.3,34 205.3,55.3 192,74C178.7,92.7 105.3,130 80,138C54.7,146 46.7,140.7 40,122C33.3,103.3 20,42 40,26Z" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<path d="M56,386C72,378 117.3,371.3 152,370C186.7,368.7 245.3,370 264,378C282.7,386 298.7,411.3 264,418C229.3,424.7 90.7,423.3 56,418C21.3,412.7 40,394 56,386Z" fill="#FEF3C7" stroke="none"/>
+<line x1="40" y1="26" x2="40" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="120" y1="26" x2="120" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="200" y1="26" x2="200" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="280" y1="26" x2="280" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="360" y1="26" x2="360" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="440" y1="26" x2="440" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="520" y1="26" x2="520" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="40" y1="26" x2="520" y2="26" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="40" y1="106" x2="520" y2="106" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="40" y1="186" x2="520" y2="186" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="40" y1="266" x2="520" y2="266" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="40" y1="346" x2="520" y2="346" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<line x1="40" y1="426" x2="520" y2="426" stroke="#64748B" stroke-width="1" opacity="0.55"/>
+<path d="M176,90C176,85.9 175.1,81.5 173.6,77.8C172,74 169.5,70.3 166.6,67.4C163.7,64.5 160,62 156.2,60.4C152.5,58.9 148.1,58 144,58C139.9,58 135.5,58.9 131.8,60.4C128,62 124.3,64.5 121.4,67.4C118.5,70.3 116,74 114.4,77.8C112.9,81.5 112,85.9 112,90C112,94.1 112.9,98.5 114.4,102.2C116,106 118.5,109.7 121.4,112.6C124.3,115.5 128,118 131.8,119.6C135.5,121.1 139.9,122 144,122C148.1,122 152.5,121.1 156.2,119.6C160,118 163.7,115.5 166.6,112.6C169.5,109.7 172,106 173.6,102.2C175.1,98.5 176,94.1 176,90Z" fill="none" stroke="#B45309" stroke-width="2"/>
+<path d="M200,114C200,103.8 197.8,92.8 193.9,83.4C190,74 183.8,64.6 176.6,57.4C169.4,50.2 160,44 150.6,40.1C141.2,36.2 130.2,34 120,34C109.8,34 98.8,36.2 89.4,40.1C80,44 70.6,50.2 63.4,57.4C56.2,64.6 50,74 46.1,83.4C42.2,92.8 40,103.8 40,114C40,124.2 42.2,135.2 46.1,144.6C50,154 56.2,163.4 63.4,170.6C70.6,177.8 80,184 89.4,187.9C98.8,191.8 109.8,194 120,194C130.2,194 141.2,191.8 150.6,187.9C160,184 169.4,177.8 176.6,170.6C183.8,163.4 190,154 193.9,144.6C197.8,135.2 200,124.2 200,114Z" fill="none" stroke="#B45309" stroke-width="2"/>
+<path d="M224,142C224,124.1 220.4,104.9 214,88.4C207.5,71.9 197.2,55.6 185.3,43C173.4,30.4 158.1,19.5 142.5,12.7C127,5.8 108.8,2 92,2C75.2,2 57,5.8 41.5,12.7C25.9,19.5 10.6,30.4 -1.3,43C-13.2,55.6 -23.5,71.9 -30,88.4C-36.4,104.9 -40,124.1 -40,142C-40,159.9 -36.4,179.1 -30,195.6C-23.5,212.1 -13.2,228.4 -1.3,241C10.6,253.6 25.9,264.5 41.5,271.3C57,278.2 75.2,282 92,282C108.8,282 127,278.2 142.5,271.3C158.1,264.5 173.4,253.6 185.3,241C197.2,228.4 207.5,212.1 214,195.6C220.4,179.1 224,159.9 224,142Z" fill="none" stroke="#B45309" stroke-width="2"/>
+<path d="M168,234C178.7,242 210.7,270 232,282C253.3,294 274.7,295.3 296,306C317.3,316.7 336,334 360,346C384,358 413.3,368.7 440,378C466.7,387.3 506.7,398 520,402" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<path d="M296,34C293.3,52.7 282.7,112.7 280,146C277.3,179.3 277.3,207.3 280,234C282.7,260.7 293.3,294 296,306" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<path d="M40,322C60,326 120,339.3 160,346C200,352.7 246.7,362 280,362C313.3,362 333.3,352.7 360,346C386.7,339.3 413.3,328.7 440,322C466.7,315.3 506.7,308.7 520,306" fill="none" stroke="#102A43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M432,26 L440,146 L448,250 L440,322 L440,378 L424,426" fill="none" stroke="#102A43" stroke-width="3"/>
+<path d="M432,26 L440,146 L448,250 L440,322 L440,378 L424,426" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="8 8"/>
+</g>
+<text x="144" y="58" font-size="13" font-weight="700" fill="#B45309" text-anchor="middle" dominant-baseline="middle" stroke="#FFFFFF" stroke-width="4" paint-order="stroke">500</text>
+<text x="120" y="194" font-size="13" font-weight="700" fill="#B45309" text-anchor="middle" dominant-baseline="middle" stroke="#FFFFFF" stroke-width="4" paint-order="stroke">400</text>
+<text x="92" y="282" font-size="13" font-weight="700" fill="#B45309" text-anchor="middle" dominant-baseline="middle" stroke="#FFFFFF" stroke-width="4" paint-order="stroke">300</text>
+<circle cx="224" cy="298" r="9" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="224" y="298.5" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">S</text>
+<circle cx="384" cy="282" r="9" fill="#B45309" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="384" y="282.5" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">M</text>
+<rect x="419" y="273" width="10" height="9" fill="#102A43"/>
+<path d="M424,263 L424,273 M420,267 L428,267" stroke="#102A43" stroke-width="2.5"/>
+<circle cx="384" cy="138" r="9" fill="#047857" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="384" y="138.5" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">H</text>
+<polygon points="144,83 137,95 151,95" fill="#102A43"/>
+<text x="156" y="94" font-size="13" font-weight="600" fill="#102A43" text-anchor="start" stroke="#FFFFFF" stroke-width="4" paint-order="stroke">548</text>
+<rect x="353" y="339" width="14" height="14" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/>
+<rect x="433" y="371" width="14" height="14" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/>
+<rect x="393" y="310" width="6" height="6" fill="#102A43"/>
+<rect x="401" y="308" width="6" height="6" fill="#102A43"/>
+<rect x="398" y="317" width="6" height="6" fill="#102A43"/>
+<rect x="406" y="316" width="6" height="6" fill="#102A43"/>
+<rect x="391" y="318" width="6" height="6" fill="#102A43"/>
+<text x="386" y="318" font-size="13" font-weight="600" fill="#102A43" text-anchor="end" stroke="#FFFFFF" stroke-width="4" paint-order="stroke">Mbeka</text>
+<rect x="85" y="319" width="6" height="6" fill="#102A43"/>
+<rect x="109" y="327" width="6" height="6" fill="#102A43"/>
+<text x="112" y="320" font-size="13" font-weight="600" fill="#102A43" text-anchor="middle" stroke="#FFFFFF" stroke-width="4" paint-order="stroke">Efo</text>
+<rect x="133" y="335" width="6" height="6" fill="#102A43"/>
+<rect x="40" y="26" width="480" height="400" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<text x="40" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">40</text>
+<text x="40" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">40</text>
+<text x="120" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">41</text>
+<text x="120" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">41</text>
+<text x="200" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">42</text>
+<text x="200" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">42</text>
+<text x="280" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">43</text>
+<text x="280" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">43</text>
+<text x="360" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">44</text>
+<text x="360" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">44</text>
+<text x="440" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">45</text>
+<text x="440" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">45</text>
+<text x="520" y="16" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">46</text>
+<text x="520" y="444" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">46</text>
+<text x="34" y="30" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">35</text>
+<text x="34" y="110" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">34</text>
+<text x="34" y="190" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">33</text>
+<text x="34" y="270" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">32</text>
+<text x="34" y="350" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">31</text>
+<text x="34" y="430" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">30</text>
+<rect x="40" y="452" width="80" height="9" fill="#102A43"/><rect x="120" y="452" width="80" height="9" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="40" y="476" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">0</text>
+<text x="120" y="476" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">1</text>
+<text x="200" y="476" font-size="13" font-weight="700" fill="#102A43" text-anchor="start">2 km</text>
+<text x="256" y="461" font-size="13" font-weight="700" fill="#102A43">1 grid square = 1 km. Fictitious map.</text>
+<path d="M574,60 L574,28" stroke="#102A43" stroke-width="3"/><polygon points="574,26 568,38 580,38" fill="#102A43"/>
+<text x="588" y="48" font-size="15" font-weight="700" fill="#102A43">N</text>
+<text x="534" y="90" font-size="13" font-weight="700" fill="#102A43">KEY</text>
+<path d="M534,108 L562,108" stroke="#2563EB" stroke-width="3"/>
+<text x="570" y="112.5" font-size="13" fill="#102A43">River</text>
+<path d="M534,132 L562,132" stroke="#102A43" stroke-width="3"/>
+<text x="570" y="136.5" font-size="13" fill="#102A43">Road</text>
+<path d="M534,156 L562,156" stroke="#102A43" stroke-width="3"/><path d="M534,156 L562,156" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="6 6"/>
+<text x="570" y="160.5" font-size="13" fill="#102A43">Railway</text>
+<path d="M534,180 L562,180" stroke="#B45309" stroke-width="2"/>
+<text x="570" y="184.5" font-size="13" fill="#102A43">Contour</text>
+<rect x="534" y="197" width="28" height="14" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="570" y="208.5" font-size="13" fill="#102A43">Forest</text>
+<rect x="534" y="221" width="28" height="14" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="570" y="232.5" font-size="13" fill="#102A43">Swamp</text>
+<rect x="534" y="245" width="28" height="14" fill="#FEF3C7" stroke="#64748B" stroke-width="1"/>
+<text x="570" y="256.5" font-size="13" fill="#102A43">Farmland</text>
+<rect x="541" y="272" width="6" height="6" fill="#102A43"/>
+<rect x="549" y="270" width="6" height="6" fill="#102A43"/>
+<rect x="546" y="279" width="6" height="6" fill="#102A43"/>
+<rect x="554" y="278" width="6" height="6" fill="#102A43"/>
+<text x="570" y="280.5" font-size="13" fill="#102A43">Village</text>
+<rect x="543" y="299" width="10" height="9" fill="#102A43"/><path d="M548,290 L548,299 M544,293 L552,293" stroke="#102A43" stroke-width="2.5"/>
+<text x="570" y="304.5" font-size="13" fill="#102A43">Church</text>
+<circle cx="548" cy="324" r="9" fill="#2563EB"/><text x="548" y="324.5" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">S</text>
+<text x="570" y="328.5" font-size="13" fill="#102A43">School</text>
+<circle cx="548" cy="348" r="9" fill="#B45309"/><text x="548" y="348.5" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">M</text>
+<text x="570" y="352.5" font-size="13" fill="#102A43">Market</text>
+<circle cx="548" cy="372" r="9" fill="#047857"/><text x="548" y="372.5" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">H</text>
+<text x="570" y="376.5" font-size="13" fill="#102A43">Hospital</text>
+<rect x="541" y="389" width="14" height="14" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/>
+<text x="570" y="400.5" font-size="13" fill="#102A43">Bridge</text>
+<polygon points="548,413 541,425 555,425" fill="#102A43"/>
+<text x="570" y="424.5" font-size="13" fill="#102A43">Height</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+
+<text x="280" y="24" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700" >Continentality: coast and interior compared</text>
+<text x="280" y="44" font-size="13" text-anchor="middle" fill="#64748B" font-weight="400" >Two fictitious stations at the same latitude</text>
+<line x1="70" y1="280" x2="520" y2="280" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round"/>
+<text x="62" y="285" font-size="13" text-anchor="end" fill="#102A43" font-weight="400" >15</text>
+<line x1="70" y1="227.5" x2="520" y2="227.5" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round"/>
+<text x="62" y="232.5" font-size="13" text-anchor="end" fill="#102A43" font-weight="400" >20</text>
+<line x1="70" y1="175" x2="520" y2="175" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round"/>
+<text x="62" y="180" font-size="13" text-anchor="end" fill="#102A43" font-weight="400" >25</text>
+<line x1="70" y1="122.5" x2="520" y2="122.5" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round"/>
+<text x="62" y="127.5" font-size="13" text-anchor="end" fill="#102A43" font-weight="400" >30</text>
+<line x1="70" y1="70" x2="520" y2="70" stroke="#E2E8F0" stroke-width="2" stroke-linecap="round"/>
+<text x="62" y="75" font-size="13" text-anchor="end" fill="#102A43" font-weight="400" >35</text>
+<text x="62" y="56" font-size="13" text-anchor="end" fill="#102A43" font-weight="700" >&#176;C</text>
+<polyline points="88.8,164.5 126.2,154 163.8,154 201.2,154 238.8,164.5 276.2,175 313.8,185.5 351.2,185.5 388.8,175 426.2,175 463.8,164.5 501.2,164.5" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="88.8" cy="164.5" r="3.5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="126.2" cy="154" r="3.5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="163.8" cy="154" r="3.5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="201.2" cy="154" r="3.5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="238.8" cy="164.5" r="3.5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="276.2" cy="175" r="3.5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="313.8" cy="185.5" r="3.5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="351.2" cy="185.5" r="3.5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="388.8" cy="175" r="3.5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="426.2" cy="175" r="3.5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="463.8" cy="164.5" r="3.5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="501.2" cy="164.5" r="3.5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<polyline points="88.8,227.5 126.2,196 163.8,154 201.2,122.5 238.8,112 276.2,133 313.8,164.5 351.2,175 388.8,154 426.2,154 463.8,196 501.2,227.5" fill="none" stroke="#B45309" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="88.8" cy="227.5" r="3.5" fill="#B45309" stroke="none" stroke-width="2"/>
+<circle cx="126.2" cy="196" r="3.5" fill="#B45309" stroke="none" stroke-width="2"/>
+<circle cx="163.8" cy="154" r="3.5" fill="#B45309" stroke="none" stroke-width="2"/>
+<circle cx="201.2" cy="122.5" r="3.5" fill="#B45309" stroke="none" stroke-width="2"/>
+<circle cx="238.8" cy="112" r="3.5" fill="#B45309" stroke="none" stroke-width="2"/>
+<circle cx="276.2" cy="133" r="3.5" fill="#B45309" stroke="none" stroke-width="2"/>
+<circle cx="313.8" cy="164.5" r="3.5" fill="#B45309" stroke="none" stroke-width="2"/>
+<circle cx="351.2" cy="175" r="3.5" fill="#B45309" stroke="none" stroke-width="2"/>
+<circle cx="388.8" cy="154" r="3.5" fill="#B45309" stroke="none" stroke-width="2"/>
+<circle cx="426.2" cy="154" r="3.5" fill="#B45309" stroke="none" stroke-width="2"/>
+<circle cx="463.8" cy="196" r="3.5" fill="#B45309" stroke="none" stroke-width="2"/>
+<circle cx="501.2" cy="227.5" r="3.5" fill="#B45309" stroke="none" stroke-width="2"/>
+<text x="88.8" y="300" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >J</text>
+<text x="126.2" y="300" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >F</text>
+<text x="163.8" y="300" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >M</text>
+<text x="201.2" y="300" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >A</text>
+<text x="238.8" y="300" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >M</text>
+<text x="276.2" y="300" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >J</text>
+<text x="313.8" y="300" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >J</text>
+<text x="351.2" y="300" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >A</text>
+<text x="388.8" y="300" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >S</text>
+<text x="426.2" y="300" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >O</text>
+<text x="463.8" y="300" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >N</text>
+<text x="501.2" y="300" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700" >D</text>
+<line x1="70" y1="280" x2="520" y2="280" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="70" y1="70" x2="70" y2="280" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="516" y="142" font-size="14" text-anchor="end" fill="#2563EB" font-weight="700" >Coastal: range 3&#176;C</text>
+<text x="516" y="84" font-size="14" text-anchor="end" fill="#B45309" font-weight="700" >Inland: range 11&#176;C</text>
+<text x="280" y="330" font-size="13" text-anchor="middle" fill="#64748B" font-weight="400" >The sea warms and cools slowly, so the coast has a smaller range.</text>
+<text x="280" y="348" font-size="13" text-anchor="middle" fill="#64748B" font-weight="400" >Inland places heat up and cool down more.</text>
+</svg>

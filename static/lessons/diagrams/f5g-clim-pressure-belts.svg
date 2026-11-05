@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="400" fill="#FFFFFF"/>
+<defs><marker id="a047857" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker></defs>
+<text x="280" y="28" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700" >Pressure belts and planetary winds</text>
+<rect x="150" y="50" width="280" height="300" rx="0" fill="#FFFFFF" stroke="#102A43" stroke-width="2" />
+<rect x="150" y="188.3" width="280" height="23.3" rx="0" fill="#EFF6FF" stroke="none" stroke-width="2" />
+<rect x="150" y="136.7" width="280" height="26.7" rx="0" fill="#FEF3C7" stroke="none" stroke-width="2" />
+<rect x="150" y="236.7" width="280" height="26.7" rx="0" fill="#FEF3C7" stroke="none" stroke-width="2" />
+<rect x="150" y="86.7" width="280" height="26.7" rx="0" fill="#EFF6FF" stroke="none" stroke-width="2" />
+<rect x="150" y="286.7" width="280" height="26.7" rx="0" fill="#EFF6FF" stroke="none" stroke-width="2" />
+<rect x="150" y="50" width="280" height="16.7" rx="0" fill="#FEF3C7" stroke="none" stroke-width="2" />
+<rect x="150" y="333.3" width="280" height="16.7" rx="0" fill="#FEF3C7" stroke="none" stroke-width="2" />
+<line x1="150" y1="100" x2="430" y2="100" stroke="#64748B" stroke-width="2" stroke-dasharray="6 5" stroke-linecap="round"/>
+<line x1="150" y1="150" x2="430" y2="150" stroke="#64748B" stroke-width="2" stroke-dasharray="6 5" stroke-linecap="round"/>
+<line x1="150" y1="200" x2="430" y2="200" stroke="#64748B" stroke-width="2" stroke-dasharray="6 5" stroke-linecap="round"/>
+<line x1="150" y1="250" x2="430" y2="250" stroke="#64748B" stroke-width="2" stroke-dasharray="6 5" stroke-linecap="round"/>
+<line x1="150" y1="300" x2="430" y2="300" stroke="#64748B" stroke-width="2" stroke-dasharray="6 5" stroke-linecap="round"/>
+<rect x="150" y="50" width="280" height="300" rx="0" fill="none" stroke="#102A43" stroke-width="2" />
+<rect x="278" y="189" width="24" height="22" rx="0" fill="#EFF6FF" stroke="none" stroke-width="2" />
+<text x="290" y="206" font-size="18" text-anchor="middle" fill="#2563EB" font-weight="700" >L</text>
+<rect x="278" y="139" width="24" height="22" rx="0" fill="#FEF3C7" stroke="none" stroke-width="2" />
+<text x="290" y="156" font-size="18" text-anchor="middle" fill="#B45309" font-weight="700" >H</text>
+<rect x="278" y="239" width="24" height="22" rx="0" fill="#FEF3C7" stroke="none" stroke-width="2" />
+<text x="290" y="256" font-size="18" text-anchor="middle" fill="#B45309" font-weight="700" >H</text>
+<rect x="278" y="89" width="24" height="22" rx="0" fill="#EFF6FF" stroke="none" stroke-width="2" />
+<text x="290" y="106" font-size="18" text-anchor="middle" fill="#2563EB" font-weight="700" >L</text>
+<rect x="278" y="289" width="24" height="22" rx="0" fill="#EFF6FF" stroke="none" stroke-width="2" />
+<text x="290" y="306" font-size="18" text-anchor="middle" fill="#2563EB" font-weight="700" >L</text>
+<rect x="278" y="47.3" width="24" height="22" rx="0" fill="#FEF3C7" stroke="none" stroke-width="2" />
+<text x="290" y="64.3" font-size="18" text-anchor="middle" fill="#B45309" font-weight="700" >H</text>
+<rect x="278" y="330.7" width="24" height="22" rx="0" fill="#FEF3C7" stroke="none" stroke-width="2" />
+<text x="290" y="347.7" font-size="18" text-anchor="middle" fill="#B45309" font-weight="700" >H</text>
+<text x="438" y="98" font-size="13" text-anchor="start" fill="#102A43" font-weight="600" >Subpolar low</text>
+<text x="438" y="114" font-size="13" text-anchor="start" fill="#64748B" font-weight="400" >60&#176; N</text>
+<text x="438" y="148" font-size="13" text-anchor="start" fill="#102A43" font-weight="600" >Subtropical high</text>
+<text x="438" y="164" font-size="13" text-anchor="start" fill="#64748B" font-weight="400" >30&#176; N</text>
+<text x="438" y="198" font-size="13" text-anchor="start" fill="#102A43" font-weight="600" >Equatorial low</text>
+<text x="438" y="214" font-size="13" text-anchor="start" fill="#64748B" font-weight="400" >0&#176;</text>
+<text x="438" y="248" font-size="13" text-anchor="start" fill="#102A43" font-weight="600" >Subtropical high</text>
+<text x="438" y="264" font-size="13" text-anchor="start" fill="#64748B" font-weight="400" >30&#176; S</text>
+<text x="438" y="298" font-size="13" text-anchor="start" fill="#102A43" font-weight="600" >Subpolar low</text>
+<text x="438" y="314" font-size="13" text-anchor="start" fill="#64748B" font-weight="400" >60&#176; S</text>
+<text x="438" y="64" font-size="13" text-anchor="start" fill="#102A43" font-weight="600" >Polar high</text>
+<text x="438" y="80" font-size="13" text-anchor="start" fill="#64748B" font-weight="400" >90&#176; N</text>
+<text x="438" y="332" font-size="13" text-anchor="start" fill="#102A43" font-weight="600" >Polar high</text>
+<text x="438" y="348" font-size="13" text-anchor="start" fill="#64748B" font-weight="400" >90&#176; S</text>
+<line x1="219" y1="161" x2="191" y2="189" stroke="#047857" stroke-width="3" marker-end="url(#a047857)" stroke-linecap="round"/>
+<line x1="389" y1="161" x2="361" y2="189" stroke="#047857" stroke-width="3" marker-end="url(#a047857)" stroke-linecap="round"/>
+<text x="8" y="179" font-size="13" text-anchor="start" fill="#047857" font-weight="600" >NE trade winds</text>
+<line x1="122" y1="175" x2="150" y2="175" stroke="#047857" stroke-width="2" stroke-dasharray="3 3" stroke-linecap="round"/>
+<line x1="191" y1="139" x2="219" y2="111" stroke="#047857" stroke-width="3" marker-end="url(#a047857)" stroke-linecap="round"/>
+<line x1="361" y1="139" x2="389" y2="111" stroke="#047857" stroke-width="3" marker-end="url(#a047857)" stroke-linecap="round"/>
+<text x="8" y="129" font-size="13" text-anchor="start" fill="#047857" font-weight="600" >Westerlies</text>
+<line x1="122" y1="125" x2="150" y2="125" stroke="#047857" stroke-width="2" stroke-dasharray="3 3" stroke-linecap="round"/>
+<line x1="219" y1="61" x2="191" y2="89" stroke="#047857" stroke-width="3" marker-end="url(#a047857)" stroke-linecap="round"/>
+<line x1="389" y1="61" x2="361" y2="89" stroke="#047857" stroke-width="3" marker-end="url(#a047857)" stroke-linecap="round"/>
+<text x="8" y="79" font-size="13" text-anchor="start" fill="#047857" font-weight="600" >Polar easterlies</text>
+<line x1="122" y1="75" x2="150" y2="75" stroke="#047857" stroke-width="2" stroke-dasharray="3 3" stroke-linecap="round"/>
+<line x1="219" y1="239" x2="191" y2="211" stroke="#047857" stroke-width="3" marker-end="url(#a047857)" stroke-linecap="round"/>
+<line x1="389" y1="239" x2="361" y2="211" stroke="#047857" stroke-width="3" marker-end="url(#a047857)" stroke-linecap="round"/>
+<text x="8" y="229" font-size="13" text-anchor="start" fill="#047857" font-weight="600" >SE trade winds</text>
+<line x1="122" y1="225" x2="150" y2="225" stroke="#047857" stroke-width="2" stroke-dasharray="3 3" stroke-linecap="round"/>
+<line x1="191" y1="261" x2="219" y2="289" stroke="#047857" stroke-width="3" marker-end="url(#a047857)" stroke-linecap="round"/>
+<line x1="361" y1="261" x2="389" y2="289" stroke="#047857" stroke-width="3" marker-end="url(#a047857)" stroke-linecap="round"/>
+<text x="8" y="279" font-size="13" text-anchor="start" fill="#047857" font-weight="600" >Westerlies</text>
+<line x1="122" y1="275" x2="150" y2="275" stroke="#047857" stroke-width="2" stroke-dasharray="3 3" stroke-linecap="round"/>
+<line x1="219" y1="339" x2="191" y2="311" stroke="#047857" stroke-width="3" marker-end="url(#a047857)" stroke-linecap="round"/>
+<line x1="389" y1="339" x2="361" y2="311" stroke="#047857" stroke-width="3" marker-end="url(#a047857)" stroke-linecap="round"/>
+<text x="8" y="329" font-size="13" text-anchor="start" fill="#047857" font-weight="600" >Polar easterlies</text>
+<line x1="122" y1="325" x2="150" y2="325" stroke="#047857" stroke-width="2" stroke-dasharray="3 3" stroke-linecap="round"/>
+<text x="280" y="382" font-size="13" text-anchor="middle" fill="#64748B" font-weight="400" >Green arrows show the direction the wind blows towards.</text>
+</svg>

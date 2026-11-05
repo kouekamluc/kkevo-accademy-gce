@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Age-sex pyramid of a fictitious country</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="28" font-size="15.5" font-weight="700" fill="#102A43" text-anchor="middle">Country X: age-sex pyramid (percent of total population)</text>
+<rect x="301" y="46" width="19.0" height="42" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<rect x="320" y="46" width="19.0" height="42" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="293" y="72" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="end">2%</text>
+<text x="347" y="72" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="start">2%</text>
+<text x="20" y="72" font-size="13" font-weight="600" fill="#102A43" text-anchor="start">60 and over</text>
+<rect x="272.5" y="98" width="47.5" height="42" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<rect x="320" y="98" width="47.5" height="42" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="264.5" y="124" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="end">5%</text>
+<text x="375.5" y="124" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="start">5%</text>
+<text x="20" y="124" font-size="13" font-weight="600" fill="#102A43" text-anchor="start">45 to 59</text>
+<rect x="234.5" y="150" width="85.5" height="42" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<rect x="320" y="150" width="95.0" height="42" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="226.5" y="176" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="end">9%</text>
+<text x="423" y="176" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="start">10%</text>
+<text x="20" y="176" font-size="13" font-weight="600" fill="#102A43" text-anchor="start">30 to 44</text>
+<rect x="187" y="202" width="133.0" height="42" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<rect x="320" y="202" width="133.0" height="42" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="179" y="228" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="end">14%</text>
+<text x="461" y="228" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="start">14%</text>
+<text x="20" y="228" font-size="13" font-weight="600" fill="#102A43" text-anchor="start">15 to 29</text>
+<rect x="130" y="254" width="190.0" height="42" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<rect x="320" y="254" width="180.5" height="42" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="122" y="280" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="end">20%</text>
+<text x="508.5" y="280" font-size="13.5" font-weight="700" fill="#102A43" text-anchor="start">19%</text>
+<text x="20" y="280" font-size="13" font-weight="600" fill="#102A43" text-anchor="start">0 to 14</text>
+<text x="190" y="324" font-size="15" font-weight="700" fill="#2563EB" text-anchor="middle">MALE</text>
+<text x="450" y="324" font-size="15" font-weight="700" fill="#B45309" text-anchor="middle">FEMALE</text>
+<text x="280" y="348" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">Age groups on the left. Each bar is a percent of the whole population.</text>
+</svg>

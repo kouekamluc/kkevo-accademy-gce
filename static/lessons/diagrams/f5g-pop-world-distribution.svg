@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" role="img" font-family="Inter, Arial, sans-serif">
+<rect width="640" height="330" fill="#FFFFFF"/>
+<path d="M40.0,48.8 L86.7,40.6 L111.7,40.6 L161.7,36.5 L186.7,40.6 L216.7,61.0 L228.3,81.4 L208.3,93.7 L193.3,112.1 L185.0,132.5 L158.3,130.5 L158.3,146.8 L175.0,140.7 L181.7,163.1 L190.0,167.2 L170.0,155.0 L145.0,142.7 L125.0,118.2 L113.3,101.9 L111.7,83.5 L95.0,65.1 L70.0,61.0 L45.0,61.0 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M228.3,61.0 L245.0,61.0 L286.7,40.6 L286.7,16.1 L220.0,16.1 L203.3,28.3 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M190.0,167.2 L200.0,159.0 L216.7,163.1 L236.7,183.5 L261.7,193.8 L253.3,228.5 L240.0,238.7 L223.3,261.2 L211.7,269.3 L206.7,295.9 L196.7,285.7 L198.3,255.0 L203.3,220.3 L185.0,193.8 L186.7,179.5 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M303.3,110.0 L305.0,95.7 L316.7,85.5 L328.3,77.4 L333.3,67.1 L336.7,61.0 L328.3,56.9 L345.0,42.6 L366.7,38.5 L386.7,46.7 L386.7,69.2 L370.0,89.6 L366.7,99.8 L356.7,108.0 L343.3,105.9 L333.3,93.7 L325.0,95.7 L311.7,110.0 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M291.7,140.7 L303.3,122.3 L311.7,110.0 L336.7,108.0 L353.3,118.2 L373.3,120.2 L378.3,126.4 L391.7,159.0 L405.0,159.0 L386.7,189.7 L386.7,214.2 L378.3,234.6 L365.0,253.0 L350.0,253.0 L340.0,218.3 L341.7,195.8 L335.0,177.4 L328.3,173.3 L306.7,175.4 L291.7,155.0 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M366.7,99.8 L380.0,110.0 L378.3,122.3 L391.7,157.0 L406.7,150.9 L416.7,136.6 L415.0,130.5 L430.0,132.5 L441.7,142.7 L448.3,167.2 L453.3,152.9 L466.7,138.6 L473.3,138.6 L483.3,150.9 L486.7,173.3 L493.3,181.5 L501.7,159.0 L496.7,142.7 L523.3,120.2 L520.0,101.9 L531.7,101.9 L536.7,95.7 L553.3,81.4 L578.3,65.1 L591.7,56.9 L620.0,48.8 L620.0,40.6 L553.3,34.5 L503.3,26.3 L453.3,34.5 L420.0,40.6 L386.7,46.7 L386.7,69.2 L395.0,91.6 L370.0,89.6 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M510.0,228.5 L523.3,218.3 L536.7,208.1 L548.3,208.1 L556.7,206.0 L563.3,222.4 L575.0,236.6 L570.0,259.1 L555.0,261.2 L538.3,246.9 L511.7,253.0 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M311.7,81.4 L321.7,79.4 L316.7,69.2 L311.7,65.1 L310.0,73.3 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M536.7,120.2 L545.0,114.1 L553.3,110.0 L556.7,99.8 L555.0,91.6 L550.0,105.9 L540.0,114.1 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M478.3,173.3 L495.0,195.8 L491.7,191.7 L483.3,179.5 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M495.0,195.8 L510.0,199.9 L496.7,197.8 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M501.7,181.5 L515.0,169.3 L518.3,181.5 L511.7,191.7 L503.3,189.7 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M393.3,234.6 L398.3,234.6 L403.3,214.2 L401.7,208.1 L393.3,218.3 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<path d="M606.7,253.0 L616.7,261.2 L610.0,267.3 L598.3,277.5 L605.0,273.4 Z" fill="#E2E8F0" stroke="#64748B" stroke-width="2" stroke-linejoin="round"/>
+<line x1="20.0" y1="183.5" x2="620.0" y2="183.5" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="24.0" y="179.5" font-size="13" text-anchor="start" font-weight="400" fill="#2563EB" >Equator</text>
+<ellipse cx="506.7" cy="118.2" rx="66.7" ry="53.1" fill="#FEF3C7" fill-opacity="0.85" stroke="#B45309" stroke-width="2"/>
+<ellipse cx="453.3" cy="140.7" rx="43.3" ry="40.8" fill="#FEF3C7" fill-opacity="0.85" stroke="#B45309" stroke-width="2"/>
+<ellipse cx="336.7" cy="83.5" rx="43.3" ry="36.8" fill="#FEF3C7" fill-opacity="0.85" stroke="#B45309" stroke-width="2"/>
+<ellipse cx="190.0" cy="101.9" rx="33.3" ry="28.6" fill="#FEF3C7" fill-opacity="0.85" stroke="#B45309" stroke-width="2"/>
+<ellipse cx="371.7" cy="126.4" rx="13.3" ry="32.7" fill="#FEF3C7" fill-opacity="0.85" stroke="#B45309" stroke-width="2"/>
+<ellipse cx="325.0" cy="167.2" rx="40.0" ry="20.4" fill="#FEF3C7" fill-opacity="0.85" stroke="#B45309" stroke-width="2"/>
+<ellipse cx="503.3" cy="197.8" rx="23.3" ry="12.3" fill="#FEF3C7" fill-opacity="0.85" stroke="#B45309" stroke-width="2"/>
+<ellipse cx="336.7" cy="138.6" rx="36.7" ry="16.3" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 4"/>
+<ellipse cx="486.7" cy="54.9" rx="60.0" ry="16.3" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 4"/>
+<ellipse cx="216.7" cy="195.8" rx="20.0" ry="16.3" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 4"/>
+<ellipse cx="543.3" cy="234.6" rx="20.0" ry="12.3" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 4"/>
+<ellipse cx="153.3" cy="48.8" rx="36.7" ry="12.3" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 4"/>
+<ellipse cx="253.3" cy="36.5" rx="20.0" ry="12.3" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="530.0" y="142.6" font-size="13" text-anchor="middle" font-weight="700" fill="#B45309" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">East Asia</text>
+<text x="450.0" y="171.2" font-size="13" text-anchor="middle" font-weight="700" fill="#B45309" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">South Asia</text>
+<text x="310.0" y="77.3" font-size="13" text-anchor="middle" font-weight="700" fill="#B45309" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Europe</text>
+<text x="166.7" y="124.2" font-size="13" text-anchor="middle" font-weight="700" fill="#B45309" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">NE USA</text>
+<text x="390.0" y="114.0" font-size="13" text-anchor="middle" font-weight="700" fill="#B45309" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Nile</text>
+<text x="290.0" y="195.7" font-size="13" text-anchor="middle" font-weight="700" fill="#B45309" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Gulf of Guinea</text>
+<text x="526.7" y="216.1" font-size="13" text-anchor="middle" font-weight="700" fill="#B45309" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Java</text>
+<text x="316.7" y="148.7" font-size="13" text-anchor="middle" font-weight="700" fill="#2563EB" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Sahara</text>
+<text x="486.7" y="58.9" font-size="13" text-anchor="middle" font-weight="700" fill="#2563EB" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Siberia</text>
+<text x="216.7" y="199.8" font-size="13" text-anchor="middle" font-weight="700" fill="#2563EB" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Amazon</text>
+<text x="543.3" y="238.6" font-size="13" text-anchor="middle" font-weight="700" fill="#2563EB" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Outback</text>
+<text x="153.3" y="52.8" font-size="13" text-anchor="middle" font-weight="700" fill="#2563EB" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Arctic Canada</text>
+<text x="253.3" y="40.5" font-size="13" text-anchor="middle" font-weight="700" fill="#2563EB" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke">Greenland</text>
+<ellipse cx="190" cy="316" rx="14" ry="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="210.0" y="321.0" font-size="14" text-anchor="start" font-weight="400" fill="#102A43" >Densely populated</text>
+<ellipse cx="380" cy="316" rx="14" ry="8" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="400.0" y="321.0" font-size="14" text-anchor="start" font-weight="400" fill="#102A43" >Sparsely populated</text>
+</svg>

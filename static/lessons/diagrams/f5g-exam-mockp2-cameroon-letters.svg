@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Simplified sketch map of Cameroon with lettered features</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="155,245.3 172.5,259 183.8,261.5 190,286.5 188.7,300.2 226.2,304.8 347.5,302.8 347.5,284 325,259 307.5,229 305,201.5 322.5,174 330,164 320,144 317.5,121.5 322.5,101.5 320,79 315,59 303.8,32.7 290,44 283.8,64 277.5,79 275,96.5 265,109 247.5,136.5 242.5,154 237.5,171.5 222.5,186.5 205,191.5 190,199 177.5,206.5 167.5,216.5 158.8,234" fill="#ECFDF5" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<text x="150" y="299" font-size="13" font-weight="700" fill="#2563EB" text-anchor="end" font-style="italic">Atlantic</text>
+<text x="150" y="315" font-size="13" font-weight="700" fill="#2563EB" text-anchor="end" font-style="italic">Ocean</text>
+<path d="M275,171.5C275.2,166.9 275.8,151.5 276.2,144C276.7,136.5 279.4,129.8 277.5,126.5C275.6,123.2 269.2,124 265,124C260.8,124 254.6,126.1 252.5,126.5" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<path d="M292.5,219C285.8,222.8 262.9,236.5 252.5,241.5C242.1,246.5 236.7,246.1 230,249C223.3,251.9 218.2,256.5 212.5,259C206.8,261.5 200.8,261.7 195.8,264C190.8,266.3 184.7,271.3 182.5,272.8" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<ellipse cx="302.5" cy="36.5" rx="9" ry="6" fill="#BFDBFE" stroke="#2563EB" stroke-width="2.5"/>
+<polygon points="171.7,245 163.7,259 179.7,259" fill="#B45309"/>
+<circle cx="185" cy="257.8" r="4.5" fill="#102A43"/>
+<circle cx="300.5" cy="94" r="4.5" fill="#102A43"/>
+<circle cx="322.5" cy="32.5" r="11" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/><text x="322.5" y="37.5" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">A</text>
+<circle cx="149.7" cy="250" r="11" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/><text x="149.7" y="255" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">B</text>
+<circle cx="250" cy="190" r="11" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/><text x="250" y="195" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">C</text>
+<circle cx="201" cy="279.8" r="11" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/><text x="201" y="284.8" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">D</text>
+<circle cx="265" cy="147.2" r="11" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/><text x="265" y="152.2" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">E</text>
+<circle cx="322.5" cy="98" r="11" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/><text x="322.5" y="103" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">F</text>
+<text x="430" y="70" font-size="14" font-weight="700" fill="#102A43" text-anchor="start">Letters mark:</text>
+<text x="430" y="100" font-size="13.5" font-weight="400" fill="#102A43" text-anchor="start">a lake, a volcano,</text>
+<text x="430" y="120" font-size="13.5" font-weight="400" fill="#102A43" text-anchor="start">a plateau, a port,</text>
+<text x="430" y="140" font-size="13.5" font-weight="400" fill="#102A43" text-anchor="start">a river and a</text>
+<text x="430" y="160" font-size="13.5" font-weight="400" fill="#102A43" text-anchor="start">regional capital.</text>
+<text x="430" y="214" font-size="13" font-weight="400" fill="#64748B" text-anchor="start" font-style="italic">Simplified sketch:</text>
+<text x="430" y="232" font-size="13" font-weight="400" fill="#64748B" text-anchor="start" font-style="italic">not to scale.</text>
+</svg>

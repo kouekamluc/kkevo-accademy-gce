@@ -70,6 +70,20 @@ PAGES = {
             "Explain the main crises of the Cold War and the world after it",
             "Plan and write clear structured and essay answers",
         ]),
+    ("geography", "form-5"): dict(
+        title="Form 5 Geography (GCE 0550)", slug="form-5-geography-gce-0550", primary=True,
+        summary="GCE O Level Geography, built on the Board's revised 0550 syllabus: map reading and interpretation, "
+                "physical and human geography, and the Geography of Cameroon, with Paper 1 and Paper 2 practice and "
+                "timed mock papers.",
+        outcomes=[
+            "Read maps: grid references, bearings, scales, distances, areas and contours",
+            "Describe relief, drainage, settlement and land use from a map and draw sketch maps",
+            "Explain weather, climate, the water cycle, soils, vegetation and ecosystems",
+            "Explain how rocks, volcanoes, earthquakes, rivers, waves and wind shape the land",
+            "Explain development, agriculture, industry, trade, population and settlement",
+            "Describe the physical, human and economic geography of Cameroon",
+            "Answer Paper 1 multiple choice and plan Paper 2 map-reading and essay questions",
+        ]),
     ("pure-mathematics-with-mechanics", "lower-sixth"): dict(
         summary="The core pure mathematics of GCE A Level Pure Mathematics with Mechanics: proof, algebra and "
                 "functions, trigonometry, conic sections, calculus, series, differential equations and 3D vectors.",

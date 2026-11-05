@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="400" fill="#FFFFFF"/>
+<defs><marker id="aB45309" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker><marker id="a2563EB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker></defs>
+<rect x="30" y="38" width="500" height="322" rx="0" fill="#EFF6FF" stroke="none" stroke-width="2" />
+<polygon points="61.2,38 67.5,118.5 61.2,191 92.5,233.5 108.8,250.8 115,262.2 145,287.6 180,307.1 230,299.1 277.5,295.6 322.5,286.4 355,310.6 380,308.2 396.2,314 402.5,325.5 402.5,339.3 417.5,360 430,360 530,360 530,38" fill="#FEF3C7" stroke="#102A43" stroke-width="2" stroke-linejoin="round" />
+<line x1="30" y1="360" x2="530" y2="360" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 6" stroke-linecap="round"/>
+<text x="34" y="355" font-size="13" text-anchor="start" fill="#64748B" font-weight="400" >Equator (0&#176;)</text>
+<line x1="30" y1="245" x2="530" y2="245" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 6" stroke-linecap="round"/>
+<text x="34" y="240" font-size="13" text-anchor="start" fill="#64748B" font-weight="400" >10&#176;N</text>
+<line x1="30" y1="130" x2="530" y2="130" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="4 6" stroke-linecap="round"/>
+<text x="34" y="125" font-size="13" text-anchor="start" fill="#64748B" font-weight="400" >20&#176;N</text>
+<polyline points="155,294.5 180,295.7 205,298.3 230,301.9 255,306.3 280,310.9 305,315.2 330,318.7 355,321.1 380,322 405,321.5 430,319.5 455,316.2 480,312.1 505,307.6 530,303.1" fill="none" stroke="#B45309" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="9 6"/>
+<polyline points="55,136.6 80,132.2 105,128.5 130,125.8 155,124.4 180,124.4 205,125.8 230,128.5 255,132.2 280,136.7 305,141.5 330,146.4 355,150.8 380,154.6 405,157.2 430,158.6 455,158.6 480,157.2 505,154.5 530,150.8" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="9 6"/>
+<text x="417.5" y="279.4" font-size="13" text-anchor="middle" fill="#B45309" font-weight="700" >ITCZ in January (about 5&#176; N)</text>
+<text x="292.5" y="112.5" font-size="13" text-anchor="middle" fill="#2563EB" font-weight="700" >ITCZ in July (about 20&#176; N)</text>
+<line x1="410" y1="146" x2="366" y2="190" stroke="#B45309" stroke-width="4" marker-end="url(#aB45309)" stroke-linecap="round"/>
+<line x1="285" y1="157.5" x2="241" y2="201.5" stroke="#B45309" stroke-width="4" marker-end="url(#aB45309)" stroke-linecap="round"/>
+<text x="167.5" y="173.7" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700" >Harmattan</text>
+<text x="167.5" y="189.7" font-size="13" text-anchor="middle" fill="#B45309" font-weight="400" >(dry, dusty)</text>
+<line x1="206" y1="354.4" x2="252" y2="310.4" stroke="#2563EB" stroke-width="4" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="306" y1="354.4" x2="352" y2="310.4" stroke="#2563EB" stroke-width="4" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<line x1="143.5" y1="345.2" x2="189.5" y2="301.2" stroke="#2563EB" stroke-width="4" marker-end="url(#a2563EB)" stroke-linecap="round"/>
+<text x="255" y="249.6" font-size="13" text-anchor="middle" fill="#2563EB" font-weight="700" >South-west monsoon winds</text>
+<text x="255" y="265.6" font-size="13" text-anchor="middle" fill="#2563EB" font-weight="400" >(warm, moist, from the ocean)</text>
+<circle cx="401.2" cy="314" r="5" fill="#102A43" stroke="none" stroke-width="2"/>
+<text x="407.2" y="304" font-size="13" text-anchor="start" fill="#102A43" font-weight="600" >Douala</text>
+<circle cx="458.7" cy="238.1" r="5" fill="#102A43" stroke="none" stroke-width="2"/>
+<text x="466.7" y="242.1" font-size="13" text-anchor="start" fill="#102A43" font-weight="600" >Maroua</text>
+<circle cx="455" cy="210.5" r="5" fill="#102A43" stroke="none" stroke-width="2"/>
+<text x="463" y="202.5" font-size="13" text-anchor="start" fill="#102A43" font-weight="600" >Lake Chad</text>
+<text x="180" y="72.5" font-size="14" text-anchor="middle" fill="#64748B" font-weight="700" >SAHARA</text>
+<text x="355" y="353.1" font-size="14" text-anchor="start" fill="#102A43" font-weight="400" ></text>
+<text x="117.5" y="331.2" font-size="14" text-anchor="middle" fill="#2563EB" font-weight="700" >Atlantic</text>
+<text x="117.5" y="347.2" font-size="14" text-anchor="middle" fill="#2563EB" font-weight="700" >Ocean</text>
+<text x="280" y="392" font-size="13" text-anchor="middle" fill="#64748B" font-weight="400" >Simplified sketch, not to scale. ITCZ positions are approximate.</text>
+</svg>

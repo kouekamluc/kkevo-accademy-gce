@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 490" role="img" aria-label="The earth at four positions in its orbit with a tilted axis: December and June solstices and March and September equinoxes">
+<rect width="640" height="490" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker></defs>
+<ellipse cx="320.0" cy="250.0" rx="215.0" ry="105.0" fill="none" stroke="#64748B" stroke-width="2" stroke-dasharray="8 6"/>
+<circle cx="320" cy="250" r="30" fill="#FEF3C7" stroke="#B45309" stroke-width="3"/>
+<text x="320" y="255" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="middle" >Sun</text>
+<circle cx="105" cy="250" r="24" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<path d="M105 226 A24.0 24.0 0 0 1 105 274 Z" fill="#FEF3C7" stroke="none"/>
+<circle cx="105" cy="250" r="24" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<line x1="120.2" y1="284.8" x2="89.8" y2="215.2" stroke="#2563EB" stroke-width="3"/>
+<text x="82.3" y="206" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle" >N</text>
+<text x="8" y="306" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="start" >22 December</text>
+<text x="8" y="324" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857" text-anchor="start" >Sun overhead: 23.5°S</text>
+<text x="8" y="342" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#047857" text-anchor="start" >(Tropic of Capricorn)</text>
+<circle cx="535" cy="250" r="24" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<path d="M535 274 A24.0 24.0 0 0 1 535 226 Z" fill="#FEF3C7" stroke="none"/>
+<circle cx="535" cy="250" r="24" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<line x1="550.2" y1="284.8" x2="519.8" y2="215.2" stroke="#2563EB" stroke-width="3"/>
+<text x="512.3" y="206" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle" >N</text>
+<text x="632" y="306" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="end" >21 June</text>
+<text x="632" y="324" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857" text-anchor="end" >Sun overhead: 23.5°N</text>
+<text x="632" y="342" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#047857" text-anchor="end" >(Tropic of Cancer)</text>
+<circle cx="320" cy="145" r="24" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<path d="M344 145 A24.0 24.0 0 0 1 296 145 Z" fill="#FEF3C7" stroke="none"/>
+<circle cx="320" cy="145" r="24" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<line x1="335.2" y1="179.8" x2="304.8" y2="110.2" stroke="#2563EB" stroke-width="3"/>
+<text x="297.3" y="101" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle" >N</text>
+<text x="320" y="79" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >23 September</text>
+<text x="320" y="97" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857" text-anchor="middle" >Sun overhead: equator</text>
+<circle cx="320" cy="355" r="24" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<path d="M296 355 A24.0 24.0 0 0 1 344 355 Z" fill="#FEF3C7" stroke="none"/>
+<circle cx="320" cy="355" r="24" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<line x1="335.2" y1="389.8" x2="304.8" y2="320.2" stroke="#2563EB" stroke-width="3"/>
+<text x="297.3" y="311" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle" >N</text>
+<text x="320" y="417" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >21 March</text>
+<text x="320" y="435" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857" text-anchor="middle" >Sun overhead: equator</text>
+<text x="320" y="24" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" >The earth's orbit: four positions (not to scale)</text>
+<text x="320" y="44" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="middle" >The axis stays tilted the same way (23.5° from the vertical) all year.</text>
+<text x="320" y="474" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle" >Shaded half = lit by the Sun. Earth moves anticlockwise round the Sun: one orbit takes about 365 days.</text>
+</svg>

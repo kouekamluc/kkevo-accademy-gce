@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Paper 1: 50 questions split into map skills, physical and human geography</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="40" font-size="18" font-weight="700" fill="#102A43" text-anchor="middle">Paper 1: 50 multiple-choice questions</text>
+<rect x="30" y="90" width="50" height="70" rx="6" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<line x1="55" y1="90" x2="55" y2="72" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<text x="41" y="66" font-size="14" font-weight="700" fill="#B45309" text-anchor="start">Map skills: 5</text>
+<rect x="80" y="90" width="230" height="70" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+<text x="195" y="120" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Physical geography</text>
+<text x="195" y="144" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">23 questions</text>
+<rect x="310" y="90" width="220" height="70" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="420" y="120" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Human geography</text>
+<text x="420" y="144" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">22 questions</text>
+<text x="280" y="200" font-size="15" font-weight="600" fill="#102A43" text-anchor="middle">All 50 questions are answered, in 1 hour 30 minutes.</text>
+<rect x="60" y="222" width="440" height="56" rx="8" fill="#F8FAFC" stroke="#64748B" stroke-width="2"/>
+<text x="280" y="246" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">90 minutes divided by 50 questions</text>
+<text x="280" y="267" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">is about 1.8 minutes for each question</text>
+<text x="280" y="312" font-size="14" font-weight="400" fill="#64748B" text-anchor="middle">Paper 1 is 35% of the marks. No multiple-choice question is set</text>
+<text x="280" y="332" font-size="14" font-weight="400" fill="#64748B" text-anchor="middle">on pure case studies, except on Cameroon.</text>
+</svg>

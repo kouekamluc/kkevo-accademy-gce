@@ -69,7 +69,8 @@ def start(client, practice_set, mode="practice"):
 
 @pytest.mark.parametrize("subject, min_topics, min_mocks", [
     ("mathematics", 15, 2), ("additional-mathematics", 8, 2), ("computer-science", 5, 2), ("ict", 7, 2),
-    ("history", 7, 1)])  # History essays cannot be auto-marked, so it has a Paper 1 mock only
+    ("history", 7, 1),  # History essays cannot be auto-marked, so it has a Paper 1 mock only
+    ("geography", 35, 2)])
 def test_o_level_courses_have_lessons_practice_and_mocks_for_every_topic(db, subject, min_topics, min_mocks):
     call_command("load_gce_curriculum")
     call_command("load_lessons", "--only", f"{subject}:form-5")

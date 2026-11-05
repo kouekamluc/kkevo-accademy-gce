@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="380" fill="#FFFFFF"/>
+<defs><marker id="a102A43" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<text x="280" y="24" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700" >The desertification cycle</text>
+<rect x="205" y="48.5" width="150" height="56" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2" />
+<text x="280" y="73" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700" >Overgrazing, tree</text>
+<text x="280" y="89" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700" >cutting, bush fires</text>
+<rect x="396.6" y="133.8" width="150" height="56" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" />
+<text x="471.6" y="158.4" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700" >Less plant cover,</text>
+<text x="471.6" y="174.4" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700" >bare soil</text>
+<rect x="323.4" y="271.9" width="150" height="56" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" />
+<text x="398.4" y="296.5" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700" >Wind and rain</text>
+<text x="398.4" y="312.5" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700" >erode the soil</text>
+<rect x="86.6" y="271.9" width="150" height="56" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" />
+<text x="161.6" y="296.5" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700" >Soil loses water</text>
+<text x="161.6" y="312.5" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700" >and nutrients</text>
+<rect x="13.4" y="127.8" width="150" height="68" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2" />
+<text x="88.4" y="150.4" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700" >Crops and grass</text>
+<text x="88.4" y="166.4" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700" >fail: land turns</text>
+<text x="88.4" y="182.4" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700" >to desert</text>
+<line x1="361" y1="112.6" x2="390.6" y2="125.8" stroke="#102A43" stroke-width="3" marker-end="url(#a102A43)" stroke-linecap="round"/>
+<line x1="451.5" y1="199.8" x2="418.6" y2="261.9" stroke="#102A43" stroke-width="3" marker-end="url(#a102A43)" stroke-linecap="round"/>
+<line x1="317.4" y1="299.9" x2="242.6" y2="299.9" stroke="#102A43" stroke-width="3" marker-end="url(#a102A43)" stroke-linecap="round"/>
+<line x1="141.4" y1="261.9" x2="108.5" y2="199.8" stroke="#102A43" stroke-width="3" marker-end="url(#a102A43)" stroke-linecap="round"/>
+<line x1="169.4" y1="125.8" x2="199" y2="112.6" stroke="#102A43" stroke-width="3" marker-end="url(#a102A43)" stroke-linecap="round"/>
+<text x="280" y="205" font-size="13" text-anchor="middle" fill="#64748B" font-weight="700" >Less rain absorbed,</text>
+<text x="280" y="222" font-size="13" text-anchor="middle" fill="#64748B" font-weight="700" >hotter and drier</text>
+<text x="280" y="238" font-size="13" text-anchor="middle" fill="#64748B" font-weight="700" >ground</text>
+</svg>

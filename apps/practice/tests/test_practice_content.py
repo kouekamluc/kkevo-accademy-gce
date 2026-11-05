@@ -97,3 +97,39 @@ def test_staff_can_preview_draft_sets_but_students_cannot(monkeypatch, client, d
     assert client.post(f"/practice/sets/{ps.pk}/start/").status_code == 302
     call_command("load_practice", "--refresh")  # a staff preview attempt does not block a refresh
     assert not Attempt.objects.filter(practice_set__title="HTML basics").exists()
+
+
+@pytest.mark.django_db
+def test_practice_question_can_show_a_bundled_diagram(monkeypatch, settings, tmp_path, client, django_user_model):
+    folder = tmp_path / "lessons" / "diagrams"
+    folder.mkdir(parents=True)
+    (folder / "test-map.svg").write_text("<svg xmlns='http://www.w3.org/2000/svg'/>")
+    settings.STATICFILES_DIRS = [str(tmp_path)]
+    monkeypatch.setattr(lesson_content, "collect", lambda names=None: [(KEY, LESSON, "t")])
+
+    def with_diagram(**kw):
+        q = MC("Look at the map. Which tag starts a paragraph?", [C("p", correct=True), C("br", why="Line break.")],
+               [S("p")], **kw)
+        return make_set(questions=[q, q | {"prompt": "Second?", "diagram": ""}, q | {"prompt": "Third?", "diagram": ""}])
+
+    bad = practice_content.validate([(KEY, with_diagram(diagram="missing.svg", diagram_alt="A map"), "t")])
+    assert any("no diagram called 'missing.svg'" in e for e in bad)
+    assert any("needs diagram_alt" in e for e in practice_content.validate(
+        [(KEY, with_diagram(diagram="test-map.svg"), "t")]))
+    good = with_diagram(diagram="test-map.svg", diagram_alt="A simple map")
+    assert practice_content.validate([(KEY, good, "t")]) == []
+
+    call_command("load_gce_curriculum")
+    call_command("load_lessons")
+    monkeypatch.setattr(practice_content, "collect", lambda names=None: [(KEY, good, "t")])
+    call_command("load_practice")
+    question = PracticeSet.objects.get(title="HTML basics").questions.order_by("order").first()
+    assert question.diagram_url.endswith("lessons/diagrams/test-map.svg") and question.diagram_alt == "A simple map"
+
+    # The question page shows it in the tap-to-enlarge viewer, with its alt text.
+    staff = django_user_model.objects.create_user(email="fig@example.com", password="pw-Strong-123", is_staff=True)
+    client.force_login(staff)
+    ps = question.practice_set
+    client.post(f"/practice/sets/{ps.pk}/start/")
+    page = client.get(f"/practice/attempts/{Attempt.objects.get(user=staff).pk}/q/1/").content.decode()
+    assert "Tap the figure to enlarge" in page and 'alt="A simple map"' in page and "test-map.svg" in page
