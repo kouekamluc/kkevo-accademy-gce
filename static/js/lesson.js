@@ -4,7 +4,46 @@
  * - Remembers the chosen text size on this device
  */
 (function () {
+  // KaTeX (~80 KB) is only downloaded when the page has maths. Layouts pass its URLs as
+  // data-katex-* attributes on this script tag; pages that load KaTeX themselves still work.
+  var self = document.currentScript;
+  var katexUrls = self && self.dataset.katexJs
+    ? { js: self.dataset.katexJs, auto: self.dataset.katexAuto, css: self.dataset.katexCss } : null;
+  var katexLoading = null;
+
+  function hasMaths(root) {
+    if (root.querySelector("[data-latex]")) return true;
+    var scope = root === document.body ? (document.querySelector("main") || root) : root;
+    return /\$|\\\(|\\\[/.test(scope.textContent || "");
+  }
+
+  function loadKatex() {
+    if (window.katex || !katexUrls) return Promise.resolve();
+    if (katexLoading) return katexLoading;
+    katexLoading = new Promise(function (resolve) {
+      var css = document.createElement("link");
+      css.rel = "stylesheet";
+      css.href = katexUrls.css;
+      document.head.appendChild(css);
+      function add(src, done) {
+        var s = document.createElement("script");
+        s.src = src;
+        s.onload = done;
+        s.onerror = done;
+        document.head.appendChild(s);
+      }
+      add(katexUrls.js, function () { add(katexUrls.auto, resolve); });
+    });
+    return katexLoading;
+  }
+
   function renderMaths(root) {
+    if (window.katex) return renderNow(root);
+    if (!hasMaths(root)) return;
+    loadKatex().then(function () { renderNow(root); });
+  }
+
+  function renderNow(root) {
     if (!window.katex) return;
     root.querySelectorAll("[data-latex]").forEach(function (el) {
       if (el.dataset.rendered) return;

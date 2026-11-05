@@ -83,7 +83,7 @@ Built CSS and vendored JS are committed, so Node is only needed when templates c
 
 ```bash
 npm install
-npm run build        # copies htmx/alpine/flowbite/katex to static/vendor and builds static/css/app.css
+npm run build        # copies htmx/alpine/katex/fonts to static/vendor and builds static/css/app.css
 npm run watch:css    # rebuild CSS while editing templates
 ```
 

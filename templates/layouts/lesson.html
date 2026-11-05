@@ -5,10 +5,9 @@ Lesson player shell (mockups 04–06): slim header with breadcrumb and lesson ac
 reading-progress line, and on phones a bottom bar with Previous · Mark as Complete · Next.
 {% endcomment %}
 {% block head %}
-<link rel="stylesheet" href="{% static 'vendor/katex/katex.min.css' %}">
-<script defer src="{% static 'vendor/katex/katex.min.js' %}"></script>
-<script defer src="{% static 'vendor/katex/auto-render.min.js' %}"></script>
-<script src="{% static 'js/lesson.js' %}"></script>
+{# KaTeX is loaded by lesson.js only when the page contains maths. #}
+<script src="{% static 'js/lesson.js' %}" data-katex-js="{% static 'vendor/katex/katex.min.js' %}"
+        data-katex-auto="{% static 'vendor/katex/auto-render.min.js' %}" data-katex-css="{% static 'vendor/katex/katex.min.css' %}"></script>
 {% block lesson_head %}{% endblock %}
 {% endblock %}
 {% block body %}

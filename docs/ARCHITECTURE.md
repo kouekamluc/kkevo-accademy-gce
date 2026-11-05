@@ -37,7 +37,7 @@ code/
 ├── templates/           base layouts + shared partials (components/)
 ├── static/src/          Tailwind input CSS
 ├── static/css/app.css   built CSS (committed)
-├── static/vendor/       htmx, alpine, flowbite (committed)
+├── static/vendor/       htmx, alpine, katex, self-hosted fonts (committed)
 └── tests live in each app's tests/ package (pytest-django)
 ```
 

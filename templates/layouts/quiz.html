@@ -2,10 +2,9 @@
 {% load static %}
 {% comment %}Focused quiz shell (mockup 09): close button, set title, question counter, progress bar.{% endcomment %}
 {% block head %}
-<link rel="stylesheet" href="{% static 'vendor/katex/katex.min.css' %}">
-<script defer src="{% static 'vendor/katex/katex.min.js' %}"></script>
-<script defer src="{% static 'vendor/katex/auto-render.min.js' %}"></script>
-<script src="{% static 'js/lesson.js' %}"></script>
+{# KaTeX is loaded by lesson.js only when the page contains maths. #}
+<script src="{% static 'js/lesson.js' %}" data-katex-js="{% static 'vendor/katex/katex.min.js' %}"
+        data-katex-auto="{% static 'vendor/katex/auto-render.min.js' %}" data-katex-css="{% static 'vendor/katex/katex.min.css' %}"></script>
 {% endblock %}
 {% block body %}
 <div class="min-h-screen bg-surface-bg">
