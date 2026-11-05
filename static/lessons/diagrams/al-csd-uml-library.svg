@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker>
+<marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker>
+<marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L11,6 L0,12 z" fill="#ffffff" stroke="#102A43" stroke-width="1.5"/></marker>
+</defs>
+<text x="280" y="26" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >UML class diagram: Library, Book and Member</text>
+<rect x="190" y="40" width="180" height="86" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="61" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >Library</text>
+<line x1="190" y1="70" x2="370" y2="70" stroke="#102A43" stroke-width="2"/>
+<text x="198" y="90" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >- name : str</text>
+<line x1="190" y1="98" x2="370" y2="98" stroke="#102A43" stroke-width="2"/>
+<text x="198" y="118" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ add_book(b : Book)</text>
+<rect x="340" y="206" width="200" height="134" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="440.0" y="227" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >Book</text>
+<line x1="340" y1="236" x2="540" y2="236" stroke="#102A43" stroke-width="2"/>
+<text x="348" y="256" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ title : str</text>
+<text x="348" y="280" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" ># shelf : str</text>
+<text x="348" y="304" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >- price : int</text>
+<line x1="340" y1="312" x2="540" y2="312" stroke="#102A43" stroke-width="2"/>
+<text x="348" y="332" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ get_price() : int</text>
+<rect x="20" y="206" width="190" height="110" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="115.0" y="227" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >Member</text>
+<line x1="20" y1="236" x2="210" y2="236" stroke="#102A43" stroke-width="2"/>
+<text x="28" y="256" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ name : str</text>
+<text x="28" y="280" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ form : str</text>
+<line x1="20" y1="288" x2="210" y2="288" stroke="#102A43" stroke-width="2"/>
+<text x="28" y="308" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ borrow(b : Book)</text>
+<line x1="350" y1="152" x2="350" y2="206" stroke="#102A43" stroke-width="2"/>
+<polygon points="350,124 358,138 350,152 342,138" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="338" y="176" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >contains</text>
+<text x="360" y="170" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >1</text>
+<text x="360" y="198" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >0..*</text>
+<line x1="210" y1="262" x2="340" y2="262" stroke="#102A43" stroke-width="2"/>
+<text x="216" y="254" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >0..*</text>
+<text x="334" y="254" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >0..*</text>
+<text x="275" y="284" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >borrows</text>
+<text x="20" y="64" font-family="Inter, Arial, sans-serif" font-size="13" fill="#047857" text-anchor="start" font-weight="400" >Filled diamond:</text>
+<text x="20" y="82" font-family="Inter, Arial, sans-serif" font-size="13" fill="#047857" text-anchor="start" font-weight="400" >whole contains parts</text>
+<text x="20" y="112" font-family="Inter, Arial, sans-serif" font-size="13" fill="#047857" text-anchor="start" font-weight="400" >Plain line:</text>
+<text x="20" y="130" font-family="Inter, Arial, sans-serif" font-size="13" fill="#047857" text-anchor="start" font-weight="400" >association</text>
+</svg>

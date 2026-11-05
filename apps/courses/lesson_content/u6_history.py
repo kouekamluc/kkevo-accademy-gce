@@ -192,7 +192,7 @@ LESSONS.append(lesson(
           "Cameroon today, so this topic needs particular care and balance."),
         D("A **plebiscite** is a direct vote by the people of a territory on a single question about its future, "
           "here organised under United Nations supervision in February 1961.", title="Plebiscite"),
-        D("The **Kamerun National Congress (KNC)**, led by Dr E. M. L. Endeley, was formed in 1953. The **Kamerun "
+        D("The **Kamerun National Congress (KNC)**, led by Dr E. M. L. Endeley, was formed in the early 1950s (1951 in most accounts: check your textbook). The **Kamerun "
           "National Democratic Party (KNDP)**, led by John Ngu Foncha, broke away in 1955. **One Kamerun (OK)**, "
           "led by Ndeh Ntumazah, was founded in 1957 and was close to the UPC.", title="Main parties"),
 

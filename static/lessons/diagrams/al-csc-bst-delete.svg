@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a102A43" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="a2563EB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="a047857" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="aB45309" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<g font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">
+<text x="280" y="24" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">Delete 50, a node with two children</text>
+<text x="130" y="56" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">Before</text>
+<line x1="130" y1="100" x2="70" y2="170" stroke="#102A43" stroke-width="2"/>
+<line x1="130" y1="100" x2="190" y2="170" stroke="#102A43" stroke-width="2"/>
+<line x1="190" y1="170" x2="150" y2="240" stroke="#102A43" stroke-width="2"/>
+<line x1="190" y1="170" x2="230" y2="240" stroke="#102A43" stroke-width="2"/>
+<circle cx="130" cy="100" r="20" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="130" y="106" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">50</text>
+<circle cx="70" cy="170" r="20" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="70" y="176" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">30</text>
+<circle cx="190" cy="170" r="20" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="190" y="176" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">70</text>
+<circle cx="150" cy="240" r="20" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="150" y="246" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">60</text>
+<circle cx="230" cy="240" r="20" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="230" y="246" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">80</text>
+<text x="420" y="56" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">After</text>
+<line x1="420" y1="100" x2="360" y2="170" stroke="#102A43" stroke-width="2"/>
+<line x1="420" y1="100" x2="480" y2="170" stroke="#102A43" stroke-width="2"/>
+<line x1="480" y1="170" x2="520" y2="240" stroke="#102A43" stroke-width="2"/>
+<circle cx="420" cy="100" r="20" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="420" y="106" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">60</text>
+<circle cx="360" cy="170" r="20" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="360" y="176" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">30</text>
+<circle cx="480" cy="170" r="20" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="480" y="176" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">70</text>
+<circle cx="520" cy="240" r="20" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="520" y="246" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">80</text>
+<line x1="262" y1="170" x2="296" y2="170" stroke="#B45309" stroke-width="2" marker-end="url(#aB45309)"/>
+<text x="20" y="308" font-size="14" text-anchor="start" fill="#102A43">60 is the leftmost node of the right subtree: the smallest value above 50.</text>
+<text x="20" y="332" font-size="14" text-anchor="start" fill="#102A43">Copy 60 into the root, then remove the old leaf 60.</text>
+</g>
+</svg>

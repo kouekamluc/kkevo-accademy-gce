@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a102A43" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="a2563EB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="a047857" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="aB45309" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<g font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">
+<text x="280" y="26" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">Linked lists</text>
+<text x="20" y="58" font-size="14" text-anchor="start" fill="#2563EB" font-weight="700">Singly linked list</text>
+<rect x="40" y="75" width="60" height="40" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="100" y="75" width="40" height="40" rx="4" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="70" y="101" font-size="17" text-anchor="middle" fill="#102A43" font-weight="700">10</text>
+<circle cx="120" cy="95" r="3" fill="#047857" stroke="#047857" stroke-width="2"/>
+<line x1="120" y1="95" x2="166" y2="95" stroke="#047857" stroke-width="2" marker-end="url(#a047857)"/>
+<text x="70" y="136" font-size="13" text-anchor="middle" fill="#102A43">data</text>
+<text x="120" y="136" font-size="13" text-anchor="middle" fill="#102A43">next</text>
+<rect x="170" y="75" width="60" height="40" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="230" y="75" width="40" height="40" rx="4" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="200" y="101" font-size="17" text-anchor="middle" fill="#102A43" font-weight="700">25</text>
+<circle cx="250" cy="95" r="3" fill="#047857" stroke="#047857" stroke-width="2"/>
+<line x1="250" y1="95" x2="296" y2="95" stroke="#047857" stroke-width="2" marker-end="url(#a047857)"/>
+<text x="200" y="136" font-size="13" text-anchor="middle" fill="#102A43">data</text>
+<text x="250" y="136" font-size="13" text-anchor="middle" fill="#102A43">next</text>
+<rect x="300" y="75" width="60" height="40" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="360" y="75" width="40" height="40" rx="4" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="330" y="101" font-size="17" text-anchor="middle" fill="#102A43" font-weight="700">40</text>
+<circle cx="380" cy="95" r="3" fill="#047857" stroke="#047857" stroke-width="2"/>
+<line x1="380" y1="95" x2="426" y2="95" stroke="#047857" stroke-width="2" marker-end="url(#a047857)"/>
+<text x="330" y="136" font-size="13" text-anchor="middle" fill="#102A43">data</text>
+<text x="380" y="136" font-size="13" text-anchor="middle" fill="#102A43">next</text>
+<rect x="430" y="75" width="60" height="40" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="490" y="75" width="40" height="40" rx="4" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="460" y="101" font-size="17" text-anchor="middle" fill="#102A43" font-weight="700">60</text>
+<text x="510" y="100" font-size="13" text-anchor="middle" fill="#B45309">null</text>
+<text x="460" y="136" font-size="13" text-anchor="middle" fill="#102A43">data</text>
+<text x="510" y="136" font-size="13" text-anchor="middle" fill="#102A43">next</text>
+<text x="20" y="206" font-size="14" text-anchor="start" fill="#2563EB" font-weight="700">Doubly linked list</text>
+<rect x="40" y="226" width="36" height="40" rx="4" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<rect x="76" y="226" width="60" height="40" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="136" y="226" width="36" height="40" rx="4" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="106" y="252" font-size="17" text-anchor="middle" fill="#102A43" font-weight="700">10</text>
+<text x="58" y="252" font-size="14" text-anchor="middle" fill="#102A43">p</text>
+<text x="154" y="252" font-size="14" text-anchor="middle" fill="#102A43">n</text>
+<line x1="172" y1="238" x2="208" y2="238" stroke="#047857" stroke-width="2" marker-end="url(#a047857)"/>
+<line x1="210" y1="256" x2="174" y2="256" stroke="#2563EB" stroke-width="2" marker-end="url(#a2563EB)"/>
+<rect x="210" y="226" width="36" height="40" rx="4" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<rect x="246" y="226" width="60" height="40" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="306" y="226" width="36" height="40" rx="4" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="276" y="252" font-size="17" text-anchor="middle" fill="#102A43" font-weight="700">25</text>
+<text x="228" y="252" font-size="14" text-anchor="middle" fill="#102A43">p</text>
+<text x="324" y="252" font-size="14" text-anchor="middle" fill="#102A43">n</text>
+<line x1="342" y1="238" x2="378" y2="238" stroke="#047857" stroke-width="2" marker-end="url(#a047857)"/>
+<line x1="380" y1="256" x2="344" y2="256" stroke="#2563EB" stroke-width="2" marker-end="url(#a2563EB)"/>
+<rect x="380" y="226" width="36" height="40" rx="4" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<rect x="416" y="226" width="60" height="40" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="476" y="226" width="36" height="40" rx="4" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="446" y="252" font-size="17" text-anchor="middle" fill="#102A43" font-weight="700">40</text>
+<text x="398" y="252" font-size="14" text-anchor="middle" fill="#102A43">p</text>
+<text x="494" y="252" font-size="14" text-anchor="middle" fill="#102A43">n</text>
+<text x="20" y="312" font-size="14" text-anchor="start" fill="#102A43">p = previous pointer, n = next pointer. The first p and last n hold null.</text>
+<text x="20" y="338" font-size="14" text-anchor="start" fill="#102A43">Singly: forwards only. Doubly: forwards and backwards.</text>
+</g>
+</svg>

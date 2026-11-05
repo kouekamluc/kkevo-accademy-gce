@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Timeline of African independence dates, 1957 to 1980</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="26" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">Independence dates</text>
+<line x1="30" y1="180" x2="530" y2="180" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="62" y1="180" x2="62" y2="146" stroke="#047857" stroke-width="2"/>
+<text x="62" y="120" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">1957</text>
+<text x="62" y="136" font-size="13" fill="#102A43" text-anchor="middle">Ghana</text>
+<circle cx="62" cy="180" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="135" y1="180" x2="135" y2="210" stroke="#2563EB" stroke-width="2"/>
+<text x="135" y="228" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700">1958</text>
+<text x="135" y="244" font-size="13" fill="#102A43" text-anchor="middle">Guinea says</text>
+<text x="135" y="260" font-size="13" fill="#102A43" text-anchor="middle">No to de Gaulle</text>
+<circle cx="135" cy="180" r="6" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="207" y1="180" x2="207" y2="146" stroke="#047857" stroke-width="2"/>
+<text x="207" y="72" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">1960</text>
+<text x="207" y="88" font-size="13" fill="#102A43" text-anchor="middle">Nigeria,</text>
+<text x="207" y="104" font-size="13" fill="#102A43" text-anchor="middle">Cameroun and</text>
+<text x="207" y="120" font-size="13" fill="#102A43" text-anchor="middle">most French</text>
+<text x="207" y="136" font-size="13" fill="#102A43" text-anchor="middle">colonies</text>
+<circle cx="207" cy="180" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="280" y1="180" x2="280" y2="210" stroke="#047857" stroke-width="2"/>
+<text x="280" y="228" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">1962</text>
+<text x="280" y="244" font-size="13" fill="#102A43" text-anchor="middle">Algeria</text>
+<circle cx="280" cy="180" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="353" y1="180" x2="353" y2="146" stroke="#047857" stroke-width="2"/>
+<text x="353" y="120" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">1963</text>
+<text x="353" y="136" font-size="13" fill="#102A43" text-anchor="middle">Kenya</text>
+<circle cx="353" cy="180" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="425" y1="180" x2="425" y2="210" stroke="#047857" stroke-width="2"/>
+<text x="425" y="228" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">1975</text>
+<text x="425" y="244" font-size="13" fill="#102A43" text-anchor="middle">Mozambique,</text>
+<text x="425" y="260" font-size="13" fill="#102A43" text-anchor="middle">Angola</text>
+<circle cx="425" cy="180" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="498" y1="180" x2="498" y2="146" stroke="#047857" stroke-width="2"/>
+<text x="498" y="120" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">1980</text>
+<text x="498" y="136" font-size="13" fill="#102A43" text-anchor="middle">Zimbabwe</text>
+<circle cx="498" cy="180" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<text x="280" y="344" font-size="13" fill="#B45309" text-anchor="middle">Not drawn to scale. Check dates in your textbook.</text>
+</svg>

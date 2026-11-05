@@ -133,3 +133,24 @@ def test_student_journey_from_dashboard_to_mock_exam(client, student, maths):
     assert mastery_for_topic(student, paper1.topic_id).label == "Not started"
     assert client.get(reverse("learning:progress")).status_code == 200
     assert client.get(reverse("practice:index")).status_code == 200
+
+
+@pytest.mark.parametrize("subject, level, min_topics", [
+    ("computer-science", "lower-sixth", 13), ("computer-science", "upper-sixth", 9),
+    ("ict", "lower-sixth", 7), ("ict", "upper-sixth", 6),
+    ("history", "lower-sixth", 9), ("history", "upper-sixth", 9)])
+def test_a_level_courses_have_depth_practice_and_a_practice_paper(db, subject, level, min_topics):
+    call_command("load_gce_curriculum")
+    call_command("load_lessons", "--only", f"{subject}:{level}")
+    call_command("load_practice", "--only", f"{subject}:{level}")
+    course = Course.objects.get(offering__subject__slug=subject, offering__level__slug=level,
+                                description="[gce-guide]")
+    topics = [t for m in course.modules.all() for t in m.topics.all()]
+    assert len(topics) >= min_topics + 1  # syllabus topics plus the practice paper
+    for topic in topics:
+        lessons = list(topic.lessons.all())
+        assert lessons, f"{topic.title} has no lessons"
+        for lesson in lessons:
+            assert PracticeSet.objects.filter(lesson=lesson).exists(), f"{lesson.slug} has no practice set"
+    mocks = PracticeSet.objects.filter(topic__module__course=course, is_mock=True)
+    assert mocks.count() >= 1 and all(m.time_limit_minutes for m in mocks)

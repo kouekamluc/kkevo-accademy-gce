@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="28" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">4-stage pipeline: 5 instructions finish in 8 cycles</text>
+<text x="137.0" y="60" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">1</text>
+<text x="191.0" y="60" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">2</text>
+<text x="245.0" y="60" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">3</text>
+<text x="299.0" y="60" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">4</text>
+<text x="353.0" y="60" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">5</text>
+<text x="407.0" y="60" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">6</text>
+<text x="461.0" y="60" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">7</text>
+<text x="515.0" y="60" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">8</text>
+<text x="60" y="60" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">Cycle</text>
+<text x="60" y="94.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">I1</text>
+<rect x="110" y="74" width="54" height="36" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="137.0" y="97.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">F</text>
+<rect x="164" y="74" width="54" height="36" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="191.0" y="97.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">D</text>
+<rect x="218" y="74" width="54" height="36" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<text x="245.0" y="97.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">E</text>
+<rect x="272" y="74" width="54" height="36" fill="#E0E7FF" stroke="#102A43" stroke-width="2"/>
+<text x="299.0" y="97.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">W</text>
+<text x="60" y="138.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">I2</text>
+<rect x="164" y="118" width="54" height="36" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="191.0" y="141.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">F</text>
+<rect x="218" y="118" width="54" height="36" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="245.0" y="141.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">D</text>
+<rect x="272" y="118" width="54" height="36" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<text x="299.0" y="141.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">E</text>
+<rect x="326" y="118" width="54" height="36" fill="#E0E7FF" stroke="#102A43" stroke-width="2"/>
+<text x="353.0" y="141.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">W</text>
+<text x="60" y="182.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">I3</text>
+<rect x="218" y="162" width="54" height="36" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="245.0" y="185.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">F</text>
+<rect x="272" y="162" width="54" height="36" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="299.0" y="185.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">D</text>
+<rect x="326" y="162" width="54" height="36" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<text x="353.0" y="185.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">E</text>
+<rect x="380" y="162" width="54" height="36" fill="#E0E7FF" stroke="#102A43" stroke-width="2"/>
+<text x="407.0" y="185.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">W</text>
+<text x="60" y="226.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">I4</text>
+<rect x="272" y="206" width="54" height="36" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="299.0" y="229.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">F</text>
+<rect x="326" y="206" width="54" height="36" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="353.0" y="229.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">D</text>
+<rect x="380" y="206" width="54" height="36" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<text x="407.0" y="229.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">E</text>
+<rect x="434" y="206" width="54" height="36" fill="#E0E7FF" stroke="#102A43" stroke-width="2"/>
+<text x="461.0" y="229.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">W</text>
+<text x="60" y="270.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">I5</text>
+<rect x="326" y="250" width="54" height="36" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="353.0" y="273.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">F</text>
+<rect x="380" y="250" width="54" height="36" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="407.0" y="273.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">D</text>
+<rect x="434" y="250" width="54" height="36" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<text x="461.0" y="273.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">E</text>
+<rect x="488" y="250" width="54" height="36" fill="#E0E7FF" stroke="#102A43" stroke-width="2"/>
+<text x="515.0" y="273.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">W</text>
+<text x="280" y="320" font-size="14" text-anchor="middle" fill="#102A43" font-weight="400">F fetch   D decode   E execute   W write back</text>
+<text x="280" y="342" font-size="14" text-anchor="middle" fill="#047857" font-weight="700">Cycles = k + (n - 1) = 4 + 4 = 8, against 4 x 5 = 20 without a pipeline</text>
+</svg>

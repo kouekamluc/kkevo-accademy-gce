@@ -482,3 +482,12 @@ SYLLABI[("pure-mathematics-with-mechanics", "lower-sixth")] = (
     "Pure Mathematics with Mechanics (A Level, 765) — Core Pure", _PURE_NOTE, _PURE_CORE)
 SYLLABI[("pure-mathematics-with-statistics", "lower-sixth")] = (
     "Pure Mathematics with Statistics (A Level, 770) — Core Pure", _PURE_NOTE, _PURE_CORE)
+
+
+# A Level courses that have a practice paper: KKEVO's own exam practice, not a Board paper.
+for _key in [("computer-science", "lower-sixth"), ("computer-science", "upper-sixth"),
+             ("ict", "lower-sixth"), ("ict", "upper-sixth"),
+             ("history", "lower-sixth"), ("history", "upper-sixth")]:
+    SYLLABI[_key][2].append(("Examination", [
+        ("Practice paper", "KKEVO practice paper for this year (check the real paper format with your teacher)."),
+    ]))

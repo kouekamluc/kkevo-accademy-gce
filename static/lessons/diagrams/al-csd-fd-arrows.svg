@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker>
+<marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker>
+<marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L11,6 L0,12 z" fill="#ffffff" stroke="#102A43" stroke-width="1.5"/></marker>
+</defs>
+<text x="280" y="28" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >Functional dependencies in STUDENT_COURSE</text>
+<rect x="30" y="50" width="104" height="40" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="82.0" y="75" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >StudentID</text>
+<rect x="380" y="50" width="104" height="40" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="432.0" y="75" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >CourseID</text>
+<rect x="30" y="150" width="104" height="40" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="82.0" y="175" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >StudentName</text>
+<rect x="208" y="150" width="104" height="40" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="260.0" y="175" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >Mark</text>
+<rect x="318" y="150" width="104" height="40" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="370.0" y="175" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >CourseTitle</text>
+<rect x="440" y="150" width="104" height="40" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="492.0" y="175" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >TutorID</text>
+<rect x="440" y="250" width="104" height="40" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="492.0" y="275" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >TutorName</text>
+<line x1="82" y1="90" x2="82" y2="150" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<line x1="420" y1="90" x2="380" y2="150" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<line x1="450" y1="90" x2="492" y2="150" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<line x1="492" y1="190" x2="492" y2="250" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<path d="M 134 70 L 260 70 L 260 150" fill="none" stroke="#B45309" stroke-width="2" marker-end="url(#a)"/>
+<line x1="380" y1="70" x2="260" y2="70" stroke="#B45309" stroke-width="2"/>
+<text x="197" y="60" font-family="Inter, Arial, sans-serif" font-size="13" fill="#B45309" text-anchor="middle" font-weight="400" >together</text>
+<text x="30" y="240" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >Partial: StudentID alone fixes StudentName.</text>
+<text x="30" y="262" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >Partial: CourseID alone fixes CourseTitle and TutorID.</text>
+<text x="30" y="284" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >Transitive: CourseID gives TutorID,</text>
+<text x="30" y="304" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >and TutorID gives TutorName.</text>
+<text x="30" y="330" font-family="Inter, Arial, sans-serif" font-size="13" fill="#B45309" text-anchor="start" font-weight="400" >Only Mark needs the whole key (StudentID, CourseID).</text>
+</svg>

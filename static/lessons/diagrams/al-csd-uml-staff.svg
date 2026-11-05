@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker>
+<marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker>
+<marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L11,6 L0,12 z" fill="#ffffff" stroke="#102A43" stroke-width="1.5"/></marker>
+</defs>
+<text x="280" y="26" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >UML class diagram: Staff and three subclasses</text>
+<rect x="150" y="44" width="250" height="134" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="275.0" y="65" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" font-style="italic">Staff</text>
+<line x1="150" y1="74" x2="400" y2="74" stroke="#102A43" stroke-width="2"/>
+<text x="158" y="94" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" ># name : str</text>
+<text x="158" y="118" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" ># base_salary : int</text>
+<line x1="150" y1="126" x2="400" y2="126" stroke="#102A43" stroke-width="2"/>
+<text x="158" y="146" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ monthly_pay() : int  (abstract)</text>
+<text x="158" y="170" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ payslip() : str</text>
+<rect x="15" y="226" width="150" height="86" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="90.0" y="247" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >Teacher</text>
+<line x1="15" y1="256" x2="165" y2="256" stroke="#102A43" stroke-width="2"/>
+<text x="23" y="276" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >- periods : int</text>
+<line x1="15" y1="284" x2="165" y2="284" stroke="#102A43" stroke-width="2"/>
+<text x="23" y="304" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ monthly_pay() : int</text>
+<line x1="90.0" y1="226" x2="200" y2="178" stroke="#102A43" stroke-width="2" marker-end="url(#t)"/>
+<rect x="190" y="226" width="150" height="86" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="265.0" y="247" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >Bursar</text>
+<line x1="190" y1="256" x2="340" y2="256" stroke="#102A43" stroke-width="2"/>
+<line x1="190" y1="284" x2="340" y2="284" stroke="#102A43" stroke-width="2"/>
+<text x="198" y="304" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ monthly_pay() : int</text>
+<line x1="265.0" y1="226" x2="275" y2="178" stroke="#102A43" stroke-width="2" marker-end="url(#t)"/>
+<rect x="380" y="226" width="165" height="110" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="462.5" y="247" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >Driver</text>
+<line x1="380" y1="256" x2="545" y2="256" stroke="#102A43" stroke-width="2"/>
+<text x="388" y="276" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >- trips : int</text>
+<line x1="380" y1="284" x2="545" y2="284" stroke="#102A43" stroke-width="2"/>
+<text x="388" y="304" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ monthly_pay() : int</text>
+<text x="388" y="328" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ payslip() : str</text>
+<line x1="462.5" y1="226" x2="350" y2="178" stroke="#102A43" stroke-width="2" marker-end="url(#t)"/>
+<text x="410" y="64" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >+ public</text>
+<text x="410" y="84" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" ># protected</text>
+<text x="410" y="104" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >- private</text>
+<text x="410" y="128" font-family="Inter, Arial, sans-serif" font-size="13" fill="#047857" text-anchor="start" font-weight="400" >Hollow arrow:</text>
+<text x="410" y="148" font-family="Inter, Arial, sans-serif" font-size="13" fill="#047857" text-anchor="start" font-weight="400" >is-a (inherits)</text>
+</svg>

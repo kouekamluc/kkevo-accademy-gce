@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>From the OAU to the African Union and the regional economic communities</title>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="26" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">Continental and regional bodies</text>
+<rect x="30" y="50" width="200" height="52" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="130" y="72" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">OAU</text>
+<text x="130" y="90" font-size="14" fill="#102A43" text-anchor="middle">founded 1963</text>
+<rect x="330" y="50" width="200" height="52" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+<text x="430" y="72" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">African Union</text>
+<text x="430" y="90" font-size="14" fill="#102A43" text-anchor="middle">launched 2002</text>
+<line x1="232" y1="76" x2="326" y2="76" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="280" y="66" font-size="13" fill="#102A43" text-anchor="middle">replaced</text>
+<text x="280" y="140" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Regional economic communities (examples)</text>
+<rect x="20" y="160" width="160" height="70" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="100" y="183" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">ECOWAS</text>
+<text x="100" y="200" font-size="14" fill="#102A43" text-anchor="middle">West Africa</text>
+<text x="100" y="217" font-size="14" fill="#102A43" text-anchor="middle">treaty 1975</text>
+<rect x="200" y="160" width="160" height="70" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="280" y="183" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">CEMAC</text>
+<text x="280" y="200" font-size="14" fill="#102A43" text-anchor="middle">Central Africa</text>
+<text x="280" y="217" font-size="14" fill="#102A43" text-anchor="middle">treaty 1994</text>
+<rect x="380" y="160" width="160" height="70" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="460" y="183" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">SADC</text>
+<text x="460" y="200" font-size="14" fill="#102A43" text-anchor="middle">Southern Africa</text>
+<text x="460" y="217" font-size="14" fill="#102A43" text-anchor="middle">treaty 1992</text>
+<rect x="60" y="262" width="440" height="56" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+<text x="280" y="286" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Cameroon belongs to CEMAC</text>
+<text x="280" y="304" font-size="14" fill="#102A43" text-anchor="middle">Douala port serves Chad and the CAR</text>
+<text x="280" y="344" font-size="13" fill="#B45309" text-anchor="middle">Dates are those of the founding treaties (check your textbook)</text>
+</svg>

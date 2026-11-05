@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>How the UN trusteeship system linked the UN, the administering power and the people</title>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="26" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">Trusteeship: who talks to whom</text>
+<rect x="110" y="44" width="340" height="64" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="280" y="72" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">United Nations</text>
+<text x="280" y="90" font-size="14" fill="#102A43" text-anchor="middle">Assembly and Trusteeship Council</text>
+<rect x="20" y="230" width="200" height="70" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+<text x="120" y="262" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Administering power</text>
+<text x="120" y="278" font-size="14" fill="#102A43" text-anchor="middle">France or Britain</text>
+<rect x="340" y="230" width="200" height="70" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+<text x="440" y="262" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Inhabitants</text>
+<text x="440" y="278" font-size="14" fill="#102A43" text-anchor="middle">parties, chiefs, petitioners</text>
+<line x1="50" y1="228" x2="140" y2="112" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="88" y="176" font-size="13" fill="#102A43" text-anchor="end">reports</text>
+<line x1="230" y1="112" x2="150" y2="228" stroke="#2563EB" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="200" y="176" font-size="13" fill="#2563EB" text-anchor="start">questions</text>
+<line x1="510" y1="228" x2="430" y2="112" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="480" y="176" font-size="13" fill="#102A43" text-anchor="start">petitions</text>
+<line x1="320" y1="112" x2="400" y2="228" stroke="#2563EB" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="372" y="168" font-size="13" fill="#2563EB" text-anchor="start">visiting</text>
+<text x="372" y="184" font-size="13" fill="#2563EB" text-anchor="start">missions</text>
+<line x1="224" y1="265" x2="336" y2="265" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="280" y="254" font-size="13" fill="#102A43" text-anchor="middle">administers</text>
+<text x="280" y="336" font-size="13" fill="#B45309" text-anchor="middle">Aim (Article 76): progress towards self-government or independence</text>
+</svg>

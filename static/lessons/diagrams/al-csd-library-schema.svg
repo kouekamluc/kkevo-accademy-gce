@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker>
+<marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker>
+<marker id="t" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" orient="auto"><path d="M0,0 L11,6 L0,12 z" fill="#ffffff" stroke="#102A43" stroke-width="1.5"/></marker>
+</defs>
+<text x="280" y="28" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >Library database: three tables and their keys</text>
+<rect x="15" y="70" width="150" height="134" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="15" y="70" width="150" height="30" rx="6" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<text x="90.0" y="91" font-family="Inter, Arial, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="700" >Member</text>
+<line x1="15" y1="100" x2="165" y2="100" stroke="#102A43" stroke-width="2"/>
+<text x="23" y="119" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >MemberID</text>
+<text x="157" y="119" font-family="Inter, Arial, sans-serif" font-size="13" fill="#B45309" text-anchor="end" font-weight="700" >PK</text>
+<line x1="15" y1="126" x2="165" y2="126" stroke="#102A43" stroke-width="2"/>
+<text x="23" y="145" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >Name</text>
+<line x1="15" y1="152" x2="165" y2="152" stroke="#102A43" stroke-width="2"/>
+<text x="23" y="171" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >Form</text>
+<line x1="15" y1="178" x2="165" y2="178" stroke="#102A43" stroke-width="2"/>
+<text x="23" y="197" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >Town</text>
+<rect x="205" y="70" width="150" height="134" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="205" y="70" width="150" height="30" rx="6" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="91" font-family="Inter, Arial, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="700" >Loan</text>
+<line x1="205" y1="100" x2="355" y2="100" stroke="#102A43" stroke-width="2"/>
+<text x="213" y="119" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >LoanID</text>
+<text x="347" y="119" font-family="Inter, Arial, sans-serif" font-size="13" fill="#B45309" text-anchor="end" font-weight="700" >PK</text>
+<line x1="205" y1="126" x2="355" y2="126" stroke="#102A43" stroke-width="2"/>
+<text x="213" y="145" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >MemberID</text>
+<text x="347" y="145" font-family="Inter, Arial, sans-serif" font-size="13" fill="#B45309" text-anchor="end" font-weight="700" >FK</text>
+<line x1="205" y1="152" x2="355" y2="152" stroke="#102A43" stroke-width="2"/>
+<text x="213" y="171" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >BookID</text>
+<text x="347" y="171" font-family="Inter, Arial, sans-serif" font-size="13" fill="#B45309" text-anchor="end" font-weight="700" >FK</text>
+<line x1="205" y1="178" x2="355" y2="178" stroke="#102A43" stroke-width="2"/>
+<text x="213" y="197" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >LoanDate</text>
+<rect x="395" y="70" width="150" height="160" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="395" y="70" width="150" height="30" rx="6" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<text x="470.0" y="91" font-family="Inter, Arial, sans-serif" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="700" >Book</text>
+<line x1="395" y1="100" x2="545" y2="100" stroke="#102A43" stroke-width="2"/>
+<text x="403" y="119" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >BookID</text>
+<text x="537" y="119" font-family="Inter, Arial, sans-serif" font-size="13" fill="#B45309" text-anchor="end" font-weight="700" >PK</text>
+<line x1="395" y1="126" x2="545" y2="126" stroke="#102A43" stroke-width="2"/>
+<text x="403" y="145" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >Title</text>
+<line x1="395" y1="152" x2="545" y2="152" stroke="#102A43" stroke-width="2"/>
+<text x="403" y="171" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >Author</text>
+<line x1="395" y1="178" x2="545" y2="178" stroke="#102A43" stroke-width="2"/>
+<text x="403" y="197" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >Price</text>
+<line x1="395" y1="204" x2="545" y2="204" stroke="#102A43" stroke-width="2"/>
+<text x="403" y="223" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >Category</text>
+<line x1="165" y1="113" x2="205" y2="139" stroke="#047857" stroke-width="2"/>
+<line x1="355" y1="165" x2="395" y2="113" stroke="#047857" stroke-width="2"/>
+<text x="172" y="108" font-family="Inter, Arial, sans-serif" font-size="13" fill="#047857" text-anchor="middle" font-weight="700" >1</text>
+<text x="193" y="156" font-family="Inter, Arial, sans-serif" font-size="13" fill="#047857" text-anchor="middle" font-weight="700" >N</text>
+<text x="366" y="184" font-family="Inter, Arial, sans-serif" font-size="13" fill="#047857" text-anchor="middle" font-weight="700" >N</text>
+<text x="388" y="108" font-family="Inter, Arial, sans-serif" font-size="13" fill="#047857" text-anchor="middle" font-weight="700" >1</text>
+<text x="30" y="270" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >PK = primary key. FK = foreign key.</text>
+<text x="30" y="296" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="400" >One member borrows many times; one book is lent many times.</text>
+<text x="30" y="322" font-family="Inter, Arial, sans-serif" font-size="14" fill="#047857" text-anchor="start" font-weight="400" >Loan links the other two tables.</text>
+</svg>

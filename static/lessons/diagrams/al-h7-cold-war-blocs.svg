@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Western and Eastern blocs: institutions created 1947 to 1955</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="26" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">Two blocs, two sets of institutions</text>
+<rect x="20" y="48" width="240" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="140" y="73" font-size="14" fill="#102A43" text-anchor="middle">WEST (led by the USA)</text>
+<rect x="300" y="48" width="240" height="40" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="420" y="73" font-size="14" fill="#102A43" text-anchor="middle">EAST (led by the USSR)</text>
+<rect x="20" y="108" width="240" height="44" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="140" y="135" font-size="14" fill="#102A43" text-anchor="middle">Truman Doctrine</text>
+<rect x="300" y="108" width="240" height="44" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="420" y="135" font-size="14" fill="#102A43" text-anchor="middle">Cominform</text>
+<text x="280" y="135" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">1947</text>
+<rect x="20" y="164" width="240" height="44" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="140" y="191" font-size="14" fill="#102A43" text-anchor="middle">Marshall Plan</text>
+<rect x="300" y="164" width="240" height="44" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="420" y="191" font-size="14" fill="#102A43" text-anchor="middle">Berlin blockade</text>
+<text x="280" y="191" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">1948</text>
+<rect x="20" y="220" width="240" height="44" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="140" y="247" font-size="14" fill="#102A43" text-anchor="middle">NATO</text>
+<rect x="300" y="220" width="240" height="44" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="420" y="247" font-size="14" fill="#102A43" text-anchor="middle">Comecon</text>
+<text x="280" y="247" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">1949</text>
+<rect x="20" y="276" width="240" height="44" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="140" y="303" font-size="14" fill="#102A43" text-anchor="middle">West Germany in NATO</text>
+<rect x="300" y="276" width="240" height="44" rx="8" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="420" y="303" font-size="14" fill="#102A43" text-anchor="middle">Warsaw Pact</text>
+<text x="280" y="303" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">1955</text>
+<text x="280" y="340" font-size="13" fill="#047857" text-anchor="middle" font-weight="700">Containment and nuclear deterrence linked the two sides</text>
+</svg>

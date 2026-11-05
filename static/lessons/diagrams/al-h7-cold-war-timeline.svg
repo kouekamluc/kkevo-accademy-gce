@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Timeline of the Cold War, 1947 to 1991</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="26" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">The Cold War, 1947 to 1991</text>
+<line x1="30" y1="180" x2="530" y2="180" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="62" y1="180" x2="62" y2="146" stroke="#2563EB" stroke-width="2"/>
+<text x="62" y="104" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700">1947</text>
+<text x="62" y="120" font-size="13" fill="#102A43" text-anchor="middle">Truman</text>
+<text x="62" y="136" font-size="13" fill="#102A43" text-anchor="middle">Doctrine</text>
+<circle cx="62" cy="180" r="6" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="124" y1="180" x2="124" y2="210" stroke="#2563EB" stroke-width="2"/>
+<text x="124" y="228" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700">1949</text>
+<text x="124" y="244" font-size="13" fill="#102A43" text-anchor="middle">NATO</text>
+<text x="124" y="260" font-size="13" fill="#102A43" text-anchor="middle">formed</text>
+<circle cx="124" cy="180" r="6" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="187" y1="180" x2="187" y2="146" stroke="#B45309" stroke-width="2"/>
+<text x="187" y="104" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700">1955</text>
+<text x="187" y="120" font-size="13" fill="#102A43" text-anchor="middle">Warsaw</text>
+<text x="187" y="136" font-size="13" fill="#102A43" text-anchor="middle">Pact</text>
+<circle cx="187" cy="180" r="6" fill="#B45309" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="249" y1="180" x2="249" y2="210" stroke="#B45309" stroke-width="2"/>
+<text x="249" y="228" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700">1961</text>
+<text x="249" y="244" font-size="13" fill="#102A43" text-anchor="middle">Berlin Wall;</text>
+<text x="249" y="260" font-size="13" fill="#102A43" text-anchor="middle">NAM meets</text>
+<circle cx="249" cy="180" r="6" fill="#B45309" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="311" y1="180" x2="311" y2="146" stroke="#B45309" stroke-width="2"/>
+<text x="311" y="104" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700">1962</text>
+<text x="311" y="120" font-size="13" fill="#102A43" text-anchor="middle">Cuban</text>
+<text x="311" y="136" font-size="13" fill="#102A43" text-anchor="middle">missile crisis</text>
+<circle cx="311" cy="180" r="6" fill="#B45309" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="373" y1="180" x2="373" y2="210" stroke="#B45309" stroke-width="2"/>
+<text x="373" y="228" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700">1975</text>
+<text x="373" y="244" font-size="13" fill="#102A43" text-anchor="middle">Angola:</text>
+<text x="373" y="260" font-size="13" fill="#102A43" text-anchor="middle">rival blocs</text>
+<circle cx="373" cy="180" r="6" fill="#B45309" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="436" y1="180" x2="436" y2="146" stroke="#047857" stroke-width="2"/>
+<text x="436" y="104" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">1989</text>
+<text x="436" y="120" font-size="13" fill="#102A43" text-anchor="middle">Berlin Wall</text>
+<text x="436" y="136" font-size="13" fill="#102A43" text-anchor="middle">opens</text>
+<circle cx="436" cy="180" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="498" y1="180" x2="498" y2="210" stroke="#047857" stroke-width="2"/>
+<text x="498" y="228" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">1991</text>
+<text x="498" y="244" font-size="13" fill="#102A43" text-anchor="middle">USSR</text>
+<text x="498" y="260" font-size="13" fill="#102A43" text-anchor="middle">ends</text>
+<circle cx="498" cy="180" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<text x="280" y="344" font-size="13" fill="#B45309" text-anchor="middle">Not drawn to scale. Check dates in your textbook.</text>
+</svg>

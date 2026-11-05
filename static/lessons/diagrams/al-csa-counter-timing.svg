@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="26" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">3-bit counter: Q0 flips every pulse, Q1 every 2nd, Q2 every 4th</text>
+<text x="60" y="100" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">Clock</text>
+<path d="M100,100 L100,74 L126.0,74 L126.0,100 L152,100 L152,100 L152,74 L178.0,74 L178.0,100 L204,100 L204,100 L204,74 L230.0,74 L230.0,100 L256,100 L256,100 L256,74 L282.0,74 L282.0,100 L308,100 L308,100 L308,74 L334.0,74 L334.0,100 L360,100 L360,100 L360,74 L386.0,74 L386.0,100 L412,100 L412,100 L412,74 L438.0,74 L438.0,100 L464,100 L464,100 L464,74 L490.0,74 L490.0,100 L516,100" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<text x="60" y="172" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">Q0</text>
+<path d="M100,180 L152,180 L152,154 L204,154 L204,180 L256,180 L256,154 L308,154 L308,180 L360,180 L360,154 L412,154 L412,180 L464,180 L464,154 L516,154" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="60" y="222" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">Q1</text>
+<path d="M100,230 L152,230 L152,230 L204,230 L204,204 L256,204 L256,204 L308,204 L308,230 L360,230 L360,230 L412,230 L412,204 L464,204 L464,204 L516,204" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="60" y="272" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">Q2</text>
+<path d="M100,280 L152,280 L152,280 L204,280 L204,280 L256,280 L256,280 L308,280 L308,254 L360,254 L360,254 L412,254 L412,254 L464,254 L464,254 L516,254" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<line x1="100" y1="60" x2="100" y2="285" stroke="#B0B8C4" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="152" y1="60" x2="152" y2="285" stroke="#B0B8C4" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="204" y1="60" x2="204" y2="285" stroke="#B0B8C4" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="256" y1="60" x2="256" y2="285" stroke="#B0B8C4" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="308" y1="60" x2="308" y2="285" stroke="#B0B8C4" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="360" y1="60" x2="360" y2="285" stroke="#B0B8C4" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="412" y1="60" x2="412" y2="285" stroke="#B0B8C4" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="464" y1="60" x2="464" y2="285" stroke="#B0B8C4" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="516" y1="60" x2="516" y2="285" stroke="#B0B8C4" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="126.0" y="312" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">0</text>
+<text x="178.0" y="312" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">1</text>
+<text x="230.0" y="312" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">2</text>
+<text x="282.0" y="312" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">3</text>
+<text x="334.0" y="312" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">4</text>
+<text x="386.0" y="312" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">5</text>
+<text x="438.0" y="312" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">6</text>
+<text x="490.0" y="312" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">7</text>
+<text x="60" y="312" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">Count</text>
+</svg>

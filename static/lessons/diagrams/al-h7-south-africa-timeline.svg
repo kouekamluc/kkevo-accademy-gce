@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Timeline of South Africa from 1948 to 1994</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="26" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">South Africa, 1948 to 1994</text>
+<line x1="30" y1="180" x2="530" y2="180" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="62" y1="180" x2="62" y2="146" stroke="#B45309" stroke-width="2"/>
+<text x="62" y="104" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700">1948</text>
+<text x="62" y="120" font-size="13" fill="#102A43" text-anchor="middle">National Party</text>
+<text x="62" y="136" font-size="13" fill="#102A43" text-anchor="middle">wins election</text>
+<circle cx="62" cy="180" r="6" fill="#B45309" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="124" y1="180" x2="124" y2="210" stroke="#2563EB" stroke-width="2"/>
+<text x="124" y="228" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700">1952</text>
+<text x="124" y="244" font-size="13" fill="#102A43" text-anchor="middle">Defiance</text>
+<text x="124" y="260" font-size="13" fill="#102A43" text-anchor="middle">Campaign</text>
+<circle cx="124" cy="180" r="6" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="187" y1="180" x2="187" y2="146" stroke="#2563EB" stroke-width="2"/>
+<text x="187" y="104" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700">1955</text>
+<text x="187" y="120" font-size="13" fill="#102A43" text-anchor="middle">Freedom</text>
+<text x="187" y="136" font-size="13" fill="#102A43" text-anchor="middle">Charter</text>
+<circle cx="187" cy="180" r="6" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="249" y1="180" x2="249" y2="210" stroke="#B45309" stroke-width="2"/>
+<text x="249" y="228" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700">1960</text>
+<text x="249" y="244" font-size="13" fill="#102A43" text-anchor="middle">Sharpeville;</text>
+<text x="249" y="260" font-size="13" fill="#102A43" text-anchor="middle">ANC banned</text>
+<circle cx="249" cy="180" r="6" fill="#B45309" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="311" y1="180" x2="311" y2="146" stroke="#B45309" stroke-width="2"/>
+<text x="311" y="104" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700">1964</text>
+<text x="311" y="120" font-size="13" fill="#102A43" text-anchor="middle">Rivonia</text>
+<text x="311" y="136" font-size="13" fill="#102A43" text-anchor="middle">Trial</text>
+<circle cx="311" cy="180" r="6" fill="#B45309" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="373" y1="180" x2="373" y2="210" stroke="#B45309" stroke-width="2"/>
+<text x="373" y="228" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700">1976</text>
+<text x="373" y="244" font-size="13" fill="#102A43" text-anchor="middle">Soweto</text>
+<text x="373" y="260" font-size="13" fill="#102A43" text-anchor="middle">uprising</text>
+<circle cx="373" cy="180" r="6" fill="#B45309" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="436" y1="180" x2="436" y2="146" stroke="#047857" stroke-width="2"/>
+<text x="436" y="104" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">1990</text>
+<text x="436" y="120" font-size="13" fill="#102A43" text-anchor="middle">ANC unbanned;</text>
+<text x="436" y="136" font-size="13" fill="#102A43" text-anchor="middle">Mandela freed</text>
+<circle cx="436" cy="180" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<line x1="498" y1="180" x2="498" y2="210" stroke="#047857" stroke-width="2"/>
+<text x="498" y="228" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">1994</text>
+<text x="498" y="244" font-size="13" fill="#102A43" text-anchor="middle">First</text>
+<text x="498" y="260" font-size="13" fill="#102A43" text-anchor="middle">all-race vote</text>
+<circle cx="498" cy="180" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<text x="280" y="344" font-size="13" fill="#B45309" text-anchor="middle">Not drawn to scale. Check dates in your textbook.</text>
+</svg>
