@@ -1,4 +1,4 @@
-# GCE Learning Academy — Architecture (Phase 2)
+# KKEVO Academy — Architecture (Phase 2)
 
 ## Design reference
 

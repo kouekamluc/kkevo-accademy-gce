@@ -1,5 +1,5 @@
 /**
- * GCE Learning Academy — Tailwind theme ("Academic Clarity").
+ * KKEVO Academy — Tailwind theme ("Academic Clarity").
  * Source: ../design-system/tailwind.config.js (keep the two in sync).
  */
 module.exports = {

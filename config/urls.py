@@ -6,8 +6,8 @@ from django.views.generic import RedirectView
 
 from apps.core.views import staff_login
 
-admin.site.site_header = "GCE Learning Academy — Content administration"
-admin.site.site_title = "GCE Learning Academy admin"
+admin.site.site_header = "KKEVO Academy — Content administration"
+admin.site.site_title = "KKEVO Academy admin"
 admin.site.index_title = "Content management"
 
 urlpatterns = [

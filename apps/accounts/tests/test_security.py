@@ -156,7 +156,7 @@ def test_reset_request_sends_email_with_link(client, student):
     assert len(mail.outbox) == 1
     message = mail.outbox[0]
     assert message.to == ["ama@example.com"]
-    assert message.subject == "Reset your GCE Learning Academy password"
+    assert message.subject == "Reset your KKEVO Academy password"
     assert "Hello Ama" in message.body and "/accounts/reset/" in message.body
     assert "Spam" in client.get(response.url).content.decode()
 
@@ -169,7 +169,7 @@ def test_reset_request_for_unknown_email_looks_the_same(client, student):
 
 def test_reset_page_is_styled_with_auth_layout(client):
     html = client.get(reverse("accounts:password_reset")).content.decode()
-    assert "Forgot your password?" in html and "GCE Learning Academy" in html and 'class="form-input' in html
+    assert "Forgot your password?" in html and "KKEVO Academy" in html and 'class="form-input' in html
 
 
 def test_reset_link_sets_new_password_and_logs_in(client, student):

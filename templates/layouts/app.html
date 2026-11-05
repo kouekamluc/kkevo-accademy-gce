@@ -7,7 +7,7 @@ Views set `nav_active` to highlight the current item. Works for visitors too (pu
 <div class="flex min-h-screen bg-surface-bg">
   <aside aria-label="Sidebar" class="sticky top-0 hidden h-screen w-sidebar shrink-0 flex-col overflow-y-auto border-r border-surface-border bg-white px-4 pb-5 nav:flex">
     <a href="{% if user.is_authenticated %}{% url 'dashboard:home' %}{% else %}{% url 'core:landing' %}{% endif %}" class="flex h-16 shrink-0 items-center gap-2.5 px-2 text-navy hover:text-navy">
-      {% include "components/logo.html" with size="sm" %}<span class="text-[15px] font-bold leading-tight">GCE Learning<br>Academy</span>
+      {% include "components/logo.html" with size="sm" %}<span class="text-[15px] font-bold leading-tight">KKEVO<br>Academy</span>
     </a>
     <nav aria-label="Main" class="mt-4 flex flex-col gap-0.5">
       {% for item in sidebar_items %}
@@ -24,7 +24,7 @@ Views set `nav_active` to highlight the current item. Works for visitors too (pu
 
   <div class="flex min-w-0 flex-1 flex-col">
     <header class="sticky top-0 z-30 flex h-14 items-center gap-4 border-b border-surface-border bg-white px-4 nav:h-header nav:px-8">
-      <a href="{% if user.is_authenticated %}{% url 'dashboard:home' %}{% else %}{% url 'core:landing' %}{% endif %}" class="flex items-center gap-2 text-navy nav:hidden" aria-label="GCE Learning Academy home">{% include "components/logo.html" with size="sm" %}</a>
+      <a href="{% if user.is_authenticated %}{% url 'dashboard:home' %}{% else %}{% url 'core:landing' %}{% endif %}" class="flex items-center gap-2 text-navy nav:hidden" aria-label="KKEVO Academy home">{% include "components/logo.html" with size="sm" %}</a>
       <div class="min-w-0 flex-1">{% block header_left %}{% endblock %}</div>
       {% if user.is_authenticated %}
       <div class="relative" x-data="{ open: false }" @click.outside="open = false" @keydown.escape.window="open = false">

@@ -1,7 +1,7 @@
 # Benchmark: content authoring & administration
 
 How established tools handle authoring, drafts vs published versions, review, media and audit
-trails — and what the GCE Learning Academy studio (`/studio/`) takes from each. Based on the
+trails — and what the KKEVO Academy studio (`/studio/`) takes from each. Based on the
 public behaviour of each product, not on internal documentation.
 
 ## What they do

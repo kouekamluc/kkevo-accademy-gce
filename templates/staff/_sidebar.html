@@ -1,8 +1,8 @@
 {% load static %}{# Staff workspace sidebar — shared by the content studio and the Django admin (Unfold). #}
 <div class="staff-sidebar">
   <a href="{% url 'studio:overview' %}" class="staff-brand">
-    <span class="staff-logo" aria-hidden="true"><span></span><span></span><span></span></span>
-    <span class="staff-brand-text"><span class="staff-brand-name">GCE Learning Academy</span><span class="staff-brand-sub">Staff workspace</span></span>
+    <svg class="staff-logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect width="48" height="48" rx="11" fill="#fff"/><path fill="#1E3A8A" d="M14 12.3 17.7 16 14 19.7 10.3 16zM14 28.3 17.7 32 14 35.7 10.3 32zM32 12h6L26 24l12 12h-6L20 24z"/><path fill="#047857" d="M14 20.3 17.7 24 14 27.7 10.3 24z"/></svg>
+    <span class="staff-brand-text"><span class="staff-brand-name">KKEVO Academy</span><span class="staff-brand-sub">Staff workspace</span></span>
   </a>
   <nav class="staff-nav" aria-label="Staff workspace">
     {% for group in staff_nav %}

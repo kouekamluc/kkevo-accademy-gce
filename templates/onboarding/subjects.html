@@ -1,5 +1,5 @@
 {% extends "layouts/onboarding.html" %}
-{% block title %}Choose your subjects — GCE Learning Academy{% endblock %}
+{% block title %}Choose your subjects — KKEVO Academy{% endblock %}
 {% block mobile_back %}{% url 'accounts:onboarding_stream' as back %}{% include "onboarding/_mobile_back.html" with url=back %}{% endblock %}
 {% block card %}
 <div x-data="{ count: {{ selected|length }} }" @change="count = $el.querySelectorAll('input[name=offerings]:checked').length">

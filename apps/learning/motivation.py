@@ -244,7 +244,7 @@ def _utc(dt):
 def build_ics(sessions, host, exam_date=None, base_url="", reminder_minutes=15):
     """An iCalendar document for planner sessions (with a reminder before each)."""
     now = _utc(timezone.now())
-    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//GCE Learning Academy//Study planner//EN",
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//KKEVO Academy//Study planner//EN",
              "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:GCE study planner",
              "X-PUBLISHED-TTL:PT6H", "REFRESH-INTERVAL;VALUE=DURATION:PT6H"]
     for s in sessions:

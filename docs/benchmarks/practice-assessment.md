@@ -1,6 +1,6 @@
 # Benchmark: practice & assessment
 
-What leading learning products do with practice, what we adopted for GCE Learning Academy, and
+What leading learning products do with practice, what we adopted for KKEVO Academy, and
 what we skipped. Our constraints: Form 5 to Upper Sixth students in Cameroon, mostly phones on slow
 or expensive data, server-rendered pages that must work without JavaScript, and a "concepts first"
 platform (not a past-paper bank). Notes are from public product behaviour, not internal data.

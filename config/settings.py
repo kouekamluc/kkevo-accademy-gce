@@ -1,4 +1,4 @@
-"""Django settings for the GCE Learning Academy.
+"""Django settings for KKEVO Academy.
 
 All secrets and environment-specific values come from environment variables
 (optionally loaded from a local `.env` file). See `.env.example`.
@@ -143,7 +143,7 @@ EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD", default="")
 EMAIL_USE_TLS = env.bool("EMAIL_USE_TLS", default=True)
 EMAIL_USE_SSL = env.bool("EMAIL_USE_SSL", default=False)
 EMAIL_TIMEOUT = 15
-DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="GCE Learning Academy <no-reply@localhost>")
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="KKEVO Academy <no-reply@localhost>")
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
 PASSWORD_RESET_TIMEOUT = 60 * 60 * 24  # reset links work for one day
 
@@ -174,7 +174,7 @@ from django.templatetags.static import static  # noqa: E402
 from django.urls import reverse_lazy  # noqa: E402
 
 UNFOLD = {
-    "SITE_TITLE": "GCE Learning Academy",
+    "SITE_TITLE": "KKEVO Academy",
     "SITE_HEADER": "Staff workspace",
     "SITE_URL": reverse_lazy("dashboard:home"),
     "THEME": "light",  # the design system has no dark mode
