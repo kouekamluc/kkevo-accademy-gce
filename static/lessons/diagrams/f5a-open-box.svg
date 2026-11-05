@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="40" y="60" width="240" height="240" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="40" y="60" width="40" height="40" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+<rect x="240" y="60" width="40" height="40" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+<rect x="40" y="260" width="40" height="40" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+<rect x="240" y="260" width="40" height="40" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+<line x1="80.0" y1="100.0" x2="240.0" y2="100.0" stroke="#102A43" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="80.0" y1="260.0" x2="240.0" y2="260.0" stroke="#102A43" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="80.0" y1="100.0" x2="80.0" y2="260.0" stroke="#102A43" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="240.0" y1="100.0" x2="240.0" y2="260.0" stroke="#102A43" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="60.0" y="86.0" font-size="17" fill="#2563EB" text-anchor="middle" font-style="italic">x</text>
+<text x="74.0" y="86.0" font-size="16" fill="#2563EB" text-anchor="start"></text>
+<text x="260.0" y="52.0" font-size="17" fill="#2563EB" text-anchor="middle" font-style="italic">x</text>
+<text x="288.0" y="86.0" font-size="17" fill="#2563EB" text-anchor="start" font-style="italic">x</text>
+<text x="160.0" y="48.0" font-size="16" fill="#102A43" text-anchor="middle">12 cm</text>
+<text x="160.0" y="186.0" font-size="16" fill="#102A43" text-anchor="middle">12 − 2x</text>
+<text x="160.0" y="328.0" font-size="15" fill="#102A43" text-anchor="middle">Cut a square of side x from each corner</text>
+<polygon points="316,170 446,170 496,140.0 366,140.0" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<polygon points="316,170 446,170 446,240 316,240" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<polygon points="446,170 496,140.0 496,210.0 446,240" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="308.0" y="211.0" font-size="17" fill="#2563EB" text-anchor="end" font-style="italic">x</text>
+<text x="381.0" y="264.0" font-size="16" fill="#102A43" text-anchor="middle">12 − 2x</text>
+<text x="477.0" y="247.0" font-size="16" fill="#102A43" text-anchor="start">12 − 2x</text>
+<text x="401.0" y="60.0" font-size="16" fill="#047857" text-anchor="middle">open box (no lid)</text>
+<text x="401.0" y="300.0" font-size="17" fill="#047857" text-anchor="middle" font-weight="bold">V = x(12 − 2x)²</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A block of weight 50 N on a smooth plane inclined at 30 degrees, held by a force P up the plane</title>
+<defs><marker id="an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker></defs>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="60,320 500,320 500,66" fill="#F0F4F8" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M130,320 A70,70 0 0 0 120.6,285" fill="none" stroke="#102A43" stroke-width="2"/>
+<text x="152" y="300" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">30°</text>
+<polygon points="257.5,206 312.9,174 290.9,135.9 235.5,167.9" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<line x1="274.2" y1="170.9" x2="216.7" y2="71.4" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" marker-end="url(#ab)"/>
+<line x1="274.2" y1="170.9" x2="378.1" y2="110.9" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" marker-end="url(#ab)"/>
+<line x1="274.2" y1="170.9" x2="274.2" y2="290.9" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" marker-end="url(#ab)"/>
+<circle cx="274.2" cy="170.9" r="4" fill="#102A43"/>
+<text x="202.7" y="63.4" font-size="19" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700" font-style="italic">R</text>
+<text x="392.1" y="104.9" font-size="19" fill="#2563EB" text-anchor="start" dominant-baseline="middle" font-weight="700" font-style="italic">P</text>
+<text x="284.2" y="298.9" font-size="17" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">50 N</text>
+</svg>

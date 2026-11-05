@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<line x1="80" y1="300.0" x2="520" y2="300.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="70" y="305.0" font-size="14" text-anchor="end" fill="#102A43">0.0</text>
+<line x1="80" y1="252.0" x2="520" y2="252.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="70" y="257.0" font-size="14" text-anchor="end" fill="#102A43">0.1</text>
+<line x1="80" y1="204.0" x2="520" y2="204.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="70" y="209.0" font-size="14" text-anchor="end" fill="#102A43">0.2</text>
+<line x1="80" y1="156.0" x2="520" y2="156.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="70" y="161.0" font-size="14" text-anchor="end" fill="#102A43">0.3</text>
+<line x1="80" y1="108.0" x2="520" y2="108.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="70" y="113.0" font-size="14" text-anchor="end" fill="#102A43">0.4</text>
+<line x1="80" y1="60.0" x2="520" y2="60.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="70" y="65.0" font-size="14" text-anchor="end" fill="#102A43">0.5</text>
+<rect x="91.7" y="299.8" width="50" height="0.5" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="116.7" y="291.8" font-size="14" text-anchor="middle" fill="#102A43">0.0003</text>
+<text x="116.7" y="322" font-size="16" text-anchor="middle" fill="#102A43">0</text>
+<rect x="165.0" y="296.9" width="50" height="3.1" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="190.0" y="288.9" font-size="14" text-anchor="middle" fill="#102A43">0.0064</text>
+<text x="190.0" y="322" font-size="16" text-anchor="middle" fill="#102A43">1</text>
+<rect x="238.3" y="275.4" width="50" height="24.6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="263.3" y="267.4" font-size="14" text-anchor="middle" fill="#102A43">0.0512</text>
+<text x="263.3" y="322" font-size="16" text-anchor="middle" fill="#102A43">2</text>
+<rect x="311.7" y="201.7" width="50" height="98.3" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="336.7" y="193.7" font-size="14" text-anchor="middle" fill="#102A43">0.2048</text>
+<text x="336.7" y="322" font-size="16" text-anchor="middle" fill="#102A43">3</text>
+<rect x="385.0" y="103.4" width="50" height="196.6" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<text x="410.0" y="95.4" font-size="14" text-anchor="middle" fill="#047857">0.4096</text>
+<text x="410.0" y="322" font-size="16" text-anchor="middle" fill="#102A43">4</text>
+<rect x="458.3" y="142.7" width="50" height="157.3" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<text x="483.3" y="134.7" font-size="14" text-anchor="middle" fill="#047857">0.3277</text>
+<text x="483.3" y="322" font-size="16" text-anchor="middle" fill="#102A43">5</text>
+<line x1="80" y1="300" x2="520" y2="300" stroke="#102A43" stroke-width="2"/>
+<line x1="80" y1="300" x2="80" y2="50" stroke="#102A43" stroke-width="2"/>
+<text x="300.0" y="346" font-size="16" text-anchor="middle" fill="#102A43">x (number of seeds that germinate)</text>
+<text x="22" y="180.0" font-size="16" text-anchor="middle" fill="#102A43" transform="rotate(-90 22 180.0)">P(X = x)</text>
+<text x="80" y="30" font-size="18" font-weight="bold" fill="#102A43">X ~ B(5, 0.8)</text>
+<text x="520" y="30" font-size="16" text-anchor="end" fill="#047857">P(X ≥ 4) ≈ 0.737</text>
+</svg>

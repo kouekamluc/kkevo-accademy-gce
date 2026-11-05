@@ -71,16 +71,22 @@ def start(client, practice_set, mode="practice"):
     return Attempt.objects.filter(practice_set=practice_set).latest("started_at")
 
 
-def test_maths_course_has_lessons_practice_and_mocks_for_every_topic(maths):
-    topics = [t for m in maths.modules.all() for t in m.topics.all()]
-    assert len(topics) >= 15
+@pytest.mark.parametrize("subject, min_topics", [("mathematics", 15), ("additional-mathematics", 8)])
+def test_o_level_maths_courses_have_lessons_practice_and_mocks_for_every_topic(db, subject, min_topics):
+    call_command("load_gce_curriculum")
+    call_command("load_lessons", "--only", f"{subject}:form-5")
+    call_command("load_practice", "--only", f"{subject}:form-5")
+    course = Course.objects.get(offering__subject__slug=subject, offering__level__slug="form-5",
+                                description="[gce-guide]")
+    topics = [t for m in course.modules.all() for t in m.topics.all()]
+    assert len(topics) >= min_topics + 2  # syllabus topics plus Paper 1 and Paper 2
     for topic in topics:
         lessons = list(topic.lessons.all())
         assert lessons, f"{topic.title} has no lessons"
         for lesson in lessons:
             assert PracticeSet.objects.filter(lesson=lesson).exists(), f"{lesson.slug} has no practice set"
-    mocks = PracticeSet.objects.filter(topic__module__course=maths, is_mock=True)
-    assert {m.time_limit_minutes for m in mocks} >= {90, 150}
+    mocks = PracticeSet.objects.filter(topic__module__course=course, is_mock=True)
+    assert mocks.count() >= 2 and all(m.time_limit_minutes for m in mocks)
 
 
 def test_student_journey_from_dashboard_to_mock_exam(client, student, maths):

@@ -82,6 +82,18 @@ def _tick_label(value):
     return f"{value:,}".replace(",", "\u202f") if abs(value) >= 10000 else value
 
 
+def _curve_label(pixels, width, pad, box_w=170, box_top=22, box_bottom=48):
+    """Where the curve's name goes: the top corner the curve stays out of (top right unless the curve is there)."""
+    def hits(left, right):
+        return sum(1 for x, y in pixels if left <= x <= right and box_top <= y <= box_bottom)
+
+    right_box = (width - 40 - box_w, width - 40)
+    left_box = (pad + 12, pad + 12 + box_w)
+    if hits(*right_box) > hits(*left_box):
+        return {"label_x": left_box[0], "label_anchor": "start"}
+    return {"label_x": right_box[1], "label_anchor": "end"}
+
+
 @register.simple_tag
 def polynomial_plot(data, width=560, height=300, pad=34):
     """SVG geometry for a graph block: {'coeffs': [1, -5, 6], 'xmin', 'xmax', 'ymin', 'ymax', 'roots'}."""
@@ -99,12 +111,13 @@ def polynomial_plot(data, width=560, height=300, pad=34):
 
     sx = lambda x: pad + (x - xmin) / (xmax - xmin) * (width - 2 * pad)  # noqa: E731
     sy = lambda y: height - pad - (y - ymin) / (ymax - ymin) * (height - 2 * pad)  # noqa: E731
-    points, steps = [], 160
+    points, pixels, steps = [], [], 160
     for i in range(steps + 1):
         x = xmin + (xmax - xmin) * i / steps
         y = f(x)
         if ymin - (ymax - ymin) <= y <= ymax + (ymax - ymin):
             points.append(f"{sx(x):.1f},{sy(y):.1f}")
+            pixels.append((sx(x), sy(y)))
     axis_y = sy(0) if ymin <= 0 <= ymax else height - pad
     axis_x = sx(0) if xmin <= 0 <= xmax else pad
     xticks = [{"x": sx(v), "label": _tick_label(v)} for v in _ticks(xmin, xmax, 10)]
@@ -113,7 +126,7 @@ def polynomial_plot(data, width=560, height=300, pad=34):
     return {
         "width": width, "height": height, "points": " ".join(points), "pad": pad,
         "axis_y": axis_y, "axis_x": axis_x, "bottom": height - pad, "right": width - 20,
-        "xlabel_y": axis_y + 18, "ylabel_x": axis_x - 10, "label_x": width - 40,
+        "xlabel_y": axis_y + 18, "ylabel_x": axis_x - 10, **_curve_label(pixels, width, pad),
         "plot_w": width - 20 - pad, "plot_h": height - pad - 10,
         "xticks": xticks, "yticks": yticks, "roots": roots,
     }

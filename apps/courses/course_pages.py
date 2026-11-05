@@ -23,7 +23,8 @@ PAGES = {
         ]),
     ("additional-mathematics", "form-5"): dict(
         summary="GCE O Level Additional Mathematics: polynomials, partial fractions, radians and identities, the "
-                "binomial expansion, coordinate geometry, an introduction to calculus, and mechanics or statistics.",
+                "binomial expansion, lines and circles, differentiation and integration, then your applied "
+                "option (Mechanics or Statistics), with timed mock papers.",
         outcomes=[
             "Use the remainder and factor theorems and split simple fractions into partial fractions",
             "Work in radians and solve equations with trigonometric identities",

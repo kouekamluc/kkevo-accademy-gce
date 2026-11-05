@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>The four quadrants and CAST: All positive in the first, sin positive in the second, tan positive in the third, cos positive in the fourth; related angles alpha, 180 minus alpha, 180 plus alpha, 360 minus alpha</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="110.0" y1="180.0" x2="455.0" y2="180.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="280.0" y1="345.0" x2="280.0" y2="15.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<polygon points="455.0,180.0 445.0,175.0 445.0,185.0" fill="#102A43"/>
+<polygon points="280.0,15.0 275.0,25.0 285.0,25.0" fill="#102A43"/>
+<circle cx="280" cy="180" r="120" fill="none" stroke="#102A43" stroke-width="2" stroke-dasharray="5 5"/>
+<line x1="280.0" y1="180.0" x2="378.3" y2="111.2" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="378.3" cy="111.2" r="4" fill="#2563EB"/>
+<line x1="280.0" y1="180.0" x2="181.7" y2="111.2" stroke="#047857" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="181.7" cy="111.2" r="4" fill="#047857"/>
+<line x1="280.0" y1="180.0" x2="181.7" y2="248.8" stroke="#047857" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="181.7" cy="248.8" r="4" fill="#047857"/>
+<line x1="280.0" y1="180.0" x2="378.3" y2="248.8" stroke="#047857" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="378.3" cy="248.8" r="4" fill="#047857"/>
+<text x="470.0" y="55.0" font-size="30" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="800">A</text>
+<text x="470.0" y="85.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">all positive</text>
+<text x="470.0" y="107.0" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">α</text>
+<text x="90.0" y="55.0" font-size="30" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="800">S</text>
+<text x="90.0" y="85.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">sin positive</text>
+<text x="90.0" y="107.0" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">180° − α</text>
+<text x="90.0" y="270.0" font-size="30" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="800">T</text>
+<text x="90.0" y="300.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">tan positive</text>
+<text x="90.0" y="322.0" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">180° + α</text>
+<text x="470.0" y="270.0" font-size="30" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="800">C</text>
+<text x="470.0" y="300.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">cos positive</text>
+<text x="470.0" y="322.0" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">360° − α</text>
+<path d="M316.0,180.0 A36,36 0 0 0 309.5,159.4" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="329.6" y="164.4" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">α</text>
+<text x="458.0" y="198.0" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">x</text>
+<text x="296.0" y="22.0" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">y</text>
+<text x="266.0" y="196.0" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">O</text>
+</svg>

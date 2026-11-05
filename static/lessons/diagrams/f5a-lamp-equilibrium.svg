@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A lamp of weight 40 N hangs on a string at 30 degrees to the vertical, held by a horizontal force P</title>
+<defs><marker id="an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker></defs>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="120" y="30" width="240" height="20" fill="#D9E2EC"/>
+<line x1="120" y1="50" x2="360" y2="50" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="220" y1="50" x2="220" y2="269.2" stroke="#9FB3C8" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<line x1="220" y1="50" x2="335" y2="249.2" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="335" y1="249.2" x2="280" y2="153.9" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" marker-end="url(#ab)"/>
+<line x1="335" y1="249.2" x2="455" y2="249.2" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" marker-end="url(#ab)"/>
+<line x1="335" y1="249.2" x2="335" y2="349.2" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" marker-end="url(#ab)"/>
+<circle cx="335" cy="249.2" r="9" fill="#102A43"/>
+<path d="M220,105 A55,55 0 0 0 247.5,97.6" fill="none" stroke="#102A43" stroke-width="2"/>
+<text x="245" y="145" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">30°</text>
+<text x="325" y="203.2" font-size="19" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700" font-style="italic">T</text>
+<text x="463" y="249.2" font-size="19" fill="#2563EB" text-anchor="start" dominant-baseline="middle" font-weight="700" font-style="italic">P</text>
+<text x="347" y="341.2" font-size="17" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">40 N</text>
+</svg>

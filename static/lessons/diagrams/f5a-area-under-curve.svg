@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Area under the curve y = x squared plus 2 from x = 0 to x = 3</title>
+<defs><marker id="an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker></defs>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="80,315 80,273 85.8,272.9 91.5,272.8 97.2,272.5 103,272.2 108.8,271.7 114.5,271.1 120.2,270.4 126,269.6 131.8,268.7 137.5,267.8 143.2,266.6 149,265.4 154.8,264.1 160.5,262.7 166.2,261.2 172,259.6 177.8,257.8 183.5,256 189.2,254 195,252 200.8,249.8 206.5,247.6 212.2,245.2 218,242.8 223.8,240.2 229.5,237.5 235.2,234.7 241,231.8 246.8,228.8 252.5,225.8 258.2,222.5 264,219.2 269.8,215.8 275.5,212.3 281.2,208.7 287,205 292.8,201.1 298.5,197.2 304.2,193.1 310,189 315.8,184.7 321.5,180.4 327.2,175.9 333,171.4 338.8,166.7 344.5,161.9 350.2,157 356,152 361.8,146.9 367.5,141.8 373.2,136.4 379,131 384.8,125.5 390.5,119.9 396.2,114.2 402,108.4 407.8,102.4 413.5,96.4 419.2,90.2 425,84 425,315" fill="#EFF6FF" stroke="none"/>
+<line x1="40" y1="315" x2="520" y2="315" stroke="#102A43" stroke-width="2" stroke-linecap="round" marker-end="url(#an)"/>
+<line x1="80" y1="340" x2="80" y2="22" stroke="#102A43" stroke-width="2" stroke-linecap="round" marker-end="url(#an)"/>
+<text x="524" y="333" font-size="16" fill="#102A43" text-anchor="end" dominant-baseline="middle" font-weight="600" font-style="italic">x</text>
+<text x="66" y="26" font-size="16" fill="#102A43" text-anchor="end" dominant-baseline="middle" font-weight="600" font-style="italic">y</text>
+<text x="68" y="331" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">O</text>
+<polyline points="80,273 85.8,272.9 91.5,272.8 97.2,272.5 103,272.2 108.8,271.7 114.5,271.1 120.2,270.4 126,269.6 131.8,268.7 137.5,267.8 143.2,266.6 149,265.4 154.8,264.1 160.5,262.7 166.2,261.2 172,259.6 177.8,257.8 183.5,256 189.2,254 195,252 200.8,249.8 206.5,247.6 212.2,245.2 218,242.8 223.8,240.2 229.5,237.5 235.2,234.7 241,231.8 246.8,228.8 252.5,225.8 258.2,222.5 264,219.2 269.8,215.8 275.5,212.3 281.2,208.7 287,205 292.8,201.1 298.5,197.2 304.2,193.1 310,189 315.8,184.7 321.5,180.4 327.2,175.9 333,171.4 338.8,166.7 344.5,161.9 350.2,157 356,152 361.8,146.9 367.5,141.8 373.2,136.4 379,131 384.8,125.5 390.5,119.9 396.2,114.2 402,108.4 407.8,102.4 413.5,96.4 419.2,90.2 425,84 430.8,77.6 436.5,71.2 442.2,64.6 448,58 453.8,51.2" fill="none" stroke="#2563EB" stroke-width="3"/>
+<line x1="425" y1="315" x2="425" y2="84" stroke="#102A43" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<text x="425" y="333" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">3</text>
+<text x="66" y="273" font-size="15" fill="#102A43" text-anchor="end" dominant-baseline="middle" font-weight="600">2</text>
+<text x="264" y="268.8" font-size="20" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700" font-style="italic">A</text>
+<text x="396.2" y="71.4" font-size="17" fill="#2563EB" text-anchor="end" dominant-baseline="middle" font-weight="700">y = x² + 2</text>
+<text x="433" y="231" font-size="15" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="600">x = 3</text>
+</svg>

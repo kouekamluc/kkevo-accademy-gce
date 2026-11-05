@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Graphs of y = sin x and y = cos x for x from 0 to 360 degrees; both lie between -1 and 1 and repeat every 360 degrees</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="55.0" y1="180.0" x2="545.0" y2="180.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="70.0" y1="340.0" x2="70.0" y2="20.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<polygon points="545.0,180.0 535.0,175.0 535.0,185.0" fill="#102A43"/>
+<polygon points="70.0,20.0 65.0,30.0 75.0,30.0" fill="#102A43"/>
+<line x1="182.5" y1="175.0" x2="182.5" y2="185.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="295.0" y1="175.0" x2="295.0" y2="185.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="407.5" y1="175.0" x2="407.5" y2="185.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="520.0" y1="175.0" x2="520.0" y2="185.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="70.0" y1="70.0" x2="520.0" y2="70.0" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 5"/>
+<text x="50.0" y="70.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">1</text>
+<line x1="70.0" y1="290.0" x2="520.0" y2="290.0" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 5"/>
+<text x="50.0" y="290.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">−1</text>
+<path d="M70.0,180.0 L77.5,168.5 L85.0,157.1 L92.5,146.0 L100.0,135.3 L107.5,125.0 L115.0,115.3 L122.5,106.4 L130.0,98.3 L137.5,91.0 L145.0,84.7 L152.5,79.5 L160.0,75.4 L167.5,72.4 L175.0,70.6 L182.5,70.0 L190.0,70.6 L197.5,72.4 L205.0,75.4 L212.5,79.5 L220.0,84.7 L227.5,91.0 L235.0,98.3 L242.5,106.4 L250.0,115.3 L257.5,125.0 L265.0,135.3 L272.5,146.0 L280.0,157.1 L287.5,168.5 L295.0,180.0 L302.5,191.5 L310.0,202.9 L317.5,214.0 L325.0,224.7 L332.5,235.0 L340.0,244.7 L347.5,253.6 L355.0,261.7 L362.5,269.0 L370.0,275.3 L377.5,280.5 L385.0,284.6 L392.5,287.6 L400.0,289.4 L407.5,290.0 L415.0,289.4 L422.5,287.6 L430.0,284.6 L437.5,280.5 L445.0,275.3 L452.5,269.0 L460.0,261.7 L467.5,253.6 L475.0,244.7 L482.5,235.0 L490.0,224.7 L497.5,214.0 L505.0,202.9 L512.5,191.5 L520.0,180.0" fill="none" stroke="#2563EB" stroke-width="3"/>
+<path d="M70.0,70.0 L77.5,70.6 L85.0,72.4 L92.5,75.4 L100.0,79.5 L107.5,84.7 L115.0,91.0 L122.5,98.3 L130.0,106.4 L137.5,115.3 L145.0,125.0 L152.5,135.3 L160.0,146.0 L167.5,157.1 L175.0,168.5 L182.5,180.0 L190.0,191.5 L197.5,202.9 L205.0,214.0 L212.5,224.7 L220.0,235.0 L227.5,244.7 L235.0,253.6 L242.5,261.7 L250.0,269.0 L257.5,275.3 L265.0,280.5 L272.5,284.6 L280.0,287.6 L287.5,289.4 L295.0,290.0 L302.5,289.4 L310.0,287.6 L317.5,284.6 L325.0,280.5 L332.5,275.3 L340.0,269.0 L347.5,261.7 L355.0,253.6 L362.5,244.7 L370.0,235.0 L377.5,224.7 L385.0,214.0 L392.5,202.9 L400.0,191.5 L407.5,180.0 L415.0,168.5 L422.5,157.1 L430.0,146.0 L437.5,135.3 L445.0,125.0 L452.5,115.3 L460.0,106.4 L467.5,98.3 L475.0,91.0 L482.5,84.7 L490.0,79.5 L497.5,75.4 L505.0,72.4 L512.5,70.6 L520.0,70.0" fill="none" stroke="#047857" stroke-width="3" stroke-dasharray="9 6"/>
+<rect x="165.5" y="193" width="34" height="18" fill="#FFFFFF"/>
+<text x="182.5" y="202.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">90°</text>
+<rect x="278.0" y="193" width="34" height="18" fill="#FFFFFF"/>
+<text x="295.0" y="202.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">180°</text>
+<rect x="390.5" y="193" width="34" height="18" fill="#FFFFFF"/>
+<text x="407.5" y="202.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">270°</text>
+<rect x="503.0" y="193" width="34" height="18" fill="#FFFFFF"/>
+<text x="506.0" y="202.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">360°</text>
+<text x="182.5" y="52.0" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">y = sin x</text>
+<text x="482.5" y="52.0" font-size="16" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">y = cos x</text>
+<text x="536.0" y="164.0" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">x</text>
+<text x="84.0" y="26.0" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">y</text>
+<text x="58.0" y="198.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">0</text>
+</svg>

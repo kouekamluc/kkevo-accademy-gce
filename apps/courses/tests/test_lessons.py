@@ -136,3 +136,12 @@ def test_polynomial_plot_keeps_a_small_number_of_ticks():
     big = polynomial_plot({"coeffs": [2000, 50000], "xmin": 0, "xmax": 120, "ymin": 0, "ymax": 300000})
     assert len(big["xticks"]) <= 12 and len(big["yticks"]) <= 8
     assert big["yticks"][0]["label"] == "50\u202f000"
+
+
+def test_curve_label_moves_to_the_corner_the_curve_avoids():
+    rising = polynomial_plot({"coeffs": [1, -6, 9, 0], "xmin": -0.5, "xmax": 4.5, "ymin": -1, "ymax": 6})
+    assert rising["label_anchor"] == "start"  # the cubic climbs into the top right, so the name goes top left
+    falling = polynomial_plot({"coeffs": [-1, 6, -9, 0], "xmin": -0.5, "xmax": 4.5, "ymin": -6, "ymax": 1})
+    assert falling["label_anchor"] == "end"
+    parabola = polynomial_plot({"coeffs": [1, -5, 6], "xmin": 0, "xmax": 5.5, "ymin": -1, "ymax": 6.5})
+    assert parabola["label_anchor"] in ("start", "end")

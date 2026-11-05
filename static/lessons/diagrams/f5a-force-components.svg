@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A force F at angle theta to the horizontal, with components F cos theta and F sin theta</title>
+<defs><marker id="an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker></defs>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="60" y1="285" x2="520" y2="285" stroke="#9FB3C8" stroke-width="2" stroke-linecap="round"/>
+<line x1="150" y1="285" x2="387.6" y2="285" stroke="#047857" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#ag)"/>
+<line x1="150" y1="285" x2="150" y2="118.7" stroke="#047857" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 5" marker-end="url(#ag)"/>
+<line x1="387.6" y1="118.7" x2="387.6" y2="285" stroke="#9FB3C8" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<line x1="387.6" y1="118.7" x2="150" y2="118.7" stroke="#9FB3C8" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<line x1="150" y1="285" x2="387.6" y2="118.7" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" marker-end="url(#ab)"/>
+<circle cx="150" cy="285" r="6" fill="#102A43"/>
+<path d="M210,285 A60,60 0 0 0 199.1,250.6" fill="none" stroke="#102A43" stroke-width="2"/>
+<text x="228" y="265" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600" font-style="italic">θ</text>
+<text x="252.8" y="183.8" font-size="20" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700" font-style="italic">F</text>
+<text x="268.8" y="309" font-size="16" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">F cos θ  (horizontal)</text>
+<text x="138" y="201.8" font-size="16" fill="#047857" text-anchor="end" dominant-baseline="middle" font-weight="600">F sin θ</text>
+<text x="138" y="223.8" font-size="15" fill="#047857" text-anchor="end" dominant-baseline="middle" font-weight="600">(vertical)</text>
+</svg>
