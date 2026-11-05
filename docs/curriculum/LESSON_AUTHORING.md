@@ -1,16 +1,18 @@
 # Writing lessons for the GCE course outlines
 
 Lesson content lives in Python files in `apps/courses/lesson_content/`, one or more files per
-course. `python manage.py load_lessons` turns them into **draft** lessons inside the
-"[gce-guide]" outline courses created by `load_gce_curriculum`. Nothing is published
-automatically: a reviewer opens each draft in the studio (`/studio/`), checks it against the
-official GCE Board syllabus, edits it, and publishes it there.
+course. `python manage.py load_lessons` turns them into lessons inside the "[gce-guide]" outline
+courses created by `load_gce_curriculum`. They are **published by default** so students can use
+them straight away (`--draft` loads them unpublished); an admin disables what is not relevant, and
+a reload never switches it back on. The content is not the official GCE text: a reviewer opens
+each lesson in the studio (`/studio/`), checks it against the official GCE Board syllabus and
+corrects it there.
 
 ```bash
 .venv/Scripts/python manage.py check_lessons f5_mathematics_a   # validate one file, no database
 .venv/Scripts/python manage.py load_lessons --dry-run           # validate everything, save nothing
-.venv/Scripts/python manage.py load_lessons                     # create the missing drafts
-.venv/Scripts/python manage.py load_lessons --refresh           # rewrite drafts nobody has touched in the studio
+.venv/Scripts/python manage.py load_lessons                     # create the missing lessons (published)
+.venv/Scripts/python manage.py load_lessons --refresh           # rewrite lessons nobody has edited or opened
 ```
 
 ## File format
@@ -93,7 +95,8 @@ may be French or a home language: short sentences, one idea per paragraph.
 
 Each topic also gets a practice set in `apps/practice/practice_content/<same file name as the lessons>.py`.
 Students answer them in practice mode (hints, instant feedback) or timed exam mode; missed questions come
-back in spaced review, and scores drive topic mastery. They load as drafts with `load_practice`.
+back in spaced review, and scores drive topic mastery. `load_practice` loads them published
+(`--draft` for unpublished).
 
 ```python
 from .dsl import *  # noqa: F403

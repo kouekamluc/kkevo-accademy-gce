@@ -37,14 +37,14 @@ def test_validate_reports_problems(monkeypatch):
 
 
 @pytest.mark.django_db
-def test_load_practice_creates_draft_sets_and_keeps_attempted_ones(monkeypatch, django_user_model):
+def test_load_practice_publishes_by_default_and_keeps_attempted_ones(monkeypatch, django_user_model):
     call_command("load_gce_curriculum")
     monkeypatch.setattr(lesson_content, "collect", lambda names=None: [(KEY, LESSON, "t")])
     call_command("load_lessons")
     monkeypatch.setattr(practice_content, "collect", lambda names=None: [(KEY, make_set(), "t")])
     call_command("load_practice")
     ps = PracticeSet.objects.get(title="HTML basics")
-    assert ps.status == "draft" and ps.lesson.slug == "what-is-html"
+    assert ps.status == "published" and ps.lesson.slug == "what-is-html"
     assert ps.questions.count() == 3
     q = ps.questions.order_by("order").first()
     assert q.choices.filter(is_correct=True).count() == 1 and q.solution_steps[-1]["final"]
@@ -52,6 +52,11 @@ def test_load_practice_creates_draft_sets_and_keeps_attempted_ones(monkeypatch, 
 
     call_command("load_practice")  # safe to re-run
     assert PracticeSet.objects.filter(title="HTML basics").count() == 1
+    ps.status = "draft"  # an admin switches the set off: a refresh must not switch it back on
+    ps.save()
+    call_command("load_practice", "--refresh")
+    ps.refresh_from_db()
+    assert ps.status == "draft"
 
     user = django_user_model.objects.create_user(email="s@example.com", password="pw-Strong-123")
     Attempt.objects.create(user=user, practice_set=ps)
@@ -79,8 +84,9 @@ def test_staff_can_preview_draft_sets_but_students_cannot(monkeypatch, client, d
     monkeypatch.setattr(lesson_content, "collect", lambda names=None: [(KEY, LESSON, "t")])
     call_command("load_lessons")
     monkeypatch.setattr(practice_content, "collect", lambda names=None: [(KEY, make_set(), "t")])
-    call_command("load_practice")
+    call_command("load_practice", "--draft")
     ps = PracticeSet.objects.get(title="HTML basics")
+    assert ps.status == "draft"
     student = django_user_model.objects.create_user(email="st@example.com", password="pw-Strong-123")
     client.force_login(student)
     assert client.get(ps.get_absolute_url()).status_code == 404

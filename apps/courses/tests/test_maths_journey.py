@@ -32,12 +32,8 @@ def maths(db):
     old.save()
     call_command("load_lessons", "--only", MATHS)
     call_command("load_practice", "--only", MATHS)
-    course = Course.objects.get(offering=offering, description="[gce-guide]")
-    course.status = "published"
-    course.save()
-    Lesson.objects.filter(topic__module__course=course).update(status="published")
-    PracticeSet.objects.filter(topic__module__course=course).update(status="published")
-    return course
+    # Everything loads published by default; nothing is switched on by hand here.
+    return Course.objects.get(offering=offering, description="[gce-guide]")
 
 
 @pytest.fixture

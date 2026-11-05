@@ -32,12 +32,13 @@ def test_validate_reports_problems():
 
 
 @pytest.mark.django_db
-def test_load_lessons_creates_drafts_and_is_safe_to_rerun(monkeypatch):
+def test_load_lessons_publishes_by_default_and_is_safe_to_rerun(monkeypatch):
     call_command("load_gce_curriculum")
     monkeypatch.setattr(lesson_content, "collect", lambda: [(KEY, spec(), "test")])
     call_command("load_lessons")
     lesson_obj = Lesson.objects.get(slug="what-is-html")
-    assert lesson_obj.status == "draft" and lesson_obj.author is None
+    assert lesson_obj.status == "published" and lesson_obj.author is None
+    assert lesson_obj.course.status == "published"  # a course is published when it first gets lessons
     assert lesson_obj.blocks.count() == 6
     assert lesson_obj.curriculum_references.exists()
     assert lesson_obj.course.description == "[gce-guide]"
@@ -49,11 +50,41 @@ def test_load_lessons_creates_drafts_and_is_safe_to_rerun(monkeypatch):
     call_command("load_lessons", "--refresh")
     assert Lesson.objects.get(slug="what-is-html").title == "Changed"
 
-    lesson_obj = Lesson.objects.get(slug="what-is-html")
-    lesson_obj.status = "published"
-    lesson_obj.save()
-    call_command("load_lessons", "--remove")  # published lessons are never removed
-    assert Lesson.objects.filter(slug="what-is-html").exists()
+    call_command("load_lessons", "--remove")  # untouched lessons from the files can be removed again
+    assert not Lesson.objects.filter(slug="what-is-html").exists()
+
+
+@pytest.mark.django_db
+def test_load_lessons_draft_flag_and_admin_choices_are_respected(monkeypatch, django_user_model):
+    from django.utils import timezone
+    from apps.learning.models import LessonProgress
+
+    call_command("load_gce_curriculum")
+    monkeypatch.setattr(lesson_content, "collect", lambda names=None: [(KEY, spec(), "t"), (KEY, spec(slug="second"), "t")])
+    call_command("load_lessons", "--draft")
+    assert set(Lesson.objects.values_list("status", flat=True)) == {"draft"}
+    assert Lesson.objects.first().course.status == "draft"
+
+    call_command("load_lessons")  # lessons already exist: loading again does not publish them
+    assert set(Lesson.objects.values_list("status", flat=True)) == {"draft"}
+
+    Lesson.objects.update(status="published")
+    disabled = Lesson.objects.get(slug="second")
+    disabled.status = "draft"  # an admin switches one lesson off
+    disabled.save()
+    course = disabled.course
+    course.status = "draft"  # ... and the course
+    course.save()
+    monkeypatch.setattr(lesson_content, "collect", lambda names=None: [
+        (KEY, spec(title="Changed"), "t"), (KEY, spec(slug="second", title="Changed 2"), "t")])
+    call_command("load_lessons", "--refresh")
+    disabled.refresh_from_db(); course.refresh_from_db()
+    assert disabled.title == "Changed 2" and disabled.status == "draft" and course.status == "draft"
+
+    student = django_user_model.objects.create_user(email="k@example.com", password="pw-Strong-123")
+    LessonProgress.objects.create(user=student, lesson=Lesson.objects.get(slug="what-is-html"), completed_at=timezone.now())
+    call_command("load_lessons", "--remove")  # a lesson a student has opened is never removed
+    assert list(Lesson.objects.values_list("slug", flat=True)) == ["what-is-html"]
 
 
 @pytest.mark.django_db

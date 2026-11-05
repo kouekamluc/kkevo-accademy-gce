@@ -1,14 +1,17 @@
-"""Load KKEVO's draft practice sets from apps/practice/practice_content/ into the GCE outline courses.
+"""Load KKEVO's practice sets from apps/practice/practice_content/ into the GCE outline courses.
 
-    python manage.py load_practice              # create missing sets (as drafts)
+    python manage.py load_practice              # create missing sets, published
+    python manage.py load_practice --draft      # ... as drafts instead (staff review first)
     python manage.py load_practice --dry-run    # validate and report, save nothing
-    python manage.py load_practice --refresh    # also rewrite draft sets nobody has attempted
-    python manage.py load_practice --remove     # delete draft sets from the files that nobody has attempted
+    python manage.py load_practice --refresh    # also rewrite sets no student has attempted
+    python manage.py load_practice --remove     # delete sets from the files that no student has attempted
     python manage.py load_practice --prune      # also delete such sets that are no longer in the files
     python manage.py load_practice --only mathematics:form-5
 
 Run `load_lessons` first: sets go into the same "[gce-guide]" outline courses and link to their lesson.
-Sets are drafts: staff check and publish them. Published or attempted sets are never changed.
+New sets are published so students can use them straight away; an admin disables what is not
+relevant and a refresh never changes a set's status. Sets a student has attempted are never
+rewritten or deleted.
 """
 
 from django.core.management.base import BaseCommand, CommandError
@@ -22,14 +25,15 @@ from apps.practice.models import Choice, PracticeSet, Question
 
 
 def untouched(practice_set):
-    """A draft no student has attempted (staff previews do not count)."""
-    return practice_set.status == "draft" and not practice_set.attempts.filter(user__is_staff=False).exists()
+    """A set no student has attempted (staff previews do not count)."""
+    return not practice_set.attempts.filter(user__is_staff=False).exists()
 
 
 class Command(BaseCommand):
     help = "Load KKEVO's draft practice sets into the GCE course outlines."
 
     def add_arguments(self, parser):
+        parser.add_argument("--draft", action="store_true", help="Create new sets as drafts.")
         parser.add_argument("--dry-run", action="store_true")
         parser.add_argument("--refresh", action="store_true", help="Rewrite draft sets nobody has attempted.")
         parser.add_argument("--remove", action="store_true", help="Delete draft sets nobody has attempted.")
@@ -68,8 +72,9 @@ class Command(BaseCommand):
                     counts["kept"] += 1
                 continue
             if existing is None:
-                counts["questions"] += self.write_set(PracticeSet(topic=topic, title=spec["title"], status="draft"),
-                                                      spec, orders[topic.pk])
+                counts["questions"] += self.write_set(
+                    PracticeSet(topic=topic, title=spec["title"], status="draft" if options["draft"] else "published"),
+                    spec, orders[topic.pk])
                 counts["created"] += 1
             elif options["refresh"] and untouched(existing):
                 counts["questions"] += self.write_set(existing, spec, orders[topic.pk])

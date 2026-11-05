@@ -58,22 +58,31 @@ never overwrites existing subjects, offerings or courses.
 
 Check each syllabus against the official GCE Board text before publishing anything built on it.
 
-## Draft lessons
+## Lessons and practice sets
 
-`load_lessons` loads KKEVO's draft lessons (one per syllabus topic, in
-`apps/courses/lesson_content/`) into the GCE outline courses. They are created as **drafts**:
-staff check each one against the official syllabus and publish it in the studio. How to write
-lessons: [docs/curriculum/LESSON_AUTHORING.md](docs/curriculum/LESSON_AUTHORING.md).
+`load_lessons` and `load_practice` load KKEVO's lessons and practice sets (one per syllabus topic,
+in `apps/courses/lesson_content/` and `apps/practice/practice_content/`) into the GCE outline
+courses. They are **published by default**, and a course is published the first time it receives
+lessons, so students can use everything straight away. An admin disables whatever is not relevant
+(course, lesson or practice set status in the admin or studio); a reload or `--refresh` never
+switches it back on. The content is KKEVO's own draft material, not the official GCE text: staff
+check it against the official syllabus and correct it in the studio. Add `--draft` to load
+something unpublished instead. How to write lessons:
+[docs/curriculum/LESSON_AUTHORING.md](docs/curriculum/LESSON_AUTHORING.md).
 
 ```bash
 .venv/Scripts/python manage.py check_lessons            # validate the content files, no database
-.venv/Scripts/python manage.py load_lessons             # create the missing drafts
-.venv/Scripts/python manage.py load_lessons --refresh   # rewrite drafts nobody has edited in the studio
+.venv/Scripts/python manage.py load_lessons             # create the missing lessons (published)
+.venv/Scripts/python manage.py load_lessons --draft     # ... as drafts instead
+.venv/Scripts/python manage.py load_lessons --refresh   # rewrite lessons nobody has edited or opened
 .venv/Scripts/python manage.py check_practice           # validate the practice-set files
-.venv/Scripts/python manage.py load_practice            # create the missing draft practice sets
-.venv/Scripts/python manage.py load_lessons --prune     # also delete untouched drafts no longer in the files
+.venv/Scripts/python manage.py load_practice            # create the missing practice sets (published)
+.venv/Scripts/python manage.py load_lessons --prune     # also delete untouched lessons no longer in the files
 .venv/Scripts/python manage.py load_practice --prune
 ```
+
+Students see published courses under Explore for their level; a subject shows under My subjects
+once they add it to their plan.
 
 ## Main URLs
 

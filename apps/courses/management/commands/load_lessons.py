@@ -1,20 +1,24 @@
-"""Load KKEVO's draft lessons from apps/courses/lesson_content/ into the GCE course outlines.
+"""Load KKEVO's lessons from apps/courses/lesson_content/ into the GCE course outlines.
 
-    python manage.py load_lessons              # create missing lessons (as drafts)
+    python manage.py load_lessons              # create missing lessons, published
+    python manage.py load_lessons --draft      # ... as drafts instead (staff review first)
     python manage.py load_lessons --dry-run    # validate and report, save nothing
-    python manage.py load_lessons --refresh    # also rewrite untouched drafts from the files
-    python manage.py load_lessons --remove     # delete untouched drafts that came from the files
-    python manage.py load_lessons --prune      # also delete untouched drafts no longer in the files
+    python manage.py load_lessons --refresh    # also rewrite untouched lessons from the files
+    python manage.py load_lessons --remove     # delete untouched lessons that came from the files
+    python manage.py load_lessons --prune      # also delete untouched lessons no longer in the files
     python manage.py load_lessons --only mathematics:form-5
 
 Run `load_gce_curriculum` first. Lessons go into the "[gce-guide]" outline course of each
 offering; if an offering has another course instead (e.g. the demo Form 5 Mathematics), its
 outline course is created from the syllabus.
 
-Lessons are always created as drafts with no author or reviewer: staff check each one against
-the official GCE syllabus in the studio and publish it there. A lesson counts as "untouched"
-while it is a draft and has no studio draft, revision or event; --refresh and --remove never
-change any other lesson.
+New lessons are published, and so is an outline course the first time it receives lessons, so
+students can use everything straight away. An admin disables what is not relevant (course or
+lesson status in the admin or studio); the loader never republishes it. The content is KKEVO's
+own draft material, not the official GCE text, so staff still check it against the official
+syllabus and fix it in the studio. A lesson counts as "untouched" while it has no studio draft,
+revision or event and no student has opened it; --refresh, --remove and --prune never change any
+other lesson, and --refresh never changes a lesson's status.
 """
 
 from django.core.management.base import BaseCommand, CommandError
@@ -29,22 +33,24 @@ from apps.courses.models import Course, Lesson, LessonBlock, Module, Topic
 
 
 def untouched(lesson):
-    """A draft nobody has worked on in the studio yet."""
+    """A lesson nobody has worked on in the studio and no student has opened."""
+    from apps.learning.models import LessonProgress
     from apps.studio.models import LessonDraft, LessonEvent, LessonRevision
 
-    return lesson.status == "draft" and not any(
-        model.objects.filter(lesson=lesson).exists() for model in (LessonDraft, LessonRevision, LessonEvent))
+    return not any(model.objects.filter(lesson=lesson).exists()
+                   for model in (LessonDraft, LessonRevision, LessonEvent, LessonProgress))
 
 
 class Command(BaseCommand):
-    help = "Load KKEVO's draft lessons into the GCE course outlines."
+    help = "Load KKEVO's lessons into the GCE course outlines (published unless --draft)."
 
     def add_arguments(self, parser):
+        parser.add_argument("--draft", action="store_true", help="Create new lessons and courses as drafts.")
         parser.add_argument("--dry-run", action="store_true", help="Validate and report, then roll back.")
-        parser.add_argument("--refresh", action="store_true", help="Rewrite untouched draft lessons from the files.")
-        parser.add_argument("--remove", action="store_true", help="Delete untouched draft lessons from the files.")
+        parser.add_argument("--refresh", action="store_true", help="Rewrite untouched lessons from the files.")
+        parser.add_argument("--remove", action="store_true", help="Delete untouched lessons from the files.")
         parser.add_argument("--prune", action="store_true",
-                            help="Delete untouched draft lessons in the loaded courses that are no longer in the files.")
+                            help="Delete untouched lessons in the loaded courses that are no longer in the files.")
         parser.add_argument("--only", action="append", default=[], metavar="SUBJECT:LEVEL",
                             help="Limit to one course, e.g. mathematics:form-5 (repeatable).")
 
@@ -60,13 +66,16 @@ class Command(BaseCommand):
         if errors:
             raise CommandError("The lesson content has problems; nothing was loaded:\n  - " + "\n  - ".join(errors))
 
-        counts = dict.fromkeys(["created", "refreshed", "removed", "pruned", "kept", "course pages"], 0)
+        counts = dict.fromkeys(["created", "refreshed", "removed", "pruned", "kept", "course pages", "courses published"], 0)
+        status = "draft" if options["draft"] else "published"
+        was_empty = {}
         courses, orders = {}, {}
         for key, spec, _source in rows:
             if key not in courses:
                 courses[key] = self.outline_course(key, create=not options["remove"])
                 if courses[key] and not options["remove"]:
                     counts["course pages"] += self.apply_page(courses[key], key, options["refresh"])
+                    was_empty[key] = not Lesson.objects.filter(topic__module__course=courses[key]).exists()
             course = courses[key]
             if course is None:
                 continue
@@ -81,7 +90,7 @@ class Command(BaseCommand):
                     counts["kept"] += 1
                 continue
             if existing is None:
-                self.write_lesson(Lesson(topic=topic, slug=spec["slug"], status="draft"), spec, orders[topic.pk])
+                self.write_lesson(Lesson(topic=topic, slug=spec["slug"], status=status), spec, orders[topic.pk])
                 counts["created"] += 1
             elif options["refresh"] and untouched(existing):
                 self.write_lesson(existing, spec, orders[topic.pk])
@@ -89,6 +98,14 @@ class Command(BaseCommand):
             else:
                 counts["kept"] += 1
 
+        if status == "published" and not options["remove"]:
+            for key, course in courses.items():
+                # Only a course that had no lessons before this run: an admin-disabled course stays disabled.
+                if (course and was_empty.get(key) and course.status != "published"
+                        and Lesson.objects.filter(topic__module__course=course).exists()):
+                    course.status = "published"
+                    course.save(update_fields=["status"])
+                    counts["courses published"] += 1
         if options["prune"] and not options["remove"]:
             wanted = {(key, spec["module"], spec["topic"], spec["slug"]) for key, spec, _ in rows}
             for key, course in courses.items():
