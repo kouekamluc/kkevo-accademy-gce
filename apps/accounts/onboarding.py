@@ -27,10 +27,8 @@ def _context(step, **extra):
 
 
 def _offerings_for(profile):
-    qs = SubjectOffering.objects.active().filter(level=profile.level).select_related("subject")
-    if profile.pathway_id:
-        qs = qs.filter(pathways=profile.pathway)
-    return qs.order_by("subject__order", "subject__name").distinct()
+    return (SubjectOffering.objects.for_class(profile.level, profile.pathway)
+            .select_related("subject").order_by("subject__order", "subject__name"))
 
 
 @login_required
@@ -96,7 +94,8 @@ def subjects(request):
     if form.is_bound:
         selected = {str(v) for v in request.POST.getlist("offerings")}
     else:
-        selected = {str(pk) for pk in current}
+        # First visit: tick every subject of their class and stream, so most students just press Continue.
+        selected = {str(pk) for pk in (current or offerings.values_list("pk", flat=True))}
     return render(request, "onboarding/subjects.html",
                   _context(4, form=form, offerings=offerings, selected=selected, minimum=form.minimum))
 

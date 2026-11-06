@@ -132,3 +132,38 @@ def test_course_stats_query_count_is_constant(student, course, outline, django_a
 def test_level_none_catalog_does_not_crash(client):
     AcademicLevel.objects.update(is_active=False)
     assert client.get(reverse("courses:catalog")).status_code == 200
+
+
+def _arts_subject(level, name="History", slug="history"):
+    from apps.academics.models import AcademicPathway
+
+    o = SubjectOffering.objects.create(subject=Subject.objects.create(name=name, slug=slug, icon_text="H"), level=level)
+    o.pathways.add(AcademicPathway.objects.get(slug="arts"))
+    return o
+
+
+def test_catalog_opens_on_the_students_class_and_stream(client, student, offering, form5):
+    _arts_subject(form5)
+    SubjectOffering.objects.create(
+        subject=Subject.objects.create(name="English Language", slug="english", icon_text="Aa"), level=form5)
+    client.force_login(student)
+    response = client.get(reverse("courses:catalog"))
+    names = [c["subject"].name for c in response.context["cards"]]
+    assert set(names) == {"Test Subject", "English Language"}  # Science + common, not Arts-only History
+    assert response.context["stream"] == "science" and response.context["for_you"]
+    html = response.content.decode()
+    assert "your class, Form 5 · Science" in html and "See all streams" in html
+    everything = client.get(reverse("courses:catalog"), {"stream": "all"})
+    assert {c["subject"].name for c in everything.context["cards"]} == {"Test Subject", "English Language", "History"}
+    assert not everything.context["for_you"]
+
+
+def test_my_subjects_suggests_class_subjects_and_adds_all(client, student, offering, form5):
+    _arts_subject(form5)
+    client.force_login(student)
+    response = client.get(reverse("courses:my_subjects"))
+    assert [o.subject.name for o in response.context["suggestions"]] == ["Test Subject"]
+    assert "Your Form 5 · Science subjects" in response.content.decode()
+    client.post(reverse("courses:add_class_subjects"))
+    assert list(Enrollment.objects.filter(user=student).values_list("offering", flat=True)) == [offering.pk]
+    assert client.get(reverse("courses:my_subjects")).context["suggestions"] == []

@@ -32,11 +32,14 @@ def catalog(request):
     """Explore Your Subjects (mockup 08). Filters work with or without JavaScript; HTMX swaps the results."""
     levels = list(AcademicLevel.objects.filter(is_active=True))
     pathways = list(AcademicPathway.objects.filter(is_active=True))
-    student_level, _ = _student_level(request)
+    student_level, student_pathway = _student_level(request)
 
     level_slug = request.GET.get("level")
     level = next((lvl for lvl in levels if lvl.slug == level_slug), None) or student_level or (levels[0] if levels else None)
-    stream = request.GET.get("stream", "all")
+    # A signed-in student lands on their own class and stream, so they never have to hunt for their subjects.
+    default_stream = student_pathway.slug if student_pathway and student_pathway in pathways else "all"
+    stream = request.GET.get("stream") or default_stream
+    for_you = bool(student_level and level == student_level and stream == default_stream and default_stream != "all")
     category = request.GET.get("category", "")
     q = request.GET.get("q", "").strip()[:80]
     sort = request.GET.get("sort") if request.GET.get("sort") in SORTS else "popular"
@@ -50,7 +53,8 @@ def catalog(request):
         .annotate(learners=Count("enrollments", distinct=True))
     )
     if stream != "all" and any(p.slug == stream for p in pathways):
-        offerings = offerings.filter(pathways__slug=stream)
+        # Offerings with no stream set are common to every stream (e.g. English), so they stay in.
+        offerings = offerings.filter(Q(pathways__slug=stream) | Q(pathways__isnull=True))
     if category in SubjectCategory.values:
         offerings = offerings.filter(subject__category=category)
     if subject_slug:
@@ -91,6 +95,7 @@ def catalog(request):
     context = {
         "levels": levels, "pathways": pathways, "categories": SubjectCategory.choices, "sorts": SORTS,
         "level": level, "stream": stream, "category": category, "q": q, "sort": sort,
+        "for_you": for_you, "student_pathway": student_pathway,
         "cards": cards, "plan_count": sum(c["in_plan"] for c in cards), "nav_active": "explore",
         "shell": _shell(request),
     }
@@ -121,7 +126,32 @@ def my_subjects(request):
     for e in enrollments:
         course = services.primary_course(e.offering.courses.all())
         rows.append({"enrollment": e, "subject": e.offering.subject, "course": course, "stat": stats.get(course.pk) if course else None})
-    return render(request, "courses/my_subjects.html", {"rows": rows, "profile": profile, "nav_active": "subjects"})
+    # Current class first, so subjects left over from an earlier class don't crowd the top.
+    rows.sort(key=lambda r: r["enrollment"].offering.level_id != profile.level_id)
+
+    # Subjects of the student's class and stream that aren't in the plan yet: one tap to add.
+    suggestions = []
+    if profile.level_id:
+        enrolled = {e.offering_id for e in enrollments}
+        suggestions = list(
+            SubjectOffering.objects.for_class(profile.level, profile.pathway).exclude(pk__in=enrolled)
+            .select_related("subject").order_by("subject__order", "subject__name")
+        )
+    return render(request, "courses/my_subjects.html", {
+        "rows": rows, "profile": profile, "suggestions": suggestions, "nav_active": "subjects",
+    })
+
+
+@login_required
+@require_POST
+def add_class_subjects(request):
+    """'Add all': put every subject of the student's class and stream into their plan."""
+    profile = get_profile(request.user)
+    if profile.level_id:
+        ids = set(SubjectOffering.objects.for_class(profile.level, profile.pathway).values_list("pk", flat=True))
+        Enrollment.objects.bulk_create([Enrollment(user=request.user, offering_id=pk) for pk in ids], ignore_conflicts=True)
+        messages.success(request, f"Added your {profile.class_label} subjects to your plan.")
+    return redirect("courses:my_subjects")
 
 
 @login_required

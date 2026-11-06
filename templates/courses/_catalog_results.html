@@ -1,6 +1,6 @@
 <section id="catalog-results" aria-live="polite" aria-busy="false" class="flex flex-col gap-5">
   <div class="flex flex-wrap items-center justify-between gap-3 text-[15px] text-slate-600">
-    <p><strong class="text-ink-heading">{{ cards|length }} subject{{ cards|length|pluralize }}</strong> for {{ level.name|default:"this class" }}{% if user.is_authenticated %} · {{ plan_count }} {% if plan_count == 1 %}is{% else %}already{% endif %} in your plan{% endif %}</p>
+    <p><strong class="text-ink-heading">{{ cards|length }} subject{{ cards|length|pluralize }}</strong> for {% if for_you %}your class, {{ level.name }} · {{ student_pathway.name }}{% else %}{{ level.name|default:"this class" }}{% endif %}{% if user.is_authenticated %} · {{ plan_count }} {% if plan_count == 1 %}is{% else %}already{% endif %} in your plan{% endif %}{% if for_you %} · <a href="{% url 'courses:catalog' %}?level={{ level.slug }}&amp;stream=all" class="font-semibold text-primary-700 underline-offset-2 hover:underline">See all streams</a>{% endif %}</p>
     <form method="get" class="flex items-center gap-2" hx-get="{% url 'courses:catalog' %}" hx-target="#catalog-results" hx-select="#catalog-results" hx-swap="outerHTML" hx-trigger="change" hx-push-url="true">
       <input type="hidden" name="level" value="{{ level.slug }}"><input type="hidden" name="stream" value="{{ stream }}">
       <input type="hidden" name="category" value="{{ category }}"><input type="hidden" name="q" value="{{ q }}">

@@ -179,6 +179,8 @@ def test_subjects_step_needs_three_then_enrols_and_finishes(client, student, for
     client.force_login(student)
     html = client.get(reverse("accounts:onboarding_subjects")).content.decode()
     assert "Pick at least 3" in html and "Alpha" in html
+    # First visit: every subject of the class and stream is already ticked
+    assert client.get(reverse("accounts:onboarding_subjects")).context["selected"] == {str(o.pk) for o in form5_offerings}
 
     too_few = client.post(reverse("accounts:onboarding_subjects"), {"offerings": [form5_offerings[0].pk]})
     assert "offerings" in too_few.context["form"].errors

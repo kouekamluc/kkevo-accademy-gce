@@ -116,6 +116,16 @@ class SubjectOfferingQuerySet(models.QuerySet):
     def active(self):
         return self.filter(is_active=True, subject__is_active=True, level__is_active=True)
 
+    def for_class(self, level, pathway=None):
+        """Active subjects a student of this class and stream takes.
+
+        Offerings with no stream set are common to every stream (e.g. English), so they are included.
+        """
+        qs = self.active().filter(level=level)
+        if pathway is not None:
+            qs = qs.filter(models.Q(pathways=pathway) | models.Q(pathways__isnull=True))
+        return qs.distinct()
+
 
 class SubjectOffering(TimeStampedModel):
     """A subject as taught at one academic level, e.g. Form 5 Mathematics."""

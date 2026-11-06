@@ -31,12 +31,40 @@
     </article>
     {% endfor %}
   </div>
-  {% else %}
+  {% elif not suggestions %}
   <div class="rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center">
     <p class="text-lg font-semibold">Your plan is empty</p>
     <p class="mt-1 text-sm text-slate-600">Add the subjects you study to track your progress.</p>
     <a href="{% url 'courses:catalog' %}" class="btn-primary mt-5">Explore subjects</a>
   </div>
+  {% endif %}
+
+  {% if suggestions %}
+  <section aria-labelledby="suggested-heading" class="flex flex-col gap-4 rounded-2xl border-2 border-primary-100 bg-primary-50 p-5 nav:p-6">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <div>
+        <h2 id="suggested-heading" class="text-lg font-bold text-navy">{% if rows %}More subjects for {{ profile.class_label }}{% else %}Your {{ profile.class_label }} subjects{% endif %}</h2>
+        <p class="text-sm text-slate-600">{% if rows %}Also taught in your class. Add the ones you study.{% else %}These are the subjects taught in your class. Add the ones you study to start learning.{% endif %}</p>
+      </div>
+      {% if suggestions|length > 1 %}
+      <form method="post" action="{% url 'courses:add_class_subjects' %}">{% csrf_token %}
+        <button type="submit" class="btn-primary">Add all {{ suggestions|length }}</button>
+      </form>
+      {% endif %}
+    </div>
+    <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      {% for offering in suggestions %}
+      <li class="flex items-center gap-3 rounded-card border-2 border-surface-border bg-white p-3.5">
+        {% include "components/subject_icon.html" with subject=offering.subject %}
+        <span class="min-w-0 flex-1 font-semibold text-ink-heading">{{ offering.subject.name }}</span>
+        <form method="post" action="{% url 'courses:toggle_plan' offering.pk %}">{% csrf_token %}
+          <input type="hidden" name="next" value="{{ request.path }}">
+          <button type="submit" class="btn-secondary min-h-touch px-3" aria-label="Add {{ offering.subject.name }} to my plan">{% include "components/icon.html" with name="plus" class="h-[18px] w-[18px]" stroke="2" %}Add</button>
+        </form>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
   {% endif %}
 </div>
 {% endblock %}
