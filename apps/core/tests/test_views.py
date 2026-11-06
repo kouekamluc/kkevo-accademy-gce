@@ -54,3 +54,11 @@ def test_onboarding_is_guided_by_kiki(client, django_user_model):
     client.force_login(user)
     html = client.get(reverse("accounts:onboarding_level")).content.decode()
     assert "I’m Kiki" in html and "Which class are you in?" in html
+
+
+def test_login_and_signup_carry_the_brand(client):
+    login = client.get(reverse("accounts:login")).content.decode()
+    assert "Your streak is waiting." in login and "Kiki" in login and "#5B3FE4" in login  # logo tile is brand indigo
+    signup = client.get(reverse("accounts:register")).content.decode()
+    assert "Let’s make your account" in signup and "Kiki" in signup
+    assert "#1E3A8A" not in login and "#1E3A8A" not in signup  # old blue is gone

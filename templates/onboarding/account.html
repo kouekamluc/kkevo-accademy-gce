@@ -2,6 +2,12 @@
 {% block title %}Create your account — KKEVO Academy{% endblock %}
 {% block top_right %}<a href="{% url 'accounts:login' %}" class="text-ink-muted">Already have an account? <strong class="text-primary">Log in</strong></a>{% endblock %}
 {% block mobile_right %}<a href="{% url 'accounts:login' %}" class="text-base font-semibold text-ink-muted">Log in</a>{% endblock %}
+{% block kiki %}
+<div class="mt-5 flex items-center gap-3">
+  {% include "components/mascot.html" with size="64" mood="cheer" %}
+  <p class="relative rounded-2xl border-2 border-surface-border bg-white px-4 py-3 text-[15px] font-bold text-navy before:absolute before:-left-2 before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rotate-45 before:border-b-2 before:border-l-2 before:border-surface-border before:bg-white">Hi! Let’s make your account. It takes under a minute.</p>
+</div>
+{% endblock %}
 {% block card %}
 <h2 class="text-[26px] font-bold tracking-[-.02em] text-navy">Create your account</h2>
 <p class="mb-6 mt-2 text-base text-ink-muted">Start learning for free.</p>

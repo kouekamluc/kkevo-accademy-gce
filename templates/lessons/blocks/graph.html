@@ -9,7 +9,7 @@
     <clipPath id="clip-{{ block.pk }}"><rect x="{{ g.pad }}" y="10" width="{{ g.plot_w }}" height="{{ g.plot_h }}"/></clipPath>
     <polyline clip-path="url(#clip-{{ block.pk }})" points="{{ g.points }}" fill="none" stroke="#5B3FE4" stroke-width="2.5" stroke-linejoin="round"/>
     {% for r in g.roots %}<circle cx="{{ r.x }}" cy="{{ r.y }}" r="6" fill="#1FBF75" stroke="#fff" stroke-width="2"/><text x="{{ r.x }}" y="{{ r.label_y }}" font-size="14" text-anchor="middle" fill="#047857" font-style="italic" font-family="STIX Two Text, serif" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">x = {{ r.label }}</text>{% endfor %}
-    {% if block.data.label %}<text x="{{ g.label_x }}" y="40" font-size="16" text-anchor="{{ g.label_anchor }}" fill="#1D4ED8" font-style="italic" font-family="STIX Two Text, serif" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">{{ block.data.label }}</text>{% endif %}
+    {% if block.data.label %}<text x="{{ g.label_x }}" y="40" font-size="16" text-anchor="{{ g.label_anchor }}" fill="#4527C9" font-style="italic" font-family="STIX Two Text, serif" stroke="#fff" stroke-width="4" stroke-linejoin="round" paint-order="stroke">{{ block.data.label }}</text>{% endif %}
   </svg>
   {% endif %}
   {% if block.body %}<figcaption class="mt-1 px-2 text-[13px] text-ink-muted">{{ block.body|inline }}</figcaption>{% endif %}

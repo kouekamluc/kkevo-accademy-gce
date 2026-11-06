@@ -78,7 +78,7 @@
   .studio-tab { @apply -mb-px flex h-14 shrink-0 items-center gap-1.5 border-b-2 border-transparent text-[15px] font-medium text-slate-600 hover:text-navy; }
   .studio-tab-active { @apply border-primary font-semibold text-ink-heading; }
   .form-label { @apply text-sm font-semibold text-ink-heading; }
-  .form-input { @apply block min-h-touch w-full rounded-input border border-slate-300 bg-white px-3.5 text-[15px] text-ink-heading placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary-100; }
+  .form-input { @apply block min-h-[52px] w-full rounded-input border-2 border-surface-border bg-white px-4 text-base font-semibold text-ink-heading placeholder:font-normal placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-primary-100; }
   .form-input-error { @apply border-danger-text focus:border-danger-text focus:ring-danger-50; }
 }
 

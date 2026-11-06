@@ -1,15 +1,32 @@
 {% extends "base.html" %}
+{% comment %}
+Sign-in shell: an indigo brand panel with Kiki (top of the screen on phones, left column on desktop)
+and the form card below or beside it. Pages may override hero_title and hero_text.
+{% endcomment %}
 {% block body %}
-<div class="flex min-h-screen flex-col">
-  <header class="border-b border-surface-border bg-white">
-    <div class="wrap flex h-16 items-center justify-between">
-      <a href="{% url 'core:landing' %}" class="flex items-center gap-2.5 text-navy hover:text-navy">
-        {% include "components/logo.html" with size="sm" %}<span class="text-base font-bold tracking-[-.01em]">KKEVO Academy</span>
+<div class="flex min-h-screen flex-col bg-surface-bg nav:flex-row">
+  <aside class="flex flex-col gap-4 bg-navy px-5 pb-14 pt-4 text-white nav:sticky nav:top-0 nav:h-screen nav:w-[480px] nav:max-w-[42vw] nav:shrink-0 nav:justify-between nav:px-12 nav:py-10">
+    <div class="flex items-center justify-between gap-4">
+      <a href="{% url 'core:landing' %}" class="flex items-center gap-2.5 text-white hover:text-white">
+        {% include "components/logo.html" with size="sm" %}<span class="text-[17px] font-black tracking-[-.01em]">KKEVO Academy</span>
       </a>
-      {% block header_action %}{% endblock %}
+      <div class="text-sm font-extrabold [&_a]:text-white [&_a:hover]:underline">{% block header_action %}{% endblock %}</div>
     </div>
-  </header>
-  <main id="main" class="flex flex-1 justify-center px-4 py-10 nav:py-16">
+    <div class="flex items-center gap-4 nav:flex-col nav:items-start nav:gap-6">
+      <div class="shrink-0 nav:hidden">{% include "components/mascot.html" with size="84" mood="cheer" %}</div>
+      <div class="hidden shrink-0 nav:block">{% include "components/mascot.html" with size="160" mood="cheer" %}</div>
+      <div>
+        <p class="text-[26px] font-black leading-tight tracking-[-.01em] nav:text-[36px]">{% block hero_title %}Pass your GCE, one small win at a time.{% endblock %}</p>
+        <p class="mt-2 text-[15px] font-semibold leading-relaxed text-slate-300 nav:text-base">{% block hero_text %}Short lessons, quick quizzes, points and streaks.{% endblock %}</p>
+      </div>
+    </div>
+    <ul class="hidden flex-wrap gap-2.5 text-sm font-extrabold nav:flex">
+      <li class="inline-flex items-center gap-2 rounded-full bg-navy-700 px-4 py-2"><span aria-hidden="true">🔥</span>Daily streaks</li>
+      <li class="inline-flex items-center gap-2 rounded-full bg-navy-700 px-4 py-2"><span aria-hidden="true">⭐</span>Points and levels</li>
+      <li class="inline-flex items-center gap-2 rounded-full bg-navy-700 px-4 py-2"><span aria-hidden="true">📱</span>Light on data</li>
+    </ul>
+  </aside>
+  <main id="main" class="-mt-8 flex flex-1 justify-center rounded-t-[32px] bg-surface-bg px-4 pb-12 pt-8 nav:mt-0 nav:items-center nav:rounded-none nav:py-12">
     <div class="w-full {% block width %}max-w-[440px]{% endblock %}">
       {% include "components/messages.html" %}
       {% block content %}{% endblock %}

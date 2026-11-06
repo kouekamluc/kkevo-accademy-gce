@@ -1,9 +1,11 @@
 {% extends "layouts/auth.html" %}
 {% block title %}Log in — KKEVO Academy{% endblock %}
 {% block header_action %}<a href="{% url 'accounts:register' %}" class="text-sm font-semibold">Create an account</a>{% endblock %}
+{% block hero_title %}Your streak is waiting.{% endblock %}
+{% block hero_text %}Pick up where you left off and keep it going.{% endblock %}
 {% block content %}
-<div class="card mt-4 p-6 shadow-card sm:p-8">
-  <h1 class="text-[28px] font-bold leading-tight tracking-[-.02em] text-navy">Welcome back</h1>
+<div class="card p-6 sm:p-8">
+  <h1 class="text-[28px] font-black leading-tight tracking-[-.01em] text-navy">Welcome back</h1>
   <p class="mt-2 text-[15px] text-slate-600">Log in to continue where you stopped.</p>
   <form method="post" class="mt-7 flex flex-col gap-5" novalidate>
     {% csrf_token %}
