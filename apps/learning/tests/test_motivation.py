@@ -114,7 +114,7 @@ def test_exam_countdown_pace_and_buffer():
 def test_set_exam_date_and_see_countdown(client, student, plan):
     client.force_login(student)
     html = client.get(reverse("dashboard:home")).content.decode()
-    assert "Add your GCE exam date" in html
+    assert "Add your GCE exam date" not in html  # a new student is not nagged yet (see dashboard.modes)
     exam = timezone.localdate() + timedelta(days=100)
     client.post(reverse("learning:exam_date"), {"exam_date": exam.isoformat()})
     student.profile.refresh_from_db()

@@ -1,6 +1,12 @@
 {% extends "layouts/onboarding.html" %}
 {% block title %}Arts or Science? — KKEVO Academy{% endblock %}
 {% block mobile_back %}{% url 'accounts:onboarding_level' as back %}{% include "onboarding/_mobile_back.html" with url=back %}{% endblock %}
+{% block kiki %}
+<div class="mt-5 flex items-center gap-3">
+  {% include "components/mascot.html" with size="64" mood="happy" %}
+  <p class="relative rounded-2xl border-2 border-surface-border bg-white px-4 py-3 text-[15px] font-bold text-navy before:absolute before:-left-2 before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rotate-45 before:border-b-2 before:border-l-2 before:border-surface-border before:bg-white">Great! Just two more quick steps.</p>
+</div>
+{% endblock %}
 {% block card %}
 <h2 class="text-[26px] font-bold tracking-[-.02em] text-navy">Arts or Science?</h2>
 <p class="mb-6 mt-2 text-base text-ink-muted">We’ll suggest subjects that match your stream.</p>

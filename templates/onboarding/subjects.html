@@ -1,6 +1,12 @@
 {% extends "layouts/onboarding.html" %}
 {% block title %}Choose your subjects — KKEVO Academy{% endblock %}
 {% block mobile_back %}{% url 'accounts:onboarding_stream' as back %}{% include "onboarding/_mobile_back.html" with url=back %}{% endblock %}
+{% block kiki %}
+<div class="mt-5 flex items-center gap-3">
+  {% include "components/mascot.html" with size="64" mood="happy" %}
+  <p class="relative rounded-2xl border-2 border-surface-border bg-white px-4 py-3 text-[15px] font-bold text-navy before:absolute before:-left-2 before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rotate-45 before:border-b-2 before:border-l-2 before:border-surface-border before:bg-white">Pick the subjects you want. You can change them any time.</p>
+</div>
+{% endblock %}
 {% block card %}
 <div x-data="{ count: {{ selected|length }} }" @change="count = $el.querySelectorAll('input[name=offerings]:checked').length">
   <h2 class="text-[26px] font-bold tracking-[-.02em] text-navy">Choose your subjects</h2>

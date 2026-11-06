@@ -25,9 +25,15 @@ BOTTOM_BAR = [
 ]
 
 
-def _resolve(items):
+# Hidden until the student has started a lesson: they have nothing to show yet, so they only add clutter.
+HIDDEN_UNTIL_STARTED = {"progress", "saved"}
+
+
+def _resolve(items, started=True):
     out = []
     for item in items:
+        if not started and item[0] in HIDDEN_UNTIL_STARTED:
+            continue
         try:
             url = reverse(item[3])
         except NoReverseMatch:
@@ -48,12 +54,26 @@ def navigation(request):
 
         return get_profile(user)
 
+    cache = {}
+
+    def has_started():
+        """True once the student has opened a lesson (or if the visitor is not signed in)."""
+        if "started" not in cache:
+            user = getattr(request, "user", None)
+            if user is None or not user.is_authenticated:
+                cache["started"] = True
+            else:
+                from apps.learning.models import LessonProgress
+
+                cache["started"] = LessonProgress.objects.filter(user=user).exists()
+        return cache["started"]
+
     return {
         "nav_levels": SimpleLazyObject(lambda: list(AcademicLevel.objects.filter(is_active=True))),
         "current_profile": SimpleLazyObject(current_profile),
-        "sidebar_items": SimpleLazyObject(lambda: _resolve(SIDEBAR)),
+        "sidebar_items": SimpleLazyObject(lambda: _resolve(SIDEBAR, has_started())),
         "staff_nav": SimpleLazyObject(lambda: _staff_nav(request)),
-        "bottom_items": SimpleLazyObject(lambda: _resolve(BOTTOM_BAR)),
+        "bottom_items": SimpleLazyObject(lambda: _resolve(BOTTOM_BAR, has_started())),
     }
 
 

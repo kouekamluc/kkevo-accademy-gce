@@ -19,7 +19,7 @@ from apps.accounts.models import StudentProfile
 from apps.accounts.utils import get_profile
 from apps.courses.models import Course, Lesson
 
-from . import analytics, motivation, services
+from . import achievements, analytics, motivation, services
 from .models import (Enrollment, LessonProgress, LinkPurpose, PrivateLink, RestDay, SavedLesson, SessionKind,
                      StudySession)
 
@@ -112,6 +112,7 @@ def progress(request):
         r.day_label = "Today" if day == today else "Yesterday" if day == today - timedelta(days=1) else f"{day.day} {day.strftime('%b')}"
 
     return render(request, "learning/progress.html", {
+        **achievements.journey(user),
         "range_key": range_key, "ranges": analytics.RANGES, "overall": overall, "gained": gained,
         "done": done, "total": total, "avg_now": avg_now,
         "avg_delta": (avg_now - avg_prev) if avg_now is not None and avg_prev is not None else None,

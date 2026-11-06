@@ -11,11 +11,11 @@ reading-progress line, and on phones a bottom bar with Previous · Mark as Compl
 {% block lesson_head %}{% endblock %}
 {% endblock %}
 {% block body %}
-<div x-data="lessonPlayer({ heartbeatUrl: '{% url 'courses:lesson_heartbeat' course.slug lesson.pk %}', percent: {{ progress.percent }},
+<div x-data="lessonPlayer({ heartbeatUrl: '{% url 'courses:lesson_heartbeat' course.slug lesson.pk %}', percent: {{ progress.percent }}, completed: {{ progress.is_completed|yesno:'true,false' }}, courseUrl: '{{ course.get_absolute_url }}',
                             resume: {% if resume %}{ anchor: '{{ resume.anchor|escapejs }}', label: '{{ resume.label|escapejs }}' }{% else %}null{% endif %},
                             autoResume: {{ auto_resume|yesno:'true,false' }}, hasNotesPanel: {{ notes_panel|yesno:'true,false' }},
                             nextUrl: '{% if next_lesson %}{{ next_lesson.get_absolute_url }}{% endif %}', prevUrl: '{% if prev_lesson %}{{ prev_lesson.get_absolute_url }}{% endif %}' })"
-     class="min-h-screen bg-surface-bg print:bg-white" :class="'text-size-' + textSize">
+     class="min-h-screen bg-surface-bg print:bg-white" :class="'text-size-' + textSize" @quick-solved="stepSolved = true">
   {% csrf_token %}
   <div class="hidden border-b border-slate-300 pb-2 text-xs text-slate-600 print:block">KKEVO Academy · {{ course.title }} · {{ module.title }} — printed for personal revision</div>
   <header class="sticky top-0 z-30 border-b border-surface-border bg-white print:hidden">
@@ -44,7 +44,7 @@ reading-progress line, and on phones a bottom bar with Previous · Mark as Compl
   {% include "lessons/_shortcuts_help.html" %}
 
   {# Phone bottom bar: Previous · Mark as Complete · Next #}
-  <nav aria-label="Lesson navigation" class="fixed inset-x-0 bottom-0 z-30 flex items-center gap-2 border-t border-surface-border bg-white px-3 pb-4 pt-2 nav:hidden print:hidden">
+  <nav aria-label="Lesson navigation" x-show="!cardsOn" class="fixed inset-x-0 bottom-0 z-30 flex items-center gap-2 border-t border-surface-border bg-white px-3 pb-4 pt-2 nav:hidden print:hidden">
     {% if prev_lesson %}<a href="{{ prev_lesson.get_absolute_url }}" class="flex h-12 w-12 items-center justify-center rounded-btn border border-surface-border text-navy" aria-label="Previous: {{ prev_lesson.title }}">{% include "components/icon.html" with name="chevron-left" class="h-5 w-5" stroke="2.2" %}</a>{% else %}<span class="w-12"></span>{% endif %}
     <form method="post" action="{% url 'courses:lesson_complete' course.slug lesson.pk %}" class="flex-1">{% csrf_token %}
       <button type="submit" class="btn h-12 w-full {% if progress.is_completed %}border border-success-200 bg-success-50 text-success-text{% else %}bg-success text-white hover:bg-success-text hover:text-white{% endif %}">

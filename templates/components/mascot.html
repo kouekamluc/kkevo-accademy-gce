@@ -1,0 +1,21 @@
+{% comment %}Kiki, the KKEVO study buddy. Pure inline SVG (no download). mood: happy | cheer | sleepy. size: pixels (default 96).{% endcomment %}
+<svg viewBox="0 0 120 120" width="{{ size|default:96 }}" height="{{ size|default:96 }}" role="img" aria-label="Kiki, your study buddy" class="shrink-0">
+  <ellipse cx="60" cy="112" rx="30" ry="5" fill="#2A1F6B" opacity=".12"/>
+  <circle cx="60" cy="64" r="44" fill="#5B3FE4"/>
+  <ellipse cx="60" cy="78" rx="28" ry="24" fill="#F4F1FF"/>
+  <path d="M24 26 L60 12 L96 26 L60 40 Z" fill="#2A1F6B"/>
+  <path d="M40 34 V46 Q60 56 80 46 V34 L60 42 Z" fill="#3B2E8C"/>
+  <path d="M96 26 V44" stroke="#FFB020" stroke-width="3" stroke-linecap="round"/><circle cx="96" cy="47" r="4" fill="#FFB020"/>
+  {% if mood == "sleepy" %}
+  <path d="M40 66 q7 6 14 0 M66 66 q7 6 14 0" fill="none" stroke="#1B1340" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M52 84 q8 3 16 0" fill="none" stroke="#1B1340" stroke-width="3" stroke-linecap="round"/>
+  {% else %}
+  <circle cx="47" cy="64" r="9" fill="#fff"/><circle cx="73" cy="64" r="9" fill="#fff"/>
+  <circle cx="49" cy="65" r="4.5" fill="#1B1340"/><circle cx="75" cy="65" r="4.5" fill="#1B1340"/>
+  <circle cx="50.5" cy="63" r="1.5" fill="#fff"/><circle cx="76.5" cy="63" r="1.5" fill="#fff"/>
+  {% if mood == "cheer" %}<path d="M48 80 Q60 96 72 80 Z" fill="#BE1E3A" stroke="#1B1340" stroke-width="2.5" stroke-linejoin="round"/>
+  {% else %}<path d="M50 82 Q60 90 70 82" fill="none" stroke="#1B1340" stroke-width="3.5" stroke-linecap="round"/>{% endif %}
+  {% endif %}
+  <circle cx="34" cy="78" r="5" fill="#FF4D6A" opacity=".35"/><circle cx="86" cy="78" r="5" fill="#FF4D6A" opacity=".35"/>
+  {% if mood == "cheer" %}<path d="M14 54 L22 40 M106 54 L98 40" stroke="#FFB020" stroke-width="5" stroke-linecap="round"/>{% endif %}
+</svg>

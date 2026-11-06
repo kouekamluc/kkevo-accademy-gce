@@ -9,7 +9,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 from django.views.decorators.http import require_POST
 
-from apps.learning import services
+from apps.learning import achievements, services
 from apps.learning.models import DailyActivity, LessonNote, LessonProgress, SavedLesson
 from apps.practice.models import PracticeSet
 
@@ -161,8 +161,10 @@ def lesson_complete(request, course_slug, pk):
     index = next((i for i, item in enumerate(lessons) if item.pk == lesson.pk), 0)
     next_lesson = lessons[index + 1] if index + 1 < len(lessons) else None
     if request.htmx:
-        return render(request, "lessons/_complete_card.html", {"lesson": lesson, "progress": progress,
-                                                                "next_lesson": next_lesson, "course": lesson.course})
+        return render(request, "lessons/_complete_card.html", {
+            "lesson": lesson, "progress": progress, "next_lesson": next_lesson, "course": lesson.course,
+            "new_milestones": achievements.describe(request, achievements.award(request.user)),
+            "momentum": achievements.today_strip(request.user)})
     return redirect(next_lesson.get_absolute_url() if next_lesson else lesson.course.get_absolute_url())
 
 

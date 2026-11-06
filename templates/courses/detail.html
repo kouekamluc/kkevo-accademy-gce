@@ -14,7 +14,7 @@
   <div class="mx-auto grid max-w-[1240px] gap-6 px-4 py-6 nav:grid-cols-[1fr_256px] nav:gap-10 nav:p-8 xl:grid-cols-[1fr_400px]">
     <div class="flex flex-col gap-5 sm:flex-row sm:gap-6">
       <div class="flex items-center gap-4 sm:block">
-        <span class="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-2xl sm:h-[76px] sm:w-[76px] accent-{{ subject.accent }}" aria-hidden="true">
+        <span class="flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-2xl sm:h-[76px] sm:w-[76px] tile-{{ subject.accent }}" aria-hidden="true">
           {% if subject.icon %}{% include "components/icon.html" with name=subject.icon class="h-9 w-9" %}{% else %}<span class="font-math text-[34px] {% if subject.icon_text|length <= 2 %}italic{% endif %}">{{ subject.icon_text }}</span>{% endif %}
         </span>
         <div class="sm:hidden">
@@ -42,6 +42,10 @@
     {# Progress card #}
     <div class="flex flex-col gap-4 rounded-2xl border border-surface-border bg-surface-bg p-5 nav:self-start nav:bg-white nav:p-6 nav:shadow-card">
       {% if user.is_authenticated %}
+        <div class="flex items-center gap-3">
+          {% if percent >= 50 %}{% include "components/mascot.html" with size="56" mood="cheer" %}{% else %}{% include "components/mascot.html" with size="56" mood="happy" %}{% endif %}
+          <p class="text-[15px] font-extrabold text-navy">{% if percent == 0 %}Ready when you are!{% elif percent < 50 %}Great start. Keep going!{% elif percent < 100 %}More than halfway there!{% else %}Course complete. Brilliant!{% endif %}</p>
+        </div>
         <div class="flex items-baseline justify-between"><span class="text-[17px] font-semibold">Your progress</span><span class="text-2xl font-bold nav:text-[30px]">{{ percent }}%</span></div>
         <div class="h-2.5 overflow-hidden rounded-full bg-surface-border" role="progressbar" aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="Course progress"><div class="h-full rounded-full bg-success" style="width: {{ percent }}%"></div></div>
         <p class="text-sm text-ink-muted">{{ done }} of {{ total }} lessons complete</p>
@@ -83,10 +87,10 @@
     </div>
 
     {% for m in modules %}
-    <div class="overflow-hidden rounded-card border-[1.5px] bg-white {% if m.status == 'progress' %}border-primary-100{% else %}border-surface-border{% endif %}"
+    <div class="overflow-hidden rounded-card border-2 border-b-4 bg-white {% if m.status == 'progress' %}border-primary-100{% else %}border-surface-border{% endif %}"
          x-show="moduleVisible({{ m.done }}, {{ m.total }})">
       <button type="button" class="flex w-full items-center gap-4 p-4 text-left sm:p-5" @click="toggle({{ m.number }})" :aria-expanded="isOpen({{ m.number }}).toString()" aria-controls="module-{{ m.number }}">
-        <span class="flex h-11 w-11 flex-none items-center justify-center rounded-xl font-bold {% if m.status == 'complete' %}bg-success text-white{% elif m.status == 'progress' %}bg-primary text-white{% else %}bg-slate-100 text-navy{% endif %}">
+        <span class="flex h-11 w-11 flex-none items-center justify-center rounded-xl font-bold shadow-[inset_0_-3px_0_rgba(0,0,0,.15)] {% if m.status == 'complete' %}bg-success text-white{% elif m.status == 'progress' %}bg-primary text-white{% else %}bg-slate-100 text-navy{% endif %}">
           {% if m.status == 'complete' %}{% include "components/icon.html" with name="check" class="h-5 w-5" stroke="2.6" %}{% else %}{{ m.number }}{% endif %}
         </span>
         <span class="min-w-0 flex-1">
@@ -101,7 +105,7 @@
           </span>
         </span>
         {% if user.is_authenticated %}
-        <span class="hidden w-[140px] items-center gap-2.5 sm:flex"><span class="h-1.5 flex-1 rounded-full bg-surface-border"><span class="block h-1.5 rounded-full bg-success" style="width: {{ m.percent }}%"></span></span><span class="text-[13px] font-semibold">{{ m.percent }}%</span></span>
+        <span class="hidden w-[140px] items-center gap-2.5 sm:flex"><span class="h-2.5 flex-1 rounded-full bg-surface-border"><span class="block h-2.5 rounded-full bg-success" style="width: {{ m.percent }}%"></span></span><span class="text-[13px] font-semibold">{{ m.percent }}%</span></span>
         {% endif %}
         <span class="text-slate-500" :class="isOpen({{ m.number }}) && 'rotate-180'">{% include "components/icon.html" with name="chevron-down" class="h-5 w-5" stroke="2" %}</span>
       </button>

@@ -2,9 +2,12 @@
 {% block title %}Explore subjects — KKEVO Academy{% endblock %}
 {% block content %}
 <div class="flex flex-col gap-6 nav:mt-2">
-  <div>
-    <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">Explore Your Subjects</h1>
-    <p class="mt-1 text-base text-ink-muted nav:text-lg">Find the right lessons for your class<span class="hidden nav:inline"> and build your knowledge</span>.</p>
+  <div class="flex items-center gap-3">
+    {% include "components/mascot.html" with size="64" mood="happy" %}
+    <div>
+      <h1 class="text-[26px] font-black tracking-[-.01em] text-navy nav:text-[34px]">Explore Your Subjects</h1>
+      <p class="mt-1 text-base font-semibold text-ink-muted nav:text-lg">Find the right lessons for your class<span class="hidden nav:inline"> and build your knowledge</span>.</p>
+    </div>
   </div>
 
   {% if not user.is_authenticated %}

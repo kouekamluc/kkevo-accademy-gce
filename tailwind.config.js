@@ -1,5 +1,5 @@
 /**
- * KKEVO Academy — Tailwind theme ("Academic Clarity").
+ * KKEVO Academy — Tailwind theme ("Playful Ndop": bright, rounded, game-like, phone first).
  * Source: ../design-system/tailwind.config.js (keep the two in sync).
  */
 module.exports = {
@@ -12,20 +12,21 @@ module.exports = {
   ],
   // Classes assembled in templates from model values (e.g. accent-{{ subject.accent }}).
   safelist: ["accent-blue", "accent-emerald", "accent-amber", "accent-slate",
+    "tile-blue", "tile-emerald", "tile-amber", "tile-slate",
     "session-blue", "session-emerald", "session-slate", "session-violet", "session-rose", "session-cyan", "session-amber", "session-plan"],
   theme: {
     extend: {
       colors: {
-        navy: { DEFAULT: "#102A43", 700: "#1E3A5F", 600: "#334E68" },
-        primary: { DEFAULT: "#2563EB", 700: "#1D4ED8", 100: "#DBEAFE", 50: "#EFF6FF", 300: "#93C5FD" },
-        success: { DEFAULT: "#10B981", text: "#047857", 50: "#ECFDF5", 200: "#A7F3D0", 300: "#6EE7B7" },
-        warning: { DEFAULT: "#F59E0B", text: "#B45309", 50: "#FFFBEB", 200: "#FDE68A" },
-        danger: { DEFAULT: "#EF4444", text: "#B91C1C", 50: "#FEF2F2", 200: "#FECACA" },
-        surface: { bg: "#F8FAFC", card: "#FFFFFF", border: "#E2E8F0" },
-        ink: { heading: "#0F172A", body: "#1E293B", muted: "#64748B" },
+        navy: { DEFAULT: "#2A1F6B", 700: "#3B2E8C", 600: "#574BA8" },
+        primary: { DEFAULT: "#5B3FE4", 700: "#4527C9", 100: "#E6E0FF", 50: "#F4F1FF", 300: "#B3A3FA" },
+        success: { DEFAULT: "#1FBF75", text: "#0B7A47", 50: "#E8FBF1", 200: "#A8EDCB", 300: "#6FE0A8" },
+        warning: { DEFAULT: "#FFB020", text: "#8F5200", 50: "#FFF6DC", 200: "#FFE08A" },
+        danger: { DEFAULT: "#FF4D6A", text: "#BE1E3A", 50: "#FFEDF0", 200: "#FFC2CD" },
+        surface: { bg: "#F7F5FF", card: "#FFFFFF", border: "#E3DDF7" },
+        ink: { heading: "#1B1340", body: "#2D2658", muted: "#665F8C" },
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        sans: ["Nunito", "system-ui", "sans-serif"],
         math: ['"STIX Two Text"', "Georgia", "serif"],
       },
       fontSize: {
@@ -35,13 +36,13 @@ module.exports = {
         h3: ["18px", { lineHeight: "28px", fontWeight: "600" }],
         lesson: ["18px", { lineHeight: "30px" }],
       },
-      borderRadius: { input: "8px", btn: "10px", card: "14px", panel: "20px" },
+      borderRadius: { input: "12px", btn: "14px", card: "20px", panel: "28px" },
       boxShadow: {
         card: "0 1px 2px rgba(15,23,42,.05)",
         raised: "0 8px 24px rgba(15,23,42,.08)",
         hero: "0 24px 60px rgba(16,42,67,.14)",
         float: "0 12px 32px rgba(16,42,67,.12)",
-        cta: "0 6px 16px rgba(37,99,235,.25)",
+        cta: "0 6px 16px rgba(91,63,228,.28)",
       },
       spacing: { sidebar: "264px", rail: "256px", header: "64px" },
       maxWidth: { content: "1200px", reading: "720px" },

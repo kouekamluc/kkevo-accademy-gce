@@ -9,7 +9,7 @@ def test_landing_renders_seeded_levels_and_empty_subject_state(client):
     response = client.get(reverse("core:landing"))
     assert response.status_code == 200
     html = response.content.decode()
-    assert "Understand Every Lesson." in html
+    assert "Pass your GCE," in html
     for name in ("Form 5", "Lower Sixth", "Upper Sixth"):
         assert name in html
     assert "Subjects are being prepared" in html
@@ -41,3 +41,16 @@ def test_authenticated_user_sees_dashboard_link(client):
 @pytest.mark.parametrize("name", ["accounts:login", "accounts:register", "courses:catalog"])
 def test_public_routes_resolve(client, name):
     assert client.get(reverse(name)).status_code == 200
+
+
+def test_landing_speaks_to_teenagers_on_phones(client):
+    html = client.get(reverse("core:landing")).content.decode()
+    assert "Daily streaks" in html and "Points and levels" in html and "Light on data" in html
+    assert "Preview of a quiz question" in html and "Kiki" in html
+
+
+def test_onboarding_is_guided_by_kiki(client, django_user_model):
+    user = django_user_model.objects.create_user(email="k@example.com", password="pw-Strong-123")
+    client.force_login(user)
+    html = client.get(reverse("accounts:onboarding_level")).content.decode()
+    assert "I’m Kiki" in html and "Which class are you in?" in html

@@ -2,6 +2,9 @@
 {% load lesson_tags %}
 {% block title %}{{ lesson.title }} — {{ course.title }}{% endblock %}
 {% block header_actions %}
+<button type="button" x-show="cardsAvailable" x-cloak @click="toggleCards()" class="flex h-10 items-center gap-1.5 rounded-btn px-3 text-sm font-extrabold text-primary-700 hover:bg-primary-50" :aria-pressed="cardsOn.toString()">
+  <span x-text="cardsOn ? 'Full page' : 'Cards'">Cards</span>
+</button>
 <button type="button" @click="cycleTextSize()" class="hidden h-10 items-center gap-1.5 rounded-btn px-3 text-sm font-medium text-slate-700 hover:bg-slate-100 sm:flex" :aria-label="'Text size: ' + textSize">
   <span class="font-semibold">A<span class="text-xs">a</span></span> Text size
 </button>
@@ -59,6 +62,17 @@
       </ul>
       {% include "lessons/_resume_banner.html" %}
 
+      {# Cards mode: segmented progress and the current card's title #}
+      <div id="card-progress" x-show="cardsOn" x-cloak class="sticky top-[56px] z-20 -mx-4 mt-4 bg-surface-bg/95 px-4 py-3 backdrop-blur nav:top-[67px] nav:mx-0 print:hidden">
+        <div class="flex items-center gap-3">
+          {% include "components/mascot.html" with size="44" mood="happy" %}
+          <div class="min-w-0 flex-1">
+            <div class="flex gap-1" aria-hidden="true"><template x-for="i in stepCount" :key="i"><span class="h-2.5 flex-1 rounded-full" :class="i - 1 < step ? 'bg-success' : (i - 1 === step ? 'bg-primary' : 'bg-surface-border')"></span></template></div>
+            <div class="mt-1.5 flex items-baseline justify-between gap-3 text-[13px] font-extrabold text-ink-muted"><span class="truncate" x-text="stepTitle"></span><span class="whitespace-nowrap" x-text="(step + 1) + ' of ' + stepCount" aria-live="polite"></span></div>
+          </div>
+        </div>
+      </div>
+
       {% if lesson.objectives_list %}
       <section id="objectives" data-toc="Learning objectives" class="mt-7 scroll-mt-24 rounded-card border border-surface-border bg-surface-bg p-5 nav:bg-white" x-data="checklist('objectives-{{ lesson.pk }}')" @change="save()">
         <h2 class="flex items-center gap-2 text-sm font-semibold text-ink-heading">{% include "components/icon.html" with name="target" class="h-[18px] w-[18px] text-primary" %}By the end of this lesson you will be able to</h2>
@@ -70,7 +84,7 @@
       </section>
       {% endif %}
 
-      <div id="lesson-body" class="lesson-prose mt-8 flex flex-col gap-6">
+      <div id="lesson-body" data-cards class="lesson-prose mt-8 flex flex-col gap-6">
         {% for block in blocks %}
           {% include block.template_name with block=block %}
         {% empty %}
@@ -79,16 +93,24 @@
       </div>
 
       {% if practice_set %}
-      <a href="{{ practice_set.get_absolute_url }}" class="btn-secondary mt-6 print:hidden">Start the full practice set · {{ practice_set.question_count }} question{{ practice_set.question_count|pluralize }} {% include "components/icon.html" with name="arrow" class="h-4 w-4" stroke="2.2" %}</a>
+      <a href="{{ practice_set.get_absolute_url }}" data-cards-end class="btn-secondary mt-6 print:hidden">Start the full practice set · {{ practice_set.question_count }} question{{ practice_set.question_count|pluralize }} {% include "components/icon.html" with name="arrow" class="h-4 w-4" stroke="2.2" %}</a>
       {% endif %}
 
-      <div id="complete-card" class="mt-10 print:hidden">{% include "lessons/_complete_card.html" %}</div>
+      <div id="complete-card" data-cards-end class="mt-10 print:hidden">{% include "lessons/_complete_card.html" %}</div>
 
-      <nav class="mt-6 grid grid-cols-2 gap-4 print:hidden" aria-label="Previous and next lesson">
+      <nav data-cards-end class="mt-6 grid grid-cols-2 gap-4 print:hidden" aria-label="Previous and next lesson">
         {% if prev_lesson %}<a href="{{ prev_lesson.get_absolute_url }}" class="rounded-card border border-surface-border bg-white p-4 text-ink-heading hover:border-primary-300 hover:text-ink-heading"><span class="flex items-center gap-1 text-xs text-ink-muted">{% include "components/icon.html" with name="chevron-left" class="h-3.5 w-3.5" stroke="2" %}Previous</span><span class="mt-1 block text-sm font-semibold">{{ prev_lesson.title }}</span></a>{% else %}<span></span>{% endif %}
         {% if next_lesson %}<a href="{{ next_lesson.get_absolute_url }}" class="rounded-card border border-surface-border bg-white p-4 text-right text-ink-heading hover:border-primary-300 hover:text-ink-heading"><span class="flex items-center justify-end gap-1 text-xs text-ink-muted">Next{% include "components/icon.html" with name="chevron-right" class="h-3.5 w-3.5" stroke="2" %}</span><span class="mt-1 block text-sm font-semibold">{{ next_lesson.title }}</span></a>{% endif %}
       </nav>
     </article>
+
+    {# Cards mode controls: always in thumb reach #}
+    <div x-show="cardsOn" x-cloak class="fixed inset-x-0 bottom-0 z-40 border-t-2 border-surface-border bg-white px-3 pb-4 pt-3 print:hidden">
+      <div class="mx-auto flex max-w-reading gap-3">
+        <button type="button" @click="prev()" :disabled="step === 0" class="btn-secondary h-14 w-14 shrink-0 px-0 disabled:opacity-40" aria-label="Previous card">{% include "components/icon.html" with name="chevron-left" class="h-6 w-6" stroke="2.4" %}</button>
+        <button type="button" @click="next()" class="h-14 flex-1 text-lg" :class="stepHasCheck && !stepSolved && step < stepCount - 1 ? 'btn-secondary' : (step === stepCount - 1 && !finished ? 'btn border-b-4 border-success-text bg-success text-[#052E1C] hover:bg-success-300' : 'btn-primary')"><span x-text="primaryLabel">Continue</span></button>
+      </div>
+    </div>
   </main>
 
   {# ---------- Right rail ---------- #}

@@ -61,7 +61,7 @@ exam_open, review_note. Works without JavaScript: answers and hint requests are 
       {% else %}
         <label class="block cursor-pointer">
           <input type="radio" name="choice" value="{{ choice.pk }}" class="peer sr-only" x-model="picked" required>
-          <span class="flex min-h-[72px] items-center gap-4 rounded-card border-[1.5px] border-surface-border bg-white px-5 transition hover:border-primary-300 peer-checked:border-2 peer-checked:border-primary peer-checked:bg-primary-50 peer-focus-visible:ring-4 peer-focus-visible:ring-primary-300 [&_.badge]:border-slate-300 peer-checked:[&_.badge]:border-primary peer-checked:[&_.badge]:bg-primary peer-checked:[&_.badge]:text-white">
+          <span class="flex min-h-[72px] items-center gap-4 rounded-card border-2 border-b-4 border-surface-border bg-white px-5 transition hover:border-primary-300 active:translate-y-[2px] peer-checked:border-primary peer-checked:bg-primary-50 peer-focus-visible:ring-4 peer-focus-visible:ring-primary-300 [&_.badge]:border-slate-300 peer-checked:[&_.badge]:border-primary peer-checked:[&_.badge]:bg-primary peer-checked:[&_.badge]:text-white">
             <span class="badge flex h-9 w-9 items-center justify-center rounded-[10px] border-[1.5px] font-bold text-slate-600">{{ letter }}</span>
             <span class="flex-1 font-math text-2xl">{{ choice.text|inline }}</span>
           </span>
@@ -102,10 +102,11 @@ exam_open, review_note. Works without JavaScript: answers and hint requests are 
   {% if answer and show_feedback %}
   <section class="mt-6 rounded-panel border p-6 nav:p-8 {% if answer.is_correct %}border-success-200 bg-success-50{% else %}border-warning-200 bg-warning-50{% endif %}" role="status" aria-live="polite">
     <div class="flex items-start gap-4">
-      <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-white {% if answer.is_correct %}bg-success-text{% else %}bg-warning-text{% endif %}">{% if answer.is_correct %}{% include "components/icon.html" with name="check" class="h-6 w-6" stroke="3" %}{% else %}{% include "components/icon.html" with name="refresh" class="h-6 w-6" stroke="2.5" %}{% endif %}</span>
+      {% if answer.is_correct %}{% include "components/mascot.html" with size="72" mood="cheer" %}{% else %}{% include "components/mascot.html" with size="72" mood="happy" %}{% endif %}
       <div>
         <h2 class="text-xl font-bold {% if answer.is_correct %}text-success-text{% else %}text-warning-text{% endif %}">{% if answer.lucky_guess %}Correct — good instinct.{% elif answer.is_correct %}Correct — nicely done.{% else %}Not quite — here’s how to get there.{% endif %}</h2>
         {% if answer.is_correct and question.feedback %}<p class="mt-1 text-[15px] text-emerald-900">{{ question.feedback|inline }}</p>{% elif not answer.is_correct and answer.choice.why_wrong %}<p class="mt-1 text-[15px] text-amber-900">{{ answer.choice.why_wrong|inline }}</p>{% endif %}
+        {% if answer.is_correct and question_points %}<span class="mt-2 inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-sm font-extrabold text-warning-text"><span aria-hidden="true">⭐</span>+{{ question_points }} points</span>{% endif %}
         {% if review_note %}<p class="mt-2 flex items-center gap-1.5 text-sm font-semibold {% if answer.is_correct %}text-success-text{% else %}text-warning-text{% endif %}">{% include "components/icon.html" with name="calendar" class="h-4 w-4" stroke="2" %}{{ review_note }}</p>{% endif %}
       </div>
     </div>
@@ -121,8 +122,8 @@ exam_open, review_note. Works without JavaScript: answers and hint requests are 
   </section>
   {% endif %}
 
-  <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
-    <nav aria-label="Questions" class="flex flex-wrap items-center gap-2">
+  <div class="fixed inset-x-0 bottom-0 z-40 flex items-center gap-3 border-t-2 border-surface-border bg-white px-3 pb-4 pt-3 nav:static nav:z-auto nav:mt-6 nav:flex-wrap nav:justify-between nav:gap-4 nav:border-0 nav:bg-transparent nav:p-0">
+    <nav aria-label="Questions" class="hidden flex-wrap items-center gap-2 nav:flex">
       {% for dot in dots %}
         {% if dot.n <= 5 or dot.state == "current" or forloop.last %}
         {% if forloop.last and forloop.counter > 6 %}<span class="text-sm text-ink-muted">…</span>{% endif %}
@@ -131,12 +132,12 @@ exam_open, review_note. Works without JavaScript: answers and hint requests are 
         {% endif %}
       {% endfor %}
     </nav>
-    <div class="flex flex-wrap items-center gap-2">
+    <div class="flex flex-1 items-center gap-2 nav:flex-none">
     {% if answer %}
-      {% if next_url %}<a href="{{ next_url }}" class="btn-primary h-14 px-8 text-lg">{% if exam_open %}Next question{% elif is_last %}See results{% else %}Continue{% endif %} {% include "components/icon.html" with name="arrow" class="h-5 w-5" stroke="2.2" %}</a>{% endif %}
+      {% if next_url %}<a href="{{ next_url }}" class="btn-primary h-14 flex-1 px-8 text-lg nav:flex-none">{% if exam_open %}Next question{% elif is_last %}See results{% else %}Continue{% endif %} {% include "components/icon.html" with name="arrow" class="h-5 w-5" stroke="2.2" %}</a>{% endif %}
     {% else %}
       {% if exam_open and next_url %}<a href="{{ next_url }}" class="btn h-14 px-5 text-slate-700 hover:bg-slate-100">Skip</a>{% endif %}
-      <button type="submit" :disabled="!picked" class="btn h-14 bg-primary px-8 text-lg text-white hover:bg-primary-700 disabled:cursor-not-allowed disabled:bg-surface-border disabled:text-ink-muted">{% if exam_open %}Save answer{% else %}Check answer{% endif %}</button>
+      <button type="submit" :disabled="!picked" class="btn-primary h-14 flex-1 px-8 text-lg disabled:cursor-not-allowed disabled:border-surface-border disabled:bg-surface-border disabled:text-ink-muted nav:flex-none">{% if exam_open %}Save answer{% else %}Check answer{% endif %}</button>
     {% endif %}
     </div>
   </div>

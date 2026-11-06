@@ -213,3 +213,18 @@ class PrivateLink(models.Model):
             return None
         cls.objects.filter(pk=link.pk).update(last_used_at=timezone.now())
         return link
+
+
+class Achievement(models.Model):
+    """A milestone a student has earned. The catalogue lives in `apps.learning.achievements`."""
+
+    user = models.ForeignKey(USER, on_delete=models.CASCADE, related_name="achievements")
+    code = models.CharField(max_length=40)
+    earned_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["earned_at"]
+        constraints = [models.UniqueConstraint(fields=["user", "code"], name="one_achievement_per_student")]
+
+    def __str__(self):
+        return f"{self.user} · {self.code}"

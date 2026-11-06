@@ -145,3 +145,24 @@ def test_curve_label_moves_to_the_corner_the_curve_avoids():
     assert falling["label_anchor"] == "end"
     parabola = polynomial_plot({"coeffs": [1, -5, 6], "xmin": 0, "xmax": 5.5, "ymin": -1, "ymax": 6.5})
     assert parabola["label_anchor"] in ("start", "end")
+
+
+def test_reading_lesson_offers_cards_mode_and_keeps_full_page_content(client, django_user_model, course, lesson):
+    """Cards mode is progressive enhancement: the whole lesson is still in the HTML, plus the card controls."""
+    lesson.status = "published"
+    lesson.save()
+    user = django_user_model.objects.create_user(email="cards@example.com", password="pw-Strong-123")
+    client.force_login(user)
+    html = client.get(lesson.get_absolute_url()).content.decode()
+    assert 'id="lesson-body" data-cards' in html
+    assert 'id="card-progress"' in html and "primaryLabel" in html
+    assert html.count("data-cards-end") == 2 or html.count("data-cards-end") == 3  # complete card, nav (+ practice link)
+
+
+def test_course_page_is_encouraging_and_subject_tiles_are_solid(client, django_user_model, course, lesson):
+    lesson.status = "published"
+    lesson.save()
+    user = django_user_model.objects.create_user(email="tiles@example.com", password="pw-Strong-123")
+    client.force_login(user)
+    html = client.get(course.get_absolute_url()).content.decode()
+    assert "Ready when you are!" in html and "tile-" in html and "+10" in html

@@ -15,6 +15,7 @@ from django.utils import timezone
 from django.views.decorators.http import require_POST
 
 from apps.courses.models import Lesson
+from apps.learning import achievements
 from apps.learning.models import Enrollment
 
 from .mastery import LEVELS, NOT_STARTED, mastery_for_topic, topic_mastery
@@ -226,6 +227,7 @@ def question(request, attempt, number):
         "show_feedback": show_feedback, "hint_open": q.pk in attempt.hints_used,
         "exam_open": exam_open, "seconds_left": attempt.seconds_left() if exam_open else None,
         "unanswered_count": len(questions) - len(answers),
+        "question_points": achievements.POINTS_PER_CORRECT_ANSWER,
         "review_note": "This one comes back in Review my mistakes tomorrow."
         if answer and (not answer.is_correct or answer.lucky_guess) else "",
         **_feedback_context(q, answer),
@@ -287,6 +289,9 @@ def finish(request, attempt):
     rows = [{"question": q, "answer": by_question.get(q.pk)} for q in attempt.practice_set.questions.all()]
     practice_set = attempt.practice_set
     return render(request, "practice/results.html", {
+        "new_milestones": achievements.describe(request, achievements.award(request.user)),
+        "points_earned": attempt.correct_count * achievements.POINTS_PER_CORRECT_ANSWER,
+        "momentum": achievements.today_strip(request.user),
         "attempt": attempt, "practice_set": practice_set, "rows": rows, "nav_active": "practice",
         "topic_breakdown": _topic_breakdown(request, practice_set, rows) if practice_set.is_mock else None,
         "next_lesson": None if practice_set.is_mock else _lesson_after(request, practice_set),

@@ -3,16 +3,19 @@
 {% block content %}
 <div class="flex flex-col gap-6 nav:mt-2">
   <div class="flex flex-wrap items-end justify-between gap-4">
-    <div>
-      <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">My Subjects</h1>
-      <p class="mt-1 text-base text-ink-muted">{{ profile.class_label|default:"Your plan" }} · {{ rows|length }} subject{{ rows|length|pluralize }} in your plan</p>
+    <div class="flex items-center gap-3">
+      {% include "components/mascot.html" with size="64" mood="happy" %}
+      <div>
+        <h1 class="text-[26px] font-black tracking-[-.01em] text-navy nav:text-[34px]">My Subjects</h1>
+        <p class="mt-1 text-base font-semibold text-ink-muted">{{ profile.class_label|default:"Your plan" }} · {{ rows|length }} subject{{ rows|length|pluralize }} in your plan</p>
+      </div>
     </div>
     <a href="{% url 'courses:catalog' %}" class="btn-secondary">{% include "components/icon.html" with name="plus" class="h-[18px] w-[18px]" stroke="2" %}Add a subject</a>
   </div>
   {% if rows %}
   <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
     {% for row in rows %}
-    <article class="relative flex flex-col gap-4 rounded-card border border-surface-border bg-white p-5 transition hover:border-primary-300 hover:shadow-raised">
+    <article class="relative flex flex-col gap-4 rounded-card border-2 border-b-4 border-surface-border bg-white p-5 transition hover:-translate-y-0.5 hover:border-primary-300">
       <div class="flex items-center gap-3.5">
         {% include "components/subject_icon.html" with subject=row.subject %}
         <div class="min-w-0 flex-1">

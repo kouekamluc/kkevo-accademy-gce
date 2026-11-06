@@ -50,10 +50,13 @@ and may set `back_url`. Context: step, steps, total_steps.
         {% block top_right %}{% endblock %}
       </div>
       <div class="mt-3 grid grid-cols-5 gap-1.5" role="progressbar" aria-valuemin="1" aria-valuemax="{{ total_steps }}" aria-valuenow="{{ step }}" aria-label="Onboarding progress">
-        {% for name in steps %}<span class="h-1.5 rounded-full {% if forloop.counter < step %}bg-success{% elif forloop.counter == step %}bg-primary{% else %}bg-surface-border{% endif %}"></span>{% endfor %}
+        {% for name in steps %}<span class="h-3 rounded-full {% if forloop.counter < step %}bg-success{% elif forloop.counter == step %}bg-primary{% else %}bg-surface-border{% endif %}"></span>{% endfor %}
       </div>
 
       {% include "components/messages.html" %}
+
+      {# Kiki guides each step #}
+      {% block kiki %}{% endblock %}
 
       {% block form_open %}<form method="post" novalidate class="contents">{% csrf_token %}{% endblock %}
         <div class="mt-6 rounded-panel bg-white nav:mt-7 nav:border nav:border-surface-border nav:p-9 nav:shadow-card">

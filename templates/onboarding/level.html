@@ -1,5 +1,11 @@
 {% extends "layouts/onboarding.html" %}
 {% block title %}Which class are you in? — KKEVO Academy{% endblock %}
+{% block kiki %}
+<div class="mt-5 flex items-center gap-3">
+  {% include "components/mascot.html" with size="64" mood="happy" %}
+  <p class="relative rounded-2xl border-2 border-surface-border bg-white px-4 py-3 text-[15px] font-bold text-navy before:absolute before:-left-2 before:top-1/2 before:h-3 before:w-3 before:-translate-y-1/2 before:rotate-45 before:border-b-2 before:border-l-2 before:border-surface-border before:bg-white">Hi, I’m Kiki, your study buddy! Let’s get you started.</p>
+</div>
+{% endblock %}
 {% block card %}
 <h2 class="text-[26px] font-bold tracking-[-.02em] text-navy">Which class are you in?</h2>
 <p class="mb-6 mt-2 text-base text-ink-muted">You can change this later in Settings.</p>
@@ -8,7 +14,7 @@
   {% for level in levels %}
   <label class="block cursor-pointer">
     <input type="radio" name="level" value="{{ level.pk }}" class="peer sr-only" {% if level.pk|stringformat:"s" == selected|stringformat:"s" %}checked{% endif %}>
-    <span class="group flex min-h-[84px] w-full items-center gap-4 rounded-card border-[1.5px] border-surface-border bg-white px-[18px] py-4 transition peer-checked:border-2 peer-checked:border-primary peer-checked:bg-primary-50 peer-focus-visible:ring-4 peer-focus-visible:ring-primary-300 hover:border-primary-300
+    <span class="group flex min-h-[84px] w-full items-center gap-4 rounded-card border-2 border-b-4 border-surface-border active:translate-y-[2px] bg-white px-[18px] py-4 transition peer-checked:border-2 peer-checked:border-primary peer-checked:bg-primary-50 peer-focus-visible:ring-4 peer-focus-visible:ring-primary-300 hover:border-primary-300
                  [&_.badge]:bg-slate-100 [&_.badge]:text-navy peer-checked:[&_.badge]:bg-primary peer-checked:[&_.badge]:text-white
                  peer-checked:[&_.radio]:border-primary peer-checked:[&_.dot]:bg-primary">
       <span class="badge flex h-[52px] w-[52px] flex-none items-center justify-center rounded-xl text-base font-bold">{{ level.code }}</span>

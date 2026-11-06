@@ -1,0 +1,21 @@
+{% comment %}After a lesson or a quiz: milestones just earned, then today's goal and streak. Needs `momentum` (and optional `new_milestones`).{% endcomment %}
+{% if new_milestones %}
+<ul class="flex flex-col gap-3" aria-label="New milestones">
+  {% for m in new_milestones %}
+  <li class="flex flex-wrap items-center gap-3 rounded-2xl border border-warning-200 bg-warning-50 p-4" role="status">
+    <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-warning text-white">{% include "components/icon.html" with name="star" class="h-5 w-5" %}</span>
+    <div class="min-w-0 flex-1"><div class="font-bold text-warning-text">New milestone: {{ m.title }}</div><div class="text-sm text-slate-700">{{ m.description }}</div></div>
+    <a href="{{ m.share_url }}" target="_blank" rel="noopener" class="text-sm font-semibold">Share on WhatsApp</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% if momentum %}
+<div class="flex flex-wrap items-center gap-x-5 gap-y-2 rounded-2xl border border-surface-border bg-white px-4 py-3 text-[15px]">
+  <div class="flex min-w-[180px] flex-1 items-center gap-3">
+    <div class="progress-track h-2 flex-1"><div class="progress-fill" style="width: {{ momentum.percent }}%"></div></div>
+    <span class="whitespace-nowrap text-slate-700">{% if momentum.reached %}<strong class="text-success-text">Daily goal reached</strong>{% else %}<strong>{{ momentum.minutes }}</strong> of {{ momentum.goal }} min today{% endif %}</span>
+  </div>
+  {% if momentum.streak %}<span class="whitespace-nowrap text-slate-700"><strong>{{ momentum.streak }}-day</strong> streak</span>{% endif %}
+</div>
+{% endif %}

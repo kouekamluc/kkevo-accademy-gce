@@ -3,9 +3,12 @@
 {% block content %}
 <div class="flex flex-col gap-6 nav:mt-2">
   <div class="flex flex-wrap items-end justify-between gap-4">
-    <div>
-      <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">My Progress</h1>
-      <p class="mt-1 text-base text-ink-muted">How your understanding is growing, and where to focus next.</p>
+    <div class="flex items-center gap-3">
+      {% include "components/mascot.html" with size="64" mood="happy" %}
+      <div>
+        <h1 class="text-[26px] font-black tracking-[-.01em] text-navy nav:text-[34px]">My Progress</h1>
+        <p class="mt-1 text-base font-semibold text-ink-muted">How your understanding is growing, and where to focus next.</p>
+      </div>
     </div>
     <div class="flex flex-wrap items-center gap-3">
     <a href="{% url 'learning:weekly' %}" class="btn-secondary h-11">{% include "components/icon.html" with name="calendar" class="h-[18px] w-[18px]" stroke="2" %}Weekly summary</a>
@@ -15,15 +18,46 @@
     </div>
   </div>
 
+  {# ---------- Level hero ---------- #}
+  <section class="flex flex-col gap-5 rounded-panel bg-navy p-6 text-white nav:flex-row nav:items-center nav:gap-8 nav:p-8" aria-label="Your level">
+    <div class="flex items-center gap-4">
+      {% include "components/mascot.html" with size="96" mood="cheer" %}
+      <div><div class="text-sm font-extrabold uppercase tracking-[.06em] text-success-300">Your level</div><div class="text-[44px] font-black leading-none">Level {{ rank.level }}</div></div>
+    </div>
+    <div class="min-w-0 flex-1">
+      <div class="text-[15px] font-extrabold"><span aria-hidden="true">⭐</span> {{ rank.points }} points</div>
+      <div class="mt-2 h-4 overflow-hidden rounded-full bg-navy-700" role="progressbar" aria-valuenow="{{ rank.percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="Progress to level {{ rank.level|add:1 }}"><div class="h-full rounded-full bg-success" style="width: {{ rank.percent }}%; box-shadow: inset 0 -3px 0 rgba(0,0,0,.15)"></div></div>
+      <p class="mt-2 text-sm font-semibold text-slate-300">{{ rank.to_next }} more point{{ rank.to_next|pluralize }} to reach level {{ rank.level|add:1 }}. Finish a lesson for 10, or answer a question right for 2.</p>
+    </div>
+    <div class="flex flex-wrap gap-2.5 nav:flex-col">
+      <span class="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-navy-700 px-4 text-[15px] font-extrabold"><span aria-hidden="true">🔥</span>{{ streak }}-day streak</span>
+      <span class="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-navy-700 px-4 text-[15px] font-extrabold"><span aria-hidden="true">🏅</span>{{ milestones_earned }} of {{ milestones|length }} milestones</span>
+    </div>
+  </section>
+
+  <section class="card p-6 nav:p-8" aria-labelledby="ms-heading">
+    <h2 id="ms-heading" class="text-xl font-bold">Milestones</h2>
+    <ul class="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      {% for m in milestones %}
+      <li class="rounded-xl border p-4 {% if m.earned_at %}border-warning-200 bg-warning-50{% else %}border-surface-border bg-white{% endif %}">
+        <div class="font-semibold {% if m.earned_at %}text-warning-text{% else %}text-ink-heading{% endif %}">{{ m.milestone.title }}{% if m.earned_at %} <span class="sr-only">(earned)</span>{% endif %}</div>
+        <div class="mt-0.5 text-sm text-slate-600">{{ m.milestone.description }}</div>
+        {% if m.earned_at %}<div class="mt-2 text-xs text-ink-muted">Earned {{ m.earned_at|date:"j M Y" }}</div>
+        {% else %}<div class="mt-2 flex items-center gap-2"><div class="progress-track h-1.5 flex-1"><div class="progress-fill" style="width: {{ m.percent }}%"></div></div><span class="text-xs text-ink-muted">{{ m.have }}/{{ m.target }}</span></div>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
   <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
     <div class="card flex items-center gap-5 p-6">
-      <div class="relative h-[88px] w-[88px] shrink-0 rounded-full" style="background: conic-gradient(#10B981 0 {{ overall }}%, #E2E8F0 {{ overall }}% 100%)" role="img" aria-label="{{ overall }}% complete"><div class="absolute inset-[11px] flex items-center justify-center rounded-full bg-white text-xl font-bold">{{ overall }}%</div></div>
+      <div class="relative h-[88px] w-[88px] shrink-0 rounded-full" style="background: conic-gradient(#1FBF75 0 {{ overall }}%, #E2E8F0 {{ overall }}% 100%)" role="img" aria-label="{{ overall }}% complete"><div class="absolute inset-[11px] flex items-center justify-center rounded-full bg-white text-xl font-bold">{{ overall }}%</div></div>
       <div><div class="text-[15px] text-ink-muted">Overall completion</div>{% if gained %}<div class="mt-1 font-semibold text-success-text">+{{ gained }}% this period</div>{% endif %}</div>
     </div>
-    <div class="card p-6"><div class="text-[15px] text-ink-muted">Lessons completed</div><div class="mt-1 text-[34px] font-bold leading-tight">{{ done }}</div><div class="text-sm text-ink-muted">of {{ total }} in your plan</div></div>
-    <div class="card p-6"><div class="text-[15px] text-ink-muted">Average quiz score</div><div class="mt-1 text-[34px] font-bold leading-tight">{% if avg_now is not None %}{{ avg_now }}%{% else %}—{% endif %}</div>
+    <div class="card p-6"><div class="text-[15px] text-ink-muted">Lessons completed</div><div class="mt-1 text-[34px] font-black leading-tight">{{ done }}</div><div class="text-sm text-ink-muted">of {{ total }} in your plan</div></div>
+    <div class="card p-6"><div class="text-[15px] text-ink-muted">Average quiz score</div><div class="mt-1 text-[34px] font-black leading-tight">{% if avg_now is not None %}{{ avg_now }}%{% else %}—{% endif %}</div>
       <div class="text-sm font-semibold {% if avg_delta is not None and avg_delta >= 0 %}text-success-text{% else %}text-warning-text{% endif %}">{% if avg_delta is not None %}{% if avg_delta >= 0 %}+{% endif %}{{ avg_delta }} points vs previous period{% elif avg_now is None %}<span class="font-normal text-ink-muted">No quizzes in this period</span>{% endif %}</div></div>
-    <div class="card p-6"><div class="text-[15px] text-ink-muted">Learning time</div><div class="mt-1 text-[34px] font-bold leading-tight">{{ learning_time }}</div><div class="text-sm text-ink-muted">≈ {{ per_day }} min per day</div></div>
+    <div class="card p-6"><div class="text-[15px] text-ink-muted">Learning time</div><div class="mt-1 text-[34px] font-black leading-tight">{{ learning_time }}</div><div class="text-sm text-ink-muted">≈ {{ per_day }} min per day</div></div>
   </div>
 
   <div class="grid gap-6 xl:grid-cols-[1fr_400px]">
@@ -70,8 +104,8 @@
       {% if quiz_line %}
       <svg viewBox="0 0 {{ quiz_line.width }} {{ quiz_line.height }}" class="mt-4 h-auto w-full" role="img" aria-label="Scores of your last quizzes">
         <line x1="0" x2="{{ quiz_line.width }}" y1="5" y2="5" stroke="#F1F5F9"/><line x1="0" x2="{{ quiz_line.width }}" y1="45" y2="45" stroke="#F1F5F9"/><line x1="0" x2="{{ quiz_line.width }}" y1="85" y2="85" stroke="#F1F5F9"/>
-        <polyline points="{{ quiz_line.points }}" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linejoin="round"/>
-        <circle cx="{{ quiz_line.last.0 }}" cy="{{ quiz_line.last.1 }}" r="5" fill="#2563EB"/>
+        <polyline points="{{ quiz_line.points }}" fill="none" stroke="#5B3FE4" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="{{ quiz_line.last.0 }}" cy="{{ quiz_line.last.1 }}" r="5" fill="#5B3FE4"/>
       </svg>
       <div class="mt-1 flex justify-between text-sm text-ink-muted"><span>Earlier quizzes</span><span>Latest · {{ latest_score }}%</span></div>
       {% endif %}

@@ -95,3 +95,17 @@ def test_draft_sets_hidden_and_index_lists_plan(client, student, practice_set, o
     practice_set.status = "draft"
     practice_set.save()
     assert client.get(reverse("practice:set", args=[practice_set.pk])).status_code == 404
+
+
+def test_game_style_feedback_and_results(client, student, practice_set):
+    """A correct answer earns points on screen, and the results page shows stars, Kiki and points."""
+    client.force_login(student)
+    client.post(reverse("practice:start", args=[practice_set.pk]))
+    attempt = Attempt.objects.get(user=student)
+    answer(client, attempt, 1, True)
+    page = client.get(reverse("practice:question", args=[attempt.pk, 1])).content.decode()
+    assert "+2 points" in page and "Kiki" in page
+    answer(client, attempt, 2, True)
+    answer(client, attempt, 3, True)
+    results = client.get(reverse("practice:finish", args=[attempt.pk])).content.decode()
+    assert "3 of 3 stars" in results and "+6 points" in results and "100%" in results

@@ -1,9 +1,9 @@
 {# Explore card (mockup 08): column card on desktop, compact row on phones. #}
 {% with subject=card.subject course=card.course stat=card.stat %}
-<article class="relative flex gap-4 rounded-2xl border border-surface-border bg-white p-4 transition hover:border-primary-300 hover:shadow-raised sm:flex-col sm:gap-3 sm:p-7">
+<article class="relative flex gap-4 rounded-card border-2 border-b-4 border-surface-border bg-white p-4 transition hover:-translate-y-0.5 hover:border-primary-300 sm:flex-col sm:gap-3 sm:p-7">
   <div class="flex items-start justify-between">
     {% include "components/subject_icon.html" with subject=subject size="lg" %}
-    <span class="hidden rounded-md px-2 py-0.5 text-xs font-semibold sm:inline {% if card.in_plan %}bg-success-50 text-success-text{% else %}bg-slate-100 text-slate-700{% endif %}">
+    <span class="hidden rounded-full px-3 py-1 text-xs font-extrabold sm:inline {% if card.in_plan %}bg-success-50 text-success-text{% else %}bg-slate-100 text-slate-700{% endif %}">
       {% if card.in_plan %}In your plan{% else %}{{ card.pathway_badge }}{% endif %}
     </span>
   </div>

@@ -4,9 +4,9 @@
 {% block form_open %}{% endblock %}{% block form_close %}{% endblock %}
 {% block card %}
 <div class="py-2 text-center">
-  <div class="mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-full bg-success-50 text-success-text">{% include "components/icon.html" with name="check" class="h-9 w-9" stroke="2.5" %}</div>
+  <div class="flex justify-center">{% include "components/mascot.html" with size="132" mood="cheer" %}</div>
   <h2 class="mt-5 text-[28px] font-bold tracking-[-.02em] text-navy">You’re all set, {{ user.first_name|default:user.display_name }}!</h2>
-  <p class="mt-2 text-base text-ink-muted">Your dashboard is ready with {{ enrollments|length }} subject{{ enrollments|length|pluralize }}.</p>
+  <p class="mt-2 text-base text-ink-muted">Kiki is cheering! Your dashboard is ready with {{ enrollments|length }} subject{{ enrollments|length|pluralize }}.</p>
 </div>
 <dl class="mt-6 grid grid-cols-[auto_1fr] gap-x-5 gap-y-2.5 rounded-card border border-surface-border bg-surface-bg px-5 py-[18px] text-[15px]">
   <dt class="text-ink-muted">Class</dt><dd class="font-bold">{{ profile.level.name }}</dd>

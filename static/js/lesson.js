@@ -74,7 +74,22 @@
   }
 
   window.lessonPlayer = function (opts) {
+    // DOM elements stay out of Alpine's reactive state (proxying them breaks), so the card groups live here.
+    var groups = [];
+    var MAX_PER_CARD = 4;
+    function isCheck(el) { return el.hasAttribute("x-data") && /^quickCheck/.test(el.getAttribute("x-data")); }
+    function chunk(list) {
+      if (list.length <= MAX_PER_CARD) return [list];
+      var out = [], i;
+      for (i = 0; i < list.length; i += 3) out.push(list.slice(i, i + 3));
+      return out;
+    }
     return {
+      /* ---- Cards mode: a reading lesson as short cards, one at a time (progressive enhancement:
+       * without JavaScript, or in "Full page" mode, the whole lesson is simply shown). ---- */
+      cardsAvailable: false, cardsOn: false, step: 0, stepCount: 0, stepTitle: "", stepHasCheck: false,
+      stepSolved: false, finished: !!opts.completed,
+      cardPref: (function () { try { return localStorage.getItem("lessonCards") || "auto"; } catch (e) { return "auto"; } })(),
       percent: opts.percent || 0,
       position: "",
       activeSince: Date.now(),
@@ -84,8 +99,102 @@
       notesOpen: false,
       helpOpen: false,
       textSize: (function () { try { return localStorage.getItem("lessonTextSize") || "md"; } catch (e) { return "md"; } })(),
+      initCards: function () {
+        var body = document.getElementById("lesson-body");
+        if (!body || !body.hasAttribute("data-cards")) return;
+        var self = this, cur = [], steps = [], objectives = document.getElementById("objectives");
+        if (objectives) steps.push([objectives]);
+        Array.prototype.forEach.call(body.children, function (el) {
+          if (isCheck(el)) {
+            if (cur.length === 1 && cur[0].tagName === "H2") { steps.push([cur[0], el]); }
+            else { if (cur.length) steps.push(cur); steps.push([el]); }
+            cur = [];
+            return;
+          }
+          if (el.tagName === "H2" && cur.length) { steps.push(cur); cur = []; }
+          cur.push(el);
+        });
+        if (cur.length) steps.push(cur);
+        groups = [];
+        steps.forEach(function (g) { chunk(g).forEach(function (c) { groups.push(c); }); });
+        this.stepCount = groups.length;
+        if (groups.length < 2) return;
+        this.cardsAvailable = true;
+        window.addEventListener("beforeprint", function () { if (self.cardsOn) self.showAll(); });
+        window.addEventListener("afterprint", function () { if (self.cardsOn) self.showStep(self.step, true); });
+        document.body.addEventListener("htmx:afterSwap", function (e) {
+          if (e.target && e.target.id === "complete-card" && self.cardsOn) { self.finished = true; self.refreshEnd(); }
+        });
+        document.addEventListener("click", function (e) {
+          var a = self.cardsOn && e.target.closest && e.target.closest('a[href^="#"]');
+          if (a && self.goToAnchor(a.getAttribute("href").slice(1))) e.preventDefault();
+        });
+        var phone = window.matchMedia("(max-width: 899px)").matches;
+        if (this.cardPref === "on" || (this.cardPref === "auto" && phone)) this.setCards(true);
+      },
+      setCards: function (on) {
+        this.cardsOn = on;
+        if (on) { this.showStep(this.step, true); } else { this.showAll(); }
+      },
+      toggleCards: function () {
+        this.cardPref = this.cardsOn ? "off" : "on";
+        try { localStorage.setItem("lessonCards", this.cardPref); } catch (e) {}
+        this.setCards(!this.cardsOn);
+      },
+      showAll: function () {
+        groups.forEach(function (g) { g.forEach(function (el) { el.classList.remove("card-hidden"); }); });
+        document.querySelectorAll("[data-cards-end]").forEach(function (el) { el.classList.remove("card-hidden"); });
+      },
+      refreshEnd: function () {
+        var last = this.step === groups.length - 1;
+        document.querySelectorAll("[data-cards-end]").forEach(function (el) { el.classList.toggle("card-hidden", !last); });
+      },
+      showStep: function (i, quiet) {
+        i = Math.max(0, Math.min(i, groups.length - 1));
+        this.step = i;
+        groups.forEach(function (g, idx) { g.forEach(function (el) { el.classList.toggle("card-hidden", idx !== i); }); });
+        var group = groups[i], heading = null;
+        group.forEach(function (el) { if (!heading && el.tagName === "H2") heading = el; });
+        this.stepTitle = heading ? heading.textContent.trim() : (group[0].id === "objectives" ? "Your goals" : "");
+        this.stepHasCheck = group.some(isCheck);
+        this.stepSolved = false;
+        this.refreshEnd();
+        var pct = Math.round(((i + 1) / groups.length) * 100);
+        if (pct > this.percent) this.percent = pct;
+        if (heading) { this.position = heading.dataset.toc || this.stepTitle; this.activeAnchor = heading.id; }
+        if (!quiet) {
+          this.moved = true;
+          var bar = document.getElementById("card-progress");
+          window.scrollTo({ top: Math.max(0, (bar ? bar.getBoundingClientRect().top + window.scrollY : 0) - 64), behavior: "smooth" });
+        }
+        if (window.renderLessonMaths) window.renderLessonMaths(document.getElementById("lesson-body"));
+      },
+      goToAnchor: function (id) {
+        var el = document.getElementById(id), found = -1;
+        if (!el) return false;
+        groups.forEach(function (g, idx) { if (found < 0 && g.some(function (x) { return x === el || x.contains(el); })) found = idx; });
+        if (found < 0) return false;
+        this.showStep(found);
+        return true;
+      },
+      get primaryLabel() {
+        if (this.step < groups.length - 1) return this.stepHasCheck && !this.stepSolved ? "Skip" : "Continue";
+        if (!this.finished) return "Finish lesson";
+        return opts.nextUrl ? "Next lesson" : "Back to course";
+      },
+      next: function () {
+        if (this.step < groups.length - 1) { this.showStep(this.step + 1); return; }
+        if (!this.finished) {
+          var btn = document.querySelector("#complete-card form button[type=submit]");
+          if (btn) btn.click();
+          return;
+        }
+        window.location.href = opts.nextUrl || opts.courseUrl || "/";
+      },
+      prev: function () { if (this.step > 0) this.showStep(this.step - 1); },
       init: function () {
         var self = this;
+        this.initCards();
         this.onScroll();
         window.addEventListener("scroll", function () { self.moved = true; self.onScroll(); }, { passive: true });
         document.addEventListener("visibilitychange", function () {
@@ -104,7 +213,9 @@
       continueReading: function () {
         if (!this.resume) return;
         var el = document.getElementById(this.resume.anchor);
+        var anchor = this.resume.anchor;
         this.resume = null;
+        if (this.cardsOn) { this.goToAnchor(anchor); this.moved = true; return; }
         if (!el) return;
         el.scrollIntoView({ block: "start" });
         if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "-1");
@@ -126,6 +237,11 @@
       onKey: function (e) {
         if (e.key === "Escape") { this.notesOpen = false; this.helpOpen = false; return; }
         if (e.ctrlKey || e.metaKey || e.altKey || isTyping(e)) return;
+        if (this.cardsOn && (e.key === "ArrowRight" || e.key === "ArrowLeft")) {
+          e.preventDefault();
+          if (e.key === "ArrowRight") { this.next(); } else { this.prev(); }
+          return;
+        }
         var go = function (url) { if (url) window.location.href = url; };
         var actions = {
           j: function () { this.jumpSection(1); },
@@ -222,10 +338,11 @@
         if (this.picked === null) return;
         if (!this.checked && this.picked !== this.correct) this.wrongTries += 1;
         this.checked = true;
+        if (this.solved) this.$dispatch("quick-solved");
       },
       get solved() { return this.checked && this.picked === this.correct; },
       get canReveal() { return this.wrongTries >= 2 && !this.solved; },
-      reveal: function () { this.revealed = true; this.picked = this.correct; this.checked = true; },
+      reveal: function () { this.revealed = true; this.picked = this.correct; this.checked = true; this.$dispatch("quick-solved"); },
       state: function (i) {
         if (this.picked !== i) return "idle";
         if (!this.checked) return "picked";

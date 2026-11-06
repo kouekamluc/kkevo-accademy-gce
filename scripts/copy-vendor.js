@@ -19,12 +19,12 @@ for (const f of fs.readdirSync(path.join(katexDist, "fonts")).filter((f) => f.en
   fs.copyFileSync(path.join(katexDist, "fonts", f), path.join(katexOut, "fonts", f));
 }
 console.log("copied katex");
-// Fonts, self-hosted (no Google Fonts request): Inter as one variable file for all weights,
+// Fonts, self-hosted (no Google Fonts request): Nunito (rounded, friendly) as one variable file for all weights,
 // STIX Two Text (maths glyphs) in Latin + Greek. Latin subsets only, to keep downloads small.
 const fontsOut = path.join(out, "fonts");
 fs.mkdirSync(fontsOut, { recursive: true });
 const fontFiles = {
-  "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2": "inter-latin-wght-normal.woff2",
+  "@fontsource-variable/nunito/files/nunito-latin-wght-normal.woff2": "nunito-latin-wght-normal.woff2",
   "@fontsource-variable/stix-two-text/files/stix-two-text-latin-wght-normal.woff2": "stix-two-text-latin-wght-normal.woff2",
   "@fontsource-variable/stix-two-text/files/stix-two-text-latin-wght-italic.woff2": "stix-two-text-latin-wght-italic.woff2",
   "@fontsource-variable/stix-two-text/files/stix-two-text-greek-wght-normal.woff2": "stix-two-text-greek-wght-normal.woff2",

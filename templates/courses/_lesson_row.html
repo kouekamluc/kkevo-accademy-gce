@@ -18,8 +18,9 @@
     {% endif %}
   </span>
   <span class="hidden text-[13px] text-ink-muted sm:inline">{{ lesson.type_label }}</span>
+  {% if state != 'done' %}<span class="hidden whitespace-nowrap text-[13px] font-extrabold text-warning-text sm:inline"><span aria-hidden="true">⭐</span> +10</span>{% endif %}
   {% if state == 'current' %}
-    <span class="hidden h-9 items-center rounded-lg bg-primary px-3.5 text-sm font-semibold text-white sm:flex">Continue</span>
+    <span class="hidden h-9 items-center rounded-btn border-b-4 border-primary-700 bg-primary px-4 text-sm font-extrabold text-white sm:flex">Continue</span>
     <span class="text-primary sm:hidden">{% include "components/icon.html" with name="chevron-right" class="h-5 w-5" stroke="2.2" %}</span>
   {% else %}
     <span class="hidden w-[84px] text-right text-sm font-semibold text-primary sm:inline">{% if state == 'done' %}Review{% else %}Start{% endif %}</span>

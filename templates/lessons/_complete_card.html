@@ -1,11 +1,14 @@
 {% if progress.is_completed %}
+<div class="flex flex-col gap-3">
+{% include "learning/_momentum.html" %}
 <div class="flex flex-col gap-4 rounded-2xl bg-success-50 p-6 sm:flex-row sm:items-center sm:justify-between" role="status">
   <div class="flex items-center gap-3">
-    <span class="flex h-10 w-10 items-center justify-center rounded-full bg-success text-white">{% include "components/icon.html" with name="check" class="h-5 w-5" stroke="2.6" %}</span>
-    <div><div class="font-bold text-success-text">Lesson complete</div><div class="text-sm text-slate-600">Your progress has been saved.</div></div>
+    {% include "components/mascot.html" with size="64" mood="cheer" %}
+    <div><div class="text-xl font-black text-success-text">Lesson complete! +10 points</div><div class="text-sm font-semibold text-slate-600">Nice work. Your progress is saved.</div></div>
   </div>
   {% if next_lesson %}<a href="{{ next_lesson.get_absolute_url }}" class="btn-primary">Next: {{ next_lesson.title|truncatechars:34 }} {% include "components/icon.html" with name="arrow" class="h-4 w-4" stroke="2.2" %}</a>
   {% else %}<a href="{{ course.get_absolute_url }}" class="btn-primary">Back to course</a>{% endif %}
+</div>
 </div>
 {% else %}
 <div class="flex flex-col gap-4 rounded-2xl bg-navy p-6 text-white sm:flex-row sm:items-center sm:justify-between">

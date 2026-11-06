@@ -11,7 +11,7 @@ def test_pages_use_no_third_party_hosts_or_unused_flowbite():
     html = Client().get("/").content.decode()
     assert "fonts.googleapis.com" not in html
     assert "flowbite" not in html
-    assert "vendor/fonts/inter-latin-wght-normal.woff2" in html
+    assert "vendor/fonts/nunito-latin-wght-normal.woff2" in html
 
 
 def test_measure_pages_reports_every_student_page(tmp_path):

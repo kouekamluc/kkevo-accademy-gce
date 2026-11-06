@@ -30,13 +30,17 @@ def lessons(course):
                                   estimated_minutes=20) for i in (1, 2, 3)]
 
 
-def test_empty_dashboard_shows_helpful_states(client, student):
+def test_new_student_sees_only_what_they_need(client, student):
+    """Before the first lesson there is one job: start. Empty charts and lists stay out of the way."""
     client.force_login(student)
     html = client.get(reverse("dashboard:home")).content.decode()
     assert "You haven’t started a lesson yet" in html
-    assert "Nothing planned for the next 7 days" in html
-    assert "Lessons you complete will appear here" in html
     assert "Dina!" in html
+    for clutter in ("Nothing planned for the next 7 days", "Lessons you complete will appear here",
+                    "Weekly learning activity", "Overall progress", "Recommended next", "Add your GCE exam date"):
+        assert clutter not in html
+    nav = client.get(reverse("dashboard:home")).context
+    assert [i["key"] for i in nav["sidebar_items"] if i["key"] in ("progress", "saved")] == []
 
 
 def test_dashboard_uses_real_progress(client, student, offering, lessons):
@@ -104,3 +108,55 @@ def test_recent_lessons_skip_courses_that_are_no_longer_published(client, django
     course.status = "draft"  # e.g. a retired demo course
     course.save()
     assert lesson.get_absolute_url() not in client.get("/dashboard/").content.decode()
+
+
+def test_started_student_gets_progress_and_saved_in_navigation(client, student, offering, lessons):
+    LessonProgress.objects.create(user=student, lesson=lessons[0], percent=30)
+    client.force_login(student)
+    keys = [i["key"] for i in client.get(reverse("dashboard:home")).context["sidebar_items"]]
+    assert "progress" in keys and "saved" in keys
+
+
+def test_exam_student_keeps_revision_visible_even_when_empty(client, student, offering, lessons):
+    Enrollment.objects.create(user=student, offering=offering)
+    LessonProgress.objects.create(user=student, lesson=lessons[0], percent=100, completed_at=timezone.now())
+    student.profile.exam_date = timezone.localdate() + timedelta(days=40)
+    student.profile.save()
+    client.force_login(student)
+    response = client.get(reverse("dashboard:home"))
+    assert response.context["show"]["mode"] == "exam"
+    assert "Upcoming revision" in response.content.decode()
+
+
+def test_student_away_for_a_week_gets_welcome_back_not_a_streak(client, student, offering, lessons):
+    LessonProgress.objects.create(user=student, lesson=lessons[0], percent=40)
+    DailyActivity.objects.create(user=student, date=timezone.localdate() - timedelta(days=10), seconds=600)
+    client.force_login(student)
+    response = client.get(reverse("dashboard:home"))
+    assert response.context["show"]["away"] and not response.context["show"]["streak"]
+    assert "Welcome back" in response.content.decode()
+
+
+def test_lower_sixth_student_is_not_treated_as_exam_year(client, student, offering, lessons):
+    from apps.academics.models import AcademicLevel
+
+    lower = AcademicLevel.objects.get(code="L6")  # seeded by migration; Upper Sixth follows it
+    student.profile.level, student.profile.exam_date = lower, timezone.localdate() + timedelta(days=30)
+    student.profile.save()
+    LessonProgress.objects.create(user=student, lesson=lessons[0], percent=100, completed_at=timezone.now())
+    client.force_login(student)
+    ctx = client.get(reverse("dashboard:home")).context
+    assert ctx["show"]["mode"] == "active"
+
+
+def test_many_subjects_are_capped_on_the_dashboard(client, student):
+    from apps.academics.models import Subject, SubjectOffering
+
+    for i in range(8):
+        subject = Subject.objects.create(name=f"Subject {i}", slug=f"s{i}", icon_text="S")
+        o = SubjectOffering.objects.create(subject=subject, level=student.profile.level)
+        o.pathways.add(student.profile.pathway)
+        Enrollment.objects.create(user=student, offering=o)
+    client.force_login(student)
+    ctx = client.get(reverse("dashboard:home")).context
+    assert len(ctx["plan_shown"]) == 6 and ctx["plan_more"] == 2
