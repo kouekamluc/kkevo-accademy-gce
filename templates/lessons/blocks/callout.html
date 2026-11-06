@@ -1,4 +1,4 @@
-{% load lesson_tags %}<section class="rounded-card border border-surface-border bg-white p-6">
+{% load lesson_tags %}<section class="rounded-card border border-surface-border bg-white p-4 sm:p-6">
   {% if block.title %}<h3 class="text-xl font-bold text-navy">{{ block.title|inline }}</h3>{% endif %}
   <div class="lesson-text mt-2">{{ block.body|rich }}</div>
   {% if block.data.cards %}

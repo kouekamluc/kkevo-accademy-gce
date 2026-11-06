@@ -1,30 +1,30 @@
-{% load lesson_tags %}{% with correct=block.data.correct|default:0 feedback=block.data.feedback %}<section class="rounded-card border border-surface-border bg-white p-6 print:break-inside-avoid" x-data="quickCheck({{ correct }})" aria-labelledby="{{ block.anchor }}-q">
-  <div class="flex flex-wrap items-start justify-between gap-3">
-    <h3 class="text-xl font-bold text-navy">{{ block.title|default:"Quick check" }}</h3>
+{% load lesson_tags %}{% with correct=block.data.correct|default:0 feedback=block.data.feedback %}<section class="rounded-card border border-surface-border bg-white p-4 leading-normal sm:p-6 print:break-inside-avoid" x-data="quickCheck({{ correct }})" aria-labelledby="{{ block.anchor }}-q">
+  <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+    <h3 class="text-lg font-bold text-navy sm:text-xl">{{ block.title|default:"Quick check" }}</h3>
     {% if block.data.hint %}<button type="button" @click="hintShown = !hintShown" :aria-expanded="hintShown.toString()" aria-controls="{{ block.anchor }}-hint" class="flex h-9 items-center gap-1.5 rounded-full border border-surface-border px-3 text-sm font-semibold text-slate-700 hover:border-warning-200 hover:bg-warning-50 print:hidden">{% include "components/icon.html" with name="lightbulb" class="h-4 w-4 text-warning-text" %}<span x-text="hintShown ? 'Hide hint' : 'Get a hint'">Get a hint</span></button>{% endif %}
   </div>
-  <p id="{{ block.anchor }}-q" class="mt-3 text-[17px]">{{ block.body|inline }}</p>
+  <p id="{{ block.anchor }}-q" class="mt-2 text-[17px] leading-relaxed text-ink-heading">{{ block.body|inline }}</p>
   {% if block.data.hint %}<p id="{{ block.anchor }}-hint" x-show="hintShown || (checked && !solved)" x-cloak class="mt-3 flex gap-2 rounded-xl bg-warning-50 px-4 py-3 text-sm text-slate-700 print:hidden">{% include "components/icon.html" with name="lightbulb" class="mt-0.5 h-4 w-4 shrink-0 text-warning-text" %}<span><span class="font-semibold">Hint:</span> {{ block.data.hint|inline }}</span></p>{% endif %}
-  <div role="radiogroup" aria-labelledby="{{ block.anchor }}-q" class="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+  <div role="radiogroup" aria-labelledby="{{ block.anchor }}-q" class="mt-4 grid gap-2.5 sm:grid-cols-2 sm:gap-3">
     {% for choice in block.data.choices %}
     <button type="button" role="radio" :aria-checked="(picked === {{ forloop.counter0 }}).toString()" @click="pick({{ forloop.counter0 }})"
-            class="flex min-h-[60px] items-center gap-3.5 rounded-card border-[1.5px] px-4 text-left transition"
+            class="flex min-h-[56px] items-center gap-3 rounded-card border-[1.5px] px-3.5 py-3 text-left transition hover:border-primary-300 sm:px-4"
             :class="{ 'border-surface-border bg-white': state({{ forloop.counter0 }}) === 'idle', 'border-2 border-primary bg-primary-50': state({{ forloop.counter0 }}) === 'picked', 'border-2 border-success bg-success-50 text-emerald-800': state({{ forloop.counter0 }}) === 'right', 'border-dashed border-red-400 text-red-800': state({{ forloop.counter0 }}) === 'wrong' }">
       <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-[9px] border-[1.5px] border-slate-300 text-sm font-bold" :class="{ 'border-0 bg-primary text-white': state({{ forloop.counter0 }}) === 'picked', 'border-0 bg-success-text text-white': state({{ forloop.counter0 }}) === 'right' }">{{ forloop.counter0|choice_letter }}</span>
-      <span class="font-math text-lg">{{ choice|inline }}</span>
+      <span class="min-w-0 text-base font-semibold leading-snug">{{ choice|inline }}</span>
     </button>
     {% endfor %}
   </div>
-  <div class="mt-5 flex flex-wrap items-center justify-between gap-3 print:hidden">
-    <div class="min-w-0 flex-1 text-sm" aria-live="polite">
+  <div class="mt-4 flex flex-col gap-3 sm:mt-5 sm:flex-row sm:items-center sm:justify-between print:hidden">
+    <div class="min-w-0 flex-1 text-[15px] leading-relaxed" aria-live="polite">
       <p x-show="solved" x-cloak class="font-semibold text-success-text"><span x-text="revealed ? 'Answer: {{ correct|choice_letter }}.' : 'Correct.'">Correct.</span> {{ block.data.explanation|inline }}</p>
       {% for choice in block.data.choices %}{% if forloop.counter0 != correct %}
       <p x-show="checked && !solved && picked === {{ forloop.counter0 }}" x-cloak class="text-danger-text"><span class="font-semibold">Not quite.</span> {% with why=feedback|at:forloop.counter0 %}{% if why %}{{ why|inline }}{% else %}Try another option.{% endif %}{% endwith %}</p>
       {% endif %}{% endfor %}
     </div>
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-2 sm:shrink-0">
       <button type="button" x-show="canReveal" x-cloak @click="reveal()" class="h-12 rounded-btn px-4 text-sm font-semibold text-slate-700 hover:bg-slate-100">Show answer</button>
-      <button type="button" @click="check()" :disabled="picked === null || revealed" class="btn h-12 px-7 disabled:cursor-not-allowed disabled:bg-surface-border disabled:text-ink-muted" :class="picked !== null && !revealed && 'bg-primary text-white hover:bg-primary-700'">Check answer</button>
+      <button type="button" @click="check()" :disabled="picked === null || revealed" class="btn h-12 flex-1 px-7 sm:flex-none disabled:cursor-not-allowed disabled:bg-surface-border disabled:text-ink-muted" :class="picked !== null && !revealed && 'bg-primary text-white hover:bg-primary-700'">Check answer</button>
     </div>
   </div>
   <p class="mt-4 hidden text-sm print:block"><span class="font-semibold">Answer: {{ correct|choice_letter }}.</span> {{ block.data.explanation|inline }}</p>

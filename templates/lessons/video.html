@@ -4,7 +4,7 @@
 {% block progress_line %}{% endblock %}
 {% block header_actions %}{% endblock %}
 {% block lesson %}
-<main id="main" class="mx-auto grid max-w-[1440px] gap-8 px-0 pb-28 nav:grid-cols-[1fr_400px] nav:px-[86px] nav:py-9"
+<main id="main" class="mx-auto grid max-w-[1600px] gap-8 px-0 pb-28 nav:grid-cols-[1fr_360px] nav:px-8 nav:py-9 xl:grid-cols-[1fr_400px] xl:px-12"
       x-data="{ time: {{ progress.video_position }}, duration: {{ video.data.duration|default:0 }}, tab: 'chapters', loaded: {{ low_data|yesno:'false,true' }},
                 seek(t) { this.loaded = true; const v = $refs.video; if (v) { v.currentTime = t; v.play(); } this.time = t; },
                 get watched() { return this.duration ? Math.min(100, Math.round(this.time / this.duration * 100)) : 0 } }">

@@ -1,8 +1,10 @@
-{% load lesson_tags %}<div x-data="{ open: false }" class="rounded-card border bg-white px-5 py-4" :class="open ? 'border-success-200' : 'border-surface-border'">
-  <div class="flex items-center gap-3">
-    <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-xs font-bold" :class="open && 'bg-success-50 text-success-text'">?</span>
-    <div class="flex-1 text-[15px]">{{ block.body|inline }}</div>
-    <button type="button" @click="open = !open" :aria-expanded="open.toString()" class="text-sm font-semibold text-primary print:hidden" x-text="open ? 'Hide answer' : 'Show answer'">Show answer</button>
+{% load lesson_tags %}<div x-data="{ open: false }" class="rounded-card border bg-white p-4 leading-normal sm:px-5" :class="open ? 'border-success-200' : 'border-surface-border'">
+  <div class="flex items-start gap-3">
+    <span class="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-xs font-bold" :class="open && 'bg-success-50 text-success-text'" aria-hidden="true">?</span>
+    <div class="min-w-0 flex-1">
+      <div class="text-base leading-relaxed text-ink-heading">{{ block.body|inline }}</div>
+      <button type="button" @click="open = !open" :aria-expanded="open.toString()" class="-ml-2 mt-1 inline-flex min-h-[40px] items-center gap-1 rounded-btn px-2 text-sm font-semibold text-primary-700 hover:bg-primary-50 print:hidden"><span class="inline-flex transition-transform" :class="open && 'rotate-90'">{% include "components/icon.html" with name="chevron-right" class="h-4 w-4" stroke="2.4" %}</span><span x-text="open ? 'Hide answer' : 'Show answer'">Show answer</span></button>
+      <div x-show="open" x-cloak class="mt-1 rounded-xl bg-success-50 px-4 py-3 text-[15px] leading-relaxed text-slate-700 print:!block"><span class="font-semibold text-success-text">Answer: </span>{{ block.data.answer|inline }}</div>
+    </div>
   </div>
-  <div x-show="open" x-cloak class="ml-10 mt-3 text-sm text-slate-700 print:!block"><span class="hidden font-semibold print:inline">Answer: </span>{{ block.data.answer|inline }}</div>
 </div>

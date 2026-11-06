@@ -86,9 +86,12 @@
 .card-hidden { display: none !important; }
 
 /* Lesson reading typography (text size switch in the lesson header) */
-.lesson-prose { font-size: 18px; line-height: 30px; }
-.text-size-sm .lesson-prose { font-size: 16px; line-height: 27px; }
-.text-size-lg .lesson-prose { font-size: 20px; line-height: 34px; }
+/* Unitless line height so smaller text inside cards (15px notes, 16px answers) keeps a
+   proportional rhythm instead of inheriting the 18px body's fixed 30px lines. */
+.lesson-prose { font-size: 18px; line-height: 1.67; }
+.text-size-sm .lesson-prose { font-size: 16px; line-height: 1.68; }
+.text-size-lg .lesson-prose { font-size: 20px; line-height: 1.7; }
+@media (max-width: 639px) { .lesson-prose { font-size: 17px; } }
 .lesson-text p + p { margin-top: 1em; }
 .lesson-text strong { font-weight: 600; color: theme("colors.ink.heading"); }
 .katex { font-size: 1.08em; }
