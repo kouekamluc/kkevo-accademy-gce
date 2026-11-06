@@ -29,6 +29,8 @@ EXAM_WINDOW_DAYS = 90
 AWAY_DAYS = 7
 # Subjects listed on the dashboard; the rest are one tap away on "My subjects".
 SUBJECTS_SHOWN = 6
+# Suggested practice sets on the dashboard (one per subject); the rest are on the Practice page.
+PRACTICE_SHOWN = 3
 # Lessons finished before the dashboard starts asking for an exam date.
 EXAM_PROMPT_AFTER = 3
 
@@ -44,7 +46,7 @@ def student_mode(*, started, days_to_exam=None, exam_year=True):
 
 
 def dashboard_blocks(mode, *, completed=0, week_minutes=0, has_upcoming=False, reviews_due=0,
-                     has_recent=False, away_days=None, has_exam_date=False, exam_year=True):
+                     has_recent=False, away_days=None, has_exam_date=False, exam_year=True, has_practice=False):
     """Which dashboard blocks to show, as a dict of booleans for the template."""
     away = away_days is not None and away_days >= AWAY_DAYS
     new = mode == NEW
@@ -56,6 +58,7 @@ def dashboard_blocks(mode, *, completed=0, week_minutes=0, has_upcoming=False, r
         "streak": not new and not away,
         "exam_prompt": exam_year and not has_exam_date and completed >= EXAM_PROMPT_AFTER,
         "recommended": not new,
+        "practice": not new and has_practice,
         "overall": not new,
         "activity": not new and week_minutes > 0,
         # Revision is the heart of exam preparation, so it stays visible there even when empty.

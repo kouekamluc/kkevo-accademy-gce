@@ -96,6 +96,8 @@
     {% endif %}
   </div>
 
+  {% if show.practice %}{% include "practice/_today.html" with items=practice_shown more=practice_more link_all=True %}{% endif %}
+
   {# ---------- Row 2: subjects + overall ---------- #}
   <div class="grid gap-6 xl:grid-cols-3">
     <section class="{% if show.overall %}xl:col-span-2{% else %}xl:col-span-3{% endif %} nav:card nav:p-8 nav:shadow-card" aria-labelledby="subjects-heading">

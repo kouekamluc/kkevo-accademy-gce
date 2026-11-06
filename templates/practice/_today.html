@@ -1,0 +1,30 @@
+{% comment %}
+"Practice today": one suggested set per subject. Context: items (Suggestion list), more (int, subjects not shown),
+heading_tag (h2 default). The "All practice" link is shown only when `more` or `link_all` is set.
+{% endcomment %}
+{% if items %}
+<section aria-labelledby="today-heading" class="flex flex-col gap-3">
+  <div class="flex items-baseline justify-between gap-3">
+    <h2 id="today-heading" class="text-xl font-black text-navy">Practice today</h2>
+    {% if more or link_all %}<a href="{% url 'practice:index' %}" class="text-[15px] font-extrabold">All practice{% if more %} (+{{ more }} more subject{{ more|pluralize }}){% endif %}</a>{% endif %}
+  </div>
+  <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+    {% for item in items %}
+    <li class="flex flex-col gap-3 rounded-card border-2 border-b-4 border-surface-border bg-white p-4">
+      <div class="flex items-center gap-3">
+        {% include "components/subject_icon.html" with subject=item.subject %}
+        <div class="min-w-0 flex-1">
+          <div class="truncate font-extrabold text-ink-heading">{{ item.subject.name }}</div>
+          <div class="text-[13px] font-semibold text-ink-muted">{{ item.last_label }}</div>
+        </div>
+      </div>
+      <div>
+        <div class="font-bold text-ink-heading">{{ item.practice_set.title }}</div>
+        <p class="mt-0.5 text-sm text-slate-600">{{ item.reason }}</p>
+      </div>
+      <a href="{{ item.practice_set.get_absolute_url }}" class="btn-primary mt-auto h-11 w-full">Practise</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

@@ -19,6 +19,7 @@ from apps.learning import achievements
 from apps.learning.models import Enrollment
 
 from .mastery import LEVELS, NOT_STARTED, mastery_for_topic, topic_mastery
+from .suggestions import practice_today
 from .models import (
     EXAM_GRACE_SECONDS, REVIEW_INTERVALS, REVIEW_SESSION_SIZE, Answer, Attempt, Choice, Confidence, MistakeCard,
     PracticeSet, Question, ReviewAnswer, ReviewSession,
@@ -125,7 +126,7 @@ def index(request):
             tally[s.mastery.label] += 1
         groups.setdefault(s.subject, []).append(s)
     return render(request, "practice/index.html", {
-        "groups": groups.items(), "nav_active": "practice", "review": review_summary(request.user),
+        "today": practice_today(request.user), "groups": groups.items(), "nav_active": "practice", "review": review_summary(request.user),
         "mastery_tally": list(tally.items()) if sets else [],
     })
 

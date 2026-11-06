@@ -3,8 +3,8 @@
 {% block content %}
 <div class="flex flex-col gap-6 nav:mt-2">
   <div>
-    <h1 class="text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">Practice</h1>
-    <p class="mt-1 text-base text-ink-muted">Check your understanding. Every question comes with a worked solution.</p>
+    <h1 class="text-[26px] font-black tracking-[-.01em] text-navy nav:text-[34px]">Practice</h1>
+    <p class="mt-1 text-base font-semibold text-ink-muted">Check your understanding. Every question comes with a worked solution.</p>
   </div>
 
   {% if review.due or review.upcoming or review.open_session %}
@@ -18,6 +18,8 @@
   </section>
   {% endif %}
 
+  {% include "practice/_today.html" with items=today %}
+
   {% if mastery_tally %}
   <section aria-labelledby="mastery-heading" class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
     <h2 id="mastery-heading" class="font-semibold text-ink-heading">Topic mastery</h2>
@@ -26,6 +28,7 @@
   </section>
   {% endif %}
 
+  {% if groups %}<h2 class="-mb-3 text-xl font-black text-navy">All practice sets</h2>{% endif %}
   {% for subject, sets in groups %}
   <section aria-labelledby="subject-{{ subject.pk }}">
     <h2 id="subject-{{ subject.pk }}" class="flex items-center gap-3 text-lg font-bold">{% include "components/subject_icon.html" with subject=subject %}{{ subject.name }}</h2>

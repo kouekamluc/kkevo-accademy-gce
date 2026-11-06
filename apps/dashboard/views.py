@@ -14,6 +14,7 @@ from apps.courses.models import Course
 from apps.learning import achievements, motivation, services
 from apps.learning.models import DailyActivity, Enrollment, LessonProgress, RestDay, StudySession
 from apps.practice.reviews import review_summary
+from apps.practice.suggestions import practice_today
 from apps.practice.models import Attempt, PracticeSet
 
 WEEKDAY_SHORT = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
@@ -169,6 +170,7 @@ def home(request):
                                               motivation.recent_completions(user, today, lesson_ids=lesson_ids), today)
 
     progress = LessonProgress.objects.filter(user=user)
+    practice_items = practice_today(user)
     last_day = DailyActivity.objects.filter(user=user, seconds__gt=0).order_by("-date").values_list("date", flat=True).first()
     away_days = (today - last_day).days if last_day else None
     reviews_due = review_summary(user)["due"]
@@ -181,10 +183,11 @@ def home(request):
         mode, completed=progress.filter(completed_at__isnull=False).count(),
         week_minutes=week["total_minutes"], has_upcoming=bool(upcoming), reviews_due=reviews_due,
         has_recent=bool(recent), away_days=away_days, has_exam_date=bool(profile.exam_date),
-        exam_year=exam_year)
+        exam_year=exam_year, has_practice=bool(practice_items))
 
     return render(request, "dashboard/home.html", {
         "rank": achievements.level_for(achievements.points(user)),
+        "practice_shown": practice_items[:modes.PRACTICE_SHOWN], "practice_more": max(0, len(practice_items) - modes.PRACTICE_SHOWN),
         "show": show, "subtitle": modes.subtitle(mode, away=show["away"], exam_level=level.exam_level, exam_year=exam_year),
         "plan_shown": plan[:modes.SUBJECTS_SHOWN], "plan_more": max(0, len(plan) - modes.SUBJECTS_SHOWN),
         "countdown": countdown, "rest_today": RestDay.objects.filter(user=user, date=today).exists(),
