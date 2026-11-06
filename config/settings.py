@@ -189,19 +189,19 @@ UNFOLD = {
     "SHOW_VIEW_ON_SITE": True,
     "STYLES": [lambda request: static("css/staff.css")],
     "COLORS": {
-        # Design tokens (tailwind.config.js): slate neutrals and the "learning blue" primary
+        # Design tokens (tailwind.config.js): violet-tinted greys and the indigo brand primary
         "base": {
-            "50": "#F8FAFC", "100": "#F1F5F9", "200": "#E2E8F0", "300": "#CBD5E1", "400": "#94A3B8",
-            "500": "#64748B", "600": "#475569", "700": "#334155", "800": "#1E293B", "900": "#0F172A", "950": "#020617",
+            "50": "#F6F4FD", "100": "#EEEBF9", "200": "#E3DDF7", "300": "#CFC8EA", "400": "#9A93BC",
+            "500": "#706A94", "600": "#565078", "700": "#3F3A60", "800": "#2D2658", "900": "#1B1340", "950": "#120C2E",
         },
         "primary": {
-            "50": "#EFF6FF", "100": "#DBEAFE", "200": "#BFDBFE", "300": "#93C5FD", "400": "#60A5FA",
-            "500": "#3B82F6", "600": "#2563EB", "700": "#1D4ED8", "800": "#1E40AF", "900": "#1E3A8A", "950": "#172554",
+            "50": "#F4F1FF", "100": "#E6E0FF", "200": "#D3C9FD", "300": "#B3A3FA", "400": "#8A73F2",
+            "500": "#6C52EA", "600": "#5B3FE4", "700": "#4527C9", "800": "#35209F", "900": "#2A1F6B", "950": "#1B1340",
         },
         "font": {
-            "subtle-light": "#64748B", "subtle-dark": "#94A3B8",
-            "default-light": "#1E293B", "default-dark": "#CBD5E1",
-            "important-light": "#0F172A", "important-dark": "#F1F5F9",
+            "subtle-light": "#665F8C", "subtle-dark": "#9A93BC",
+            "default-light": "#2D2658", "default-dark": "#CFC8EA",
+            "important-light": "#1B1340", "important-dark": "#F1EEFD",
         },
     },
 }

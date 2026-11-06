@@ -1,0 +1,7 @@
+{% extends "errors/base_error.html" %}
+{% block title %}Not allowed — KKEVO Academy{% endblock %}
+{% block mascot %}{% include "components/mascot.html" with size="132" mood="happy" %}{% endblock %}
+{% block code %}Error 403{% endblock %}
+{% block heading %}You can’t open this page.{% endblock %}
+{% block text %}It may need a different account, or you may need to log in first.{% endblock %}
+{% block actions %}<a class="btn primary" href="/accounts/login/">Log in</a><a class="btn" href="/">Back to KKEVO Academy</a>{% endblock %}

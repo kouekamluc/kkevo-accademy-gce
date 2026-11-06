@@ -1,0 +1,42 @@
+{% load static %}<!doctype html>
+{% comment %}
+Standalone shell for 400/403/404/500 pages. It must work even when the app is broken, so it uses
+no context processors, no URL reversing and inline CSS (the 500 page is rendered without a request).
+{% endcomment %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}KKEVO Academy{% endblock %}</title>
+  <meta name="theme-color" content="#5B3FE4">
+  <link rel="icon" type="image/svg+xml" href="{% static 'img/favicon.svg' %}">
+  <style>
+    @font-face { font-family: "Nunito"; font-weight: 200 1000; font-display: swap; src: url("{% static 'vendor/fonts/nunito-latin-wght-normal.woff2' %}") format("woff2"); }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; background: #F7F5FF; color: #1B1340; font-family: Nunito, system-ui, sans-serif; }
+    header { background: #2A1F6B; padding: 14px 20px; }
+    header a { color: #fff; text-decoration: none; font-weight: 900; font-size: 17px; }
+    main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px 20px 56px; }
+    .code { margin: 8px 0 0; font-size: 15px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: #4527C9; }
+    h1 { margin: 6px 0 0; font-size: 30px; line-height: 1.15; font-weight: 900; color: #2A1F6B; }
+    p.lead { margin: 12px 0 0; max-width: 440px; font-size: 17px; line-height: 1.55; font-weight: 600; color: #565078; }
+    .actions { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 26px; border-radius: 14px; border: 2px solid #E3DDF7;
+           border-bottom-width: 4px; background: #fff; color: #4527C9; font: inherit; font-size: 16px; font-weight: 800; text-decoration: none; cursor: pointer; }
+    .btn.primary { background: #5B3FE4; border-color: #5B3FE4; border-bottom-color: #4527C9; color: #fff; }
+    .btn:active { transform: translateY(2px); }
+  </style>
+</head>
+<body>
+  <header><a href="/">KKEVO Academy</a></header>
+  <main>
+    {% block mascot %}{% include "components/mascot.html" with size="132" mood="sleepy" %}{% endblock %}
+    <p class="code">{% block code %}{% endblock %}</p>
+    <h1>{% block heading %}{% endblock %}</h1>
+    <p class="lead">{% block text %}{% endblock %}</p>
+    <div class="actions">
+      {% block actions %}<a class="btn primary" href="/">Back to KKEVO Academy</a><button class="btn" type="button" onclick="history.back()">Go back</button>{% endblock %}
+    </div>
+  </main>
+</body>
+</html>
