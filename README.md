@@ -21,7 +21,7 @@ CREATE DATABASE gce_academy OWNER gce_user;
 ```
 
 Set `DATABASE_URL=postgres://gce_user:choose-a-password@localhost:5432/gce_academy` in `.env`.
-If `DATABASE_URL` is not set, a local SQLite file is used (handy for a first look, not for real data).
+PostgreSQL is the only database. `DATABASE_URL` is required: the app, `runserver` and the tests stop with a clear error if it is missing or does not point to PostgreSQL.
 
 ```bash
 .venv/Scripts/python manage.py migrate

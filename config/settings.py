@@ -7,6 +7,7 @@ All secrets and environment-specific values come from environment variables
 from pathlib import Path
 
 import environ
+from django.core.exceptions import ImproperlyConfigured
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -78,11 +79,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
-# PostgreSQL via DATABASE_URL. The SQLite fallback exists only so the test
-# suite and a first local run work before PostgreSQL credentials are set.
-DATABASES = {
-    "default": env.db("DATABASE_URL", default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}"),
-}
+# PostgreSQL only, configured by DATABASE_URL (see .env.example). There is no
+# fallback: the app, the dev server and the tests all refuse to start without it.
+if not env("DATABASE_URL", default=""):
+    raise ImproperlyConfigured(
+        "DATABASE_URL is not set. Add your PostgreSQL URL to .env, for example "
+        "DATABASE_URL=postgres://USER:PASSWORD@localhost:5432/DBNAME"
+    )
+DATABASES = {"default": env.db("DATABASE_URL")}
+if DATABASES["default"]["ENGINE"] != "django.db.backends.postgresql":
+    raise ImproperlyConfigured("DATABASE_URL must point to PostgreSQL (postgres://...).")
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 AUTH_USER_MODEL = "accounts.User"
