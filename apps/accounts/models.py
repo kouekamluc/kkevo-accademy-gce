@@ -59,6 +59,16 @@ class User(AbstractUser):
         return self.email[:2].upper()
 
 
+# Avatars: Cameroonian wildlife, shown instead of initials in the header and on the profile.
+AVATARS = [
+    ("lion", "🦁", "Lion"), ("elephant", "🐘", "Elephant"), ("giraffe", "🦒", "Giraffe"), ("leopard", "🐆", "Leopard"),
+    ("eagle", "🦅", "Eagle"), ("tortoise", "🐢", "Tortoise"), ("parrot", "🦜", "Parrot"), ("chimp", "🐒", "Chimpanzee"),
+    ("zebra", "🦓", "Zebra"), ("croc", "🐊", "Crocodile"), ("butterfly", "🦋", "Butterfly"), ("star", "🌟", "Star"),
+]
+AVATAR_CHOICES = [(key, label) for key, _emoji, label in AVATARS]
+AVATAR_EMOJI = {key: emoji for key, emoji, _label in AVATARS}
+
+
 class StudentProfile(models.Model):
     """Learning preferences for a user. Created automatically with every user."""
 
@@ -80,11 +90,16 @@ class StudentProfile(models.Model):
         null=True, blank=True,
         help_text="Date of the student's first GCE paper (from their official timetable). Drives the countdown.",
     )
+    avatar = models.CharField(max_length=12, blank=True, default="", choices=AVATAR_CHOICES)
     onboarded_at = models.DateTimeField(null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f"Profile of {self.user}"
+
+    @property
+    def avatar_emoji(self):
+        return AVATAR_EMOJI.get(self.avatar, "")
 
     @property
     def is_onboarded(self):

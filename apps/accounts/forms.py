@@ -1,6 +1,9 @@
+from datetime import timedelta
+
 from django import forms
 from django.contrib.auth import password_validation
 from django.contrib.auth.forms import AuthenticationForm, PasswordChangeForm, PasswordResetForm, SetPasswordForm
+from django.utils import timezone
 
 from apps.academics.models import AcademicLevel, AcademicPathway
 
@@ -260,11 +263,35 @@ class StudyPreferencesForm(forms.ModelForm):
     pathway = forms.ModelChoiceField(
         queryset=AcademicPathway.objects.filter(is_active=True), required=False, empty_label="A mix of both"
     )
+    exam_date = forms.DateField(
+        required=False, label="Date of your first GCE paper",
+        widget=forms.DateInput(attrs={"type": "date", "class": "form-input"}, format="%Y-%m-%d"),
+        help_text="Copy it from the official GCE timetable your school gives you. It powers your countdown.",
+    )
 
     class Meta:
         model = StudentProfile
-        fields = ("level", "pathway", "daily_goal_minutes", "low_data_mode")
+        fields = ("level", "pathway", "daily_goal_minutes", "exam_date", "low_data_mode")
         labels = {"daily_goal_minutes": "Daily learning goal (minutes)"}
+
+    def clean_exam_date(self):
+        """Same rules as the planner's exam-date box, but an unchanged date is never re-checked
+        (an exam date that has passed must not block saving other settings)."""
+        value = self.cleaned_data.get("exam_date")
+        if value == self.instance.exam_date:
+            return value
+        today = timezone.localdate()
+        if value and value < today:
+            raise forms.ValidationError("Choose a date that is still ahead.")
+        if value and value > today + timedelta(days=3 * 366):
+            raise forms.ValidationError("Choose a date within the next three years.")
+        return value
+
+
+class AvatarForm(forms.ModelForm):
+    class Meta:
+        model = StudentProfile
+        fields = ("avatar",)
 
 
 class StyledPasswordChangeForm(StyledFormMixin, PasswordChangeForm):

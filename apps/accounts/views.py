@@ -13,6 +13,7 @@ from django.views.decorators.http import require_POST
 
 from .forms import (
     AccountDetailsForm,
+    AvatarForm,
     DeleteAccountForm,
     EmailAuthenticationForm,
     RegistrationForm,
@@ -21,6 +22,9 @@ from .forms import (
     StyledPasswordResetForm,
     StyledSetPasswordForm,
 )
+from apps.learning import achievements
+
+from .models import AVATARS
 from .privacy import export_user_data
 from .ratelimit import login_limiter
 from .utils import get_profile
@@ -132,6 +136,13 @@ def profile(request):
                 details_form.save()
                 messages.success(request, "Your details have been updated.")
                 return redirect("accounts:profile")
+        elif section == "avatar":
+            avatar_form = AvatarForm(request.POST, instance=student)
+            if avatar_form.is_valid():
+                avatar_form.save()
+                messages.success(request, "Your avatar has been updated.")
+                return redirect("accounts:profile")
+            messages.error(request, "Choose one of the avatars shown.")
         elif section == "study":
             study_form = StudyPreferencesForm(request.POST, instance=student, prefix="study")
             if study_form.is_valid():
@@ -141,10 +152,13 @@ def profile(request):
                 student.save()
                 messages.success(request, "Your study settings have been updated.")
                 return redirect("accounts:profile")
+    current_goal = student.daily_goal_minutes
     return render(
         request,
         "accounts/profile.html",
-        {"details_form": details_form, "study_form": study_form, "student": student, "nav_active": "settings"},
+        {"details_form": details_form, "study_form": study_form, "student": student, "nav_active": "settings",
+         "avatars": AVATARS, "goal_choices": sorted({15, 30, 45, 60, 90, current_goal}),
+         **achievements.journey(user)},
     )
 
 
