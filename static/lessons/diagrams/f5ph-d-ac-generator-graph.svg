@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Graph of the emf of an a.c. generator against the angle turned by the coil</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280.0" y="24.0" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle">Output of a simple a.c. generator</text>
+<line x1="90.0" y1="50.0" x2="90.0" y2="290.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="90.0" y1="170.0" x2="526.0" y2="170.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="197.5" y1="165.0" x2="197.5" y2="175.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<text x="197.5" y="194.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">90&#176;</text>
+<line x1="305.0" y1="165.0" x2="305.0" y2="175.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<text x="321.0" y="158.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">180&#176;</text>
+<line x1="412.5" y1="165.0" x2="412.5" y2="175.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<text x="412.5" y="158.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">270&#176;</text>
+<line x1="520.0" y1="165.0" x2="520.0" y2="175.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<text x="520.0" y="158.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">360&#176;</text>
+<line x1="197.5" y1="85.0" x2="197.5" y2="170.0" stroke="#B45309" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<line x1="412.5" y1="255.0" x2="412.5" y2="170.0" stroke="#B45309" stroke-width="2" stroke-dasharray="6 4" stroke-linecap="round"/>
+<path d="M90.0,170.0 L93.6,165.6 L97.2,161.1 L100.8,156.7 L104.3,152.3 L107.9,148.0 L111.5,143.7 L115.1,139.5 L118.7,135.4 L122.2,131.4 L125.8,127.5 L129.4,123.7 L133.0,120.0 L136.6,116.5 L140.2,113.1 L143.8,109.9 L147.3,106.8 L150.9,103.9 L154.5,101.2 L158.1,98.7 L161.7,96.4 L165.2,94.3 L168.8,92.3 L172.4,90.6 L176.0,89.2 L179.6,87.9 L183.2,86.9 L186.8,86.0 L190.3,85.5 L193.9,85.1 L197.5,85.0 L201.1,85.1 L204.7,85.5 L208.2,86.0 L211.8,86.9 L215.4,87.9 L219.0,89.2 L222.6,90.6 L226.2,92.3 L229.8,94.3 L233.3,96.4 L236.9,98.7 L240.5,101.2 L244.1,103.9 L247.7,106.8 L251.2,109.9 L254.8,113.1 L258.4,116.5 L262.0,120.0 L265.6,123.7 L269.2,127.5 L272.8,131.4 L276.3,135.4 L279.9,139.5 L283.5,143.7 L287.1,148.0 L290.7,152.3 L294.2,156.7 L297.8,161.1 L301.4,165.6 L305.0,170.0 L308.6,174.4 L312.2,178.9 L315.8,183.3 L319.3,187.7 L322.9,192.0 L326.5,196.3 L330.1,200.5 L333.7,204.6 L337.2,208.6 L340.8,212.5 L344.4,216.3 L348.0,220.0 L351.6,223.5 L355.2,226.9 L358.8,230.1 L362.3,233.2 L365.9,236.1 L369.5,238.8 L373.1,241.3 L376.7,243.6 L380.2,245.7 L383.8,247.7 L387.4,249.4 L391.0,250.8 L394.6,252.1 L398.2,253.1 L401.8,254.0 L405.3,254.5 L408.9,254.9 L412.5,255.0 L416.1,254.9 L419.7,254.5 L423.2,254.0 L426.8,253.1 L430.4,252.1 L434.0,250.8 L437.6,249.4 L441.2,247.7 L444.8,245.7 L448.3,243.6 L451.9,241.3 L455.5,238.8 L459.1,236.1 L462.7,233.2 L466.2,230.1 L469.8,226.9 L473.4,223.5 L477.0,220.0 L480.6,216.3 L484.2,212.5 L487.8,208.6 L491.3,204.6 L494.9,200.5 L498.5,196.3 L502.1,192.0 L505.7,187.7 L509.2,183.3 L512.8,178.9 L516.4,174.4 L520.0,170.0" fill="none" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="197.5" y="46.0" font-size="13" font-weight="700" fill="#B45309" text-anchor="middle">greatest emf</text>
+<text x="197.5" y="63.0" font-size="13" font-weight="400" fill="#B45309" text-anchor="middle">coil parallel to field</text>
+<text x="412.5" y="296.0" font-size="13" font-weight="700" fill="#B45309" text-anchor="middle">greatest emf (reversed)</text>
+<text x="80.0" y="186.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">0</text>
+<text x="70.0" y="56.0" font-size="13" font-weight="700" fill="#102A43" text-anchor="end">emf</text>
+<text x="280.0" y="332.0" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">emf is zero when the coil is perpendicular to the field (0&#176;, 180&#176;, 360&#176;).</text>
+</svg>

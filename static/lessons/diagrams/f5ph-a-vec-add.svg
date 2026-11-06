@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="A walker goes 40 m east then 30 m north; the resultant is 50 m">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<line x1="90" y1="290" x2="343.3" y2="290" stroke="#2563EB" stroke-width="3" marker-end="url(#ab)"/>
+<line x1="343.3" y1="290" x2="343.3" y2="100" stroke="#2563EB" stroke-width="3" marker-end="url(#ab)"/>
+<line x1="90" y1="290" x2="343.3" y2="100" stroke="#047857" stroke-width="3" marker-end="url(#ag)"/>
+<polyline points="329.3,290 329.3,276 343.3,276" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="216.7" y="316" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB" text-anchor="middle">40 m east</text>
+<text x="355.3" y="200" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB" text-anchor="start">30 m north</text>
+<text x="202.7" y="183" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="end">R = 50 m</text>
+<path d="M136 290 A46 46 0 0 0 126.8 262.4" fill="none" stroke="#B45309" stroke-width="2"/>
+<text x="148" y="278" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="start">&#952; = 37&#176;</text>
+<circle cx="90" cy="290" r="4" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+</svg>

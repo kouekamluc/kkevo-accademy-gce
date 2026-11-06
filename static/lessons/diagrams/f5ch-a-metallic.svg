@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Metallic lattice: regular rows of positive ions surrounded by a sea of delocalized electrons">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker></defs>
+<text x="280.0" y="24.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" >Metallic bonding</text>
+<rect x="52.0" y="48.0" width="316.0" height="214.0" fill="#F8FAFC" stroke="#102A43" stroke-width="2" rx="0"/>
+<circle cx="95.0" cy="80.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="95.0" y="85.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="151.0" cy="80.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="151.0" y="85.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="207.0" cy="80.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="207.0" y="85.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="263.0" cy="80.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="263.0" y="85.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="319.0" cy="80.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="319.0" y="85.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="95.0" cy="136.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="95.0" y="141.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="151.0" cy="136.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="151.0" y="141.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="207.0" cy="136.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="207.0" y="141.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="263.0" cy="136.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="263.0" y="141.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="319.0" cy="136.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="319.0" y="141.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="95.0" cy="192.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="95.0" y="197.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="151.0" cy="192.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="151.0" y="197.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="207.0" cy="192.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="207.0" y="197.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="263.0" cy="192.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="263.0" y="197.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="319.0" cy="192.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="319.0" y="197.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="95.0" cy="248.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="95.0" y="253.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="151.0" cy="248.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="151.0" y="253.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="207.0" cy="248.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="207.0" y="253.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="263.0" cy="248.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="263.0" y="253.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="319.0" cy="248.0" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="319.0" y="253.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#2563EB" text-anchor="middle" >+</text>
+<circle cx="194.5" cy="162.8" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="118.4" cy="153.4" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="244.9" cy="209.0" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="92.7" cy="112.1" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="344.9" cy="243.0" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="110.7" cy="55.0" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="120.0" cy="99.9" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="191.1" cy="218.8" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="195.9" cy="107.1" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="338.1" cy="219.8" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="66.2" cy="93.5" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="344.4" cy="130.7" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="287.1" cy="105.4" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="120.2" cy="196.9" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="125.8" cy="130.1" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="91.6" cy="167.4" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="135.0" cy="171.1" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="229.2" cy="223.6" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="121.8" cy="240.1" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="139.0" cy="215.1" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="235.4" cy="110.1" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="168.8" cy="228.4" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="344.5" cy="182.1" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="262.3" cy="167.7" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="71.1" cy="232.2" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<circle cx="72.0" cy="178.0" r="3.6" fill="#B45309" stroke="none" stroke-width="0"/>
+<text x="385.0" y="95.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="start" >positive metal ions</text>
+<text x="385.0" y="113.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" >in a regular lattice</text>
+<text x="385.0" y="170.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="start" >sea of delocalized</text>
+<text x="385.0" y="188.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" >electrons that move</text>
+<text x="385.0" y="206.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" >freely</text>
+<text x="210.0" y="292.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" >Attraction between the positive ions and the</text>
+<text x="210.0" y="311.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" >sea of electrons is the metallic bond.</text>
+</svg>

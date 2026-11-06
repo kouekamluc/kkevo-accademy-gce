@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Criss-cross method: swap the charge numbers to find the formula of aluminium oxide</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker></defs>
+<text x="150" y="70" font-size="34" font-weight="700" fill="#102A43" text-anchor="middle">Al</text>
+<text x="182" y="52" font-size="20" font-weight="700" fill="#2563EB">3+</text>
+<text x="400" y="70" font-size="34" font-weight="700" fill="#102A43" text-anchor="middle">O</text>
+<text x="420" y="52" font-size="20" font-weight="700" fill="#2563EB">2&#8722;</text>
+<line x1="190" y1="62" x2="334" y2="234" stroke="#B45309" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="428" y1="62" x2="270" y2="234" stroke="#B45309" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="230" y="270" font-size="40" font-weight="700" fill="#047857" text-anchor="middle">Al</text>
+<text x="256" y="282" font-size="22" font-weight="700" fill="#047857">2</text>
+<text x="300" y="270" font-size="40" font-weight="700" fill="#047857">O</text>
+<text x="332" y="282" font-size="22" font-weight="700" fill="#047857">3</text>
+<text x="20" y="40" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">1. Ions</text>
+<text x="20" y="120" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">2. Swap the</text>
+<text x="20" y="138" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">numbers</text>
+<text x="20" y="250" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">3. Formula</text>
+<text x="280" y="335" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Two Al ions (2 x +3 = +6) balance three O ions (3 x &#8722;2 = &#8722;6)</text>
+</svg>

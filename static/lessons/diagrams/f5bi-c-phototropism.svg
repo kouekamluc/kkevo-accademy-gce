@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Phototropism: unequal auxin on the shaded side makes a shoot grow towards one-sided light</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="130" y="24" font-size="15" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">1. Light from one side</text>
+<text x="410" y="24" font-size="15" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">2. Result after some days</text>
+<line x1="20" y1="320" x2="540" y2="320" stroke="#8B5E34" stroke-width="5" stroke-linecap="round"/>
+<rect x="100" y="120" width="32" height="200" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+<circle cx="108" cy="135" r="3.5" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="112" cy="160" r="3.5" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="106" cy="185" r="3.5" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="113" cy="210" r="3.5" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="108" cy="238" r="3.5" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="112" cy="262" r="3.5" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="106" cy="290" r="3.5" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="114" cy="150" r="3.5" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="124" cy="195" r="3.5" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="126" cy="260" r="3.5" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<line x1="240" y1="150" x2="150" y2="150" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="150,150 159.0,145.7 159.0,154.3" fill="#F59E0B"/>
+<line x1="240" y1="190" x2="150" y2="190" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="150,190 159.0,185.7 159.0,194.3" fill="#F59E0B"/>
+<line x1="240" y1="230" x2="150" y2="230" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="150,230 159.0,225.7 159.0,234.3" fill="#F59E0B"/>
+<text x="250" y="120" font-size="14" fill="#B45309" text-anchor="start" dominant-baseline="middle" font-weight="700">light</text>
+<text x="15" y="70" font-size="13" fill="#B45309" text-anchor="start" dominant-baseline="middle" font-weight="700">more auxin on</text>
+<text x="15" y="86" font-size="13" fill="#B45309" text-anchor="start" dominant-baseline="middle" font-weight="700">the shaded side</text>
+<line x1="50" y1="96" x2="104" y2="170" stroke="#B45309" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M400,320 L400,230 Q400,160 450,140" fill="none" stroke="#047857" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M400,320 L400,230 Q400,160 450,140" fill="none" stroke="#ECFDF5" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="540" y1="150" x2="490" y2="150" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="490,150 499.0,145.7 499.0,154.3" fill="#F59E0B"/>
+<line x1="540" y1="190" x2="490" y2="190" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="490,190 499.0,185.7 499.0,194.3" fill="#F59E0B"/>
+<line x1="540" y1="230" x2="490" y2="230" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="490,230 499.0,225.7 499.0,234.3" fill="#F59E0B"/>
+<text x="330" y="100" font-size="13" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">shoot bends towards</text>
+<text x="330" y="116" font-size="13" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">the light</text>
+<text x="280" y="346" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Cells on the shaded side elongate faster, so the shoot curves towards the light.</text>
+</svg>

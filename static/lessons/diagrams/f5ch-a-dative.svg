@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Ammonia with a lone pair joining a hydrogen ion to form the ammonium ion, one bond shown as dative with both electrons from nitrogen">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker></defs>
+<text x="280.0" y="24.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle" >Dative covalent bond: ammonia + H&#8314; &#8594; ammonium ion</text>
+<circle cx="85.0" cy="175.0" r="30" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<text x="85.0" y="180.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >N</text>
+<circle cx="50.4" cy="195.0" r="19" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<text x="50.4" y="200.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >H</text>
+<circle cx="85.0" cy="215.0" r="19" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<text x="85.0" y="220.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >H</text>
+<circle cx="119.6" cy="195.0" r="19" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<text x="119.6" y="200.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >H</text>
+<circle cx="65.9" cy="192.9" r="3.2" fill="#2563EB"/>
+<path d="M56.5 179.2L63.3 186.0M56.5 186.0L63.3 179.2" stroke="#B45309" stroke-width="2" fill="none"/>
+<circle cx="91.0" cy="200.5" r="3.2" fill="#2563EB"/>
+<path d="M75.6 197.1L82.4 203.9M75.6 203.9L82.4 197.1" stroke="#B45309" stroke-width="2" fill="none"/>
+<circle cx="110.1" cy="182.6" r="3.2" fill="#2563EB"/>
+<path d="M100.7 189.5L107.5 196.3M100.7 196.3L107.5 189.5" stroke="#B45309" stroke-width="2" fill="none"/>
+<circle cx="89.7" cy="145.4" r="3.2" fill="#2563EB"/>
+<circle cx="80.3" cy="145.4" r="3.2" fill="#2563EB"/>
+<text x="85.0" y="262.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle" >ammonia has a</text>
+<text x="85.0" y="279.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle" >lone pair on N</text>
+<text x="168.0" y="180.0" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#102A43" text-anchor="middle" >+</text>
+<circle cx="222.0" cy="175.0" r="20" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<text x="222.0" y="180.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >H&#8314;</text>
+<text x="222.0" y="262.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle" >H&#8314; has no</text>
+<text x="222.0" y="279.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle" >electrons</text>
+<line x1="262.0" y1="175.0" x2="312.0" y2="175.0" stroke="#102A43" stroke-width="2.5" marker-end="url(#ah)"/>
+<path d="M378.0 105 L370.0 105 L370.0 245 L378.0 245" fill="none" stroke="#102A43" stroke-width="2.5" />
+<path d="M502.0 105 L510.0 105 L510.0 245 L502.0 245" fill="none" stroke="#102A43" stroke-width="2.5" />
+<text x="514.0" y="120.0" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#047857" text-anchor="start" >+</text>
+<circle cx="440.0" cy="175.0" r="30" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<text x="440.0" y="180.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >N</text>
+<circle cx="465.7" cy="144.4" r="19" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<text x="465.7" y="149.4" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >H</text>
+<circle cx="414.3" cy="144.4" r="19" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<text x="414.3" y="149.4" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >H</text>
+<circle cx="414.3" cy="205.6" r="19" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<text x="414.3" y="210.6" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >H</text>
+<circle cx="465.7" cy="205.6" r="19" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<text x="465.7" y="210.6" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >H</text>
+<circle cx="451.8" cy="151.6" r="3.2" fill="#047857"/>
+<circle cx="461.0" cy="159.3" r="3.2" fill="#047857"/>
+<circle cx="419.0" cy="159.3" r="3.2" fill="#2563EB"/>
+<path d="M424.8 148.2L431.6 155.0M424.8 155.0L431.6 148.2" stroke="#B45309" stroke-width="2" fill="none"/>
+<circle cx="428.2" cy="198.4" r="3.2" fill="#2563EB"/>
+<path d="M415.6 187.3L422.4 194.1M415.6 194.1L422.4 187.3" stroke="#B45309" stroke-width="2" fill="none"/>
+<circle cx="461.0" cy="190.7" r="3.2" fill="#2563EB"/>
+<path d="M448.4 195.0L455.2 201.8M448.4 201.8L455.2 195.0" stroke="#B45309" stroke-width="2" fill="none"/>
+<line x1="462.0" y1="86.0" x2="466.0" y2="124.0" stroke="#047857" stroke-width="2" marker-end="url(#ag)"/>
+<text x="440.0" y="50.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857" text-anchor="middle" >dative bond: both electrons</text>
+<text x="440.0" y="67.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857" text-anchor="middle" >come from N</text>
+<text x="440.0" y="290.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >ammonium ion NH&#8324;&#8314;</text>
+<text x="440.0" y="310.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle" >all four N&#8211;H bonds are identical</text>
+</svg>

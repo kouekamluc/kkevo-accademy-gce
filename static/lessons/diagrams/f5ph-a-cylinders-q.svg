@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Measuring cylinders before and after a stone is lowered in">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<text x="150" y="40" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Before</text>
+<rect x="115" y="189.6" width="70" height="110.4" fill="#BFDBFE" stroke="none" stroke-width="0"/>
+<line x1="115" y1="189.6" x2="185" y2="189.6" stroke="#2563EB" stroke-width="2"/>
+<path d="M115 60 L115 300 L185 300 L185 60" fill="none" stroke="#102A43" stroke-width="3"/>
+<line x1="115" y1="300" x2="129" y2="300" stroke="#102A43" stroke-width="2"/>
+<line x1="115" y1="290.8" x2="123" y2="290.8" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="281.6" x2="123" y2="281.6" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="272.4" x2="123" y2="272.4" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="263.2" x2="123" y2="263.2" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="254" x2="129" y2="254" stroke="#102A43" stroke-width="2"/>
+<line x1="115" y1="244.8" x2="123" y2="244.8" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="235.6" x2="123" y2="235.6" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="226.4" x2="123" y2="226.4" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="217.2" x2="123" y2="217.2" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="208" x2="129" y2="208" stroke="#102A43" stroke-width="2"/>
+<line x1="115" y1="198.8" x2="123" y2="198.8" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="189.6" x2="123" y2="189.6" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="180.4" x2="123" y2="180.4" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="171.2" x2="123" y2="171.2" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="162" x2="129" y2="162" stroke="#102A43" stroke-width="2"/>
+<line x1="115" y1="152.8" x2="123" y2="152.8" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="143.6" x2="123" y2="143.6" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="134.4" x2="123" y2="134.4" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="125.2" x2="123" y2="125.2" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="116" x2="129" y2="116" stroke="#102A43" stroke-width="2"/>
+<line x1="115" y1="106.8" x2="123" y2="106.8" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="97.6" x2="123" y2="97.6" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="88.4" x2="123" y2="88.4" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="79.2" x2="123" y2="79.2" stroke="#102A43" stroke-width="1.5"/>
+<line x1="115" y1="70" x2="129" y2="70" stroke="#102A43" stroke-width="2"/>
+<text x="107" y="305" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">0</text>
+<text x="107" y="259" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">10</text>
+<text x="107" y="213" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">20</text>
+<text x="107" y="167" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">30</text>
+<text x="107" y="121" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">40</text>
+<text x="107" y="75" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">50</text>
+<text x="150" y="324" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">cm&#179;</text>
+<text x="410" y="40" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">After</text>
+<rect x="375" y="125.2" width="70" height="174.8" fill="#BFDBFE" stroke="none" stroke-width="0"/>
+<line x1="375" y1="125.2" x2="445" y2="125.2" stroke="#2563EB" stroke-width="2"/>
+<path d="M375 60 L375 300 L445 300 L445 60" fill="none" stroke="#102A43" stroke-width="3"/>
+<line x1="375" y1="300" x2="389" y2="300" stroke="#102A43" stroke-width="2"/>
+<line x1="375" y1="290.8" x2="383" y2="290.8" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="281.6" x2="383" y2="281.6" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="272.4" x2="383" y2="272.4" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="263.2" x2="383" y2="263.2" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="254" x2="389" y2="254" stroke="#102A43" stroke-width="2"/>
+<line x1="375" y1="244.8" x2="383" y2="244.8" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="235.6" x2="383" y2="235.6" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="226.4" x2="383" y2="226.4" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="217.2" x2="383" y2="217.2" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="208" x2="389" y2="208" stroke="#102A43" stroke-width="2"/>
+<line x1="375" y1="198.8" x2="383" y2="198.8" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="189.6" x2="383" y2="189.6" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="180.4" x2="383" y2="180.4" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="171.2" x2="383" y2="171.2" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="162" x2="389" y2="162" stroke="#102A43" stroke-width="2"/>
+<line x1="375" y1="152.8" x2="383" y2="152.8" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="143.6" x2="383" y2="143.6" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="134.4" x2="383" y2="134.4" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="125.2" x2="383" y2="125.2" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="116" x2="389" y2="116" stroke="#102A43" stroke-width="2"/>
+<line x1="375" y1="106.8" x2="383" y2="106.8" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="97.6" x2="383" y2="97.6" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="88.4" x2="383" y2="88.4" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="79.2" x2="383" y2="79.2" stroke="#102A43" stroke-width="1.5"/>
+<line x1="375" y1="70" x2="389" y2="70" stroke="#102A43" stroke-width="2"/>
+<text x="367" y="305" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">0</text>
+<text x="367" y="259" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">10</text>
+<text x="367" y="213" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">20</text>
+<text x="367" y="167" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">30</text>
+<text x="367" y="121" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">40</text>
+<text x="367" y="75" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">50</text>
+<ellipse cx="418" cy="286" rx="18" ry="13" fill="#94A3B8" stroke="#102A43" stroke-width="2"/>
+<text x="410" y="324" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">cm&#179;</text>
+<text x="280" y="350" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">Read the level at the bottom of the curved surface (meniscus).</text>
+</svg>

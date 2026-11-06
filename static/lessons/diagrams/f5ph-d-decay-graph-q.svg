@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Graph of count rate in counts per minute against time in hours</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280.0" y="24.0" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle">Count rate of a radioactive sample</text>
+<line x1="143.8" y1="50.0" x2="143.8" y2="290.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="143.8" y="310.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">2</text>
+<line x1="197.5" y1="50.0" x2="197.5" y2="290.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="197.5" y="310.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">4</text>
+<line x1="251.2" y1="50.0" x2="251.2" y2="290.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="251.2" y="310.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">6</text>
+<line x1="305.0" y1="50.0" x2="305.0" y2="290.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="305.0" y="310.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">8</text>
+<line x1="358.8" y1="50.0" x2="358.8" y2="290.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="358.8" y="310.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">10</text>
+<line x1="412.5" y1="50.0" x2="412.5" y2="290.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="412.5" y="310.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">12</text>
+<line x1="466.2" y1="50.0" x2="466.2" y2="290.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="466.2" y="310.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">14</text>
+<line x1="520.0" y1="50.0" x2="520.0" y2="290.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="520.0" y="310.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">16</text>
+<line x1="90.0" y1="260.0" x2="520.0" y2="260.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="82.0" y="265.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="end">100</text>
+<line x1="90.0" y1="230.0" x2="520.0" y2="230.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="82.0" y="235.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="end">200</text>
+<line x1="90.0" y1="200.0" x2="520.0" y2="200.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="82.0" y="205.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="end">300</text>
+<line x1="90.0" y1="170.0" x2="520.0" y2="170.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="82.0" y="175.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="end">400</text>
+<line x1="90.0" y1="140.0" x2="520.0" y2="140.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="82.0" y="145.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="end">500</text>
+<line x1="90.0" y1="110.0" x2="520.0" y2="110.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="82.0" y="115.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="end">600</text>
+<line x1="90.0" y1="80.0" x2="520.0" y2="80.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="82.0" y="85.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="end">700</text>
+<line x1="90.0" y1="50.0" x2="520.0" y2="50.0" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round"/>
+<text x="82.0" y="55.0" font-size="13" font-weight="400" fill="#64748B" text-anchor="end">800</text>
+<line x1="90.0" y1="45.0" x2="90.0" y2="290.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="90.0" y1="290.0" x2="525.0" y2="290.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M90.0,50.0 L97.2,60.8 L104.3,71.2 L111.5,81.1 L118.7,90.5 L125.8,99.5 L133.0,108.1 L140.2,116.3 L147.3,124.2 L154.5,131.7 L161.7,138.8 L168.8,145.6 L176.0,152.2 L183.2,158.4 L190.3,164.3 L197.5,170.0 L204.7,175.4 L211.8,180.6 L219.0,185.5 L226.2,190.3 L233.3,194.8 L240.5,199.1 L247.7,203.2 L254.8,207.1 L262.0,210.8 L269.2,214.4 L276.3,217.8 L283.5,221.1 L290.7,224.2 L297.8,227.2 L305.0,230.0 L312.2,232.7 L319.3,235.3 L326.5,237.8 L333.7,240.1 L340.8,242.4 L348.0,244.5 L355.2,246.6 L362.3,248.5 L369.5,250.4 L376.7,252.2 L383.8,253.9 L391.0,255.5 L398.2,257.1 L405.3,258.6 L412.5,260.0 L419.7,261.4 L426.8,262.6 L434.0,263.9 L441.2,265.1 L448.3,266.2 L455.5,267.3 L462.7,268.3 L469.8,269.3 L477.0,270.2 L484.2,271.1 L491.3,272.0 L498.5,272.8 L505.7,273.5 L512.8,274.3 L520.0,275.0" fill="none" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="305.0" y="336.0" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">time / hours</text>
+<text transform="translate(22,170) rotate(-90)" font-size="14" font-weight="600" fill="#102A43" text-anchor="middle">count rate / counts per minute</text>
+</svg>

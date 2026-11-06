@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Penetration of alpha, beta and gamma radiation</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280.0" y="24.0" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle">Which barrier stops which radiation?</text>
+<rect x="20.0" y="70.0" width="60.0" height="250.0" rx="4" fill="#E2E8F0" stroke="#102A43" stroke-width="2.5"/>
+<text x="50.0" y="200.0" font-size="13" font-weight="700" fill="#102A43" text-anchor="middle">Source</text>
+<rect x="208.0" y="60.0" width="8.0" height="270.0" rx="0" fill="#FFFFFF" stroke="#B45309" stroke-width="2.5"/>
+<text x="212.0" y="52.0" font-size="14" font-weight="700" fill="#B45309" text-anchor="middle">Paper</text>
+<rect x="305.0" y="60.0" width="14.0" height="270.0" rx="0" fill="#CBD5E1" stroke="#102A43" stroke-width="2.5"/>
+<text x="312.0" y="52.0" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">Aluminium</text>
+<text x="312.0" y="345.0" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">(a few mm)</text>
+<rect x="410.0" y="60.0" width="45.0" height="270.0" rx="0" fill="#94A3B8" stroke="#102A43" stroke-width="2.5"/>
+<text x="432.0" y="52.0" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">Lead (thick)</text>
+<line x1="90.0" y1="110.0" x2="186.8" y2="110.0" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/><polygon points="194.0,110.0 183.2,115.2 183.2,104.8" fill="#2563EB"/>
+<text x="95.0" y="100.0" font-size="14" font-weight="700" fill="#102A43" text-anchor="start">Alpha</text>
+<line x1="90.0" y1="195.0" x2="286.8" y2="195.0" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/><polygon points="294.0,195.0 283.2,200.2 283.2,189.8" fill="#2563EB"/>
+<text x="95.0" y="185.0" font-size="14" font-weight="700" fill="#102A43" text-anchor="start">Beta</text>
+<line x1="90.0" y1="280.0" x2="442.8" y2="280.0" stroke="#047857" stroke-width="3" stroke-linecap="round"/><polygon points="450.0,280.0 439.2,285.2 439.2,274.8" fill="#047857"/>
+<text x="95.0" y="270.0" font-size="14" font-weight="700" fill="#102A43" text-anchor="start">Gamma</text>
+<text x="212.0" y="345.0" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle"></text>
+<line x1="458.0" y1="280.0" x2="525.0" y2="280.0" stroke="#047857" stroke-width="2" stroke-dasharray="5 5" stroke-linecap="round"/>
+<text x="500.0" y="262.0" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">a little</text>
+<text x="500.0" y="304.0" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">gets through</text>
+</svg>

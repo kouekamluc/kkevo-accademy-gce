@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A ray entering glass from air bends towards the normal; i is 50 degrees and r is about 31 degrees for glass of index 1.5</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="40" y="190" width="480" height="150" rx="0" fill="#EFF6FF" stroke="#EFF6FF" stroke-width="2"/>
+<line x1="40" y1="190" x2="520" y2="190" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="280" y1="50" x2="280" y2="330" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 6"/>
+<line x1="180.4" y1="106.4" x2="280" y2="190" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<polygon points="242.1,158.2 226.4,150.6 231.9,144" fill="#2563EB"/>
+<line x1="280" y1="190" x2="346.4" y2="301.8" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<polygon points="324.4,264.8 312.1,252.5 319.5,248.1" fill="#047857"/>
+<path d="M241.7,157.9 A50,50 0 0 1 280,140" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M280,260 A70,70 0 0 0 315.7,250.2" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="244" y="122" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700" font-style="italic">i</text>
+<text x="314" y="282" font-size="16" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700" font-style="italic">r</text>
+<text x="150.4" y="92.4" font-size="14" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">incident ray</text>
+<text x="382.4" y="311.8" font-size="14" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">refracted ray</text>
+<text x="70" y="172" font-size="15" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">air</text>
+<text x="70" y="214" font-size="15" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">glass</text>
+<text x="314" y="70" font-size="14" fill="#64748B" text-anchor="start" dominant-baseline="middle" font-weight="700">normal</text>
+<text x="480" y="172" font-size="13" fill="#102A43" text-anchor="end" dominant-baseline="middle" font-weight="400">boundary</text>
+<text x="280" y="350" font-size="14" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">n = sin i / sin r = sin 50 / sin 30.7 = 1.5</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A reflex arc with parts marked P, Q, R, S and T</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="400" cy="190" r="88" fill="#F8FAFC" stroke="#102A43" stroke-width="2.5"/>
+<path d="M400,190 C370,160 345,130 370,118 C390,112 398,150 400,170 C402,150 410,112 430,118 C455,130 430,160 400,190 C430,220 455,250 430,262 C410,268 402,230 400,210 C398,230 390,268 370,262 C345,250 370,220 400,190 Z" fill="#E2E8F0" stroke="#102A43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="400" cy="190" r="6" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<rect x="15" y="40" width="80" height="24" rx="0" fill="#FDE68A" stroke="#B45309" stroke-width="2"/>
+<circle cx="55" cy="40" r="6" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+<path d="M55,64 C75,100 140,95 230,95" fill="none" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="260" cy="95" rx="16" ry="11" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5"/>
+<path d="M276,95 C320,95 360,100 384,125" fill="none" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M384,125 C392,150 392,170 388,206" fill="none" stroke="#047857" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="380" cy="235" r="10" fill="#DBEAFE" stroke="#B45309" stroke-width="2.5"/>
+<path d="M388,206 L380,225" fill="none" stroke="#047857" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M370,240 C320,285 200,290 120,290" fill="none" stroke="#B45309" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="80" cy="300" rx="62" ry="22" fill="#FEE2E2" stroke="#B45309" stroke-width="2.5"/>
+<line x1="150" y1="96" x2="190" y2="96" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="190,96 181.0,100.3 181.0,91.7" fill="#2563EB"/>
+<line x1="250" y1="289" x2="200" y2="290" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="200,290 208.9,285.5 209.1,294.2" fill="#B45309"/>
+<text x="20" y="20" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">P</text>
+<text x="150" y="62" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Q</text>
+<text x="400" y="62" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">R</text>
+<line x1="400" y1="72" x2="392" y2="140" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="240" y="322" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">S</text>
+<line x1="240" y1="310" x2="240" y2="292" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="80" y="335" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">T</text>
+</svg>

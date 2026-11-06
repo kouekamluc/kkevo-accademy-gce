@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Force-time graph: force rises to 500 N in 0.01 s, stays at 500 N until 0.03 s, then falls to 0 at 0.04 s">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<line x1="78" y1="300" x2="530" y2="300" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="78" y1="257.3" x2="530" y2="257.3" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="78" y1="214.7" x2="530" y2="214.7" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="78" y1="172" x2="530" y2="172" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="78" y1="129.3" x2="530" y2="129.3" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="78" y1="86.7" x2="530" y2="86.7" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="78" y1="44" x2="530" y2="44" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="78" y1="300" x2="78" y2="44" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="191" y1="300" x2="191" y2="44" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="304" y1="300" x2="304" y2="44" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="417" y1="300" x2="417" y2="44" stroke="#E2E8F0" stroke-width="1"/>
+<line x1="530" y1="300" x2="530" y2="44" stroke="#E2E8F0" stroke-width="1"/>
+<polygon points="78,300 191,86.7 417,86.7 530,300 530,300 78,300" fill="#DBEAFE" stroke="none" stroke-width="0" stroke-linejoin="round"/>
+<line x1="78" y1="300" x2="540" y2="300" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="78" y1="300" x2="78" y2="32" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="78" y1="300" x2="78" y2="305" stroke="#102A43" stroke-width="2"/>
+<text x="78" y="320" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0</text>
+<line x1="191" y1="300" x2="191" y2="305" stroke="#102A43" stroke-width="2"/>
+<text x="191" y="320" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.01</text>
+<line x1="304" y1="300" x2="304" y2="305" stroke="#102A43" stroke-width="2"/>
+<text x="304" y="320" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.02</text>
+<line x1="417" y1="300" x2="417" y2="305" stroke="#102A43" stroke-width="2"/>
+<text x="417" y="320" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.03</text>
+<line x1="530" y1="300" x2="530" y2="305" stroke="#102A43" stroke-width="2"/>
+<text x="530" y="320" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.04</text>
+<line x1="73" y1="300" x2="78" y2="300" stroke="#102A43" stroke-width="2"/>
+<text x="69" y="305" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">0</text>
+<line x1="73" y1="257.3" x2="78" y2="257.3" stroke="#102A43" stroke-width="2"/>
+<text x="69" y="262.3" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">100</text>
+<line x1="73" y1="214.7" x2="78" y2="214.7" stroke="#102A43" stroke-width="2"/>
+<text x="69" y="219.7" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">200</text>
+<line x1="73" y1="172" x2="78" y2="172" stroke="#102A43" stroke-width="2"/>
+<text x="69" y="177" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">300</text>
+<line x1="73" y1="129.3" x2="78" y2="129.3" stroke="#102A43" stroke-width="2"/>
+<text x="69" y="134.3" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">400</text>
+<line x1="73" y1="86.7" x2="78" y2="86.7" stroke="#102A43" stroke-width="2"/>
+<text x="69" y="91.7" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">500</text>
+<line x1="73" y1="44" x2="78" y2="44" stroke="#102A43" stroke-width="2"/>
+<text x="69" y="49" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">600</text>
+<text x="304" y="344" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">Time (s)</text>
+<text x="22" y="172" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" transform="rotate(-90 22 172)">Force (N)</text>
+<polyline points="78,300 191,86.7 417,86.7 530,300" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="78" cy="300" r="4.5" fill="#ffffff" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="191" cy="86.7" r="4.5" fill="#ffffff" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="417" cy="86.7" r="4.5" fill="#ffffff" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="530" cy="300" r="4.5" fill="#ffffff" stroke="#2563EB" stroke-width="2.5"/>
+</svg>

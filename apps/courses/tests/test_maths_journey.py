@@ -71,6 +71,7 @@ def start(client, practice_set, mode="practice"):
     ("mathematics", 15, 2), ("additional-mathematics", 8, 2), ("computer-science", 5, 2), ("ict", 7, 2),
     ("history", 7, 1),  # History essays cannot be auto-marked, so it has a Paper 1 mock only
     ("geography", 35, 2), ("logic", 50, 2),
+    ("english-language", 35, 2), ("physics", 41, 2), ("chemistry", 42, 2), ("biology", 40, 2),
     ("pure-mathematics-with-mechanics", 10, 2), ("pure-mathematics-with-statistics", 10, 2)])
 def test_o_level_courses_have_lessons_practice_and_mocks_for_every_topic(db, subject, min_topics, min_mocks):
     level = "lower-sixth" if subject.startswith("pure-mathematics") else "form-5"

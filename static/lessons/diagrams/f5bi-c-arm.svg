@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Antagonistic muscles of the arm: biceps and triceps in bending and straightening the forearm</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="20" y1="190" x2="130" y2="190" stroke="#102A43" stroke-width="9" stroke-linecap="round"/>
+<line x1="20" y1="190" x2="130" y2="190" stroke="#F3E8D0" stroke-width="4" stroke-linecap="round"/>
+<line x1="130" y1="190" x2="172.26182617406994" y2="99.36922129633501" stroke="#102A43" stroke-width="9" stroke-linecap="round"/>
+<line x1="130" y1="190" x2="172.26182617406994" y2="99.36922129633501" stroke="#F3E8D0" stroke-width="4" stroke-linecap="round"/>
+<circle cx="130" cy="190" r="7" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/>
+<path d="M45,176 C76.3,185.9 113.8,178.2 138.678547852221,156.8107663889005 C107.4,146.9 69.9,154.6 45,176 Z" fill="#ECFDF5" stroke="#047857" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M45,204 C72.4,207.4 108.8,206.6 136,202 C108.6,198.6 72.2,199.4 45,204 Z" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="140" y="40" font-size="15" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">Arm bends</text>
+<text x="140" y="62" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">biceps contracts, triceps relaxes</text>
+<line x1="300" y1="190" x2="410" y2="190" stroke="#102A43" stroke-width="9" stroke-linecap="round"/>
+<line x1="300" y1="190" x2="410" y2="190" stroke="#F3E8D0" stroke-width="4" stroke-linecap="round"/>
+<line x1="410" y1="190" x2="510" y2="190" stroke="#102A43" stroke-width="9" stroke-linecap="round"/>
+<line x1="410" y1="190" x2="510" y2="190" stroke="#F3E8D0" stroke-width="4" stroke-linecap="round"/>
+<circle cx="410" cy="190" r="7" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/>
+<path d="M325,176 C359.5,180.0 405.5,180.0 440.0,176.0 C405.5,172.0 359.5,172.0 325,176 Z" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M325,204 C352.7,219.4 389.1,218.6 416,202 C388.3,186.6 351.9,187.4 325,204 Z" fill="#ECFDF5" stroke="#047857" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="420" y="40" font-size="15" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">Arm straightens</text>
+<text x="420" y="62" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">triceps contracts, biceps relaxes</text>
+<text x="15" y="120" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Biceps</text>
+<line x1="40" y1="130" x2="80" y2="168" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="15" y="262" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Triceps</text>
+<line x1="45" y1="252" x2="85" y2="206" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="285" y="110" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Humerus</text>
+<line x1="320" y1="120" x2="320" y2="186" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="440" y="110" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Radius and ulna</text>
+<line x1="480" y1="120" x2="480" y2="186" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="380" y="290" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Elbow joint</text>
+<line x1="410" y1="280" x2="410" y2="200" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

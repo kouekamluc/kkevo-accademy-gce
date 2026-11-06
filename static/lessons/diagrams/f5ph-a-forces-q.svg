@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="A 5 kg block pulled along a floor by a 30 N force against 10 N friction; weight and normal reaction are also shown">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<rect x="220" y="155" width="120" height="70" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/>
+<text x="280" y="196" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">5 kg</text>
+<line x1="120" y1="225" x2="600" y2="225" stroke="#94A3B8" stroke-width="1.5"/>
+<line x1="340" y1="190" x2="430" y2="190" stroke="#2563EB" stroke-width="4" marker-end="url(#ab)"/>
+<text x="385" y="176" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB" text-anchor="middle">Pull 30 N</text>
+<line x1="220" y1="190" x2="190" y2="190" stroke="#B45309" stroke-width="4" marker-end="url(#aa)"/>
+<text x="214" y="176" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#B45309" text-anchor="end">Friction</text>
+<line x1="280" y1="155" x2="280" y2="75" stroke="#047857" stroke-width="4" marker-end="url(#ag)"/>
+<text x="292" y="89" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="start">Normal reaction R</text>
+<line x1="280" y1="225" x2="280" y2="305" stroke="#102A43" stroke-width="4" marker-end="url(#ah)"/>
+<text x="298" y="295" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="start">Weight</text>
+</svg>

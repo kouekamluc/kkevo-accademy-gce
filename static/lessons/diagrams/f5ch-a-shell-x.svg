@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Electron shell diagram of an atom of element X with 2 electrons in the first shell, 8 in the second and 3 in the third">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker></defs>
+<circle cx="280.0" cy="175.0" r="34" fill="none" stroke="#94A3B8" stroke-width="2"/>
+<circle cx="280.0" cy="175.0" r="62" fill="none" stroke="#94A3B8" stroke-width="2"/>
+<circle cx="280.0" cy="175.0" r="90" fill="none" stroke="#94A3B8" stroke-width="2"/>
+<circle cx="280.0" cy="175.0" r="18" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<text x="280.0" y="180.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" >X</text>
+<circle cx="280.0" cy="141.0" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="280.0" cy="209.0" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="258.8" cy="116.7" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="223.8" cy="148.8" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="221.7" cy="196.2" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="253.8" cy="231.2" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="301.2" cy="233.3" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="336.2" cy="201.2" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="338.3" cy="153.8" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="306.2" cy="118.8" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="222.1" cy="106.1" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="249.2" cy="259.6" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="368.6" cy="159.4" r="5.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<text x="280.0" y="24.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" >An atom of element X</text>
+<text x="280.0" y="300.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="middle" >Each dot is one electron.</text>
+</svg>

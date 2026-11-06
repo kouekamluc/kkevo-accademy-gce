@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Section through a kidney showing cortex, medulla, pelvis, ureter and the renal blood vessels</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<path d="M250,40 C140,40 100,110 110,190 C120,270 190,320 250,310 C300,300 300,250 290,210 C280,180 290,160 300,130 C310,80 300,40 250,40 Z" fill="#EFF6FF" stroke="#102A43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M222,70 C160,75 140,120 150,190 C158,250 200,282 240,276 C262,270 262,240 258,210 C254,170 262,150 266,130 C272,90 262,68 222,70 Z" fill="#ECFDF5" stroke="#047857" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M240,150 C205,160 190,200 215,240 C235,265 262,235 258,200 C256,170 262,150 240,150 Z" fill="#FFFFFF" stroke="#B45309" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="268" y="108" width="16" height="118" rx="0" fill="none" stroke="none" stroke-width="0"/>
+<path d="M255,262 C262,290 262,310 262,340" fill="none" stroke="#102A43" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M255,262 C262,290 262,310 262,340" fill="none" stroke="#FDE68A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M296,190 L380,150" fill="none" stroke="#102A43" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M296,190 L380,150" fill="none" stroke="#FECACA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M296,220 L380,250" fill="none" stroke="#102A43" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M296,220 L380,250" fill="none" stroke="#EFF6FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="392" y="150" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Renal artery</text>
+<text x="392" y="252" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Renal vein</text>
+<text x="280" y="340" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Ureter</text>
+<text x="20" y="80" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Cortex</text>
+<line x1="70" y1="80" x2="122" y2="100" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="20" y="150" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Medulla</text>
+<line x1="78" y1="150" x2="156" y2="160" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="20" y="235" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Pelvis</text>
+<line x1="62" y1="235" x2="218" y2="228" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

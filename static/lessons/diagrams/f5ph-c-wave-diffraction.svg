@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Water waves meeting a wide gap pass through with little bending; waves meeting a narrow gap spread out in circles</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="150" y="22" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">Wide gap</text>
+<line x1="130" y1="50" x2="130" y2="110" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+<line x1="130" y1="270" x2="130" y2="330" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+<line x1="112" y1="60" x2="112" y2="320" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="88" y1="60" x2="88" y2="320" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="64" y1="60" x2="64" y2="320" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="148" y1="116" x2="148" y2="264" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="172" y1="116" x2="172" y2="264" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="196" y1="116" x2="196" y2="264" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<text x="420" y="22" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">Narrow gap</text>
+<line x1="400" y1="50" x2="400" y2="178" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+<line x1="400" y1="202" x2="400" y2="330" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+<line x1="382" y1="60" x2="382" y2="320" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="358" y1="60" x2="358" y2="320" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="334" y1="60" x2="334" y2="320" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<path d="M402,166 A24,24 0 0 1 402,214" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M402,142 A48,48 0 0 1 402,238" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M402,118 A72,72 0 0 1 402,262" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="348" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="400">gap much wider than wavelength</text>
+<text x="420" y="348" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="400">gap about one wavelength</text>
+</svg>

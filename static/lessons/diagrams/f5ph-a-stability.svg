@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="A tilted block: it falls back if the weight line is inside the base, and topples if outside">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<line x1="20" y1="290" x2="270" y2="290" stroke="#102A43" stroke-width="3"/>
+<g transform="rotate(-20 100 290)"><rect x="100" y="150" width="80" height="140" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/></g>
+<circle cx="113.6" cy="210.5" r="5" fill="#047857" stroke="#047857" stroke-width="1"/>
+<line x1="113.6" y1="210.5" x2="113.6" y2="290" stroke="#047857" stroke-width="2.5" stroke-dasharray="6 4"/>
+<circle cx="100" cy="290" r="4.5" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<text x="123.6" y="202.5" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="start">G</text>
+<text x="140" y="52" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Tilted a little</text>
+<text x="140" y="76" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="middle">Falls back</text>
+<text x="100" y="316" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">pivot point</text>
+<line x1="300" y1="290" x2="550" y2="290" stroke="#102A43" stroke-width="3"/>
+<g transform="rotate(-40 380 290)"><rect x="380" y="150" width="80" height="140" fill="#FEF3C7" stroke="#B45309" stroke-width="2.5"/></g>
+<circle cx="365.6" cy="210.7" r="5" fill="#047857" stroke="#047857" stroke-width="1"/>
+<line x1="365.6" y1="210.7" x2="365.6" y2="290" stroke="#B91C1C" stroke-width="2.5" stroke-dasharray="6 4"/>
+<circle cx="380" cy="290" r="4.5" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<text x="375.6" y="202.7" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="start">G</text>
+<text x="420" y="52" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Tilted too far</text>
+<text x="420" y="76" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#B91C1C" text-anchor="middle">Topples over</text>
+<text x="380" y="316" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">pivot point</text>
+</svg>

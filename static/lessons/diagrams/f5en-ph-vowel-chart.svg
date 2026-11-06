@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Vowel chart of the twelve pure vowels of British English">
+<rect width="560" height="360" fill="#fff"/>
+<polygon points="80,62 480,62 480,306 160,306" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<line x1="149" y1="153" x2="450" y2="153" stroke="#102A43" stroke-width="2" stroke-dasharray="4 5" opacity="0.0"/>
+<line x1="175" y1="213" x2="450" y2="213" stroke="#102A43" stroke-width="2" stroke-dasharray="4 5" opacity="0.0"/>
+<text x="80" y="40" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">FRONT</text>
+<text x="480" y="40" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="end">BACK</text>
+<text x="12" y="70" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">close</text>
+<text x="12" y="296" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">open</text>
+<circle cx="122" cy="92" r="19" fill="#fff" stroke="#047857" stroke-width="2"/>
+<text x="122" y="98" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#047857" text-anchor="middle">i&#720;</text>
+<text x="122" y="128" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">fleece</text>
+<circle cx="450" cy="92" r="19" fill="#fff" stroke="#047857" stroke-width="2"/>
+<text x="450" y="98" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#047857" text-anchor="middle">u&#720;</text>
+<text x="450" y="128" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">goose</text>
+<circle cx="220" cy="123" r="19" fill="#fff" stroke="#2563EB" stroke-width="2"/>
+<text x="220" y="129" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#2563EB" text-anchor="middle">&#618;</text>
+<text x="220" y="159" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">kit</text>
+<circle cx="368" cy="123" r="19" fill="#fff" stroke="#2563EB" stroke-width="2"/>
+<text x="368" y="129" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#2563EB" text-anchor="middle">&#650;</text>
+<text x="368" y="159" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">foot</text>
+<circle cx="164" cy="174" r="19" fill="#fff" stroke="#2563EB" stroke-width="2"/>
+<text x="164" y="180" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#2563EB" text-anchor="middle">e</text>
+<text x="164" y="210" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">dress</text>
+<circle cx="333" cy="172" r="19" fill="#fff" stroke="#2563EB" stroke-width="2"/>
+<text x="333" y="178" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#2563EB" text-anchor="middle">&#601;</text>
+<text x="333" y="208" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">about</text>
+<circle cx="268" cy="147" r="19" fill="#fff" stroke="#047857" stroke-width="2"/>
+<text x="268" y="153" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#047857" text-anchor="middle">&#604;&#720;</text>
+<text x="268" y="183" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">nurse</text>
+<circle cx="444" cy="174" r="19" fill="#fff" stroke="#047857" stroke-width="2"/>
+<text x="444" y="180" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#047857" text-anchor="middle">&#596;&#720;</text>
+<text x="444" y="210" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">thought</text>
+<circle cx="215" cy="245" r="19" fill="#fff" stroke="#2563EB" stroke-width="2"/>
+<text x="215" y="251" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#2563EB" text-anchor="middle">&#230;</text>
+<text x="215" y="219" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">trap</text>
+<circle cx="333" cy="245" r="19" fill="#fff" stroke="#2563EB" stroke-width="2"/>
+<text x="333" y="251" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#2563EB" text-anchor="middle">&#652;</text>
+<text x="333" y="281" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">strut</text>
+<circle cx="385" cy="269" r="19" fill="#fff" stroke="#2563EB" stroke-width="2"/>
+<text x="385" y="275" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#2563EB" text-anchor="middle">&#594;</text>
+<text x="385" y="243" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">lot</text>
+<circle cx="450" cy="274" r="19" fill="#fff" stroke="#047857" stroke-width="2"/>
+<text x="450" y="280" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#047857" text-anchor="middle">&#593;&#720;</text>
+<text x="450" y="248" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">start</text>
+<circle cx="150" cy="341" r="8" fill="#fff" stroke="#2563EB" stroke-width="2"/>
+<text x="166" y="346" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">short vowel</text>
+<circle cx="300" cy="341" r="8" fill="#fff" stroke="#047857" stroke-width="2"/>
+<text x="316" y="346" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">long vowel</text>
+</svg>

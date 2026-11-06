@@ -1,0 +1,33 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<rect x="55" y="130" width="250" height="44" rx="10" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<rect x="65" y="140" width="52" height="24" fill="#FDE68A" stroke="#B45309" stroke-width="2"/>
+<circle cx="160" cy="148" r="5" fill="#CBD5E1" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="173" cy="148" r="5" fill="#CBD5E1" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="186" cy="148" r="5" fill="#CBD5E1" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="199" cy="148" r="5" fill="#CBD5E1" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="212" cy="148" r="5" fill="#CBD5E1" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="225" cy="148" r="5" fill="#CBD5E1" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="160" cy="162" r="5" fill="#CBD5E1" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="173" cy="162" r="5" fill="#CBD5E1" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="186" cy="162" r="5" fill="#CBD5E1" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="199" cy="162" r="5" fill="#CBD5E1" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="212" cy="162" r="5" fill="#CBD5E1" stroke="#102A43" stroke-width="1.5"/>
+<polygon points="205,237 190,275 220,275" fill="#102A43"/>
+<path d="M205 230 C 190 210, 205 200, 205 180 C 220 200, 222 213, 205 230 Z" fill="#F59E0B" stroke="#B45309" stroke-width="2"/>
+<text x="60" y="100" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">Liquid paraffin on</text>
+<text x="60" y="118" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">mineral wool</text>
+<text x="215" y="100" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">Broken porcelain</text>
+<text x="215" y="118" font-size="13" fill="#102A43" text-anchor="start" font-weight="400">(catalyst), heated</text>
+<text x="205" y="296" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Burner</text>
+<path d="M305 152 L 420 152 L 420 235" fill="none" stroke="#102A43" stroke-width="3"/>
+<rect x="340" y="250" width="200" height="75" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<rect x="342" y="270" width="196" height="53" fill="#BFDBFE"/>
+<rect x="395" y="200" width="50" height="100" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<rect x="397" y="262" width="46" height="36" fill="#BFDBFE"/>
+<text x="500" y="225" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">Gas</text>
+<text x="500" y="243" font-size="13" fill="#047857" text-anchor="middle" font-weight="400">collects</text>
+<line x1="470" y1="228" x2="448" y2="238" stroke="#047857" stroke-width="2"/>
+<text x="440" y="342" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Water in a trough</text>
+<text x="330" y="80" font-size="14" fill="#B45309" text-anchor="start" font-weight="700">Heat gently, then strongly</text>
+</svg>

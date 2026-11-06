@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A concave mirror forms a real, inverted, smaller image of an object placed beyond the centre of curvature</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="20" y1="170" x2="540" y2="170" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+<polyline points="453.2,70 456.6,76.1 459.8,82.3 462.7,88.7 465.4,95.1 467.9,101.6 470.2,108.2 472.3,114.9 474.1,121.6 475.6,128.4 477,135.3 478.1,142.2 478.9,149.1 479.5,156 479.9,163 480,170 479.9,177 479.5,184 478.9,190.9 478.1,197.8 477,204.7 475.6,211.6 474.1,218.4 472.3,225.1 470.2,231.8 467.9,238.4 465.4,244.9 462.7,251.3 459.8,257.7 456.6,263.9 453.2,270" fill="none" stroke="#102A43" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="140" y1="120" x2="140" y2="170" stroke="#102A43" stroke-width="4" stroke-linecap="round"/>
+<text x="140" y="106" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">object</text>
+<line x1="338.3" y1="170" x2="338.3" y2="190.8" stroke="#047857" stroke-width="4" stroke-linecap="round"/>
+<text x="338.3" y="148" font-size="14" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">image</text>
+<line x1="140" y1="120" x2="480" y2="120" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="319,120 302.1,124.3 302.1,115.7" fill="#2563EB"/>
+<line x1="480" y1="120" x2="338.3" y2="190.8" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="480" y1="120" x2="338.3" y2="190.8" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="408.2,155.9 421.4,144.5 425.2,152.2" fill="#2563EB"/>
+<line x1="140" y1="120" x2="480" y2="241.4" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="318.5,183.7 301.1,182.1 304,174" fill="#B45309"/>
+<circle cx="280" cy="170" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="190" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<circle cx="380" cy="170" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="380" y="190" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">F</text>
+<text x="280" y="330" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">Object beyond C: image between F and C, real, inverted, smaller</text>
+<text x="20" y="25" font-size="13" fill="#2563EB" text-anchor="start" dominant-baseline="middle" font-weight="700">blue ray: parallel to axis, reflects through F</text>
+<text x="20" y="45" font-size="13" fill="#B45309" text-anchor="start" dominant-baseline="middle" font-weight="700">amber ray: through C, reflects back along itself</text>
+</svg>

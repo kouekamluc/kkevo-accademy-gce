@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A cell of EMF E with internal resistance r inside the dashed box, connected to an external resistor R, with an ammeter and a voltmeter across R</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="55" y="126" width="70" height="150" rx="0" fill="#F8FAFC" stroke-dasharray="7 5" stroke="#64748B" stroke-width="2"/>
+<line x1="72" y1="159" x2="108" y2="159" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="81" y1="171" x2="99" y2="171" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+<text x="60" y="157" font-size="16" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">+</text>
+<text x="60" y="175" font-size="16" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">&#8722;</text>
+<line x1="90" y1="110" x2="90" y2="126" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="90" y1="126" x2="90" y2="159" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="90" y1="171" x2="90" y2="194" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<rect x="80" y="194" width="20" height="50" rx="0" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<line x1="90" y1="244" x2="90" y2="276" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="90" y1="276" x2="90" y2="300" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="110" y="219" font-size="16" fill="#B45309" text-anchor="start" dominant-baseline="middle" font-weight="700" font-style="italic">r</text>
+<text x="114" y="165" font-size="16" fill="#B45309" text-anchor="start" dominant-baseline="middle" font-weight="700" font-style="italic">E</text>
+<text x="135" y="260" font-size="13" fill="#64748B" text-anchor="start" dominant-baseline="middle" font-weight="400">cell</text>
+<line x1="90" y1="110" x2="90" y2="110" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="90" y1="110" x2="250" y2="110" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="250" y1="110" x2="270" y2="110" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="330" y1="110" x2="350" y2="110" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<rect x="270" y="98" width="60" height="24" rx="0" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="300" y="138" font-size="14" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">R</text>
+<line x1="350" y1="110" x2="480" y2="110" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="480" y1="110" x2="480" y2="300" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="480" y1="300" x2="90" y2="300" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<circle cx="480" cy="205" r="16" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+<text x="480" y="205" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<line x1="250" y1="110" x2="250" y2="60" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="250" y1="60" x2="284" y2="60" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<circle cx="300" cy="60" r="16" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+<text x="300" y="60" font-size="16" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="700">V</text>
+<line x1="316" y1="60" x2="350" y2="60" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="350" y1="60" x2="350" y2="110" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="300" y="36" font-size="13" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="400">voltmeter</text>
+<text x="454" y="205" font-size="13" fill="#2563EB" text-anchor="end" dominant-baseline="middle" font-weight="400">ammeter</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Mole map: mass, particles, gas volume and solutions all connect through moles</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker></defs>
+<rect x="225" y="152" width="110" height="56" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280" y="176" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">Amount</text>
+<text x="280" y="194" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">(mol)</text>
+<rect x="10" y="152" width="110" height="56" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="65" y="185" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Mass (g)</text>
+<rect x="440" y="152" width="110" height="56" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="495" y="176" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Number of</text>
+<text x="495" y="194" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">particles</text>
+<rect x="170" y="16" width="220" height="56" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="40" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Solution: c (mol/dm&#179;)</text>
+<text x="280" y="58" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">and V (dm&#179;)</text>
+<rect x="190" y="288" width="180" height="56" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="321" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Gas volume (dm&#179;)</text>
+<line x1="120" y1="170" x2="222" y2="170" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="171" y="160" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">&#247; M</text>
+<line x1="225" y1="198" x2="123" y2="198" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="174" y="222" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">&#215; M</text>
+<line x1="337" y1="170" x2="437" y2="170" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="387" y="160" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">&#215; N</text>
+<line x1="440" y1="198" x2="338" y2="198" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="389" y="222" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">&#247; N</text>
+<line x1="255" y1="74" x2="255" y2="150" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="245" y="118" font-size="14" fill="#102A43" text-anchor="end" font-weight="400">n = c &#215; V</text>
+<line x1="305" y1="150" x2="305" y2="74" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="315" y="118" font-size="14" fill="#102A43" text-anchor="start" font-weight="400">c = n &#247; V</text>
+<line x1="255" y1="210" x2="255" y2="286" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="245" y="252" font-size="14" fill="#102A43" text-anchor="end" font-weight="400">&#215; 24</text>
+<line x1="305" y1="286" x2="305" y2="212" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="315" y="252" font-size="14" fill="#102A43" text-anchor="start" font-weight="400">&#247; 24</text>
+<text x="10" y="290" font-size="13" fill="#102A43" text-anchor="start" font-weight="400">M = molar mass (g/mol)</text>
+<text x="10" y="312" font-size="13" fill="#102A43" text-anchor="start" font-weight="400">N = 6.02&#215;10&#178;&#179; per mol</text>
+<text x="550" y="312" font-size="13" fill="#102A43" text-anchor="end" font-weight="400">24 dm&#179;/mol at room</text>
+<text x="550" y="330" font-size="13" fill="#102A43" text-anchor="end" font-weight="400">temperature (22.4 at stp)</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A nephron with its blood vessels</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="130" cy="78" r="38" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<circle cx="130" cy="78" r="20" fill="#FFFFFF" stroke="#047857" stroke-width="2.5"/>
+<path d="M118,78 q6,-10 12,0 q6,10 12,0" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="40" y1="40" x2="100" y2="68" stroke="#102A43" stroke-width="6" stroke-linecap="round"/>
+<line x1="160" y1="68" x2="225" y2="44" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M130,116 L144,130.83333333333334 L116,145.66666666666666 L144,160.5 L116,175.33333333333334 L144,190.16666666666669 L130,205.0" fill="none" stroke="#102A43" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M130,116 L144,130.83333333333334 L116,145.66666666666666 L144,160.5 L116,175.33333333333334 L144,190.16666666666669 L130,205.0" fill="none" stroke="#DBEAFE" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M130,205 L130,300 Q160,330 190,300 L190,205" fill="none" stroke="#102A43" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M130,205 L130,300 Q160,330 190,300 L190,205" fill="none" stroke="#DBEAFE" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M190,205 L202,188.75 L178,172.5 L202,156.25 L190,140.0 L400,140 L400,330" fill="none" stroke="#102A43" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M190,205 L202,188.75 L178,172.5 L202,156.25 L190,140.0 L400,140 L400,330" fill="none" stroke="#DBEAFE" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="400" y1="300" x2="400" y2="342" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<polygon points="400,342 395.7,333.0 404.3,333.0" fill="#B45309"/>
+<path d="M160,135 q-9,12 0,24 q9,12 0,24 q-9,12 0,24 q9,12 0,24 q-9,12 0,24 q9,12 0,24" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="20" y1="215" x2="540" y2="215" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="6 6"/>
+<text x="550" y="200" font-size="13" fill="#475569" text-anchor="end" dominant-baseline="middle">cortex</text>
+<text x="550" y="232" font-size="13" fill="#475569" text-anchor="end" dominant-baseline="middle">medulla</text>
+<text x="20" y="18" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Afferent arteriole (wide)</text>
+<line x1="60" y1="49" x2="40" y2="28" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="235" y="30" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Efferent arteriole (narrow)</text>
+<text x="250" y="90" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Glomerulus</text>
+<line x1="146" y1="82" x2="246" y2="90" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="250" y="122" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Bowman's capsule</text>
+<line x1="160" y1="104" x2="246" y2="122" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="6" y="165" font-size="13" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Proximal tubule</text>
+<line x1="130" y1="270" x2="118" y2="270" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="114" y="270" font-size="14" fill="#102A43" text-anchor="end" dominant-baseline="middle" font-weight="700">Loop of Henle</text>
+<line x1="204" y1="172" x2="228" y2="172" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="232" y="172" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Distal tubule</text>
+<line x1="400" y1="255" x2="408" y2="255" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="412" y="255" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Collecting duct</text>
+<text x="212" y="262" font-size="14" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="700">capillary network</text>
+<text x="412" y="348" font-size="14" fill="#B45309" text-anchor="start" dominant-baseline="middle" font-weight="700">to the pelvis</text>
+</svg>

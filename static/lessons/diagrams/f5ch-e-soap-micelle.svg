@@ -1,0 +1,45 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="75" y="40" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">One soap molecule</text>
+<circle cx="45" cy="150" r="18" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<polyline points="63,150 77,160 91,140 105,160 119,140 133,160 147,140 161,160 175,140" fill="none" stroke="#B45309" stroke-width="3"/>
+<text x="45" y="100" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700">Head</text>
+<text x="45" y="118" font-size="13" fill="#2563EB" text-anchor="middle" font-weight="400">water-loving</text>
+<text x="140" y="195" font-size="14" fill="#B45309" text-anchor="start" font-weight="700">Tail: grease-loving</text>
+<text x="140" y="213" font-size="13" fill="#B45309" text-anchor="start" font-weight="400">(long hydrocarbon chain)</text>
+<text x="45" y="190" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">COO-Na+</text>
+<circle cx="395" cy="185" r="48" fill="#FDE68A" stroke="#B45309" stroke-width="2"/>
+<text x="395" y="190" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Grease</text>
+<line x1="444.0" y1="185.0" x2="479.0" y2="185.0" stroke="#B45309" stroke-width="3"/>
+<circle cx="489.0" cy="185.0" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="439.1" y1="206.3" x2="470.7" y2="221.4" stroke="#B45309" stroke-width="3"/>
+<circle cx="479.7" cy="225.8" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="425.6" y1="223.3" x2="447.4" y2="250.7" stroke="#B45309" stroke-width="3"/>
+<circle cx="453.6" cy="258.5" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="405.9" y1="232.8" x2="413.7" y2="266.9" stroke="#B45309" stroke-width="3"/>
+<circle cx="415.9" cy="276.6" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="384.1" y1="232.8" x2="376.3" y2="266.9" stroke="#B45309" stroke-width="3"/>
+<circle cx="374.1" cy="276.6" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="364.4" y1="223.3" x2="342.6" y2="250.7" stroke="#B45309" stroke-width="3"/>
+<circle cx="336.4" cy="258.5" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="350.9" y1="206.3" x2="319.3" y2="221.4" stroke="#B45309" stroke-width="3"/>
+<circle cx="310.3" cy="225.8" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="346.0" y1="185.0" x2="311.0" y2="185.0" stroke="#B45309" stroke-width="3"/>
+<circle cx="301.0" cy="185.0" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="350.9" y1="163.7" x2="319.3" y2="148.6" stroke="#B45309" stroke-width="3"/>
+<circle cx="310.3" cy="144.2" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="364.4" y1="146.7" x2="342.6" y2="119.3" stroke="#B45309" stroke-width="3"/>
+<circle cx="336.4" cy="111.5" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="384.1" y1="137.2" x2="376.3" y2="103.1" stroke="#B45309" stroke-width="3"/>
+<circle cx="374.1" cy="93.4" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="405.9" y1="137.2" x2="413.7" y2="103.1" stroke="#B45309" stroke-width="3"/>
+<circle cx="415.9" cy="93.4" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="425.6" y1="146.7" x2="447.4" y2="119.3" stroke="#B45309" stroke-width="3"/>
+<circle cx="453.6" cy="111.5" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<line x1="439.1" y1="163.7" x2="470.7" y2="148.6" stroke="#B45309" stroke-width="3"/>
+<circle cx="479.7" cy="144.2" r="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<text x="395" y="40" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">Grease drop in water</text>
+<text x="395" y="60" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">Tails point in; heads point out</text>
+<text x="395" y="322" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">The drops stay apart and wash away</text>
+<text x="515" y="345" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700">Water</text>
+</svg>

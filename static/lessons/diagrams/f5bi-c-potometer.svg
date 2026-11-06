@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A potometer: a leafy shoot sealed into a water-filled tube joined to a capillary tube with an air bubble</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="430" y="200" width="100" height="130" rx="0" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<rect x="432" y="232" width="96" height="96" rx="0" fill="#DBEAFE" stroke="none" stroke-width="0"/>
+<line x1="430" y1="232" x2="530" y2="232" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/>
+<rect x="120" y="262" width="340" height="20" rx="0" fill="#DBEAFE" stroke="#102A43" stroke-width="2"/>
+<rect x="100" y="130" width="36" height="152" rx="0" fill="#DBEAFE" stroke="#102A43" stroke-width="2"/>
+<ellipse cx="300" cy="272" rx="14" ry="6" fill="#FFFFFF" stroke="#B45309" stroke-width="2.5"/>
+<rect x="96" y="112" width="44" height="22" rx="0" fill="#F3E8D0" stroke="#102A43" stroke-width="2"/>
+<line x1="118" y1="50" x2="118" y2="150" stroke="#047857" stroke-width="4" stroke-linecap="round"/>
+<ellipse cx="90" cy="72" rx="26" ry="12" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<ellipse cx="148" cy="62" rx="26" ry="12" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<ellipse cx="92" cy="98" rx="24" ry="11" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<line x1="130" y1="300" x2="420" y2="300" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="130" y1="300" x2="130" y2="316" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="159" y1="300" x2="159" y2="310" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="188" y1="300" x2="188" y2="310" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="217" y1="300" x2="217" y2="310" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="246" y1="300" x2="246" y2="310" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="275" y1="300" x2="275" y2="316" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="304" y1="300" x2="304" y2="310" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="333" y1="300" x2="333" y2="310" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="362" y1="300" x2="362" y2="310" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="391" y1="300" x2="391" y2="310" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="420" y1="300" x2="420" y2="316" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="275" y="336" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">scale in mm</text>
+<line x1="360" y1="222" x2="260" y2="222" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="260,222 269.0,217.7 269.0,226.3" fill="#B45309"/>
+<text x="330" y="200" font-size="14" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">bubble moves this way</text>
+<line x1="150" y1="64" x2="211" y2="40" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="215" y="40" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">leafy shoot</text>
+<line x1="138" y1="122" x2="211" y2="106" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="215" y="106" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle">airtight rubber bung</text>
+<line x1="136" y1="165" x2="156" y2="165" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="160" y="165" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle">water-filled tube</text>
+<text x="150" y="243" font-size="14" fill="#102A43" text-anchor="start" dominant-baseline="middle">capillary tube</text>
+<text x="480" y="190" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">beaker of water</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Diamond: each carbon atom bonded to four others in a rigid network. Graphite: flat layers of carbon hexagons held together by weak forces">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker></defs>
+<text x="140.0" y="24.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" >Diamond</text>
+<text x="420.0" y="24.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" >Graphite</text>
+<line x1="140.0" y1="150.0" x2="183.8" y2="106.2" stroke="#102A43" stroke-width="2.5"/>
+<line x1="140.0" y1="150.0" x2="96.2" y2="106.2" stroke="#102A43" stroke-width="2.5"/>
+<line x1="140.0" y1="150.0" x2="96.2" y2="193.8" stroke="#102A43" stroke-width="2.5"/>
+<line x1="140.0" y1="150.0" x2="183.8" y2="193.8" stroke="#102A43" stroke-width="2.5"/>
+<line x1="183.8" y1="106.2" x2="211.8" y2="106.2" stroke="#94A3B8" stroke-width="2.5"/>
+<line x1="183.8" y1="106.2" x2="183.8" y2="78.2" stroke="#94A3B8" stroke-width="2.5"/>
+<line x1="96.2" y1="106.2" x2="96.2" y2="78.2" stroke="#94A3B8" stroke-width="2.5"/>
+<line x1="96.2" y1="106.2" x2="68.2" y2="106.2" stroke="#94A3B8" stroke-width="2.5"/>
+<line x1="96.2" y1="193.8" x2="68.2" y2="193.8" stroke="#94A3B8" stroke-width="2.5"/>
+<line x1="96.2" y1="193.8" x2="96.2" y2="221.8" stroke="#94A3B8" stroke-width="2.5"/>
+<line x1="183.8" y1="193.8" x2="183.8" y2="221.8" stroke="#94A3B8" stroke-width="2.5"/>
+<line x1="183.8" y1="193.8" x2="211.8" y2="193.8" stroke="#94A3B8" stroke-width="2.5"/>
+<circle cx="140.0" cy="150.0" r="13" fill="#BFDBFE" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="183.8" cy="106.2" r="10" fill="#BFDBFE" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="96.2" cy="106.2" r="10" fill="#BFDBFE" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="96.2" cy="193.8" r="10" fill="#BFDBFE" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="183.8" cy="193.8" r="10" fill="#BFDBFE" stroke="#2563EB" stroke-width="2.5"/>
+<text x="140.0" y="252.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >Each C bonded to 4 other C</text>
+<text x="140.0" y="270.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" >atoms: rigid, 3-D network</text>
+<path d="M399.2 117.0 L378.4 129.0 L357.6 117.0 L357.6 93.0 L378.4 81.0 L399.2 93.0 Z" fill="none" stroke="#102A43" stroke-width="2.5" />
+<circle cx="399.2" cy="117.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="378.4" cy="129.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="357.6" cy="117.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="357.6" cy="93.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="378.4" cy="81.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="399.2" cy="93.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<path d="M440.8 117.0 L420.0 129.0 L399.2 117.0 L399.2 93.0 L420.0 81.0 L440.8 93.0 Z" fill="none" stroke="#102A43" stroke-width="2.5" />
+<circle cx="440.8" cy="117.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="420.0" cy="129.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="420.0" cy="81.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="440.8" cy="93.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<path d="M482.4 117.0 L461.6 129.0 L440.8 117.0 L440.8 93.0 L461.6 81.0 L482.4 93.0 Z" fill="none" stroke="#102A43" stroke-width="2.5" />
+<circle cx="482.4" cy="117.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="461.6" cy="129.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="461.6" cy="81.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="482.4" cy="93.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<path d="M420.0 81.0 L399.2 93.0 L378.4 81.0 L378.4 57.0 L399.2 45.0 L420.0 57.0 Z" fill="none" stroke="#102A43" stroke-width="2.5" />
+<circle cx="378.4" cy="57.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="399.2" cy="45.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="420.0" cy="57.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<path d="M461.6 81.0 L440.8 93.0 L420.0 81.0 L420.0 57.0 L440.8 45.0 L461.6 57.0 Z" fill="none" stroke="#102A43" stroke-width="2.5" />
+<circle cx="440.8" cy="45.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="461.6" cy="57.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<path d="M420.0 153.0 L399.2 165.0 L378.4 153.0 L378.4 129.0 L399.2 117.0 L420.0 129.0 Z" fill="none" stroke="#102A43" stroke-width="2.5" />
+<circle cx="420.0" cy="153.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="399.2" cy="165.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="378.4" cy="153.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<path d="M461.6 153.0 L440.8 165.0 L420.0 153.0 L420.0 129.0 L440.8 117.0 L461.6 129.0 Z" fill="none" stroke="#102A43" stroke-width="2.5" />
+<circle cx="461.6" cy="153.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<circle cx="440.8" cy="165.0" r="4.5" fill="#2563EB" stroke="none" stroke-width="0"/>
+<line x1="330.0" y1="205.0" x2="510.0" y2="205.0" stroke="#102A43" stroke-width="4"/>
+<line x1="330.0" y1="231.0" x2="510.0" y2="231.0" stroke="#102A43" stroke-width="4"/>
+<line x1="330.0" y1="257.0" x2="510.0" y2="257.0" stroke="#102A43" stroke-width="4"/>
+<line x1="420.0" y1="209.0" x2="420.0" y2="227.0" stroke="#B45309" stroke-width="2" stroke-dasharray="3 3"/>
+<line x1="420.0" y1="235.0" x2="420.0" y2="253.0" stroke="#B45309" stroke-width="2" stroke-dasharray="3 3"/>
+<text x="420.0" y="292.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" >Layers of hexagons. Each C bonded</text>
+<text x="420.0" y="310.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" >to 3 C atoms, layers held by</text>
+<text x="420.0" y="328.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" >weak forces so they slide</text>
+<text x="432.0" y="220.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#B45309" text-anchor="start" >weak forces</text>
+</svg>

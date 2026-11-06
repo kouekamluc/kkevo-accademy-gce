@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A simple d.c. motor with a split-ring commutator and brushes</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280.0" y="28.0" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle">Parts of a simple d.c. motor</text>
+<rect x="20.0" y="70.0" width="70.0" height="110.0" rx="4" fill="#FEE2E2" stroke="#102A43" stroke-width="2.5"/>
+<text x="55.0" y="132.0" font-size="20" font-weight="700" fill="#102A43" text-anchor="middle">N</text>
+<rect x="470.0" y="70.0" width="70.0" height="110.0" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<text x="505.0" y="132.0" font-size="20" font-weight="700" fill="#102A43" text-anchor="middle">S</text>
+<path d="M170,150 L170,100 L390,100 L390,150" fill="none" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="280.0" y="88.0" font-size="14" font-weight="700" fill="#2563EB" text-anchor="middle">coil</text>
+<path d="M170,150 L170,165 L254,165 L254,176" fill="none" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M390,150 L390,165 L306,165 L306,176" fill="none" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M253.7,175.6 A30,30 0 0 0 253.7,204.4" fill="none" stroke="#B45309" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M306.3,175.6 A30,30 0 0 1 306.3,204.4" fill="none" stroke="#B45309" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="214.0" y="180.0" width="36.0" height="20.0" rx="2" fill="#FFFFFF" stroke="#047857" stroke-width="3"/>
+<rect x="310.0" y="180.0" width="36.0" height="20.0" rx="2" fill="#FFFFFF" stroke="#047857" stroke-width="3"/>
+<line x1="232.0" y1="200.0" x2="232.0" y2="270.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="328.0" y1="200.0" x2="328.0" y2="270.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="232.0" y1="270.0" x2="270.0" y2="270.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="290.0" y1="270.0" x2="328.0" y2="270.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="270.0" y1="256.0" x2="270.0" y2="284.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="290.0" y1="262.0" x2="290.0" y2="278.0" stroke="#102A43" stroke-width="6" stroke-linecap="round"/>
+<text x="280.0" y="305.0" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">d.c. supply</text>
+<text x="280.0" y="245.0" font-size="14" font-weight="700" fill="#B45309" text-anchor="middle">split ring</text>
+<text x="206.0" y="196.0" font-size="14" font-weight="700" fill="#047857" text-anchor="end">brush</text>
+<text x="354.0" y="196.0" font-size="14" font-weight="700" fill="#047857" text-anchor="start">brush</text>
+<text x="280.0" y="340.0" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Brushes press on the split ring and carry current into the coil.</text>
+</svg>

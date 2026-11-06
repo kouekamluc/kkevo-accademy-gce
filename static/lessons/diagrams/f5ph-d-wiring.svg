@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Mains wiring: fuse and switch in the live wire, earth wire to the metal case</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280.0" y="28.0" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle">Wiring of one appliance</text>
+<rect x="30.0" y="60.0" width="90.0" height="230.0" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="75.0" y="172.0" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">Mains</text>
+<text x="75.0" y="192.0" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">supply</text>
+<line x1="120.0" y1="110.0" x2="400.0" y2="110.0" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<line x1="120.0" y1="190.0" x2="400.0" y2="190.0" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<line x1="120.0" y1="270.0" x2="400.0" y2="270.0" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<rect x="400.0" y="62.0" width="130.0" height="248.0" rx="8" fill="#ECFDF5" stroke="#102A43" stroke-width="2.5"/>
+<text x="465.0" y="86.0" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">Appliance</text>
+<text x="465.0" y="106.0" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">(metal case)</text>
+<text x="465.0" y="142.0" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">heater or</text>
+<text x="465.0" y="160.0" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">motor</text>
+<rect x="165.0" y="98.0" width="50.0" height="24.0" rx="3" fill="#FFFFFF" stroke="#B45309" stroke-width="3"/>
+<text x="190.0" y="88.0" font-size="14" font-weight="700" fill="#B45309" text-anchor="middle">Fuse</text>
+<circle cx="268.0" cy="110.0" r="4" fill="#102A43" stroke="#102A43" stroke-width="2.5"/>
+<line x1="268.0" y1="110.0" x2="305.0" y2="92.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<circle cx="318.0" cy="110.0" r="4" fill="#102A43" stroke="#102A43" stroke-width="2.5"/>
+<text x="293.0" y="76.0" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">Switch</text>
+<text x="135.0" y="140.0" font-size="14" font-weight="700" fill="#B45309" text-anchor="start">LIVE</text>
+<text x="135.0" y="220.0" font-size="14" font-weight="700" fill="#2563EB" text-anchor="start">NEUTRAL</text>
+<text x="135.0" y="300.0" font-size="14" font-weight="700" fill="#047857" text-anchor="start">EARTH</text>
+<text x="280.0" y="342.0" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Fuse and switch are in the live wire. The earth wire joins the metal case.</text>
+</svg>

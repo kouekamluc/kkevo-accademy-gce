@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="A vernier scale: zero between 31 and 32 mm on the main scale; vernier line 7 lines up with the main scale line at 38 mm">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<text x="280" y="34" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">Main scale (mm)</text>
+<rect x="30" y="60" width="500" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<line x1="50" y1="120" x2="50" y2="104" stroke="#102A43" stroke-width="2"/>
+<text x="50" y="92" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">30</text>
+<line x1="86" y1="120" x2="86" y2="104" stroke="#102A43" stroke-width="2"/>
+<text x="86" y="92" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">31</text>
+<line x1="122" y1="120" x2="122" y2="104" stroke="#102A43" stroke-width="2"/>
+<text x="122" y="92" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">32</text>
+<line x1="158" y1="120" x2="158" y2="104" stroke="#102A43" stroke-width="2"/>
+<text x="158" y="92" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">33</text>
+<line x1="194" y1="120" x2="194" y2="104" stroke="#102A43" stroke-width="2"/>
+<text x="194" y="92" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">34</text>
+<line x1="230" y1="120" x2="230" y2="104" stroke="#102A43" stroke-width="2"/>
+<text x="230" y="92" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">35</text>
+<line x1="266" y1="120" x2="266" y2="104" stroke="#102A43" stroke-width="2"/>
+<text x="266" y="92" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">36</text>
+<line x1="302" y1="120" x2="302" y2="104" stroke="#102A43" stroke-width="2"/>
+<text x="302" y="92" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">37</text>
+<line x1="338" y1="120" x2="338" y2="104" stroke="#102A43" stroke-width="2"/>
+<text x="338" y="92" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">38</text>
+<line x1="374" y1="120" x2="374" y2="104" stroke="#102A43" stroke-width="2"/>
+<text x="374" y="92" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">39</text>
+<line x1="410" y1="120" x2="410" y2="104" stroke="#102A43" stroke-width="2"/>
+<text x="410" y="92" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">40</text>
+<line x1="446" y1="120" x2="446" y2="104" stroke="#102A43" stroke-width="2"/>
+<text x="446" y="92" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">41</text>
+<rect x="30" y="120" width="500" height="60" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<line x1="111.2" y1="120" x2="111.2" y2="142" stroke="#102A43" stroke-width="2"/>
+<text x="111.2" y="166" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0</text>
+<line x1="143.6" y1="120" x2="143.6" y2="142" stroke="#102A43" stroke-width="2"/>
+<text x="143.6" y="166" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">1</text>
+<line x1="176" y1="120" x2="176" y2="142" stroke="#102A43" stroke-width="2"/>
+<text x="176" y="166" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">2</text>
+<line x1="208.4" y1="120" x2="208.4" y2="142" stroke="#102A43" stroke-width="2"/>
+<text x="208.4" y="166" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">3</text>
+<line x1="240.8" y1="120" x2="240.8" y2="142" stroke="#102A43" stroke-width="2"/>
+<text x="240.8" y="166" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">4</text>
+<line x1="273.2" y1="120" x2="273.2" y2="142" stroke="#102A43" stroke-width="2"/>
+<text x="273.2" y="166" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">5</text>
+<line x1="305.6" y1="120" x2="305.6" y2="142" stroke="#102A43" stroke-width="2"/>
+<text x="305.6" y="166" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">6</text>
+<line x1="338" y1="120" x2="338" y2="142" stroke="#102A43" stroke-width="2"/>
+<text x="338" y="166" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">7</text>
+<line x1="370.4" y1="120" x2="370.4" y2="142" stroke="#102A43" stroke-width="2"/>
+<text x="370.4" y="166" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">8</text>
+<line x1="402.8" y1="120" x2="402.8" y2="142" stroke="#102A43" stroke-width="2"/>
+<text x="402.8" y="166" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">9</text>
+<line x1="435.2" y1="120" x2="435.2" y2="142" stroke="#102A43" stroke-width="2"/>
+<text x="435.2" y="166" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">10</text>
+<line x1="111.2" y1="120" x2="111.2" y2="102" stroke="#2563EB" stroke-width="3"/>
+<text x="280" y="214" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">Vernier scale (10 divisions)</text>
+</svg>

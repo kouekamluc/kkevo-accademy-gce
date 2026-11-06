@@ -97,6 +97,52 @@ PAGES = {
             "Spot formal and informal fallacies in everyday reasoning",
             "Answer Paper 1 multiple choice and plan Paper 2 structured and problem-solving questions",
         ]),
+    ("english-language", "form-5"): dict(
+        title="Form 5 English Language (GCE 0530)", slug="form-5-english-language-gce-0530", primary=True,
+        summary="GCE O Level English Language: sounds and listening, grammar, vocabulary and register, reading and summary, composition and directed writing, with Paper 1 and Paper 2 practice and a timed mock paper.",
+        outcomes=[
+            "Use English sounds, stress and intonation and listen for information",
+            "Write accurate sentences with correct tenses, concord, voice and reported speech",
+            "Build vocabulary and use the right register for health, science, commerce and law",
+            "Read passages for main ideas, tone and inference and write a summary",
+            "Write essays, letters, speeches, articles and reports, and handle directed writing",
+            "Answer Paper 1 multiple choice and plan Paper 2 Directed Writing and Composition",
+        ]),
+    ("physics", "form-5"): dict(
+        title="Form 5 Physics (GCE 0580)", slug="form-5-physics-gce-0580", primary=True,
+        summary="GCE O Level Physics: measurement, mechanics, heat, waves, light and sound, electricity and magnetism, and atomic and nuclear physics, with Paper 1 and Paper 2 practice and timed mock papers.",
+        outcomes=[
+            "Measure quantities and use vectors, units and density",
+            "Solve problems on motion, forces, momentum, moments, work, energy and pressure",
+            "Explain heat transfer, thermal properties and the gas laws",
+            "Describe waves, reflection, refraction, lenses, sound and the electromagnetic spectrum",
+            "Analyse electric circuits, domestic electricity, magnetism and induction",
+            "Explain radioactivity, nuclear energy and basic electronics",
+            "Answer Paper 1 multiple choice and plan Paper 2 Section I and Section II questions",
+        ]),
+    ("chemistry", "form-5"): dict(
+        title="Form 5 Chemistry (GCE 0515)", slug="form-5-chemistry-gce-0515", primary=True,
+        summary="GCE O Level Chemistry: atoms and bonding, the mole concept, acids and salts, energy changes, rates, electrolysis, inorganic and organic chemistry and qualitative analysis, with Paper 1 and Paper 2 practice and timed mock papers.",
+        outcomes=[
+            "Explain atomic structure, the periodic table and bonding",
+            "Do mole, concentration and titration calculations",
+            "Prepare salts and use acids, bases and redox ideas",
+            "Explain energy changes, rates of reaction and equilibrium",
+            "Describe electrolysis and the chemistry of common non-metals and metals",
+            "Name and describe organic compounds and identify ions and gases",
+            "Answer Paper 1 multiple choice and plan Paper 2 including Alternative to Practical questions",
+        ]),
+    ("biology", "form-5"): dict(
+        title="Form 5 Biology (GCE 0510)", slug="form-5-biology-gce-0510", primary=True,
+        summary="GCE O Level Biology: living organisms, cells, nutrition, respiration, transport, coordination, reproduction and genetics, and ecology and health, with Paper 1 and Paper 2 practice and timed mock papers.",
+        outcomes=[
+            "Classify living organisms and describe cell structure and transport",
+            "Explain nutrition, enzymes, respiration and gaseous exchange",
+            "Describe transport, excretion, homeostasis, coordination and movement",
+            "Explain reproduction, inheritance, variation and evolution",
+            "Describe ecosystems, human impact and the control of disease",
+            "Answer Paper 1 questions of six types and plan Paper 2 essay questions",
+        ]),
     ("pure-mathematics-with-mechanics", "lower-sixth"): dict(
         summary="The core pure mathematics of GCE A Level Pure Mathematics with Mechanics: proof, algebra and "
                 "functions, trigonometry, conic sections, calculus, series, differential equations and 3D vectors.",

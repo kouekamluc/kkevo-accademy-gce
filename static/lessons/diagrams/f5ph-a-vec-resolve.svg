@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="An 80 N force at 30 degrees above the horizontal resolved into 69.3 N horizontal and 40 N vertical">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<line x1="60" y1="290" x2="420" y2="290" stroke="#CBD5E1" stroke-width="1.5"/>
+<line x1="80" y1="290" x2="339.8" y2="290" stroke="#047857" stroke-width="3" stroke-dasharray="7 5"/>
+<line x1="339.8" y1="290" x2="339.8" y2="140" stroke="#047857" stroke-width="3" stroke-dasharray="7 5"/>
+<line x1="80" y1="290" x2="339.8" y2="140" stroke="#2563EB" stroke-width="3" marker-end="url(#ab)"/>
+<path d="M140 290 A60 60 0 0 0 132 260" fill="none" stroke="#B45309" stroke-width="2"/>
+<text x="150" y="280" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="start">30&#176;</text>
+<text x="195.9" y="201" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB" text-anchor="end">F = 80 N</text>
+<text x="209.9" y="316" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="middle">69.3 N (horizontal)</text>
+<text x="351.8" y="220" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="start">40 N (vertical)</text>
+<circle cx="80" cy="290" r="4" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+</svg>

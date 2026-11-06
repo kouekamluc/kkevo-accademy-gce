@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A slide placed between F and 2F of a converging lens gives a large, real, inverted image on a screen</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="10" y1="170" x2="545" y2="170" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+<path d="M190,75 Q206,170 190,265 Q174,170 190,75 Z" fill="#EFF6FF" stroke="#102A43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="40" y1="170" x2="40" y2="135" stroke="#102A43" stroke-width="4" stroke-linecap="round"/>
+<text x="40" y="121" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">slide</text>
+<line x1="490" y1="170" x2="490" y2="240" stroke="#047857" stroke-width="4" stroke-linecap="round"/>
+<text x="460" y="250" font-size="14" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">image</text>
+<line x1="504" y1="40" x2="504" y2="300" stroke="#64748B" stroke-width="4" stroke-linecap="round"/>
+<text x="504" y="316" font-size="14" fill="#64748B" text-anchor="middle" dominant-baseline="middle" font-weight="700">screen</text>
+<line x1="40" y1="135" x2="190" y2="135" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="124,135 107.1,139.3 107.1,130.7" fill="#2563EB"/>
+<line x1="190" y1="135" x2="490" y2="240" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="363.5,195.7 346.1,194.2 349,186.1" fill="#2563EB"/>
+<line x1="40" y1="135" x2="190" y2="170" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="123.8,154.5 106.3,154.9 108.3,146.5" fill="#B45309"/>
+<line x1="190" y1="170" x2="490" y2="240" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="363.8,210.5 346.3,210.9 348.3,202.5" fill="#B45309"/>
+<circle cx="-10" cy="170" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="-10" y="188" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">2F</text>
+<circle cx="90" cy="170" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="90" y="188" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">F</text>
+<circle cx="290" cy="170" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="290" y="152" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">F</text>
+<circle cx="390" cy="170" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="390" y="152" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">2F</text>
+<text x="280" y="345" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">Slide between F and 2F: image beyond 2F, real, inverted, magnified</text>
+</svg>

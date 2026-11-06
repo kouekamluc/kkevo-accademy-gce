@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A converging lens forms a real, inverted, smaller image of an object beyond twice the focal length</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="20" y1="180" x2="545" y2="180" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+<path d="M300,85 Q316,180 300,275 Q284,180 300,85 Z" fill="#EFF6FF" stroke="#102A43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="50" y1="180" x2="50" y2="130" stroke="#102A43" stroke-width="4" stroke-linecap="round"/>
+<text x="50" y="116" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">object</text>
+<line x1="466.7" y1="180" x2="466.7" y2="213.3" stroke="#047857" stroke-width="4" stroke-linecap="round"/>
+<text x="466.7" y="231.3" font-size="14" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">image</text>
+<line x1="50" y1="130" x2="300" y2="130" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="184,130 167.1,134.3 167.1,125.7" fill="#2563EB"/>
+<line x1="300" y1="130" x2="466.7" y2="213.3" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="399.7,179.9 382.7,176.2 386.5,168.4" fill="#2563EB"/>
+<line x1="50" y1="130" x2="300" y2="180" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="183.8,156.8 166.4,157.7 168.1,149.2" fill="#B45309"/>
+<line x1="300" y1="180" x2="466.7" y2="213.3" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="400.5,200.1 383.1,201 384.8,192.6" fill="#B45309"/>
+<circle cx="100" cy="180" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="100" y="198" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">2F</text>
+<circle cx="200" cy="180" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="200" y="198" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">F</text>
+<circle cx="400" cy="180" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="400" y="162" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">F</text>
+<circle cx="500" cy="180" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="500" y="162" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">2F</text>
+<text x="280" y="340" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">Object beyond 2F: image between F and 2F, real, inverted, smaller</text>
+<text x="20" y="25" font-size="13" fill="#2563EB" text-anchor="start" dominant-baseline="middle" font-weight="700">blue ray: parallel to axis, then through F</text>
+<text x="20" y="45" font-size="13" fill="#B45309" text-anchor="start" dominant-baseline="middle" font-weight="700">amber ray: through the centre, straight on</text>
+</svg>

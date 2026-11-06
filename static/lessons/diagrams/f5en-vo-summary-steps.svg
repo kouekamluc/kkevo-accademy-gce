@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<rect x="40" y="18" width="480" height="64" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="60" y="45" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">1. Read the task</text>
+<text x="60" y="68" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Find what to summarise and the word limit</text>
+<line x1="280" y1="82" x2="280" y2="100" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="272,96 288,96 280,104" fill="#102A43"/>
+<rect x="40" y="104" width="480" height="64" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="60" y="131" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">2. Mark the points</text>
+<text x="60" y="154" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Underline main points in each paragraph</text>
+<line x1="280" y1="168" x2="280" y2="186" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="272,182 288,182 280,190" fill="#102A43"/>
+<rect x="40" y="190" width="480" height="64" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5"/>
+<text x="60" y="217" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">3. Make notes</text>
+<text x="60" y="240" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Cut examples and repetition; use short notes</text>
+<line x1="280" y1="254" x2="280" y2="272" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="272,268 288,268 280,276" fill="#102A43"/>
+<rect x="40" y="276" width="480" height="64" rx="10" fill="#ECFDF5" stroke="#047857" stroke-width="2.5"/>
+<text x="60" y="303" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">4. Write the summary</text>
+<text x="60" y="326" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Own words, one paragraph, count the words</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="A uniform 4 m plank pivoted 0.5 m from its left end: load X at the left end, weight 60 N at the centre, reaction R at the pivot">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<rect x="60" y="190" width="440" height="16" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<polygon points="115,206 95,242 135,242" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="79" y1="242" x2="151" y2="242" stroke="#102A43" stroke-width="3"/>
+<line x1="60" y1="124" x2="60" y2="188" stroke="#2563EB" stroke-width="3" marker-end="url(#ab)"/>
+<text x="60" y="114" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB" text-anchor="middle">X = ?</text>
+<line x1="280" y1="208" x2="280" y2="270" stroke="#102A43" stroke-width="3" marker-end="url(#ah)"/>
+<text x="280" y="288" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">W = 60 N</text>
+<line x1="115" y1="290" x2="115" y2="246" stroke="#047857" stroke-width="3" marker-end="url(#ag)"/>
+<text x="125" y="288" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="start">R</text>
+<line x1="115" y1="318" x2="60" y2="318" stroke="#64748B" stroke-width="1.8" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="87.5" y="308" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#64748B" text-anchor="middle">0.5 m</text>
+<line x1="115" y1="348" x2="280" y2="348" stroke="#64748B" stroke-width="1.8" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<text x="197.5" y="338" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#64748B" text-anchor="middle">1.5 m</text>
+<text x="115" y="264" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle"></text>
+</svg>

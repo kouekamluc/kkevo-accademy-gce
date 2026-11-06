@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Paper chromatogram with columns P, Q and mixture M; solvent front 10 cm, yellow spot 6 cm and blue spot 3 cm above the baseline">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker></defs>
+<text x="280.0" y="24.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" >A developed paper chromatogram</text>
+<rect x="100.0" y="50.0" width="250.0" height="270.0" fill="#FFFFFF" stroke="#102A43" stroke-width="3" rx="0"/>
+<line x1="100.0" y1="300.0" x2="350.0" y2="300.0" stroke="#64748B" stroke-width="2" stroke-dasharray="5 4"/>
+<line x1="100.0" y1="50.0" x2="350.0" y2="50.0" stroke="#2563EB" stroke-width="2"/>
+<text x="20.0" y="304.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="start" >baseline</text>
+<text x="20.0" y="322.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="start" >(pencil)</text>
+<text x="20.0" y="54.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="start" >solvent</text>
+<text x="20.0" y="72.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="start" >front</text>
+<text x="150.0" y="342.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" >P</text>
+<text x="225.0" y="342.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" >Q</text>
+<text x="300.0" y="342.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" >M</text>
+<ellipse cx="150" cy="150" rx="13" ry="9" fill="#FDE68A" stroke="#B45309" stroke-width="2"/>
+<ellipse cx="225" cy="225" rx="13" ry="9" fill="#BFDBFE" stroke="#2563EB" stroke-width="2"/>
+<ellipse cx="300" cy="150" rx="13" ry="9" fill="#FDE68A" stroke="#B45309" stroke-width="2"/>
+<ellipse cx="300" cy="225" rx="13" ry="9" fill="#BFDBFE" stroke="#2563EB" stroke-width="2"/>
+<line x1="385.0" y1="300.0" x2="385.0" y2="50.0" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="372.0" y1="150.0" x2="398.0" y2="150.0" stroke="#B45309" stroke-width="2"/>
+<line x1="372.0" y1="225.0" x2="398.0" y2="225.0" stroke="#2563EB" stroke-width="2"/>
+<line x1="372.0" y1="300.0" x2="398.0" y2="300.0" stroke="#102A43" stroke-width="2"/>
+<line x1="372.0" y1="50.0" x2="398.0" y2="50.0" stroke="#102A43" stroke-width="2"/>
+<text x="410.0" y="55.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="start" >10 cm to front</text>
+<text x="410.0" y="155.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="start" >6 cm: yellow spot</text>
+<text x="410.0" y="230.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="start" >3 cm: blue spot</text>
+<text x="410.0" y="305.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" >0 cm: baseline</text>
+</svg>

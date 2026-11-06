@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A convex mirror forms a virtual, upright, smaller image behind the mirror</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="20" y1="185" x2="540" y2="185" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+<polyline points="346.8,85 343.4,91.1 340.2,97.3 337.3,103.7 334.6,110.1 332.1,116.6 329.8,123.2 327.7,129.9 325.9,136.6 324.4,143.4 323,150.3 321.9,157.2 321.1,164.1 320.5,171 320.1,178 320,185 320.1,192 320.5,199 321.1,205.9 321.9,212.8 323,219.7 324.4,226.6 325.9,233.4 327.7,240.1 329.8,246.8 332.1,253.4 334.6,259.9 337.3,266.3 340.2,272.7 343.4,278.9 346.8,285" fill="none" stroke="#102A43" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="90" y1="130" x2="90" y2="185" stroke="#102A43" stroke-width="4" stroke-linecap="round"/>
+<text x="90" y="116" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">object</text>
+<line x1="389.7" y1="185" x2="389.7" y2="168.3" stroke="#047857" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 5"/>
+<text x="393.7" y="152.3" font-size="14" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">image</text>
+<line x1="90" y1="130" x2="320" y2="130" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="214,130 197.1,134.3 197.1,125.7" fill="#2563EB"/>
+<line x1="320" y1="130" x2="150" y2="36.5" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="227.1,78.9 244,83.3 239.8,90.8" fill="#2563EB"/>
+<line x1="320" y1="130" x2="420" y2="185" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<line x1="90" y1="130" x2="320" y2="185" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="213.8,159.6 196.3,159.9 198.3,151.5" fill="#B45309"/>
+<line x1="320" y1="185" x2="150" y2="225.7" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="226.2,207.4 241.7,199.3 243.7,207.7" fill="#B45309"/>
+<line x1="320" y1="185" x2="389.7" y2="168.3" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<circle cx="420" cy="185" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="420" y="205" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">F</text>
+<circle cx="520" cy="185" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="520" y="205" font-size="15" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<text x="280" y="335" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">Image: virtual, upright, smaller, behind the mirror</text>
+</svg>

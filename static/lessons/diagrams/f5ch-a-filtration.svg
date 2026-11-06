@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="A filter funnel with filter paper above a beaker; sand stays on the paper as residue and salt solution passes through as filtrate">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker></defs>
+<text x="280.0" y="28.0" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle" >Filtration</text>
+<path d="M170 70 L330 70 L258 168 L242 168 Z" fill="#EFF6FF" stroke="#102A43" stroke-width="3" />
+<path d="M184 82 L316 82 L252 166 L248 166 Z" fill="#FEF3C7" stroke="#B45309" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="242.0" y="168.0" width="16.0" height="62.0" fill="none" stroke="#102A43" stroke-width="3" rx="0"/>
+<path d="M222 128 L278 128 L256 158 L244 158 Z" fill="#D6C7A1" stroke="#102A43" stroke-width="2" />
+<path d="M180 245 L180 335 L320 335 L320 245" fill="#EFF6FF" stroke="#102A43" stroke-width="3" />
+<rect x="182.0" y="290.0" width="136.0" height="43.0" fill="#DBEAFE" stroke="none" stroke-width="0" rx="0"/>
+<circle cx="250.0" cy="245.0" r="4" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<circle cx="250.0" cy="262.0" r="4" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<text x="110.0" y="66.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" >mixture of sand</text>
+<text x="110.0" y="84.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" >and salt solution</text>
+<line x1="120.0" y1="92.0" x2="200.0" y2="104.0" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="370.0" y="122.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="start" >filter paper</text>
+<line x1="366.0" y1="118.0" x2="312.0" y2="100.0" stroke="#B45309" stroke-width="2" marker-end="url(#ah)"/>
+<text x="370.0" y="172.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" >residue stays on the paper</text>
+<text x="370.0" y="190.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" >(sand)</text>
+<line x1="366.0" y1="168.0" x2="272.0" y2="148.0" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="370.0" y="290.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="start" >filtrate passes through</text>
+<text x="370.0" y="308.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#047857" text-anchor="start" >(salt solution)</text>
+<line x1="366.0" y1="296.0" x2="322.0" y2="306.0" stroke="#047857" stroke-width="2" marker-end="url(#ag)"/>
+<text x="115.0" y="210.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" >filter funnel</text>
+<line x1="165.0" y1="204.0" x2="236.0" y2="164.0" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+</svg>

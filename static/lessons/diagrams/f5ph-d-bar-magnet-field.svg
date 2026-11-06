@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Magnetic field lines around a bar magnet</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280.0" y="28.0" font-size="17" font-weight="700" fill="#102A43" text-anchor="middle">Field of a bar magnet</text>
+<rect x="210.0" y="168.0" width="70.0" height="44.0" rx="0" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<rect x="280.0" y="168.0" width="70.0" height="44.0" rx="0" fill="#FEE2E2" stroke="#102A43" stroke-width="2.5"/>
+<text x="245.0" y="197.0" font-size="20" font-weight="700" fill="#102A43" text-anchor="middle">S</text>
+<text x="315.0" y="197.0" font-size="20" font-weight="700" fill="#102A43" text-anchor="middle">N</text>
+<path d="M350,180 C400.0,112.5 160.0,112.5 210,180" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="287.0" y1="129.4" x2="279.6" y2="129.4" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/><polygon points="273.0,129.4 282.9,124.6 282.9,134.2" fill="#2563EB"/>
+<path d="M350,200 C400.0,267.5 160.0,267.5 210,200" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="287.0" y1="250.6" x2="279.6" y2="250.6" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/><polygon points="273.0,250.6 282.9,245.8 282.9,255.4" fill="#2563EB"/>
+<path d="M350,180 C460.0,60.0 100.0,60.0 210,180" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="287.0" y1="90.0" x2="279.6" y2="90.0" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/><polygon points="273.0,90.0 282.9,85.2 282.9,94.8" fill="#2563EB"/>
+<path d="M350,200 C460.0,320.0 100.0,320.0 210,200" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="287.0" y1="290.0" x2="279.6" y2="290.0" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/><polygon points="273.0,290.0 282.9,285.2 282.9,294.8" fill="#2563EB"/>
+<path d="M350,180 C520.0,15.0 40.0,15.0 210,180" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="287.0" y1="56.2" x2="279.6" y2="56.2" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/><polygon points="273.0,56.2 282.9,51.5 282.9,61.0" fill="#2563EB"/>
+<path d="M350,200 C520.0,365.0 40.0,365.0 210,200" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="287.0" y1="323.8" x2="279.6" y2="323.8" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/><polygon points="273.0,323.8 282.9,319.0 282.9,328.5" fill="#2563EB"/>
+<line x1="350.0" y1="190.0" x2="510.0" y2="190.0" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="470.0" y1="190.0" x2="493.4" y2="190.0" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/><polygon points="500.0,190.0 490.1,194.8 490.1,185.2" fill="#2563EB"/>
+<line x1="210.0" y1="190.0" x2="50.0" y2="190.0" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="70.0" y1="190.0" x2="93.4" y2="190.0" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/><polygon points="100.0,190.0 90.1,194.8 90.1,185.2" fill="#2563EB"/>
+<text x="280.0" y="342.0" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Outside the magnet the lines run from the N pole to the S pole.</text>
+</svg>

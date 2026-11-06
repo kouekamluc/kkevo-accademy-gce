@@ -1,0 +1,26 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="28" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">Titration apparatus</text>
+<rect x="95" y="320" width="130" height="14" fill="#CBD5E1" stroke="#102A43" stroke-width="2"/>
+<line x1="125" y1="320" x2="125" y2="45" stroke="#102A43" stroke-width="4"/>
+<line x1="125" y1="70" x2="270" y2="70" stroke="#102A43" stroke-width="4"/>
+<rect x="268" y="45" width="28" height="180" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<rect x="270" y="95" width="24" height="128" fill="#FDE68A"/>
+<rect x="255" y="228" width="54" height="10" fill="#102A43"/>
+<rect x="278" y="238" width="6" height="22" fill="#102A43"/>
+<text x="310" y="105" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">Burette</text>
+<text x="310" y="123" font-size="13" fill="#102A43" text-anchor="start" font-weight="400">(acid, read the</text>
+<text x="310" y="141" font-size="13" fill="#102A43" text-anchor="start" font-weight="400">bottom of the meniscus)</text>
+<text x="310" y="245" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">Tap</text>
+<line x1="281" y1="262" x2="281" y2="272" stroke="#2563EB" stroke-width="3"/>
+<path d="M262 280 L262 305 L238 330 L238 330 L324 330 L300 305 L300 280 Z" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<path d="M246 322 L316 322 L300 307 L262 307 Z" fill="#FECACA"/>
+<rect x="205" y="330" width="150" height="12" fill="#ffffff" stroke="#102A43" stroke-width="2.5"/>
+<text x="380" y="300" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">Conical flask:</text>
+<text x="380" y="318" font-size="13" fill="#102A43" text-anchor="start" font-weight="400">25.0 cm&#179; alkali</text>
+<text x="380" y="336" font-size="13" fill="#102A43" text-anchor="start" font-weight="400">+ indicator</text>
+<text x="20" y="345" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">White tile</text>
+<line x1="105" y1="340" x2="205" y2="337" stroke="#102A43" stroke-width="2"/>
+<text x="20" y="200" font-size="14" fill="#B45309" text-anchor="start" font-weight="700">Swirl the flask</text>
+<text x="20" y="218" font-size="13" fill="#B45309" text-anchor="start" font-weight="400">as you add acid</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A transverse wave with wavelength and amplitude marked, and a longitudinal wave with compressions and rarefactions</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="40" y1="120" x2="520" y2="120" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<polyline points="60,120 62,116.9 64,113.7 66,110.7 68,107.6 70,104.7 72,101.8 74,99.1 76,96.5 78,94 80,91.7 82,89.6 84,87.6 86,85.9 88,84.4 90,83 92,82 94,81.1 96,80.5 98,80.1 100,80 102,80.1 104,80.5 106,81.1 108,82 110,83 112,84.4 114,85.9 116,87.6 118,89.6 120,91.7 122,94 124,96.5 126,99.1 128,101.8 130,104.7 132,107.6 134,110.7 136,113.7 138,116.9 140,120 142,123.1 144,126.3 146,129.3 148,132.4 150,135.3 152,138.2 154,140.9 156,143.5 158,146 160,148.3 162,150.4 164,152.4 166,154.1 168,155.6 170,157 172,158 174,158.9 176,159.5 178,159.9 180,160 182,159.9 184,159.5 186,158.9 188,158 190,157 192,155.6 194,154.1 196,152.4 198,150.4 200,148.3 202,146 204,143.5 206,140.9 208,138.2 210,135.3 212,132.4 214,129.3 216,126.3 218,123.1 220,120 222,116.9 224,113.7 226,110.7 228,107.6 230,104.7 232,101.8 234,99.1 236,96.5 238,94 240,91.7 242,89.6 244,87.6 246,85.9 248,84.4 250,83 252,82 254,81.1 256,80.5 258,80.1 260,80 262,80.1 264,80.5 266,81.1 268,82 270,83 272,84.4 274,85.9 276,87.6 278,89.6 280,91.7 282,94 284,96.5 286,99.1 288,101.8 290,104.7 292,107.6 294,110.7 296,113.7 298,116.9 300,120 302,123.1 304,126.3 306,129.3 308,132.4 310,135.3 312,138.2 314,140.9 316,143.5 318,146 320,148.3 322,150.4 324,152.4 326,154.1 328,155.6 330,157 332,158 334,158.9 336,159.5 338,159.9 340,160 342,159.9 344,159.5 346,158.9 348,158 350,157 352,155.6 354,154.1 356,152.4 358,150.4 360,148.3 362,146 364,143.5 366,140.9 368,138.2 370,135.3 372,132.4 374,129.3 376,126.3 378,123.1 380,120 382,116.9 384,113.7 386,110.7 388,107.6 390,104.7 392,101.8 394,99.1 396,96.5 398,94 400,91.7 402,89.6 404,87.6 406,85.9 408,84.4 410,83 412,82 414,81.1 416,80.5 418,80.1 420,80 422,80.1 424,80.5 426,81.1 428,82 430,83 432,84.4 434,85.9 436,87.6 438,89.6 440,91.7 442,94 444,96.5 446,99.1 448,101.8 450,104.7 452,107.6 454,110.7 456,113.7 458,116.9 460,120 462,123.1 464,126.3 466,129.3 468,132.4 470,135.3 472,138.2 474,140.9 476,143.5 478,146 480,148.3 482,150.4 484,152.4 486,154.1 488,155.6 490,157 492,158 494,158.9 496,159.5 498,159.9 500,160" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="20" y="18" font-size="16" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Transverse wave</text>
+<line x1="100" y1="72" x2="100" y2="50" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<line x1="260" y1="72" x2="260" y2="50" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<line x1="100" y1="56" x2="260" y2="56" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="260,56 251.7,59.5 251.7,52.5" fill="#B45309"/>
+<line x1="260" y1="56" x2="100" y2="56" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="100,56 108.3,52.5 108.3,59.5" fill="#B45309"/>
+<text x="180" y="40" font-size="14" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">wavelength</text>
+<line x1="420" y1="120" x2="420" y2="80" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+<polygon points="420,80 423.5,88.3 416.5,88.3" fill="#047857"/>
+<line x1="420" y1="80" x2="420" y2="120" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+<polygon points="420,120 416.5,111.7 423.5,111.7" fill="#047857"/>
+<text x="420" y="66" font-size="14" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">amplitude</text>
+<text x="180" y="176" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="400">trough</text>
+<text x="92" y="72" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="400"></text>
+<line x1="330" y1="182" x2="470" y2="182" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<polygon points="470,182 461.7,185.5 461.7,178.5" fill="#102A43"/>
+<text x="400" y="200" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="400">wave travels</text>
+<text x="20" y="208" font-size="16" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="700">Longitudinal wave (a spring)</text>
+<line x1="60" y1="250" x2="60" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="63.7" y1="250" x2="63.7" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="67.9" y1="250" x2="67.9" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="73" y1="250" x2="73" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="79.1" y1="250" x2="79.1" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="86.7" y1="250" x2="86.7" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="95.6" y1="250" x2="95.6" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="105.9" y1="250" x2="105.9" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="117.3" y1="250" x2="117.3" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="129.5" y1="250" x2="129.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="142.1" y1="250" x2="142.1" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="154.6" y1="250" x2="154.6" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="166.6" y1="250" x2="166.6" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="177.6" y1="250" x2="177.6" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="187.5" y1="250" x2="187.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="196" y1="250" x2="196" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="203.1" y1="250" x2="203.1" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="208.8" y1="250" x2="208.8" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="213.5" y1="250" x2="213.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="217.5" y1="250" x2="217.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="221.2" y1="250" x2="221.2" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="225.1" y1="250" x2="225.1" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="229.5" y1="250" x2="229.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="234.9" y1="250" x2="234.9" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="241.5" y1="250" x2="241.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="249.5" y1="250" x2="249.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="258.9" y1="250" x2="258.9" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="269.6" y1="250" x2="269.6" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="281.3" y1="250" x2="281.3" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="293.7" y1="250" x2="293.7" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="306.3" y1="250" x2="306.3" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="318.7" y1="250" x2="318.7" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="330.4" y1="250" x2="330.4" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="341.1" y1="250" x2="341.1" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="350.5" y1="250" x2="350.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="358.5" y1="250" x2="358.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="365.1" y1="250" x2="365.1" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="370.5" y1="250" x2="370.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="374.9" y1="250" x2="374.9" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="378.8" y1="250" x2="378.8" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="382.5" y1="250" x2="382.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="386.5" y1="250" x2="386.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="391.2" y1="250" x2="391.2" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="396.9" y1="250" x2="396.9" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="404" y1="250" x2="404" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="412.5" y1="250" x2="412.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="422.4" y1="250" x2="422.4" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="433.4" y1="250" x2="433.4" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="445.4" y1="250" x2="445.4" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="457.9" y1="250" x2="457.9" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="470.5" y1="250" x2="470.5" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="482.7" y1="250" x2="482.7" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="494.1" y1="250" x2="494.1" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="504.4" y1="250" x2="504.4" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="513.3" y1="250" x2="513.3" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="520.9" y1="250" x2="520.9" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="527" y1="250" x2="527" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="532.1" y1="250" x2="532.1" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="536.3" y1="250" x2="536.3" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="540" y1="250" x2="540" y2="296" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="220" y="311" font-size="13" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">compression</text>
+<text x="380" y="311" font-size="13" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">compression</text>
+<text x="140" y="329" font-size="13" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">rarefaction</text>
+<text x="300" y="329" font-size="13" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">rarefaction</text>
+<text x="460" y="329" font-size="13" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="700">rarefaction</text>
+<line x1="220" y1="238" x2="380" y2="238" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="380,238 371.7,241.5 371.7,234.5" fill="#B45309"/>
+<line x1="380" y1="238" x2="220" y2="238" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="220,238 228.3,234.5 228.3,241.5" fill="#B45309"/>
+<text x="300" y="222" font-size="14" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">wavelength</text>
+<text x="280" y="352" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="400">Particles vibrate along the direction the wave travels</text>
+</svg>

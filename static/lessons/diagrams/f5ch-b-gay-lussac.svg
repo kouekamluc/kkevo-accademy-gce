@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Gay-Lussac: 20 cm3 hydrogen plus 10 cm3 oxygen gives 20 cm3 steam</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="30" y="120" width="130" height="140" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="95" y="186" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">20 cm&#179;</text>
+<text x="95" y="204" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">(2 volumes)</text>
+<rect x="215" y="180" width="130" height="80" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="216" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">10 cm&#179;</text>
+<text x="280" y="234" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">(1 volume)</text>
+<rect x="400" y="120" width="130" height="140" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="465" y="186" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">20 cm&#179;</text>
+<text x="465" y="204" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">(2 volumes)</text>
+<text x="95" y="288" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">hydrogen</text>
+<text x="280" y="288" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">oxygen</text>
+<text x="465" y="288" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">steam</text>
+<text x="188" y="200" font-size="30" fill="#102A43" text-anchor="middle" font-weight="400">+</text>
+<text x="373" y="200" font-size="30" fill="#102A43" text-anchor="middle" font-weight="400">&#8594;</text>
+<text x="280" y="40" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Gases measured at the same temperature and pressure</text>
+<text x="280" y="66" font-size="15" fill="#B45309" text-anchor="middle" font-weight="700">Ratio of volumes  2 : 1 : 2</text>
+<text x="280" y="335" font-size="20" font-weight="700" fill="#102A43" text-anchor="middle">2H<tspan dy="5" font-size="14">2</tspan><tspan dy="-5"> + O</tspan><tspan dy="5" font-size="14">2</tspan><tspan dy="-5"> &#8594; 2H</tspan><tspan dy="5" font-size="14">2</tspan><tspan dy="-5">O</tspan></text>
+</svg>
