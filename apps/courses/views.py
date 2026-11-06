@@ -23,6 +23,11 @@ def _student_level(request):
     return None, None
 
 
+def _shell(request):
+    """Signed-in students get the app shell; visitors get the public site's header, footer and sign-up prompts."""
+    return "layouts/app.html" if request.user.is_authenticated else "layouts/public_page.html"
+
+
 def catalog(request):
     """Explore Your Subjects (mockup 08). Filters work with or without JavaScript; HTMX swaps the results."""
     levels = list(AcademicLevel.objects.filter(is_active=True))
@@ -87,6 +92,7 @@ def catalog(request):
         "levels": levels, "pathways": pathways, "categories": SubjectCategory.choices, "sorts": SORTS,
         "level": level, "stream": stream, "category": category, "q": q, "sort": sort,
         "cards": cards, "plan_count": sum(c["in_plan"] for c in cards), "nav_active": "explore",
+        "shell": _shell(request),
     }
     template = "courses/_catalog_results.html" if request.htmx and request.htmx.target == "catalog-results" else "courses/catalog.html"
     return render(request, template, context)
@@ -221,7 +227,7 @@ def course_detail(request, slug):
         "topic_count": sum(len(m["topics"]) for m in module_rows), "hours": round(minutes / 60) if minutes >= 60 else None,
         "minutes": minutes, "question_count": question_count, "next_lesson": next_lesson, "next_progress": next_progress,
         "has_syllabus_mapping": has_syllabus_mapping, "in_plan": in_plan, "pathway_label": pathway_label,
-        "mocks": mocks,
+        "mocks": mocks, "shell": _shell(request),
         "nav_active": "subjects" if in_plan else "explore",
         "open_module": next(
             (m["number"] for m in module_rows if m["status"] == "progress"),

@@ -1,0 +1,56 @@
+{% extends "layouts/public.html" %}
+{% block title %}About — KKEVO Academy{% endblock %}
+{% block meta_description %}KKEVO Academy is an independent learning platform for Cameroon GCE O Level and A Level students.{% endblock %}
+
+{% block content %}
+<section class="border-b-2 border-surface-border bg-white">
+  <div class="wrap py-12 nav:py-20">
+    <div class="eyebrow">About KKEVO Academy</div>
+    <h1 class="mt-3 max-w-[780px] text-[36px] font-black leading-[1.08] tracking-[-.02em] text-navy nav:text-[52px]">Learning that fits <span class="text-primary">a Cameroonian student's day.</span></h1>
+    <p class="mt-5 max-w-[640px] text-[18px] font-semibold leading-[1.6] text-slate-600">KKEVO Academy gives GCE students short lessons, practice with explained mistakes and mock exams, in pages light enough for any phone.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="{% if user.is_authenticated %}{% url 'dashboard:home' %}{% else %}{% url 'accounts:register' %}{% endif %}" class="btn-primary btn-lg w-full sm:w-auto">{% if user.is_authenticated %}Go to my dashboard{% else %}Create a free account{% endif %} {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
+      <a href="{% url 'core:how_it_works' %}" class="btn-secondary btn-lg w-full sm:w-auto">See how it works</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap pt-16 nav:pt-24">
+  <div class="grid gap-10 nav:grid-cols-2">
+    <div>
+      <div class="eyebrow">Who it is for</div>
+      <h2 class="section-title">Students preparing for the GCE</h2>
+      <p class="mt-4 text-[17px] leading-relaxed text-slate-600">KKEVO Academy is made for students in Cameroon preparing for the GCE Ordinary Level and Advanced Level examinations, in the Arts and Science streams.</p>
+    </div>
+    <div>
+      <div class="eyebrow">What we believe</div>
+      <h2 class="section-title">Understand first, then practise</h2>
+      <p class="mt-4 text-[17px] leading-relaxed text-slate-600">Memorising answers is not enough. Every topic is taught step by step, then practised, so that a wrong answer teaches you something instead of just marking you down.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap pt-16 nav:pt-24" aria-labelledby="levels-title">
+  <div class="max-w-[640px]"><div class="eyebrow">What we teach</div><h2 id="levels-title" class="section-title">Three classes, one platform</h2></div>
+  {% if levels %}
+  <div class="mt-10 grid gap-6 nav:grid-cols-3">
+    {% for level in levels %}
+    <a href="{% url 'courses:catalog' %}?level={{ level.slug }}" class="card-link flex flex-col gap-2 rounded-card p-6">
+      <span class="text-xl font-bold">{{ level.name }}</span>
+      {% if level.description %}<span class="text-[15px] leading-relaxed text-slate-600">{{ level.description }}</span>{% endif %}
+      <span class="mt-2 text-[15px] font-semibold text-primary">{{ level.subject_count }} subject{{ level.subject_count|pluralize }}: see them</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+
+<section class="wrap pt-16 nav:pt-24" aria-labelledby="honest-title">
+  <div class="max-w-[820px] rounded-2xl border-2 border-warning-200 bg-warning-50 p-6 nav:p-8">
+    <h2 id="honest-title" class="text-xl font-bold text-navy">Please read: what we are and are not</h2>
+    <p class="mt-3 text-[16px] leading-relaxed text-slate-700">KKEVO Academy is an independent learning platform. It is <strong>not</strong> affiliated with, or endorsed by, the Cameroon GCE Board. Our lessons follow the topics of the GCE syllabuses as closely as we can, but your teacher and the Board's own syllabus remain the final word on what is examined. Where textbooks or teachers differ, we say so in the lesson.</p>
+  </div>
+</section>
+
+{% include "components/signup_band.html" with band_title="Join your classmates on KKEVO Academy" band_text="Create a free account and start with the subject you need most." %}
+{% endblock %}

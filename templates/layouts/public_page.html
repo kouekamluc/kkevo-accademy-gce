@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% comment %}
+Shell for public pages that signed-out visitors can browse (subjects, a course): the same header, sign-up band and
+footer as the landing page, so the site feels like one place. Uses the block names of layouts/app.html, so a template
+can pick either shell with `{% extends shell %}`.
+{% endcomment %}
+{% block body %}
+{% include "components/public_header.html" %}
+<main id="main" class="mx-auto w-full max-w-[1240px] px-4 pb-10 pt-6 nav:px-8 nav:pt-10 {% block main_class %}{% endblock %}">
+  {% include "components/messages.html" %}
+  {% block content %}{% endblock %}
+</main>
+{% include "components/signup_band.html" %}
+{% include "components/public_footer.html" %}
+{% if not user.is_authenticated %}
+{# On phones the sign-up button stays in reach while browsing. #}
+<div class="fixed inset-x-0 bottom-0 z-30 border-t border-surface-border bg-white/95 px-4 py-2.5 backdrop-blur nav:hidden">
+  <a href="{% url 'accounts:register' %}" class="btn-primary w-full">Create a free account</a>
+</div>
+<div class="h-16 nav:hidden" aria-hidden="true"></div>
+{% endif %}
+{% endblock %}

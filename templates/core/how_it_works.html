@@ -1,0 +1,74 @@
+{% extends "layouts/public.html" %}
+{% block title %}How it works — KKEVO Academy{% endblock %}
+{% block meta_description %}From sign-up to exam day: pick your class, learn one lesson at a time, practise with explained mistakes and sit timed mock exams.{% endblock %}
+
+{% block content %}
+<section class="border-b-2 border-surface-border bg-white">
+  <div class="wrap py-12 nav:py-20">
+    <div class="eyebrow">How it works</div>
+    <h1 class="mt-3 max-w-[760px] text-[36px] font-black leading-[1.08] tracking-[-.02em] text-navy nav:text-[52px]">From your first lesson to exam day, <span class="text-primary">one small step at a time.</span></h1>
+    <p class="mt-5 max-w-[620px] text-[18px] font-semibold leading-[1.6] text-slate-600">Create a free account, choose your class and subjects, and KKEVO Academy walks you through each topic: learn it, practise it, then test yourself.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="{% if user.is_authenticated %}{% url 'dashboard:home' %}{% else %}{% url 'accounts:register' %}{% endif %}" class="btn-primary btn-lg w-full sm:w-auto">{% if user.is_authenticated %}Go to my dashboard{% else %}Start learning for free{% endif %} {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
+      <a href="{% url 'courses:catalog' %}" class="btn-secondary btn-lg w-full sm:w-auto">Browse subjects first</a>
+    </div>
+    {% if stats.lessons %}
+    <ul class="mt-9 flex flex-wrap gap-x-8 gap-y-3 text-[15px] text-slate-600">
+      <li><strong class="text-[22px] font-black text-navy">{{ stats.subjects }}</strong> subjects</li>
+      <li><strong class="text-[22px] font-black text-navy">{{ stats.lessons }}</strong> lessons</li>
+      <li><strong class="text-[22px] font-black text-navy">{{ stats.questions }}</strong> practice questions</li>
+    </ul>
+    {% endif %}
+  </div>
+</section>
+
+<section class="wrap pt-16 nav:pt-24" aria-labelledby="steps-title">
+  <div class="max-w-[640px]"><div class="eyebrow">Your path</div><h2 id="steps-title" class="section-title">Four steps, in this order</h2></div>
+  <ol class="mt-10 grid gap-6 sm:grid-cols-2 nav:grid-cols-4">
+    <li class="flex flex-col gap-3 rounded-2xl border-2 border-b-4 border-surface-border bg-white p-6">
+      <span class="flex h-11 w-11 items-center justify-center rounded-full bg-navy text-lg font-bold text-white">1</span>
+      <h3 class="text-lg font-bold">Pick your class and subjects</h3>
+      <p class="text-[15px] leading-relaxed text-slate-600">Tell us if you are in Form 5, Lower Sixth or Upper Sixth and whether you study Arts or Science. It takes under two minutes.</p>
+    </li>
+    <li class="flex flex-col gap-3 rounded-2xl border-2 border-b-4 border-surface-border bg-white p-6">
+      <span class="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-lg font-bold text-white">2</span>
+      <h3 class="text-lg font-bold">Learn one lesson at a time</h3>
+      <p class="text-[15px] leading-relaxed text-slate-600">Short lessons with worked examples, diagrams and quick checks. Each lesson covers one idea, so you always know what you are learning.</p>
+    </li>
+    <li class="flex flex-col gap-3 rounded-2xl border-2 border-b-4 border-surface-border bg-white p-6">
+      <span class="flex h-11 w-11 items-center justify-center rounded-full bg-success-text text-lg font-bold text-white">3</span>
+      <h3 class="text-lg font-bold">Practise and learn from mistakes</h3>
+      <p class="text-[15px] leading-relaxed text-slate-600">Every lesson has its own practice set. When an answer is wrong, you see why it is wrong and the full worked solution.</p>
+    </li>
+    <li class="flex flex-col gap-3 rounded-2xl border-2 border-b-4 border-surface-border bg-white p-6">
+      <span class="flex h-11 w-11 items-center justify-center rounded-full bg-warning-text text-lg font-bold text-white">4</span>
+      <h3 class="text-lg font-bold">Sit a mock exam</h3>
+      <p class="text-[15px] leading-relaxed text-slate-600">Timed mock papers show your score by topic, with a link back to the lessons to revise.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="wrap pt-16 nav:pt-24" aria-labelledby="inside-title">
+  <div class="max-w-[640px]"><div class="eyebrow">What you get</div><h2 id="inside-title" class="section-title">Everything you need to keep going</h2></div>
+  <div class="mt-10 grid gap-6 sm:grid-cols-2 nav:grid-cols-3">
+    {% include "core/_feature.html" with icon="book" accent="blue" title="Lessons built for understanding" text="Each topic is taught first, with worked examples, then practised." %}
+    {% include "core/_feature.html" with icon="target" accent="emerald" title="Practice with explanations" text="Wrong answers come with the real reason and a step-by-step solution." %}
+    {% include "core/_feature.html" with icon="progress" accent="emerald" title="Progress you can see" text="Points, streaks and topic mastery show what is solid and what needs another look." %}
+    {% include "core/_feature.html" with icon="bulb" accent="blue" title="Timed mock exams" text="Practise under exam conditions and get your score by topic." %}
+    {% include "core/_feature.html" with icon="download" accent="emerald" title="Light on data" text="Pages are built to work on phones and slow connections." %}
+    {% include "core/_feature.html" with icon="video" accent="blue" title="Diagrams and visuals" text="Figures you can tap to enlarge, so you see what the textbook only describes." %}
+  </div>
+</section>
+
+<section class="wrap pt-16 nav:pt-24" aria-labelledby="faq-title">
+  <div class="max-w-[640px]"><div class="eyebrow">Questions</div><h2 id="faq-title" class="section-title">Before you sign up</h2></div>
+  <div class="mt-8 flex max-w-[820px] flex-col gap-3">
+    <details class="rounded-card border-2 border-surface-border bg-white p-5"><summary class="cursor-pointer text-[17px] font-bold text-navy">Do I need to pay to start?</summary><p class="mt-3 text-[16px] leading-relaxed text-slate-600">No. Create a free account to start your first lesson.</p></details>
+    <details class="rounded-card border-2 border-surface-border bg-white p-5"><summary class="cursor-pointer text-[17px] font-bold text-navy">Which classes and subjects are covered?</summary><p class="mt-3 text-[16px] leading-relaxed text-slate-600">{% for level in levels %}{{ level.name }}{% if not forloop.last %}, {% endif %}{% empty %}Form 5, Lower Sixth and Upper Sixth{% endfor %}. Browse <a href="{% url 'courses:catalog' %}" class="font-semibold">all subjects</a> to see what is available for your class.</p></details>
+    <details class="rounded-card border-2 border-surface-border bg-white p-5"><summary class="cursor-pointer text-[17px] font-bold text-navy">Will it work on my phone and slow internet?</summary><p class="mt-3 text-[16px] leading-relaxed text-slate-600">Yes. The pages are designed for phones and light on data, and a low-data mode is available once you sign in.</p></details>
+    <details class="rounded-card border-2 border-surface-border bg-white p-5"><summary class="cursor-pointer text-[17px] font-bold text-navy">Is this the official GCE Board material?</summary><p class="mt-3 text-[16px] leading-relaxed text-slate-600">No. KKEVO Academy is an independent learning platform and is not affiliated with the Cameroon GCE Board. Use it alongside your teacher and your class syllabus. <a href="{% url 'core:about' %}" class="font-semibold">Read more about us</a>.</p></details>
+  </div>
+</section>
+
+{% include "components/signup_band.html" with band_title="Ready to take step one?" band_text="It takes under two minutes to create your account and open your first lesson." %}
+{% endblock %}

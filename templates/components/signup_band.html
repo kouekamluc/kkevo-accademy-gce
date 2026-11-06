@@ -1,0 +1,15 @@
+{# Sign-up call to action that closes every public page. Hidden for signed-in students. #}
+{% if not user.is_authenticated %}
+<section class="wrap py-14 nav:py-20" aria-labelledby="signup-band-title">
+  <div class="relative overflow-hidden rounded-3xl bg-navy px-6 py-12 text-center nav:px-12 nav:py-16">
+    <div aria-hidden="true" class="absolute right-10 top-8 hidden font-math text-[56px] italic text-navy-700 sm:block">F = ma</div>
+    <div aria-hidden="true" class="absolute bottom-6 left-10 hidden font-math text-[44px] italic text-navy-700 sm:block">x = −b/2a</div>
+    <h2 id="signup-band-title" class="relative mx-auto max-w-[640px] text-[28px] font-bold leading-tight tracking-[-.02em] text-white nav:text-[38px]">{{ band_title|default:"Ready for your first win?" }}</h2>
+    <p class="relative mx-auto mt-4 max-w-[520px] text-[17px] leading-relaxed text-slate-300">{{ band_text|default:"Create a free account, pick your subjects and start your first lesson in under two minutes." }}</p>
+    <div class="relative mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <a href="{% url 'accounts:register' %}" class="btn btn-lg w-full bg-white font-bold text-navy hover:bg-slate-100 hover:text-navy sm:w-auto">Create my free account {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
+      <a href="{% url 'accounts:login' %}" class="flex h-12 items-center px-4 text-[15px] font-semibold text-slate-200 hover:text-white">I already have an account</a>
+    </div>
+  </div>
+</section>
+{% endif %}

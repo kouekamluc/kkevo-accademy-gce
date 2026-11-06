@@ -1,44 +1,44 @@
+{% comment %}
+Header for every public (signed-out) page: Home, Subjects, How it works, About, with Log in and Create account always in reach.
+The current page is highlighted from the URL name, so each destination is a real page, not a jump inside one long page.
+{% endcomment %}
 {% url 'core:landing' as home_url %}
-<header class="relative border-b border-surface-border bg-white" x-data="{ open: false }" @keydown.escape.window="open = false">
-  <div class="wrap flex h-[72px] items-center justify-between gap-6">
-    <a href="{{ home_url }}" class="flex items-center gap-2.5 text-navy hover:text-navy">
+{% with view=request.resolver_match.view_name %}
+<style>html{scroll-behavior:smooth;scroll-padding-top:88px}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style>
+<header class="sticky top-0 z-40 border-b border-surface-border bg-white/95 backdrop-blur" x-data="{ open: false }" @keydown.escape.window="open = false">
+  <div class="wrap flex h-[68px] items-center justify-between gap-4">
+    <a href="{{ home_url }}" class="flex items-center gap-2.5 text-navy hover:text-navy" aria-label="KKEVO Academy home">
       {% include "components/logo.html" %}
-      <span class="text-lg font-bold tracking-[-.01em]">KKEVO Academy</span>
+      <span class="whitespace-nowrap text-base font-bold tracking-[-.01em] sm:text-lg">KKEVO Academy</span>
     </a>
-    <nav aria-label="Main" class="hidden items-center gap-7 nav:flex">
-      <a href="{{ home_url }}" class="px-1 py-2.5 text-[15px] {% if request.path == home_url %}font-semibold text-navy{% else %}font-medium text-slate-700 hover:text-navy{% endif %}" {% if request.path == home_url %}aria-current="page"{% endif %}>Home</a>
-      <a href="{% url 'courses:catalog' %}" class="px-1 py-2.5 text-[15px] font-medium text-slate-700 hover:text-navy">Explore Courses</a>
-      <a href="{{ home_url }}#how" class="px-1 py-2.5 text-[15px] font-medium text-slate-700 hover:text-navy">How It Works</a>
-      <a href="{{ home_url }}#about" class="px-1 py-2.5 text-[15px] font-medium text-slate-700 hover:text-navy">About</a>
+    <nav aria-label="Main" class="hidden items-center gap-2 nav:flex">
+      {% include "components/_public_nav_links.html" %}
     </nav>
-    <div class="hidden items-center gap-2.5 nav:flex">
+    <div class="flex items-center gap-2">
       {% if user.is_authenticated %}
         <a href="{% url 'dashboard:home' %}" class="btn-primary">Go to dashboard</a>
       {% else %}
-        <a href="{% url 'accounts:login' %}" class="flex h-11 items-center px-4 text-[15px] font-semibold text-navy hover:text-navy-700">Log In</a>
-        <a href="{% url 'accounts:register' %}" class="btn-primary">Get Started</a>
+        <a href="{% url 'accounts:login' %}" class="hidden h-11 items-center px-4 text-[15px] font-semibold text-navy hover:text-navy-700 nav:flex">Log In</a>
+        <a href="{% url 'accounts:register' %}" class="btn-primary whitespace-nowrap !h-10 !px-4 text-[14px] nav:!h-11 nav:!px-5 nav:text-[15px]">Sign up<span class="hidden sm:inline">&nbsp;free</span></a>
       {% endif %}
+      <button type="button" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border bg-white text-navy nav:hidden"
+              @click="open = !open" :aria-expanded="open.toString()" aria-controls="mobile-menu" aria-label="Menu">
+        <span x-show="!open">{% include "components/icon.html" with name="menu" class="h-[22px] w-[22px]" stroke="2" %}</span>
+        <span x-show="open" x-cloak>{% include "components/icon.html" with name="close" class="h-[22px] w-[22px]" stroke="2" %}</span>
+      </button>
     </div>
-    <button type="button" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border bg-white text-navy nav:hidden"
-            @click="open = !open" :aria-expanded="open.toString()" aria-controls="mobile-menu" aria-label="Open menu">
-      <span x-show="!open">{% include "components/icon.html" with name="menu" class="h-[22px] w-[22px]" stroke="2" %}</span>
-      <span x-show="open" x-cloak>{% include "components/icon.html" with name="close" class="h-[22px] w-[22px]" stroke="2" %}</span>
-    </button>
   </div>
-  <div id="mobile-menu" x-show="open" x-cloak x-transition.opacity class="absolute inset-x-0 top-full z-40 border-b border-surface-border bg-white shadow-raised nav:hidden">
+  <div id="mobile-menu" x-show="open" x-cloak x-transition.opacity
+       class="absolute inset-x-0 top-full z-40 border-b border-surface-border bg-white shadow-raised nav:hidden">
     <nav aria-label="Mobile" class="wrap flex flex-col gap-1 py-3">
-      <a href="{{ home_url }}" class="flex min-h-touch items-center font-semibold text-navy">Home</a>
-      <a href="{% url 'courses:catalog' %}" class="flex min-h-touch items-center font-medium text-slate-700">Explore Courses</a>
-      <a href="{{ home_url }}#how" @click="open = false" class="flex min-h-touch items-center font-medium text-slate-700">How It Works</a>
-      <a href="{{ home_url }}#about" @click="open = false" class="flex min-h-touch items-center font-medium text-slate-700">About</a>
+      {% include "components/_public_nav_links.html" with mobile=True %}
+      {% if not user.is_authenticated %}
       <div class="mt-2 grid grid-cols-2 gap-2 border-t border-surface-border pt-3">
-        {% if user.is_authenticated %}
-          <a href="{% url 'dashboard:home' %}" class="btn-primary col-span-2">Go to dashboard</a>
-        {% else %}
-          <a href="{% url 'accounts:login' %}" class="btn-secondary">Log In</a>
-          <a href="{% url 'accounts:register' %}" class="btn-primary">Get Started</a>
-        {% endif %}
+        <a href="{% url 'accounts:login' %}" class="btn-secondary">Log In</a>
+        <a href="{% url 'accounts:register' %}" class="btn-primary">Sign up free</a>
       </div>
+      {% endif %}
     </nav>
   </div>
 </header>
+{% endwith %}
