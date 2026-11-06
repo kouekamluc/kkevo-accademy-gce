@@ -6,7 +6,9 @@ KKEVO draft content. A reviewer checks it against the official GCE Board syllabu
 from .dsl import *  # noqa: F403
 
 COURSE = [("pure-mathematics-with-mechanics", "lower-sixth"),
-          ("pure-mathematics-with-statistics", "lower-sixth")]
+          ("pure-mathematics-with-statistics", "lower-sixth"),
+          ("pure-mathematics-with-mechanics", "upper-sixth"),
+          ("pure-mathematics-with-statistics", "upper-sixth")]
 
 MOD = "Algebra & Functions"
 PROOF = "Proof"

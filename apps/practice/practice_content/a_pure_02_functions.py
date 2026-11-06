@@ -6,7 +6,9 @@ KKEVO draft content. Each set follows one lesson in apps/courses/lesson_content/
 from .dsl import *  # noqa: F403
 
 COURSE = [("pure-mathematics-with-mechanics", "lower-sixth"),
-          ("pure-mathematics-with-statistics", "lower-sixth")]
+          ("pure-mathematics-with-statistics", "lower-sixth"),
+          ("pure-mathematics-with-mechanics", "upper-sixth"),
+          ("pure-mathematics-with-statistics", "upper-sixth")]
 
 MODULE = "Algebra & Functions"
 TOPIC = "Functions and graphs"

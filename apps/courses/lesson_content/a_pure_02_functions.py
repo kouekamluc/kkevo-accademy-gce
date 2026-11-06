@@ -8,7 +8,9 @@ overview lesson "composite-inverse-functions-and-oblique-asymptotes" in a_pure_c
 from .dsl import *  # noqa: F403
 
 COURSE = [("pure-mathematics-with-mechanics", "lower-sixth"),
-          ("pure-mathematics-with-statistics", "lower-sixth")]
+          ("pure-mathematics-with-statistics", "lower-sixth"),
+          ("pure-mathematics-with-mechanics", "upper-sixth"),
+          ("pure-mathematics-with-statistics", "upper-sixth")]
 
 MODULE = "Algebra & Functions"
 TOPIC = "Functions and graphs"

@@ -8,7 +8,9 @@ practice settings, not official examination times.
 from .dsl import *  # noqa: F403
 
 COURSE = [("pure-mathematics-with-mechanics", "lower-sixth"),
-          ("pure-mathematics-with-statistics", "lower-sixth")]
+          ("pure-mathematics-with-statistics", "lower-sixth"),
+          ("pure-mathematics-with-mechanics", "upper-sixth"),
+          ("pure-mathematics-with-statistics", "upper-sixth")]
 
 LESSONS = []
 

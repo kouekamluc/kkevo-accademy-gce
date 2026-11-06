@@ -154,7 +154,29 @@ PAGES = {
             "Differentiate and integrate with the standard rules and techniques, including series",
             "Solve first-order differential equations and problems with lines and planes in 3D",
         ]),
+    ("pure-mathematics-with-mechanics", "upper-sixth"): dict(
+        summary="The core pure mathematics of GCE A Level Pure Mathematics with Mechanics: proof, algebra and "
+                "functions, trigonometry, conic sections, calculus, series, differential equations and 3D vectors.",
+        outcomes=[
+            "Prove results by induction and by contradiction",
+            "Use partial fractions, the binomial theorem and the roots of polynomials",
+            "Work with composite and inverse functions and sketch curves with asymptotes",
+            "Use compound, double and half-angle identities and the harmonic form R cos(θ ± α)",
+            "Differentiate and integrate with the standard rules and techniques, including series",
+            "Solve first-order differential equations and problems with lines and planes in 3D",
+        ]),
     ("pure-mathematics-with-statistics", "lower-sixth"): dict(
+        summary="The core pure mathematics of GCE A Level Pure Mathematics with Statistics: proof, algebra and "
+                "functions, trigonometry, conic sections, calculus, series, differential equations and 3D vectors.",
+        outcomes=[
+            "Prove results by induction and by contradiction",
+            "Use partial fractions, the binomial theorem and the roots of polynomials",
+            "Work with composite and inverse functions and sketch curves with asymptotes",
+            "Use compound, double and half-angle identities and the harmonic form R cos(θ ± α)",
+            "Differentiate and integrate with the standard rules and techniques, including series",
+            "Solve first-order differential equations and problems with lines and planes in 3D",
+        ]),
+    ("pure-mathematics-with-statistics", "upper-sixth"): dict(
         summary="The core pure mathematics of GCE A Level Pure Mathematics with Statistics: proof, algebra and "
                 "functions, trigonometry, conic sections, calculus, series, differential equations and 3D vectors.",
         outcomes=[

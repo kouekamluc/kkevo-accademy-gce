@@ -2,7 +2,9 @@
 
 from .dsl import *  # noqa: F403
 
-COURSE = [("pure-mathematics-with-mechanics", "lower-sixth"), ("pure-mathematics-with-statistics", "lower-sixth")]
+COURSE = [("pure-mathematics-with-mechanics", "lower-sixth"), ("pure-mathematics-with-statistics", "lower-sixth"),
+          ("pure-mathematics-with-mechanics", "upper-sixth"),
+          ("pure-mathematics-with-statistics", "upper-sixth")]
 
 CALCULUS = "Calculus"
 INTEGRATION = "Integration"

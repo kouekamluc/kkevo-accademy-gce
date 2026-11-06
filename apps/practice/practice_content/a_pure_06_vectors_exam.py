@@ -8,7 +8,9 @@ Paper 2 practice paper A: auto-markable parts (multiple choice and numeric) in n
 from .dsl import *  # noqa: F403
 
 COURSE = [("pure-mathematics-with-mechanics", "lower-sixth"),
-          ("pure-mathematics-with-statistics", "lower-sixth")]
+          ("pure-mathematics-with-statistics", "lower-sixth"),
+          ("pure-mathematics-with-mechanics", "upper-sixth"),
+          ("pure-mathematics-with-statistics", "upper-sixth")]
 
 MOD = "3D Vectors"
 TOP = "Vectors in space"

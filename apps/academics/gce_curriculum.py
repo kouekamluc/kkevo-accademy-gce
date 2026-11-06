@@ -720,6 +720,10 @@ SYLLABI[("pure-mathematics-with-mechanics", "lower-sixth")] = (
     "Pure Mathematics with Mechanics (A Level, 765) — Core Pure", _PURE_NOTE, _PURE_CORE)
 SYLLABI[("pure-mathematics-with-statistics", "lower-sixth")] = (
     "Pure Mathematics with Statistics (A Level, 770) — Core Pure", _PURE_NOTE, _PURE_CORE)
+SYLLABI[("pure-mathematics-with-mechanics", "upper-sixth")] = (
+    "Pure Mathematics with Mechanics (A Level, 765) — Core Pure", _PURE_NOTE, _PURE_CORE)
+SYLLABI[("pure-mathematics-with-statistics", "upper-sixth")] = (
+    "Pure Mathematics with Statistics (A Level, 770) — Core Pure", _PURE_NOTE, _PURE_CORE)
 
 
 # A Level courses that have a practice paper: KKEVO's own exam practice, not a Board paper.

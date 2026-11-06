@@ -139,7 +139,8 @@ def test_student_journey_from_dashboard_to_mock_exam(client, student, maths):
 @pytest.mark.parametrize("subject, level, min_topics", [
     ("computer-science", "lower-sixth", 13), ("computer-science", "upper-sixth", 9),
     ("ict", "lower-sixth", 7), ("ict", "upper-sixth", 6),
-    ("history", "lower-sixth", 9), ("history", "upper-sixth", 9)])
+    ("history", "lower-sixth", 9), ("history", "upper-sixth", 9),
+    ("pure-mathematics-with-mechanics", "upper-sixth", 10), ("pure-mathematics-with-statistics", "upper-sixth", 10)])
 def test_a_level_courses_have_depth_practice_and_a_practice_paper(db, subject, level, min_topics):
     call_command("load_gce_curriculum")
     call_command("load_lessons", "--only", f"{subject}:{level}")
