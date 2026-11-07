@@ -1,41 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Displacement-time graph of an oscillating mass: a sine curve starting at zero, with the time axis marked every 0.1 second up to 0.8 second and the displacement axis marked in centimetres from minus 4 to plus 4"><rect width="560" height="360" fill="#ffffff"/><defs><marker id="ak" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
 <text x="300.0" y="24.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">Displacement of an oscillating mass</text>
-<line x1="90.0" y1="350.0" x2="520.0" y2="350.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="82.0" y="355.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">-4</text>
-<line x1="90.0" y1="310.0" x2="520.0" y2="310.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="82.0" y="315.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">-3</text>
-<line x1="90.0" y1="270.0" x2="520.0" y2="270.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="82.0" y="275.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">-2</text>
-<line x1="90.0" y1="230.0" x2="520.0" y2="230.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="82.0" y="235.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">-1</text>
-<line x1="90.0" y1="150.0" x2="520.0" y2="150.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="82.0" y="155.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">1</text>
-<line x1="90.0" y1="110.0" x2="520.0" y2="110.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="82.0" y="115.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">2</text>
-<line x1="90.0" y1="70.0" x2="520.0" y2="70.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="82.0" y="75.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">3</text>
-<line x1="90.0" y1="30.0" x2="520.0" y2="30.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="82.0" y="35.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">4</text>
-<line x1="143.8" y1="350.0" x2="143.8" y2="30.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="143.8" y="370.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.1</text>
-<line x1="197.5" y1="350.0" x2="197.5" y2="30.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="197.5" y="370.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.2</text>
-<line x1="251.2" y1="350.0" x2="251.2" y2="30.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="251.2" y="370.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.3</text>
-<line x1="305.0" y1="350.0" x2="305.0" y2="30.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="305.0" y="370.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.4</text>
-<line x1="358.8" y1="350.0" x2="358.8" y2="30.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="358.8" y="370.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.5</text>
-<line x1="412.5" y1="350.0" x2="412.5" y2="30.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="412.5" y="370.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.6</text>
-<line x1="466.2" y1="350.0" x2="466.2" y2="30.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="466.2" y="370.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.7</text>
-<line x1="520.0" y1="350.0" x2="520.0" y2="30.0" stroke="#CBD5E1" stroke-width="1"/>
-<text x="520.0" y="370.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.8</text>
-<line x1="90.0" y1="190.0" x2="530.0" y2="190.0" stroke="#102A43" stroke-width="2"/>
-<line x1="90.0" y1="350.0" x2="90.0" y2="22.0" stroke="#102A43" stroke-width="2"/>
-<path d="M90.0 190.0 L93.6 177.5 L97.2 165.1 L100.8 152.9 L104.3 141.2 L107.9 130.0 L111.5 119.5 L115.1 109.7 L118.7 100.8 L122.2 92.9 L125.8 86.1 L129.4 80.4 L133.0 75.9 L136.6 72.6 L140.2 70.7 L143.8 70.0 L147.3 70.7 L150.9 72.6 L154.5 75.9 L158.1 80.4 L161.7 86.1 L165.2 92.9 L168.8 100.8 L172.4 109.7 L176.0 119.5 L179.6 130.0 L183.2 141.2 L186.8 152.9 L190.3 165.1 L193.9 177.5 L197.5 190.0 L201.1 202.5 L204.7 214.9 L208.2 227.1 L211.8 238.8 L215.4 250.0 L219.0 260.5 L222.6 270.3 L226.2 279.2 L229.8 287.1 L233.3 293.9 L236.9 299.6 L240.5 304.1 L244.1 307.4 L247.7 309.3 L251.2 310.0 L254.8 309.3 L258.4 307.4 L262.0 304.1 L265.6 299.6 L269.2 293.9 L272.8 287.1 L276.3 279.2 L279.9 270.3 L283.5 260.5 L287.1 250.0 L290.7 238.8 L294.2 227.1 L297.8 214.9 L301.4 202.5 L305.0 190.0 L308.6 177.5 L312.2 165.1 L315.8 152.9 L319.3 141.2 L322.9 130.0 L326.5 119.5 L330.1 109.7 L333.7 100.8 L337.2 92.9 L340.8 86.1 L344.4 80.4 L348.0 75.9 L351.6 72.6 L355.2 70.7 L358.8 70.0 L362.3 70.7 L365.9 72.6 L369.5 75.9 L373.1 80.4 L376.7 86.1 L380.2 92.9 L383.8 100.8 L387.4 109.7 L391.0 119.5 L394.6 130.0 L398.2 141.2 L401.8 152.9 L405.3 165.1 L408.9 177.5 L412.5 190.0 L416.1 202.5 L419.7 214.9 L423.2 227.1 L426.8 238.8 L430.4 250.0 L434.0 260.5 L437.6 270.3 L441.2 279.2 L444.8 287.1 L448.3 293.9 L451.9 299.6 L455.5 304.1 L459.1 307.4 L462.7 309.3 L466.2 310.0 L469.8 309.3 L473.4 307.4 L477.0 304.1 L480.6 299.6 L484.2 293.9 L487.8 287.1 L491.3 279.2 L494.9 270.3 L498.5 260.5 L502.1 250.0 L505.7 238.8 L509.2 227.1 L512.8 214.9 L516.4 202.5 L520.0 190.0" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
-<text x="526.0" y="214.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="end">t / s</text>
-<text x="84.0" y="16.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="end">x / cm</text>
-<text x="82.0" y="195.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">0</text>
+<line x1="90.0" y1="296.0" x2="520.0" y2="296.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="82.0" y="300.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">-4</text>
+<line x1="90.0" y1="264.0" x2="520.0" y2="264.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="82.0" y="268.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">-3</text>
+<line x1="90.0" y1="232.0" x2="520.0" y2="232.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="82.0" y="236.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">-2</text>
+<line x1="90.0" y1="200.0" x2="520.0" y2="200.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="82.0" y="204.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">-1</text>
+<line x1="90.0" y1="136.0" x2="520.0" y2="136.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="82.0" y="140.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">1</text>
+<line x1="90.0" y1="104.0" x2="520.0" y2="104.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="82.0" y="108.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">2</text>
+<line x1="90.0" y1="72.0" x2="520.0" y2="72.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="82.0" y="76.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">3</text>
+<line x1="90.0" y1="40.0" x2="520.0" y2="40.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="82.0" y="44.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">4</text>
+<line x1="143.8" y1="296.0" x2="143.8" y2="40.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="143.8" y="312.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.1</text>
+<line x1="197.5" y1="296.0" x2="197.5" y2="40.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="197.5" y="312.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.2</text>
+<line x1="251.2" y1="296.0" x2="251.2" y2="40.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="251.2" y="312.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.3</text>
+<line x1="305.0" y1="296.0" x2="305.0" y2="40.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="305.0" y="312.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.4</text>
+<line x1="358.8" y1="296.0" x2="358.8" y2="40.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="358.8" y="312.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.5</text>
+<line x1="412.5" y1="296.0" x2="412.5" y2="40.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="412.5" y="312.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.6</text>
+<line x1="466.2" y1="296.0" x2="466.2" y2="40.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="466.2" y="312.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.7</text>
+<line x1="520.0" y1="296.0" x2="520.0" y2="40.0" stroke="#CBD5E1" stroke-width="1"/>
+<text x="520.0" y="312.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">0.8</text>
+<line x1="90.0" y1="168.0" x2="530.0" y2="168.0" stroke="#102A43" stroke-width="2"/>
+<line x1="90.0" y1="296.0" x2="90.0" y2="33.6" stroke="#102A43" stroke-width="2"/>
+<path d="M90.0 168.0 L93.6 158.0 L97.2 148.1 L100.8 138.3 L104.3 129.0 L107.9 120.0 L111.5 111.6 L115.1 103.8 L118.7 96.6 L122.2 90.3 L125.8 84.9 L129.4 80.3 L133.0 76.7 L136.6 74.1 L140.2 72.6 L143.8 72.0 L147.3 72.6 L150.9 74.1 L154.5 76.7 L158.1 80.3 L161.7 84.9 L165.2 90.3 L168.8 96.6 L172.4 103.8 L176.0 111.6 L179.6 120.0 L183.2 129.0 L186.8 138.3 L190.3 148.1 L193.9 158.0 L197.5 168.0 L201.1 178.0 L204.7 187.9 L208.2 197.7 L211.8 207.0 L215.4 216.0 L219.0 224.4 L222.6 232.2 L226.2 239.4 L229.8 245.7 L233.3 251.1 L236.9 255.7 L240.5 259.3 L244.1 261.9 L247.7 263.4 L251.2 264.0 L254.8 263.4 L258.4 261.9 L262.0 259.3 L265.6 255.7 L269.2 251.1 L272.8 245.7 L276.3 239.4 L279.9 232.2 L283.5 224.4 L287.1 216.0 L290.7 207.0 L294.2 197.7 L297.8 187.9 L301.4 178.0 L305.0 168.0 L308.6 158.0 L312.2 148.1 L315.8 138.3 L319.3 129.0 L322.9 120.0 L326.5 111.6 L330.1 103.8 L333.7 96.6 L337.2 90.3 L340.8 84.9 L344.4 80.3 L348.0 76.7 L351.6 74.1 L355.2 72.6 L358.8 72.0 L362.3 72.6 L365.9 74.1 L369.5 76.7 L373.1 80.3 L376.7 84.9 L380.2 90.3 L383.8 96.6 L387.4 103.8 L391.0 111.6 L394.6 120.0 L398.2 129.0 L401.8 138.3 L405.3 148.1 L408.9 158.0 L412.5 168.0 L416.1 178.0 L419.7 187.9 L423.2 197.7 L426.8 207.0 L430.4 216.0 L434.0 224.4 L437.6 232.2 L441.2 239.4 L444.8 245.7 L448.3 251.1 L451.9 255.7 L455.5 259.3 L459.1 261.9 L462.7 263.4 L466.2 264.0 L469.8 263.4 L473.4 261.9 L477.0 259.3 L480.6 255.7 L484.2 251.1 L487.8 245.7 L491.3 239.4 L494.9 232.2 L498.5 224.4 L502.1 216.0 L505.7 207.0 L509.2 197.7 L512.8 187.9 L516.4 178.0 L520.0 168.0" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<text x="526.0" y="187.2" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="end">t / s</text>
+<text x="96.0" y="34.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="start">x / cm</text>
+<text x="82.0" y="172.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">0</text>
 </svg>

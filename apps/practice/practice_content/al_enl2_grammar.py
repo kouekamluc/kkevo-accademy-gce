@@ -319,7 +319,7 @@ SETS.append(practice_set(
           "*My sister she* repeats the subject.", "Double subject", "Concept", "Is the subject named twice?"),
         Q("In which sentence can the pronoun *that* be omitted?",
           "The phone that I lost was new.", [("The phone that rang was new.", "*That* is the subject of *rang*."), ("The phone that is on the desk is new.", "*That* is the subject of *is*."), ("The phone that costs 30,000 FCFA is new.", "*That* is the subject of *costs*.")],
-          "In the first, *that* is the object of *lost*: it can be dropped.", "Omitting relative pronouns", "Reasoning", "Is *that* the subject of its own clause?"),
+          "In 'The phone that I lost', *that* is the object of *lost*: it can be dropped.", "Omitting relative pronouns", "Reasoning", "Is *that* the subject of its own clause?"),
         Q("Which sentence is correct?",
           "Everyone has finished the work.", [("Everyone have finished the work.", "*Everyone* takes a singular verb."), ("Everyone has finished it's work.", "*It's* means *it is*."), ("Everyone are finished the work.", "Singular verb needed; also wrong participle phrasing.")],
           "*Everyone* takes a singular verb: *has*.", "Indefinite pronouns", "Analysis", "Singular or plural verb after *everyone*?"),

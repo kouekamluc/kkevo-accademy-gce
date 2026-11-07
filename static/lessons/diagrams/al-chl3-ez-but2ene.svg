@@ -13,9 +13,9 @@
 <line x1="111.0" y1="170.0" x2="85.0" y2="215.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
 <line x1="179.0" y1="170.0" x2="205.0" y2="125.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
 <line x1="179.0" y1="170.0" x2="205.0" y2="215.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
-<text x="81.0" y="117.0" font-size="17" fill="#B45309" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="12">3</tspan></text>
+<text x="81.0" y="117.0" font-size="17" fill="#B45309" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="13">3</tspan></text>
 <text x="81.0" y="235.0" font-size="17" fill="#102A43" text-anchor="middle" font-weight="600" >H</text>
-<text x="209.0" y="117.0" font-size="17" fill="#B45309" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="12">3</tspan></text>
+<text x="209.0" y="117.0" font-size="17" fill="#B45309" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="13">3</tspan></text>
 <text x="209.0" y="235.0" font-size="17" fill="#102A43" text-anchor="middle" font-weight="600" >H</text>
 <text x="145.0" y="258.0" font-size="16" fill="#2563EB" text-anchor="middle" font-weight="700" >(Z)-but-2-ene = cis</text>
 <text x="145.0" y="282.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >higher-priority groups: same side</text>
@@ -26,10 +26,10 @@
 <line x1="381.0" y1="170.0" x2="355.0" y2="215.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
 <line x1="449.0" y1="170.0" x2="475.0" y2="215.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
 <line x1="449.0" y1="170.0" x2="475.0" y2="125.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
-<text x="351.0" y="117.0" font-size="17" fill="#B45309" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="12">3</tspan></text>
+<text x="351.0" y="117.0" font-size="17" fill="#B45309" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="13">3</tspan></text>
 <text x="351.0" y="235.0" font-size="17" fill="#102A43" text-anchor="middle" font-weight="600" >H</text>
 <text x="479.0" y="117.0" font-size="17" fill="#102A43" text-anchor="middle" font-weight="600" >H</text>
-<text x="479.0" y="235.0" font-size="17" fill="#B45309" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="12">3</tspan></text>
+<text x="479.0" y="235.0" font-size="17" fill="#B45309" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="13">3</tspan></text>
 <text x="415.0" y="258.0" font-size="16" fill="#047857" text-anchor="middle" font-weight="700" >(E)-but-2-ene = trans</text>
 <text x="415.0" y="282.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >higher-priority groups: opposite sides</text>
 <text x="280.0" y="342.0" font-size="14" fill="#B45309" text-anchor="middle" font-weight="400" >On each carbon the CH3 group has higher priority than H (amber).</text>

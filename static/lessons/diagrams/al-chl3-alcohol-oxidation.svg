@@ -8,37 +8,37 @@
 <text x="280.0" y="26.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >Oxidation of alcohols with acidified potassium dichromate(VI)</text>
 <text x="10.0" y="54.0" font-size="14" fill="#B45309" text-anchor="start" font-weight="700" >Primary alcohol</text>
 <rect x="10" y="60" width="138" height="64" rx="8" fill="#EFF6FF" stroke="#9FB3C8" stroke-width="2"/>
-<text x="79.0" y="88.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="12">3</tspan>CH<tspan baseline-shift="sub" font-size="12">2</tspan>OH</text>
+<text x="79.0" y="88.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="13">3</tspan>CH<tspan baseline-shift="sub" font-size="13">2</tspan>OH</text>
 <text x="79.0" y="110.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >ethanol</text>
 <line x1="150.0" y1="92.0" x2="222.0" y2="92.0" stroke="#102A43" stroke-width="3" marker-end="url(#ah)"/>
 <text x="186.0" y="80.0" font-size="13" fill="#2563EB" text-anchor="middle" font-weight="600" >[O]</text>
 <text x="186.0" y="114.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >distil off</text>
 <rect x="226" y="60" width="138" height="64" rx="8" fill="#ECFDF5" stroke="#9FB3C8" stroke-width="2"/>
-<text x="295.0" y="88.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="12">3</tspan>CHO</text>
+<text x="295.0" y="88.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="13">3</tspan>CHO</text>
 <text x="295.0" y="110.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >ethanal (aldehyde)</text>
 <line x1="366.0" y1="92.0" x2="404.0" y2="92.0" stroke="#102A43" stroke-width="3" marker-end="url(#ah)"/>
 <rect x="410" y="60" width="140" height="64" rx="8" fill="#EFF6FF" stroke="#9FB3C8" stroke-width="2"/>
-<text x="480.0" y="88.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="12">3</tspan>COOH</text>
+<text x="480.0" y="88.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="13">3</tspan>COOH</text>
 <text x="480.0" y="110.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >ethanoic acid</text>
 <text x="386.0" y="80.0" font-size="13" fill="#2563EB" text-anchor="middle" font-weight="600" >[O]</text>
 <text x="480.0" y="142.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >reflux, excess oxidant</text>
 <text x="10.0" y="164.0" font-size="14" fill="#B45309" text-anchor="start" font-weight="700" >Secondary alcohol</text>
 <rect x="10" y="170" width="138" height="64" rx="8" fill="#EFF6FF" stroke="#9FB3C8" stroke-width="2"/>
-<text x="79.0" y="198.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="12">3</tspan>CH(OH)CH<tspan baseline-shift="sub" font-size="12">3</tspan></text>
+<text x="79.0" y="198.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="13">3</tspan>CH(OH)CH<tspan baseline-shift="sub" font-size="13">3</tspan></text>
 <text x="79.0" y="220.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >propan-2-ol</text>
 <line x1="150.0" y1="202.0" x2="222.0" y2="202.0" stroke="#102A43" stroke-width="3" marker-end="url(#ah)"/>
 <text x="186.0" y="190.0" font-size="13" fill="#2563EB" text-anchor="middle" font-weight="600" >[O]</text>
 <text x="186.0" y="224.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >heat</text>
 <rect x="226" y="170" width="138" height="64" rx="8" fill="#ECFDF5" stroke="#9FB3C8" stroke-width="2"/>
-<text x="295.0" y="198.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="12">3</tspan>COCH<tspan baseline-shift="sub" font-size="12">3</tspan></text>
+<text x="295.0" y="198.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >CH<tspan baseline-shift="sub" font-size="13">3</tspan>COCH<tspan baseline-shift="sub" font-size="13">3</tspan></text>
 <text x="295.0" y="220.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >propanone (ketone)</text>
 <text x="10.0" y="266.0" font-size="14" fill="#B45309" text-anchor="start" font-weight="700" >Tertiary alcohol</text>
 <rect x="10" y="272" width="168" height="60" rx="8" fill="#EFF6FF" stroke="#9FB3C8" stroke-width="2"/>
-<text x="94.0" y="298.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >(CH<tspan baseline-shift="sub" font-size="12">3</tspan>)<tspan baseline-shift="sub" font-size="12">3</tspan>COH</text>
+<text x="94.0" y="298.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >(CH<tspan baseline-shift="sub" font-size="13">3</tspan>)<tspan baseline-shift="sub" font-size="13">3</tspan>COH</text>
 <text x="94.0" y="320.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >2-methylpropan-2-ol</text>
 <line x1="180.0" y1="302.0" x2="240.0" y2="302.0" stroke="#102A43" stroke-width="3" marker-end="url(#ah)"/>
 <text x="210.0" y="290.0" font-size="13" fill="#2563EB" text-anchor="middle" font-weight="600" >[O]</text>
 <text x="252.0" y="308.0" font-size="16" fill="#B45309" text-anchor="start" font-weight="700" >no reaction</text>
 <text x="252.0" y="326.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >(no H on the C-OH carbon)</text>
-<text x="280.0" y="352.0" font-size="13" fill="#047857" text-anchor="middle" font-weight="600" >Orange Cr<tspan baseline-shift="sub" font-size="12">2</tspan>O<tspan baseline-shift="sub" font-size="12">7</tspan><tspan baseline-shift="super" font-size="11">2&#8722;</tspan> turns green (Cr<tspan baseline-shift="super" font-size="11">3+</tspan>) when oxidation occurs.</text>
+<text x="280.0" y="352.0" font-size="13" fill="#047857" text-anchor="middle" font-weight="600" >Orange Cr<tspan baseline-shift="sub" font-size="13">2</tspan>O<tspan baseline-shift="sub" font-size="13">7</tspan><tspan baseline-shift="super" font-size="13">2&#8722;</tspan> turns green (Cr<tspan baseline-shift="super" font-size="13">3+</tspan>) when oxidation occurs.</text>
 </svg>

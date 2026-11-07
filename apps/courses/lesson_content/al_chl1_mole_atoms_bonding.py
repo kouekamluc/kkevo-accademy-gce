@@ -681,7 +681,7 @@ electron   e        -1                1/1836            9.11  x 10^-31
         ]),
         EX("Worked example 2: how much heavier is a proton?", intro=r"Using the masses in the table, find the ratio of the mass of a proton to that of an electron, and the charge in coulombs on one mole of electrons ($L = 6.02\times10^{23}\ \mathrm{mol^{-1}}$).", steps=[
             S("Ratio of masses", math=r"\frac{1.673\times10^{-27}}{9.11\times10^{-31}} = 1.84\times10^{3} \approx 1836"),
-            S("Charge on one mole of electrons", math=r"1.60\times10^{-19}\times6.02\times10^{23} = 9.64\times10^{4}\ \mathrm{C\,mol^{-1}}"),
+            S("Charge on one mole of electrons", math=r"1.60\times10^{-19}\times6.02\times10^{23} = 9.63\times10^{4}\ \mathrm{C\,mol^{-1}}"),
             S("Link", text="This is the Faraday constant (about 96 500 C per mole), used in Upper Sixth electrolysis."),
         ]),
         EX("Worked example 3: deflection in an electric field", intro=r"A beam of $^{1}\mathrm{H}^{+}$, $^{2}\mathrm{H}^{+}$ and $^{4}\mathrm{He}^{2+}$ ions passes between two charged plates. Compare how much each beam is deflected.", steps=[

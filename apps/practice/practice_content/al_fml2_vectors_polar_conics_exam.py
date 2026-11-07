@@ -1070,7 +1070,7 @@ P1_QUESTIONS = [
        "Area in polar coordinates", "The integrand is $r^2$ itself: $4\\cos 2\\theta$.", "Calculation"),
     mp(r"The area bounded by the spiral $r = \theta$ and the lines $\theta = 0$ and $\theta = \dfrac{\pi}{2}$ is", r"$\dfrac{\pi^3}{48}$",
        [(r"$\dfrac{\pi^3}{24}$", "You forgot the factor $\\frac{1}{2}$."),
-        (r"$\dfrac{\pi^2}{8}$", "You integrated $\\frac{1}{2}r\\,d\\theta$ instead of $\\frac{1}{2}r^2\\,d\\theta$."),
+        (r"$\dfrac{\pi^2}{8}$", "You integrated $r\\,d\\theta$ instead of $\\frac{1}{2}r^2\\,d\\theta$."),
         (r"$\dfrac{\pi^3}{8}$", "You evaluated $\\left(\\frac{\\pi}{2}\\right)^3$ and did not divide by $3\\times 2$.")],
        [S("Set up", math=r"\tfrac{1}{2}\int_0^{\pi/2}\theta^2\,d\theta = \tfrac{1}{2}\cdot\tfrac{1}{3}\left(\tfrac{\pi}{2}\right)^3 = \tfrac{\pi^3}{48}")],
        "Area in polar coordinates", "Integrate $\\frac{1}{2}\\theta^2$.", "Calculation"),

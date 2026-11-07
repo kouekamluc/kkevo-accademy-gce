@@ -848,7 +848,7 @@ SETS.append(practice_set(
     title="Grating angles, orders and spectra", lesson="phl2-diffraction-grating",
     questions=[
         MC(r"A diffraction grating has $500$ lines per millimetre. What is the spacing $d$ between adjacent lines?", [
-            C(r"$5.0\times10^{-7}\ \text{m}$", why="You divided 1 mm by 5000 (wrong power of ten). 500 lines per mm gives 1/500 mm = 2.0 micrometres."),
+            C(r"$5.0\times10^{-7}\ \text{m}$", why="You took the 5 of '500' with a wrong power of ten. d is the reciprocal: 500 lines per mm gives 1/500 mm = 2.0 micrometres."),
             C(r"$5.0\times10^{2}\ \text{m}$", why="You used the number of lines as a length. d is the reciprocal."),
             C(r"$2.0\times10^{-6}\ \text{m}$", correct=True),
             C(r"$2.0\times10^{-3}\ \text{m}$", why="That is 2 mm: you forgot the factor of 1/500 on the millimetre."),

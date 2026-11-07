@@ -12,6 +12,6 @@
 <text x="305.0" y="346.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="middle">driving frequency f</text>
 <text x="44.0" y="180.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="middle" transform="rotate(-90 44.0 180.0)">amplitude</text>
 <text x="317.0" y="81.8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="start">light damping</text>
-<text x="365.2" y="242.8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="start">medium</text>
+<text stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke" x="365.2" y="242.8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="start">medium</text>
 <text x="154.5" y="278.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="start">heavy damping</text>
 </svg>

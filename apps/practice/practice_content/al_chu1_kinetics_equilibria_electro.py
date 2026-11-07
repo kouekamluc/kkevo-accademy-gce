@@ -1003,7 +1003,7 @@ SETS.append(practice_set(
            r"$2\mathrm{H_2} + \mathrm{O_2} \rightarrow 2\mathrm{H_2O}$",
            [(r"$\mathrm{H_2} + \mathrm{O_2} \rightarrow \mathrm{H_2O}$", "This equation is not balanced in oxygen atoms."),
             (r"$2\mathrm{H_2O} \rightarrow 2\mathrm{H_2} + \mathrm{O_2}$", "This is electrolysis, the reverse of the fuel cell reaction."),
-            (r"$\mathrm{H_2} + 2\mathrm{OH^-} \rightarrow 2\mathrm{H_2O}$", "This is not balanced in charge or in atoms, and it omits oxygen.")],
+            (r"$\mathrm{H_2} + 2\mathrm{OH^-} \rightarrow 2\mathrm{H_2O}$", "This is not balanced in charge (the electrons are missing) and it omits oxygen.")],
            [S("Add the half-equations", math=r"2\mathrm{H_2} + \mathrm{O_2} \rightarrow 2\mathrm{H_2O}")],
            concept="Overall fuel cell reaction", skill="Recall", hint="Balance the atoms of oxygen.", feedback="Hydrogen and oxygen form water."),
         NUM(r"In an alkaline hydrogen-oxygen fuel cell, $E^\circ(\mathrm{O_2/OH^-}) = +0.40\ \mathrm{V}$ and $E^\circ(\mathrm{H_2O/H_2}) = -0.83\ \mathrm{V}$. Calculate $E^\circ_{\text{cell}}$ in volts.", 1.23,

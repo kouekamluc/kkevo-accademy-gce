@@ -280,7 +280,7 @@ LESSONS = [
             MISTAKE("Using the mass of the wrong particle",
                     "The wavelength depends on mass and speed. Use $9.11 \\times 10^{-31}$ kg for an electron and $1.67 \\times 10^{-27}$ kg for a proton. At the same speed a proton has a wavelength nearly 2000 times shorter than an electron."),
             MISTAKE("Forgetting the square root",
-                    "$p = \\sqrt{2 m e V}$. Squaring is easy to forget, and a wavelength that does not shrink when the voltage rises is a warning sign."),
+                    "$p = \\sqrt{2 m e V}$. Taking the square root is easy to forget, and a wavelength that does not shrink when the voltage rises is a warning sign."),
             MISTAKE("Saying a moving ball is a wave",
                     "A ball has a de Broglie wavelength, but it is about $10^{-34}$ m, far too small ever to show wave effects. Wave behaviour needs a wavelength comparable to the gap or the object."),
             QUIZ("The accelerating voltage on an electron beam is multiplied by 4. The de Broglie wavelength of the electrons becomes",

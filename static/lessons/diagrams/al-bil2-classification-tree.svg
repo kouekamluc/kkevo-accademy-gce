@@ -26,9 +26,9 @@
 <rect x="384" y="225" width="84" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
 <text x="426.0" y="250.0" text-anchor="middle" fill="#102A43" font-size="13" font-weight="600">Plantae</text>
 <path d="M365 145 L365 185 L426 185 L426 225" fill="none" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
-<rect x="476" y="225" width="84" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
-<text x="518.0" y="250.0" text-anchor="middle" fill="#102A43" font-size="13" font-weight="600">Animalia</text>
-<path d="M365 145 L365 185 L518 185 L518 225" fill="none" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<rect x="474" y="225" width="82" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="515.0" y="250.0" text-anchor="middle" fill="#102A43" font-size="13" font-weight="600">Animalia</text>
+<path d="M365 145 L365 185 L515 185 L515 225" fill="none" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
 <text x="280" y="300" text-anchor="middle" fill="#102A43" font-size="13" font-weight="400">Dashed box: the kingdom that covers both prokaryote domains</text>
 <text x="280" y="322" text-anchor="middle" fill="#102A43" font-size="13" font-weight="400">in the five-kingdom scheme (check your textbook).</text>
 </svg>

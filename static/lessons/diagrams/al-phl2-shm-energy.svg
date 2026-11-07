@@ -18,5 +18,5 @@
 <circle cx="448.5" cy="173.0" r="5.0" fill="#102A43" stroke="#102A43" stroke-width="2"/>
 <line x1="448.5" y1="173.0" x2="448.5" y2="280.0" stroke="#102A43" stroke-width="2" stroke-dasharray="5 4"/>
 <text x="448.5" y="302.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">A/&#8730;2</text>
-<text x="458.5" y="165.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#102A43" text-anchor="start">KE = PE</text>
+<text stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round" paint-order="stroke" x="458.5" y="165.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#102A43" text-anchor="start">KE = PE</text>
 </svg>

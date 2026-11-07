@@ -45,11 +45,11 @@ def mc(prompt, right, wrongs, steps, concept, skill, hint, feedback="", diagram=
 
 
 def _v(*c):
-    return r"\begin{pmatrix} " + r" \ ".join(str(x) for x in c) + r" \end{pmatrix}"
+    return r"\begin{pmatrix} " + r" \\ ".join(str(x) for x in c) + r" \end{pmatrix}"
 
 
 def _m(*rows):
-    return r"\begin{pmatrix} " + r" \ ".join(" & ".join(str(x) for x in r) for r in rows) + r" \end{pmatrix}"
+    return r"\begin{pmatrix} " + r" \\ ".join(" & ".join(str(x) for x in r) for r in rows) + r" \end{pmatrix}"
 
 
 SETS = []
@@ -914,7 +914,7 @@ q(MP, "Probability generating functions", r"A random variable has pgf $G(t) = (0
   [S("Binomial", math=r"G'(1) = 5(0.7)(1)^4 = 3.5")], "This is the pgf of B(5, 0.7).")
 q(MP, "Probability generating functions", r"$X$ has pgf $G(t) = \dfrac{t}{2 - t}$. Then $E(X)$ is:",
   r"$2$",
-  [(r"$1$", "That is $G(1)$."), (r"$\dfrac12$", "That is $p$; the mean is $1/p$."), (r"$4$", "That is the variance, $q/p^2$ with $p = \\frac12$.")],
+  [(r"$1$", "That is $G(1)$."), (r"$\dfrac12$", "That is $p$; the mean is $1/p$."), (r"$4$", "That is $1/p^2$ with $p = \\frac12$. The variance would be $q/p^2 = 2$, and the mean is $1/p$.")],
   [S("Differentiate", math=r"G'(t) = \frac{(2 - t) + t}{(2 - t)^2} = \frac{2}{(2 - t)^2}"), S("At $t = 1$", math=r"G'(1) = 2")], "Differentiate with the quotient rule.")
 
 assert len(P1) == 50, len(P1)

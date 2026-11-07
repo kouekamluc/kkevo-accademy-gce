@@ -572,7 +572,7 @@ LESSONS.append(lesson(
             S("Ordinates ($h = 0.25$)", math=r"y = 1,\ 0.93941,\ 0.77880,\ 0.56978,\ 0.36788"),
             S("Trapezium", math=r"T_4 = 0.125\,[1 + 0.36788 + 2(2.28800)] = 0.74298"),
             S("Simpson", math=r"S_4 = \tfrac{0.25}{3}\,[1 + 0.36788 + 4(1.50919) + 2(0.77880)] = 0.74686"),
-            S("Compare", text=r"The true value is $0.74682$. Simpson is correct to 4 d.p., the trapezium rule only to 2."),
+            S("Compare", text=r"The true value is $0.74682$. Simpson is within $0.0001$ of it (error about $0.00004$); the trapezium rule is only within $0.004$."),
         ]),
         MISTAKE("Mixing up the two rules (a common error in the Board's report)", r"Candidates sometimes apply the trapezium pattern $1, 2, 2, \ldots, 1$ when asked for Simpson's rule, or write Simpson's weights $1, 4, 2, 4, 1$ with the factor $\frac{h}{2}$. Remember: trapezium has $\frac{h}{2}$ and all inner ordinates doubled; Simpson has $\frac{h}{3}$ and the pattern 4, 2, 4, 2, ..., 4."),
         MISTAKE("Wrong step length or an odd number of strips", r"With $n$ strips, $h = \dfrac{b - a}{n}$. For $\int_0^2$ with five ordinates, $n = 4$ and $h = 0.5$, not $0.4$. Simpson's rule needs an **even** number of strips, which means an **odd** number of ordinates."),
