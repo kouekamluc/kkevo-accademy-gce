@@ -1,0 +1,108 @@
+{% extends "layouts/app.html" %}
+{% block title %}Your path: {{ course.title }} — KKEVO Academy{% endblock %}
+{% block header_left %}
+<nav aria-label="Breadcrumb" class="truncate text-[15px]">
+  <a href="{% url 'courses:my_subjects' %}">My Subjects</a>
+  <span class="mx-1.5 text-ink-muted">/</span><a href="{{ course.get_absolute_url }}">{{ course.title }}</a>
+  <span class="mx-1.5 text-ink-muted">/</span><span class="text-ink-heading" aria-current="page">Path</span>
+</nav>
+{% endblock %}
+{% block content %}
+<div class="mx-auto flex max-w-[720px] flex-col gap-5">
+  {# ---------- Where you are ---------- #}
+  <section class="card flex flex-col gap-4 p-5" aria-labelledby="path-heading">
+    <div class="flex items-center gap-4">
+      {% if is_complete %}{% include "components/mascot.html" with size="72" mood="cheer" %}{% else %}{% include "components/mascot.html" with size="72" mood="happy" %}{% endif %}
+      <div class="min-w-0 flex-1">
+        <div class="text-sm font-semibold text-primary-700">{{ subject.name }} · {{ level.name }}</div>
+        <h1 id="path-heading" class="text-[24px] font-black leading-tight tracking-[-.01em] text-navy">Your path</h1>
+        <p class="text-[15px] font-semibold text-ink-muted">
+          {% if is_complete %}Course complete. Brilliant!
+          {% elif not stat.total %}Lessons are being prepared.
+          {% elif not started %}Ready when you are!
+          {% else %}{{ stat.done }} of {{ stat.total }} lessons done{% endif %}
+        </p>
+      </div>
+    </div>
+    {% if stat.total %}
+    <div class="flex items-center gap-3">
+      <div class="progress-track flex-1" role="progressbar" aria-valuenow="{{ stat.percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="Course progress"><div class="progress-fill" style="width: {{ stat.percent }}%"></div></div>
+      <span class="text-lg font-bold">{{ stat.percent }}%</span>
+    </div>
+    {% endif %}
+    {% if next_lesson %}
+    <a href="{{ next_lesson.get_absolute_url }}{% if started %}?resume=1{% endif %}" class="btn-primary h-14 text-lg">
+      {% if started %}Continue here{% else %}Start here{% endif %} {% include "components/icon.html" with name="arrow" class="h-5 w-5" stroke="2.2" %}
+    </a>
+    <p class="-mt-2 text-center text-[13px] text-ink-muted">Next: {{ next_lesson.title }}</p>
+    {% elif is_complete %}
+    <a href="{{ course.get_absolute_url }}#mock-exams" class="btn-secondary h-12">See the mock exams</a>
+    {% endif %}
+  </section>
+
+  {# ---------- Modules ---------- #}
+  {% for m in modules %}
+  <details class="overflow-hidden rounded-card border-2 border-b-4 bg-white {% if m.is_current %}border-primary-100{% else %}border-surface-border{% endif %}"{% if m.is_open %} open{% endif %}>
+    <summary class="flex min-h-[72px] cursor-pointer list-none items-center gap-3.5 p-4">
+      <span class="flex h-11 w-11 flex-none items-center justify-center rounded-xl font-bold shadow-[inset_0_-3px_0_rgba(0,0,0,.15)] {% if m.state == 'done' %}bg-success text-white{% elif m.state == 'progress' %}bg-primary text-white{% else %}bg-slate-100 text-navy{% endif %}">
+        {% if m.state == 'done' %}{% include "components/icon.html" with name="check" class="h-5 w-5" stroke="2.6" %}{% else %}{{ m.number }}{% endif %}
+      </span>
+      <span class="min-w-0 flex-1">
+        <span class="block text-lg font-bold leading-snug">{{ m.module.title }}</span>
+        <span class="mt-1 flex items-center gap-2.5">
+          <span class="progress-track h-2 flex-1"><span class="progress-fill block" style="width: {{ m.stat.percent }}%"></span></span>
+          <span class="text-[13px] font-semibold text-ink-muted">{{ m.stat.done }} / {{ m.stat.total }}</span>
+        </span>
+      </span>
+      <span class="text-slate-500">{% include "components/icon.html" with name="chevron-down" class="h-5 w-5" stroke="2" %}</span>
+    </summary>
+
+    <ol class="border-t border-slate-100 px-4 py-3">
+      {% for s in m.steps %}
+      <li class="relative flex gap-3.5 pb-4 {% if not forloop.last %}before:absolute before:left-[15px] before:top-9 before:h-[calc(100%-2rem)] before:w-0.5 before:bg-surface-border{% endif %}"{% if s.is_current %} aria-current="step"{% endif %}>
+        <span class="z-[1] mt-1 flex h-8 w-8 flex-none items-center justify-center rounded-full text-sm font-bold
+          {% if s.state == 'done' %}bg-success text-white{% elif s.is_current %}border-[3px] border-primary bg-white text-primary{% elif s.state == 'progress' %}border-2 border-primary bg-white text-primary{% else %}border-2 border-slate-300 bg-white text-slate-500{% endif %}">
+          {% if s.state == 'done' %}{% include "components/icon.html" with name="check" class="h-4 w-4" stroke="3" %}<span class="sr-only">Done</span>{% else %}<span aria-hidden="true">{% if s.is_current %}●{% else %}{{ forloop.counter }}{% endif %}</span><span class="sr-only">{{ s.state_label }}</span>{% endif %}
+        </span>
+        <div class="min-w-0 flex-1 {% if s.is_current %}rounded-2xl border-2 border-primary-100 bg-primary-50 p-3.5{% endif %}">
+          {% if s.is_current %}<span class="mb-1 inline-block rounded-md bg-primary px-2 py-0.5 text-xs font-extrabold uppercase tracking-[.04em] text-white">You are here</span>{% endif %}
+          <a href="{{ s.target.get_absolute_url }}" class="block py-1 text-ink-heading hover:text-ink-heading">
+            <span class="block text-base font-bold leading-snug">{{ s.topic.title }}</span>
+            <span class="mt-0.5 block text-[13px] text-ink-muted">{{ s.state_label }} · {{ s.stat.done }} / {{ s.stat.total }} lesson{{ s.stat.total|pluralize }}</span>
+          </a>
+          {% if s.show_mastery or s.practice_set %}
+          <div class="mt-1.5 flex flex-wrap items-center gap-2">
+            {% if s.show_mastery %}
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-surface-border bg-white px-2.5 py-1 text-xs font-semibold text-slate-700" title="{{ s.mastery.next_step }}">
+              <span class="flex gap-0.5" aria-hidden="true">{% for on in s.mastery.segments %}<span class="h-1.5 w-3 rounded-full {% if on %}bg-success{% else %}bg-surface-border{% endif %}"></span>{% endfor %}</span>
+              Practice: {{ s.mastery.label }}{% if s.mastery.latest is not None %} · {{ s.mastery.latest }}%{% endif %}
+            </span>
+            {% endif %}
+            {% if s.practice_set %}<a href="{{ s.practice_set.get_absolute_url }}" class="inline-flex min-h-[36px] items-center text-[13px] font-semibold">Practise</a>{% endif %}
+          </div>
+          {% endif %}
+          {% if s.is_current %}
+          <ul class="mt-2 flex flex-col gap-1">
+            {% for row in s.lessons %}
+            <li><a href="{{ row.lesson.get_absolute_url }}" class="flex min-h-[44px] items-center gap-2.5 rounded-xl px-2 text-[15px] text-ink-heading hover:bg-white hover:text-ink-heading {% if row.is_next %}bg-white font-semibold{% endif %}">
+              {% if row.state == 'done' %}<span class="flex h-5 w-5 flex-none items-center justify-center rounded-full bg-success text-white" aria-label="Done">{% include "components/icon.html" with name="check" class="h-3 w-3" stroke="3" %}</span>
+              {% elif row.state == 'progress' %}<span class="flex h-5 w-5 flex-none items-center justify-center rounded-full border-2 border-primary bg-white" aria-label="In progress"><span class="h-2 w-2 rounded-full bg-primary"></span></span>
+              {% else %}<span class="h-5 w-5 flex-none rounded-full border-2 border-slate-300" aria-label="Not started"></span>{% endif %}
+              <span class="min-w-0 flex-1">{{ row.lesson.title }}{% if row.progress and row.state == 'progress' %} <span class="text-xs font-semibold text-primary-700">{{ row.progress.percent }}%</span>{% endif %}</span>
+              {% if row.is_next %}<span class="text-xs font-extrabold text-primary-700">Next</span>{% endif %}
+            </a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </details>
+  {% empty %}
+  <div class="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center text-slate-600">The content team is building this course. Check back soon.</div>
+  {% endfor %}
+
+  <p class="text-center text-sm"><a href="{{ course.get_absolute_url }}" class="font-semibold">See the full course outline</a></p>
+</div>
+{% endblock %}

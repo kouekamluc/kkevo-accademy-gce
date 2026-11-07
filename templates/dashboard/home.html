@@ -130,7 +130,7 @@
         </div>
       </div>
       {% if continue_card and continue_card.module_left %}
-      <p class="mt-6 rounded-xl bg-surface-bg px-4 py-3.5 text-[15px] leading-relaxed text-slate-700">{{ continue_card.module_left }} lesson{{ continue_card.module_left|pluralize }} left to finish <strong>{{ continue_card.module.title }}</strong>.</p>
+      <p class="mt-6 rounded-xl bg-surface-bg px-4 py-3.5 text-[15px] leading-relaxed text-slate-700">{{ continue_card.module_left }} lesson{{ continue_card.module_left|pluralize }} left to finish <strong>{{ continue_card.module.title }}</strong>. <a href="{% url 'courses:path' continue_card.course.slug %}" class="font-semibold">See the path</a></p>
       {% endif %}
     </section>
     {% endif %}
