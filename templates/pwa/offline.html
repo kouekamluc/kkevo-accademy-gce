@@ -1,0 +1,6 @@
+{% extends "errors/base_error.html" %}
+{% block title %}You are offline · KKEVO Academy{% endblock %}
+{% block code %}Offline{% endblock %}
+{% block heading %}No connection right now{% endblock %}
+{% block text %}This page is not saved on your phone yet. Lessons you have already opened are kept for offline reading, so open one from your recent lessons, or reconnect and try again.{% endblock %}
+{% block actions %}<button class="btn primary" type="button" onclick="location.reload()">Try again</button><a class="btn" href="/dashboard/">Go to my dashboard</a>{% endblock %}
