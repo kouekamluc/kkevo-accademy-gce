@@ -12,6 +12,7 @@ from apps.learning.models import Enrollment, LessonProgress
 from apps.practice.models import Attempt, PracticeSet, Question
 
 from .models import Course, Lesson, Module, Topic
+from .path import build_path
 
 SORTS = {"popular": "Most popular", "name": "Name (A–Z)"}
 
@@ -263,6 +264,29 @@ def course_detail(request, slug):
             (m["number"] for m in module_rows if m["status"] == "progress"),
             module_rows[0]["number"] if module_rows else None,
         ),
+    })
+
+
+@login_required
+def course_path(request, slug):
+    """Path view of a course: the whole course as a guided journey (modules, topic steps, continue here)."""
+    course = get_object_or_404(
+        Course.objects.published().select_related("offering__subject", "offering__level"), slug=slug)
+    profile = get_profile(request.user)
+    offering = course.offering
+    # Same rule as Explore and My Subjects: a student sees their own class and stream's subjects, plus any
+    # subject already in their plan. Anything else is still readable on the public course page.
+    allowed = (
+        not profile.level_id
+        or Enrollment.objects.filter(user=request.user, offering=offering).exists()
+        or SubjectOffering.objects.for_class(profile.level, profile.pathway).filter(pk=offering.pk).exists()
+    )
+    if not allowed:
+        messages.info(request, "That subject is not in your class or plan. Here is its course page.")
+        return redirect(course)
+    return render(request, "courses/path.html", {
+        "course": course, "subject": offering.subject, "level": offering.level, "nav_active": "subjects",
+        **build_path(request.user, course),
     })
 
 

@@ -53,6 +53,7 @@
         <a href="{{ next_lesson.get_absolute_url }}" class="btn-primary h-[52px] text-base">{% if done or next_progress %}Continue Learning{% else %}Start course{% endif %} {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
         <p class="-mt-1 hidden text-center text-[13px] text-ink-muted nav:block">Next: {{ next_lesson.title }}</p>
         {% endif %}
+        {% if modules %}<a href="{% url 'courses:path' course.slug %}" class="btn-secondary w-full">See my path</a>{% endif %}
         <form method="post" action="{% url 'courses:toggle_plan' course.offering.pk %}" class="text-center">
           {% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}">
           {% if in_plan %}<button type="submit" class="text-[13px] font-medium text-ink-muted underline-offset-2 hover:text-danger-text hover:underline">Remove from my plan</button>
