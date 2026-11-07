@@ -16,11 +16,11 @@
 <line x1="345.0" y1="135.0" x2="385.0" y2="135.0" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
 <rect x="390.0" y="95.0" width="150.0" height="80.0" fill="#EFF6FF" stroke="#B45309" stroke-width="2.5" rx="8" />
 <text x="465.0" y="131.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >Reagent left over</text>
-<text x="465.0" y="151.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >(moles n2 - unknown)</text>
+<text x="465.0" y="151.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >(moles n2 - unknown)</text>
 <line x1="465.0" y1="175.0" x2="465.0" y2="215.0" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
 <rect x="390.0" y="220.0" width="150.0" height="70.0" fill="#ECFDF5" stroke="#047857" stroke-width="2.5" rx="8" />
 <text x="465.0" y="251.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >Titrate the left-over</text>
-<text x="465.0" y="271.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >with standard solution</text>
+<text x="465.0" y="271.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >with standard solution</text>
 <text x="465.0" y="320.0" font-size="14" fill="#047857" text-anchor="middle" font-weight="700" >n2 found from the titre</text>
 <text x="150.0" y="320.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700" >Moles that reacted with X = n1 - n2</text>
 <line x1="300.0" y1="325.0" x2="400.0" y2="325.0" stroke="none" stroke-width="1" />
