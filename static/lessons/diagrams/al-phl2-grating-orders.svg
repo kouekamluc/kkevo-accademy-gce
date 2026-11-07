@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="A diffraction grating at normal incidence produces a central beam at order zero and pairs of beams at order plus and minus one and plus and minus two, at angles where d sin theta equals n lambda"><rect width="560" height="360" fill="#ffffff"/><defs><marker id="ak" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<text x="280.0" y="22.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">Orders from a diffraction grating</text>
+<line x1="30.0" y1="180.0" x2="144.0" y2="180.0" stroke="#102A43" stroke-width="3" marker-end="url(#ak)"/>
+<text x="70.0" y="166.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">incident beam</text>
+<line x1="150.0" y1="50.0" x2="150.0" y2="310.0" stroke="#102A43" stroke-width="5"/>
+<line x1="144.0" y1="72.0" x2="156.0" y2="72.0" stroke="#102A43" stroke-width="2"/>
+<line x1="144.0" y1="90.0" x2="156.0" y2="90.0" stroke="#102A43" stroke-width="2"/>
+<line x1="144.0" y1="108.0" x2="156.0" y2="108.0" stroke="#102A43" stroke-width="2"/>
+<line x1="144.0" y1="126.0" x2="156.0" y2="126.0" stroke="#102A43" stroke-width="2"/>
+<line x1="144.0" y1="144.0" x2="156.0" y2="144.0" stroke="#102A43" stroke-width="2"/>
+<line x1="144.0" y1="162.0" x2="156.0" y2="162.0" stroke="#102A43" stroke-width="2"/>
+<line x1="144.0" y1="180.0" x2="156.0" y2="180.0" stroke="#102A43" stroke-width="2"/>
+<line x1="144.0" y1="198.0" x2="156.0" y2="198.0" stroke="#102A43" stroke-width="2"/>
+<line x1="144.0" y1="216.0" x2="156.0" y2="216.0" stroke="#102A43" stroke-width="2"/>
+<line x1="144.0" y1="234.0" x2="156.0" y2="234.0" stroke="#102A43" stroke-width="2"/>
+<line x1="144.0" y1="252.0" x2="156.0" y2="252.0" stroke="#102A43" stroke-width="2"/>
+<line x1="144.0" y1="270.0" x2="156.0" y2="270.0" stroke="#102A43" stroke-width="2"/>
+<line x1="144.0" y1="288.0" x2="156.0" y2="288.0" stroke="#102A43" stroke-width="2"/>
+<text x="150.0" y="326.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">grating (spacing d)</text>
+<line x1="154.0" y1="180.0" x2="480.0" y2="180.0" stroke="#047857" stroke-width="3" marker-end="url(#ag)"/>
+<text x="486.0" y="185.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="start">n = 0</text>
+<line x1="154.0" y1="180.0" x2="459.1" y2="64.5" stroke="#2563EB" stroke-width="3" marker-end="url(#ab)"/>
+<text x="465.1" y="60.5" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="start">n = +1</text>
+<line x1="154.0" y1="180.0" x2="459.1" y2="295.5" stroke="#2563EB" stroke-width="3" marker-end="url(#ab)"/>
+<text x="465.1" y="309.5" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="start">n = -1</text>
+<line x1="154.0" y1="180.0" x2="264.3" y2="68.0" stroke="#B45309" stroke-width="3" marker-end="url(#am)"/>
+<text x="270.3" y="64.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="start">n = +2</text>
+<line x1="154.0" y1="180.0" x2="264.3" y2="292.0" stroke="#B45309" stroke-width="3" marker-end="url(#am)"/>
+<text x="270.3" y="306.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="start">n = -2</text>
+<path d="M230 180 A80 80 0 0 0 224.9 152.0" fill="none" stroke="#102A43" stroke-width="2" stroke-linejoin="round"/>
+<text x="250.0" y="166.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="start">&#952;1</text>
+<text x="300.0" y="354.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">d sin(&#952;) = n x wavelength (here wavelength/d = 0.35, so no n = 3 beam)</text>
+</svg>

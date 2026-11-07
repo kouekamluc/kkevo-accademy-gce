@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="24.0" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">Low Earth orbit and geostationary orbit</text>
+<circle cx="170.0" cy="195.0" r="45" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="170.0" y="200.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">Earth</text>
+<circle cx="170.0" cy="195.0" r="65" fill="none" stroke="#2563EB" stroke-width="2"/>
+<circle cx="170.0" cy="195.0" r="140" fill="none" stroke="#047857" stroke-width="2"/>
+<circle cx="219.8" cy="153.2" r="6" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<circle cx="250.3" cy="80.3" r="7" fill="#047857" stroke="#047857" stroke-width="2"/>
+<text x="229.8" y="147.2" font-size="13" text-anchor="start" fill="#2563EB" font-weight="700">low orbit</text>
+<text x="262.3" y="82.3" font-size="13" text-anchor="start" fill="#047857" font-weight="700">geostationary</text>
+<line x1="170.0" y1="195.0" x2="48.8" y2="265.0" stroke="#B45309" stroke-width="2"/>
+<polygon points="48.8,265.0 54.8,257.0 58.7,263.8" fill="#B45309"/>
+<text x="108.0" y="163.0" font-size="16" text-anchor="middle" fill="#B45309" font-weight="700">r</text>
+<rect x="350.0" y="150.0" width="200.0" height="170.0" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="360.0" y="176.0" font-size="13" text-anchor="start" fill="#102A43" font-weight="700">Geostationary orbit:</text>
+<text x="360.0" y="200.0" font-size="13" text-anchor="start" fill="#102A43" font-weight="400">period 24 h (sidereal day)</text>
+<text x="360.0" y="224.0" font-size="13" text-anchor="start" fill="#102A43" font-weight="400">above the equator</text>
+<text x="360.0" y="248.0" font-size="13" text-anchor="start" fill="#102A43" font-weight="400">moves the same way as</text>
+<text x="360.0" y="272.0" font-size="13" text-anchor="start" fill="#102A43" font-weight="400">Earth spins</text>
+<text x="360.0" y="296.0" font-size="13" text-anchor="start" fill="#102A43" font-weight="400">r = 42 000 km, about 6.6 R</text>
+<text x="280.0" y="348.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">Sizes are schematic: r is measured from the centre of Earth</text>
+</svg>

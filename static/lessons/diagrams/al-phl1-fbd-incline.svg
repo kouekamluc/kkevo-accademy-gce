@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Free-body diagram of a block sliding down a rough slope at 30 degrees: weight, normal reaction and friction, with weight resolved along and across the slope</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="50.0,330.0 457.0,330.0 457.0,95.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="280.4,197.0 339.3,163.0 305.3,104.1 246.4,138.1" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="292.8" y1="150.6" x2="257.3" y2="171.1" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="249.5,175.6 255.4,167.8 259.2,174.3" fill="#94A3B8"/>
+<line x1="292.8" y1="150.6" x2="331.6" y2="217.8" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="336.1,225.6 328.3,219.7 334.9,215.9" fill="#94A3B8"/>
+<line x1="292.8" y1="150.6" x2="292.8" y2="239.6" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<polygon points="292.8,250.6 288.2,239.6 297.4,239.6" fill="#B45309"/>
+<line x1="292.8" y1="150.6" x2="255.0" y2="85.1" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<polygon points="249.5,75.6 259.0,82.8 251.0,87.4" fill="#047857"/>
+<line x1="292.8" y1="150.6" x2="322.3" y2="133.6" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<polygon points="331.8,128.1 324.6,137.6 319.9,129.6" fill="#2563EB"/>
+<circle cx="292.8" cy="150.6" r="3.5" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<text x="282.8" y="258.6" font-size="14" fill="#B45309" text-anchor="end" dominant-baseline="middle" font-weight="600">W = mg</text>
+<text x="241.5" y="65.6" font-size="15" fill="#047857" text-anchor="end" dominant-baseline="middle" font-weight="600">N</text>
+<text x="339.8" y="118.1" font-size="14" fill="#2563EB" text-anchor="start" dominant-baseline="middle" font-weight="600">F (friction)</text>
+<text x="243.5" y="197.6" font-size="13" fill="#102A43" text-anchor="end" dominant-baseline="middle" font-weight="600">mg sin&#952;</text>
+<text x="346.1" y="229.6" font-size="13" fill="#102A43" text-anchor="start" dominant-baseline="middle" font-weight="600">mg cos&#952;</text>
+<path d="M120.0,330.0 A70,70 0 0 0 110.6,295.0" fill="none" stroke="#B45309" stroke-width="2"/>
+<text x="150.0" y="316.0" font-size="14" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="600">&#952; = 30&#176;</text>
+<text x="420.0" y="300.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">block slides down the slope</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="24.0" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">Energy stored in a stretched wire or spring</text>
+<line x1="70.0" y1="55.0" x2="70.0" y2="275.0" stroke="#102A43" stroke-width="2"/>
+<line x1="70.0" y1="275.0" x2="260.0" y2="275.0" stroke="#102A43" stroke-width="2"/>
+<text x="165.0" y="315.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="400">extension x</text>
+<text x="24.0" y="165.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="400" transform="rotate(-90 24.0 165.0)">force F</text>
+<polyline points="70.0,275.0 146.0,187.0 222.0,99.0" fill="none" stroke="#2563EB" stroke-width="3"/>
+<polyline points="70.0,275.0 222.0,275.0 222.0,99.0" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
+<line x1="222.0" y1="275.0" x2="222.0" y2="99.0" stroke="#102A43" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="70.0" y1="99.0" x2="222.0" y2="99.0" stroke="#102A43" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="226.0" y="293.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">x</text>
+<text x="62.0" y="103.0" font-size="14" text-anchor="end" fill="#102A43" font-weight="700">F</text>
+<text x="174.5" y="226.6" font-size="13" text-anchor="middle" fill="#047857" font-weight="700">E = area</text>
+<text x="174.5" y="253.0" font-size="13" text-anchor="middle" fill="#047857" font-weight="700">= 1/2 F x</text>
+<text x="165.0" y="45.0" font-size="14" text-anchor="middle" fill="#2563EB" font-weight="700">Elastic: straight line</text>
+<line x1="340.0" y1="55.0" x2="340.0" y2="275.0" stroke="#102A43" stroke-width="2"/>
+<line x1="340.0" y1="275.0" x2="530.0" y2="275.0" stroke="#102A43" stroke-width="2"/>
+<text x="435.0" y="315.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="400">extension x</text>
+<text x="294.0" y="165.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="400" transform="rotate(-90 294.0 165.0)">force F</text>
+<polyline points="340.0,275.0 343.2,263.1 346.3,255.7 349.5,249.3 352.7,243.6 355.8,238.3 359.0,233.3 362.2,228.5 365.3,224.0 368.5,219.6 371.7,215.4 374.8,211.3 378.0,207.3 381.2,203.4 384.3,199.5 387.5,195.8 390.7,192.1 393.8,188.6 397.0,185.0 400.2,181.6 403.3,178.1 406.5,174.8 409.7,171.5 412.8,168.2 416.0,165.0 419.2,161.8 422.3,158.6 425.5,155.5 428.7,152.4 431.8,149.4 435.0,146.3 438.2,143.4 441.3,140.4 444.5,137.5 447.7,134.6 450.8,131.7 454.0,128.8 457.2,126.0 460.3,123.2 463.5,120.4 466.7,117.6 469.8,114.9 473.0,112.2 476.2,109.5 479.3,106.8 482.5,104.1 485.7,101.5 488.8,98.8 492.0,96.2 495.2,93.6 498.3,91.0 501.5,88.5 504.7,85.9 507.8,83.4 511.0,80.9 514.2,78.3 517.3,75.9 520.5,73.4 523.7,70.9 526.8,68.4 530.0,66.0" fill="none" stroke="#2563EB" stroke-width="3"/>
+<polyline points="340.0,275.0 343.2,274.7 346.3,274.1 349.5,273.3 352.7,272.3 355.8,271.1 359.0,269.8 362.2,268.3 365.3,266.7 368.5,265.0 371.7,263.1 374.8,261.2 378.0,259.1 381.2,256.9 384.3,254.6 387.5,252.3 390.7,249.8 393.8,247.2 397.0,244.6 400.2,241.8 403.3,239.0 406.5,236.0 409.7,233.0 412.8,229.9 416.0,226.8 419.2,223.5 422.3,220.2 425.5,216.8 428.7,213.3 431.8,209.7 435.0,206.1 438.2,202.3 441.3,198.6 444.5,194.7 447.7,190.8 450.8,186.8 454.0,182.7 457.2,178.6 460.3,174.4 463.5,170.1 466.7,165.8 469.8,161.4 473.0,156.9 476.2,152.4 479.3,147.8 482.5,143.1 485.7,138.4 488.8,133.6 492.0,128.8 495.2,123.8 498.3,118.9 501.5,113.9 504.7,108.8 507.8,103.6 511.0,98.4 514.2,93.2 517.3,87.8 520.5,82.5 523.7,77.0 526.8,71.5 530.0,66.0" fill="none" stroke="#B45309" stroke-width="3"/>
+<text x="435.0" y="45.0" font-size="14" text-anchor="middle" fill="#2563EB" font-weight="700">Rubber: loop</text>
+<text x="381.8" y="94.6" font-size="13" text-anchor="start" fill="#2563EB" font-weight="700" stroke="#ffffff" stroke-width="4" paint-order="stroke">loading</text>
+<text x="450.2" y="226.6" font-size="13" text-anchor="start" fill="#B45309" font-weight="700" stroke="#ffffff" stroke-width="4" paint-order="stroke">unloading</text>
+<text x="280.0" y="350.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">Loop area = energy transferred to heat in one stretch and release</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Moments of inertia of five uniform shapes: hoop, solid disc, solid sphere, rod about its centre and rod about one end</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="56.0" cy="140.0" r="38.0" fill="none" stroke="#2563EB" stroke-width="6"/>
+<circle cx="168.0" cy="140.0" r="38.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<circle cx="168.0" cy="140.0" r="3.0" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<circle cx="280.0" cy="140.0" r="38.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="3"/>
+<ellipse cx="280" cy="140" rx="38" ry="12" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="4 4"/>
+<rect x="384.0" y="85.0" width="16.0" height="110.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="3" rx="0"/>
+<rect x="496.0" y="85.0" width="16.0" height="110.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="3" rx="0"/>
+<circle cx="56.0" cy="140.0" r="3.0" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="168.0" cy="140.0" r="3.0" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<line x1="280.0" y1="78.0" x2="280.0" y2="202.0" stroke="#B45309" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 4"/>
+<line x1="352.0" y1="140.0" x2="432.0" y2="140.0" stroke="#B45309" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 4"/>
+<line x1="464.0" y1="195.0" x2="544.0" y2="195.0" stroke="#B45309" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6 4"/>
+<text x="56.0" y="232.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">hoop</text>
+<text x="56.0" y="262.0" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">I = MR&#178;</text>
+<text x="168.0" y="232.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">disc</text>
+<text x="168.0" y="262.0" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">I = &#189;MR&#178;</text>
+<text x="280.0" y="232.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">solid sphere</text>
+<text x="280.0" y="262.0" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">I = 2MR&#178;/5</text>
+<text x="392.0" y="232.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">rod, centre</text>
+<text x="392.0" y="262.0" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">I = ML&#178;/12</text>
+<text x="504.0" y="232.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">rod, end</text>
+<text x="504.0" y="262.0" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">I = ML&#178;/3</text>
+<text x="280.0" y="308.0" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">Dashed amber line or dot: the axis of rotation.   M = mass, R = radius, L = length</text>
+<text x="280.0" y="30.0" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">Moments of inertia of uniform bodies</text>
+</svg>

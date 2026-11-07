@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="26.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">Energy levels of hydrogen</text>
+<line x1="120.0" y1="335.6" x2="440.0" y2="335.6" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<text x="112.0" y="340.6" font-size="13" text-anchor="end" fill="#102A43">-13.6 eV</text>
+<text x="448.0" y="340.6" font-size="14" text-anchor="start" fill="#102A43" font-weight="700">n = 1</text>
+<line x1="120.0" y1="121.4" x2="440.0" y2="121.4" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<text x="112.0" y="126.4" font-size="13" text-anchor="end" fill="#102A43">-3.40 eV</text>
+<text x="448.0" y="126.4" font-size="14" text-anchor="start" fill="#102A43" font-weight="700">n = 2</text>
+<line x1="120.0" y1="81.7" x2="440.0" y2="81.7" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<text x="112.0" y="90.7" font-size="13" text-anchor="end" fill="#102A43">-1.51 eV</text>
+<text x="448.0" y="90.7" font-size="14" text-anchor="start" fill="#102A43" font-weight="700">n = 3</text>
+<line x1="120.0" y1="67.8" x2="440.0" y2="67.8" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<text x="112.0" y="69.8" font-size="13" text-anchor="end" fill="#102A43">-0.85 eV</text>
+<text x="448.0" y="69.8" font-size="14" text-anchor="start" fill="#102A43" font-weight="700">n = 4</text>
+<line x1="120.0" y1="50.0" x2="440.0" y2="50.0" stroke="#B45309" stroke-width="3" stroke-dasharray="7 5" stroke-linecap="round"/>
+<text x="112.0" y="55.0" font-size="13" text-anchor="end" fill="#102A43">0 eV</text>
+<text x="448.0" y="55.0" font-size="14" text-anchor="start" fill="#102A43" font-weight="700">n = &#8734;</text>
+<line x1="170.0" y1="121.4" x2="170.0" y2="335.6" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<path d="M170.0,335.6 L166.1,326.4 L173.9,326.4 Z" fill="#2563EB" stroke="#2563EB" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="178.0" y="230.0" font-size="14" text-anchor="start" fill="#2563EB" font-weight="700">121.6 nm</text>
+<text x="178.0" y="248.0" font-size="13" text-anchor="start" fill="#2563EB">ultraviolet (Lyman)</text>
+<line x1="250.0" y1="81.7" x2="250.0" y2="121.4" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<path d="M250.0,121.4 L246.1,112.2 L253.9,112.2 Z" fill="#047857" stroke="#047857" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="258.0" y="112.0" font-size="14" text-anchor="start" fill="#047857" font-weight="700">656 nm</text>
+<line x1="345.0" y1="67.8" x2="345.0" y2="121.4" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<path d="M345.0,121.4 L341.1,112.2 L348.9,112.2 Z" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="353.0" y="112.0" font-size="14" text-anchor="start" fill="#B45309" font-weight="700">486 nm</text>
+<text x="120.0" y="354.0" font-size="14" text-anchor="start" fill="#102A43">Visible lines (Balmer series) end on n = 2</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Shapes based on four electron pairs: methane, ammonia and water</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280.0" y="26.0" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >Four electron pairs around the central atom: tetrahedral arrangement</text>
+<line x1="95.0" y1="125.0" x2="95.0" y2="93.0" stroke="#102A43" stroke-width="2.5" />
+<circle cx="95.0" cy="78.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="95.0" y="83.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<line x1="82.7" y1="148.5" x2="55.3" y2="167.5" stroke="#102A43" stroke-width="2.5" />
+<circle cx="43.0" cy="176.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="43.0" y="181.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<polygon points="106.1,150.1 127.9,178.3 136.0,169.4" fill="#102A43"/>
+<circle cx="143.0" cy="184.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="143.0" y="189.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<line x1="109.5" y1="136.1" x2="132.5" y2="129.9" stroke="#102A43" stroke-width="2.5" stroke-dasharray="5 4"/>
+<circle cx="147.0" cy="126.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="147.0" y="131.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<circle cx="95.0" cy="140.0" r="16" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" />
+<text x="95.0" y="145.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >C</text>
+<ellipse cx="280.0" cy="93.5" rx="17" ry="10" fill="#FEF3C7" stroke="#B45309" stroke-width="2" transform="rotate(-90.0 280.0 93.5)" />
+<circle cx="280.0" cy="98.5" r="2.2" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="280.0" cy="88.5" r="2.2" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<line x1="267.7" y1="148.5" x2="240.3" y2="167.5" stroke="#102A43" stroke-width="2.5" />
+<circle cx="228.0" cy="176.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="228.0" y="181.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<polygon points="291.1,150.1 312.9,178.3 321.0,169.4" fill="#102A43"/>
+<circle cx="328.0" cy="184.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="328.0" y="189.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<line x1="294.5" y1="136.1" x2="317.5" y2="129.9" stroke="#102A43" stroke-width="2.5" stroke-dasharray="5 4"/>
+<circle cx="332.0" cy="126.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="332.0" y="131.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<circle cx="280.0" cy="140.0" r="16" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" />
+<text x="280.0" y="145.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >N</text>
+<ellipse cx="465.0" cy="93.5" rx="17" ry="10" fill="#FEF3C7" stroke="#B45309" stroke-width="2" transform="rotate(-90.0 465.0 93.5)" />
+<circle cx="465.0" cy="98.5" r="2.2" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="465.0" cy="88.5" r="2.2" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<ellipse cx="426.0" cy="167.0" rx="17" ry="10" fill="#FEF3C7" stroke="#B45309" stroke-width="2" transform="rotate(145.30484646876604 426.0 167.0)" />
+<circle cx="430.1" cy="164.2" r="2.2" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="421.9" cy="169.8" r="2.2" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<polygon points="476.1,150.1 497.9,178.3 506.0,169.4" fill="#102A43"/>
+<circle cx="513.0" cy="184.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="513.0" y="189.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<line x1="479.5" y1="136.1" x2="502.5" y2="129.9" stroke="#102A43" stroke-width="2.5" stroke-dasharray="5 4"/>
+<circle cx="517.0" cy="126.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="517.0" y="131.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<circle cx="465.0" cy="140.0" r="16" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" />
+<text x="465.0" y="145.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >O</text>
+<text x="95.0" y="250.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >CH4</text>
+<text x="95.0" y="270.0" font-size="14" fill="#047857" text-anchor="middle" font-weight="700" >tetrahedral</text>
+<text x="95.0" y="290.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >bond angle 109.5 deg</text>
+<text x="95.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >4 bond pairs</text>
+<text x="280.0" y="250.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >NH3</text>
+<text x="280.0" y="270.0" font-size="14" fill="#047857" text-anchor="middle" font-weight="700" >trigonal pyramidal</text>
+<text x="280.0" y="290.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >bond angle 107 deg</text>
+<text x="280.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >3 bond pairs, 1 lone pair</text>
+<text x="465.0" y="250.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >H2O</text>
+<text x="465.0" y="270.0" font-size="14" fill="#047857" text-anchor="middle" font-weight="700" >bent (V-shaped)</text>
+<text x="465.0" y="290.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >bond angle 104.5 deg</text>
+<text x="465.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >2 bond pairs, 2 lone pairs</text>
+<text x="280.0" y="345.0" font-size="13" fill="#B45309" text-anchor="middle" font-weight="600" >Lone pairs repel more than bond pairs, so the angle closes up</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A uniform ladder leaning against a smooth vertical wall at 60 degrees to a rough floor, with the forces on it</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="70.0" y1="40.0" x2="70.0" y2="310.0" stroke="#102A43" stroke-width="4" stroke-linecap="round"/>
+<line x1="70.0" y1="310.0" x2="520.0" y2="310.0" stroke="#102A43" stroke-width="4" stroke-linecap="round"/>
+<line x1="70.0" y1="60.0" x2="58.0" y2="70.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70.0" y1="82.0" x2="58.0" y2="92.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70.0" y1="104.0" x2="58.0" y2="114.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70.0" y1="126.0" x2="58.0" y2="136.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70.0" y1="148.0" x2="58.0" y2="158.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70.0" y1="170.0" x2="58.0" y2="180.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70.0" y1="192.0" x2="58.0" y2="202.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70.0" y1="214.0" x2="58.0" y2="224.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70.0" y1="236.0" x2="58.0" y2="246.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70.0" y1="258.0" x2="58.0" y2="268.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70.0" y1="280.0" x2="58.0" y2="290.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="70.0" y1="302.0" x2="58.0" y2="312.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="90.0" y1="310.0" x2="80.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="114.0" y1="310.0" x2="104.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="138.0" y1="310.0" x2="128.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="162.0" y1="310.0" x2="152.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="186.0" y1="310.0" x2="176.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="210.0" y1="310.0" x2="200.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="234.0" y1="310.0" x2="224.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="258.0" y1="310.0" x2="248.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="282.0" y1="310.0" x2="272.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="306.0" y1="310.0" x2="296.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="330.0" y1="310.0" x2="320.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="354.0" y1="310.0" x2="344.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="378.0" y1="310.0" x2="368.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="402.0" y1="310.0" x2="392.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="426.0" y1="310.0" x2="416.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="450.0" y1="310.0" x2="440.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="474.0" y1="310.0" x2="464.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="498.0" y1="310.0" x2="488.0" y2="322.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="195.0" y1="310.0" x2="70.0" y2="93.5" stroke="#102A43" stroke-width="6" stroke-linecap="round"/>
+<circle cx="132.5" cy="201.8" r="4.0" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<path d="M175.0,275.4 A40,40 0 0 0 155.0,310.0" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="117.0" y="280.0" font-size="14" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="600">60&#176;</text>
+<line x1="132.5" y1="201.8" x2="132.5" y2="270.8" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<polygon points="132.5,281.8 127.9,270.8 137.1,270.8" fill="#B45309"/>
+<text x="120.5" y="251.8" font-size="15" fill="#B45309" text-anchor="end" dominant-baseline="middle" font-weight="600">W</text>
+<line x1="70.0" y1="93.5" x2="139.0" y2="93.5" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<polygon points="150.0,93.5 139.0,98.1 139.0,88.9" fill="#047857"/>
+<text x="160.0" y="93.5" font-size="14" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="600">R (wall)</text>
+<line x1="195.0" y1="310.0" x2="195.0" y2="236.0" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<polygon points="195.0,225.0 199.6,236.0 190.4,236.0" fill="#047857"/>
+<text x="205.0" y="250.0" font-size="14" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="600">N (floor)</text>
+<line x1="195.0" y1="310.0" x2="126.0" y2="310.0" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<polygon points="115.0,310.0 126.0,305.4 126.0,314.6" fill="#2563EB"/>
+<text x="155.0" y="344.0" font-size="14" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="600">F (friction)</text>
+</svg>

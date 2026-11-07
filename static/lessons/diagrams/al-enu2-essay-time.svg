@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="t d"><title id="t">45 minutes for one essay</title><desc id="d">A bar of 45 minutes split into plan, introduction, body, conclusion and check.</desc>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="40" font-size="18" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">45 minutes for one essay</text>
+<rect x="30.0" y="90" width="55.6" height="70" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="57.8" y="122" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Plan</text>
+<text x="57.8" y="146" font-size="14" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">5 min</text>
+<rect x="85.6" y="90" width="55.6" height="70" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="113.3" y="122" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Intro</text>
+<text x="113.3" y="146" font-size="14" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">5 min</text>
+<rect x="141.1" y="90" width="277.8" height="70" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="122" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Body</text>
+<text x="280.0" y="146" font-size="14" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">25 min</text>
+<rect x="418.9" y="90" width="55.6" height="70" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="446.7" y="122" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">End</text>
+<text x="446.7" y="146" font-size="14" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">5 min</text>
+<rect x="474.4" y="90" width="55.6" height="70" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="502.2" y="122" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Check</text>
+<text x="502.2" y="146" font-size="14" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">5 min</text>
+<text x="280" y="200" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Plan, introduction, body paragraphs (PEEL), conclusion, check</text>
+</svg>

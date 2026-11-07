@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="15">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<path d="M120.0,280.0 L310.0,280.0 L430.0,175.0 L240.0,175.0 Z" fill="#EFF6FF" stroke="#102A43" stroke-width="2" stroke-linejoin="round"/>
+<line x1="275.0" y1="227.5" x2="275.0" y2="107.5" stroke="#047857" stroke-width="3"/>
+<polygon points="275.0,107.5 279.7,118.6 270.3,118.6" fill="#047857"/>
+<line x1="120.0" y1="280.0" x2="310.0" y2="280.0" stroke="#2563EB" stroke-width="3"/>
+<polygon points="310.0,280.0 298.9,284.7 298.9,275.3" fill="#2563EB"/>
+<line x1="120.0" y1="280.0" x2="240.0" y2="175.0" stroke="#2563EB" stroke-width="3"/>
+<polygon points="240.0,175.0 234.8,185.8 228.6,178.8" fill="#2563EB"/>
+<path d="M156.0,280.0 L155.9,277.4 L155.6,274.8 L155.2,272.3 L154.5,269.8 L153.7,267.3 L152.7,265.0 L151.5,262.6 L150.2,260.4 L148.7,258.3 L147.1,256.3" fill="none" stroke="#B45309" stroke-width="2" stroke-linejoin="round"/>
+<text x="164.0" y="272.0" fill="#B45309" text-anchor="start" font-size="15">&#952;</text>
+<text x="215.0" y="306.0" fill="#2563EB" text-anchor="middle" font-size="17" font-weight="bold">a</text>
+<text x="150.0" y="214.0" fill="#2563EB" text-anchor="end" font-size="17" font-weight="bold">b</text>
+<text x="285.0" y="105.5" fill="#047857" text-anchor="start" font-size="17" font-weight="bold">a &#215; b</text>
+<text x="200.0" y="254.0" fill="#B45309" text-anchor="start" font-size="15" stroke="#FFFFFF" stroke-width="5" paint-order="stroke">area = |a &#215; b|</text>
+<path d="M275.0,209.5 L289.0,209.5 L289.0,227.5" fill="none" stroke="#102A43" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="30.0" y="40.0" fill="#102A43" text-anchor="start" font-size="15">Right-hand rule: fingers from a to b,</text>
+<text x="30.0" y="62.0" fill="#102A43" text-anchor="start" font-size="15">thumb points along a &#215; b</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A ball on a string moving in a vertical circle: at the top the tension and weight both point towards the centre; at the bottom the tension points up and the weight down</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="280.0" cy="190.0" r="100.0" fill="none" stroke="#94A3B8" stroke-width="2"/>
+<circle cx="280.0" cy="190.0" r="4.0" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<line x1="280.0" y1="190.0" x2="280.0" y2="99.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="280.0" y1="190.0" x2="280.0" y2="281.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<circle cx="280.0" cy="90.0" r="9.0" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<circle cx="280.0" cy="290.0" r="9.0" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<line x1="280.0" y1="90.0" x2="280.0" y2="134.0" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<polygon points="280.0,145.0 275.4,134.0 284.6,134.0" fill="#047857"/>
+<text x="292.0" y="124.0" font-size="15" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="600">T</text>
+<line x1="318.0" y1="90.0" x2="318.0" y2="121.0" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<polygon points="318.0,132.0 313.4,121.0 322.6,121.0" fill="#B45309"/>
+<text x="330.0" y="114.0" font-size="15" fill="#B45309" text-anchor="start" dominant-baseline="middle" font-weight="600">mg</text>
+<line x1="280.0" y1="290.0" x2="280.0" y2="246.0" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<polygon points="280.0,235.0 284.6,246.0 275.4,246.0" fill="#047857"/>
+<text x="292.0" y="250.0" font-size="15" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="600">T</text>
+<line x1="318.0" y1="290.0" x2="318.0" y2="321.0" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<polygon points="318.0,332.0 313.4,321.0 322.6,321.0" fill="#B45309"/>
+<text x="330.0" y="318.0" font-size="15" fill="#B45309" text-anchor="start" dominant-baseline="middle" font-weight="600">mg</text>
+<text x="258.0" y="88.0" font-size="14" fill="#102A43" text-anchor="end" dominant-baseline="middle" font-weight="600">top</text>
+<text x="258.0" y="292.0" font-size="14" fill="#102A43" text-anchor="end" dominant-baseline="middle" font-weight="600">bottom</text>
+<text x="430.0" y="98.0" font-size="15" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="600">T + mg = mv&#178;/r</text>
+<text x="430.0" y="294.0" font-size="15" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="600">T &#8722; mg = mv&#178;/r</text>
+<text x="140.0" y="186.0" font-size="15" fill="#102A43" text-anchor="end" dominant-baseline="middle" font-weight="600">r</text>
+<line x1="154.0" y1="190.0" x2="274.0" y2="190.0" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 5"/>
+</svg>

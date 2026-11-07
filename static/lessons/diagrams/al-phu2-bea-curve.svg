@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="26.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">Binding energy per nucleon</text>
+<line x1="70.0" y1="312.0" x2="535.0" y2="312.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<path d="M535.0,312.0 L525.8,315.9 L525.8,308.1 Z" fill="#102A43" stroke="#102A43" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="70.0" y1="312.0" x2="70.0" y2="50.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<path d="M70.0,50.0 L73.9,59.2 L66.1,59.2 Z" fill="#102A43" stroke="#102A43" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="162.0" y1="312.0" x2="162.0" y2="317.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="162.0" y="334.0" font-size="13" text-anchor="middle" fill="#102A43">50</text>
+<line x1="254.0" y1="312.0" x2="254.0" y2="317.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="254.0" y="334.0" font-size="13" text-anchor="middle" fill="#102A43">100</text>
+<line x1="346.0" y1="312.0" x2="346.0" y2="317.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="346.0" y="334.0" font-size="13" text-anchor="middle" fill="#102A43">150</text>
+<line x1="438.0" y1="312.0" x2="438.0" y2="317.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="438.0" y="334.0" font-size="13" text-anchor="middle" fill="#102A43">200</text>
+<line x1="530.0" y1="312.0" x2="530.0" y2="317.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="530.0" y="334.0" font-size="13" text-anchor="middle" fill="#102A43">250</text>
+<text x="535.0" y="350.0" font-size="14" text-anchor="end" fill="#102A43">mass number A</text>
+<line x1="65.0" y1="261.0" x2="70.0" y2="261.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="61.0" y="266.0" font-size="13" text-anchor="end" fill="#102A43">2</text>
+<line x1="65.0" y1="210.0" x2="70.0" y2="210.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="61.0" y="215.0" font-size="13" text-anchor="end" fill="#102A43">4</text>
+<line x1="65.0" y1="159.0" x2="70.0" y2="159.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="61.0" y="164.0" font-size="13" text-anchor="end" fill="#102A43">6</text>
+<line x1="65.0" y1="108.0" x2="70.0" y2="108.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="61.0" y="113.0" font-size="13" text-anchor="end" fill="#102A43">8</text>
+<text x="78.0" y="50.0" font-size="14" text-anchor="start" fill="#102A43">binding energy per nucleon / MeV</text>
+<path d="M73.7,283.7 L77.4,131.7 L92.1,116.2 L99.4,108.5 L106.8,107.2 L173.0,87.9 L184.1,87.9 L290.8,95.2 L452.7,111.3 L507.9,119.0" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="77.4" y1="131.7" x2="81.0" y2="176.1" stroke="#2563EB" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
+<circle cx="73.7" cy="283.7" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="77.4" cy="131.7" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="81.0" cy="176.1" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="82.9" cy="168.9" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="92.1" cy="116.2" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="99.4" cy="108.5" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="106.8" cy="107.2" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="173.0" cy="87.9" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="184.1" cy="87.9" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="290.8" cy="95.2" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="452.7" cy="111.3" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="502.4" cy="118.5" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<circle cx="507.9" cy="119.0" r="4" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<text x="173.0" y="75.9" font-size="13" text-anchor="middle" fill="#047857" font-weight="700">Fe-56: 8.8 MeV (maximum)</text>
+<text x="85.4" y="149.7" font-size="13" text-anchor="start" fill="#102A43" font-weight="700">He-4: 7.1</text>
+<text x="81.7" y="288.7" font-size="13" text-anchor="start" fill="#102A43" font-weight="700">H-2: 1.1</text>
+<text x="506.4" y="140.5" font-size="13" text-anchor="end" fill="#102A43" font-weight="700">U-235: 7.6</text>
+<line x1="143.6" y1="210.0" x2="244.8" y2="210.0" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<path d="M244.8,210.0 L235.6,213.9 L235.6,206.1 Z" fill="#047857" stroke="#047857" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="143.6" y="188.0" font-size="14" text-anchor="start" fill="#047857" font-weight="700">FUSION</text>
+<text x="143.6" y="204.0" font-size="13" text-anchor="start" fill="#047857">light nuclei join</text>
+<line x1="511.6" y1="184.5" x2="392.0" y2="184.5" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<path d="M392.0,184.5 L401.2,180.6 L401.2,188.4 Z" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="511.6" y="162.5" font-size="14" text-anchor="end" fill="#B45309" font-weight="700">FISSION</text>
+<text x="511.6" y="178.5" font-size="13" text-anchor="end" fill="#B45309">heavy nucleus splits</text>
+</svg>

@@ -143,6 +143,118 @@ PAGES = {
             "Describe ecosystems, human impact and the control of disease",
             "Answer Paper 1 questions of six types and plan Paper 2 essay questions",
         ]),
+    ("physics", "lower-sixth"): dict(
+        title="Lower Sixth Physics (GCE 0780)", slug="lower-sixth-physics-gce-0780", primary=True,
+        summary="GCE A Level Physics, Lower Sixth: physical quantities and uncertainties, mechanics, oscillations and waves, optics, thermal physics and DC electricity, with Paper 1 and Paper 2 practice, a practical-skills guide and timed mock papers.",
+        outcomes=[
+            "Handle units, dimensions and uncertainties in experiments",
+            "Solve problems on projectiles, forces, momentum, work, energy and circular motion",
+            "Describe simple harmonic motion, waves, the Doppler effect and optical systems",
+            "Apply kinetic theory and the laws of thermodynamics",
+            "Analyse DC circuits and electric fields",
+            "Answer Paper 1 multiple choice and plan Paper 2 and the practical Paper 3",
+        ]),
+    ("physics", "upper-sixth"): dict(
+        title="Upper Sixth Physics (GCE 0780)", slug="upper-sixth-physics-gce-0780", primary=True,
+        summary="GCE A Level Physics, Upper Sixth: gravitational fields and capacitors, magnetic fields, induction and AC circuits, properties of matter, quantum, atomic and nuclear physics and electronics, with Paper 1 and Paper 2 practice and timed mock papers.",
+        outcomes=[
+            "Use gravitational fields, orbits and capacitor circuits",
+            "Explain magnetic fields, electromagnetic induction and AC and RLC circuits",
+            "Work with stress, strain, surface tension, viscosity and Bernoulli's principle",
+            "Explain the photoelectric effect, the Bohr atom and nuclear decay and energy",
+            "Understand semiconductors, transistors, op-amps and logic gates",
+            "Answer Paper 1 multiple choice and plan Paper 2 and the practical Paper 3",
+        ]),
+    ("chemistry", "lower-sixth"): dict(
+        title="Lower Sixth Chemistry (GCE 0715)", slug="lower-sixth-chemistry-gce-0715", primary=True,
+        summary="GCE A Level Chemistry, Lower Sixth: the mole, atomic structure, bonding, states of matter, energetics, equilibria and the foundations of organic chemistry, with Paper 1 and Paper 2 practice and timed mock papers.",
+        outcomes=[
+            "Do mole, gas and titration calculations",
+            "Explain atomic structure, orbitals and ionization energies",
+            "Predict shapes and explain bonding and intermolecular forces",
+            "Use Hess's law, Born-Haber cycles, entropy and Gibbs free energy",
+            "Calculate with Kc and Kp and explain phase equilibria",
+            "Name organic compounds and explain isomerism and basic mechanisms",
+            "Answer Paper 1 multiple choice and plan Paper 2 and the practical Paper 3",
+        ]),
+    ("chemistry", "upper-sixth"): dict(
+        title="Upper Sixth Chemistry (GCE 0715)", slug="upper-sixth-chemistry-gce-0715", primary=True,
+        summary="GCE A Level Chemistry, Upper Sixth: kinetics, ionic equilibria, electrochemistry, s- and p-block and transition metal chemistry, advanced organic chemistry and spectroscopy, with Paper 1 and Paper 2 practice and timed mock papers.",
+        outcomes=[
+            "Find rate laws and use the Arrhenius equation",
+            "Calculate pH, buffers and solubility products",
+            "Use electrode potentials and the Nernst equation",
+            "Explain periodic trends and transition metal chemistry",
+            "Plan organic syntheses and interpret IR, NMR and mass spectra",
+            "Answer Paper 1 multiple choice and plan Paper 2 and the practical Paper 3",
+        ]),
+    ("biology", "lower-sixth"): dict(
+        title="Lower Sixth Biology (GCE 0710)", slug="lower-sixth-biology-gce-0710", primary=True,
+        summary="GCE A Level Biology, Lower Sixth: cells and membranes, biological molecules and enzymes, nucleic acids and cell division, taxonomy, nutrition, transport systems and ecology, with Paper 1 and Paper 2 practice and timed mock papers.",
+        outcomes=[
+            "Describe cell structure, membranes and water potential",
+            "Explain the structure and function of carbohydrates, lipids, proteins and enzymes",
+            "Explain DNA replication, protein synthesis and cell division",
+            "Classify organisms and use keys",
+            "Explain photosynthesis and digestion",
+            "Describe gas exchange, mass transport and ecological ideas",
+            "Answer Paper 1 multiple choice and plan Paper 2 and the practical Paper 3",
+        ]),
+    ("biology", "upper-sixth"): dict(
+        title="Upper Sixth Biology (GCE 0710)", slug="upper-sixth-biology-gce-0710", primary=True,
+        summary="GCE A Level Biology, Upper Sixth: respiration, homeostasis, the nervous, endocrine and muscular systems, plant growth and reproduction, genetics and biotechnology and immunology, with Paper 1 and Paper 2 practice and timed mock papers.",
+        outcomes=[
+            "Explain the stages and energy yield of respiration",
+            "Describe homeostasis, excretion and osmoregulation",
+            "Explain nerve impulses, synapses, hormones and muscle contraction",
+            "Explain plant growth regulators and reproduction",
+            "Solve genetics problems and apply the chi-squared test",
+            "Describe genetic engineering and the immune response",
+            "Answer Paper 1 multiple choice and plan Paper 2 and the practical Paper 3",
+        ]),
+    ("further-mathematics", "lower-sixth"): dict(
+        title="Lower Sixth Further Mathematics (GCE 0775)", slug="lower-sixth-further-mathematics-gce-0775", primary=True,
+        summary="GCE A Level Further Mathematics, Lower Sixth: proof and series, complex numbers, matrices, vector geometry, hyperbolic functions, polar coordinates and conics, with Paper 1 and Paper 2 practice and timed mock papers.",
+        outcomes=[
+            "Prove results by induction and sum series by differences",
+            "Work with complex numbers, De Moivre's theorem and loci",
+            "Solve linear systems and find eigenvalues and eigenvectors",
+            "Use the vector product, triple product and distances",
+            "Use hyperbolic functions and polar curves",
+            "Answer Paper 1 multiple choice and plan Paper 2 structured questions",
+        ]),
+    ("further-mathematics", "upper-sixth"): dict(
+        title="Upper Sixth Further Mathematics (GCE 0775)", slug="upper-sixth-further-mathematics-gce-0775", primary=True,
+        summary="GCE A Level Further Mathematics, Upper Sixth: advanced calculus, differential equations, group theory, vector spaces, numerical methods, advanced mechanics and probability, with Paper 1 and Paper 2 practice and timed mock papers.",
+        outcomes=[
+            "Use reduction formulae, Leibniz's theorem and arc length",
+            "Solve first- and second-order differential equations",
+            "Work with groups, subgroups and isomorphisms",
+            "Find bases, kernels and ranks",
+            "Apply numerical methods to roots, integrals and differential equations",
+            "Answer Paper 1 multiple choice and plan Paper 2 structured questions",
+        ]),
+    ("english-language", "lower-sixth"): dict(
+        title="Lower Sixth English Language (GCE 0730)", slug="lower-sixth-english-language-gce-0730", primary=True,
+        summary="GCE A Level English Language, Lower Sixth, built on the Board's revised 0730 syllabus: reading comprehension, speech work, grammar, vocabulary and composition, with a Paper 1 mock paper.",
+        outcomes=[
+            "Read passages for ideas, attitude, inference and cohesion",
+            "Use English sounds, stress and intonation and transcribe words",
+            "Control advanced grammar and punctuation",
+            "Choose precise words and use idioms and figures of speech",
+            "Write narrative, descriptive, expository and argumentative compositions",
+            "Answer the 50 multiple-choice questions of Paper 1",
+        ]),
+    ("english-language", "upper-sixth"): dict(
+        title="Upper Sixth English Language (GCE 0730)", slug="upper-sixth-english-language-gce-0730", primary=True,
+        summary="GCE A Level English Language, Upper Sixth, built on the Board's revised 0730 syllabus: summary writing, text reconstruction, editing, prescribed texts and creative writing, with Paper 1, Paper 2 and Paper 3 practice.",
+        outcomes=[
+            "Write summaries within word and paragraph limits",
+            "Reconstruct and edit texts of different types",
+            "Write about prescribed drama, prose and poetry",
+            "Write short stories, sketches, poems, plays and reports",
+            "Plan answers for Papers 1, 2 and 3",
+        ]),
     ("pure-mathematics-with-mechanics", "lower-sixth"): dict(
         summary="The core pure mathematics of GCE A Level Pure Mathematics with Mechanics: proof, algebra and "
                 "functions, trigonometry, conic sections, calculus, series, differential equations and 3D vectors.",

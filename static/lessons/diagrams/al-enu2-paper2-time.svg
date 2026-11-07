@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="t d"><title id="t">Paper 2: 135 minutes</title><desc id="d">A bar of 135 minutes in three equal sections.</desc>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="40" font-size="18" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Paper 2: 135 minutes</text>
+<rect x="30.0" y="90" width="166.7" height="70" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="113.3" y="122" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">A Composition</text>
+<text x="113.3" y="146" font-size="14" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">45 min</text>
+<rect x="196.7" y="90" width="166.7" height="70" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="122" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">B Texts</text>
+<text x="280.0" y="146" font-size="14" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">45 min</text>
+<rect x="363.3" y="90" width="166.7" height="70" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="446.7" y="122" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">C Creative</text>
+<text x="446.7" y="146" font-size="14" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">45 min</text>
+<text x="280" y="200" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Each section includes planning and checking</text>
+</svg>

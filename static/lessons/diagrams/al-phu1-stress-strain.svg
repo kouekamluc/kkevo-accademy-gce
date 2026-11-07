@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="24.0" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">Stress-strain graph of a ductile metal (schematic)</text>
+<line x1="80.0" y1="50.0" x2="80.0" y2="290.0" stroke="#102A43" stroke-width="2"/>
+<line x1="80.0" y1="290.0" x2="500.0" y2="290.0" stroke="#102A43" stroke-width="2"/>
+<line x1="75.0" y1="290.0" x2="80.0" y2="290.0" stroke="#102A43" stroke-width="2"/>
+<text x="71.0" y="294.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="400">0</text>
+<line x1="75.0" y1="236.7" x2="80.0" y2="236.7" stroke="#102A43" stroke-width="2"/>
+<text x="71.0" y="240.7" font-size="13" text-anchor="end" fill="#102A43" font-weight="400">100</text>
+<line x1="75.0" y1="183.3" x2="80.0" y2="183.3" stroke="#102A43" stroke-width="2"/>
+<text x="71.0" y="187.3" font-size="13" text-anchor="end" fill="#102A43" font-weight="400">200</text>
+<line x1="75.0" y1="130.0" x2="80.0" y2="130.0" stroke="#102A43" stroke-width="2"/>
+<text x="71.0" y="134.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="400">300</text>
+<line x1="75.0" y1="76.7" x2="80.0" y2="76.7" stroke="#102A43" stroke-width="2"/>
+<text x="71.0" y="80.7" font-size="13" text-anchor="end" fill="#102A43" font-weight="400">400</text>
+<line x1="80.0" y1="290.0" x2="80.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="80.0" y="310.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">0</text>
+<line x1="164.0" y1="290.0" x2="164.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="164.0" y="310.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">5</text>
+<line x1="248.0" y1="290.0" x2="248.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="248.0" y="310.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">10</text>
+<line x1="332.0" y1="290.0" x2="332.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="332.0" y="310.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">15</text>
+<line x1="416.0" y1="290.0" x2="416.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="416.0" y="310.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">20</text>
+<line x1="500.0" y1="290.0" x2="500.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="500.0" y="310.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">25</text>
+<text x="290.0" y="330.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="400">strain / %  (not to scale near the origin)</text>
+<text x="32.0" y="170.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="400" transform="rotate(-90 32.0 170.0)">stress / MPa</text>
+<polyline points="80.0,290.0 90.1,156.7 100.2,156.7 113.6,155.6 147.2,124.7 214.4,92.7 332.0,76.7 399.2,87.3 449.6,114.0" fill="none" stroke="#2563EB" stroke-width="3"/>
+<circle cx="90.1" cy="156.7" r="5" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<circle cx="113.6" cy="155.6" r="5" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<circle cx="332.0" cy="76.7" r="5" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<circle cx="449.6" cy="114.0" r="5" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<text x="100.1" y="178.7" font-size="13" text-anchor="start" fill="#B45309" font-weight="700" stroke="#ffffff" stroke-width="4" paint-order="stroke">limit of proportionality</text>
+<text x="130.4" y="143.6" font-size="13" text-anchor="start" fill="#B45309" font-weight="700" stroke="#ffffff" stroke-width="4" paint-order="stroke">yield</text>
+<text x="332.0" y="64.7" font-size="13" text-anchor="middle" fill="#B45309" font-weight="700" stroke="#ffffff" stroke-width="4" paint-order="stroke">ultimate tensile stress</text>
+<text x="443.6" y="136.0" font-size="13" text-anchor="end" fill="#B45309" font-weight="700" stroke="#ffffff" stroke-width="4" paint-order="stroke">fracture</text>
+<text x="164.0" y="226.0" font-size="13" text-anchor="start" fill="#047857" font-weight="700" stroke="#ffffff" stroke-width="4" paint-order="stroke">elastic region: gradient = E</text>
+</svg>

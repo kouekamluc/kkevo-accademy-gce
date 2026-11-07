@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif"><rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<line x1="50.0" y1="300.0" x2="50.0" y2="24.0" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<line x1="50.0" y1="300.0" x2="546.0" y2="300.0" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<text x="60.0" y="26.0" font-size="14" fill="#102A43" text-anchor="start" font-weight="normal">Energy</text>
+<text x="540.0" y="328.0" font-size="14" fill="#102A43" text-anchor="end" font-weight="normal">Reaction progress</text>
+<path d="M70,250 C110.0,250 110.0,250 150,250 C182.5,250 182.5,100 215,100 C257.5,100 257.5,190 300,190 C342.5,190 342.5,150 385,150 C417.5,150 417.5,230 450,230 C485.0,230 485.0,230 520,230 " fill="none" stroke="#2563EB" stroke-width="3.5"/>
+<text x="110.0" y="272.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">Reactants</text>
+<text x="485.0" y="252.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">Products</text>
+<text x="215.0" y="86.0" font-size="14" fill="#B45309" text-anchor="middle" font-weight="bold">TS1 (highest peak)</text>
+<text x="300.0" y="214.0" font-size="14" fill="#047857" text-anchor="middle" font-weight="bold">Intermediate</text>
+<text x="385.0" y="134.0" font-size="14" fill="#B45309" text-anchor="middle" font-weight="bold">TS2</text>
+<line x1="150.0" y1="250.0" x2="150.0" y2="104.0" stroke="#047857" stroke-width="2" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="140.0" y="175.0" font-size="14" fill="#047857" text-anchor="end" font-weight="normal">Ea of step 1</text>
+<text x="140.0" y="193.0" font-size="14" fill="#047857" text-anchor="end" font-weight="normal">(slow step)</text>
+</svg>

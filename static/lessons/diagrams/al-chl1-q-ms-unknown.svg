@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Mass spectrum of element X showing three peaks at m/z 24, 25 and 26 with abundances 78.99, 10.00 and 11.01 percent</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="95.0" y1="45.0" x2="95.0" y2="300.0" stroke="#102A43" stroke-width="2.5" />
+<line x1="95.0" y1="300.0" x2="520.0" y2="300.0" stroke="#102A43" stroke-width="2.5" />
+<text x="307.5" y="346.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >m/z</text>
+<text x="18" y="172.5" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" transform="rotate(-90 18 172.5)">relative abundance (%)</text>
+<line x1="89.0" y1="300.0" x2="95.0" y2="300.0" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="305.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >0</text>
+<line x1="89.0" y1="249.0" x2="95.0" y2="249.0" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="254.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >20</text>
+<line x1="89.0" y1="198.0" x2="95.0" y2="198.0" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="203.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >40</text>
+<line x1="89.0" y1="147.0" x2="95.0" y2="147.0" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="152.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >60</text>
+<line x1="89.0" y1="96.0" x2="95.0" y2="96.0" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="101.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >80</text>
+<line x1="89.0" y1="45.0" x2="95.0" y2="45.0" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="50.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >100</text>
+<rect x="227.7" y="98.6" width="18.0" height="201.4" fill="#2563EB" stroke="#2563EB" stroke-width="1" rx="0" />
+<text x="236.7" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >24</text>
+<text x="236.7" y="90.6" font-size="13" fill="#102A43" text-anchor="middle" font-weight="600" >78.99</text>
+<rect x="298.5" y="274.5" width="18.0" height="25.5" fill="#2563EB" stroke="#2563EB" stroke-width="1" rx="0" />
+<text x="307.5" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >25</text>
+<text x="307.5" y="266.5" font-size="13" fill="#102A43" text-anchor="middle" font-weight="600" >10.00</text>
+<rect x="369.3" y="271.9" width="18.0" height="28.1" fill="#2563EB" stroke="#2563EB" stroke-width="1" rx="0" />
+<text x="378.3" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >26</text>
+<text x="378.3" y="263.9" font-size="13" fill="#102A43" text-anchor="middle" font-weight="600" >11.01</text>
+<text x="300.0" y="30.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >Mass spectrum of a sample of an element X</text>
+</svg>

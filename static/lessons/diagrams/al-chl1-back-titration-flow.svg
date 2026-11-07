@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Flow chart of a back titration: excess reagent added, left-over titrated, subtraction gives moles reacted</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker></defs>
+<rect x="20.0" y="40.0" width="150.0" height="70.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5" rx="8" />
+<text x="95.0" y="71.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >Sample</text>
+<text x="95.0" y="91.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >(unknown amount X)</text>
+<rect x="20.0" y="150.0" width="150.0" height="70.0" fill="#ECFDF5" stroke="#047857" stroke-width="2.5" rx="8" />
+<text x="95.0" y="181.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >Known EXCESS</text>
+<text x="95.0" y="201.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >reagent (moles n1)</text>
+<rect x="215.0" y="95.0" width="130.0" height="80.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5" rx="8" />
+<text x="280.0" y="131.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >Reaction</text>
+<text x="280.0" y="151.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >X uses up part</text>
+<line x1="170.0" y1="75.0" x2="215.0" y2="125.0" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="170.0" y1="185.0" x2="215.0" y2="150.0" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="345.0" y1="135.0" x2="385.0" y2="135.0" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="390.0" y="95.0" width="150.0" height="80.0" fill="#EFF6FF" stroke="#B45309" stroke-width="2.5" rx="8" />
+<text x="465.0" y="131.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >Reagent left over</text>
+<text x="465.0" y="151.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >(moles n2 - unknown)</text>
+<line x1="465.0" y1="175.0" x2="465.0" y2="215.0" stroke="#102A43" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="390.0" y="220.0" width="150.0" height="70.0" fill="#ECFDF5" stroke="#047857" stroke-width="2.5" rx="8" />
+<text x="465.0" y="251.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >Titrate the left-over</text>
+<text x="465.0" y="271.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >with standard solution</text>
+<text x="465.0" y="320.0" font-size="14" fill="#047857" text-anchor="middle" font-weight="700" >n2 found from the titre</text>
+<text x="150.0" y="320.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700" >Moles that reacted with X = n1 - n2</text>
+<line x1="300.0" y1="325.0" x2="400.0" y2="325.0" stroke="none" stroke-width="1" />
+</svg>

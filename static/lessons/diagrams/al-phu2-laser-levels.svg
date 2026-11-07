@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="26.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">A three-level laser</text>
+<line x1="150.0" y1="70.0" x2="330.0" y2="70.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<text x="340.0" y="75.0" font-size="14" text-anchor="start" fill="#102A43">pump band</text>
+<line x1="150.0" y1="215.0" x2="330.0" y2="215.0" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<text x="340.0" y="220.0" font-size="14" text-anchor="start" fill="#047857" font-weight="700">metastable level</text>
+<line x1="150.0" y1="300.0" x2="330.0" y2="300.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<text x="340.0" y="305.0" font-size="14" text-anchor="start" fill="#102A43">ground state</text>
+<line x1="170.0" y1="296.0" x2="170.0" y2="74.0" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<path d="M170.0,74.0 L173.9,83.2 L166.1,83.2 Z" fill="#2563EB" stroke="#2563EB" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="163.0" y="190.0" font-size="14" text-anchor="end" fill="#2563EB" font-weight="700">pump</text>
+<path d="M245,78 q10,12 0,24 q-10,12 0,24 q8,10 0,18 q-8,10 0,20" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="258.0" y="130.0" font-size="13" text-anchor="start" fill="#B45309">fast decay,</text>
+<text x="258.0" y="148.0" font-size="13" text-anchor="start" fill="#B45309">no light</text>
+<line x1="285.0" y1="219.0" x2="285.0" y2="296.0" stroke="#B91C1C" stroke-width="3" stroke-linecap="round"/>
+<path d="M285.0,296.0 L281.1,286.8 L288.9,286.8 Z" fill="#B91C1C" stroke="#B91C1C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="295.0" y="265.0" font-size="14" text-anchor="start" fill="#B91C1C" font-weight="700">laser light</text>
+<circle cx="205.0" cy="288.0" r="6" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<circle cx="233.0" cy="288.0" r="6" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<circle cx="261.0" cy="288.0" r="6" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<circle cx="205.0" cy="203.0" r="6" fill="#047857" stroke="#047857" stroke-width="1"/>
+<circle cx="227.0" cy="203.0" r="6" fill="#047857" stroke="#047857" stroke-width="1"/>
+<circle cx="249.0" cy="203.0" r="6" fill="#047857" stroke="#047857" stroke-width="1"/>
+<circle cx="271.0" cy="203.0" r="6" fill="#047857" stroke="#047857" stroke-width="1"/>
+<circle cx="293.0" cy="203.0" r="6" fill="#047857" stroke="#047857" stroke-width="1"/>
+<circle cx="315.0" cy="203.0" r="6" fill="#047857" stroke="#047857" stroke-width="1"/>
+<text x="40.0" y="332.0" font-size="13" text-anchor="start" fill="#102A43">Population inversion: more atoms in the</text>
+<text x="40.0" y="350.0" font-size="13" text-anchor="start" fill="#102A43">metastable level than in the ground state.</text>
+</svg>

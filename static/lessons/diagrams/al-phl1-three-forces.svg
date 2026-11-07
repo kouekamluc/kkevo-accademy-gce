@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>A 12 kg lamp hangs from two cables at 30 degrees and 60 degrees to the horizontal; the three forces form a closed right-angled triangle of forces</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="15.0" y1="60.0" x2="285.0" y2="60.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="25.0" y1="60.0" x2="15.0" y2="48.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="47.0" y1="60.0" x2="37.0" y2="48.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="69.0" y1="60.0" x2="59.0" y2="48.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="91.0" y1="60.0" x2="81.0" y2="48.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="113.0" y1="60.0" x2="103.0" y2="48.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="135.0" y1="60.0" x2="125.0" y2="48.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="157.0" y1="60.0" x2="147.0" y2="48.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="179.0" y1="60.0" x2="169.0" y2="48.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="201.0" y1="60.0" x2="191.0" y2="48.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="223.0" y1="60.0" x2="213.0" y2="48.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="245.0" y1="60.0" x2="235.0" y2="48.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="267.0" y1="60.0" x2="257.0" y2="48.0" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="205.0" y1="165.0" x2="23.1" y2="60.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="205.0" y1="165.0" x2="265.6" y2="60.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="205.0" y1="165.0" x2="153.9" y2="135.5" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<polygon points="144.4,130.0 156.2,131.5 151.6,139.5" fill="#2563EB"/>
+<text x="143.0" y="113.0" font-size="15" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="600">T1</text>
+<line x1="205.0" y1="165.0" x2="234.5" y2="113.9" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<polygon points="240.0,104.4 238.5,116.2 230.5,111.6" fill="#047857"/>
+<text x="257.0" y="107.0" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">T2</text>
+<line x1="205.0" y1="165.0" x2="205.0" y2="209.0" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<polygon points="205.0,220.0 200.4,209.0 209.6,209.0" fill="#B45309"/>
+<text x="217.0" y="205.0" font-size="14" fill="#B45309" text-anchor="start" dominant-baseline="middle" font-weight="600">W = 120 N</text>
+<circle cx="205.0" cy="165.0" r="4.0" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<rect x="183.0" y="223.0" width="44.0" height="30.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" rx="0"/>
+<text x="205.0" y="238.0" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">12 kg</text>
+<text x="123.1" y="80.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">30&#176;</text>
+<text x="227.6" y="80.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">60&#176;</text>
+<line x1="360.0" y1="250.0" x2="432.4" y2="124.5" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<polygon points="437.9,115.0 436.4,126.8 428.4,122.2" fill="#047857"/>
+<line x1="437.9" y1="115.0" x2="369.5" y2="75.5" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<polygon points="360.0,70.0 371.8,71.5 367.2,79.5" fill="#2563EB"/>
+<line x1="360.0" y1="70.0" x2="360.0" y2="239.0" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<polygon points="360.0,250.0 355.4,239.0 364.6,239.0" fill="#B45309"/>
+<text x="423.0" y="194.5" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">T2</text>
+<text x="403.0" y="78.5" font-size="15" fill="#2563EB" text-anchor="middle" dominant-baseline="middle" font-weight="600">T1</text>
+<text x="340.0" y="160.0" font-size="15" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="600">W</text>
+<text x="400.0" y="318.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">Closed triangle: the forces balance</text>
+<text x="400.0" y="340.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">T1 = 60 N, T2 = 103.9 N</text>
+</svg>

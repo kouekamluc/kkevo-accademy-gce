@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="24.0" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">Hall effect in a current-carrying slab</text>
+<rect x="130.0" y="100.0" width="300.0" height="130.0" rx="0" fill="#EFF6FF" stroke="#102A43" stroke-width="3"/>
+<circle cx="160.0" cy="130.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="160.0" cy="170.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="160.0" cy="210.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="210.0" cy="130.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="210.0" cy="170.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="210.0" cy="210.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="260.0" cy="130.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="260.0" cy="170.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="260.0" cy="210.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="310.0" cy="130.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="310.0" cy="170.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="310.0" cy="210.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="360.0" cy="130.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="360.0" cy="170.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="360.0" cy="210.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="410.0" cy="130.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="410.0" cy="170.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="410.0" cy="210.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<line x1="75.0" y1="165.0" x2="130.0" y2="165.0" stroke="#2563EB" stroke-width="2"/>
+<polygon points="130.0,165.0 120.8,168.9 120.8,161.1" fill="#2563EB"/>
+<text x="100.0" y="155.0" font-size="16" text-anchor="middle" fill="#2563EB" font-weight="700">I</text>
+<line x1="430.0" y1="165.0" x2="500.0" y2="165.0" stroke="#2563EB" stroke-width="2"/>
+<polygon points="500.0,165.0 490.8,168.9 490.8,161.1" fill="#2563EB"/>
+<line x1="400.0" y1="187.0" x2="190.0" y2="187.0" stroke="#047857" stroke-width="2"/>
+<polygon points="190.0,187.0 199.2,183.1 199.2,190.9" fill="#047857"/>
+<text x="280.0" y="181.0" font-size="13" text-anchor="middle" fill="#047857" font-weight="700" stroke="#ffffff" stroke-width="4" paint-order="stroke">electrons drift left</text>
+<text x="160.0" y="224.0" font-size="18" text-anchor="middle" fill="#B45309" font-weight="700">-</text>
+<text x="160.0" y="122.0" font-size="18" text-anchor="middle" fill="#2563EB" font-weight="700">+</text>
+<text x="200.0" y="224.0" font-size="18" text-anchor="middle" fill="#B45309" font-weight="700">-</text>
+<text x="200.0" y="122.0" font-size="18" text-anchor="middle" fill="#2563EB" font-weight="700">+</text>
+<text x="240.0" y="224.0" font-size="18" text-anchor="middle" fill="#B45309" font-weight="700">-</text>
+<text x="240.0" y="122.0" font-size="18" text-anchor="middle" fill="#2563EB" font-weight="700">+</text>
+<text x="280.0" y="224.0" font-size="18" text-anchor="middle" fill="#B45309" font-weight="700">-</text>
+<text x="280.0" y="122.0" font-size="18" text-anchor="middle" fill="#2563EB" font-weight="700">+</text>
+<text x="320.0" y="224.0" font-size="18" text-anchor="middle" fill="#B45309" font-weight="700">-</text>
+<text x="320.0" y="122.0" font-size="18" text-anchor="middle" fill="#2563EB" font-weight="700">+</text>
+<text x="360.0" y="224.0" font-size="18" text-anchor="middle" fill="#B45309" font-weight="700">-</text>
+<text x="360.0" y="122.0" font-size="18" text-anchor="middle" fill="#2563EB" font-weight="700">+</text>
+<text x="400.0" y="224.0" font-size="18" text-anchor="middle" fill="#B45309" font-weight="700">-</text>
+<text x="400.0" y="122.0" font-size="18" text-anchor="middle" fill="#2563EB" font-weight="700">+</text>
+<line x1="430.0" y1="100.0" x2="490.0" y2="100.0" stroke="#102A43" stroke-width="2"/>
+<line x1="430.0" y1="230.0" x2="490.0" y2="230.0" stroke="#102A43" stroke-width="2"/>
+<line x1="490.0" y1="100.0" x2="490.0" y2="149.0" stroke="#102A43" stroke-width="2"/>
+<line x1="490.0" y1="181.0" x2="490.0" y2="230.0" stroke="#102A43" stroke-width="2"/>
+<circle cx="490.0" cy="165.0" r="16" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<text x="490.0" y="170.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">V</text>
+<text x="490.0" y="252.0" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">Hall pd VH</text>
+<line x1="45.0" y1="165.0" x2="45.0" y2="104.0" stroke="#102A43" stroke-width="2"/>
+<polygon points="45.0,104.0 48.9,113.2 41.1,113.2" fill="#102A43"/>
+<line x1="45.0" y1="165.0" x2="45.0" y2="226.0" stroke="#102A43" stroke-width="2"/>
+<polygon points="45.0,226.0 41.1,216.8 48.9,216.8" fill="#102A43"/>
+<text x="30.0" y="170.0" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">w</text>
+<text x="280.0" y="88.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">Dots: B out of the page (along the thickness t of the slab).</text>
+<text x="280.0" y="290.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">Magnetic force pushes electrons to the bottom edge until the electric force balances it.</text>
+<text x="280.0" y="314.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">qVH/w = Bqv  so  VH = BI/(nte)</text>
+<text x="500.0" y="60.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400"></text>
+</svg>

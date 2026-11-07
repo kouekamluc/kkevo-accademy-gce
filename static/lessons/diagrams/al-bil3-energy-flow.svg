@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360"><rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280.0" y="20.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">Energy flow, kJ per m2 per year (invented teaching data)</text>
+<rect x="10.0" y="110.0" width="150.0" height="74.0" rx="6" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="85.0" y="140.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">Producers</text>
+<text x="85.0" y="166.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">NPP 15 000</text>
+<rect x="205.0" y="110.0" width="150.0" height="74.0" rx="6" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="140.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">Primary consumers</text>
+<text x="280.0" y="166.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">1 500</text>
+<rect x="400.0" y="110.0" width="150.0" height="74.0" rx="6" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="475.0" y="140.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">Secondary consumers</text>
+<text x="475.0" y="166.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">150</text>
+<rect x="10.0" y="36.0" width="150.0" height="40.0" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="85.0" y="61.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">GPP 25 000</text>
+<line x1="85.0" y1="76.0" x2="85.0" y2="108.0" stroke="#2563EB" stroke-width="2"/><polygon points="85.0,108.0 81.5,99.7 88.5,99.7" fill="#2563EB"/>
+<line x1="160.0" y1="147.0" x2="203.0" y2="147.0" stroke="#2563EB" stroke-width="2"/><polygon points="203.0,147.0 194.7,150.5 194.7,143.5" fill="#2563EB"/>
+<text x="181.0" y="138.0" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">10%</text>
+<line x1="355.0" y1="147.0" x2="398.0" y2="147.0" stroke="#2563EB" stroke-width="2"/><polygon points="398.0,147.0 389.7,150.5 389.7,143.5" fill="#2563EB"/>
+<text x="376.0" y="138.0" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">10%</text>
+<rect x="210.0" y="36.0" width="200.0" height="40.0" rx="6" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<text x="310.0" y="61.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">Respiration: heat lost</text>
+<line x1="120.0" y1="108.0" x2="215.0" y2="78.0" stroke="#B45309" stroke-width="2"/><polygon points="215.0,78.0 208.2,83.8 206.0,77.2" fill="#B45309"/>
+<text x="190.0" y="106.0" font-size="13" fill="#B45309" text-anchor="start" font-weight="700" font-family="Inter, Arial, sans-serif">R 10 000</text>
+<line x1="85.0" y1="184.0" x2="85.0" y2="214.0" stroke="#B45309" stroke-width="2"/><polygon points="85.0,214.0 81.5,205.7 88.5,205.7" fill="#B45309"/>
+<line x1="280.0" y1="184.0" x2="280.0" y2="214.0" stroke="#B45309" stroke-width="2"/><polygon points="280.0,214.0 276.5,205.7 283.5,205.7" fill="#B45309"/>
+<line x1="475.0" y1="184.0" x2="475.0" y2="214.0" stroke="#B45309" stroke-width="2"/><polygon points="475.0,214.0 471.5,205.7 478.5,205.7" fill="#B45309"/>
+<rect x="10.0" y="216.0" width="540.0" height="50.0" rx="6" fill="#F4F4F5" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="246.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">Dead material and faeces pass to decomposers</text>
+<text x="280.0" y="300.0" font-size="14" fill="#047857" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">NPP = GPP - R = 25 000 - 10 000 = 15 000</text>
+<text x="280.0" y="326.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">About 10% is passed on at each step; the rest is lost.</text>
+</svg>

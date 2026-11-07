@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="14">
+<rect width="560" height="360" fill="#fff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker></defs>
+<rect x="30" y="150" width="130" height="56" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="95.0" y="174.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="600">6 RuBP</text>
+<text x="95.0" y="192.0" text-anchor="middle" fill="#102A43" font-size="13">5C each = 30 C</text>
+<rect x="215" y="50" width="130" height="56" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280.0" y="74.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="600">12 GP</text>
+<text x="280.0" y="92.0" text-anchor="middle" fill="#102A43" font-size="13">3C each = 36 C</text>
+<rect x="400" y="150" width="130" height="56" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="465.0" y="174.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="600">12 TP</text>
+<text x="465.0" y="192.0" text-anchor="middle" fill="#102A43" font-size="13">3C each = 36 C</text>
+<path d="M95 150 C95 85 150 78 215 78" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#a)"/>
+<text x="20" y="40" text-anchor="start" fill="#2563EB" font-size="13" font-weight="600">Fixation (rubisco)</text>
+<text x="20" y="58" text-anchor="start" fill="#2563EB" font-size="13" font-weight="400">6 CO2 join 6 RuBP</text>
+<path d="M345 78 C420 78 465 100 465 150" fill="none" stroke="#047857" stroke-width="2" marker-end="url(#a)"/>
+<text x="350" y="28" text-anchor="start" fill="#047857" font-size="13" font-weight="600">Reduction</text>
+<text x="350" y="44" text-anchor="start" fill="#047857" font-size="13" font-weight="400">12 ATP, 12 NADPH</text>
+<path d="M440 206 C420 300 160 300 95 208" fill="none" stroke="#B45309" stroke-width="2" marker-end="url(#a)"/>
+<text x="280" y="325" text-anchor="middle" fill="#B45309" font-size="13" font-weight="600">Regeneration: 10 TP + 6 ATP make 6 RuBP</text>
+<path d="M500 206 L500 236" fill="none" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<text x="548" y="256" text-anchor="end" fill="#102A43" font-size="13" font-weight="600">2 TP leave:</text>
+<text x="548" y="274" text-anchor="end" fill="#102A43" font-size="13" font-weight="400">1 hexose</text>
+</svg>

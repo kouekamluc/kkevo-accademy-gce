@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Schematic of a mass spectrometer showing ionisation, acceleration, magnetic deflection and detection</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker></defs>
+<text x="280.0" y="26.0" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >Mass spectrometer: four stages</text>
+<text x="400.0" y="52.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" >3. Magnetic field (into the page) bends the paths</text>
+<rect x="15.0" y="140.0" width="125.0" height="100.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2.5" rx="8" />
+<text x="77.0" y="164.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" >1. Ionisation</text>
+<text x="77.0" y="184.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >electrons knock</text>
+<text x="77.0" y="202.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >an electron out</text>
+<text x="77.0" y="220.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >of each atom: X+</text>
+<rect x="165.0" y="150.0" width="14.0" height="80.0" fill="#E5E7EB" stroke="#102A43" stroke-width="2" rx="0" />
+<rect x="195.0" y="150.0" width="14.0" height="80.0" fill="#E5E7EB" stroke="#102A43" stroke-width="2" rx="0" />
+<line x1="140.0" y1="190.0" x2="165.0" y2="190.0" stroke="#B45309" stroke-width="2.5" marker-end="url(#a)"/>
+<line x1="179.0" y1="190.0" x2="195.0" y2="190.0" stroke="#B45309" stroke-width="2.5" marker-end="url(#a)"/>
+<text x="185.0" y="254.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" >2. Acceleration</text>
+<text x="185.0" y="272.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >by an electric field</text>
+<line x1="209.0" y1="190.0" x2="260.0" y2="190.0" stroke="#B45309" stroke-width="2.5" />
+<path d="M260,190 A60,60 0 0 1 380,190" fill="none" stroke="#B45309" stroke-width="3" />
+<path d="M260,190 A90,90 0 0 1 440,190" fill="none" stroke="#047857" stroke-width="3" />
+<path d="M260,190 A110,110 0 0 1 480,190" fill="none" stroke="#2563EB" stroke-width="3" />
+<text x="380.0" y="212.0" font-size="13" fill="#B45309" text-anchor="middle" font-weight="600" >too light: misses</text>
+<text x="515.0" y="168.0" font-size="13" fill="#2563EB" text-anchor="middle" font-weight="600" >too heavy</text>
+<line x1="440.0" y1="192.0" x2="440.0" y2="250.0" stroke="#047857" stroke-width="2.5" marker-end="url(#a)"/>
+<rect x="380.0" y="252.0" width="170.0" height="80.0" fill="#ECFDF5" stroke="#047857" stroke-width="2.5" rx="8" />
+<text x="465.0" y="276.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" >4. Detection</text>
+<text x="465.0" y="296.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >only ions of one m/z</text>
+<text x="465.0" y="314.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >reach the detector</text>
+<text x="20.0" y="310.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >All inside a vacuum, so ions</text>
+<text x="20.0" y="328.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >do not collide with air.</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Shapes of s, p and d atomic orbitals: sphere, dumbbells along x y z, and a cloverleaf</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="95.0" cy="140.0" r="46" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5" />
+<circle cx="95.0" cy="140.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="1" />
+<text x="95.0" y="235.0" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >s orbital</text>
+<text x="95.0" y="255.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >spherical</text>
+<text x="95.0" y="273.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >1 orbital per s subshell</text>
+<line x1="210.0" y1="140.0" x2="350.0" y2="140.0" stroke="#9CA3AF" stroke-width="1.5" />
+<line x1="280.0" y1="70.0" x2="280.0" y2="210.0" stroke="#9CA3AF" stroke-width="1.5" />
+<ellipse cx="314.0" cy="140.0" rx="32" ry="14" fill="#2563EB33" stroke="#2563EB" stroke-width="2.5" transform="rotate(0 314.0 140.0)" />
+<ellipse cx="246.0" cy="140.0" rx="32" ry="14" fill="#2563EB33" stroke="#2563EB" stroke-width="2.5" transform="rotate(0 246.0 140.0)" />
+<ellipse cx="280.0" cy="106.0" rx="32" ry="14" fill="#04785733" stroke="#047857" stroke-width="2.5" transform="rotate(-90 280.0 106.0)" />
+<ellipse cx="280.0" cy="174.0" rx="32" ry="14" fill="#04785733" stroke="#047857" stroke-width="2.5" transform="rotate(-90 280.0 174.0)" />
+<ellipse cx="252.1" cy="159.5" rx="32" ry="14" fill="#B4530933" stroke="#B45309" stroke-width="2.5" transform="rotate(-215 252.1 159.5)" />
+<ellipse cx="307.9" cy="120.5" rx="32" ry="14" fill="#B4530933" stroke="#B45309" stroke-width="2.5" transform="rotate(-215 307.9 120.5)" />
+<circle cx="280.0" cy="140.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="1" />
+<text x="378.0" y="145.0" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="700" >px</text>
+<text x="280.0" y="62.0" font-size="14" fill="#047857" text-anchor="middle" font-weight="700" >py</text>
+<text x="208.0" y="212.0" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700" >pz</text>
+<text x="280.0" y="235.0" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >p orbitals</text>
+<text x="280.0" y="255.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >dumbbell, three directions</text>
+<text x="280.0" y="273.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >3 orbitals per p subshell</text>
+<line x1="395.0" y1="140.0" x2="535.0" y2="140.0" stroke="#9CA3AF" stroke-width="1.5" />
+<line x1="465.0" y1="70.0" x2="465.0" y2="210.0" stroke="#9CA3AF" stroke-width="1.5" />
+<ellipse cx="489.0" cy="116.0" rx="26" ry="13" fill="#D1FAE5" stroke="#047857" stroke-width="2.5" transform="rotate(-45 489.0 116.0)" />
+<ellipse cx="441.0" cy="116.0" rx="26" ry="13" fill="#D1FAE5" stroke="#047857" stroke-width="2.5" transform="rotate(-135 441.0 116.0)" />
+<ellipse cx="441.0" cy="164.0" rx="26" ry="13" fill="#D1FAE5" stroke="#047857" stroke-width="2.5" transform="rotate(-225 441.0 164.0)" />
+<ellipse cx="489.0" cy="164.0" rx="26" ry="13" fill="#D1FAE5" stroke="#047857" stroke-width="2.5" transform="rotate(-315 489.0 164.0)" />
+<circle cx="465.0" cy="140.0" r="3" fill="#102A43" stroke="#102A43" stroke-width="1" />
+<text x="543.0" y="136.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >x</text>
+<text x="473.0" y="66.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >y</text>
+<text x="465.0" y="235.0" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >d orbitals</text>
+<text x="465.0" y="255.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" >cloverleaf (dxy shown)</text>
+<text x="465.0" y="273.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >5 orbitals per d subshell</text>
+<text x="280.0" y="325.0" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700" >Each orbital holds at most 2 electrons</text>
+<text x="280.0" y="26.0" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >Shapes of s, p and d orbitals</text>
+</svg>

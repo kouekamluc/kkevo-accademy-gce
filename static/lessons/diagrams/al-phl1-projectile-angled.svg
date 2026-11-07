@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Path of a projectile launched at 53 degrees with components 18 and 24 metres per second, showing the maximum height and the range</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="30.0" y1="275.0" x2="540.0" y2="275.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<polyline points="85.0,275.0 92.1,265.7 99.1,256.8 106.2,248.2 113.2,239.9 120.3,231.9 127.3,224.2 134.4,216.8 141.4,209.8 148.5,203.0 155.6,196.6 162.6,190.5 169.7,184.7 176.7,179.2 183.8,174.0 190.8,169.2 197.9,164.6 205.0,160.4 212.0,156.5 219.1,152.9 226.1,149.6 233.2,146.6 240.2,143.9 247.3,141.6 254.3,139.5 261.4,137.8 268.5,136.4 275.5,135.3 282.6,134.5 289.6,134.0 296.7,133.9 303.7,134.0 310.8,134.5 317.8,135.3 324.9,136.4 332.0,137.8 339.0,139.5 346.1,141.6 353.1,143.9 360.2,146.6 367.2,149.6 374.3,152.9 381.4,156.5 388.4,160.4 395.5,164.6 402.5,169.2 409.6,174.0 416.6,179.2 423.7,184.7 430.7,190.5 437.8,196.6 444.9,203.0 451.9,209.8 459.0,216.8 466.0,224.2 473.1,231.9 480.1,239.9 487.2,248.2 494.2,256.8 501.3,265.7 508.4,275.0" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="85.0" y1="275.0" x2="136.0" y2="207.0" stroke="#047857" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="142.6,198.2 139.7,209.8 132.3,204.2" fill="#047857"/>
+<line x1="85.0" y1="275.0" x2="131.6" y2="275.0" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="142.6,275.0 131.6,279.6 131.6,270.4" fill="#B45309"/>
+<line x1="142.6" y1="275.0" x2="142.6" y2="209.2" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="142.6,198.2 147.2,209.2 138.0,209.2" fill="#B45309"/>
+<text x="113.8" y="291.0" font-size="13" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="600">u cos&#952; = 18 m/s</text>
+<text x="150.6" y="236.6" font-size="13" fill="#B45309" text-anchor="start" dominant-baseline="middle" font-weight="600">u sin&#952; = 24 m/s</text>
+<text x="104.2" y="227.4" font-size="13" fill="#047857" text-anchor="end" dominant-baseline="middle" font-weight="600">u = 30 m/s</text>
+<path d="M119.0,275.0 A34,34 0 0 0 105.4,247.8" fill="none" stroke="#B45309" stroke-width="2"/>
+<text x="135.0" y="261.0" font-size="14" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="600">&#952;</text>
+<line x1="296.7" y1="133.9" x2="296.7" y2="275.0" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 5"/>
+<circle cx="296.7" cy="133.9" r="5.0" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<line x1="296.7" y1="133.9" x2="340.7" y2="133.9" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="351.7,133.9 340.7,138.5 340.7,129.3" fill="#B45309"/>
+<text x="296.7" y="117.9" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">top: v = 18 m/s, horizontal</text>
+<text x="302.7" y="234.4" font-size="14" fill="#047857" text-anchor="start" dominant-baseline="middle" font-weight="600">H = 28.8 m</text>
+<line x1="63.0" y1="133.9" x2="296.7" y2="133.9" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 5"/>
+<line x1="85.0" y1="311.0" x2="497.4" y2="311.0" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+<polygon points="508.4,311.0 497.4,315.6 497.4,306.4" fill="#047857"/>
+<line x1="508.4" y1="311.0" x2="96.0" y2="311.0" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+<polygon points="85.0,311.0 96.0,306.4 96.0,315.6" fill="#047857"/>
+<text x="296.7" y="331.0" font-size="14" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">R = 86.4 m, flight time 4.8 s</text>
+<circle cx="508.4" cy="275.0" r="5.0" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<text x="280.0" y="30.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">Launch: speed 30 m/s at 53 degrees above the horizontal (g = 10 m/s&#178;)</text>
+</svg>

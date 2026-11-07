@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="26" font-size="16" fill="#102A43" text-anchor="middle" font-weight="bold">Period 3 melting points (approximate, degrees C)</text>
+<line x1="40" y1="250" x2="530" y2="250" stroke="#102A43" stroke-width="2"/>
+<rect x="60" y="237.3" width="40" height="12.7" fill="#2563EB" fill-opacity="0.85"/>
+<text x="80" y="231.26" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">98</text>
+<text x="80" y="318" font-size="14" fill="#102A43" text-anchor="middle" font-weight="bold">Na</text>
+<rect x="118" y="165.5" width="40" height="84.5" fill="#2563EB" fill-opacity="0.85"/>
+<text x="138" y="159.5" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">650</text>
+<text x="138" y="318" font-size="14" fill="#102A43" text-anchor="middle" font-weight="bold">Mg</text>
+<rect x="176" y="164.2" width="40" height="85.8" fill="#2563EB" fill-opacity="0.85"/>
+<text x="196" y="158.2" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">660</text>
+<text x="196" y="318" font-size="14" fill="#102A43" text-anchor="middle" font-weight="bold">Al</text>
+<rect x="234" y="66.7" width="40" height="183.3" fill="#B45309" fill-opacity="0.85"/>
+<text x="254" y="60.69999999999999" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">1410</text>
+<text x="254" y="318" font-size="14" fill="#102A43" text-anchor="middle" font-weight="bold">Si</text>
+<rect x="292" y="244.3" width="40" height="5.7" fill="#047857" fill-opacity="0.85"/>
+<text x="312" y="238.28" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">44</text>
+<text x="312" y="318" font-size="14" fill="#102A43" text-anchor="middle" font-weight="bold">P</text>
+<rect x="350" y="235.1" width="40" height="15.0" fill="#047857" fill-opacity="0.85"/>
+<text x="370" y="229.05" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">115</text>
+<text x="370" y="318" font-size="14" fill="#102A43" text-anchor="middle" font-weight="bold">S</text>
+<rect x="408" y="250" width="40" height="13.1" fill="#047857" fill-opacity="0.85"/>
+<text x="428" y="281.13" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">-101</text>
+<text x="428" y="318" font-size="14" fill="#102A43" text-anchor="middle" font-weight="bold">Cl</text>
+<rect x="466" y="250" width="40" height="24.6" fill="#047857" fill-opacity="0.85"/>
+<text x="486" y="292.57" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">-189</text>
+<text x="486" y="318" font-size="14" fill="#102A43" text-anchor="middle" font-weight="bold">Ar</text>
+<rect x="60" y="334" width="14" height="14" fill="#2563EB"/><text x="80" y="346" font-size="13" fill="#102A43" text-anchor="start" font-weight="normal">giant metallic</text>
+<rect x="190" y="334" width="14" height="14" fill="#B45309"/><text x="210" y="346" font-size="13" fill="#102A43" text-anchor="start" font-weight="normal">giant covalent</text>
+<rect x="330" y="334" width="14" height="14" fill="#047857"/><text x="350" y="346" font-size="13" fill="#102A43" text-anchor="start" font-weight="normal">simple molecular</text>
+</svg>

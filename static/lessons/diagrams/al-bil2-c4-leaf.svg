@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="14">
+<rect width="560" height="360" fill="#fff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker></defs>
+<rect x="30" y="40" width="500" height="280" rx="10" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<rect x="30" y="40" width="500" height="22" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="30" y="298" width="500" height="22" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="115" y="38" width="40" height="26" fill="#fff"/>
+<ellipse cx="135" cy="51" rx="18" ry="9" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="135" y="32" text-anchor="middle" fill="#102A43" font-size="13" font-weight="600">stoma</text>
+<circle cx="340" cy="165" r="84" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<circle cx="402.0" cy="165.0" r="15" fill="#fff" stroke="#047857" stroke-width="2"/>
+<circle cx="390.2" cy="201.4" r="15" fill="#fff" stroke="#047857" stroke-width="2"/>
+<circle cx="359.2" cy="224.0" r="15" fill="#fff" stroke="#047857" stroke-width="2"/>
+<circle cx="320.8" cy="224.0" r="15" fill="#fff" stroke="#047857" stroke-width="2"/>
+<circle cx="289.8" cy="201.4" r="15" fill="#fff" stroke="#047857" stroke-width="2"/>
+<circle cx="278.0" cy="165.0" r="15" fill="#fff" stroke="#047857" stroke-width="2"/>
+<circle cx="289.8" cy="128.6" r="15" fill="#fff" stroke="#047857" stroke-width="2"/>
+<circle cx="320.8" cy="106.0" r="15" fill="#fff" stroke="#047857" stroke-width="2"/>
+<circle cx="359.2" cy="106.0" r="15" fill="#fff" stroke="#047857" stroke-width="2"/>
+<circle cx="390.2" cy="128.6" r="15" fill="#fff" stroke="#047857" stroke-width="2"/>
+<circle cx="340" cy="165" r="38" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="340" y="163" text-anchor="middle" fill="#102A43" font-size="13" font-weight="400">xylem</text>
+<text x="340" y="181" text-anchor="middle" fill="#102A43" font-size="13" font-weight="400">phloem</text>
+<rect x="40" y="110" width="140" height="110" rx="26" fill="#fff" stroke="#2563EB" stroke-width="2"/>
+<text x="110" y="158" text-anchor="middle" fill="#102A43" font-size="13" font-weight="600">Mesophyll cell</text>
+<text x="110" y="178" text-anchor="middle" fill="#102A43" font-size="13" font-weight="400">PEP carboxylase</text>
+<path d="M135 62 L135 108" fill="none" stroke="#B45309" stroke-width="2" marker-end="url(#a)"/>
+<text x="148" y="90" text-anchor="start" fill="#B45309" font-size="13" font-weight="600">CO2 in</text>
+<path d="M182 165 L252 165" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#a)"/>
+<text x="217" y="148" text-anchor="middle" fill="#2563EB" font-size="13" font-weight="600">malate</text>
+<text x="217" y="186" text-anchor="middle" fill="#2563EB" font-size="13" font-weight="600">(4C)</text>
+<text x="340" y="268" text-anchor="middle" fill="#047857" font-size="13" font-weight="600">Bundle sheath cells</text>
+<text x="436" y="150" text-anchor="start" fill="#047857" font-size="13" font-weight="600">CO2 released</text>
+<text x="436" y="170" text-anchor="start" fill="#047857" font-size="13" font-weight="400">Calvin cycle</text>
+<text x="436" y="190" text-anchor="start" fill="#047857" font-size="13" font-weight="400">(rubisco)</text>
+</svg>

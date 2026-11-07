@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="14">
+<rect width="560" height="360" fill="#fff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker></defs>
+<rect x="30" y="130" width="200" height="70" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="130.0" y="161.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="600">Gametophyte (n)</text>
+<text x="130.0" y="179.0" text-anchor="middle" fill="#102A43" font-size="13">makes gametes by mitosis</text>
+<rect x="330" y="130" width="200" height="70" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="430.0" y="161.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="600">Sporophyte (2n)</text>
+<text x="430.0" y="179.0" text-anchor="middle" fill="#102A43" font-size="13">makes spores by meiosis</text>
+<path d="M130 130 C140 40 420 40 430 128" fill="none" stroke="#2563EB" stroke-width="2" marker-end="url(#a)"/>
+<text x="280" y="108" text-anchor="middle" fill="#2563EB" font-size="14" font-weight="600">Fertilisation</text>
+<text x="280" y="126" text-anchor="middle" fill="#2563EB" font-size="13" font-weight="400">gametes (n) fuse: zygote (2n)</text>
+<path d="M430 200 C420 300 140 300 130 202" fill="none" stroke="#047857" stroke-width="2" marker-end="url(#a)"/>
+<text x="280" y="300" text-anchor="middle" fill="#047857" font-size="14" font-weight="600">Meiosis in sporangia</text>
+<text x="280" y="320" text-anchor="middle" fill="#047857" font-size="13" font-weight="400">spores (n) grow by mitosis</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="30" font-size="16" fill="#102A43" text-anchor="middle" font-weight="bold">3d orbital splitting in an octahedral complex</text>
+<line x1="40" y1="330" x2="40" y2="60" stroke="#102A43" stroke-width="2"/>
+<polygon points="40,50 34,64 46,64" fill="#102A43"/>
+<text x="52" y="64" font-size="14" fill="#102A43" text-anchor="start" font-weight="normal">Energy</text>
+<line x1="70" y1="200" x2="170" y2="200" stroke="#102A43" stroke-width="3"/>
+<text x="120" y="228" font-size="14" fill="#102A43" text-anchor="middle" font-weight="bold">Free ion</text>
+<text x="120" y="247" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">five 3d orbitals,</text>
+<text x="120" y="266" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">same energy</text>
+<line x1="170" y1="200" x2="295" y2="120" stroke="#102A43" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="170" y1="200" x2="295" y2="265" stroke="#102A43" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="300" y1="120" x2="350" y2="120" stroke="#2563EB" stroke-width="3"/>
+<line x1="360" y1="120" x2="410" y2="120" stroke="#2563EB" stroke-width="3"/>
+<text x="355" y="98" font-size="14" fill="#2563EB" text-anchor="middle" font-weight="normal">eg: two orbitals (point at the ligands)</text>
+<line x1="300" y1="265" x2="350" y2="265" stroke="#047857" stroke-width="3"/>
+<line x1="360" y1="265" x2="410" y2="265" stroke="#047857" stroke-width="3"/>
+<line x1="420" y1="265" x2="470" y2="265" stroke="#047857" stroke-width="3"/>
+<text x="385" y="296" font-size="14" fill="#047857" text-anchor="middle" font-weight="normal">t2g: three orbitals (lower energy)</text>
+<text x="385" y="316" font-size="14" fill="#047857" text-anchor="middle" font-weight="normal">(between the ligands)</text>
+<line x1="500" y1="128" x2="500" y2="257" stroke="#B45309" stroke-width="2"/>
+<polygon points="500,122 494,136 506,136" fill="#B45309"/><polygon points="500,263 494,249 506,249" fill="#B45309"/>
+<text x="512" y="200" font-size="15" fill="#B45309" text-anchor="start" font-weight="bold">&#916;E</text>
+<line x1="385" y1="258" x2="385" y2="134" stroke="#B45309" stroke-width="2" stroke-dasharray="5 4"/>
+<polygon points="385,128 379,142 391,142" fill="#B45309"/>
+<text x="398" y="186" font-size="13" fill="#B45309" text-anchor="start" font-weight="normal">absorbs light</text>
+<text x="398" y="203" font-size="13" fill="#B45309" text-anchor="start" font-weight="normal">of energy &#916;E</text>
+</svg>

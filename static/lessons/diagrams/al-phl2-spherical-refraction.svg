@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Refraction at a convex spherical surface between air and glass: an object O on the axis, a ray meeting the surface at M, refracted towards the image I; P is the pole, C the centre of curvature, with distances u, v and R marked"><rect width="560" height="360" fill="#ffffff"/><defs><marker id="ak" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<text x="280.0" y="24.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">Refraction at a spherical surface (not to scale)</text>
+<path d="M520.0 150.0 L275.7 150.0 L275.7 150.0 L268.7 154.0 L263.8 158.0 L260.1 162.0 L257.1 166.0 L254.8 170.0 L253.0 174.0 L251.7 178.0 L250.7 182.0 L250.2 186.0 L250.0 190.0 L250.2 194.0 L250.7 198.0 L251.7 202.0 L253.0 206.0 L254.8 210.0 L257.1 214.0 L260.1 218.0 L263.8 222.0 L268.7 226.0 L275.7 230.0 L520.0 230.0" fill="#EFF6FF" stroke="#102A43" stroke-width="0" stroke-linejoin="round"/>
+<path d="M275.7 150.0 L268.7 154.0 L263.8 158.0 L260.1 162.0 L257.1 166.0 L254.8 170.0 L253.0 174.0 L251.7 178.0 L250.7 182.0 L250.2 186.0 L250.0 190.0 L250.2 194.0 L250.7 198.0 L251.7 202.0 L253.0 206.0 L254.8 210.0 L257.1 214.0 L260.1 218.0 L263.8 222.0 L268.7 226.0 L275.7 230.0" fill="none" stroke="#102A43" stroke-width="3" stroke-linejoin="round"/>
+<line x1="20.0" y1="190.0" x2="540.0" y2="190.0" stroke="#64748B" stroke-width="2"/>
+<line x1="30.0" y1="190.0" x2="268.7" y2="154.0" stroke="#2563EB" stroke-width="3"/>
+<line x1="268.7" y1="154.0" x2="470.0" y2="190.0" stroke="#2563EB" stroke-width="3"/>
+<line x1="297.4" y1="194.9" x2="242.3" y2="116.4" stroke="#047857" stroke-width="2" stroke-dasharray="5 4"/>
+<circle cx="30.0" cy="190.0" r="5.0" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="470.0" cy="190.0" r="5.0" fill="#047857" stroke="#047857" stroke-width="2"/>
+<circle cx="294.0" cy="190.0" r="5.0" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<circle cx="250.0" cy="190.0" r="4.0" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="30.0" y="214.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">O</text>
+<text x="470.0" y="214.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="middle">I</text>
+<text x="300.0" y="214.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#B45309" text-anchor="middle">C</text>
+<text x="244.0" y="214.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">P</text>
+<text x="278.7" y="146.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB" text-anchor="start">M</text>
+<text x="150.0" y="100.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">n1 (air)</text>
+<text x="430.0" y="100.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">n2 (glass)</text>
+<text x="150.0" y="302.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">u</text>
+<line x1="34.0" y1="285.0" x2="246.0" y2="285.0" stroke="#102A43" stroke-width="2" marker-end="url(#ak)"/>
+<line x1="246.0" y1="285.0" x2="34.0" y2="285.0" stroke="#102A43" stroke-width="2" marker-end="url(#ak)"/>
+<line x1="254.0" y1="285.0" x2="466.0" y2="285.0" stroke="#102A43" stroke-width="2" marker-end="url(#ak)"/>
+<line x1="466.0" y1="285.0" x2="254.0" y2="285.0" stroke="#102A43" stroke-width="2" marker-end="url(#ak)"/>
+<text x="360.0" y="308.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="middle">v</text>
+<line x1="250.0" y1="242.0" x2="294.0" y2="242.0" stroke="#B45309" stroke-width="2" marker-end="url(#am)"/>
+<line x1="294.0" y1="242.0" x2="250.0" y2="242.0" stroke="#B45309" stroke-width="2" marker-end="url(#am)"/>
+<text x="272.0" y="264.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#B45309" text-anchor="middle">R</text>
+<text x="218.7" y="150.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="middle">i</text>
+<text x="308.7" y="178.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="start">r</text>
+<text x="280.0" y="346.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">Rays close to the axis: n1/u + n2/v = (n2 - n1)/R</text>
+</svg>

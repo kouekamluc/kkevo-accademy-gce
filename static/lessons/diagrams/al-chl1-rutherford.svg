@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Alpha particles fired at gold foil: most go straight through, a few are deflected and a very few rebound from tiny dense nuclei</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker></defs>
+<text x="280.0" y="22.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >Alpha-particle scattering by gold foil (Geiger-Marsden experiment)</text>
+<rect x="20.0" y="128.0" width="40.0" height="44.0" fill="#E5E7EB" stroke="#102A43" stroke-width="2" rx="0" />
+<text x="40.0" y="190.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="600" >source</text>
+<circle cx="262.0" cy="70.0" r="6" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="282.0" cy="70.0" r="6" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="262.0" cy="100.0" r="6" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="282.0" cy="100.0" r="6" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="262.0" cy="130.0" r="6" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="282.0" cy="130.0" r="6" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="262.0" cy="160.0" r="6" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="282.0" cy="160.0" r="6" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="262.0" cy="190.0" r="6" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="282.0" cy="190.0" r="6" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="262.0" cy="220.0" r="6" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="282.0" cy="220.0" r="6" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<line x1="60.0" y1="150.0" x2="215.0" y2="85.0" stroke="none" stroke-width="1" />
+<line x1="60.0" y1="150.0" x2="215.0" y2="145.0" stroke="none" stroke-width="1" />
+<line x1="60.0" y1="150.0" x2="215.0" y2="205.0" stroke="none" stroke-width="1" />
+<line x1="70.0" y1="85.0" x2="510.0" y2="85.0" stroke="#2563EB" stroke-width="2.5" marker-end="url(#b)"/>
+<line x1="70.0" y1="145.0" x2="510.0" y2="145.0" stroke="#2563EB" stroke-width="2.5" marker-end="url(#b)"/>
+<line x1="70.0" y1="205.0" x2="510.0" y2="205.0" stroke="#2563EB" stroke-width="2.5" marker-end="url(#b)"/>
+<path d="M70,175 L286,175 Q300,176 310,190 L500,262" fill="none" stroke="#2563EB" stroke-width="2.5" marker-end="url(#b)"/>
+<path d="M70,130 L254,130 Q262,124 252,112 L150,52" fill="none" stroke="#2563EB" stroke-width="2.5" marker-end="url(#b)"/>
+<text x="330.0" y="50.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="600" >Most pass straight through:</text>
+<text x="330.0" y="66.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="600" >atoms are mostly empty space</text>
+<text x="400.0" y="290.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="600" >A few are deflected</text>
+<text x="20.0" y="108.0" font-size="13" fill="#B45309" text-anchor="start" font-weight="700" >A very few bounce back</text>
+<text x="20.0" y="322.0" font-size="14" fill="#047857" text-anchor="start" font-weight="700" >Conclusion: the positive charge and almost all the mass are in a tiny,</text>
+<text x="20.0" y="342.0" font-size="14" fill="#047857" text-anchor="start" font-weight="700" >dense nucleus at the centre of the atom (amber dots show nuclei).</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="26.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">Inverting amplifier</text>
+<path d="M280.0,120.0 L400.0,180.0 L280.0,240.0 L280.0,120.0" fill="#EFF6FF" stroke="#102A43" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="288.0" y="155.0" font-size="18" text-anchor="start" fill="#102A43" font-weight="700">&#8722;</text>
+<text x="288.0" y="215.0" font-size="18" text-anchor="start" fill="#102A43" font-weight="700">+</text>
+<line x1="400.0" y1="180.0" x2="500.0" y2="180.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<circle cx="500.0" cy="180.0" r="4" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<text x="500.0" y="202.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">V</text>
+<text x="509.0" y="206.0" font-size="13" text-anchor="start" fill="#102A43">out</text>
+<line x1="440.0" y1="180.0" x2="440.0" y2="92.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<rect x="300.0" y="82.0" width="60.0" height="20.0" rx="0" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<line x1="440.0" y1="92.0" x2="360.0" y2="92.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="300.0" y1="92.0" x2="210.0" y2="92.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="210.0" y1="92.0" x2="210.0" y2="150.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="210.0" y1="150.0" x2="280.0" y2="150.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<circle cx="210.0" cy="150.0" r="4" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<text x="330.0" y="74.0" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">Rf = 20 k&#937;</text>
+<rect x="100.0" y="140.0" width="70.0" height="20.0" rx="0" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<line x1="40.0" y1="150.0" x2="100.0" y2="150.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="170.0" y1="150.0" x2="210.0" y2="150.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<text x="135.0" y="134.0" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">Rin = 2.0 k&#937;</text>
+<text x="36.0" y="142.0" font-size="14" text-anchor="end" fill="#102A43" font-weight="700">V</text>
+<text x="38.0" y="146.0" font-size="13" text-anchor="start" fill="#102A43">in</text>
+<line x1="280.0" y1="210.0" x2="230.0" y2="210.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="230.0" y1="210.0" x2="230.0" y2="250.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="210.0" y1="250.0" x2="250.0" y2="250.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="216.0" y1="258.0" x2="244.0" y2="258.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="224.0" y1="266.0" x2="236.0" y2="266.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="202.0" y="202.0" font-size="13" text-anchor="end" fill="#047857" font-weight="700">virtual earth</text>
+<text x="280.0" y="326.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">Vout = &#8722;(Rf / Rin) Vin</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="14">
+<rect width="560" height="360" fill="#fff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker></defs>
+<line x1="40" y1="300" x2="40" y2="30" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<text transform="translate(24 165) rotate(-90)" text-anchor="middle" fill="#102A43" font-size="13">Energy level of electron</text>
+<rect x="60" y="255" width="120" height="42" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="120.0" y="272.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="600">PSII</text>
+<text x="120.0" y="290.0" text-anchor="middle" fill="#102A43" font-size="13">P680</text>
+<path d="M120 255 L120 100" fill="none" stroke="#B45309" stroke-width="2" marker-end="url(#a)"/>
+<text x="110" y="185" text-anchor="end" fill="#B45309" font-size="13" font-weight="600">light</text>
+<path d="M120 100 L170 145 L225 185 L280 222 L330 250" fill="none" stroke="#102A43" stroke-width="3" marker-end="url(#a)"/>
+<text x="182" y="126" text-anchor="start" fill="#102A43" font-size="13" font-weight="400">PQ</text>
+<text x="228" y="163" text-anchor="start" fill="#102A43" font-size="13" font-weight="400">Cyt b6f</text>
+<text x="276" y="199" text-anchor="start" fill="#102A43" font-size="13" font-weight="400">PC</text>
+<text x="140" y="235" text-anchor="start" fill="#047857" font-size="13" font-weight="600">ATP made</text>
+<rect x="270" y="255" width="120" height="42" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="330.0" y="272.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="600">PSI</text>
+<text x="330.0" y="290.0" text-anchor="middle" fill="#102A43" font-size="13">P700</text>
+<path d="M330 255 L330 60" fill="none" stroke="#B45309" stroke-width="2" marker-end="url(#a)"/>
+<text x="320" y="160" text-anchor="end" fill="#B45309" font-size="13" font-weight="600">light</text>
+<path d="M330 60 L385 78 L440 112" fill="none" stroke="#102A43" stroke-width="3" marker-end="url(#a)"/>
+<text x="372" y="64" text-anchor="start" fill="#102A43" font-size="13" font-weight="400">Fd</text>
+<rect x="430" y="125" width="110" height="44" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="485.0" y="143.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="600">NADP+</text>
+<text x="485.0" y="161.0" text-anchor="middle" fill="#102A43" font-size="13">becomes NADPH</text>
+<path d="M120 326 L120 298" fill="none" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<text x="60" y="345" text-anchor="start" fill="#102A43" font-size="13" font-weight="400">2 H2O gives O2, 4 H+ and 4 e-</text>
+</svg>

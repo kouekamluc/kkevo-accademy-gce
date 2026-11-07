@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Graph of force against displacement: the area under the graph is the work done, 180 joules in total</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="90.0,300.0 222.0,76.0 420.0,76.0 486.0,300.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="222.0" y1="76.0" x2="222.0" y2="300.0" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 5"/>
+<line x1="420.0" y1="76.0" x2="420.0" y2="300.0" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 5"/>
+<line x1="90.0" y1="300.0" x2="525.6" y2="300.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="90.0" y1="300.0" x2="90.0" y2="20.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="90.0" y1="300.0" x2="90.0" y2="306.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="90.0" y="322.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">0</text>
+<line x1="156.0" y1="300.0" x2="156.0" y2="306.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="156.0" y="322.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">1</text>
+<line x1="222.0" y1="300.0" x2="222.0" y2="306.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="222.0" y="322.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">2</text>
+<line x1="288.0" y1="300.0" x2="288.0" y2="306.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="288.0" y="322.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">3</text>
+<line x1="354.0" y1="300.0" x2="354.0" y2="306.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="354.0" y="322.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">4</text>
+<line x1="420.0" y1="300.0" x2="420.0" y2="306.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="420.0" y="322.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">5</text>
+<line x1="486.0" y1="300.0" x2="486.0" y2="306.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="486.0" y="322.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">6</text>
+<line x1="90.0" y1="244.0" x2="84.0" y2="244.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="68.0" y="244.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">10</text>
+<line x1="90.0" y1="188.0" x2="84.0" y2="188.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="68.0" y="188.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">20</text>
+<line x1="90.0" y1="132.0" x2="84.0" y2="132.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="68.0" y="132.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">30</text>
+<line x1="90.0" y1="76.0" x2="84.0" y2="76.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="68.0" y="76.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">40</text>
+<line x1="90.0" y1="20.0" x2="84.0" y2="20.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="68.0" y="20.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">50</text>
+<text x="307.8" y="346.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">displacement s (m)</text>
+<text x="40.0" y="160.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">F (N)</text>
+<text x="169.2" y="221.6" font-size="14" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">40 J</text>
+<text x="321.0" y="188.0" font-size="15" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">120 J</text>
+<text x="449.7" y="249.6" font-size="14" fill="#047857" text-anchor="middle" dominant-baseline="middle" font-weight="600">20 J</text>
+<text x="307.8" y="36.8" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">Work = area = 40 + 120 + 20 = 180 J</text>
+</svg>

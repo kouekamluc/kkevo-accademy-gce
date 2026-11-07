@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="A reference circle: a point P moves round a circle of radius A at angular speed omega; its shadow N on the horizontal diameter moves in simple harmonic motion"><rect width="560" height="360" fill="#ffffff"/><defs><marker id="ak" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<text x="280.0" y="26.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">The reference circle</text>
+<circle cx="190.0" cy="190.0" r="115.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<line x1="55.0" y1="190.0" x2="325.0" y2="190.0" stroke="#64748B" stroke-width="2"/>
+<line x1="190.0" y1="61.0" x2="190.0" y2="319.0" stroke="#64748B" stroke-width="2" stroke-dasharray="5 4"/>
+<line x1="190.0" y1="190.0" x2="263.9" y2="101.9" stroke="#2563EB" stroke-width="3"/>
+<line x1="263.9" y1="101.9" x2="263.9" y2="190.0" stroke="#B45309" stroke-width="2" stroke-dasharray="5 4"/>
+<path d="M190 150 A40 40 0 0 1 215.7 159.4" fill="none" stroke="#B45309" stroke-width="2" stroke-linejoin="round"/>
+<text x="182.0" y="138.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309" text-anchor="middle">&#969;t</text>
+<circle cx="263.9" cy="101.9" r="6.0" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<circle cx="263.9" cy="190.0" r="6.0" fill="#047857" stroke="#047857" stroke-width="2"/>
+<text x="267.9" y="89.9" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB" text-anchor="start">P</text>
+<text x="265.9" y="212.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="middle">N</text>
+<text x="178.0" y="210.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">O</text>
+<line x1="263.9" y1="101.9" x2="311.4" y2="141.8" stroke="#047857" stroke-width="3" marker-end="url(#ag)"/>
+<text x="319.4" y="147.8" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="start">v = &#969;A</text>
+<text x="239.0" y="160.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB" text-anchor="middle">A</text>
+<text x="279.9" y="150.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#B45309" text-anchor="start">x</text>
+<text x="69.0" y="182.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="end">-A</text>
+<text x="331.0" y="182.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="start">+A</text>
+<text x="545.0" y="240.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="end">x = A sin &#969;t</text>
+<text x="545.0" y="262.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="end">P goes round at</text>
+<text x="545.0" y="280.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="end">constant speed.</text>
+<text x="545.0" y="302.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="end">N, the shadow of P</text>
+<text x="545.0" y="320.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="end">on the diameter,</text>
+<text x="545.0" y="338.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#64748B" text-anchor="end">oscillates to and fro.</text>
+<text x="190.0" y="346.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">A = radius = amplitude;  &#969; = angular speed</text>
+</svg>

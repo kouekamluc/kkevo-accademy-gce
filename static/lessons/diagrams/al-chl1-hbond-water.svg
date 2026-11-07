@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Three water molecules joined by dashed hydrogen bonds from hydrogen atoms to oxygen atoms</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker></defs>
+<line x1="130.6" y1="112.2" x2="185.6" y2="132.9" stroke="#2563EB" stroke-width="3" stroke-dasharray="6 5"/>
+<line x1="246.0" y1="184.5" x2="276.5" y2="222.5" stroke="#2563EB" stroke-width="3" stroke-dasharray="6 5"/>
+<line x1="70.0" y1="90.0" x2="122.6" y2="109.2" stroke="#102A43" stroke-width="3" />
+<line x1="70.0" y1="90.0" x2="75.4" y2="34.3" stroke="#102A43" stroke-width="3" />
+<circle cx="122.6" cy="109.2" r="11" fill="#FFFFFF" stroke="#102A43" stroke-width="2" />
+<text x="122.6" y="114.2" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<circle cx="75.4" cy="34.3" r="11" fill="#FFFFFF" stroke="#102A43" stroke-width="2" />
+<text x="75.4" y="39.3" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<circle cx="70.0" cy="90.0" r="15" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5" />
+<text x="70.0" y="95.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >O</text>
+<line x1="201.6" y1="137.9" x2="239.0" y2="179.5" stroke="#102A43" stroke-width="3" />
+<line x1="201.6" y1="137.9" x2="232.5" y2="91.2" stroke="#102A43" stroke-width="3" />
+<circle cx="239.0" cy="179.5" r="11" fill="#FFFFFF" stroke="#102A43" stroke-width="2" />
+<text x="239.0" y="184.5" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<circle cx="232.5" cy="91.2" r="11" fill="#FFFFFF" stroke="#102A43" stroke-width="2" />
+<text x="232.5" y="96.2" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<circle cx="201.6" cy="137.9" r="15" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5" />
+<text x="201.6" y="142.9" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >O</text>
+<line x1="288.5" y1="234.5" x2="343.3" y2="246.1" stroke="#102A43" stroke-width="3" />
+<line x1="288.5" y1="234.5" x2="286.1" y2="178.5" stroke="#102A43" stroke-width="3" />
+<circle cx="343.3" cy="246.1" r="11" fill="#FFFFFF" stroke="#102A43" stroke-width="2" />
+<text x="343.3" y="251.1" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<circle cx="286.1" cy="178.5" r="11" fill="#FFFFFF" stroke="#102A43" stroke-width="2" />
+<text x="286.1" y="183.5" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" >H</text>
+<circle cx="288.5" cy="234.5" r="15" fill="#DBEAFE" stroke="#2563EB" stroke-width="2.5" />
+<text x="288.5" y="239.5" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >O</text>
+<text x="166.6" y="117.9" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700" >&#948;-</text>
+<text x="254.5" y="85.2" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700" >&#948;+</text>
+<text x="280.0" y="26.0" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >Hydrogen bonds between water molecules</text>
+<text x="340.0" y="70.0" font-size="13" fill="#2563EB" text-anchor="start" font-weight="700" >Dashed line = hydrogen bond:</text>
+<text x="340.0" y="88.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >an O-H hydrogen is attracted</text>
+<text x="340.0" y="106.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >to a lone pair on the oxygen</text>
+<text x="340.0" y="124.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="400" >of a neighbouring molecule</text>
+<text x="30.0" y="310.0" font-size="14" fill="#102A43" text-anchor="start" font-weight="600" >Each water molecule can form up to four hydrogen bonds:</text>
+<text x="30.0" y="332.0" font-size="14" fill="#102A43" text-anchor="start" font-weight="600" >two through its H atoms and two through the lone pairs on O</text>
+</svg>

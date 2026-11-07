@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif"><rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<line x1="80.0" y1="40.0" x2="80.0" y2="280.0" stroke="#102A43" stroke-width="2"/>
+<line x1="80.0" y1="280.0" x2="520.0" y2="280.0" stroke="#102A43" stroke-width="2"/>
+<line x1="80.0" y1="280.0" x2="80.0" y2="286.0" stroke="#102A43" stroke-width="2"/>
+<text x="80.0" y="304.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">2.9</text>
+<line x1="153.3" y1="280.0" x2="153.3" y2="286.0" stroke="#102A43" stroke-width="2"/>
+<text x="153.3" y="304.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">3.0</text>
+<line x1="226.7" y1="280.0" x2="226.7" y2="286.0" stroke="#102A43" stroke-width="2"/>
+<text x="226.7" y="304.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">3.1</text>
+<line x1="300.0" y1="280.0" x2="300.0" y2="286.0" stroke="#102A43" stroke-width="2"/>
+<text x="300.0" y="304.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">3.2</text>
+<line x1="373.3" y1="280.0" x2="373.3" y2="286.0" stroke="#102A43" stroke-width="2"/>
+<text x="373.3" y="304.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">3.3</text>
+<line x1="446.7" y1="280.0" x2="446.7" y2="286.0" stroke="#102A43" stroke-width="2"/>
+<text x="446.7" y="304.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">3.4</text>
+<line x1="520.0" y1="280.0" x2="520.0" y2="286.0" stroke="#102A43" stroke-width="2"/>
+<text x="520.0" y="304.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">3.5</text>
+<line x1="74.0" y1="280.0" x2="80.0" y2="280.0" stroke="#102A43" stroke-width="2"/>
+<text x="70.0" y="285.0" font-size="14" fill="#102A43" text-anchor="end" font-weight="normal">0</text>
+<line x1="74.0" y1="232.0" x2="80.0" y2="232.0" stroke="#102A43" stroke-width="2"/>
+<text x="70.0" y="237.0" font-size="14" fill="#102A43" text-anchor="end" font-weight="normal">1</text>
+<line x1="74.0" y1="184.0" x2="80.0" y2="184.0" stroke="#102A43" stroke-width="2"/>
+<text x="70.0" y="189.0" font-size="14" fill="#102A43" text-anchor="end" font-weight="normal">2</text>
+<line x1="74.0" y1="136.0" x2="80.0" y2="136.0" stroke="#102A43" stroke-width="2"/>
+<text x="70.0" y="141.0" font-size="14" fill="#102A43" text-anchor="end" font-weight="normal">3</text>
+<line x1="74.0" y1="88.0" x2="80.0" y2="88.0" stroke="#102A43" stroke-width="2"/>
+<text x="70.0" y="93.0" font-size="14" fill="#102A43" text-anchor="end" font-weight="normal">4</text>
+<line x1="74.0" y1="40.0" x2="80.0" y2="40.0" stroke="#102A43" stroke-width="2"/>
+<text x="70.0" y="45.0" font-size="14" fill="#102A43" text-anchor="end" font-weight="normal">5</text>
+<text x="300.0" y="328.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">1/T in units of 10-3 per K</text>
+<text x="20.0" y="26.0" font-size="15" fill="#102A43" text-anchor="start" font-weight="bold">ln k</text>
+<line x1="116.7" y1="86.6" x2="483.3" y2="259.9" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="482.1" cy="259.3" r="5" fill="#B45309"/>
+<circle cx="397.8" cy="219.5" r="5" fill="#B45309"/>
+<circle cx="318.9" cy="182.2" r="5" fill="#B45309"/>
+<circle cx="245.0" cy="147.3" r="5" fill="#B45309"/>
+<circle cx="175.6" cy="114.4" r="5" fill="#B45309"/>
+<circle cx="110.2" cy="83.6" r="5" fill="#B45309"/>
+<line x1="153.3" y1="103.9" x2="446.7" y2="103.9" stroke="#047857" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="446.7" y1="103.9" x2="446.7" y2="242.6" stroke="#047857" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="300.0" y="95.9" font-size="14" fill="#047857" text-anchor="middle" font-weight="normal">&#916;x = 0.40</text>
+<text x="454.7" y="173.2" font-size="14" fill="#047857" text-anchor="start" font-weight="normal">&#916;y = &#8722;2.89</text>
+<text x="147.3" y="67.9" font-size="15" fill="#2563EB" text-anchor="start" font-weight="bold">gradient = &#8722;Ea/R</text>
+</svg>

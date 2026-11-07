@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="24.0" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">Magnetic field of a long straight wire (I = 5.0 A)</text>
+<circle cx="130.0" cy="185.0" r="30" fill="none" stroke="#2563EB" stroke-width="2"/>
+<line x1="136.0" y1="155.0" x2="122.0" y2="155.0" stroke="#2563EB" stroke-width="2"/>
+<polygon points="122.0,155.0 131.2,151.1 131.2,158.9" fill="#2563EB"/>
+<circle cx="130.0" cy="185.0" r="60" fill="none" stroke="#2563EB" stroke-width="2"/>
+<line x1="136.0" y1="125.0" x2="122.0" y2="125.0" stroke="#2563EB" stroke-width="2"/>
+<polygon points="122.0,125.0 131.2,121.1 131.2,128.9" fill="#2563EB"/>
+<circle cx="130.0" cy="185.0" r="90" fill="none" stroke="#2563EB" stroke-width="2"/>
+<line x1="136.0" y1="95.0" x2="122.0" y2="95.0" stroke="#2563EB" stroke-width="2"/>
+<polygon points="122.0,95.0 131.2,91.1 131.2,98.9" fill="#2563EB"/>
+<circle cx="130.0" cy="185.0" r="6" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="130.0" y="297.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700">Current I out of the page</text>
+<text x="130.0" y="317.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">Field lines are anticlockwise circles</text>
+<line x1="340.0" y1="60.0" x2="340.0" y2="280.0" stroke="#102A43" stroke-width="2"/>
+<line x1="340.0" y1="280.0" x2="530.0" y2="280.0" stroke="#102A43" stroke-width="2"/>
+<line x1="340.0" y1="280.0" x2="340.0" y2="285.0" stroke="#102A43" stroke-width="2"/>
+<text x="340.0" y="300.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">0</text>
+<line x1="387.5" y1="280.0" x2="387.5" y2="285.0" stroke="#102A43" stroke-width="2"/>
+<text x="387.5" y="300.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">0.05</text>
+<line x1="435.0" y1="280.0" x2="435.0" y2="285.0" stroke="#102A43" stroke-width="2"/>
+<text x="435.0" y="300.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">0.1</text>
+<line x1="482.5" y1="280.0" x2="482.5" y2="285.0" stroke="#102A43" stroke-width="2"/>
+<text x="482.5" y="300.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">0.15</text>
+<line x1="530.0" y1="280.0" x2="530.0" y2="285.0" stroke="#102A43" stroke-width="2"/>
+<text x="530.0" y="300.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">0.2</text>
+<line x1="335.0" y1="280.0" x2="340.0" y2="280.0" stroke="#102A43" stroke-width="2"/>
+<text x="331.0" y="284.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="400">0</text>
+<line x1="335.0" y1="240.0" x2="340.0" y2="240.0" stroke="#102A43" stroke-width="2"/>
+<text x="331.0" y="244.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="400">10</text>
+<line x1="335.0" y1="200.0" x2="340.0" y2="200.0" stroke="#102A43" stroke-width="2"/>
+<text x="331.0" y="204.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="400">20</text>
+<line x1="335.0" y1="160.0" x2="340.0" y2="160.0" stroke="#102A43" stroke-width="2"/>
+<text x="331.0" y="164.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="400">30</text>
+<line x1="335.0" y1="120.0" x2="340.0" y2="120.0" stroke="#102A43" stroke-width="2"/>
+<text x="331.0" y="124.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="400">40</text>
+<line x1="335.0" y1="80.0" x2="340.0" y2="80.0" stroke="#102A43" stroke-width="2"/>
+<text x="331.0" y="84.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="400">50</text>
+<text x="435.0" y="320.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="400">r / m</text>
+<text x="294.0" y="170.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="400" transform="rotate(-90 294.0 170.0)">B / microtesla</text>
+<polyline points="357.6,63.8 359.3,83.1 361.0,99.2 362.7,113.0 364.5,124.7 366.2,134.9 367.9,143.9 369.6,151.8 371.4,158.9 373.1,165.2 374.8,170.9 376.5,176.0 378.3,180.7 380.0,185.0 381.7,188.9 383.4,192.5 385.2,195.9 386.9,199.0 388.6,201.8 390.3,204.5 392.1,207.0 393.8,209.3 395.5,211.5 397.2,213.6 399.0,215.5 400.7,217.4 402.4,219.1 404.1,220.7 405.9,222.3 407.6,223.8 409.3,225.2 411.0,226.5 412.8,227.8 414.5,229.0 416.2,230.1 417.9,231.2 419.6,232.3 421.4,233.3 423.1,234.3 424.8,235.2 426.5,236.1 428.3,236.9 430.0,237.8 431.7,238.6 433.4,239.3 435.2,240.1 436.9,240.8 438.6,241.5 440.3,242.1 442.1,242.8 443.8,243.4 445.5,244.0 447.2,244.6 449.0,245.1 450.7,245.7 452.4,246.2 454.1,246.7 455.9,247.2 457.6,247.7 459.3,248.1 461.0,248.6 462.8,249.0 464.5,249.5 466.2,249.9 467.9,250.3 469.7,250.7 471.4,251.1 473.1,251.4 474.8,251.8 476.5,252.2 478.3,252.5 480.0,252.9 481.7,253.2 483.4,253.5 485.2,253.8 486.9,254.1 488.6,254.4 490.3,254.7 492.1,255.0 493.8,255.3 495.5,255.6 497.2,255.8 499.0,256.1 500.7,256.4 502.4,256.6 504.1,256.8 505.9,257.1 507.6,257.3 509.3,257.6 511.0,257.8 512.8,258.0 514.5,258.2 516.2,258.4 517.9,258.6 519.7,258.8 521.4,259.0 523.1,259.2 524.8,259.4 526.6,259.6 528.3,259.8 530.0,260.0" fill="none" stroke="#2563EB" stroke-width="3"/>
+<circle cx="435.0" cy="240.0" r="5" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<text x="443.0" y="230.0" font-size="13" text-anchor="start" fill="#B45309" font-weight="700">10 at 0.10 m</text>
+<text x="454.0" y="144.0" font-size="14" text-anchor="start" fill="#2563EB" font-weight="700">B = &#956;0 I / 2&#960;r</text>
+</svg>

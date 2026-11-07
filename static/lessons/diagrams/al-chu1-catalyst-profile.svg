@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif"><rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<line x1="50.0" y1="310.0" x2="50.0" y2="24.0" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<line x1="50.0" y1="310.0" x2="546.0" y2="310.0" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<text x="60.0" y="26.0" font-size="14" fill="#102A43" text-anchor="start" font-weight="normal">Energy</text>
+<text x="540.0" y="336.0" font-size="14" fill="#102A43" text-anchor="end" font-weight="normal">Reaction progress</text>
+<path d="M70,200 C120.0,200 120.0,200 170,200 C225.0,200 225.0,60 280,60 C335.0,60 335.0,260 390,260 C445.0,260 445.0,260 500,260 " fill="none" stroke="#102A43" stroke-width="3"/>
+<path d="M70,200 C120.0,200 120.0,200 170,200 C225.0,200 225.0,130 280,130 C335.0,130 335.0,260 390,260 C445.0,260 445.0,260 500,260 " fill="none" stroke="#2563EB" stroke-width="3.5" stroke-dasharray="9 5"/>
+<text x="120.0" y="190.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">Reactants</text>
+<text x="445.0" y="284.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">Products</text>
+<line x1="268.0" y1="200.0" x2="268.0" y2="62.0" stroke="#102A43" stroke-width="2" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="262.0" y="224.0" font-size="14" fill="#102A43" text-anchor="end" font-weight="normal">Ea uncatalysed</text>
+<line x1="292.0" y1="200.0" x2="292.0" y2="132.0" stroke="#2563EB" stroke-width="2" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="262.0" y="244.0" font-size="14" fill="#2563EB" text-anchor="end" font-weight="normal">Ea catalysed</text>
+<line x1="525.0" y1="200.0" x2="525.0" y2="260.0" stroke="#B45309" stroke-width="2" marker-end="url(#a)" marker-start="url(#a)"/>
+<text x="515.0" y="232.0" font-size="15" fill="#B45309" text-anchor="end" font-weight="bold">&#916;H</text>
+<text x="330.0" y="46.0" font-size="14" fill="#102A43" text-anchor="start" font-weight="normal">uncatalysed route</text>
+<text x="352.0" y="124.0" font-size="14" fill="#2563EB" text-anchor="start" font-weight="normal">catalysed route</text>
+</svg>

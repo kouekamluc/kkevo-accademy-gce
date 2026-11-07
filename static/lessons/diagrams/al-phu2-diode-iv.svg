@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="26.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">Current-voltage characteristic of a silicon diode</text>
+<line x1="70.0" y1="250.0" x2="535.0" y2="250.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<path d="M535.0,250.0 L525.8,253.9 L525.8,246.1 Z" fill="#102A43" stroke="#102A43" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="400.0" y1="330.0" x2="400.0" y2="52.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<path d="M400.0,52.0 L403.9,61.2 L396.1,61.2 Z" fill="#102A43" stroke="#102A43" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="535.0" y="240.0" font-size="14" text-anchor="end" fill="#102A43">V / V</text>
+<text x="408.0" y="62.0" font-size="14" text-anchor="start" fill="#102A43">I / mA</text>
+<line x1="240.0" y1="246.0" x2="240.0" y2="254.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="240.0" y="272.0" font-size="13" text-anchor="middle" fill="#102A43">-4</text>
+<line x1="320.0" y1="246.0" x2="320.0" y2="254.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="320.0" y="272.0" font-size="13" text-anchor="middle" fill="#102A43">-2</text>
+<line x1="450.0" y1="246.0" x2="450.0" y2="254.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="450.0" y="272.0" font-size="13" text-anchor="middle" fill="#102A43">0.5</text>
+<line x1="500.0" y1="246.0" x2="500.0" y2="254.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="500.0" y="272.0" font-size="13" text-anchor="middle" fill="#102A43">1.0</text>
+<path d="M400.0,250.0 L400.5,250.0 L401.0,250.0 L401.5,250.0 L402.0,250.0 L402.5,250.0 L403.0,250.0 L403.5,250.0 L404.0,250.0 L404.5,250.0 L405.0,250.0 L405.5,250.0 L406.0,250.0 L406.5,250.0 L407.0,250.0 L407.5,250.0 L408.0,250.0 L408.5,250.0 L409.0,250.0 L409.5,250.0 L410.0,250.0 L410.5,250.0 L411.0,250.0 L411.5,250.0 L412.0,250.0 L412.5,250.0 L413.0,250.0 L413.5,250.0 L414.0,250.0 L414.5,250.0 L415.0,250.0 L415.5,250.0 L416.0,250.0 L416.5,250.0 L417.0,250.0 L417.5,250.0 L418.0,250.0 L418.5,250.0 L419.0,250.0 L419.5,250.0 L420.0,250.0 L420.5,250.0 L421.0,250.0 L421.5,250.0 L422.0,250.0 L422.5,250.0 L423.0,250.0 L423.5,250.0 L424.0,250.0 L424.5,250.0 L425.0,250.0 L425.5,250.0 L426.0,250.0 L426.5,250.0 L427.0,250.0 L427.5,250.0 L428.0,250.0 L428.5,250.0 L429.0,250.0 L429.5,250.0 L430.0,250.0 L430.5,250.0 L431.0,250.0 L431.5,250.0 L432.0,250.0 L432.5,250.0 L433.0,250.0 L433.5,250.0 L434.0,250.0 L434.5,250.0 L435.0,250.0 L435.5,250.0 L436.0,250.0 L436.5,250.0 L437.0,250.0 L437.5,250.0 L438.0,250.0 L438.5,250.0 L439.0,250.0 L439.5,250.0 L440.0,250.0 L440.5,250.0 L441.0,250.0 L441.5,250.0 L442.0,250.0 L442.5,250.0 L443.0,250.0 L443.5,250.0 L444.0,250.0 L444.5,250.0 L445.0,250.0 L445.5,250.0 L446.0,250.0 L446.5,249.9 L447.0,249.9 L447.5,249.9 L448.0,249.9 L448.5,249.9 L449.0,249.9 L449.5,249.9 L450.0,249.9 L450.5,249.9 L451.0,249.8 L451.5,249.8 L452.0,249.8 L452.5,249.8 L453.0,249.7 L453.5,249.7 L454.0,249.7 L454.5,249.6 L455.0,249.6 L455.5,249.5 L456.0,249.4 L456.5,249.3 L457.0,249.3 L457.5,249.2 L458.0,249.1 L458.5,248.9 L459.0,248.8 L459.5,248.6 L460.0,248.4 L460.5,248.2 L461.0,248.0 L461.5,247.7 L462.0,247.4 L462.5,247.1 L463.0,246.7 L463.5,246.3 L464.0,245.8 L464.5,245.2 L465.0,244.6 L465.5,243.8 L466.0,243.0 L466.5,242.1 L467.0,241.0 L467.5,239.8 L468.0,238.5 L468.5,236.9 L469.0,235.2 L469.5,233.2 L470.0,231.0 L470.5,228.5 L471.0,225.6 L471.5,222.4 L472.0,218.7 L472.5,214.5 L473.0,209.8 L473.5,204.4 L474.0,198.4 L474.5,191.5 L475.0,183.7 L475.5,174.9 L476.0,164.8 L476.5,153.5 L477.0,140.7 L477.5,126.1 L478.0,109.6 L478.5,90.9 L479.0,69.7" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="400.0" y1="250.0" x2="455.0" y2="250.0" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<line x1="164.0" y1="252.0" x2="400.0" y2="252.0" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<line x1="164.0" y1="252.0" x2="160.0" y2="330.0" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<line x1="470.0" y1="250.0" x2="470.0" y2="210.0" stroke="#B45309" stroke-width="2" stroke-dasharray="5 4" stroke-linecap="round"/>
+<text x="470.0" y="292.0" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">0.7 V</text>
+<text x="390.0" y="108.0" font-size="14" text-anchor="end" fill="#047857" font-weight="700">forward bias:</text>
+<text x="390.0" y="126.0" font-size="14" text-anchor="end" fill="#047857">current rises steeply</text>
+<text x="390.0" y="144.0" font-size="14" text-anchor="end" fill="#047857">above about 0.7 V</text>
+<text x="180.0" y="228.0" font-size="14" text-anchor="start" fill="#047857" font-weight="700">reverse bias: tiny leakage</text>
+<text x="172.0" y="312.0" font-size="14" text-anchor="start" fill="#B91C1C" font-weight="700">breakdown (about -6 V)</text>
+<text x="300.0" y="350.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700">Reverse and forward scales differ.</text>
+</svg>

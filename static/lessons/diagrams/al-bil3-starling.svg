@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360"><rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="75.0,134.0 75.0,56.0 345.0,134.0" fill="#ECFDF5"/>
+<polygon points="345.0,134.0 525.0,134.0 525.0,186.0" fill="#FEF3C7"/>
+<line x1="75.0" y1="290.0" x2="525.0" y2="290.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="295.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">0</text>
+<line x1="75.0" y1="238.0" x2="525.0" y2="238.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="243.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">1</text>
+<line x1="75.0" y1="186.0" x2="525.0" y2="186.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="191.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">2</text>
+<line x1="75.0" y1="134.0" x2="525.0" y2="134.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="139.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">3</text>
+<line x1="75.0" y1="82.0" x2="525.0" y2="82.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="87.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">4</text>
+<line x1="75.0" y1="30.0" x2="525.0" y2="30.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="35.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">5</text>
+<text x="75.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">0.0</text>
+<line x1="75.0" y1="290.0" x2="75.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="165.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">0.2</text>
+<line x1="165.0" y1="290.0" x2="165.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="255.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">0.4</text>
+<line x1="255.0" y1="290.0" x2="255.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="345.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">0.6</text>
+<line x1="345.0" y1="290.0" x2="345.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="435.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">0.8</text>
+<line x1="435.0" y1="290.0" x2="435.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="525.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">1.0</text>
+<line x1="525.0" y1="290.0" x2="525.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<line x1="75.0" y1="30.0" x2="75.0" y2="290.0" stroke="#102A43" stroke-width="2"/>
+<line x1="75.0" y1="290.0" x2="525.0" y2="290.0" stroke="#102A43" stroke-width="2"/>
+<text x="300.0" y="334.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">Distance along capillary (0 = arteriole end, 1 = venule end)</text>
+<text x="18.0" y="160.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif" transform="rotate(-90 18.0 160.0)">Pressure (kPa)</text>
+<line x1="75.0" y1="56.0" x2="525.0" y2="186.0" stroke="#2563EB" stroke-width="3"/>
+<line x1="75.0" y1="134.0" x2="525.0" y2="134.0" stroke="#B45309" stroke-width="3"/>
+<text x="84.0" y="44.0" font-size="14" fill="#2563EB" text-anchor="start" font-weight="400" font-family="Inter, Arial, sans-serif">Hydrostatic pressure of blood</text>
+<text x="372.0" y="124.0" font-size="14" fill="#B45309" text-anchor="start" font-weight="400" font-family="Inter, Arial, sans-serif">Oncotic pressure</text>
+<text x="165.0" y="165.2" font-size="13" fill="#047857" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">Net outward</text>
+<text x="165.0" y="181.2" font-size="13" fill="#047857" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">+1.5 kPa at start</text>
+<text x="462.0" y="212.0" font-size="13" fill="#B45309" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">Net inward</text>
+<text x="462.0" y="228.0" font-size="13" fill="#B45309" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">-1.0 kPa at end</text>
+</svg>

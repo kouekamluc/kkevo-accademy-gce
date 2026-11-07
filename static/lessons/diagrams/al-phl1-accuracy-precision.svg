@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Four targets: precise and accurate, precise but not accurate, accurate on average but scattered, and neither</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="72.0" cy="150.0" r="55.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<circle cx="72.0" cy="150.0" r="37.0" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<circle cx="72.0" cy="150.0" r="19.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<circle cx="72.0" cy="150.0" r="7.0" fill="#B45309" stroke="#102A43" stroke-width="2"/>
+<circle cx="72.0" cy="150.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="78.0" cy="145.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="67.0" cy="154.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="76.0" cy="156.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="68.0" cy="144.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="72.0" y="240.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">Precise and</text>
+<text x="72.0" y="260.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">accurate</text>
+<circle cx="208.0" cy="150.0" r="55.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<circle cx="208.0" cy="150.0" r="37.0" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<circle cx="208.0" cy="150.0" r="19.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<circle cx="208.0" cy="150.0" r="7.0" fill="#B45309" stroke="#102A43" stroke-width="2"/>
+<circle cx="238.0" cy="172.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="244.0" cy="176.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="234.0" cy="178.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="242.0" cy="170.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="239.0" cy="180.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="208.0" y="240.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">Precise but</text>
+<text x="208.0" y="260.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">not accurate</text>
+<circle cx="344.0" cy="150.0" r="55.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<circle cx="344.0" cy="150.0" r="37.0" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<circle cx="344.0" cy="150.0" r="19.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<circle cx="344.0" cy="150.0" r="7.0" fill="#B45309" stroke="#102A43" stroke-width="2"/>
+<circle cx="316.0" cy="160.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="369.0" cy="132.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="334.0" cy="120.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="364.0" cy="176.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="346.0" cy="150.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="344.0" y="240.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">Scattered but</text>
+<text x="344.0" y="260.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">accurate on average</text>
+<circle cx="480.0" cy="150.0" r="55.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<circle cx="480.0" cy="150.0" r="37.0" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<circle cx="480.0" cy="150.0" r="19.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<circle cx="480.0" cy="150.0" r="7.0" fill="#B45309" stroke="#102A43" stroke-width="2"/>
+<circle cx="510.0" cy="126.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="472.0" cy="184.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="524.0" cy="160.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="498.0" cy="110.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<circle cx="516.0" cy="180.0" r="5.0" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5"/>
+<text x="480.0" y="240.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">Scattered and</text>
+<text x="480.0" y="260.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">not accurate</text>
+<text x="280.0" y="310.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="500">Blue dots: repeated measurements.  Centre of target: the true value.</text>
+<text x="280.0" y="30.0" font-size="18" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="600">Accuracy and precision</text>
+</svg>

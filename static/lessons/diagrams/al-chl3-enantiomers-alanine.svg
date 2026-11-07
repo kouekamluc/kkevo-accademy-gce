@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs>
+<marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L9,5 L0,9 Z" fill="#102A43"/></marker>
+<marker id="ahb" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L9,5 L0,9 Z" fill="#2563EB"/></marker>
+<marker id="aha" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L9,5 L0,9 Z" fill="#B45309"/></marker>
+</defs>
+<text x="280.0" y="30.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >Enantiomers of alanine: non-superimposable mirror images</text>
+<line x1="280.0" y1="48.0" x2="280.0" y2="318.0" stroke="#B45309" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8 6"/>
+<text x="280.0" y="340.0" font-size="14" fill="#B45309" text-anchor="middle" font-weight="400" >mirror plane</text>
+<line x1="150.0" y1="185.0" x2="150.0" y2="115.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="150.0" y1="185.0" x2="94.0" y2="208.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="150.0,185.0 203.7,218.4 208.3,209.6" fill="#102A43"/>
+<line x1="154.1" y1="195.1" x2="152.5" y2="195.6" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="158.3" y1="205.2" x2="155.1" y2="206.2" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="162.4" y1="215.2" x2="157.6" y2="216.8" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="166.5" y1="225.3" x2="160.2" y2="227.4" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="170.6" y1="235.4" x2="162.7" y2="237.9" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="174.8" y1="245.5" x2="165.2" y2="248.5" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="150.0" y="105.0" font-size="17" fill="#102A43" text-anchor="middle" font-weight="600" >COOH</text>
+<text x="70.0" y="217.0" font-size="17" fill="#102A43" text-anchor="middle" font-weight="600" >H<tspan baseline-shift="sub" font-size="12">2</tspan>N</text>
+<text x="232.0" y="223.0" font-size="17" fill="#102A43" text-anchor="middle" font-weight="600" >CH<tspan baseline-shift="sub" font-size="12">3</tspan></text>
+<text x="174.0" y="277.0" font-size="17" fill="#102A43" text-anchor="middle" font-weight="600" >H</text>
+<text x="150.0" y="300.0" font-size="16" fill="#2563EB" text-anchor="middle" font-weight="700" >(R)-alanine</text>
+<line x1="410.0" y1="185.0" x2="410.0" y2="115.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="410.0" y1="185.0" x2="466.0" y2="208.0" stroke="#102A43" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="410.0,185.0 351.7,209.6 356.3,218.4" fill="#102A43"/>
+<line x1="407.5" y1="195.6" x2="405.9" y2="195.1" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="404.9" y1="206.2" x2="401.7" y2="205.2" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="402.4" y1="216.8" x2="397.6" y2="215.2" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="399.8" y1="227.4" x2="393.5" y2="225.3" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="397.3" y1="237.9" x2="389.4" y2="235.4" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="394.8" y1="248.5" x2="385.2" y2="245.5" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="410.0" y="105.0" font-size="17" fill="#102A43" text-anchor="middle" font-weight="600" >COOH</text>
+<text x="490.0" y="217.0" font-size="17" fill="#102A43" text-anchor="middle" font-weight="600" >NH<tspan baseline-shift="sub" font-size="12">2</tspan></text>
+<text x="328.0" y="223.0" font-size="17" fill="#102A43" text-anchor="middle" font-weight="600" >CH<tspan baseline-shift="sub" font-size="12">3</tspan></text>
+<text x="386.0" y="277.0" font-size="17" fill="#102A43" text-anchor="middle" font-weight="600" >H</text>
+<text x="410.0" y="300.0" font-size="16" fill="#047857" text-anchor="middle" font-weight="700" >(S)-alanine</text>
+</svg>

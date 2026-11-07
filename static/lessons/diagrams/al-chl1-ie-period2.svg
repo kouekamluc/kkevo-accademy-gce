@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Graph of first ionisation energy for lithium to neon with dips at boron and oxygen</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="95.0" y1="45.0" x2="95.0" y2="300.0" stroke="#102A43" stroke-width="2.5" />
+<line x1="95.0" y1="300.0" x2="520.0" y2="300.0" stroke="#102A43" stroke-width="2.5" />
+<text x="307.5" y="346.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >Period 2 element</text>
+<text x="18" y="172.5" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" transform="rotate(-90 18 172.5)">first ionisation energy (kJ/mol)</text>
+<line x1="95.0" y1="300.0" x2="520.0" y2="300.0" stroke="#E5E7EB" stroke-width="1" />
+<line x1="89.0" y1="300.0" x2="95.0" y2="300.0" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="305.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >0</text>
+<line x1="95.0" y1="246.9" x2="520.0" y2="246.9" stroke="#E5E7EB" stroke-width="1" />
+<line x1="89.0" y1="246.9" x2="95.0" y2="246.9" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="251.9" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >500</text>
+<line x1="95.0" y1="193.8" x2="520.0" y2="193.8" stroke="#E5E7EB" stroke-width="1" />
+<line x1="89.0" y1="193.8" x2="95.0" y2="193.8" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="198.8" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >1000</text>
+<line x1="95.0" y1="140.6" x2="520.0" y2="140.6" stroke="#E5E7EB" stroke-width="1" />
+<line x1="89.0" y1="140.6" x2="95.0" y2="140.6" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="145.6" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >1500</text>
+<line x1="95.0" y1="87.5" x2="520.0" y2="87.5" stroke="#E5E7EB" stroke-width="1" />
+<line x1="89.0" y1="87.5" x2="95.0" y2="87.5" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="92.5" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >2000</text>
+<text x="125.0" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >Li</text>
+<text x="177.1" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >Be</text>
+<text x="229.3" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >B</text>
+<text x="281.4" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >C</text>
+<text x="333.6" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >N</text>
+<text x="385.7" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >O</text>
+<text x="437.9" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >F</text>
+<text x="490.0" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >Ne</text>
+<polyline points="125.0,244.8 177.1,204.4 229.3,214.9 281.4,184.6 333.6,151.0 385.7,160.4 437.9,121.4 490.0,78.9" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="125.0" cy="244.8" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="1" />
+<circle cx="177.1" cy="204.4" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="1" />
+<circle cx="229.3" cy="214.9" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="1" />
+<circle cx="281.4" cy="184.6" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="1" />
+<circle cx="333.6" cy="151.0" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="1" />
+<circle cx="385.7" cy="160.4" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="1" />
+<circle cx="437.9" cy="121.4" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="1" />
+<circle cx="490.0" cy="78.9" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="1" />
+<text x="300.0" y="30.0" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >First ionisation energy across Period 2</text>
+<text x="229.3" y="244.9" font-size="13" fill="#B45309" text-anchor="middle" font-weight="600" >dip at B</text>
+<text x="395.7" y="190.4" font-size="13" fill="#B45309" text-anchor="middle" font-weight="600" >dip at O</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="26.0" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">Oblique impact of smooth spheres: use the line of centres</text>
+<line x1="40.0" y1="225.0" x2="540.0" y2="225.0" stroke="#102A43" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="540.0" y="285.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="400">line of centres (dashed)</text>
+<circle cx="330" cy="225" r="45" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<circle cx="420" cy="225" r="45" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="318.0" y="230.0" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">A</text>
+<text x="432.0" y="230.0" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">B</text>
+<line x1="165.5" y1="130.0" x2="325.7" y2="222.5" stroke="#2563EB" stroke-width="3"/>
+<polygon points="330.0,225.0 318.1,223.5 322.8,215.4" fill="#2563EB"/>
+<text x="173.5" y="120.0" font-size="14" text-anchor="start" fill="#2563EB" font-weight="700">u (before impact)</text>
+<line x1="165.5" y1="130.0" x2="165.5" y2="225.0" stroke="#B45309" stroke-width="2" stroke-dasharray="4 4"/>
+<line x1="165.5" y1="225.0" x2="276.0" y2="225.0" stroke="#B45309" stroke-width="2.5"/>
+<polygon points="281.0,225.0 269.9,229.7 269.9,220.3" fill="#B45309"/>
+<text x="197.2" y="251.0" font-size="13" text-anchor="middle" fill="#B45309" font-weight="700">u cos 30: along the line</text>
+<text x="197.2" y="269.0" font-size="13" text-anchor="middle" fill="#B45309" font-weight="700">(changes in the impact)</text>
+<text x="157.5" y="173.5" font-size="13" text-anchor="end" fill="#B45309" font-weight="700">u sin 30</text>
+<text x="157.5" y="191.5" font-size="13" text-anchor="end" fill="#B45309" font-weight="700">(unchanged)</text>
+<text x="268.0" y="213.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">30&#176;</text>
+<line x1="473.0" y1="195.0" x2="540.0" y2="195.0" stroke="#047857" stroke-width="3"/>
+<polygon points="545.0,195.0 533.9,199.7 533.9,190.3" fill="#047857"/>
+<text x="545.0" y="161.0" font-size="14" text-anchor="end" fill="#047857" font-weight="700">B leaves</text>
+<text x="545.0" y="179.0" font-size="14" text-anchor="end" fill="#047857" font-weight="700">along the line</text>
+<text x="280.0" y="346.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="400">B was at rest. The impulse acts only along the line of centres.</text>
+</svg>

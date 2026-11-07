@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="26.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">Compton scattering of an X-ray photon</text>
+<circle cx="250.0" cy="190.0" r="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="244.0" y="248.0" font-size="14" text-anchor="end" fill="#047857" font-weight="700">electron (at rest)</text>
+<line x1="30.0" y1="190.0" x2="238.0" y2="190.0" stroke="#2563EB" stroke-width="3" stroke-linecap="round"/>
+<path d="M238.0,190.0 L228.8,193.9 L228.8,186.1 Z" fill="#2563EB" stroke="#2563EB" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="40.0" y="176.0" font-size="14" text-anchor="start" fill="#2563EB" font-weight="700">incident photon</text>
+<text x="40.0" y="214.0" font-size="14" text-anchor="start" fill="#2563EB">wavelength &#955;</text>
+<line x1="259.8" y1="183.1" x2="389.3" y2="92.5" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<path d="M389.3,92.5 L383.9,101.0 L379.5,94.6 Z" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="420.0" y="56.0" font-size="14" text-anchor="end" fill="#B45309" font-weight="700">scattered photon</text>
+<text x="420.0" y="74.0" font-size="14" text-anchor="end" fill="#B45309">wavelength &#955;&#8242; (longer)</text>
+<line x1="259.2" y1="197.7" x2="364.9" y2="286.4" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<path d="M364.9,286.4 L355.3,283.5 L360.4,277.5 Z" fill="#047857" stroke="#047857" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="372.9" y="292.4" font-size="14" text-anchor="start" fill="#047857" font-weight="700">recoil electron</text>
+<line x1="250.0" y1="190.0" x2="370.0" y2="190.0" stroke="#102A43" stroke-width="1" stroke-dasharray="5 4" stroke-linecap="round"/>
+<path d="M320.0,190.0 A70,70 0 0 0 307.3,149.8" fill="none" stroke="#102A43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="330.0" y="174.0" font-size="16" text-anchor="start" fill="#102A43" font-weight="700">&#952;</text>
+<text x="280.0" y="338.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">&#955;&#8242; &#8722; &#955; = (h / m c)(1 &#8722; cos &#952;), m = electron mass</text>
+</svg>

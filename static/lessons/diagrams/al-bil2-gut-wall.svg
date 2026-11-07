@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="14">
+<rect width="560" height="360" fill="#fff"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker></defs>
+<text x="150" y="32" text-anchor="middle" fill="#102A43" font-size="13" font-weight="600">Lumen</text>
+<path d="M60 120 L60 62 Q82 44 104 62 L104 120" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<path d="M82 112 L82 64" stroke="#B45309" stroke-width="3" fill="none"/>
+<circle cx="70" cy="90" r="3" fill="#2563EB"/><circle cx="94" cy="90" r="3" fill="#2563EB"/>
+<path d="M150 120 L150 62 Q172 44 194 62 L194 120" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<path d="M172 112 L172 64" stroke="#B45309" stroke-width="3" fill="none"/>
+<circle cx="160" cy="90" r="3" fill="#2563EB"/><circle cx="184" cy="90" r="3" fill="#2563EB"/>
+<path d="M240 120 L240 62 Q262 44 284 62 L284 120" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<path d="M262 112 L262 64" stroke="#B45309" stroke-width="3" fill="none"/>
+<circle cx="250" cy="90" r="3" fill="#2563EB"/><circle cx="274" cy="90" r="3" fill="#2563EB"/>
+<rect x="40" y="120" width="290" height="36" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<rect x="40" y="156" width="290" height="50" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<rect x="40" y="206" width="290" height="40" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="40" y="246" width="290" height="40" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<rect x="40" y="286" width="290" height="16" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<circle cx="110" cy="181" r="10" fill="#fff" stroke="#2563EB" stroke-width="2"/><circle cx="200" cy="181" r="14" fill="#fff" stroke="#2563EB" stroke-width="2"/>
+<text x="155" y="185" text-anchor="middle" fill="#102A43" font-size="13" font-weight="400">nerves</text>
+<line x1="330" y1="76" x2="372" y2="76" stroke="#102A43" stroke-width="2"/>
+<text x="380" y="81" text-anchor="start" fill="#102A43" font-size="14" font-weight="400">Epithelium, villi</text>
+<line x1="330" y1="138" x2="372" y2="138" stroke="#102A43" stroke-width="2"/>
+<text x="380" y="143" text-anchor="start" fill="#102A43" font-size="14" font-weight="400">Mucosa (base)</text>
+<line x1="330" y1="181" x2="372" y2="181" stroke="#102A43" stroke-width="2"/>
+<text x="380" y="186" text-anchor="start" fill="#102A43" font-size="14" font-weight="400">Submucosa</text>
+<line x1="330" y1="226" x2="372" y2="226" stroke="#102A43" stroke-width="2"/>
+<text x="380" y="231" text-anchor="start" fill="#102A43" font-size="14" font-weight="400">Circular muscle</text>
+<line x1="330" y1="266" x2="372" y2="266" stroke="#102A43" stroke-width="2"/>
+<text x="380" y="271" text-anchor="start" fill="#102A43" font-size="14" font-weight="400">Longitudinal muscle</text>
+<line x1="330" y1="294" x2="372" y2="294" stroke="#102A43" stroke-width="2"/>
+<text x="380" y="299" text-anchor="start" fill="#102A43" font-size="14" font-weight="400">Serosa</text>
+</svg>

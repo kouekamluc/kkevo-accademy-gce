@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Shapes based on six electron pairs: SF6, BrF5 and XeF4</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280.0" y="26.0" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >Six electron pairs: octahedral arrangement</text>
+<line x1="100.0" y1="135.0" x2="100.0" y2="103.0" stroke="#102A43" stroke-width="2.5" />
+<circle cx="100.0" cy="88.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="100.0" y="93.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<line x1="100.0" y1="165.0" x2="100.0" y2="197.0" stroke="#102A43" stroke-width="2.5" />
+<circle cx="100.0" cy="212.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="100.0" y="217.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<line x1="85.1" y1="151.9" x2="52.9" y2="156.1" stroke="#102A43" stroke-width="2.5" />
+<circle cx="38.0" cy="158.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="38.0" y="163.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<line x1="114.9" y1="151.9" x2="147.1" y2="156.1" stroke="#102A43" stroke-width="2.5" />
+<circle cx="162.0" cy="158.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="162.0" y="163.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<polygon points="91.7,162.5 79.3,170.2 89.3,176.8" fill="#102A43"/>
+<circle cx="76.0" cy="186.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="76.0" y="191.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<line x1="111.5" y1="140.3" x2="114.5" y2="137.7" stroke="#102A43" stroke-width="2.5" stroke-dasharray="5 4"/>
+<circle cx="126.0" cy="128.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="126.0" y="133.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<circle cx="100.0" cy="150.0" r="16" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" />
+<text x="100.0" y="155.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >S</text>
+<line x1="280.0" y1="135.0" x2="280.0" y2="103.0" stroke="#102A43" stroke-width="2.5" />
+<circle cx="280.0" cy="88.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="280.0" y="93.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<ellipse cx="280.0" cy="196.5" rx="17" ry="10" fill="#FEF3C7" stroke="#B45309" stroke-width="2" transform="rotate(90.0 280.0 196.5)" />
+<circle cx="280.0" cy="191.5" r="2.2" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="280.0" cy="201.5" r="2.2" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<line x1="265.1" y1="151.9" x2="232.9" y2="156.1" stroke="#102A43" stroke-width="2.5" />
+<circle cx="218.0" cy="158.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="218.0" y="163.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<line x1="294.9" y1="151.9" x2="327.1" y2="156.1" stroke="#102A43" stroke-width="2.5" />
+<circle cx="342.0" cy="158.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="342.0" y="163.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<polygon points="271.7,162.5 259.3,170.2 269.3,176.8" fill="#102A43"/>
+<circle cx="256.0" cy="186.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="256.0" y="191.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<line x1="291.5" y1="140.3" x2="294.5" y2="137.7" stroke="#102A43" stroke-width="2.5" stroke-dasharray="5 4"/>
+<circle cx="306.0" cy="128.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="306.0" y="133.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<circle cx="280.0" cy="150.0" r="16" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" />
+<text x="280.0" y="155.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" >Br</text>
+<ellipse cx="460.0" cy="103.5" rx="17" ry="10" fill="#FEF3C7" stroke="#B45309" stroke-width="2" transform="rotate(-90.0 460.0 103.5)" />
+<circle cx="460.0" cy="108.5" r="2.2" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="460.0" cy="98.5" r="2.2" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<ellipse cx="460.0" cy="196.5" rx="17" ry="10" fill="#FEF3C7" stroke="#B45309" stroke-width="2" transform="rotate(90.0 460.0 196.5)" />
+<circle cx="460.0" cy="191.5" r="2.2" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="460.0" cy="201.5" r="2.2" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<line x1="445.1" y1="151.9" x2="412.9" y2="156.1" stroke="#102A43" stroke-width="2.5" />
+<circle cx="398.0" cy="158.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="398.0" y="163.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<line x1="474.9" y1="151.9" x2="507.1" y2="156.1" stroke="#102A43" stroke-width="2.5" />
+<circle cx="522.0" cy="158.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="522.0" y="163.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<polygon points="451.7,162.5 439.3,170.2 449.3,176.8" fill="#102A43"/>
+<circle cx="436.0" cy="186.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="436.0" y="191.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<line x1="471.5" y1="140.3" x2="474.5" y2="137.7" stroke="#102A43" stroke-width="2.5" stroke-dasharray="5 4"/>
+<circle cx="486.0" cy="128.0" r="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2" />
+<text x="486.0" y="133.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >F</text>
+<circle cx="460.0" cy="150.0" r="16" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" />
+<text x="460.0" y="155.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="700" >Xe</text>
+<text x="100.0" y="265.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >SF6</text>
+<text x="100.0" y="285.0" font-size="14" fill="#047857" text-anchor="middle" font-weight="700" >octahedral</text>
+<text x="100.0" y="305.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >6 bond pairs</text>
+<text x="100.0" y="325.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >F-X-F angle 90 deg</text>
+<text x="280.0" y="265.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >BrF5</text>
+<text x="280.0" y="285.0" font-size="14" fill="#047857" text-anchor="middle" font-weight="700" >square pyramidal</text>
+<text x="280.0" y="305.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >5 bond, 1 lone</text>
+<text x="280.0" y="325.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >F-X-F angle about 90 deg</text>
+<text x="460.0" y="265.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" >XeF4</text>
+<text x="460.0" y="285.0" font-size="14" fill="#047857" text-anchor="middle" font-weight="700" >square planar</text>
+<text x="460.0" y="305.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >4 bond, 2 lone</text>
+<text x="460.0" y="325.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" >F-X-F angle 90 deg</text>
+</svg>

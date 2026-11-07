@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280.0" y="24.0" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">Capillary rise and depression</text>
+<text x="280.0" y="46.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">h = 2 &#947; cos&#952; / (&#961; g r)</text>
+<rect x="50.0" y="250.0" width="200.0" height="70.0" rx="0" fill="#DBEAFE" stroke="#102A43" stroke-width="2"/>
+<line x1="136.0" y1="80.0" x2="136.0" y2="300.0" stroke="#102A43" stroke-width="3"/>
+<line x1="164.0" y1="80.0" x2="164.0" y2="300.0" stroke="#102A43" stroke-width="3"/>
+<rect x="136.0" y="190.0" width="28.0" height="110.0" rx="0" fill="#DBEAFE" stroke="none" stroke-width="0"/>
+<line x1="50.0" y1="250.0" x2="136.0" y2="250.0" stroke="#2563EB" stroke-width="3"/>
+<line x1="164.0" y1="250.0" x2="250.0" y2="250.0" stroke="#2563EB" stroke-width="3"/>
+<text x="150.0" y="345.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">Water in glass</text>
+<rect x="310.0" y="250.0" width="200.0" height="70.0" rx="0" fill="#E5E7EB" stroke="#102A43" stroke-width="2"/>
+<line x1="396.0" y1="80.0" x2="396.0" y2="300.0" stroke="#102A43" stroke-width="3"/>
+<line x1="424.0" y1="80.0" x2="424.0" y2="300.0" stroke="#102A43" stroke-width="3"/>
+<rect x="396.0" y="272.0" width="28.0" height="28.0" rx="0" fill="#E5E7EB" stroke="none" stroke-width="0"/>
+<line x1="310.0" y1="250.0" x2="396.0" y2="250.0" stroke="#B45309" stroke-width="3"/>
+<line x1="424.0" y1="250.0" x2="510.0" y2="250.0" stroke="#B45309" stroke-width="3"/>
+<text x="410.0" y="345.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">Mercury in glass</text>
+<polyline points="136.0,184.0 138.8,187.6 141.6,190.4 144.4,192.4 147.2,193.6 150.0,194.0 152.8,193.6 155.6,192.4 158.4,190.4 161.2,187.6 164.0,184.0" fill="none" stroke="#2563EB" stroke-width="3"/>
+<line x1="210.0" y1="250.0" x2="210.0" y2="190.0" stroke="#047857" stroke-width="2"/>
+<polygon points="210.0,190.0 213.9,199.2 206.1,199.2" fill="#047857"/>
+<text x="226.0" y="224.0" font-size="16" text-anchor="middle" fill="#047857" font-weight="700">h</text>
+<text x="150.0" y="72.0" font-size="13" text-anchor="middle" fill="#2563EB" font-weight="700">rises (angle below 90 deg)</text>
+<polyline points="396.0,282.0 398.8,278.4 401.6,275.6 404.4,273.6 407.2,272.4 410.0,272.0 412.8,272.4 415.6,273.6 418.4,275.6 421.2,278.4 424.0,282.0" fill="none" stroke="#B45309" stroke-width="3"/>
+<line x1="470.0" y1="250.0" x2="470.0" y2="276.0" stroke="#047857" stroke-width="2"/>
+<polygon points="470.0,276.0 466.1,266.8 473.9,266.8" fill="#047857"/>
+<text x="486.0" y="270.0" font-size="16" text-anchor="middle" fill="#047857" font-weight="700">h</text>
+<text x="410.0" y="72.0" font-size="13" text-anchor="middle" fill="#B45309" font-weight="700">falls (angle above 90 deg)</text>
+</svg>

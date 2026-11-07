@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360"><rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="75.0" y1="290.0" x2="525.0" y2="290.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="295.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">0</text>
+<line x1="75.0" y1="246.7" x2="525.0" y2="246.7" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="251.7" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">200</text>
+<line x1="75.0" y1="203.3" x2="525.0" y2="203.3" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="208.3" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">400</text>
+<line x1="75.0" y1="160.0" x2="525.0" y2="160.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="165.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">600</text>
+<line x1="75.0" y1="116.7" x2="525.0" y2="116.7" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="121.7" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">800</text>
+<line x1="75.0" y1="73.3" x2="525.0" y2="73.3" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="78.3" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">1000</text>
+<line x1="75.0" y1="30.0" x2="525.0" y2="30.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="67.0" y="35.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">1200</text>
+<text x="75.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">0</text>
+<line x1="75.0" y1="290.0" x2="75.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="165.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">4</text>
+<line x1="165.0" y1="290.0" x2="165.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="255.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">8</text>
+<line x1="255.0" y1="290.0" x2="255.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="345.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">12</text>
+<line x1="345.0" y1="290.0" x2="345.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="435.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">16</text>
+<line x1="435.0" y1="290.0" x2="435.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<text x="525.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">20</text>
+<line x1="525.0" y1="290.0" x2="525.0" y2="295.0" stroke="#102A43" stroke-width="2"/>
+<line x1="75.0" y1="30.0" x2="75.0" y2="290.0" stroke="#102A43" stroke-width="2"/>
+<line x1="75.0" y1="290.0" x2="525.0" y2="290.0" stroke="#102A43" stroke-width="2"/>
+<text x="300.0" y="334.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif">Time (generations)</text>
+<text x="18.0" y="160.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400" font-family="Inter, Arial, sans-serif" transform="rotate(-90 18.0 160.0)">Population size</text>
+<line x1="75.0" y1="73.3" x2="525.0" y2="73.3" stroke="#047857" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="520.5" y="65.3" font-size="14" fill="#047857" text-anchor="end" font-weight="400" font-family="Inter, Arial, sans-serif">Carrying capacity K = 1000</text>
+<polyline points="75.0,279.2 78.2,278.4 81.4,277.5 84.6,276.6 87.9,275.6 91.1,274.5 94.3,273.4 97.5,272.1 100.7,270.8 103.9,269.4 107.1,267.9 110.4,266.2 113.6,264.5 116.8,262.6 120.0,260.6 123.2,258.4 126.4,256.0 129.6,253.5 132.9,250.8 136.1,247.9 139.3,244.8 142.5,241.4 145.7,237.9 148.9,234.0 152.1,229.8 155.4,225.4 158.6,220.6 161.8,215.5 165.0,210.0 168.2,204.0 171.4,197.7 174.6,190.8 177.9,183.5 181.1,175.6 184.3,167.1 187.5,158.0 190.7,148.3 193.9,137.8 197.1,126.5 200.4,114.4 203.6,101.4 206.8,87.4 210.0,72.4 213.2,56.3 216.4,39.0 219.6,30.0 222.9,30.0 226.1,30.0 229.3,30.0 232.5,30.0 235.7,30.0 238.9,30.0 242.1,30.0 245.4,30.0 248.6,30.0 251.8,30.0 255.0,30.0 258.2,30.0 261.4,30.0 264.6,30.0 267.9,30.0 271.1,30.0 274.3,30.0 277.5,30.0 280.7,30.0 283.9,30.0 287.1,30.0 290.4,30.0 293.6,30.0 296.8,30.0 300.0,30.0 303.2,30.0 306.4,30.0 309.6,30.0 312.9,30.0 316.1,30.0 319.3,30.0 322.5,30.0 325.7,30.0 328.9,30.0 332.1,30.0 335.4,30.0 338.6,30.0 341.8,30.0 345.0,30.0 348.2,30.0 351.4,30.0 354.6,30.0 357.9,30.0 361.1,30.0 364.3,30.0 367.5,30.0 370.7,30.0 373.9,30.0 377.1,30.0 380.4,30.0 383.6,30.0 386.8,30.0 390.0,30.0 393.2,30.0 396.4,30.0 399.6,30.0 402.9,30.0 406.1,30.0 409.3,30.0 412.5,30.0 415.7,30.0 418.9,30.0 422.1,30.0 425.4,30.0 428.6,30.0 431.8,30.0 435.0,30.0 438.2,30.0 441.4,30.0 444.6,30.0 447.9,30.0 451.1,30.0 454.3,30.0 457.5,30.0 460.7,30.0 463.9,30.0 467.1,30.0 470.4,30.0 473.6,30.0 476.8,30.0 480.0,30.0 483.2,30.0 486.4,30.0 489.6,30.0 492.9,30.0 496.1,30.0 499.3,30.0 502.5,30.0 505.7,30.0 508.9,30.0 512.1,30.0 515.4,30.0 518.6,30.0 521.8,30.0 525.0,30.0" fill="none" stroke="#B45309" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<polyline points="75.0,279.2 78.2,278.4 81.4,277.6 84.6,276.7 87.9,275.8 91.1,274.8 94.3,273.8 97.5,272.7 100.7,271.5 103.9,270.3 107.1,269.0 110.4,267.6 113.6,266.1 116.8,264.5 120.0,262.9 123.2,261.1 126.4,259.3 129.6,257.4 132.9,255.3 136.1,253.2 139.3,251.0 142.5,248.6 145.7,246.2 148.9,243.7 152.1,241.0 155.4,238.2 158.6,235.4 161.8,232.4 165.0,229.3 168.2,226.2 171.4,222.9 174.6,219.5 177.9,216.1 181.1,212.6 184.3,209.0 187.5,205.4 190.7,201.6 193.9,197.9 197.1,194.1 200.4,190.2 203.6,186.4 206.8,182.5 210.0,178.7 213.2,174.8 216.4,171.0 219.6,167.1 222.9,163.4 226.1,159.6 229.3,155.9 232.5,152.3 235.7,148.8 238.9,145.3 242.1,141.9 245.4,138.6 248.6,135.4 251.8,132.3 255.0,129.3 258.2,126.4 261.4,123.5 264.6,120.8 267.9,118.2 271.1,115.8 274.3,113.4 277.5,111.1 280.7,108.9 283.9,106.8 287.1,104.9 290.4,103.0 293.6,101.2 296.8,99.5 300.0,97.9 303.2,96.4 306.4,95.0 309.6,93.6 312.9,92.3 316.1,91.1 319.3,90.0 322.5,88.9 325.7,87.9 328.9,87.0 332.1,86.1 335.4,85.3 338.6,84.5 341.8,83.8 345.0,83.1 348.2,82.4 351.4,81.8 354.6,81.3 357.9,80.7 361.1,80.2 364.3,79.8 367.5,79.4 370.7,78.9 373.9,78.6 377.1,78.2 380.4,77.9 383.6,77.6 386.8,77.3 390.0,77.0 393.2,76.8 396.4,76.5 399.6,76.3 402.9,76.1 406.1,75.9 409.3,75.8 412.5,75.6 415.7,75.4 418.9,75.3 422.1,75.2 425.4,75.0 428.6,74.9 431.8,74.8 435.0,74.7 438.2,74.6 441.4,74.5 444.6,74.4 447.9,74.4 451.1,74.3 454.3,74.2 457.5,74.2 460.7,74.1 463.9,74.1 467.1,74.0 470.4,74.0 473.6,73.9 476.8,73.9 480.0,73.8 483.2,73.8 486.4,73.8 489.6,73.7 492.9,73.7 496.1,73.7 499.3,73.7 502.5,73.6 505.7,73.6 508.9,73.6 512.1,73.6 515.4,73.6 518.6,73.5 521.8,73.5 525.0,73.5" fill="none" stroke="#2563EB" stroke-width="3.5" stroke-linejoin="round"/>
+<text x="277.5" y="168.7" font-size="13" fill="#B45309" text-anchor="start" font-weight="400" font-family="Inter, Arial, sans-serif">Exponential growth if</text>
+<text x="277.5" y="184.7" font-size="13" fill="#B45309" text-anchor="start" font-weight="400" font-family="Inter, Arial, sans-serif">nothing limited it (dashed)</text>
+<text x="311.2" y="225.0" font-size="14" fill="#2563EB" text-anchor="start" font-weight="700" font-family="Inter, Arial, sans-serif">Logistic growth</text>
+<text x="311.2" y="241.0" font-size="13" fill="#2563EB" text-anchor="start" font-weight="400" font-family="Inter, Arial, sans-serif">(solid, N0 = 50, r = 0.5)</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Wavefronts from a source moving to the right at half the wave speed: circles bunched together ahead of the source and spread out behind it"><rect width="560" height="360" fill="#ffffff"/><defs><marker id="ak" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<text x="300.0" y="22.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">Wavefronts from a moving source</text>
+<circle cx="305.0" cy="182.0" r="50.0" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="280.0" cy="182.0" r="100.0" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="255.0" cy="182.0" r="150.0" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="305.0" cy="182.0" r="3.5" fill="#64748B" stroke="#64748B" stroke-width="2"/>
+<circle cx="280.0" cy="182.0" r="3.5" fill="#64748B" stroke="#64748B" stroke-width="2"/>
+<circle cx="255.0" cy="182.0" r="3.5" fill="#64748B" stroke="#64748B" stroke-width="2"/>
+<circle cx="330.0" cy="182.0" r="7.0" fill="#047857" stroke="#047857" stroke-width="2"/>
+<line x1="342.0" y1="182.0" x2="392.0" y2="182.0" stroke="#047857" stroke-width="3" marker-end="url(#ag)"/>
+<text x="334.0" y="210.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857" text-anchor="start">S</text>
+<text x="398.0" y="187.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="start">vs</text>
+<text x="505.0" y="102.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">A (ahead)</text>
+<text x="505.0" y="120.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">shorter</text>
+<text x="505.0" y="138.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">wavelength</text>
+<text x="505.0" y="156.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">higher f</text>
+<text x="58.0" y="102.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">B (behind)</text>
+<text x="58.0" y="120.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">longer</text>
+<text x="58.0" y="138.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">wavelength</text>
+<text x="58.0" y="156.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">lower f</text>
+<circle cx="505.0" cy="182.0" r="6.0" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<circle cx="58.0" cy="182.0" r="6.0" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<text x="505.0" y="208.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#B45309" text-anchor="middle">A</text>
+<text x="58.0" y="208.0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#B45309" text-anchor="middle">B</text>
+<text x="300.0" y="352.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#64748B" text-anchor="middle">Here vs = v/2: gaps are 1/2 wavelength ahead and 3/2 wavelength behind</text>
+</svg>

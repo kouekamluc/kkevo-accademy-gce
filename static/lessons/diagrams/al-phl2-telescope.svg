@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Astronomical telescope in normal adjustment: parallel rays from a distant object are focused by the objective to an intermediate image at the common focal point, and the eyepiece makes the emerging rays parallel at a larger angle"><rect width="560" height="360" fill="#ffffff"/><defs><marker id="ak" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#047857"/></marker><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#B45309"/></marker></defs>
+<text x="280.0" y="24.0" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">Telescope in normal adjustment</text>
+<line x1="20.0" y1="180.0" x2="545.0" y2="180.0" stroke="#64748B" stroke-width="2"/>
+<line x1="130.0" y1="90.0" x2="130.0" y2="270.0" stroke="#2563EB" stroke-width="3"/>
+<path d="M121.0 104.0 L130.0 90.0 L139.0 104.0" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<path d="M121.0 256.0 L130.0 270.0 L139.0 256.0" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<line x1="380.0" y1="120.0" x2="380.0" y2="240.0" stroke="#047857" stroke-width="3"/>
+<path d="M371.0 134.0 L380.0 120.0 L389.0 134.0" fill="none" stroke="#047857" stroke-width="3" stroke-linejoin="round"/>
+<path d="M371.0 226.0 L380.0 240.0 L389.0 226.0" fill="none" stroke="#047857" stroke-width="3" stroke-linejoin="round"/>
+<text x="130.0" y="292.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#2563EB" text-anchor="middle">objective</text>
+<text x="130.0" y="310.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#2563EB" text-anchor="middle">focal length fo</text>
+<text x="380.0" y="262.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857" text-anchor="middle">eyepiece</text>
+<text x="380.0" y="280.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#047857" text-anchor="middle">focal length fe</text>
+<line x1="330.0" y1="152.0" x2="330.0" y2="220.0" stroke="#64748B" stroke-width="2" stroke-dasharray="4 4"/>
+<text x="322.0" y="238.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">intermediate image</text>
+<line x1="30.0" y1="168.0" x2="130.0" y2="180.0" stroke="#2563EB" stroke-width="2"/>
+<line x1="30.0" y1="128.0" x2="130.0" y2="140.0" stroke="#2563EB" stroke-width="2"/>
+<line x1="130.0" y1="180.0" x2="330.0" y2="204.0" stroke="#2563EB" stroke-width="2"/>
+<line x1="130.0" y1="140.0" x2="330.0" y2="204.0" stroke="#2563EB" stroke-width="2"/>
+<line x1="330.0" y1="204.0" x2="380.0" y2="180.0" stroke="#047857" stroke-width="2"/>
+<line x1="330.0" y1="204.0" x2="380.0" y2="220.0" stroke="#047857" stroke-width="2"/>
+<line x1="380.0" y1="180.0" x2="500.0" y2="122.4" stroke="#047857" stroke-width="2" marker-end="url(#ag)"/>
+<line x1="380.0" y1="220.0" x2="500.0" y2="162.4" stroke="#047857" stroke-width="2" marker-end="url(#ag)"/>
+<text x="70.0" y="80.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">from a distant</text>
+<text x="70.0" y="96.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">object, angle a</text>
+<text x="500.0" y="80.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">angle b</text>
+<text x="500.0" y="96.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="end">(b = M x a)</text>
+<text x="280.0" y="346.0" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle">M = fo / fe = (angle b) / (angle a),  lens separation = fo + fe</text>
+</svg>

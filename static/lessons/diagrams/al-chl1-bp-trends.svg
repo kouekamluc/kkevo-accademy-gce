@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Graph of boiling points of hydrides of groups 14 to 17 showing high values for NH3, H2O and HF</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="95.0" y1="45.0" x2="95.0" y2="300.0" stroke="#102A43" stroke-width="2.5" />
+<line x1="95.0" y1="300.0" x2="520.0" y2="300.0" stroke="#102A43" stroke-width="2.5" />
+<text x="307.5" y="346.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >Period of the element bonded to H</text>
+<text x="18" y="172.5" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" transform="rotate(-90 18 172.5)">boiling point (deg C)</text>
+<line x1="95.0" y1="300.0" x2="520.0" y2="300.0" stroke="#E5E7EB" stroke-width="1" />
+<line x1="89.0" y1="300.0" x2="95.0" y2="300.0" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="305.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >-200</text>
+<line x1="95.0" y1="220.3" x2="520.0" y2="220.3" stroke="#E5E7EB" stroke-width="1" />
+<line x1="89.0" y1="220.3" x2="95.0" y2="220.3" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="225.3" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >-100</text>
+<line x1="95.0" y1="140.6" x2="520.0" y2="140.6" stroke="#E5E7EB" stroke-width="1" />
+<line x1="89.0" y1="140.6" x2="95.0" y2="140.6" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="145.6" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >0</text>
+<line x1="95.0" y1="60.9" x2="520.0" y2="60.9" stroke="#E5E7EB" stroke-width="1" />
+<line x1="89.0" y1="60.9" x2="95.0" y2="60.9" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="65.9" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >100</text>
+<text x="165.0" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >period 2</text>
+<text x="260.0" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >period 3</text>
+<text x="355.0" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >period 4</text>
+<text x="450.0" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >period 5</text>
+<polyline points="165.0,60.9 260.0,188.4 355.0,173.3 450.0,142.2" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="165.0" cy="60.9" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="1" />
+<circle cx="260.0" cy="188.4" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="1" />
+<circle cx="355.0" cy="173.3" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="1" />
+<circle cx="450.0" cy="142.2" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="1" />
+<polyline points="165.0,124.7 260.0,208.4 355.0,194.0 450.0,168.5" fill="none" stroke="#047857" stroke-width="2.5"/>
+<circle cx="165.0" cy="124.7" r="5" fill="#047857" stroke="#047857" stroke-width="1" />
+<circle cx="260.0" cy="208.4" r="5" fill="#047857" stroke="#047857" stroke-width="1" />
+<circle cx="355.0" cy="194.0" r="5" fill="#047857" stroke="#047857" stroke-width="1" />
+<circle cx="450.0" cy="168.5" r="5" fill="#047857" stroke="#047857" stroke-width="1" />
+<polyline points="165.0,166.9 260.0,210.8 355.0,190.0 450.0,155.0" fill="none" stroke="#B45309" stroke-width="2.5"/>
+<circle cx="165.0" cy="166.9" r="5" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="260.0" cy="210.8" r="5" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="355.0" cy="190.0" r="5" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<circle cx="450.0" cy="155.0" r="5" fill="#B45309" stroke="#B45309" stroke-width="1" />
+<polyline points="165.0,269.7 260.0,229.9 355.0,210.8 450.0,182.1" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<circle cx="165.0" cy="269.7" r="5" fill="#102A43" stroke="#102A43" stroke-width="1" />
+<circle cx="260.0" cy="229.9" r="5" fill="#102A43" stroke="#102A43" stroke-width="1" />
+<circle cx="355.0" cy="210.8" r="5" fill="#102A43" stroke="#102A43" stroke-width="1" />
+<circle cx="450.0" cy="182.1" r="5" fill="#102A43" stroke="#102A43" stroke-width="1" />
+<text x="300.0" y="28.0" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700" >Boiling points of hydrides: groups 14, 15, 16 and 17</text>
+<text x="155.0" y="65.9" font-size="13" fill="#2563EB" text-anchor="end" font-weight="700" >H2O</text>
+<text x="155.0" y="129.7" font-size="13" fill="#047857" text-anchor="end" font-weight="700" >HF</text>
+<text x="155.0" y="171.9" font-size="13" fill="#B45309" text-anchor="end" font-weight="700" >NH3</text>
+<text x="155.0" y="274.7" font-size="13" fill="#102A43" text-anchor="end" font-weight="700" >CH4</text>
+<line x1="330.0" y1="50.0" x2="354.0" y2="50.0" stroke="#2563EB" stroke-width="3" />
+<text x="360.0" y="55.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="600" >group 16</text>
+<line x1="330.0" y1="68.0" x2="354.0" y2="68.0" stroke="#047857" stroke-width="3" />
+<text x="360.0" y="73.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="600" >group 17</text>
+<line x1="330.0" y1="86.0" x2="354.0" y2="86.0" stroke="#B45309" stroke-width="3" />
+<text x="360.0" y="91.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="600" >group 15</text>
+<line x1="330.0" y1="104.0" x2="354.0" y2="104.0" stroke="#102A43" stroke-width="3" />
+<text x="360.0" y="109.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="600" >group 14</text>
+</svg>

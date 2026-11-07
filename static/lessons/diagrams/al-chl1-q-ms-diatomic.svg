@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Mass spectrum of a diatomic molecule Q2 with peaks at m/z 158, 160 and 162 of heights 51, 100 and 49</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="95.0" y1="45.0" x2="95.0" y2="300.0" stroke="#102A43" stroke-width="2.5" />
+<line x1="95.0" y1="300.0" x2="520.0" y2="300.0" stroke="#102A43" stroke-width="2.5" />
+<text x="307.5" y="346.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >m/z</text>
+<text x="18" y="172.5" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" transform="rotate(-90 18 172.5)">relative abundance</text>
+<line x1="89.0" y1="300.0" x2="95.0" y2="300.0" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="305.0" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >0</text>
+<line x1="89.0" y1="193.8" x2="95.0" y2="193.8" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="198.8" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >50</text>
+<line x1="89.0" y1="87.5" x2="95.0" y2="87.5" stroke="#102A43" stroke-width="2" />
+<text x="85.0" y="92.5" font-size="13" fill="#102A43" text-anchor="end" font-weight="400" >100</text>
+<rect x="227.7" y="191.6" width="18.0" height="108.4" fill="#2563EB" stroke="#2563EB" stroke-width="1" rx="0" />
+<text x="236.7" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >158</text>
+<text x="236.7" y="183.6" font-size="13" fill="#102A43" text-anchor="middle" font-weight="600" >51</text>
+<rect x="298.5" y="87.5" width="18.0" height="212.5" fill="#2563EB" stroke="#2563EB" stroke-width="1" rx="0" />
+<text x="307.5" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >160</text>
+<text x="307.5" y="79.5" font-size="13" fill="#102A43" text-anchor="middle" font-weight="600" >100</text>
+<rect x="369.3" y="195.9" width="18.0" height="104.1" fill="#2563EB" stroke="#2563EB" stroke-width="1" rx="0" />
+<text x="378.3" y="320.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600" >162</text>
+<text x="378.3" y="187.9" font-size="13" fill="#102A43" text-anchor="middle" font-weight="600" >49</text>
+<text x="300.0" y="30.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" >Molecular-ion peaks of a diatomic molecule Q2</text>
+</svg>
