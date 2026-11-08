@@ -18,6 +18,7 @@
   <h1 class="mt-3 text-[30px] font-bold leading-tight tracking-[-.02em] text-navy nav:text-[44px]">{{ lesson.title }}</h1>
   {% if lesson.summary %}<p class="mt-3 max-w-[720px] text-lg leading-relaxed text-slate-600">{{ lesson.summary }}</p>{% endif %}
   {% include "lessons/_resume_banner.html" %}
+  {% include "lessons/_prerequisite_banner.html" %}
   <div id="lesson-body" class="lesson-prose mt-8 grid gap-6 lg:grid-cols-2">
     {% for block in blocks %}
       <div class="{% if block.block_type == 'simulation' or block.block_type == 'quiz' or block.block_type == 'heading' or block.block_type == 'text' %}lg:col-span-2{% endif %}">{% include block.template_name with block=block %}</div>

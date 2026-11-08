@@ -1,0 +1,64 @@
+{% extends "layouts/app.html" %}
+{% block title %}Continue learning — KKEVO Academy{% endblock %}
+{% block content %}
+<div class="flex flex-col gap-6 nav:mt-2">
+  <div class="flex items-center gap-3">
+    {% include "components/mascot.html" with size="64" mood="happy" %}
+    <div>
+      <h1 class="text-[26px] font-black tracking-[-.01em] text-navy nav:text-[34px]">Continue learning</h1>
+      <p class="mt-1 text-base font-semibold text-ink-muted">Pick the course you want to carry on with.</p>
+    </div>
+  </div>
+
+  {% if last %}
+  <section aria-labelledby="last-heading" class="flex flex-col gap-4 rounded-panel bg-navy p-6 text-white nav:flex-row nav:items-center nav:gap-6 nav:p-8">
+    <div class="flex items-center gap-4 nav:flex-1">
+      {% include "components/subject_icon.html" with subject=last.subject size="lg" %}
+      <div class="min-w-0">
+        <h2 id="last-heading" class="text-sm font-extrabold uppercase tracking-[.06em] text-success-300">Where you left off{% if last.last_seen %} · {{ last.last_seen|timesince }} ago{% endif %}</h2>
+        <div class="mt-0.5 text-xl font-black leading-snug">{{ last.subject.name }}</div>
+        <div class="mt-0.5 truncate text-[15px] font-semibold text-slate-300">{{ last.lesson.title }}{% if last.progress and not last.progress.is_completed and last.progress.percent %} · {{ last.progress.percent }}% read{% endif %}</div>
+      </div>
+    </div>
+    <a href="{{ last.resume_url }}" class="btn-primary btn-lg w-full nav:w-auto">Resume lesson {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
+  </section>
+  {% endif %}
+
+  {% if started %}
+  <section aria-labelledby="courses-heading" class="flex flex-col gap-3">
+    <h2 id="courses-heading" class="text-xl font-black text-navy">Your courses</h2>
+    <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      {% for row in started %}{% include "courses/_continue_card.html" with row=row cta="Continue" %}{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if fresh %}
+  <section aria-labelledby="fresh-heading" class="flex flex-col gap-3">
+    <h2 id="fresh-heading" class="text-xl font-black text-navy">Not started yet</h2>
+    <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      {% for row in fresh %}{% include "courses/_continue_card.html" with row=row cta="Start" %}{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if finished %}
+  <section aria-labelledby="done-heading" class="flex flex-col gap-3">
+    <h2 id="done-heading" class="text-xl font-black text-navy">Finished</h2>
+    <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      {% for row in finished %}{% include "courses/_continue_card.html" with row=row cta="Review" %}{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if not started and not fresh and not finished %}
+  <div class="rounded-card border-2 border-dashed border-surface-border bg-white p-10 text-center">
+    <p class="text-lg font-extrabold">You have no courses in your plan yet</p>
+    <p class="mt-1 text-sm font-semibold text-slate-600">Add the subjects you study to see where to continue.</p>
+    <a href="{% url 'courses:catalog' %}" class="btn-primary mt-5">Explore subjects</a>
+  </div>
+  {% endif %}
+
+  {% if coming_soon %}<p class="text-sm font-semibold leading-relaxed text-slate-600"><span class="font-extrabold text-ink-heading">Coming soon in your plan:</span> {% for o in coming_soon %}{{ o.subject.name }}{% if not forloop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
+</div>
+{% endblock %}

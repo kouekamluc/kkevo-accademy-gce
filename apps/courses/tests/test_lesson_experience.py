@@ -111,7 +111,7 @@ def test_continue_learning_scrolls_automatically(client, student, reading):
     client.force_login(student)
     LessonProgress.objects.create(user=student, lesson=lesson, percent=50, position_label="Worked example 2",
                                   position_anchor=blocks["example"].anchor)
-    target = client.get(reverse("courses:continue")).url
+    target = client.get(reverse("courses:continue")).context["last"]["resume_url"]
     assert target.endswith("?resume=1")
     response = client.get(target)
     assert response.context["auto_resume"] is True and "autoResume: true" in response.content.decode()

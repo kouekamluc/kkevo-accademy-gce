@@ -1,8 +1,11 @@
+from datetime import timedelta
+
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Count, F, Max, Prefetch, Q
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
+from django.utils import timezone
 from django.views.decorators.http import require_POST
 
 from apps.academics.models import AcademicLevel, AcademicPathway, SubjectCategory, SubjectOffering
@@ -298,12 +301,50 @@ def course_path(request, slug):
 
 @login_required
 def continue_learning(request):
-    """Sidebar 'Continue Learning': reopen the most recent unfinished lesson."""
-    latest = (
-        LessonProgress.objects.filter(user=request.user, completed_at__isnull=True, lesson__status="published")
-        .select_related("lesson__topic__module__course").order_by("-last_viewed_at").first()
+    """Sidebar 'Continue Learning': every course in the plan with its own resume point.
+
+    The student chooses; the course they opened last comes first. (The dashboard's "Resume lesson" button is
+    still the one-tap way back into the most recent lesson.)
+    """
+    enrollments = list(
+        Enrollment.objects.filter(user=request.user)
+        .select_related("offering__subject", "offering__level")
+        .prefetch_related(Prefetch("offering__courses", queryset=Course.objects.published().order_by("order", "pk")))
     )
-    if latest:
-        return redirect(latest.lesson.get_absolute_url() + "?resume=1")
-    messages.info(request, "You haven’t started a lesson yet. Pick a subject to begin.")
-    return redirect("courses:my_subjects")
+    plan = [(e.offering, services.primary_course(e.offering.courses.all())) for e in enrollments]
+    # A course the student has studied stays here even if they never added it (or later removed it) from the plan.
+    in_plan = {c.pk for _o, c in plan if c}
+    studied = (LessonProgress.objects.filter(user=request.user, lesson__status="published",
+                                             lesson__topic__module__course__status="published")
+               .values_list("lesson__topic__module__course", flat=True).distinct())
+    for extra in Course.objects.published().filter(pk__in=studied).exclude(pk__in=in_plan).select_related("offering__subject", "offering__level"):
+        plan.append((extra.offering, extra))
+    courses = [c for _o, c in plan if c]
+    stats = services.course_stats(request.user, courses)
+    last_seen = dict(
+        LessonProgress.objects.filter(user=request.user, lesson__topic__module__course__in=courses)
+        .values_list("lesson__topic__module__course").annotate(seen=Max("last_viewed_at"))
+    )
+    started, fresh, finished, soon = [], [], [], []
+    for offering, course in plan:
+        if course is None:
+            soon.append(offering)
+            continue
+        stat = stats[course.pk]
+        lesson, progress = services.next_lesson(request.user, course)
+        row = {
+            "subject": offering.subject, "level": offering.level, "course": course, "stat": stat,
+            "lesson": lesson, "progress": progress, "last_seen": last_seen.get(course.pk),
+            "resume_url": (lesson.get_absolute_url() + ("?resume=1" if progress and not progress.is_completed else "")) if lesson else course.get_absolute_url(),
+        }
+        if stat.total and stat.is_complete:
+            finished.append(row)
+        elif stat.done or row["last_seen"]:
+            started.append(row)
+        else:
+            fresh.append(row)
+    started.sort(key=lambda r: r["last_seen"] or timezone.now() - timedelta(days=3650), reverse=True)
+    return render(request, "courses/continue.html", {
+        "started": started, "fresh": fresh, "finished": finished, "coming_soon": soon,
+        "last": started[0] if started else None, "nav_active": "continue",
+    })

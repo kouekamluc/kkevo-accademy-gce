@@ -82,6 +82,42 @@ def primary_course(offering_courses):
     return published[0] if published else None
 
 
+def _published_prerequisite_links(lesson_ids):
+    """[(lesson_id, prerequisite_id)] for prerequisites students can actually open (published, in a published course)."""
+    return list(Lesson.prerequisites.through.objects.filter(
+        from_lesson_id__in=lesson_ids, to_lesson__status=PublicationStatus.PUBLISHED,
+        to_lesson__topic__module__course__status=PublicationStatus.PUBLISHED).values_list("from_lesson_id", "to_lesson_id"))
+
+
+def _blocked_from(user, links):
+    if not links:
+        return set()
+    done = set(LessonProgress.objects.filter(user=user, lesson_id__in={to for _f, to in links},
+                                             completed_at__isnull=False).values_list("lesson_id", flat=True))
+    return {frm for frm, to in links if to not in done}
+
+
+def blocked_by_prerequisites(user, lessons):
+    """Ids of those lessons with at least one prerequisite the student has not completed yet.
+
+    Prerequisites are advice, never a lock: a blocked lesson can always be opened. They only decide what we
+    suggest next and what the lesson page recommends doing first.
+    """
+    return _blocked_from(user, _published_prerequisite_links([l.pk for l in lessons]))
+
+
+def missing_prerequisites(user, lesson):
+    """The prerequisite lessons (published) this student has not completed, in course order."""
+    links = _published_prerequisite_links([lesson.pk])
+    if not links:
+        return []
+    done = set(LessonProgress.objects.filter(user=user, lesson_id__in={to for _f, to in links},
+                                             completed_at__isnull=False).values_list("lesson_id", flat=True))
+    return list(Lesson.objects.filter(pk__in={to for _f, to in links} - done)
+                .select_related("topic__module__course__offering__subject", "topic__module__course__offering__level")
+                .order_by("topic__module__course__offering__level__order", "topic__module__order", "topic__order", "order", "pk"))
+
+
 def next_lesson(user, course):
     """The lesson to continue: the most recently opened unfinished one, else the first not completed."""
     lessons = list(
@@ -90,13 +126,17 @@ def next_lesson(user, course):
     if not lessons:
         return None, None
     progress = progress_by_lesson(user, lessons)
+    links = _published_prerequisite_links([l.pk for l in lessons])  # always one lookup, so query counts do not depend on state
     in_progress = [progress[lesson.pk] for lesson in lessons if lesson.pk in progress and not progress[lesson.pk].is_completed]
     if in_progress:
         latest = max(in_progress, key=lambda p: p.last_viewed_at)
         return next(lesson for lesson in lessons if lesson.pk == latest.lesson_id), latest
-    for lesson in lessons:
-        if lesson.pk not in progress or not progress[lesson.pk].is_completed:
-            return lesson, progress.get(lesson.pk)
+    todo = [lesson for lesson in lessons if lesson.pk not in progress or not progress[lesson.pk].is_completed]
+    if todo:
+        # Prefer a lesson whose prerequisites are done; if every remaining one is waiting on something, take the first.
+        blocked = _blocked_from(user, links)
+        lesson = next((l for l in todo if l.pk not in blocked), todo[0])
+        return lesson, progress.get(lesson.pk)
     return lessons[0], progress.get(lessons[0].pk)
 
 

@@ -122,6 +122,7 @@ def lesson_detail(request, course_slug, pk):
         "has_simulation": any(b.block_type == BlockType.SIMULATION for b in blocks),
         "notes": LessonNote.objects.filter(user=request.user, lesson=lesson),
         "resume": _resume_point(progress, blocks, toc, created),
+        "missing_prerequisites": services.missing_prerequisites(request.user, lesson),
         "auto_resume": request.GET.get("resume") == "1",
         "low_data": _is_low_data(request.user),
         "up_next": [item for item in module_lessons[module_lessons.index(lesson) + 1:]][:3] if lesson in module_lessons else [],

@@ -61,6 +61,7 @@
         <li class="hidden print:hidden nav:block"><button type="button" @click="helpOpen = true" class="flex items-center gap-1.5 text-slate-600 hover:text-navy"><kbd class="rounded border border-slate-300 bg-white px-1.5 font-mono text-[11px]">?</kbd>Shortcuts</button></li>
       </ul>
       {% include "lessons/_resume_banner.html" %}
+      {% include "lessons/_prerequisite_banner.html" %}
 
       {# Cards mode: segmented progress and the current card's title #}
       <div id="card-progress" x-show="cardsOn" x-cloak class="sticky top-[56px] z-20 -mx-4 mt-4 bg-surface-bg/95 px-4 py-3 backdrop-blur nav:top-[67px] nav:mx-0 print:hidden">

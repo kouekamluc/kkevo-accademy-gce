@@ -1,0 +1,12 @@
+{% comment %}A gentle "do this first" note when prerequisites are not finished. Advice only: the lesson stays open.{% endcomment %}
+{% if missing_prerequisites %}
+<div class="mt-6 flex flex-col gap-2 rounded-card border-2 border-warning-200 bg-warning-50 px-5 py-4 print:hidden" role="note" aria-label="Recommended before this lesson">
+  <div class="flex items-center gap-2 font-extrabold text-warning-text"><span aria-hidden="true">💡</span>Recommended before this lesson</div>
+  <p class="text-sm font-semibold text-slate-700">This lesson builds on {{ missing_prerequisites|length }} lesson{{ missing_prerequisites|length|pluralize }} you haven’t finished yet. You can carry on, but it will make more sense if you do {{ missing_prerequisites|length|pluralize:"that,those" }} first.</p>
+  <ul class="flex flex-col gap-1.5">
+    {% for pre in missing_prerequisites %}
+    <li><a href="{{ pre.get_absolute_url }}" class="font-extrabold">{{ pre.title }}</a> <span class="text-sm font-semibold text-slate-600">· {{ pre.topic.module.course.offering.subject.name }}, {{ pre.topic.module.course.offering.level.name }}</span></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

@@ -116,11 +116,14 @@ def test_my_subjects_lists_plan_with_progress(client, student, offering, course,
     assert "Test Subject" in html and "1 / 4 lessons" in html and "25%" in html
 
 
-def test_continue_learning_redirects_to_latest_lesson(client, student, outline):
+def test_continue_learning_is_a_page_of_courses_with_a_resume_link(client, student, outline):
     client.force_login(student)
-    assert client.get(reverse("courses:continue")).url == reverse("courses:my_subjects")
+    first = client.get(reverse("courses:continue"))
+    assert first.status_code == 200 and first.context["last"] is None  # nothing started yet: no "left off" card
     LessonProgress.objects.create(user=student, lesson=outline[2], percent=10)
-    assert client.get(reverse("courses:continue")).url == outline[2].get_absolute_url() + "?resume=1"
+    after = client.get(reverse("courses:continue"))
+    assert after.context["last"]["resume_url"] == outline[2].get_absolute_url() + "?resume=1"
+    assert after.context["last"]["course"] == outline[2].topic.module.course  # a studied course is listed even if not in the plan
 
 
 def test_course_stats_query_count_is_constant(student, course, outline, django_assert_num_queries):

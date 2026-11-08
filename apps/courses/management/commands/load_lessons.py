@@ -66,7 +66,7 @@ class Command(BaseCommand):
         if errors:
             raise CommandError("The lesson content has problems; nothing was loaded:\n  - " + "\n  - ".join(errors))
 
-        counts = dict.fromkeys(["created", "refreshed", "removed", "pruned", "kept", "course pages", "courses published"], 0)
+        counts = dict.fromkeys(["created", "refreshed", "removed", "pruned", "kept", "course pages", "courses published", "courses archived"], 0)
         status = "draft" if options["draft"] else "published"
         was_empty = {}
         courses, orders = {}, {}
@@ -103,6 +103,9 @@ class Command(BaseCommand):
                 # Only a course that had no lessons before this run: an admin-disabled course stays disabled.
                 if (course and was_empty.get(key) and course.status != "published"
                         and Lesson.objects.filter(topic__module__course=course).exists()):
+                    # A subject has one published course (database rule): the new course supersedes any older
+                    # published one (a demo or stub course), which is archived, never deleted.
+                    counts["courses archived"] += Course.objects.filter(offering=course.offering, status="published")                         .exclude(pk=course.pk).update(status="archived")
                     course.status = "published"
                     course.save(update_fields=["status"])
                     counts["courses published"] += 1
