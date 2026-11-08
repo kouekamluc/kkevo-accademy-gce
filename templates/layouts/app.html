@@ -12,8 +12,8 @@ Views set `nav_active` to highlight the current item. Works for visitors too (pu
     <nav aria-label="Main" class="mt-4 flex flex-col gap-0.5">
       {% for item in sidebar_items %}
         {% if user.is_authenticated or item.key == "explore" %}
-        <a href="{{ item.url }}" {% if nav_active == item.key %}aria-current="page"{% endif %}
-           class="flex h-11 items-center gap-3 rounded-btn px-3 text-[15px] {% if nav_active == item.key %}bg-navy font-semibold text-white hover:text-white{% else %}font-medium text-slate-700 hover:bg-slate-100 hover:text-navy{% endif %}">
+        <a href="{{ item.url }}" {% if nav_active == item.key or nav_active in item.also %}aria-current="page"{% endif %}
+           class="flex h-11 items-center gap-3 rounded-btn px-3 text-[15px] {% if nav_active == item.key or nav_active in item.also %}bg-navy font-semibold text-white hover:text-white{% else %}font-medium text-slate-700 hover:bg-slate-100 hover:text-navy{% endif %}">
           {% include "components/icon.html" with name=item.icon %}{{ item.label }}
         </a>
         {% endif %}

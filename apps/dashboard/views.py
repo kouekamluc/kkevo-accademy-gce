@@ -56,7 +56,7 @@ def weekly_activity(user, today, goal_minutes):
         d["height"] = round(d["minutes"] / top * 100)
     total = sum(d["minutes"] for d in days)
     return {"days": days, "total_minutes": total, "goal_line": round(goal_minutes / top * 100),
-            "weekly_goal_minutes": goal_minutes * 7}
+            "weekly_goal_minutes": goal_minutes * 7, "percent": min(100, round(100 * total / (goal_minutes * 7))) if goal_minutes else 0}
 
 
 def fmt_minutes(minutes):
@@ -149,20 +149,6 @@ def home(request):
                                     starts_at__date__lte=today + timedelta(days=6))
         .select_related("subject").order_by("starts_at")[:4]
     )
-    recent = list(
-        LessonProgress.objects.filter(user=user, completed_at__isnull=False, lesson__status="published",
-                                      lesson__topic__module__course__status="published")  # only lessons students can open
-        .select_related("lesson__topic__module__course__offering__subject").order_by("-completed_at")[:4]
-    )
-    last_scores = {}
-    for attempt in (Attempt.objects.filter(user=user, completed_at__isnull=False,
-                                           practice_set__lesson__in=[r.lesson for r in recent])
-                    .select_related("practice_set").order_by("completed_at")):
-        last_scores[attempt.practice_set.lesson_id] = attempt
-    for r in recent:
-        r.day_label = relative_day(r.completed_at, today)
-        r.attempt = last_scores.get(r.lesson_id)
-
     countdown = None
     if profile.exam_date:
         lesson_ids = services.published_lessons().filter(topic__module__course__in=courses).values_list("pk", flat=True)
@@ -182,7 +168,7 @@ def home(request):
     show = modes.dashboard_blocks(
         mode, completed=progress.filter(completed_at__isnull=False).count(),
         week_minutes=week["total_minutes"], has_upcoming=bool(upcoming), reviews_due=reviews_due,
-        has_recent=bool(recent), away_days=away_days, has_exam_date=bool(profile.exam_date),
+        away_days=away_days, has_exam_date=bool(profile.exam_date),
         exam_year=exam_year, has_practice=bool(practice_items))
 
     return render(request, "dashboard/home.html", {
@@ -198,6 +184,6 @@ def home(request):
         "streak": learning_streak(user, today), "upcoming": [
             {"session": s, "day": "Today" if timezone.localtime(s.starts_at).date() == today
              else WEEKDAY_SHORT[timezone.localtime(s.starts_at).weekday()]} for s in upcoming],
-        "recent": recent, "today": today, "nav_active": "dashboard",
+        "today": today, "nav_active": "dashboard",
         "reviews_due": reviews_due,
     })

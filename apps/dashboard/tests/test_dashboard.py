@@ -54,8 +54,8 @@ def test_dashboard_uses_real_progress(client, student, offering, lessons):
     assert ctx["continue_card"]["lesson"] == lessons[1]
     assert ctx["continue_card"]["minutes_left"] == 10
     assert (ctx["overall"].done, ctx["overall"].total) == (1, 3)
-    assert "Worked example 2" in html and "Revise expressions" in html and "Lesson 1" in html
-    assert ctx["recent"][0].day_label == "Yesterday"
+    assert "Worked example 2" in html and "Revise expressions" in html
+    assert "Your week" in html and "Weekly learning activity" not in html  # the dashboard is "Today"; charts live on My Progress
 
 
 def test_streak_counts_consecutive_days():
@@ -91,7 +91,7 @@ def test_session_toggle_only_for_owner(client, student):
     assert mine.is_completed
 
 
-def test_recent_lessons_skip_courses_that_are_no_longer_published(client, django_user_model, lesson):
+def test_continue_card_skips_courses_that_are_no_longer_published(client, django_user_model, lesson):
     from django.utils import timezone
     from apps.learning.models import LessonProgress
 
@@ -101,7 +101,7 @@ def test_recent_lessons_skip_courses_that_are_no_longer_published(client, django
     profile = user.profile
     profile.level, profile.onboarded_at = lesson.course.offering.level, timezone.now()
     profile.save()
-    LessonProgress.objects.create(user=user, lesson=lesson, completed_at=timezone.now())
+    LessonProgress.objects.create(user=user, lesson=lesson, percent=30)  # started, not finished
     client.force_login(user)
     assert lesson.get_absolute_url() in client.get("/dashboard/").content.decode()
     course = lesson.course

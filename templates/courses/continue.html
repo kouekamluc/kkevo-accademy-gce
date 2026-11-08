@@ -1,11 +1,11 @@
 {% extends "layouts/app.html" %}
-{% block title %}Continue learning — KKEVO Academy{% endblock %}
+{% block title %}My courses — KKEVO Academy{% endblock %}
 {% block content %}
 <div class="flex flex-col gap-6 nav:mt-2">
   <div class="flex items-center gap-3">
     {% include "components/mascot.html" with size="64" mood="happy" %}
     <div>
-      <h1 class="text-[26px] font-black tracking-[-.01em] text-navy nav:text-[34px]">Continue learning</h1>
+      <h1 class="text-[26px] font-black tracking-[-.01em] text-navy nav:text-[34px]">My courses</h1>
       <p class="mt-1 text-base font-semibold text-ink-muted">Pick the course you want to carry on with.</p>
     </div>
   </div>
@@ -58,6 +58,26 @@
     <a href="{% url 'courses:catalog' %}" class="btn-primary mt-5">Explore subjects</a>
   </div>
   {% endif %}
+
+  {% if suggestions %}
+  <section aria-labelledby="add-heading" class="flex flex-col gap-3">
+    <div class="flex flex-wrap items-baseline justify-between gap-3">
+      <h2 id="add-heading" class="text-xl font-black text-navy">Add more subjects</h2>
+      <form method="post" action="{% url 'courses:add_class_subjects' %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.path }}"><button type="submit" class="text-[15px] font-extrabold text-primary">Add all of them</button></form>
+    </div>
+    <p class="text-sm font-semibold text-slate-600">Other subjects of your class that have lessons ready.</p>
+    <ul class="flex flex-wrap gap-2.5">
+      {% for o in suggestions %}
+      <li><form method="post" action="{% url 'courses:toggle_plan' o.pk %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.path }}">
+        <button type="submit" class="inline-flex min-h-[48px] items-center gap-2 rounded-full border-2 border-b-4 border-surface-border bg-white px-5 text-[15px] font-extrabold text-slate-700 transition hover:border-primary-300 active:translate-y-[2px]">+ {{ o.subject.name }}</button></form></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <p class="flex flex-wrap gap-x-5 gap-y-1 text-[15px] font-extrabold"><a href="{% url 'courses:catalog' %}">Browse all subjects</a><a href="{% url 'courses:my_subjects' %}">Manage my plan</a></p>
+
+  {% if coming_soon_names %}<p class="text-sm font-semibold leading-relaxed text-slate-600"><span class="font-extrabold text-ink-heading">Coming soon for your class:</span> {{ coming_soon_names|join:", " }}.</p>{% endif %}
 
   {% if coming_soon %}<p class="text-sm font-semibold leading-relaxed text-slate-600"><span class="font-extrabold text-ink-heading">Coming soon in your plan:</span> {% for o in coming_soon %}{{ o.subject.name }}{% if not forloop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
 </div>

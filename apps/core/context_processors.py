@@ -5,10 +5,11 @@ from apps.academics.models import AcademicLevel
 
 # Sidebar items from the dashboard mockup (02). Items whose route is not installed are skipped.
 SIDEBAR = [
-    ("dashboard", "Dashboard", "home", "dashboard:home"),
-    ("subjects", "My Subjects", "book", "courses:my_subjects"),
-    ("explore", "Explore Courses", "compass", "courses:catalog"),
-    ("continue", "Continue Learning", "play", "courses:continue"),
+    ("dashboard", "Today", "home", "dashboard:home"),
+    # One page for everything about the student's own subjects: where they left off, every course, adding more.
+    # (Its older pages, My Subjects and Continue, keep working and light up the same item.)
+    ("courses", "My Courses", "book", "courses:continue", ("subjects", "continue")),
+    ("explore", "Explore Subjects", "compass", "courses:catalog"),
     ("practice", "Practice", "target", "practice:index"),
     ("planner", "Study Planner", "calendar", "learning:planner"),
     ("progress", "My Progress", "progress", "learning:progress"),
@@ -17,11 +18,11 @@ SIDEBAR = [
 ]
 # Phone bottom bar: Home · Subjects · Learn · Progress · Profile. Extra keys also light the item up.
 BOTTOM_BAR = [
-    ("dashboard", "Home", "home", "dashboard:home", ()),
-    ("subjects", "Subjects", "book", "courses:my_subjects", ("explore",)),
-    ("continue", "Learn", "play", "courses:continue", ("practice", "saved")),
+    ("dashboard", "Today", "home", "dashboard:home", ()),
+    ("courses", "Learn", "book", "courses:continue", ("subjects", "continue", "explore", "saved")),
+    ("practice", "Practice", "target", "practice:index", ()),
     ("progress", "Progress", "progress", "learning:progress", ("planner",)),
-    ("settings", "Profile", "user", "accounts:profile", ()),
+    ("settings", "Me", "user", "accounts:profile", ()),
 ]
 
 

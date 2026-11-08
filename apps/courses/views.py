@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Count, F, Max, Prefetch, Q
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse
 from django.utils import timezone
 from django.views.decorators.http import require_POST
 
@@ -30,6 +31,26 @@ def _student_level(request):
 def _shell(request):
     """Signed-in students get the app shell; visitors get the public site's header, footer and sign-up prompts."""
     return "layouts/app.html" if request.user.is_authenticated else "layouts/public_page.html"
+
+
+def _class_subject_suggestions(profile, enrolled_ids):
+    """(ready, coming_soon): subjects of the student's class and stream not in the plan yet.
+
+    `ready` are offerings with lessons (one tap to add); `coming_soon` are subject names without lessons yet.
+    """
+    if not profile.level_id:
+        return [], []
+    class_offerings = SubjectOffering.objects.for_class(profile.level, profile.pathway)
+    ready = list(class_offerings.with_content().exclude(pk__in=enrolled_ids)
+                 .select_related("subject").order_by("subject__order", "subject__name"))
+    soon = list(class_offerings.exclude(pk__in=class_offerings.with_content().values("pk"))
+                .order_by("subject__order", "subject__name").values_list("subject__name", flat=True))
+    return ready, soon
+
+
+def _safe_next(request, fallback):
+    target = request.POST.get("next", "")
+    return target if target.startswith("/") and not target.startswith("//") else reverse(fallback)
 
 
 def catalog(request):
@@ -135,18 +156,7 @@ def my_subjects(request):
     rows.sort(key=lambda r: r["enrollment"].offering.level_id != profile.level_id)
 
     # Subjects of the student's class and stream that aren't in the plan yet: one tap to add.
-    suggestions = []
-    if profile.level_id:
-        enrolled = {e.offering_id for e in enrollments}
-        suggestions = list(
-            SubjectOffering.objects.for_class(profile.level, profile.pathway).with_content().exclude(pk__in=enrolled)
-            .select_related("subject").order_by("subject__order", "subject__name")
-        )
-    coming_soon = []
-    if profile.level_id:
-        ready = SubjectOffering.objects.for_class(profile.level, profile.pathway).with_content().values("pk")
-        coming_soon = list(SubjectOffering.objects.for_class(profile.level, profile.pathway).exclude(pk__in=ready)
-                           .order_by("subject__order", "subject__name").values_list("subject__name", flat=True))
+    suggestions, coming_soon = _class_subject_suggestions(profile, {e.offering_id for e in enrollments})
     return render(request, "courses/my_subjects.html", {
         "rows": rows, "profile": profile, "suggestions": suggestions, "nav_active": "subjects", "coming_soon": coming_soon,
     })
@@ -161,7 +171,7 @@ def add_class_subjects(request):
         ids = set(SubjectOffering.objects.for_class(profile.level, profile.pathway).with_content().values_list("pk", flat=True))
         Enrollment.objects.bulk_create([Enrollment(user=request.user, offering_id=pk) for pk in ids], ignore_conflicts=True)
         messages.success(request, f"Added your {profile.class_label} subjects to your plan.")
-    return redirect("courses:my_subjects")
+    return redirect(_safe_next(request, "courses:my_subjects"))
 
 
 @login_required
@@ -175,10 +185,7 @@ def toggle_plan(request, offering_pk):
     else:
         Enrollment.objects.create(user=request.user, offering=offering)
         messages.success(request, f"{offering.subject.name} added to your plan.")
-    next_url = request.POST.get("next", "")
-    if next_url.startswith("/") and not next_url.startswith("//"):
-        return redirect(next_url)
-    return redirect("courses:my_subjects")
+    return redirect(_safe_next(request, "courses:my_subjects"))
 
 
 def _course_practice(user, course):
@@ -344,7 +351,9 @@ def continue_learning(request):
         else:
             fresh.append(row)
     started.sort(key=lambda r: r["last_seen"] or timezone.now() - timedelta(days=3650), reverse=True)
+    suggestions, coming_soon_names = _class_subject_suggestions(get_profile(request.user), {o.pk for o, _c in plan})
     return render(request, "courses/continue.html", {
+        "suggestions": suggestions, "coming_soon_names": coming_soon_names,
         "started": started, "fresh": fresh, "finished": finished, "coming_soon": soon,
         "last": started[0] if started else None, "nav_active": "continue",
     })

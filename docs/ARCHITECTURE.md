@@ -132,6 +132,19 @@ model field lengths and choices, duplicates, and unknown levels or pathways.
   with Statistics hold the same 59 "Core Pure" lessons at Lower and Upper Sixth; replace them with the real year-2 split once
   the official syllabus is confirmed.
 
+## Navigation
+
+- **Sidebar:** Today · My Courses · Explore Subjects · Practice · Study Planner · My Progress · Saved Lessons · Settings
+  (My Progress and Saved Lessons appear once the student has started a lesson).
+- **Phone tab bar:** Today · Learn · Practice · Progress · Me. Practice has its own tab; Learn covers My Courses, Explore and Saved lessons.
+- **My Courses** (`courses:continue`) is the one page for the student's own subjects: where they left off, a card per
+  course with its resume point, adding more subjects of their class, and a link to Explore. The older "My subjects" page
+  (`courses:my_subjects`, now titled "My plan") only manages the plan and lights up the same menu item.
+- **Today** (the dashboard) answers "what should I do now": continue, practice today, recommended, revision due and a
+  compact "Your week". Charts and history live on **My Progress**.
+- **The exam date** is set in Settings (`/accounts/profile/#exam-date`); the planner and dashboard only show the countdown
+  and link there.
+
 ## Known gaps
 
 - Offline downloads, phone-number sign-up, Google sign-in and push notifications are shown in the mockups
