@@ -90,7 +90,8 @@ def catalog(request):
             "module_count": counts.get(course.pk, 0) if course else 0,
             "pathway_badge": _pathway_badge(offering, pathways),
         })
-    if request.user.is_authenticated:  # "In your plan" first, as in the mockup
+    cards.sort(key=lambda c: c["course"] is None)  # subjects with lessons first, "coming soon" last
+    if request.user.is_authenticated:  # "In your plan" first, as in the mockup (the sort is stable)
         cards.sort(key=lambda c: not c["in_plan"])
 
     context = {
@@ -135,11 +136,16 @@ def my_subjects(request):
     if profile.level_id:
         enrolled = {e.offering_id for e in enrollments}
         suggestions = list(
-            SubjectOffering.objects.for_class(profile.level, profile.pathway).exclude(pk__in=enrolled)
+            SubjectOffering.objects.for_class(profile.level, profile.pathway).with_content().exclude(pk__in=enrolled)
             .select_related("subject").order_by("subject__order", "subject__name")
         )
+    coming_soon = []
+    if profile.level_id:
+        ready = SubjectOffering.objects.for_class(profile.level, profile.pathway).with_content().values("pk")
+        coming_soon = list(SubjectOffering.objects.for_class(profile.level, profile.pathway).exclude(pk__in=ready)
+                           .order_by("subject__order", "subject__name").values_list("subject__name", flat=True))
     return render(request, "courses/my_subjects.html", {
-        "rows": rows, "profile": profile, "suggestions": suggestions, "nav_active": "subjects",
+        "rows": rows, "profile": profile, "suggestions": suggestions, "nav_active": "subjects", "coming_soon": coming_soon,
     })
 
 
@@ -149,7 +155,7 @@ def add_class_subjects(request):
     """'Add all': put every subject of the student's class and stream into their plan."""
     profile = get_profile(request.user)
     if profile.level_id:
-        ids = set(SubjectOffering.objects.for_class(profile.level, profile.pathway).values_list("pk", flat=True))
+        ids = set(SubjectOffering.objects.for_class(profile.level, profile.pathway).with_content().values_list("pk", flat=True))
         Enrollment.objects.bulk_create([Enrollment(user=request.user, offering_id=pk) for pk in ids], ignore_conflicts=True)
         messages.success(request, f"Added your {profile.class_label} subjects to your plan.")
     return redirect("courses:my_subjects")

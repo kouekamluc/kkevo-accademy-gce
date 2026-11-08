@@ -34,10 +34,20 @@ class Course(TimeStampedModel):
         ordering = ["offering__level__order", "offering__subject__order", "order", "title"]
         constraints = [
             models.UniqueConstraint(fields=["offering", "title"], name="unique_course_title_per_offering"),
+            # Students are always taken to "the" course of a subject, so two live ones would be ambiguous.
+            models.UniqueConstraint(fields=["offering"], condition=models.Q(status="published"),
+                                    name="one_published_course_per_offering"),
         ]
 
     def __str__(self):
         return self.title
+
+    def clean(self):
+        if self.status == PublicationStatus.PUBLISHED and self.offering_id:
+            other = Course.objects.filter(offering_id=self.offering_id, status=PublicationStatus.PUBLISHED).exclude(pk=self.pk).first()
+            if other:
+                raise ValidationError({"status": f"“{other.title}” is already published for this subject. "
+                                                 "Archive it first, or keep this one as a draft."})
 
     def get_absolute_url(self):
         return reverse("courses:detail", kwargs={"slug": self.slug})

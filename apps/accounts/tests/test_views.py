@@ -160,12 +160,17 @@ def test_stream_step_accepts_pathway_or_mix(client, student, form5):
 @pytest.fixture
 def form5_offerings(form5, science):
     from apps.academics.models import Subject, SubjectOffering
+    from apps.courses.models import Course, Lesson, Module, Topic
 
     offerings = []
     for i, name in enumerate(["Alpha", "Beta", "Gamma", "Delta"]):
         subject = Subject.objects.create(name=name, slug=name.lower(), icon_text=name[0], order=i)
         offering = SubjectOffering.objects.create(subject=subject, level=form5)
         offering.pathways.add(science)
+        # Only subjects with lessons are offered in onboarding, so give each one a published lesson.
+        course = Course.objects.create(offering=offering, title=f"{name} course", slug=f"{name.lower()}-course", status="published")
+        topic = Topic.objects.create(module=Module.objects.create(course=course, title="Module"), title="Topic")
+        Lesson.objects.create(topic=topic, title=f"{name} lesson", slug=f"{name.lower()}-lesson", status="published")
         offerings.append(offering)
     return offerings
 

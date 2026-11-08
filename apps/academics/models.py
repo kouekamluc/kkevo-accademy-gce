@@ -116,6 +116,18 @@ class SubjectOfferingQuerySet(models.QuerySet):
     def active(self):
         return self.filter(is_active=True, subject__is_active=True, level__is_active=True)
 
+    def with_content(self):
+        """Offerings a student can actually study: a published course with at least one published lesson.
+
+        Subjects without content stay visible as "coming soon" but are never pre-ticked, suggested
+        or added in bulk, so a student's plan is never full of empty subjects.
+        """
+        from apps.courses.models import Lesson  # imported here: courses depends on academics
+
+        return self.filter(models.Exists(Lesson.objects.filter(
+            status="published", topic__module__course__status="published",
+            topic__module__course__offering=models.OuterRef("pk"))))
+
     def for_class(self, level, pathway=None):
         """Active subjects a student of this class and stream takes.
 

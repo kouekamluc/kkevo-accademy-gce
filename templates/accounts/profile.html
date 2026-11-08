@@ -53,6 +53,7 @@
           </select>
           {% for error in study_form.level.errors %}<p class="text-[13px] font-medium text-danger-text" role="alert">{{ error }}</p>{% endfor %}
         </div>
+        {% if next_level %}<p class="rounded-card bg-primary-50 px-4 py-3 text-sm font-semibold text-primary-700 sm:col-span-2">Starting a new year? <a href="{% url 'accounts:move_up' %}" class="font-extrabold underline">Move up to {{ next_level.name }}</a> to bring your subjects and progress with you.</p>{% endif %}
         <div class="flex flex-col gap-1.5">
           <label for="{{ study_form.pathway.id_for_label }}" class="form-label">Pathway</label>
           <select name="{{ study_form.pathway.html_name }}" id="{{ study_form.pathway.id_for_label }}" class="form-input{% if study_form.pathway.errors %} form-input-error{% endif %}">

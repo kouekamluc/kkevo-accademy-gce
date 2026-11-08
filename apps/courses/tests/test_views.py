@@ -158,7 +158,9 @@ def test_catalog_opens_on_the_students_class_and_stream(client, student, offerin
     assert not everything.context["for_you"]
 
 
-def test_my_subjects_suggests_class_subjects_and_adds_all(client, student, offering, form5):
+def test_my_subjects_suggests_class_subjects_and_adds_all(client, student, offering, form5, lesson):
+    lesson.status = "published"  # only subjects with lessons are suggested
+    lesson.save()
     _arts_subject(form5)
     client.force_login(student)
     response = client.get(reverse("courses:my_subjects"))

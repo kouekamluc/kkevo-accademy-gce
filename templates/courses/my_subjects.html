@@ -66,5 +66,6 @@
     </ul>
   </section>
   {% endif %}
+  {% if coming_soon %}<p class="text-sm font-semibold leading-relaxed text-slate-600"><span class="font-extrabold text-ink-heading">Coming soon for {{ profile.class_label }}:</span> {{ coming_soon|join:", " }}.</p>{% endif %}
 </div>
 {% endblock %}

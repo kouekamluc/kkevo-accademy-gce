@@ -27,8 +27,16 @@ def _context(step, **extra):
 
 
 def _offerings_for(profile):
-    return (SubjectOffering.objects.for_class(profile.level, profile.pathway)
+    """Subjects of the student's class and stream that already have lessons."""
+    return (SubjectOffering.objects.for_class(profile.level, profile.pathway).with_content()
             .select_related("subject").order_by("subject__order", "subject__name"))
+
+
+def _coming_soon(profile):
+    """Names of the class's subjects whose lessons are not ready yet (shown, but not selectable)."""
+    ready = SubjectOffering.objects.for_class(profile.level, profile.pathway).with_content().values("pk")
+    return list(SubjectOffering.objects.for_class(profile.level, profile.pathway).exclude(pk__in=ready)
+                .order_by("subject__order", "subject__name").values_list("subject__name", flat=True))
 
 
 @login_required
@@ -97,7 +105,8 @@ def subjects(request):
         # First visit: tick every subject of their class and stream, so most students just press Continue.
         selected = {str(pk) for pk in (current or offerings.values_list("pk", flat=True))}
     return render(request, "onboarding/subjects.html",
-                  _context(4, form=form, offerings=offerings, selected=selected, minimum=form.minimum))
+                  _context(4, form=form, offerings=offerings, selected=selected, minimum=form.minimum,
+                           coming_soon=_coming_soon(profile)))
 
 
 @login_required

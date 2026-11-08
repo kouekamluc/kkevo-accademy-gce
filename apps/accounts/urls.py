@@ -16,6 +16,7 @@ urlpatterns = [
     path("onboarding/subjects/", onboarding.subjects, name="onboarding_subjects"),
     path("onboarding/done/", onboarding.done, name="onboarding_done"),
     path("profile/", views.profile, name="profile"),
+    path("profile/move-up/", views.move_up, name="move_up"),
     path("profile/password/", views.password_change, name="password_change"),
     path("profile/low-data/", views.toggle_low_data, name="toggle_low_data"),
     path("profile/download/", views.data_export, name="data_export"),

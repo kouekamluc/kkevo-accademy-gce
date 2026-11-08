@@ -22,7 +22,7 @@ from .forms import (
     StyledPasswordResetForm,
     StyledSetPasswordForm,
 )
-from apps.learning import achievements
+from apps.learning import achievements, promotion
 
 from .models import AVATARS
 from .privacy import export_user_data
@@ -158,8 +158,23 @@ def profile(request):
         "accounts/profile.html",
         {"details_form": details_form, "study_form": study_form, "student": student, "nav_active": "settings",
          "avatars": AVATARS, "goal_choices": sorted({15, 30, 45, 60, 90, current_goal}),
+         "next_level": promotion.next_level(student.level),
          **achievements.journey(user)},
     )
+
+
+@login_required
+def move_up(request):
+    """Confirm, then move the student to the next class (see apps.learning.promotion)."""
+    plan = promotion.plan_move_up(request.user)
+    if plan is None:
+        messages.info(request, "You’re already in the final year, so there’s nothing to move up to.")
+        return redirect("accounts:profile")
+    if request.method == "POST":
+        promotion.move_up(request.user)
+        messages.success(request, f"Welcome to {plan.target.name}! Your progress is kept. Add the subjects you take this year below.")
+        return redirect("courses:my_subjects")
+    return render(request, "accounts/move_up.html", {"plan": plan, "student": get_profile(request.user), "nav_active": "settings"})
 
 
 @login_required

@@ -28,11 +28,12 @@
     {% endfor %}
   </div>
   {% else %}
-  <div class="rounded-card border border-dashed border-slate-300 p-6 text-center">
+  <div class="rounded-card border-2 border-dashed border-surface-border p-6 text-center">
     <p class="font-semibold text-ink-heading">No subjects are available for this class yet</p>
     <p class="mt-1 text-sm text-slate-600">Our content team is adding them now. Continue to your dashboard and you can add subjects later.</p>
   </div>
   {% endif %}
+  {% if coming_soon %}<p class="mt-5 text-sm font-semibold leading-relaxed text-slate-600"><span class="font-extrabold text-ink-heading">Coming soon:</span> {{ coming_soon|join:", " }}. We’ll add them when the lessons are ready.</p>{% endif %}
 </div>
 {% endblock %}
 {% block actions %}{% url 'accounts:onboarding_stream' as back %}{% include "onboarding/_back.html" with url=back %}{% include "onboarding/_continue.html" %}{% endblock %}

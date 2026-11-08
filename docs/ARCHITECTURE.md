@@ -117,6 +117,21 @@ model field lengths and choices, duplicates, and unknown levels or pathways.
   `LessonEvent` (audit log + review comments), `MediaAsset` (validated image uploads). See
   `apps/studio/revisions.py` and `docs/benchmarks/content-studio.md`.
 
+## Course organisation rules
+
+- **Only subjects with content are offered.** `SubjectOffering.objects.with_content()` means a published course with at
+  least one published lesson. Onboarding, "My subjects" suggestions and "Add all" use it; subjects without lessons are
+  listed as "coming soon" and never pre-ticked. Explore still lists them, after the ones with lessons.
+- **One published course per subject offering** (database constraint `one_published_course_per_offering`; the admin shows a
+  friendly error). Migration `courses.0007` archived the leftover stub courses (it archives, never deletes).
+- **Moving up a year** (`apps/learning/promotion.py`, page `/accounts/profile/move-up/`): switches the class, adds the same
+  subject at the next level when it has content, carries finished lessons across where the next course has the same lesson
+  (same module, topic and lesson slug), and removes last year's subjects from the plan. Progress and practice results are
+  never deleted.
+- **Same lessons at two levels** are reported by `manage.py check_course_overlap`. Today Pure Mathematics with Mechanics and
+  with Statistics hold the same 59 "Core Pure" lessons at Lower and Upper Sixth; replace them with the real year-2 split once
+  the official syllabus is confirmed.
+
 ## Known gaps
 
 - Offline downloads, phone-number sign-up, Google sign-in and push notifications are shown in the mockups
