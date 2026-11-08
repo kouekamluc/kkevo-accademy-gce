@@ -1,4 +1,4 @@
-# KKEVO Academy — Architecture (Phase 2)
+# KKEVO Academy — Architecture
 
 ## Design reference
 
@@ -29,12 +29,17 @@ No REST API, no SPA framework.
 code/
 ├── config/              settings, urls, wsgi/asgi
 ├── apps/
-│   ├── core/            abstract base models, landing page, shared template tags
-│   ├── accounts/        custom User, StudentProfile, auth + profile views
-│   ├── academics/       levels, pathways, subjects, offerings, syllabi, curriculum refs
-│   ├── courses/         course → module → topic → lesson → content block
-│   └── dashboard/       student dashboard, enrolments
-├── templates/           base layouts + shared partials (components/)
+│   ├── core/            abstract base models, landing/public pages, navigation, error pages, shared template tags
+│   ├── accounts/        custom User, StudentProfile (class, goal, exam date, avatar), auth, onboarding, profile, move-up
+│   ├── academics/       levels, pathways, subjects, offerings, syllabi, curriculum references
+│   ├── courses/         course → module → topic → lesson → block, lesson player, course pages, catalog, My Courses
+│   ├── learning/        enrolments, progress, planner, weekly summary, saved lessons, notes, points and milestones,
+│   │   └── views/       progress · planner · links · reports · saved (one module per topic)
+│   ├── practice/        practice sets, attempts, mastery, "Review my mistakes", "Practice today"
+│   ├── dashboard/       the "Today" dashboard and which blocks each kind of student sees
+│   └── studio/          staff content studio: lesson editor, history, media and video libraries
+│       └── views/       lessons · editor · history · media · videos
+├── templates/           base layouts + shared partials (components/), one folder per app
 ├── static/src/          Tailwind input CSS
 ├── static/css/app.css   built CSS (committed)
 ├── static/vendor/       htmx, alpine, katex, self-hosted fonts (committed)
