@@ -30,11 +30,11 @@
 
   {% if groups %}<h2 class="-mb-3 text-xl font-black text-navy">All practice sets</h2>{% endif %}
   {% for subject, sets in groups %}
-  <section aria-labelledby="subject-{{ subject.pk }}">
+  <section aria-labelledby="subject-{{ subject.pk }}" class="sc-scope" style="{{ subject.style_vars }}">
     <h2 id="subject-{{ subject.pk }}" class="flex items-center gap-3 text-lg font-bold">{% include "components/subject_icon.html" with subject=subject %}{{ subject.name }}</h2>
     <ul class="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
       {% for s in sets %}
-      <li><a href="{{ s.get_absolute_url }}" class="card-link flex h-full flex-col gap-2 rounded-card p-5">
+      <li><a href="{{ s.get_absolute_url }}" class="sc-card flex h-full flex-col gap-2 rounded-card border-2 border-b-4 p-5 text-ink-heading transition hover:-translate-y-0.5 hover:text-ink-heading">
         <span class="font-semibold">{{ s.title }}</span>
         {% if s.is_mock %}
         <span class="text-sm text-ink-muted">Mock exam · {{ s.question_count }} questions · {{ s.exam_minutes }} min timed</span>
@@ -43,7 +43,7 @@
         {% include "practice/_mastery.html" with mastery=s.mastery prefix="Topic" %}
         {% endif %}
         {% if s.last_attempt %}<span class="mt-auto text-sm font-semibold {% if s.last_attempt.score >= 60 %}text-success-text{% else %}text-warning-text{% endif %}">Last score {{ s.last_attempt.score }}%</span>
-        {% else %}<span class="mt-auto text-sm font-semibold text-primary">Start →</span>{% endif %}
+        {% else %}<span class="sc-text mt-auto text-sm font-extrabold">Start →</span>{% endif %}
       </a></li>
       {% endfor %}
     </ul>

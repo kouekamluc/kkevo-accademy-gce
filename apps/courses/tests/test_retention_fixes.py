@@ -96,3 +96,27 @@ def test_subject_tile_uses_the_subject_colour(client, student, form5, science):
     client.force_login(student)
     html = client.get(reverse("courses:catalog")).content.decode()
     assert f"background-color: {offering.subject.colour}" in html
+
+
+def test_every_subject_scope_in_a_template_sets_its_colour_variables():
+    """.sc-scope and .sc-card read --sc* variables; without them the colours would resolve to nothing.
+
+    A scope must set the variables itself. A card or hero may instead inherit them from a scope in the same file.
+    """
+    import re
+    from pathlib import Path
+
+    def sets_vars(tag):
+        return "style_vars" in tag or "var(--sc" in tag
+
+    templates = Path(__file__).resolve().parents[3] / "templates"
+    offenders = []
+    for path in templates.rglob("*.html"):
+        text = path.read_text(encoding="utf-8")
+        tags = re.findall(r"<[a-zA-Z][^<>]*?(?:sc-scope|sc-card|sc-hero)[^<>]*?>", text)
+        has_scope = any("sc-scope" in t and sets_vars(t) for t in tags)
+        for tag in tags:
+            ok = sets_vars(tag) or ("sc-scope" not in tag and has_scope)
+            if not ok:
+                offenders.append(f"{path.name}: {tag[:90]}")
+    assert not offenders

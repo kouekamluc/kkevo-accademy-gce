@@ -9,6 +9,7 @@
 {% endblock %}
 {% block main_class %}!max-w-none !p-0{% endblock %}
 {% block content %}
+<div class="sc-scope" style="{{ subject.style_vars }}">
 {# ---------- Hero ---------- #}
 <section class="border-b border-surface-border bg-white">
   <div class="mx-auto grid max-w-[1240px] gap-6 px-4 py-6 nav:grid-cols-[1fr_256px] nav:gap-10 nav:p-8 xl:grid-cols-[1fr_400px]">
@@ -188,4 +189,5 @@
     };
   }
 </script>
+</div>
 {% endblock %}

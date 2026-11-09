@@ -11,16 +11,16 @@
   </div>
 
   {% if last %}
-  <section aria-labelledby="last-heading" class="flex flex-col gap-4 rounded-panel bg-navy p-6 text-white nav:flex-row nav:items-center nav:gap-6 nav:p-8">
+  <section aria-labelledby="last-heading" class="sc-hero flex flex-col gap-4 rounded-panel p-6 nav:flex-row nav:items-center nav:gap-6 nav:p-8" style="{{ last.subject.style_vars }}">
     <div class="flex items-center gap-4 nav:flex-1">
       {% include "components/subject_icon.html" with subject=last.subject size="lg" %}
       <div class="min-w-0">
-        <h2 id="last-heading" class="text-sm font-extrabold uppercase tracking-[.06em] text-success-300">Where you left off{% if last.last_seen %} · {{ last.last_seen|timesince }} ago{% endif %}</h2>
+        <h2 id="last-heading" class="text-sm font-extrabold uppercase tracking-[.06em] text-white/80">Where you left off{% if last.last_seen %} · {{ last.last_seen|timesince }} ago{% endif %}</h2>
         <div class="mt-0.5 text-xl font-black leading-snug">{{ last.subject.name }}</div>
-        <div class="mt-0.5 truncate text-[15px] font-semibold text-slate-300">{{ last.lesson.title }}{% if last.progress and not last.progress.is_completed and last.progress.percent %} · {{ last.progress.percent }}% read{% endif %}</div>
+        <div class="mt-0.5 truncate text-[15px] font-semibold text-white/90">{{ last.lesson.title }}{% if last.progress and not last.progress.is_completed and last.progress.percent %} · {{ last.progress.percent }}% read{% endif %}</div>
       </div>
     </div>
-    <a href="{{ last.resume_url }}" class="btn-primary btn-lg w-full nav:w-auto">Resume lesson {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
+    <a href="{{ last.resume_url }}" class="sc-btn-light h-[52px] w-full px-6 text-base nav:w-auto">Resume lesson {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
   </section>
   {% endif %}
 

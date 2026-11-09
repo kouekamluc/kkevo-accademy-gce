@@ -9,9 +9,9 @@
   {% if items %}
   <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
     {% for item in items %}
-    <li><a href="{{ item.lesson.get_absolute_url }}" class="card-link flex h-full items-start gap-4 rounded-card p-5">
+    <li><a href="{{ item.lesson.get_absolute_url }}" class="sc-card flex h-full items-start gap-4 rounded-card border-2 border-b-4 p-5 text-ink-heading transition hover:-translate-y-0.5 hover:text-ink-heading" style="{{ item.lesson.course.offering.subject.style_vars }}">
       {% include "components/subject_icon.html" with subject=item.lesson.course.offering.subject %}
-      <span><span class="block font-semibold">{{ item.lesson.title }}</span><span class="mt-0.5 block text-sm text-ink-muted">{{ item.lesson.course.offering.subject.name }} · {{ item.lesson.type_label }}</span></span>
+      <span><span class="block font-semibold">{{ item.lesson.title }}</span><span class="sc-text mt-0.5 block text-sm font-semibold">{{ item.lesson.course.offering.subject.name }} · {{ item.lesson.type_label }}</span></span>
     </a></li>
     {% endfor %}
   </ul>

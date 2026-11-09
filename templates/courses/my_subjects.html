@@ -55,7 +55,7 @@
     </div>
     <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
       {% for offering in suggestions %}
-      <li class="flex items-center gap-3 rounded-card border-2 border-surface-border bg-white p-3.5">
+      <li class="sc-card flex items-center gap-3 rounded-card border-2 p-3.5" style="{{ offering.subject.style_vars }}">
         {% include "components/subject_icon.html" with subject=offering.subject %}
         <span class="min-w-0 flex-1 font-semibold text-ink-heading">{{ offering.subject.name }}</span>
         <form method="post" action="{% url 'courses:toggle_plan' offering.pk %}">{% csrf_token %}

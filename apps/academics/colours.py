@@ -1,13 +1,13 @@
 """One colour per subject, so students find a subject by colour before they read its name.
 
 Related subjects share a family (every mathematics course is violet). Each colour carries a
-white icon at 4.2:1 or better, so the tiles pass the 3:1 contrast needed for graphics.
+white icon at 4.5:1 or better, so the tiles pass the 3:1 contrast needed for graphics.
 """
 
 VIOLET = "#5B3FE4"      # mathematics
 BLUE = "#2563EB"        # physics
-TEAL = "#0F8A7E"        # chemistry
-GREEN = "#1E8E4A"       # life sciences
+TEAL = "#0D8478"        # chemistry
+GREEN = "#1C8745"       # life sciences
 INDIGO = "#3730A3"      # computing
 CYAN = "#0E7490"        # earth and place
 BROWN = "#B45309"       # history and citizenship

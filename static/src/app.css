@@ -113,3 +113,20 @@
 .sim-range-navy::-webkit-slider-thumb { border-color: #2A1F6B; }
 .sim-range-navy::-moz-range-thumb { border-color: #2A1F6B; }
 
+/* Subject scope: put class "sc-scope" and style="{{ subject.style_vars }}" on a page or section and every
+   violet button, bar, chip and highlight inside it takes the subject's colour. Kept outside the Tailwind
+   layers so it wins over the utilities it re-colours. Never add the class without the style variables. */
+.sc-scope .btn-primary, .sc-scope .btn-primary:hover { background-color: var(--sc-d); border-color: rgba(0,0,0,.28); color: #fff; }
+.sc-scope .btn-primary:hover { filter: brightness(1.08); }
+.sc-scope .btn-secondary { color: var(--sc-tx); border-color: var(--sc-l); }
+.sc-scope .btn-secondary:hover { background-color: var(--sc-t); color: var(--sc-tx); }
+.sc-scope .bg-primary, .sc-scope .progress-fill { background-color: var(--sc); }
+.sc-scope .bg-primary-50, .sc-scope .bg-primary-100 { background-color: var(--sc-t); }
+.sc-scope .text-primary, .sc-scope .text-primary-700, .sc-scope a.text-primary-700 { color: var(--sc-tx); }
+.sc-scope .border-primary { border-color: var(--sc); }
+.sc-scope .border-primary-100, .sc-scope .border-primary-300 { border-color: var(--sc-l); }
+/* A banner in the subject's deepest shade, for the "where you left off" hero. */
+.sc-hero { background-color: var(--sc-tx); color: #fff; }
+.sc-btn-light { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; gap: .625rem; border-radius: 14px;
+  padding: 0 1.25rem; font-weight: 800; background: #fff; color: var(--sc-tx); border-bottom: 4px solid rgba(0,0,0,.25); }
+.sc-btn-light:hover { color: var(--sc-tx); filter: brightness(.96); }

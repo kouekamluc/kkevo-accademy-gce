@@ -1,9 +1,9 @@
 {% extends "layouts/app.html" %}
 {% block title %}{{ practice_set.title }} — Practice{% endblock %}
 {% block content %}
-<section class="card mx-auto mt-2 max-w-[640px] p-6 shadow-card nav:p-10">
+<section class="sc-card sc-scope mx-auto mt-2 max-w-[640px] rounded-card border-2 border-b-4 p-6 shadow-card nav:p-10" style="{{ practice_set.subject.style_vars }}">
   {% if practice_set.status != "published" or practice_set.topic.module.course.status != "published" %}<p class="mb-4 rounded-xl bg-warning-50 px-4 py-3 text-sm font-semibold text-warning-text">Staff preview: this practice set is not published, so students cannot see it yet.</p>{% endif %}
-  <div class="flex items-center gap-3">{% include "components/subject_icon.html" with subject=practice_set.subject %}<span class="text-sm text-ink-muted">{{ practice_set.subject.name }} · {{ practice_set.topic.title }}</span></div>
+  <div class="flex items-center gap-3">{% include "components/subject_icon.html" with subject=practice_set.subject %}<span class="sc-text text-sm font-semibold">{{ practice_set.subject.name }} · {{ practice_set.topic.title }}</span></div>
   <h1 class="mt-4 text-[28px] font-bold tracking-[-.02em] text-navy">{{ practice_set.title }}</h1>
   <p class="mt-2 text-slate-600">{{ question_count }} question{{ question_count|pluralize }}. Each answer shows a full worked solution.</p>
   <div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1">

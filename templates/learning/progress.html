@@ -65,11 +65,11 @@
       <div class="flex items-baseline justify-between"><h2 id="sp-heading" class="text-xl font-bold">Subject progress</h2><span class="text-sm text-ink-muted">Completion · quiz average</span></div>
       <ul class="mt-4 divide-y divide-surface-border">
         {% for r in subject_rows %}
-        <li class="flex items-center gap-4 py-3.5">
+        <li class="sc-scope flex items-center gap-4 py-3.5" style="{{ r.subject.style_vars }}">
           {% include "components/subject_icon.html" with subject=r.subject %}
           <a href="{{ r.course.get_absolute_url }}" class="w-40 shrink-0 font-semibold text-ink-heading hover:text-navy">{{ r.subject.name }}</a>
           <div class="hidden flex-1 sm:block"><div class="progress-track h-2"><div class="progress-fill" style="width: {{ r.stat.percent }}%"></div></div></div>
-          <span class="w-14 text-right font-bold">{{ r.stat.percent }}%</span>
+          <span class="sc-text w-14 text-right font-extrabold">{{ r.stat.percent }}%</span>
           <span class="w-20 text-right text-sm {% if r.quiz is not None and r.quiz < 65 %}font-semibold text-warning-text{% else %}text-ink-muted{% endif %}">{% if r.quiz is not None %}quiz {{ r.quiz }}%{% else %}no quiz{% endif %}</span>
         </li>
         {% empty %}<li class="py-6 text-sm text-ink-muted">Add subjects to your plan to see progress here.</li>{% endfor %}
