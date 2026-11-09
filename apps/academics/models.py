@@ -99,6 +99,14 @@ class Subject(OrderedModel):
 
         return subject_colour(self)
 
+    @property
+    def style_vars(self):
+        """Inline CSS variables for a card themed in the subject's colour (see .sc-* in app.css)."""
+        from .colours import subject_shades
+
+        s = subject_shades(self)
+        return f"--sc: {s['base']}; --sc-d: {s['dark']}; --sc-tx: {s['text']}; --sc-t: {s['tint']}; --sc-l: {s['line']}"
+
     def card_meta(self):
         """'Science · 3 levels' — needs `active_offerings` prefetched (see core.views)."""
         offerings = getattr(self, "active_offerings", None)

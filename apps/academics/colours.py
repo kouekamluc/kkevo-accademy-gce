@@ -40,3 +40,32 @@ BY_CATEGORY = {"sciences": BLUE, "humanities": BROWN, "languages": ROSE, "busine
 
 def subject_colour(subject):
     return BY_SLUG.get(subject.slug) or BY_CATEGORY.get(subject.category) or VIOLET
+
+
+def _rgb(hex_):
+    h = hex_.lstrip("#")
+    return [int(h[i:i + 2], 16) for i in (0, 2, 4)]
+
+
+def mix(hex_, other, amount):
+    """`hex_` moved `amount` (0 to 1) of the way towards `other`, as a #RRGGBB string."""
+    a, b = _rgb(hex_), _rgb(other)
+    return "#%02X%02X%02X" % tuple(round(x * (1 - amount) + y * amount) for x, y in zip(a, b))
+
+
+def subject_shades(subject):
+    """Every shade a subject card needs, as plain hex (no CSS colour functions, for older phones).
+
+    base  tile, progress bar          dark  button background, white text 5.4:1 or better
+    text  labels on the tint, 7.4:1+  tint  card background
+    line  card border
+    """
+    base = subject_colour(subject)
+    return {
+        "base": base,
+        "dark": mix(base, "#000000", .14),
+        "text": mix(base, "#000000", .35),
+        "tint": mix(base, "#FFFFFF", .93),
+        "line": mix(base, "#FFFFFF", .55),
+    }
+

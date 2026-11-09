@@ -5,8 +5,10 @@ production) static URLs, and its cache version changes whenever any of them chan
 """
 import hashlib
 import json
+import os
 
 from django.conf import settings
+from django.contrib.staticfiles import finders
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.templatetags.static import static
@@ -41,6 +43,22 @@ def _static(path):
         return static(path)
     except ValueError:  # manifest storage without collectstatic (tests, first run)
         return f"/{settings.STATIC_URL.strip('/')}/{path}"
+
+
+def _dev_asset_stamp():
+    """Modified times of the precached files, only in DEBUG.
+
+    In production the static URLs are hashed, so a changed file means a new URL and a new worker
+    version. In development the URLs never change, so without this a restyled app.css would be served
+    from the worker's cache-first static cache forever.
+    """
+    if not settings.DEBUG:
+        return ""
+    stamps = []
+    for path in PRECACHE_STATIC:
+        found = finders.find(path)
+        stamps.append(str(int(os.path.getmtime(found))) if found else "-")
+    return "|".join(stamps)
 
 
 def user_key(user):
@@ -94,12 +112,14 @@ def manifest(request):
 def service_worker(request):
     offline_url = reverse("core:offline")
     precache = [_static(p) for p in PRECACHE_STATIC]
-    version = hashlib.sha1((SW_VERSION + "|".join(precache) + offline_url).encode()).hexdigest()[:10]
+    version = hashlib.sha1((SW_VERSION + "|".join(precache) + offline_url + _dev_asset_stamp()).encode()).hexdigest()[:10]
     response = render(
         request,
         "pwa/sw.js",
         {
             "version": version,
+            # One static cache for the life of a production build; a new one per change in development.
+            "static_cache": f"kkevo-static-{version}" if settings.DEBUG else "kkevo-static-v1",
             "offline_url": offline_url,
             "precache_json": json.dumps(precache),
             "static_prefix": "/" + settings.STATIC_URL.strip("/") + "/",

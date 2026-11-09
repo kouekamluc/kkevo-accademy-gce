@@ -1,6 +1,6 @@
 {# Explore card (mockup 08): column card on desktop, compact row on phones. #}
 {% with subject=card.subject course=card.course stat=card.stat %}
-<article class="relative flex gap-4 rounded-card border-2 p-4 sm:flex-col sm:gap-3 {% if card.ready %}border-b-4 border-surface-border bg-white transition hover:-translate-y-0.5 hover:border-primary-300 sm:p-7{% else %}border-dashed border-surface-border bg-white/60 sm:p-6{% endif %}">
+<article class="relative flex gap-4 rounded-card border-2 p-4 sm:flex-col sm:gap-3 {% if card.ready %}sc-card border-b-4 transition hover:-translate-y-0.5 sm:p-7{% else %}border-dashed border-surface-border bg-white/60 sm:p-6{% endif %}" {% if card.ready %}style="{{ subject.style_vars }}"{% endif %}>
   <div class="flex items-start justify-between">
     {% include "components/subject_icon.html" with subject=subject size="lg" %}
     <span class="hidden rounded-full px-3 py-1 text-xs font-extrabold sm:inline {% if card.in_plan %}bg-success-50 text-success-text{% else %}bg-slate-100 text-slate-700{% endif %}">
@@ -14,24 +14,24 @@
       </h2>
       {% if card.in_plan and card.ready %}<span class="text-sm font-semibold text-success-text sm:hidden">{{ stat.percent }}%</span>{% endif %}
     </div>
-    <p class="hidden text-sm text-ink-muted sm:block">{{ card.offering.level.name }} · {{ subject.get_category_display }}</p>
+    <p class="hidden text-sm font-semibold sm:block {% if card.ready %}sc-text{% else %}text-ink-muted{% endif %}">{{ card.offering.level.name }} · {{ subject.get_category_display }}</p>
     {% if not card.in_plan and subject.summary %}<p class="text-[15px] leading-relaxed text-slate-600 sm:mt-4">{{ subject.summary }}</p>{% elif subject.summary %}<p class="mt-4 hidden text-[15px] leading-relaxed text-slate-600 sm:block">{{ subject.summary }}</p>{% endif %}
     <div class="flex items-center justify-between gap-2 sm:mt-auto sm:pt-4">
       <p class="text-sm text-slate-600 {% if card.in_plan %}hidden sm:block{% endif %}">
         {% if card.ready %}{{ card.module_count }} module{{ card.module_count|pluralize }} · {{ stat.total }} lesson{{ stat.total|pluralize }}{% else %}Lessons coming soon{% endif %}
       </p>
-      {% if card.ready and not card.in_plan %}<span class="text-[15px] font-semibold text-primary sm:hidden">Explore ›</span>{% endif %}
+      {% if card.ready and not card.in_plan %}<span class="sc-text text-[15px] font-extrabold sm:hidden">Explore ›</span>{% endif %}
     </div>
     {% if card.in_plan and card.ready %}
-    <div class="mt-2 h-2 rounded-full bg-surface-border sm:hidden" role="progressbar" aria-valuenow="{{ stat.percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ subject.name }} progress"><div class="h-2 rounded-full bg-success" style="width: {{ stat.percent }}%"></div></div>
+    <div class="sc-track mt-2 h-2 rounded-full sm:hidden" role="progressbar" aria-valuenow="{{ stat.percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ subject.name }} progress"><div class="sc-fill h-2 rounded-full" style="width: {{ stat.percent }}%"></div></div>
     {% endif %}
     <div class="mt-4 hidden sm:block">
       {% if not card.ready %}
         <span class="btn w-full cursor-not-allowed border border-surface-border bg-slate-50 text-ink-muted">Coming soon</span>
       {% elif card.in_plan %}
-        <a href="{{ course.get_absolute_url }}" class="btn-primary h-12 w-full text-base">{% if stat.done %}Continue · {{ stat.percent }}%{% else %}Start course{% endif %}</a>
+        <a href="{{ course.get_absolute_url }}" class="sc-btn h-12 w-full text-base">{% if stat.done %}Continue · {{ stat.percent }}%{% else %}Start course{% endif %}</a>
       {% else %}
-        <a href="{{ course.get_absolute_url }}" class="btn-secondary h-12 w-full text-base">Explore Course</a>
+        <a href="{{ course.get_absolute_url }}" class="sc-btn-soft h-12 w-full text-base">Explore Course</a>
       {% endif %}
     </div>
   </div>

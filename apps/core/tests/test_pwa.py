@@ -72,3 +72,25 @@ def test_user_key_header_only_for_signed_in_users(client):
     other = get_user_model().objects.create_user(email="pwa2@example.com", password="pw-12345-xyz")
     assert user_key(other) != user_key(user)
     assert user_key(user) not in client.get("/manifest.webmanifest").content.decode()
+
+
+def test_dev_worker_renames_its_static_cache_when_an_asset_changes(client, settings, tmp_path, monkeypatch):
+    """In DEBUG the static URLs never change, so the cache name must follow the files' modified times."""
+    from django.contrib.staticfiles import finders
+
+    css = tmp_path / "app.css"
+    css.write_text("a{}")
+    monkeypatch.setattr(finders, "find", lambda path: str(css) if path == "css/app.css" else None)
+
+    settings.DEBUG = False
+    assert 'const STATIC = "kkevo-static-v1"' in client.get("/sw.js").content.decode()
+
+    settings.DEBUG = True
+    import os
+
+    os.utime(css, (1_000_000_000, 1_000_000_000))
+    before = client.get("/sw.js").content.decode()
+    os.utime(css, (1_000_000_100, 1_000_000_100))
+    after = client.get("/sw.js").content.decode()
+    name = lambda body: next(l for l in body.splitlines() if l.startswith("const STATIC"))  # noqa: E731
+    assert name(before) != name(after) and "kkevo-static-v1" not in name(before)

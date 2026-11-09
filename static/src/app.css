@@ -50,6 +50,16 @@
   .btn-primary { @apply btn border-b-4 border-primary-700 bg-primary text-white hover:bg-primary-700 hover:text-white focus-visible:ring-primary-300 active:border-b-2; }
   .btn-secondary { @apply btn border-2 border-b-4 border-surface-border bg-white text-primary-700 hover:bg-primary-50 hover:text-primary-700 focus-visible:ring-primary-100 active:border-b-2; }
   .btn-lg { @apply h-[52px] rounded-xl px-6 text-base; }
+  /* Subject-themed cards: set style="{{ subject.style_vars }}" on the card (variables --sc, --sc-d, --sc-tx, --sc-t, --sc-l). */
+  .sc-card { background-color: var(--sc-t); border-color: var(--sc-l); }
+  .sc-card:hover { border-color: var(--sc); }
+  .sc-text { color: var(--sc-tx); }
+  .sc-track { background-color: rgba(255,255,255,.85); }
+  .sc-fill { background-color: var(--sc); box-shadow: inset 0 -3px 0 rgba(0,0,0,.14); }
+  .sc-btn { @apply btn border-b-4 text-white hover:text-white active:border-b-2; background-color: var(--sc-d); border-color: rgba(0,0,0,.28); }
+  .sc-btn:hover { filter: brightness(1.08); }
+  .sc-btn-soft { @apply btn border-2 border-b-4 bg-white active:border-b-2; color: var(--sc-tx); border-color: var(--sc-l); }
+  .sc-btn-soft:hover { background-color: var(--sc-t); color: var(--sc-tx); }
   .card { @apply rounded-card border-2 border-surface-border bg-white; }
   .card-link { @apply card text-ink-heading transition hover:border-primary-300 hover:text-ink-heading hover:shadow-raised; }
   .chip { @apply rounded-md border border-surface-border px-2 py-[3px] text-[13px] text-slate-600; }

@@ -5,7 +5,7 @@
    - Never touched: non-GET requests, login/accounts, practice, staff studio and admin. Logout clears lesson caches. */
 const VERSION = "{{ version }}";
 const SHELL = "kkevo-shell-" + VERSION;
-const STATIC = "kkevo-static-v1";
+const STATIC = "{{ static_cache }}";
 const LESSONS = "kkevo-lessons-v1";
 const META = "kkevo-meta-v1";
 const KEEP = [SHELL, STATIC, LESSONS, META];

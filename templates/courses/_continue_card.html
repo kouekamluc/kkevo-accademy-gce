@@ -1,17 +1,17 @@
 {% comment %}One course on the Continue Learning page. Context: row, cta.{% endcomment %}
-<li class="flex flex-col gap-3 rounded-card border-2 border-b-4 border-surface-border bg-white p-4">
+<li class="sc-card flex flex-col gap-3 rounded-card border-2 border-b-4 p-4" style="{{ row.subject.style_vars }}">
   <div class="flex items-center gap-3">
     {% include "components/subject_icon.html" with subject=row.subject %}
     <div class="min-w-0 flex-1">
       <div class="truncate font-extrabold text-ink-heading">{{ row.subject.name }}</div>
-      <div class="text-[13px] font-semibold text-ink-muted">{{ row.level.name }}{% if row.last_seen %} · opened {{ row.last_seen|timesince }} ago{% endif %}</div>
+      <div class="sc-text text-[13px] font-semibold">{{ row.level.name }}{% if row.last_seen %} · opened {{ row.last_seen|timesince }} ago{% endif %}</div>
     </div>
-    <span class="text-sm font-extrabold {% if row.stat.is_complete %}text-success-text{% else %}text-ink-heading{% endif %}">{{ row.stat.percent }}%</span>
+    <span class="text-sm font-extrabold {% if row.stat.is_complete %}text-success-text{% else %}sc-text{% endif %}">{{ row.stat.percent }}%</span>
   </div>
-  <div class="progress-track" role="progressbar" aria-valuenow="{{ row.stat.percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ row.subject.name }} progress"><div class="progress-fill" style="width: {{ row.stat.percent }}%"></div></div>
+  <div class="sc-track h-2.5 overflow-hidden rounded-full" role="progressbar" aria-valuenow="{{ row.stat.percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ row.subject.name }} progress"><div class="sc-fill h-full rounded-full" style="width: {{ row.stat.percent }}%"></div></div>
   <div class="min-h-[40px]">
     <div class="text-xs font-extrabold uppercase tracking-[.06em] text-ink-muted">{% if cta == "Review" %}All lessons done{% else %}Up next{% endif %}</div>
     {% if cta != "Review" %}<div class="truncate text-[15px] font-bold text-ink-heading">{{ row.lesson.title }}</div>{% endif %}
   </div>
-  <a href="{{ row.resume_url }}" class="{% if cta == 'Continue' %}btn-primary{% else %}btn-secondary{% endif %} mt-auto h-11 w-full">{{ cta }}</a>
+  <a href="{{ row.resume_url }}" class="{% if cta == 'Continue' %}sc-btn{% else %}sc-btn-soft{% endif %} mt-auto h-11 w-full">{{ cta }}</a>
 </li>

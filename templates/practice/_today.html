@@ -10,19 +10,19 @@ heading_tag (h2 default). The "All practice" link is shown only when `more` or `
   </div>
   <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
     {% for item in items %}
-    <li class="flex flex-col gap-3 rounded-card border-2 border-b-4 border-surface-border bg-white p-4">
+    <li class="sc-card flex flex-col gap-3 rounded-card border-2 border-b-4 p-4" style="{{ item.subject.style_vars }}">
       <div class="flex items-center gap-3">
         {% include "components/subject_icon.html" with subject=item.subject %}
         <div class="min-w-0 flex-1">
           <div class="truncate font-extrabold text-ink-heading">{{ item.subject.name }}</div>
-          <div class="text-[13px] font-semibold text-ink-muted">{{ item.last_label }}</div>
+          <div class="sc-text text-[13px] font-semibold">{{ item.last_label }}</div>
         </div>
       </div>
       <div>
         <div class="font-bold text-ink-heading">{{ item.practice_set.title }}</div>
         <p class="mt-0.5 text-sm text-slate-600">{{ item.reason }}</p>
       </div>
-      <a href="{{ item.practice_set.get_absolute_url }}" class="btn-primary mt-auto h-11 w-full">Practise</a>
+      <a href="{{ item.practice_set.get_absolute_url }}" class="sc-btn mt-auto h-11 w-full">Practise</a>
     </li>
     {% endfor %}
   </ul>
