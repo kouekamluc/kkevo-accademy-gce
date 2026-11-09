@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Three ways heat travels, methods hidden</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="7" y="14" width="176" height="332" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="95" y="44" font-size="18" fill="#102A43" text-anchor="middle" font-weight="700">A</text>
+<rect x="192" y="14" width="176" height="332" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="44" font-size="18" fill="#102A43" text-anchor="middle" font-weight="700">B</text>
+<rect x="377" y="14" width="176" height="332" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="465" y="44" font-size="18" fill="#102A43" text-anchor="middle" font-weight="700">C</text>
+<polygon points="45,190 145,190 133,255 57,255" fill="#FFFFFF" stroke="#102A43" stroke-width="3"/>
+<line x1="145.0" y1="196.0" x2="179.0" y2="186.0" stroke="#102A43" stroke-width="6" stroke-linecap="round"/>
+<text x="95" y="175" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">metal pan</text>
+<path d="M71,310 q-9,-14 0,-28 q9,14 0,28 z" fill="#B45309"/>
+<path d="M95,310 q-9,-14 0,-28 q9,14 0,28 z" fill="#B45309"/>
+<path d="M119,310 q-9,-14 0,-28 q9,14 0,28 z" fill="#B45309"/>
+<line x1="75.0" y1="295.0" x2="75.0" y2="267.0" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="75.0,262.0 78.9,270.1 71.1,270.1" fill="#B45309"/>
+<line x1="115.0" y1="295.0" x2="115.0" y2="267.0" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="115.0,262.0 118.9,270.1 111.1,270.1" fill="#B45309"/>
+<text x="95" y="336" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">fire below</text>
+<rect x="225" y="130" width="110" height="130" fill="#FFFFFF" stroke="#102A43" stroke-width="3"/>
+<rect x="228" y="160" width="104" height="97" fill="#DBEAFE"/>
+<line x1="248.0" y1="245.0" x2="248.0" y2="190.0" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="248.0,185.0 251.9,193.1 244.1,193.1" fill="#2563EB"/>
+<line x1="248.0" y1="185.0" x2="303.0" y2="185.0" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="308.0,185.0 299.9,188.9 299.9,181.1" fill="#2563EB"/>
+<line x1="312.0" y1="185.0" x2="312.0" y2="240.0" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="312.0,245.0 308.1,236.9 315.9,236.9" fill="#2563EB"/>
+<line x1="312.0" y1="245.0" x2="257.0" y2="245.0" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="252.0,245.0 260.1,241.1 260.1,248.9" fill="#2563EB"/>
+<text x="280" y="152" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">water</text>
+<path d="M256,310 q-9,-14 0,-28 q9,14 0,28 z" fill="#B45309"/>
+<path d="M280,310 q-9,-14 0,-28 q9,14 0,28 z" fill="#B45309"/>
+<path d="M304,310 q-9,-14 0,-28 q9,14 0,28 z" fill="#B45309"/>
+<line x1="280.0" y1="295.0" x2="280.0" y2="273.0" stroke="#B45309" stroke-width="2.5" stroke-linecap="round"/>
+<polygon points="280.0,268.0 283.9,276.1 276.1,276.1" fill="#B45309"/>
+<text x="280" y="336" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">fire below</text>
+<ellipse cx="465" cy="158" rx="45" ry="13" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/>
+<text x="465" y="140" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">fish</text>
+<line x1="405.0" y1="176.0" x2="525.0" y2="176.0" stroke="#102A43" stroke-width="4" stroke-linecap="round"/>
+<rect x="403" y="285" width="124" height="26" rx="4" fill="#7C2D12"/>
+<circle cx="425" cy="298" r="9" fill="#B45309"/>
+<circle cx="452" cy="298" r="9" fill="#B45309"/>
+<circle cx="479" cy="298" r="9" fill="#B45309"/>
+<circle cx="505" cy="298" r="9" fill="#B45309"/>
+<path d="M429,278 q8,-18 0,-36 q-8,-18 0,-36" fill="none" stroke="#B45309" stroke-width="2.5" stroke-dasharray="5 4"/>
+<polygon points="423,204 435,204 429,192" fill="#B45309"/>
+<path d="M465,278 q8,-18 0,-36 q-8,-18 0,-36" fill="none" stroke="#B45309" stroke-width="2.5" stroke-dasharray="5 4"/>
+<polygon points="459,204 471,204 465,192" fill="#B45309"/>
+<path d="M501,278 q8,-18 0,-36 q-8,-18 0,-36" fill="none" stroke="#B45309" stroke-width="2.5" stroke-dasharray="5 4"/>
+<polygon points="495,204 507,204 501,192" fill="#B45309"/>
+<text x="465" y="336" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">charcoal below</text>
+</svg>

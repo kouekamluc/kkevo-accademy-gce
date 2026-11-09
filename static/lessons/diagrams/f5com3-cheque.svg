@@ -1,0 +1,17 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><defs><marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#102A43"/></marker></defs><rect width="560" height="360" fill="#ffffff"/><text x="280" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">The parts of a cheque</text><rect x="30" y="55" width="500" height="170" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="50" y="85" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">Example Bank (invented)</text>
+<text x="510" y="85" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">Date: 12 / 03 / 2026</text>
+<text x="50" y="125" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">Pay</text>
+<line x1="85" y1="128" x2="350" y2="128" stroke="#102A43" stroke-width="2"/>
+<text x="100" y="121" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#2563EB">Ms C (the payee)</text>
+<text x="50" y="160" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">Sum of</text>
+<line x1="105" y1="163" x2="350" y2="163" stroke="#102A43" stroke-width="2"/>
+<text x="115" y="156" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">Seventy thousand francs</text>
+<rect x="390" y="138" width="120" height="36" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<text x="450" y="162" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">70 000</text>
+<line x1="330" y1="205" x2="510" y2="205" stroke="#102A43" stroke-width="2"/>
+<text x="420" y="220" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#B45309">Mr A (the drawer) signs</text>
+<text x="50" y="215" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#047857">To: Example Bank</text>
+<text x="280" y="288" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">Drawer = the person who writes and signs it</text>
+<text x="280" y="312" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">Drawee = the bank told to pay</text>
+<text x="280" y="336" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">Payee = the person who is paid</text></svg>

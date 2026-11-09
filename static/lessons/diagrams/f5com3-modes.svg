@@ -1,0 +1,15 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><defs><marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#102A43"/></marker></defs><rect width="560" height="360" fill="#ffffff"/><text x="280" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">Road, rail, sea, air: a rough comparison</text><text x="130" y="64" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#2563EB">Speed (longer = faster)</text>
+<text x="430" y="64" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#B45309">Cost per tonne, long trip</text>
+<text x="20" y="116" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Air</text>
+<rect x="80" y="94" width="200" height="32" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="330" y="94" width="200" height="32" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="20" y="174" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Road</text>
+<rect x="80" y="152" width="150" height="32" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="330" y="152" width="150" height="32" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="20" y="232" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Rail</text>
+<rect x="80" y="210" width="150" height="32" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="330" y="210" width="100" height="32" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="20" y="290" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Sea</text>
+<rect x="80" y="268" width="50" height="32" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="330" y="268" width="50" height="32" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="280" y="335" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13"  fill="#102A43">Rough ranks to compare modes, not exact figures</text></svg>

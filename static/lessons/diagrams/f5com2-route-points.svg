@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Journey of goods in five numbered points: 1 exporter's warehouse, 2 quayside, 3 loaded on the ship, 4 port of arrival, 5 importer's warehouse"><rect width="560" height="360" fill="#fff"/>
+<text x="280" y="30" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" font-weight="700">A sea export from Douala (schematic)</text>
+<line x1="60" y1="150" x2="500" y2="150" stroke="#102A43" stroke-width="2"/>
+<circle cx="60" cy="150" r="16" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="60" y="156" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" font-weight="700">1</text>
+<text x="60" y="198" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Exporter's</text>
+<text x="60" y="214" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">warehouse</text>
+<circle cx="170" cy="150" r="16" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="170" y="156" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" font-weight="700">2</text>
+<text x="170" y="198" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Quayside at</text>
+<text x="170" y="214" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">port</text>
+<circle cx="280" cy="150" r="16" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="156" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" font-weight="700">3</text>
+<text x="280" y="198" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Goods loaded</text>
+<text x="280" y="214" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">on the ship</text>
+<circle cx="390" cy="150" r="16" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="390" y="156" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" font-weight="700">4</text>
+<text x="390" y="198" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Port of</text>
+<text x="390" y="214" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">arrival</text>
+<circle cx="500" cy="150" r="16" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="500" y="156" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" font-weight="700">5</text>
+<text x="500" y="198" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Importer's</text>
+<text x="500" y="214" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">warehouse</text>
+<text x="280" y="290" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Numbers 1 to 5 mark the points on the journey.</text>
+</svg>

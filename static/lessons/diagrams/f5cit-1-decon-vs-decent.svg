@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Deconcentration compared with decentralization</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="20" y="14" width="250" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="145.0" y="34.0" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">Deconcentration</text>
+<rect x="290" y="14" width="250" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="415.0" y="34.0" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">Decentralization</text>
+<rect x="20" y="70" width="250" height="40" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="145.0" y="81.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Central government</text>
+<text x="145.0" y="99.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">keeps the power</text>
+<rect x="290" y="70" width="250" height="40" rx="8" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="415.0" y="81.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Central government</text>
+<text x="415.0" y="99.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">transfers powers</text>
+<line x1="145" y1="110" x2="145" y2="140" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="145" y1="140" x2="140.4" y2="132.3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="145" y1="140" x2="149.6" y2="132.3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="415" y1="110" x2="415" y2="140" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+<line x1="415" y1="140" x2="410.4" y2="132.3" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+<line x1="415" y1="140" x2="419.6" y2="132.3" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+<rect x="20" y="140" width="250" height="56" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="145.0" y="159.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Appointed officials</text>
+<text x="145.0" y="177.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">(Governor, SDO, DO)</text>
+<rect x="290" y="140" width="250" height="56" rx="8" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="415.0" y="159.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Local authorities with</text>
+<text x="415.0" y="177.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">own legal status</text>
+<line x1="145" y1="196" x2="145" y2="226" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="145" y1="226" x2="140.4" y2="218.3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="145" y1="226" x2="149.6" y2="218.3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="415" y1="196" x2="415" y2="226" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+<line x1="415" y1="226" x2="410.4" y2="218.3" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+<line x1="415" y1="226" x2="419.6" y2="218.3" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+<rect x="20" y="226" width="250" height="56" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="145.0" y="245.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Act for the centre,</text>
+<text x="145.0" y="263.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">under orders</text>
+<rect x="290" y="226" width="250" height="56" rx="8" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="415.0" y="245.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Elected councils with</text>
+<text x="415.0" y="263.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">own budget</text>
+<rect x="20" y="304" width="250" height="40" rx="8" fill="#FFF7ED" stroke="#B45309" stroke-width="2"/>
+<text x="145.0" y="324.0" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Chosen by the President</text>
+<rect x="290" y="304" width="250" height="40" rx="8" fill="#FFF7ED" stroke="#B45309" stroke-width="2"/>
+<text x="415.0" y="324.0" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Chosen by voters</text>
+</svg>

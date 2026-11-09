@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker></defs>
+<text x="130" y="38" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Direct speech</text>
+<text x="430" y="38" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Indirect speech</text>
+<rect x="30" y="56" width="200" height="42" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="130" y="83" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43">présent</text>
+<line x1="238" y1="77" x2="322" y2="77" stroke="#2563EB" stroke-width="3" marker-end="url(#a)"/>
+<rect x="330" y="56" width="200" height="42" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="430" y="83" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43">imparfait</text>
+<rect x="30" y="114" width="200" height="42" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="130" y="141" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43">passé composé</text>
+<line x1="238" y1="135" x2="322" y2="135" stroke="#2563EB" stroke-width="3" marker-end="url(#a)"/>
+<rect x="330" y="114" width="200" height="42" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="430" y="141" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43">plus-que-parfait</text>
+<rect x="30" y="172" width="200" height="42" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="130" y="199" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43">futur simple</text>
+<line x1="238" y1="193" x2="322" y2="193" stroke="#2563EB" stroke-width="3" marker-end="url(#a)"/>
+<rect x="330" y="172" width="200" height="42" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="430" y="199" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43">conditionnel présent</text>
+<rect x="30" y="230" width="200" height="42" rx="6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="130" y="257" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43">futur antérieur</text>
+<line x1="238" y1="251" x2="322" y2="251" stroke="#2563EB" stroke-width="3" marker-end="url(#a)"/>
+<rect x="330" y="230" width="200" height="42" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="430" y="257" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43">conditionnel passé</text>
+<text x="280" y="304" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#B45309">After a past reporting verb (a dit, disait, a demandé)</text>
+<text x="280" y="328" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Imparfait, plus-que-parfait, conditionnel: no change</text>
+</svg>

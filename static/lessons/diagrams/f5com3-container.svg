@@ -1,0 +1,19 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><defs><marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#102A43"/></marker></defs><rect width="560" height="360" fill="#ffffff"/><text x="280" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">One container, several modes</text><rect x="20" y="120" width="100" height="70" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="70" y="150" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Factory</text>
+<text x="70" y="174" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13"  fill="#102A43">packs, seals</text>
+<rect x="160" y="120" width="100" height="70" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="210" y="150" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Lorry</text>
+<text x="210" y="174" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13"  fill="#102A43">to the port</text>
+<rect x="300" y="120" width="100" height="70" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="350" y="150" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Ship</text>
+<text x="350" y="174" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13"  fill="#102A43">by sea</text>
+<rect x="440" y="120" width="100" height="70" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="490" y="150" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Lorry</text>
+<text x="490" y="174" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13"  fill="#102A43">to the buyer</text>
+<line x1="122" y1="155" x2="176" y2="155" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<line x1="262" y1="155" x2="316" y2="155" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<line x1="402" y1="155" x2="456" y2="155" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<rect x="150" y="235" width="260" height="50" fill="#FEF3C7" stroke="#B45309" stroke-width="2"/>
+<text x="280" y="266" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#B45309">Same container, not opened</text>
+<line x1="280" y1="233" x2="280" y2="192" stroke="#B45309" stroke-width="2"/>
+<text x="280" y="330" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13"  fill="#102A43">Customs seal stays unbroken until the buyer receives it</text></svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<polygon points="30,110 280,40 530,110" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="95" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102A43" text-anchor="middle">ISLAM</text>
+<rect x="30" y="110" width="500" height="14" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="48" y="124" width="64" height="150" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="80" y="205" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#047857" text-anchor="middle">1</text>
+<text x="80" y="300" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Shahada</text>
+<text x="80" y="320" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Faith</text>
+<rect x="148" y="124" width="64" height="150" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="180" y="205" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#047857" text-anchor="middle">2</text>
+<text x="180" y="300" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Salat</text>
+<text x="180" y="320" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Prayer</text>
+<rect x="248" y="124" width="64" height="150" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280" y="205" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#047857" text-anchor="middle">3</text>
+<text x="280" y="300" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Zakat</text>
+<text x="280" y="320" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Charity</text>
+<rect x="348" y="124" width="64" height="150" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="380" y="205" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#047857" text-anchor="middle">4</text>
+<text x="380" y="300" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Sawm</text>
+<text x="380" y="320" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Fasting</text>
+<rect x="448" y="124" width="64" height="150" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="480" y="205" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#047857" text-anchor="middle">5</text>
+<text x="480" y="300" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43" text-anchor="middle">Hajj</text>
+<text x="480" y="320" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Pilgrimage</text>
+<rect x="30" y="274" width="500" height="10" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="34" font-family="Inter, Arial, sans-serif" font-size="18" fill="#102A43" text-anchor="middle" font-weight="700">The accounting equation</text>
+<rect x="20" y="60" width="210" height="250" rx="10" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="125" y="90" font-family="Inter, Arial, sans-serif" font-size="17" fill="#2563EB" text-anchor="middle" font-weight="700">ASSETS</text>
+<text x="125" y="112" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">what the business owns</text>
+<text x="125" y="148" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="400">Cash and bank</text>
+<text x="125" y="178" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="400">Stock of goods</text>
+<text x="125" y="208" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="400">Equipment</text>
+<text x="125" y="238" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="400">Vehicles</text>
+<text x="125" y="268" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="400">Customers (debtors)</text>
+<text x="250" y="192" font-family="Inter, Arial, sans-serif" font-size="34" fill="#102A43" text-anchor="middle" font-weight="700">=</text>
+<rect x="270" y="60" width="270" height="110" rx="10" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="405" y="90" font-family="Inter, Arial, sans-serif" font-size="17" fill="#047857" text-anchor="middle" font-weight="700">CAPITAL</text>
+<text x="405" y="112" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">owed to the owner</text>
+<text x="405" y="142" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">money paid in + profit - drawings</text>
+<rect x="270" y="200" width="270" height="110" rx="10" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="405" y="230" font-family="Inter, Arial, sans-serif" font-size="17" fill="#047857" text-anchor="middle" font-weight="700">LIABILITIES</text>
+<text x="405" y="252" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">owed to outsiders</text>
+<text x="405" y="282" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">suppliers, bank loans, VAT due</text>
+<text x="405" y="190" font-family="Inter, Arial, sans-serif" font-size="28" fill="#102A43" text-anchor="middle" font-weight="700">+</text>
+<text x="280" y="340" font-family="Inter, Arial, sans-serif" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700">Both sides are always equal in value.</text>
+</svg>

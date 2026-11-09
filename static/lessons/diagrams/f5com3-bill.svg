@@ -1,0 +1,18 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><defs><marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#102A43"/></marker></defs><rect width="560" height="360" fill="#ffffff"/><text x="280" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">A term bill of exchange</text><rect x="30" y="70" width="140" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="100" y="106" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Drawer</text>
+<rect x="390" y="70" width="140" height="60" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="460" y="96" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Drawee</text>
+<text x="460" y="116" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">(acceptor)</text>
+<rect x="210" y="250" width="140" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="286" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Bank</text>
+<line x1="172" y1="88" x2="388" y2="88" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<text x="280" y="78" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">1 sends the bill</text>
+<line x1="388" y1="114" x2="172" y2="114" stroke="#047857" stroke-width="2" marker-end="url(#a)"/>
+<text x="280" y="138" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#047857">2 accepted and returned</text>
+<line x1="100" y1="132" x2="215" y2="248" stroke="#B45309" stroke-width="2" marker-end="url(#a)"/>
+<text x="98" y="195" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#B45309">3 sells it</text>
+<text x="98" y="213" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#B45309">at a discount</text>
+<line x1="460" y1="132" x2="348" y2="248" stroke="#2563EB" stroke-width="2" marker-end="url(#a)"/>
+<text x="548" y="195" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#2563EB">4 pays full sum</text>
+<text x="548" y="213" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#2563EB">on due date</text>
+<text x="280" y="340" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13"  fill="#102A43">The bank pays less than face value at step 3 and collects the full value at step 4</text></svg>

@@ -1,0 +1,472 @@
+"""Practice sets for Form 5 Principles of Accounts: Cash Books, Petty Cash & Bank Reconciliation, and Control Accounts,
+Correction of Errors & Payroll (one set of 8 questions per lesson). Payroll rates in these questions are teaching rates
+invented for practice; check the current legal rates."""
+
+from .dsl import *  # noqa: F403
+
+COURSE = ("principles-of-accounts", "form-5")
+
+M_CASH = "Cash Books, Petty Cash & Bank Reconciliation"
+M_CTRL = "Control Accounts, Correction of Errors & Payroll"
+T_CB1 = "Single and two-column cash books"
+T_CB3 = "The three-column cash book"
+T_CBA = "The analytical cash book"
+T_PETTY = "The petty cash book"
+T_BANK = "Bank reconciliation statements"
+T_CTRL = "Control accounts"
+T_ERR1 = "Errors not disclosed by the trial balance"
+T_ERR2 = "The suspense account and errors disclosed"
+T_PAY1 = "Payroll: calculating pay"
+T_PAY2 = "Payroll: statutory deductions"
+
+
+def Q(prompt, options, ans, whys, step, concept, skill, hint, feedback="", math=""):
+    """4-option multiple choice. `ans` is the 0-based index of the correct option; `whys` has one line per option ("" for the right one)."""
+    choices = [C(o, correct=(i == ans), why="" if i == ans else whys[i]) for i, o in enumerate(options)]
+    return MC(prompt, choices, [S("Reasoning", math=math, text=step)], concept=concept, skill=skill, hint=hint, feedback=feedback)
+
+
+def N(prompt, answer, step, concept, skill, hint, feedback="", math="", unit="FCFA", tolerance=0):
+    return NUM(prompt, answer, [S("Working", math=math, text=step)], tolerance=tolerance, unit=unit, concept=concept, skill=skill, hint=hint, feedback=feedback)
+
+
+SETS = []
+
+# ------------------------------------------------------------------ 1. Single and two-column cash books
+SETS.append(practice_set(
+    module=M_CASH, topic=T_CB1,
+    title="Single and two-column cash books: check your understanding",
+    lesson="acc2-single-two-column-cash-books",
+    questions=[
+        Q("In a cash book, money received is entered on the",
+          ["credit side", "debit side", "side with the smaller total", "bank column only"], 1,
+          ["The credit side holds payments.", "", "The side does not depend on the totals.", "Cash receipts also have a column; the side is what matters."],
+          "The cash book is an asset account. Money coming in is a debit, money going out is a credit.",
+          "Sides of the cash book", "Recall", "Treat the cash book like any asset account: what does an increase do?"),
+        Q("The cash book is best described as",
+          ["only a ledger account", "only a book of original entry", "a list of balances taken from the ledger", "both a book of original entry and the cash and bank account"], 3,
+          ["It is that, but it is also where the transactions are first written.", "It is that, but it is also the account itself.", "That describes a trial balance.", ""],
+          "Items are written in it first and it also acts as the cash and bank account, so cash is not posted again.",
+          "Role of the cash book", "Concept", "Think about whether items are entered in it first and then copied to a cash account."),
+        Q("Which transaction is a contra entry?",
+          ["Withdrawing 50 000 from the bank for use in the till", "Paying wages by cheque", "Making a cash sale", "Receiving a cheque from a debtor"], 0,
+          ["", "The other side is the Wages account.", "The other side is the Sales account.", "The other side is the debtor's account."],
+          "A contra entry has both debit and credit inside the cash book: debit cash, credit bank.",
+          "Contra entries", "Concept", "Which transaction involves only cash and bank?"),
+        N("A trader's cash balance on 1 May was 85 000. During May she received 55 000 and paid out 67 000 in cash. Find her closing cash balance.", 73000,
+          "Debit side 85 000 + 55 000 = 140 000. Credit side 67 000. Balance = 140 000 − 67 000 = 73 000.",
+          "Balancing a cash column", "Calculation", "Add all the receipts including the opening balance, then take away the payments.",
+          math=r"85\,000 + 55\,000 - 67\,000 = 73\,000"),
+        Q("Which of these entries is NOT posted to any other ledger account?",
+          ["Rent paid in cash", "A cheque received from a debtor", "Cash banked on the same day", "Wages paid by transfer"], 2,
+          ["The other side goes to the Rent account.", "The other side goes to the debtor's account.", "", "The other side goes to the Wages account."],
+          "Cash banked is a contra entry. Both sides are already in the cash book.",
+          "Posting from the cash book", "Application", "Which item has no account outside the cash book?"),
+        Q("The bank column of a cash book has a credit balance. This means the business",
+          ["has more money in the bank than it thought", "made a cash book error that must be removed", "has paid wages twice", "is overdrawn at the bank"], 3,
+          ["A bank asset is a debit balance.", "A bank overdraft is possible, unlike a credit cash balance.", "Nothing in the figures shows wages were paid twice.", ""],
+          "The bank column can be credit when the bank lets the business pay out more than it has paid in. That is an overdraft.",
+          "Bank overdraft", "Interpretation", "Compare this with the cash column, which can never be credit."),
+        N("In a two-column cash book the bank column opened with 120 000. The business received cheques of 80 000, banked 40 000 of cash and paid a supplier by cheque 150 000. Find the closing bank balance.", 90000,
+          "Debit side 120 000 + 80 000 + 40 000 = 240 000. Credit side 150 000. Balance 90 000 debit.",
+          "Balancing the bank column", "Calculation", "Banking cash is a debit in the bank column.",
+          math=r"120\,000 + 80\,000 + 40\,000 - 150\,000 = 90\,000"),
+        Q("When a student balances a cash column, the balance appears on the credit side. What should the student conclude?",
+          ["The business is overdrawn in cash", "The cash column probably contains an error", "The totals can be left unequal", "The balance should be written on the debit side as b/d"], 1,
+          ["Only the bank column can be overdrawn.", "", "Both sides must total the same figure.", "That is done for the next day, but it does not explain a credit cash balance."],
+          "A cash balance cannot be a credit, because you cannot pay out cash you do not have. Check the additions and the sides of the entries.",
+          "Cash balance cannot be credit", "Reasoning", "Cash in a till cannot be negative."),
+    ]))
+
+# ------------------------------------------------------------------ 2. The three-column cash book
+assert 60000 * 3 // 100 == 1800 and 150000 - 150000 * 4 // 100 == 144000 and 100000 + 45000 - 30000 == 115000
+SETS.append(practice_set(
+    module=M_CASH, topic=T_CB3,
+    title="The three-column cash book: check your understanding",
+    lesson="acc2-three-column-cash-book",
+    questions=[
+        Q("Discount allowed is recorded in the cash book on the",
+          ["credit side, because it is an expense", "credit side, because it reduces the debtor's balance", "debit side, next to the receipt", "bank column"], 2,
+          ["It is an expense, but expenses are debited.", "It does reduce the debtor's balance, but in the debtor's account; the cash book entry is the debit.", "", "The discount column is separate from the cash and bank columns."],
+          "A debtor pays less because of the discount. The cash book shows the receipt on the debit side with the discount beside it, and the discount is a debit in Discount Allowed.",
+          "Discount allowed", "Recall", "Think about who benefits: the customer, so the business has an expense."),
+        Q("Which discount is NOT recorded in the cash book?",
+          ["Trade discount", "Discount allowed", "Discount received", "Cash discount given to a debtor"], 0,
+          ["", "This is a cash discount and it is recorded.", "This is a cash discount and it is recorded.", "A cash discount for prompt payment is recorded."],
+          "A trade discount is taken off on the invoice before any entry is made. Only cash (settlement) discounts for early payment go in the discount columns.",
+          "Trade and cash discount", "Concept", "Which one is allowed when the invoice is made out, not when payment is made?"),
+        N("A debtor owes 60 000 and is allowed a 3% cash discount for paying within 10 days. Find the discount allowed.", 1800,
+          "3% of 60 000 = 3/100 × 60 000 = 1 800.", "Calculating cash discount", "Calculation", "Find 3% of the amount owed.",
+          math=r"\frac{3}{100} \times 60\,000 = 1\,800"),
+        N("A business owes a supplier 150 000 and pays on time to receive a 4% discount. How much does it pay?", 144000,
+          "Discount = 4% × 150 000 = 6 000. Amount paid = 150 000 − 6 000 = 144 000.", "Payment after discount", "Calculation",
+          "Find the discount first, then take it from the debt.", math=r"150\,000 - 6\,000 = 144\,000"),
+        Q("At the end of the month the discount received column total is",
+          ["balanced against the discount allowed column", "posted to the debit of the Discount Received account", "carried down as a balance b/d", "posted to the credit of the Discount Received account"], 3,
+          ["The two columns are on opposite sides and are never balanced against each other.", "Discount received is a gain, so its account is credited.", "Discount columns have no balance c/d or b/d.", ""],
+          "Discount received is a gain. The column total is credited to the Discount Received account.",
+          "Posting discount totals", "Application", "Is a gain debited or credited?"),
+        Q("A customer clears a debt of 80 000 by paying a cheque for 78 000. The cash book shows",
+          ["bank 80 000 on the debit side", "bank 78 000 and discount allowed 2 000 on the debit side", "bank 78 000 on the credit side and discount received 2 000", "bank 78 000 on the debit side only"], 1,
+          ["Only 78 000 was received in the bank.", "", "A customer's payment is a receipt, so it is on the debit side.", "The 2 000 reduction must also be recorded, otherwise the debtor still owes it."],
+          "78 000 is received (debit bank) and 2 000 is discount allowed (debit side, discount column). The debtor's account is credited 80 000.",
+          "Recording a settlement", "Application", "Cheque received, plus a reduction we gave."),
+        N("A business opens with bank 100 000. It receives a cheque for 45 000 (a 5 000 discount was allowed) and pays a creditor by cheque 30 000 (a 2 000 discount was received). Find the bank balance.", 115000,
+          "The discount does not change the bank column. Bank = 100 000 + 45 000 − 30 000 = 115 000.", "Bank column and discount", "Calculation",
+          "Discounts are in their own column. Use only the amounts that went through the bank.", math=r"100\,000 + 45\,000 - 30\,000 = 115\,000"),
+        Q("Why are the two discount columns not balanced like the cash and bank columns?",
+          ["They hold amounts that are not real money", "They are always equal", "They belong to two different accounts and are simply totalled and posted", "The bank does not allow it"], 2,
+          ["The discounts are real reductions in what is owed.", "They are rarely equal.", "", "Banks have no say in this."],
+          "Each discount column total goes to a different ledger account, so there is no balance between them. Only the cash and bank columns are balanced.",
+          "Discount columns", "Reasoning", "Where does each column total go?"),
+    ]))
+
+# ------------------------------------------------------------------ 3. The analytical cash book
+assert 135000 + 20000 + 100000 == 255000 and 147000 - (52000 + 25000 + 40000) == 30000 and 20000 + 255000 - 147000 == 128000
+SETS.append(practice_set(
+    module=M_CASH, topic=T_CBA,
+    title="The analytical cash book: check your understanding",
+    lesson="acc2-analytical-cash-book",
+    questions=[
+        Q("An analytical cash book has analysis columns so that",
+          ["the date can be left out", "column totals can be posted to the ledger instead of every single entry", "the bank statement can be avoided", "the trial balance is not needed"], 1,
+          ["Dates are still written.", "", "The bank statement is still received and checked.", "The trial balance is still prepared."],
+          "Analysis columns group like items, so one monthly total is posted instead of many entries.",
+          "Purpose of analysis columns", "Concept", "Think of posting 300 cash sales in a month."),
+        Q("Cross-casting in an analytical cash book means",
+          ["adding each column downwards only", "copying totals to the ledger", "balancing the cash account", "adding the analysis column totals across and comparing with the total column"], 3,
+          ["That is only the first check.", "That is posting.", "Balancing uses the opening balance and receipts and payments.", ""],
+          "The analysis columns must add up across to the total column. If not, there is an error.",
+          "Cross-casting", "Recall", "It is a check across the page."),
+        N("In a receipts table the analysis columns are Sales 135 000, Debtors 20 000 and Capital 100 000. Find the total column.", 255000,
+          "The total column equals the sum of the analysis columns: 135 000 + 20 000 + 100 000 = 255 000.",
+          "Cross-cast of receipts", "Calculation", "Add the three analysis columns.", math=r"135\,000 + 20\,000 + 100\,000 = 255\,000"),
+        Q("A payment of 40 000 to B. Nji, a supplier owed money for earlier purchases, belongs in which payments column?",
+          ["Creditors", "Purchases", "Wages", "Capital"], 0,
+          ["", "The goods were bought earlier on credit and recorded then; this is a payment of the debt.", "Wages are paid to employees.", "Capital is the owner's money put into the business, a receipt."],
+          "Paying a supplier for earlier credit purchases settles a creditor. The Creditors column is used.",
+          "Choosing a column", "Application", "Was this payment for goods bought now for cash, or for a debt already owed?"),
+        N("A payments total column is 147 000. The analysis columns show Purchases 52 000, Rent 25 000 and Creditors 40 000. Find the total of the Wages column.", 30000,
+          "52 000 + 25 000 + 40 000 = 117 000. Wages = 147 000 − 117 000 = 30 000.", "Finding a missing column total", "Calculation",
+          "Subtract the known analysis columns from the total column.", math=r"147\,000 - 117\,000 = 30\,000"),
+        Q("A payments total column is 80 000 but the analysis columns add up to 70 000. The most likely reason is",
+          ["the cash book is correct", "the bank charged interest", "an amount was not entered in any analysis column", "the opening balance is wrong"], 2,
+          ["Then the columns would cross-cast.", "Bank interest does not affect the way a row is analysed.", "", "The opening balance is not part of the payments columns."],
+          "A payment in the total column that never reached an analysis column leaves the analysis short by that amount.",
+          "Cross-cast error", "Reasoning", "Which row has the total but no analysis?"),
+        N("Opening cash was 20 000. Total receipts were 255 000 and total payments 147 000. Find the closing cash balance.", 128000,
+          "20 000 + 255 000 − 147 000 = 128 000.", "Closing balance", "Calculation", "Opening balance plus receipts, less payments.",
+          math=r"20\,000 + 255\,000 - 147\,000 = 128\,000"),
+        Q("At month end the Sales analysis column of the receipts side totals 135 000. In which ledger account is it entered?",
+          ["Debit side of the Sales account", "Credit side of the Sales account", "Credit side of the Cash account", "Debit side of the Debtors account"], 1,
+          ["Sales are credited, not debited.", "", "The cash book is the cash account; no second entry is made.", "That would increase debtors but these are cash sales."],
+          "Sales are income, so the total is credited to the Sales account. The debit is the cash book itself.",
+          "Posting column totals", "Application", "Cash comes in (debit cash book): what is the matching credit?"),
+    ]))
+
+# ------------------------------------------------------------------ 4. The petty cash book
+assert 50000 - 28500 == 21500 and 80000 - 62400 == 17600 and 4500 + 2500 == 7000 and 19000 + 28500 == 47500 and 50000 - 47500 == 2500
+SETS.append(practice_set(
+    module=M_CASH, topic=T_PETTY,
+    title="The petty cash book and the imprest system: check your understanding",
+    lesson="acc2-petty-cash-book",
+    questions=[
+        Q("A petty cash book is kept to record",
+          ["all credit sales", "the owner's drawings", "small payments for items such as fares and postage", "bank loans"], 2,
+          ["Credit sales go in the sales journal.", "Drawings are recorded elsewhere, normally through the main cash book.", "", "Loans are large items recorded through the main cash book."],
+          "Petty cash covers small, frequent expenses so the main cash book stays uncluttered.",
+          "Purpose of petty cash", "Recall", "Which items are too small to trouble the main cash book with?"),
+        Q("Under the imprest system, the petty cashier at the end of each period is given",
+          ["exactly the amount spent, restoring the float", "a new float of a different size", "the whole float again whatever was spent", "only the balance left in the box"], 0,
+          ["", "The float is fixed.", "That would raise the cash held above the float.", "That is already in the box."],
+          "The refund equals the amount spent, so the cash held returns to the fixed float.",
+          "Imprest system", "Concept", "What makes the float constant?"),
+        N("A petty cashier starts with a float of 50 000 and the vouchers total 28 500. Find the reimbursement.", 28500,
+          "The reimbursement is the amount spent: 28 500. (Check: cash left 21 500 + 28 500 = 50 000.)",
+          "Reimbursement", "Calculation", "Reimburse what was spent.", math=r"50\,000 - 21\,500 = 28\,500"),
+        N("A float of 80 000 is used. Vouchers for 62 400 have been paid. How much cash should be in the box?", 17600,
+          "Cash left = float − spent = 80 000 − 62 400 = 17 600.", "Cash left in the box", "Calculation",
+          "Float less what has been spent.", math=r"80\,000 - 62\,400 = 17\,600"),
+        Q("The purpose of a petty cash voucher is to",
+          ["increase the float", "replace the main cash book", "post the totals to the ledger", "give proof and authority for each small payment"], 3,
+          ["The float is not changed by a voucher.", "The main cash book still records the reimbursement.", "Posting is done from the analysis columns.", ""],
+          "Each payment is backed by a voucher, so the supervisor can check that the cash was properly spent.",
+          "Petty cash vouchers", "Concept", "Think of control over small sums."),
+        Q("At the end of a period the analysis column totals of the petty cash book are posted to the",
+          ["credit of the expense accounts", "debit of the expense accounts", "debit of the Petty Cash account in the ledger", "credit of the Capital account"], 1,
+          ["Expenses are debited.", "", "The petty cash book is itself a book of original entry; the refund is recorded in the main cash book.", "Capital is not affected."],
+          "Each analysis total is an expense, so it is debited. The credit is the refund in the main cash book.",
+          "Posting petty cash totals", "Application", "What is an expense: a debit or a credit?"),
+        N("In a petty cash book the Travel column has entries of 4 500 and 2 500. Find the column total.", 7000,
+          "4 500 + 2 500 = 7 000.", "Analysis column total", "Calculation", "Add the entries in the column.", math=r"4\,500 + 2\,500 = 7\,000"),
+        Q("The float is 50 000, the vouchers total 28 500 and the cash in the box is 19 000. What does this show?",
+          ["Everything agrees", "There is 2 500 more cash than expected", "2 500 is unaccounted for", "The float must be 47 500"], 2,
+          ["Cash 19 000 + vouchers 28 500 = 47 500, not 50 000.", "The cash is less than the expected 21 500, not more.", "", "The float is fixed at 50 000."],
+          "Expected cash left is 50 000 − 28 500 = 21 500. The box has 19 000, so 2 500 is missing or a voucher has not been produced.",
+          "Imprest check", "Reasoning", "Compare the cash expected with the cash found."),
+    ]))
+
+# ------------------------------------------------------------------ 5. Bank reconciliation statements
+assert 312000 - 4000 - 15000 + 30000 - 20000 == 303000 and 303000 + 73000 - 60000 == 316000 and -18000 + 20000 - 12000 == -10000
+assert 150000 - 8000 - 2000 + 25000 == 165000
+SETS.append(practice_set(
+    module=M_CASH, topic=T_BANK,
+    title="Bank reconciliation statements: check your understanding",
+    lesson="acc2-bank-reconciliation-statements",
+    questions=[
+        Q("An unpresented cheque is a cheque that",
+          ["a customer wrote but the bank refused to pay", "the bank has paid but the business has not recorded", "the business has written and recorded but the bank has not yet paid", "has been banked by the business but is not on the statement"], 2,
+          ["That is a dishonoured cheque.", "That would require a cash book entry, which is different from an unpresented cheque.", "", "That describes an uncredited lodgment."],
+          "The business enters the cheque when it writes it, but the bank only pays it when the payee presents it.",
+          "Unpresented cheques", "Recall", "Who has not yet acted: the business, the payee or the bank?"),
+        Q("Which item must be entered in the cash book before the reconciliation is done?",
+          ["Bank charges shown on the statement", "A cheque the business wrote on 31 December", "A deposit made on 31 December", "The bank statement balance"], 0,
+          ["", "It is already in the cash book.", "It is already in the cash book.", "The statement balance is not an entry."],
+          "Items first recorded by the bank (charges, interest, standing orders, direct credits, dishonoured cheques) must be entered in the cash book.",
+          "Updating the cash book", "Concept", "Which item did the business not know about until the statement arrived?"),
+        Q("A business has a debit balance in the bank column of its cash book. On the bank statement the same money appears as",
+          ["a debit balance", "a negative balance", "an overdraft", "a credit balance"], 3,
+          ["The bank's books are the mirror image of ours.", "A positive balance with the bank is not negative.", "That would be a debit balance on the statement.", ""],
+          "The money is an asset for us (debit) but a liability for the bank (credit).",
+          "Debit and credit viewpoints", "Concept", "The bank owes the customer the money."),
+        N("The bank column of a cash book shows 312 000. The statement shows bank charges 4 000, a standing order 15 000, a direct credit from a customer 30 000 and a dishonoured cheque 20 000, none yet in the cash book. Find the updated cash book balance.", 303000,
+          "312 000 − 4 000 − 15 000 + 30 000 − 20 000 = 303 000.", "Updating the cash book", "Calculation",
+          "The direct credit adds to the bank money; the other three reduce it.", math=r"312\,000 - 4\,000 - 15\,000 + 30\,000 - 20\,000 = 303\,000"),
+        N("The updated cash book balance is 303 000. Unpresented cheques are 73 000 and uncredited lodgments 60 000. Find the balance on the bank statement.", 316000,
+          "303 000 + 73 000 − 60 000 = 316 000.", "Reconciliation statement", "Calculation",
+          "Add the cheques the bank has not paid; deduct the lodgments it has not received.", math=r"303\,000 + 73\,000 - 60\,000 = 316\,000"),
+        Q("A customer's cheque for 20 000 that was banked is returned unpaid. In the cash book the business should",
+          ["debit bank 20 000 and credit the customer", "credit bank 20 000 and debit the customer", "do nothing, because the bank has dealt with it", "debit bank charges 20 000"], 1,
+          ["That repeats the original entry.", "", "The cash book still shows the money as received, so it must be corrected.", "The amount is not a bank charge."],
+          "The money never arrived, so reduce bank (credit) and restore the debt (debit the customer).",
+          "Dishonoured cheque", "Application", "Reverse the entry made when the cheque was banked."),
+        N("The updated cash book shows an overdraft of 18 000. Unpresented cheques are 20 000 and uncredited lodgments 12 000. Find the overdraft shown on the bank statement.", 10000,
+          "Treat the overdraft as −18 000. −18 000 + 20 000 − 12 000 = −10 000, an overdraft of 10 000.", "Overdraft reconciliation", "Calculation",
+          "Use a negative number for the overdraft and apply the same rules.", math=r"-18\,000 + 20\,000 - 12\,000 = -10\,000"),
+        Q("Which statement about timing differences is correct?",
+          ["They must be entered in the cash book", "They are the same as bank charges", "They appear in the reconciliation but need no cash book entry", "They are errors by the bank"], 2,
+          ["The cash book already contains them.", "Bank charges are not timing differences; they require entries.", "", "They are just items where one side records later than the other."],
+          "Unpresented cheques and uncredited lodgments are already in the cash book. They only explain the difference to the statement.",
+          "Timing differences", "Reasoning", "Which record already contains the item?"),
+    ]))
+
+# ------------------------------------------------------------------ 6. Control accounts
+assert 60000 + 200000 - (170000 + 5000 + 10000) == 75000 and 40000 + 150000 - (120000 + 4000 + 6000) == 60000
+assert 95000 + 300000 + 6000 + 9000 - 70000 == 340000
+SETS.append(practice_set(
+    module=M_CTRL, topic=T_CTRL,
+    title="Sales and purchases ledger control accounts: check your understanding",
+    lesson="acc2-control-accounts",
+    questions=[
+        Q("The main purpose of a sales ledger control account is to",
+          ["record cash sales", "give a check on the total of the debtors' accounts", "replace the individual debtors' accounts", "record the owner's drawings"], 1,
+          ["Cash sales do not make debtors.", "", "The personal accounts are still needed to know who owes what.", "Drawings have nothing to do with debtors."],
+          "The control balance should equal the sum of the debtors' balances. A difference signals an error.",
+          "Purpose of control accounts", "Concept", "A control account is a check, not a replacement."),
+        Q("Which item would NOT appear in the sales ledger control account?",
+          ["Credit sales", "Returns inwards", "Bad debts written off", "Cash sales"], 3,
+          ["Credit sales increase debtors.", "Returns reduce what debtors owe.", "Bad debts reduce debtors.", ""],
+          "Cash sales do not create a debtor, so they are left out. The Board's 2023 report notes that candidates wrongly included them.",
+          "What to leave out", "Recall", "Which item involves no debtor?"),
+        N("Opening debtors 60 000. Credit sales 200 000. Cash sales 80 000. Cash from debtors 170 000. Discount allowed 5 000. Returns inwards 10 000. Find the closing debtors.", 75000,
+          "Cash sales are left out. Debit side 60 000 + 200 000 = 260 000. Credit side 170 000 + 5 000 + 10 000 = 185 000. Balance = 75 000.",
+          "Sales ledger control account", "Calculation", "Ignore the cash sales, then balance the account.",
+          math=r"(60\,000 + 200\,000) - (170\,000 + 5\,000 + 10\,000) = 75\,000"),
+        N("Opening creditors 40 000. Credit purchases 150 000. Payments to creditors 120 000. Discount received 4 000. Returns outwards 6 000. Find closing creditors.", 60000,
+          "Credit side 40 000 + 150 000 = 190 000. Debit side 120 000 + 4 000 + 6 000 = 130 000. Balance = 60 000.",
+          "Purchases ledger control account", "Calculation", "Credit purchases increase creditors; payments, discount and returns reduce them.",
+          math=r"(40\,000 + 150\,000) - (120\,000 + 4\,000 + 6\,000) = 60\,000"),
+        Q("A customer who is also a supplier agrees that 15 000 owed by him be set off against 15 000 the business owes him. The entries are",
+          ["credit sales ledger control account, debit purchases ledger control account", "debit sales ledger control account, credit purchases ledger control account", "credit both control accounts", "debit both control accounts"], 0,
+          ["", "That would increase debtors and creditors.", "Both entries cannot be credits.", "Both entries cannot be debits."],
+          "Debtors fall (credit) and creditors fall (debit).",
+          "Contra items", "Application", "A debt owed to us is cancelled, and a debt we owe is cancelled."),
+        N("Opening debtors 70 000; closing debtors 95 000; cash received from debtors 300 000; discount allowed 6 000; returns inwards 9 000. Find the credit sales.", 340000,
+          "Debit side: 70 000 + credit sales. Credit side: 300 000 + 6 000 + 9 000 + 95 000 = 410 000. Credit sales = 410 000 − 70 000 = 340 000.",
+          "Finding a missing figure", "Calculation", "Put the closing balance on the credit side, then find the figure that balances.",
+          math=r"410\,000 - 70\,000 = 340\,000"),
+        Q("A debtor overpaid and has a credit balance of 4 000 at the start of the period. In the sales ledger control account it is shown",
+          ["on the debit side, as part of opening debtors", "ignored, because it is small", "on the credit side as an opening balance", "on the debit side as a closing balance"], 2,
+          ["Credit balances are not debit balances.", "Balances given must be included, as the Board's report notes.", "", "It is an opening balance, not a closing one."],
+          "Opening credit balances in the debtors' ledger go on the credit side of the control account.",
+          "Credit balances in the debtors ledger", "Application", "Is an overpayment a debit or a credit in the debtor's account?"),
+        Q("The sales ledger control account balance is 205 000 and the list of debtors' balances adds up to 203 000. The sensible next step is to",
+          ["change the control account to 203 000", "search for an error of 2 000 in the personal accounts, the control account or the list", "ignore it because the difference is small", "add 2 000 to credit sales"], 1,
+          ["That would hide the error.", "", "Control accounts exist to expose such differences.", "That would add a new unexplained entry."],
+          "A difference means an error somewhere. Check the postings and additions until the 2 000 is found.",
+          "Using the control account as a check", "Reasoning", "What is the control account for?"),
+    ]))
+
+# ------------------------------------------------------------------ 7. Errors not disclosed by the trial balance
+assert 54000 - 45000 == 9000 and 2 * 18000 == 36000 and 400000 + 80000 - 15000 == 465000
+SETS.append(practice_set(
+    module=M_CTRL, topic=T_ERR1,
+    title="Errors not disclosed by the trial balance: check your understanding",
+    lesson="acc2-errors-not-disclosed-by-trial-balance",
+    questions=[
+        Q("When the two totals of a trial balance agree, this shows that",
+          ["every entry is in the correct account", "no errors have been made", "total debits equal total credits", "the profit figure is correct"], 2,
+          ["Entries could still be in the wrong accounts.", "Six kinds of error leave the totals equal.", "", "Errors of principle and original entry can still distort profit."],
+          "The trial balance only checks the arithmetic of the double entry.",
+          "Meaning of a balanced trial balance", "Concept", "What does the trial balance actually compare?"),
+        Q("A credit sale is left out of every book. This is an error of",
+          ["omission", "commission", "principle", "complete reversal"], 0,
+          ["", "Commission means the wrong account was used, not that nothing was entered.", "Principle means the wrong class of account.", "Reversal means the debit and credit were swapped."],
+          "Nothing was recorded, so no debit and no credit exist.",
+          "Error of omission", "Recall", "Was anything entered at all?"),
+        Q("A payment from debtor A. Tabe is credited to the account of debtor A. Tabi. This is an error of",
+          ["original entry", "commission", "compensating", "omission"], 1,
+          ["The amount is right.", "", "There is only one error, not two cancelling.", "The transaction was recorded."],
+          "The right kind of account (a debtor) was used but the wrong debtor.",
+          "Error of commission", "Application", "The wrong account of the same kind."),
+        Q("Office furniture costing 600 000 is debited to the Purchases account. This is an error of",
+          ["omission", "commission", "principle", "original entry"], 2,
+          ["It was recorded.", "Commission is the wrong account of the same class; furniture is an asset, purchases an expense.", "", "The amount is correct."],
+          "A fixed asset has been treated as an expense, a wrong class of account.",
+          "Error of principle", "Application", "Is furniture an asset or an expense?"),
+        N("An invoice for 54 000 was entered as 45 000 in both the sales account and the debtor's account. What amount appears in the correcting journal?", 9000,
+          "The accounts are short by 54 000 − 45 000 = 9 000, so debit the debtor 9 000 and credit Sales 9 000.",
+          "Error of original entry", "Calculation", "Find the difference between the right and wrong amounts.", math=r"54\,000 - 45\,000 = 9\,000"),
+        N("A debtor paid 18 000. The clerk debited the debtor's account and credited cash. What amount must be debited to cash in the correcting journal?", 36000,
+          "A complete reversal needs twice the amount: 18 000 to cancel the wrong entry and 18 000 to make the right one.",
+          "Complete reversal", "Calculation", "Cash should have gone up, not down.", math=r"2 \times 18\,000 = 36\,000"),
+        N("A trader's draft profit was 400 000. Equipment costing 80 000 was debited to Repairs, and wages of 15 000 paid were never entered as an expense. Find the corrected profit.", 465000,
+          "Repairs were 80 000 too high, so add 80 000. Wages were 15 000 too low, so deduct 15 000. 400 000 + 80 000 − 15 000 = 465 000.",
+          "Correcting profit", "Calculation", "Ask for each error: were expenses too high or too low?", math=r"400\,000 + 80\,000 - 15\,000 = 465\,000"),
+        Q("Which pair of mistakes is a compensating error?",
+          ["Sales are 5 000 too low and a debtor is 5 000 too low", "Rent is entered in Rates", "Cash is debited with a payment instead of credited", "Sales are overcast by 8 000 and Purchases overcast by 8 000"], 3,
+          ["These are one error, an omission, with matching accounts.", "That is a single error of commission.", "That is a complete reversal.", ""],
+          "Compensating errors are two separate errors of the same amount on opposite sides, so the trial balance still agrees.",
+          "Compensating errors", "Reasoning", "Look for two errors that cancel."),
+    ]))
+
+# ------------------------------------------------------------------ 8. The suspense account and errors disclosed
+assert 62000 - 26000 == 36000 and 500000 - 12000 + 5000 == 493000 and 3150000 - 3120000 == 30000
+SETS.append(practice_set(
+    module=M_CTRL, topic=T_ERR2,
+    title="The suspense account and errors disclosed: check your understanding",
+    lesson="acc2-suspense-account-and-disclosed-errors",
+    questions=[
+        Q("A suspense account is opened to",
+          ["record the owner's private expenses", "hold doubtful debts", "record unusual sales", "hold a trial balance difference until the errors are found"], 3,
+          ["Private expenses are drawings.", "That is a provision for doubtful debts.", "Unusual sales still go to the Sales account.", ""],
+          "It is a temporary holding account that lets the trial balance agree while the errors are traced.",
+          "Purpose of suspense", "Concept", "Think about why the accountant cannot wait."),
+        Q("Which error will make the trial balance disagree?",
+          ["A sale entered in neither the debtor's nor the sales account", "A purchase debited to Purchases as 8 000 but credited to the supplier as 800", "A wrong debtor credited with a payment", "Furniture debited to Purchases"], 1,
+          ["An omission leaves the totals equal.", "", "Commission leaves the totals equal.", "Principle leaves the totals equal."],
+          "Only an entry with different debit and credit amounts changes the equality of the totals.",
+          "Errors disclosed by the trial balance", "Concept", "Which entry has unequal sides?"),
+        Q("Trial balance debits total 3 120 000 and credits 3 150 000. The suspense account is",
+          ["a debit of 30 000", "a credit of 30 000", "a debit of 3 120 000", "a credit of 3 150 000"], 0,
+          ["", "Credits are already bigger, so debits need the extra amount.", "Only the difference is used.", "Only the difference is used."],
+          "The credit total is bigger, so the debit side is short and suspense is a debit of 30 000.",
+          "Side of suspense", "Application", "Add the amount to the side that is short."),
+        N("A sale of 62 000 was credited to the Sales account as 26 000. By how much was Sales understated?", 36000,
+          "62 000 − 26 000 = 36 000. The digits were transposed.", "Transposition error", "Calculation", "Find the difference between the correct and the wrong figure.",
+          math=r"62\,000 - 26\,000 = 36\,000"),
+        Q("Rent of 40 000 was posted to the cash book but never to the Rent account. The trial balance had a suspense debit caused by this alone. The correcting entry is",
+          ["Dr Suspense 40 000, Cr Rent 40 000", "Dr Cash 40 000, Cr Rent 40 000", "Dr Rent 40 000, Cr Suspense 40 000", "Dr Rent 40 000, Cr Cash 40 000"], 2,
+          ["That is the wrong way round; it would double the problem.", "The cash book entry is already right.", "", "That would record the payment a second time."],
+          "The missing debit goes to Rent. The credit clears the suspense debit.",
+          "Correcting a one-sided posting", "Application", "Which account is missing a debit? Where does the other side go?"),
+        N("Draft net profit is 500 000. An expense of 12 000 was not posted to its expense account and the Sales account was undercast by 5 000. Find the corrected profit.", 493000,
+          "Unposted expense: profit falls by 12 000. Sales too low: profit rises by 5 000. 500 000 − 12 000 + 5 000 = 493 000.",
+          "Correcting profit", "Calculation", "Ask for each error whether profit was too high or too low.", math=r"500\,000 - 12\,000 + 5\,000 = 493\,000"),
+        Q("After all errors have been corrected, the balance on the suspense account should be",
+          ["equal to the trial balance difference", "nil", "shown as an asset in the balance sheet", "added to capital"], 1,
+          ["That was the opening balance.", "", "A suspense balance must not stay as an asset.", "It has nothing to do with capital."],
+          "When every error that caused the difference has been corrected, the account has no balance.",
+          "Clearing suspense", "Concept", "What does a suspense account hold when nothing is left to explain?"),
+        Q("Which error would NOT need the suspense account when it is corrected?",
+          ["Rent posted to the debit side only", "Sales added up 10 000 too high", "A credit of 62 000 entered as 26 000", "A rent payment debited to the Rates account"], 3,
+          ["One side missing means the totals disagree.", "The totals disagree.", "The amounts differ, so the totals disagree.", ""],
+          "Debits still equal credits, so there was no trial balance difference. The error is corrected by debiting Rent and crediting Rates.",
+          "When suspense is not needed", "Reasoning", "Did the trial balance agree before this error was found?"),
+    ]))
+
+# ------------------------------------------------------------------ 9. Payroll: calculating pay
+assert 40 * 1200 + 10 * 1200 * 3 // 2 == 66000 and 460 * 85 == 39100 and 38 * 500 + 6 * 500 * 3 // 2 == 23500 and 180 * 120 == 21600
+SETS.append(practice_set(
+    module=M_CTRL, topic=T_PAY1,
+    title="Payroll: calculating gross pay: check your understanding",
+    lesson="acc2-payroll-calculating-pay",
+    questions=[
+        Q("Gross pay is",
+          ["pay after all deductions", "basic pay only", "total earnings before deductions", "the employer's cost of social contributions"], 2,
+          ["That is net pay.", "Overtime and allowances are also part of gross pay.", "", "Employer contributions are a separate cost to the employer."],
+          "Gross pay includes basic pay, overtime and allowances before any deduction.",
+          "Gross pay", "Recall", "Is it before or after deductions?"),
+        Q("Net pay is",
+          ["gross pay plus deductions", "gross pay minus deductions", "overtime pay only", "basic pay plus allowances"], 1,
+          ["Deductions are taken off, not added.", "", "Overtime is only one part of earnings.", "That is a possible gross pay."],
+          "Net pay is what the employee takes home: gross pay less deductions.",
+          "Net pay", "Recall", "Think of 'take-home pay'."),
+        N("Rate 1 200 per hour. Normal week 40 hours. The worker does 10 hours overtime at time and a half (teaching rate). Find the gross pay.", 66000,
+          "Normal pay 40 × 1 200 = 48 000. Overtime rate 1 200 × 1.5 = 1 800; 10 × 1 800 = 18 000. Gross pay 66 000.",
+          "Overtime calculation", "Calculation", "Pay the normal hours at the normal rate and the extra hours at the higher rate.",
+          math=r"40 \times 1\,200 + 10 \times 1\,200 \times 1.5 = 66\,000"),
+        N("A piece-rate worker is paid 85 per unit and makes 460 units. Find the gross pay.", 39100,
+          "460 × 85 = 39 100.", "Piece rate", "Calculation", "Multiply units by the rate per unit.", math=r"460 \times 85 = 39\,100"),
+        Q("A worker is paid 120 per unit with a guaranteed weekly minimum of 25 000. In one week she makes 180 units. Her gross pay is",
+          ["21 600", "46 600", "3 400", "25 000"], 3,
+          ["That is the piece-rate earnings but the guarantee is higher.", "The guarantee is not added to the earnings.", "That is the difference between the two figures.", ""],
+          "Piece earnings are 180 × 120 = 21 600, less than the 25 000 guarantee, so she gets 25 000.",
+          "Guaranteed minimum", "Application", "Compare the piece-rate earnings with the guarantee."),
+        N("Rate 500 per hour. Normal week 38 hours. The employee works 44 hours and overtime is at time and a half (teaching rate). Find the gross pay.", 23500,
+          "Normal 38 × 500 = 19 000. Overtime 6 × 500 × 1.5 = 4 500. Gross 23 500.", "Overtime calculation", "Calculation",
+          "Overtime hours = hours worked − normal hours.", math=r"19\,000 + 4\,500 = 23\,500"),
+        Q("When overtime is paid, the higher rate applies to",
+          ["only the hours above the normal hours", "all the hours worked in the week", "only the first hour", "only the hours worked on Sunday"], 0,
+          ["", "Normal hours are paid at the normal rate.", "There is no such rule.", "Overtime can occur on other days too."],
+          "The premium is paid only on the extra hours beyond the normal week. The Board's report notes weak understanding of how overtime rates apply.",
+          "Overtime rule", "Concept", "Which hours are 'extra'?"),
+        Q("The hourly rate is 1 000. 'Time and a half' means each overtime hour is paid",
+          ["500", "1 500", "2 000", "1 000 plus 1 500"], 1,
+          ["That is the extra half only.", "", "That is double time.", "That adds the multiple to the normal rate again."],
+          "Time and a half = 1.5 × 1 000 = 1 500 per overtime hour.",
+          "Overtime multiple", "Concept", "Multiply the normal rate by 1.5."),
+    ]))
+
+# ------------------------------------------------------------------ 10. Payroll: statutory deductions
+assert 10 * 20000 // 100 == 2000 and 150000 - (4500 + 12000 + 1200 + 1500 + 1500) == 129300 and 400000 + 40000 == 440000
+SETS.append(practice_set(
+    module=M_CTRL, topic=T_PAY2,
+    title="Payroll: statutory deductions and net pay: check your understanding",
+    lesson="acc2-payroll-statutory-deductions",
+    questions=[
+        Q("The CNPS is best described as",
+          ["the personal income tax office", "the national social security fund", "the national broadcaster", "a housing finance institution"], 1,
+          ["That describes the purpose of the IRPP, not the CNPS.", "", "That is the CRTV.", "That is the Crédit Foncier du Cameroun (CFC)."],
+          "CNPS is the Caisse Nationale de Prévoyance Sociale. Contributions help pay benefits such as pensions.",
+          "Meaning of CNPS", "Recall", "What do the first letters stand for?"),
+        Q("The IRPP is a deduction for",
+          ["pension benefits", "local council additional levies", "the audiovisual fee", "personal income tax"], 3,
+          ["Pensions are linked with CNPS.", "That is the CAC.", "That is the CRTV / Rav.", ""],
+          "IRPP stands for the personal income tax (impôt sur le revenu des personnes physiques).",
+          "Meaning of IRPP", "Recall", "It is a tax on income."),
+        N("In a teaching example the IRPP on an employee's pay is 20 000 and the CAC is 10% of the IRPP. Find the CAC.", 2000,
+          "10% × 20 000 = 2 000.", "CAC calculation", "Calculation", "The base is the IRPP.", math=r"\frac{10}{100} \times 20\,000 = 2\,000"),
+        Q("In the teaching rates used in the lesson, the CAC is calculated as a percentage of the",
+          ["gross pay", "net pay", "IRPP", "CNPS deduction"], 2,
+          ["That is the base of CNPS, IRPP and CFC.", "Net pay is only known after all deductions.", "", "The CNPS has no link to the CAC."],
+          "CAC is an extra levy on the IRPP, so its base is the IRPP.",
+          "Base of CAC", "Concept", "The word 'additional' gives a clue."),
+        N("Gross pay is 150 000. Teaching rates: CNPS 3%, IRPP 8%, CAC 10% of IRPP, CFC 1%, CRTV / Rav 1 500. Find the net pay.", 129300,
+          "CNPS 4 500; IRPP 12 000; CAC 1 200; CFC 1 500; Rav 1 500. Total 20 700. Net pay 150 000 − 20 700 = 129 300.",
+          "Net pay", "Calculation", "Work out the five deductions, add them, then subtract from gross.",
+          math=r"150\,000 - (4\,500 + 12\,000 + 1\,200 + 1\,500 + 1\,500) = 129\,300"),
+        N("An employer pays gross wages of 400 000 and must add its own pension contribution of 10% of gross (teaching rate). Find the employer's total cost of the wages.", 440000,
+          "Employer contribution 10% × 400 000 = 40 000. Total cost 400 000 + 40 000 = 440 000.",
+          "Employer's cost", "Calculation", "The employer's share is on top of the gross pay.", math=r"400\,000 + 40\,000 = 440\,000"),
+        Q("The employer's own social security contribution is",
+          ["an extra cost to the employer that is not deducted from the employee", "deducted from the employee's pay", "part of the employee's net pay", "refunded to the employee"], 0,
+          ["", "Only the employee's share is deducted.", "Net pay is gross pay less employee deductions.", "It is paid to the fund."],
+          "The employer's share is paid by the business on top of the gross pay.",
+          "Employer's contribution", "Concept", "Who bears this cost?"),
+        Q("In the payroll journal, the amounts deducted from employees' pay are recorded as",
+          ["expenses of the business", "liabilities owed to the bodies concerned", "income of the business", "assets of the business"], 1,
+          ["The expense is the gross pay; the deductions are part of how it is shared out.", "", "The employer collects them but does not keep them.", "The employer does not own them."],
+          "Until they are paid over, the deductions are amounts the employer owes, so they are credited to liability accounts.",
+          "Recording deductions", "Reasoning", "Does the employer keep the money?"),
+    ]))

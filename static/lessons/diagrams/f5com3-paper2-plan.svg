@@ -1,0 +1,26 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><defs><marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#102A43"/></marker></defs><rect width="560" height="360" fill="#ffffff"/><text x="280" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">Paper 2: a plan for 150 minutes</text><rect x="40.0" y="100" width="16.0" height="60" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<rect x="56.0" y="100" width="112.0" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="168.0" y="100" width="112.0" height="60" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<rect x="280.0" y="100" width="112.0" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="392.0" y="100" width="112.0" height="60" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<rect x="504.0" y="100" width="16.0" height="60" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<text x="112.0" y="136" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Q1</text>
+<text x="224.0" y="136" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Q2</text>
+<text x="336.0" y="136" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Q3</text>
+<text x="448.0" y="136" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Q4</text>
+<line x1="40.0" y1="168" x2="40.0" y2="180" stroke="#102A43" stroke-width="2"/>
+<line x1="56.0" y1="168" x2="56.0" y2="180" stroke="#102A43" stroke-width="2"/>
+<line x1="168.0" y1="168" x2="168.0" y2="180" stroke="#102A43" stroke-width="2"/>
+<line x1="280.0" y1="168" x2="280.0" y2="180" stroke="#102A43" stroke-width="2"/>
+<line x1="392.0" y1="168" x2="392.0" y2="180" stroke="#102A43" stroke-width="2"/>
+<line x1="504.0" y1="168" x2="504.0" y2="180" stroke="#102A43" stroke-width="2"/>
+<line x1="520.0" y1="168" x2="520.0" y2="180" stroke="#102A43" stroke-width="2"/>
+<text x="40.0" y="200" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">0</text>
+<text x="168.0" y="200" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">40</text>
+<text x="280.0" y="200" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">75</text>
+<text x="392.0" y="200" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">110</text>
+<text x="520.0" y="200" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">150</text>
+<text x="40.0" y="85" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13"  fill="#B45309">read and choose: 5</text>
+<text x="540" y="232" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#B45309">check: last 5 min</text>
+<text x="280" y="290" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14"  fill="#102A43">Four questions at about 35 minutes each</text>
+<text x="280" y="316" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13"  fill="#102A43">KKEVO study advice, not an official rule</text></svg>

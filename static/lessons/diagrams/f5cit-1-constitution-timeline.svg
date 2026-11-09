@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Timeline of Cameroon constitutions: 1960, 1961, 1972, 1984, 1996, 2008</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="30" y1="180" x2="530" y2="180" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<circle cx="50" cy="180" r="8" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<line x1="50" y1="172" x2="50" y2="130" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<text x="50" y="112" font-size="15" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">1960</text>
+<circle cx="130" cy="180" r="8" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<line x1="130" y1="188" x2="130" y2="230" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<text x="130" y="248" font-size="15" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">1961</text>
+<circle cx="230" cy="180" r="8" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<line x1="230" y1="172" x2="230" y2="130" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<text x="230" y="112" font-size="15" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">1972</text>
+<circle cx="330" cy="180" r="8" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<line x1="330" y1="188" x2="330" y2="230" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<text x="330" y="248" font-size="15" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">1984</text>
+<circle cx="420" cy="180" r="8" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<line x1="420" y1="172" x2="420" y2="130" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<text x="420" y="112" font-size="15" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">1996</text>
+<circle cx="500" cy="180" r="8" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<line x1="500" y1="188" x2="500" y2="230" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<text x="500" y="248" font-size="15" fill="#B45309" text-anchor="middle" dominant-baseline="middle" font-weight="700">2008</text>
+<text x="75" y="64" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">First constitution</text>
+<text x="75" y="82" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">of the Republic</text>
+<text x="140" y="280" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Federal</text>
+<text x="140" y="298" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">constitution</text>
+<text x="230" y="64" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Unitary State:</text>
+<text x="230" y="82" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">United Republic</text>
+<text x="330" y="280" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Name becomes</text>
+<text x="330" y="298" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Republic of Cameroon</text>
+<text x="420" y="64" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Major revision:</text>
+<text x="420" y="82" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Senate, councils</text>
+<text x="490" y="280" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Further</text>
+<text x="490" y="298" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">revision</text>
+<text x="280" y="340" font-size="13" fill="#B45309" text-anchor="middle" dominant-baseline="middle">Check the dates and the current text</text>
+</svg>

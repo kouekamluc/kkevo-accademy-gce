@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<title>Lake of Galilee, schematic map</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="28" font-size="17" fill="#102A43" text-anchor="middle" font-weight="700">Around the lake of Galilee (schematic)</text>
+<ellipse cx="300" cy="190" rx="110" ry="85" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/><text x="300" y="195" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Lake of Galilee</text>
+<path d="M335 50 C335 90 345 100 350 110 M360 270 C380 300 380 320 375 345" fill="none" stroke="#2563EB" stroke-width="3"/>
+<text x="348" y="62" font-size="14" fill="#2563EB" text-anchor="start">Jordan river</text>
+<circle cx="230" cy="130" r="7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<text x="222" y="116" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">Capernaum</text>
+<circle cx="380" cy="135" r="7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<text x="390" y="121" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">Bethsaida</text>
+<circle cx="470" cy="215" r="7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<text x="470" y="241" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Gerasenes</text>
+<circle cx="130" cy="250" r="7" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<text x="130" y="276" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Nazareth</text>
+<circle cx="150" cy="170" r="7" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<text x="150" y="156" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Cana</text>
+<text x="20" y="345" font-size="14" fill="#102A43" text-anchor="start">Blue: towns on the lake. Green: towns inland.</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="145" y="28" font-size="16" text-anchor="middle" fill="#102A43" font-weight="bold">Open-plan office</text>
+<text x="415" y="28" font-size="16" text-anchor="middle" fill="#102A43" font-weight="bold">Cellular office</text>
+<rect x="20" y="40" width="250" height="260" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="45" y="65" width="50" height="26" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="120" y="65" width="50" height="26" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="195" y="65" width="50" height="26" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="45" y="120" width="50" height="26" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="120" y="120" width="50" height="26" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="195" y="120" width="50" height="26" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="45" y="175" width="50" height="26" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="120" y="175" width="50" height="26" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="195" y="175" width="50" height="26" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="95" y="238" width="80" height="28" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="145" y="285" font-size="13" text-anchor="middle" fill="#047857" font-weight="normal">Supervisor</text>
+<text x="145" y="322" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">One large room, no walls</text>
+<text x="145" y="342" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">between staff desks</text>
+<rect x="290" y="40" width="250" height="260" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="296" y="46" width="78" height="98" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="380" y="46" width="78" height="98" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="464" y="46" width="70" height="98" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="296" y="196" width="78" height="98" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="380" y="196" width="78" height="98" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<rect x="464" y="196" width="70" height="98" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<rect x="320" y="80" width="36" height="24" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="320" y="230" width="36" height="24" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="404" y="80" width="36" height="24" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="404" y="230" width="36" height="24" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="482" y="80" width="34" height="24" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="482" y="230" width="34" height="24" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="335" y="130" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Room</text>
+<text x="419" y="130" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Room</text>
+<text x="499" y="130" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Room</text>
+<text x="335" y="282" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Room</text>
+<text x="419" y="282" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Room</text>
+<text x="499" y="282" font-size="13" text-anchor="middle" fill="#047857" font-weight="normal">Manager</text>
+<text x="415" y="176" font-size="13" text-anchor="middle" fill="#2563EB" font-weight="bold">Corridor</text>
+<text x="415" y="322" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">Separate small rooms</text>
+<text x="415" y="342" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">off a corridor</text>
+</svg>

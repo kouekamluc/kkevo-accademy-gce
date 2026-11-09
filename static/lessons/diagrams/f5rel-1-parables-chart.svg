@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<title>Parables of the kingdom and their lessons</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="28" font-size="17" fill="#102A43" text-anchor="middle" font-weight="700">Parables of the kingdom</text>
+<rect x="20" y="48" width="150" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="95.0" y="73.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Sower</text>
+<rect x="180" y="48" width="360" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="360.0" y="73.0" font-size="14" fill="#102A43" text-anchor="middle">Four ways of hearing God's word</text>
+<rect x="20" y="98" width="150" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="95.0" y="123.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Weeds</text>
+<rect x="180" y="98" width="360" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="360.0" y="123.0" font-size="14" fill="#102A43" text-anchor="middle">Patience; God will judge</text>
+<rect x="20" y="148" width="150" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="95.0" y="173.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Mustard seed</text>
+<rect x="180" y="148" width="360" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="360.0" y="173.0" font-size="14" fill="#102A43" text-anchor="middle">Small beginnings, great growth</text>
+<rect x="20" y="198" width="150" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="95.0" y="223.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Yeast</text>
+<rect x="180" y="198" width="360" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="360.0" y="223.0" font-size="14" fill="#102A43" text-anchor="middle">Quiet, spreading influence</text>
+<rect x="20" y="248" width="150" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="95.0" y="273.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Treasure, pearl</text>
+<rect x="180" y="248" width="360" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="360.0" y="273.0" font-size="14" fill="#102A43" text-anchor="middle">The kingdom is worth everything</text>
+<rect x="20" y="298" width="150" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="95.0" y="323.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Net</text>
+<rect x="180" y="298" width="360" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="360.0" y="323.0" font-size="14" fill="#102A43" text-anchor="middle">A final separation</text>
+</svg>

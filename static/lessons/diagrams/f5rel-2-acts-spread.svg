@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="28" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">The outline of Acts: the promise of Jesus</text>
+<rect x="10" y="70" width="170" height="44" rx="8" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<text x="95.0" y="96.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Jerusalem</text>
+<rect x="10" y="130" width="170" height="120" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="95.0" y="167.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Ascension</text>
+<text x="95.0" y="185.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Pentecost</text>
+<text x="95.0" y="203.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">The early church</text>
+<text x="95.0" y="221.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Stephen's death</text>
+<line x1="182" y1="92" x2="194" y2="92" stroke="#102A43" stroke-width="2"/>
+<polygon points="194,92 185.9,95.9 185.9,88.1" fill="#102A43"/>
+<rect x="196" y="70" width="170" height="44" rx="8" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<text x="281.0" y="96.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Judea, Samaria</text>
+<rect x="196" y="130" width="170" height="120" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="281.0" y="176.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Philip in Samaria</text>
+<text x="281.0" y="194.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Peter at Lydda,</text>
+<text x="281.0" y="212.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Joppa, Caesarea</text>
+<line x1="368" y1="92" x2="380" y2="92" stroke="#102A43" stroke-width="2"/>
+<polygon points="380,92 371.9,95.9 371.9,88.1" fill="#102A43"/>
+<rect x="382" y="70" width="170" height="44" rx="8" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<text x="467.0" y="96.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Ends of the earth</text>
+<rect x="382" y="130" width="170" height="120" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="467.0" y="176.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Antioch, Cyprus,</text>
+<text x="467.0" y="194.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Asia Minor,</text>
+<text x="467.0" y="212.9" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">Greece, Rome</text>
+<text x="280" y="300" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle">The good news spreads outward step by step.</text>
+</svg>

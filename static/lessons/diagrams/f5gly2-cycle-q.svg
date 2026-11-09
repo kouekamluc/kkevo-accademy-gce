@@ -1,0 +1,19 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#102A43"/></marker></defs>
+<text x="280" y="26" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#102A43">The hydrologic cycle: name the processes</text>
+<rect x="30" y="250" width="190" height="70" fill="#BFDBFE" stroke="#102A43" stroke-width="1"/>
+<polygon points="220.0,250.0 270.0,220.0 330.0,165.0 390.0,180.0 450.0,215.0 530.0,232.0 530.0,320.0 220.0,320.0" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<line x1="235.0" y1="300.0" x2="520.0" y2="300.0" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 4"/>
+<ellipse cx="370" cy="75" rx="62" ry="22" fill="#E5E7EB" stroke="#102A43" stroke-width="2"/><ellipse cx="335" cy="88" rx="38" ry="16" fill="#E5E7EB" stroke="#102A43" stroke-width="2"/><ellipse cx="410" cy="90" rx="40" ry="16" fill="#E5E7EB" stroke="#102A43" stroke-width="2"/>
+<circle cx="70" cy="70" r="22" fill="#FDE68A" stroke="#B45309" stroke-width="2"/>
+<line x1="345.0" y1="108.0" x2="338.0" y2="138.0" stroke="#2563EB" stroke-width="2"/>
+<line x1="370.0" y1="108.0" x2="363.0" y2="138.0" stroke="#2563EB" stroke-width="2"/>
+<line x1="395.0" y1="108.0" x2="388.0" y2="138.0" stroke="#2563EB" stroke-width="2"/>
+<line x1="100.0" y1="245.0" x2="100.0" y2="150.0" stroke="#047857" stroke-width="3" marker-end="url(#ar)"/>
+<line x1="325.0" y1="178.0" x2="235.0" y2="232.0" stroke="#102A43" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="470.0" y1="232.0" x2="470.0" y2="292.0" stroke="#102A43" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="500.0" y1="311.0" x2="250.0" y2="311.0" stroke="#2563EB" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="205.0" y1="235.0" x2="160.0" y2="244.0" stroke="#102A43" stroke-width="2" marker-end="url(#ar)"/>
+<circle cx="130" cy="195" r="12" fill="#ffffff" stroke="#B45309" stroke-width="2"/><text x="130" y="200" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309">A</text>
+<circle cx="470" cy="62" r="12" fill="#ffffff" stroke="#B45309" stroke-width="2"/><text x="470" y="67" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309">B</text><circle cx="440" cy="125" r="12" fill="#ffffff" stroke="#B45309" stroke-width="2"/><text x="440" y="130" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309">C</text><circle cx="260" cy="196" r="12" fill="#ffffff" stroke="#B45309" stroke-width="2"/><text x="260" y="201" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309">D</text><circle cx="500" cy="270" r="12" fill="#ffffff" stroke="#B45309" stroke-width="2"/><text x="500" y="275" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309">E</text><circle cx="380" cy="295" r="12" fill="#ffffff" stroke="#B45309" stroke-width="2"/><text x="380" y="300" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#B45309">F</text>
+</svg>

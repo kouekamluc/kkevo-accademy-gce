@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="30" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102A43">Stress marks and rhyme scheme</text>
+<text x="70" y="86" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#102A43">x</text>
+<text x="70" y="122" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="400" fill="#102A43">the</text>
+<text x="130" y="86" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#B45309">/</text>
+<text x="130" y="122" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">night</text>
+<text x="190" y="86" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#102A43">x</text>
+<text x="190" y="122" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="400" fill="#102A43">is</text>
+<text x="250" y="86" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#B45309">/</text>
+<text x="250" y="122" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">long</text>
+<text x="310" y="86" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#102A43">x</text>
+<text x="310" y="122" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="400" fill="#102A43">the</text>
+<text x="370" y="86" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#B45309">/</text>
+<text x="370" y="122" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">can</text>
+<text x="430" y="86" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#102A43">x</text>
+<text x="430" y="122" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="400" fill="#102A43">dle</text>
+<text x="490" y="86" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#B45309">/</text>
+<text x="490" y="122" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">low</text>
+<text x="280" y="158" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43">x = weak syllable      / = strong syllable</text>
+<text x="70" y="212" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="400" fill="#102A43">the night is long, the candle low</text>
+<circle cx="440" cy="207" r="13" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="440" y="212" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB">A</text>
+<text x="70" y="246" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="400" fill="#102A43">the rain falls soft upon the tin;</text>
+<circle cx="440" cy="241" r="13" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="440" y="246" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857">B</text>
+<text x="70" y="280" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="400" fill="#102A43">I count the drops and wait to know</text>
+<circle cx="440" cy="275" r="13" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="440" y="280" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB">A</text>
+<text x="70" y="314" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="400" fill="#102A43">if morning means to let me in.</text>
+<circle cx="440" cy="309" r="13" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="440" y="314" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857">B</text>
+<text x="280" y="350" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43">Rhyme scheme: A B A B  (low / know, tin / in)</text>
+</svg>

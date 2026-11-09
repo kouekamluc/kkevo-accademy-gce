@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<title>Sermon on the Mount outline</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="28" font-size="17" fill="#102A43" text-anchor="middle" font-weight="700">The Sermon on the Mount (Matthew 5 to 7)</text>
+<rect x="20" y="48" width="110" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="75.0" y="73.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Matthew 5</text>
+<rect x="140" y="48" width="400" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="340.0" y="73.0" font-size="14" fill="#102A43" text-anchor="middle">Beatitudes; salt and light</text>
+<rect x="20" y="98" width="110" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="75.0" y="123.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Matthew 5</text>
+<rect x="140" y="98" width="400" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="340.0" y="123.0" font-size="14" fill="#102A43" text-anchor="middle">Fulfilling the law; love your enemies</text>
+<rect x="20" y="148" width="110" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="75.0" y="173.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Matthew 6</text>
+<rect x="140" y="148" width="400" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="340.0" y="173.0" font-size="14" fill="#102A43" text-anchor="middle">Giving, prayer, fasting; Lord's Prayer</text>
+<rect x="20" y="198" width="110" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="75.0" y="223.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Matthew 6</text>
+<rect x="140" y="198" width="400" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="340.0" y="223.0" font-size="14" fill="#102A43" text-anchor="middle">Treasure, money and worry</text>
+<rect x="20" y="248" width="110" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="75.0" y="273.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Matthew 7</text>
+<rect x="140" y="248" width="400" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="340.0" y="273.0" font-size="14" fill="#102A43" text-anchor="middle">Judging; the Golden Rule</text>
+<rect x="20" y="298" width="110" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="75.0" y="323.0" font-size="15" fill="#047857" text-anchor="middle" font-weight="700">Matthew 7</text>
+<rect x="140" y="298" width="400" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="340.0" y="323.0" font-size="14" fill="#102A43" text-anchor="middle">The two builders</text>
+</svg>

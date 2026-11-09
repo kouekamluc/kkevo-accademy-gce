@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="28" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle">Life of the Prophet Muhammad, peace be upon him</text>
+<line x1="40" y1="190" x2="520" y2="190" stroke="#102A43" stroke-width="3"/>
+<circle cx="80" cy="190" r="9" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<rect x="10" y="100" width="140" height="56" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="80.0" y="124.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">Birth in Mecca</text>
+<text x="80.0" y="141.1" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">c. 570</text>
+<line x1="80" y1="156" x2="80" y2="181" stroke="#102A43" stroke-width="2"/>
+<circle cx="180" cy="190" r="9" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<rect x="110" y="232" width="140" height="56" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="180.0" y="256.1" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">First revelation</text>
+<text x="180.0" y="273.1" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">cave of Hira</text>
+<line x1="180" y1="199" x2="180" y2="232" stroke="#102A43" stroke-width="2"/>
+<circle cx="280" cy="190" r="9" fill="#B45309" stroke="#102A43" stroke-width="2"/>
+<rect x="210" y="100" width="140" height="56" rx="8" fill="#FFFBEB" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="124.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">Hijra to Medina</text>
+<text x="280.0" y="141.1" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">622</text>
+<line x1="280" y1="156" x2="280" y2="181" stroke="#102A43" stroke-width="2"/>
+<circle cx="380" cy="190" r="9" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<rect x="310" y="232" width="140" height="56" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="380.0" y="256.1" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">Return to Mecca</text>
+<text x="380.0" y="273.1" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">c. 630</text>
+<line x1="380" y1="199" x2="380" y2="232" stroke="#102A43" stroke-width="2"/>
+<circle cx="480" cy="190" r="9" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<rect x="410" y="100" width="140" height="56" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="480.0" y="124.0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">Death in Medina</text>
+<text x="480.0" y="141.1" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle">632</text>
+<line x1="480" y1="156" x2="480" y2="181" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="330" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#B45309" text-anchor="middle">Dates are approximate: check your textbook.</text>
+</svg>

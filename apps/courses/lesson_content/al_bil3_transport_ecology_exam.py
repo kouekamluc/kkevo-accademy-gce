@@ -1255,9 +1255,9 @@ LESSONS.append(lesson(
         H("Microscopy and drawing"),
         D("**Magnification** = size of the image ÷ actual size of the object (both in the same units). A **scale bar** is a line on a drawing that represents a known real length.", title="Magnification", formula=r"\text{magnification} = \frac{\text{image size}}{\text{actual size}}"),
         EX("Worked example 1: magnification and actual size", intro="(a) A drawing of a cell is 45 mm long. The cell is actually 30 µm long. Find the magnification. (b) Another drawing of a cell is 60 mm long at a magnification of ×400. Find the actual length in µm.", steps=[
-            S("Convert to the same units", math=r"45 \text{ mm} = 45\,000 \text{ µm}"),
+            S("Convert to the same units", math=r"45 \text{ mm} = 45\,000 \,\mu\text{m}"),
             S("(a) Magnification", math=r"\frac{45\,000}{30} = \times 1500"),
-            S("(b) Actual length", math=r"\frac{60 \text{ mm}}{400} = 0.15 \text{ mm} = 150 \text{ µm}"),
+            S("(b) Actual length", math=r"\frac{60 \text{ mm}}{400} = 0.15 \text{ mm} = 150 \,\mu\text{m}"),
         ], check=r"1500 \times 30 = 45000"),
         KEY("Rules for a biological drawing", "Examiners check each one.", cards=[
             ["Size and position", "Use a large part of the space. Draw what you see, not what a textbook shows."],

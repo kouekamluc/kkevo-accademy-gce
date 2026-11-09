@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102A43">The three main genres</text>
+<rect x="205" y="52" width="150" height="44" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="81" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">Literature</text>
+<path d="M280 96 L280 118 L100 118 L100 138" fill="none" stroke="#102A43" stroke-width="2"/>
+<rect x="30" y="138" width="140" height="44" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="100" y="167" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">Prose</text>
+<path d="M100 182 L100 206" stroke="#102A43" stroke-width="2"/>
+<rect x="30" y="206" width="140" height="36" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="100" y="230" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="400" fill="#102A43">novel</text>
+<rect x="30" y="252" width="140" height="36" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="100" y="276" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="400" fill="#102A43">short story</text>
+<rect x="30" y="298" width="140" height="36" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="100" y="322" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="400" fill="#102A43">folktale</text>
+<path d="M280 96 L280 118 L280 118 L280 138" fill="none" stroke="#102A43" stroke-width="2"/>
+<rect x="210" y="138" width="140" height="44" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280" y="167" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">Poetry</text>
+<path d="M280 182 L280 206" stroke="#102A43" stroke-width="2"/>
+<rect x="210" y="206" width="140" height="36" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="230" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="400" fill="#102A43">elegy</text>
+<rect x="210" y="252" width="140" height="36" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="276" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="400" fill="#102A43">sonnet</text>
+<rect x="210" y="298" width="140" height="36" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="322" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="400" fill="#102A43">ballad</text>
+<path d="M280 96 L280 118 L460 118 L460 138" fill="none" stroke="#102A43" stroke-width="2"/>
+<rect x="390" y="138" width="140" height="44" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="460" y="167" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#102A43">Drama</text>
+<path d="M460 182 L460 206" stroke="#102A43" stroke-width="2"/>
+<rect x="390" y="206" width="140" height="36" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="460" y="230" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="400" fill="#102A43">tragedy</text>
+<rect x="390" y="252" width="140" height="36" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="460" y="276" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="400" fill="#102A43">comedy</text>
+<rect x="390" y="298" width="140" height="36" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="460" y="322" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="400" fill="#102A43">history play</text>
+</svg>

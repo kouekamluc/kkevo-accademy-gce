@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<title>Israel and Judah, schematic map</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="28" font-size="17" fill="#102A43" text-anchor="middle" font-weight="700">Israel and Judah (schematic)</text>
+<rect x="130" y="50" width="200" height="140" rx="12" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/><text x="230" y="78" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">ISRAEL (north)</text>
+<rect x="150" y="200" width="160" height="110" rx="12" fill="#ECFDF5" stroke="#047857" stroke-width="2"/><text x="230" y="228" font-size="15" fill="#047857" text-anchor="middle" font-weight="700">JUDAH (south)</text>
+<circle cx="215" cy="128" r="7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<text x="215" y="114" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Samaria</text>
+<circle cx="285" cy="160" r="7" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<text x="285" y="146" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Bethel</text>
+<circle cx="230" cy="275" r="7" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<text x="230" y="261" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Jerusalem</text>
+<rect x="400" y="50" width="140" height="80" rx="10" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/><text x="470" y="85" font-size="15" fill="#B45309" text-anchor="middle" font-weight="700">ASSYRIA</text>
+<text x="470" y="110" font-size="14" fill="#102A43" text-anchor="middle">ended Israel</text>
+<rect x="400" y="200" width="140" height="80" rx="10" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/><text x="470" y="235" font-size="15" fill="#B45309" text-anchor="middle" font-weight="700">BABYLON</text>
+<text x="470" y="260" font-size="14" fill="#102A43" text-anchor="middle">ended Judah</text>
+<line x1="400" y1="90" x2="342.9" y2="98.5" stroke="#B45309" stroke-width="2"/>
+<polygon points="333,100 343.6,103.5 342.2,93.6" fill="#B45309"/>
+<line x1="400" y1="245" x2="322.7" y2="262.8" stroke="#B45309" stroke-width="2"/>
+<polygon points="313,265 323.9,267.6 321.6,257.9" fill="#B45309"/>
+<text x="20" y="330" font-size="14" fill="#102A43" text-anchor="start">North and south, about 930 BC</text>
+</svg>

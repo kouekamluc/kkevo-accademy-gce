@@ -1,0 +1,496 @@
+"""Practice sets for Form 5 Human Biology, module 5: Coordination, Reproduction & Human Genetics. One set per lesson.
+
+Genetics crosses were checked by script. Diagram questions use label-removed copies (f5hbi3-*-q.svg).
+"""
+
+from .dsl import *  # noqa: F403
+
+COURSE = ("human-biology", "form-5")
+
+MODULE = "Coordination, Reproduction & Human Genetics"
+NS = "The nervous system"
+RA = "The reflex arc"
+EYE = "The eye"
+EAR = "The ear"
+ENDO = "Endocrine glands and hormones"
+RS = "The reproductive systems"
+MC_ = "The menstrual cycle and fertilization"
+ANC = "Antenatal care and family planning"
+MEN = "Mendelian genetics"
+SEX = "Sex determination and genetic disorders"
+
+
+def q(prompt, opts, k, whys, sol, concept, skill, hint, diagram="", alt=""):
+    """Four-option MC: opts in display order, k = index of the correct one, whys = reasons for the wrong ones in order."""
+    if len(whys) == len(opts):
+        whys = [x for i, x in enumerate(whys) if i != k]
+    w = iter(whys)
+    ch = [C(o, correct=True) if i == k else C(o, why=next(w)) for i, o in enumerate(opts)]
+    steps = [S("Solution", text=sol)] if isinstance(sol, str) else sol
+    return MC(prompt, ch, steps, concept=concept, skill=skill, hint=hint, diagram=diagram, diagram_alt=alt)
+
+
+def n(prompt, ans, sol, unit, concept, skill, hint, tol=0):
+    steps = [S("Solution", text=sol)] if isinstance(sol, str) else sol
+    return NUM(prompt, ans, steps, tolerance=tol, unit=unit, concept=concept, skill=skill, hint=hint)
+
+
+SETS = []
+
+# ------------------------------------------------------------------ 1. The nervous system
+SETS.append(practice_set(
+    module=MODULE, topic=NS,
+    title="The nervous system: parts and neurones",
+    lesson="hbi3-nervous-system",
+    questions=[
+        q("Which two organs make up the central nervous system?",
+          ["Brain and nerves", "Brain and spinal cord", "Spinal cord and nerves", "Skull and backbone"], 1,
+          ["The nerves belong to the peripheral nervous system.", "The spinal cord and nerves are not the whole CNS: the brain is also part of it.", "The skull and backbone only protect the CNS."],
+          "The CNS is the brain and the spinal cord. The nerves are the peripheral nervous system.", "Central nervous system", "Recall",
+          "One of the two organs is in the skull and one in the backbone."),
+        q("Which neurone carries impulses from a receptor towards the central nervous system?",
+          ["Motor neurone", "Relay neurone", "Effector", "Sensory neurone"], 3,
+          ["A motor neurone carries impulses away from the CNS.", "A relay neurone is found inside the CNS.", "An effector is a muscle or gland, not a neurone."],
+          "Sensory neurones carry impulses from receptors to the CNS.", "Types of neurone", "Recall", "It senses the stimulus and sends the message in."),
+        q("Which letter shows the axon in the diagram?",
+          ["B", "C", "D", "A"], 0,
+          ["C is at the end the impulse comes from: it shows the dendrites.", "D is inside the cell body: it shows the nucleus.", "A points to the cell body, not the long fibre."],
+          "The axon is the long fibre that carries the impulse away from the cell body. It is labelled B.", "Structure of a neurone", "Interpretation",
+          "The axon is the long thin part.", diagram="f5hbi3-neurone-q.svg",
+          alt="A motor neurone with eight labelled parts A to H: dendrites, cell body, nucleus, axon, myelin sheath, node of Ranvier, axon ending and muscle fibre."),
+        q("What is the function of the myelin sheath?",
+          ["To make the neurone's nucleus", "To receive impulses from other neurones", "To insulate the axon and speed up impulses", "To release hormones"], 2,
+          ["The nucleus is in the cell body.", "Dendrites receive impulses from other neurones.", "Hormones are made by endocrine glands."],
+          "The fatty myelin sheath insulates the axon and speeds up the impulse.", "Structure of a neurone", "Recall", "It is a fatty layer around the axon."),
+        q("Which part of the brain controls balance and coordination of movement?",
+          ["Cerebrum", "Medulla oblongata", "Cerebellum", "Meninges"], 2,
+          ["The cerebrum controls thinking and voluntary actions.", "The medulla controls breathing and heart rate.", "The meninges are protective membranes, not a part that controls anything."],
+          "The cerebellum, at the back of the brain, controls balance and smooth movement.", "Parts of the brain", "Recall", "It lies at the back below the cerebrum."),
+        q("What happens at a synapse?",
+          ["A neurotransmitter crosses the gap to the next cell", "The impulse jumps the gap as an electric spark", "Hormones carry the impulse in the blood", "The impulse changes direction"], 0,
+          ["The gap is too wide for an electric spark; a chemical carries the message.", "Hormones are for the endocrine system, not synapses.", "Impulses cross the synapse in one direction only."],
+          "The axon ending releases a neurotransmitter. It crosses the gap and starts a new impulse in the next cell.", "Synapse", "Concept", "A chemical messenger is involved."),
+        q("A person decides to write a letter. Which statement is correct?",
+          ["It is an involuntary action controlled by the medulla", "It is a voluntary action started in the cerebrum", "It is a reflex action in the spinal cord", "It is controlled by the cerebellum alone"], 1,
+          ["The medulla controls involuntary actions such as breathing.", "A reflex does not need a decision.", "The cerebellum helps coordination but the decision is made by the cerebrum."],
+          "Writing is a decision, so it is voluntary and is started by the cerebrum. The cerebellum helps coordinate the movements.", "Voluntary and involuntary actions", "Application",
+          "Ask yourself who makes the decision."),
+        q("A nerve injury cuts the motor neurones that go to the muscles of the lower leg, but the sensory neurones are not damaged. What is the most likely result?",
+          ["The person cannot feel the leg but can move it", "The person can feel the leg but cannot move it", "The person can neither feel nor move the leg", "The person can feel and move the leg normally"], 1,
+          ["That would result from cut sensory neurones.", "Both kinds would have to be cut.", "Motor neurones carry the instructions to the muscles, so movement would be lost."],
+          [S("Role of motor neurones", text="Motor neurones carry impulses from the CNS to the muscles."),
+           S("Role of sensory neurones", text="Sensory neurones carry the sensation of touch to the CNS."),
+           S("Conclusion", text="With motor neurones cut and sensory neurones intact, the person can feel the leg but cannot move it.")],
+          "Sensory and motor neurones", "Reasoning", "Which neurones make the muscle contract?"),
+    ]))
+
+
+# ------------------------------------------------------------------ 2. The reflex arc
+SETS.append(practice_set(
+    module=MODULE, topic=RA,
+    title="The reflex arc: pathway and examples",
+    lesson="hbi3-reflex-arc",
+    questions=[
+        q("A reflex action is best described as",
+          ["a slow action decided by the brain", "a quick automatic response that protects the body", "a learned skill such as writing", "a response made only by muscles of the arm"], 1,
+          ["That describes a voluntary action.", "Writing is a voluntary skill.", "Reflexes can involve many organs, such as the eye or the throat."],
+          "A reflex action is a quick, automatic, protective response to a stimulus.", "Reflex action", "Recall", "Think of pulling a hand from a hot pot."),
+        q("Which of these is a reflex action?",
+          ["Kicking a football", "Blinking when dust blows towards the eye", "Reading a book", "Choosing food at the market"], 1,
+          ["Kicking a ball is decided by the cerebrum.", "Reading needs thinking.", "Choosing food is a decision."],
+          "Blinking is automatic, quick and protective, so it is a reflex.", "Examples of reflexes", "Recall", "Which action happens before you can decide?"),
+        q("In a reflex arc, which neurone carries the impulse from the spinal cord to the muscle?",
+          ["Sensory neurone", "Relay neurone", "Receptor", "Motor neurone"], 3,
+          ["The sensory neurone carries impulses to the cord.", "The relay neurone stays inside the cord.", "A receptor detects the stimulus and is not a neurone."],
+          "The motor neurone carries impulses from the CNS to the effector.", "Parts of a reflex arc", "Recall", "It makes the muscle move."),
+        q("Which letter in the diagram shows the effector?",
+          ["A", "E", "H", "B"], 2,
+          ["A is the cell body of the sensory neurone.", "E is the motor neurone that carries the impulse to the effector.", "B is the receptor in the skin, where the stimulus is detected."],
+          "The effector is the muscle that makes the response. It is labelled H.", "Parts of a reflex arc", "Interpretation",
+          "The effector is at the end of the pathway.", diagram="f5hbi3-reflex-arc-q.svg",
+          alt="A reflex arc drawn through the spinal cord with eight labelled parts A to H, including a receptor in the skin, a sensory neurone, a relay neurone, a motor neurone and a muscle."),
+        q("Which is the correct order for the pathway of an impulse in a reflex arc?",
+          ["Receptor, sensory neurone, relay neurone, motor neurone, effector", "Receptor, relay neurone, sensory neurone, motor neurone, effector", "Effector, motor neurone, relay neurone, sensory neurone, receptor", "Sensory neurone, receptor, motor neurone, relay neurone, effector"], 0,
+          ["The sensory neurone must come before the relay neurone.", "That is the reverse order.", "The impulse starts at the receptor, not the sensory neurone."],
+          "Receptor, sensory neurone, relay neurone, motor neurone, effector.", "Order of a reflex arc", "Concept", "Start with the part that detects the stimulus."),
+        q("Why is a reflex action faster than a voluntary action?",
+          ["The impulse is carried in the blood", "The impulse goes through only a few neurones and does not wait for a decision", "The muscles are bigger", "The neurones in a reflex arc have no myelin"], 1,
+          ["Impulses travel along neurones, not in the blood.", "Muscle size does not decide how fast the reflex starts.", "Myelin speeds up impulses, so removing it would slow them."],
+          "A spinal reflex passes through very few neurones and skips the decision-making of the brain, so it is quick.", "Speed of reflexes", "Reasoning", "Count the steps."),
+        q("When the pupil gets smaller in bright light, the effector is",
+          ["the retina", "the optic nerve", "the muscles of the iris", "the lens"], 2,
+          ["The retina is the receptor.", "The optic nerve carries impulses; it is not the effector.", "The lens helps focus, but it is not the effector in this reflex."],
+          "The receptor is the retina. The effector is the muscles of the iris, which change the size of the pupil.", "Pupil reflex", "Application", "Which part changes size?"),
+        q("A person steps on a sharp thorn and pulls the foot away. A second later he feels pain. Which statement explains this?",
+          ["The reflex pathway passes through the cord and the brain is told afterwards", "The brain decided to pull the foot away", "Pain receptors only work after the muscle contracts", "The foot has no motor neurone"], 0,
+          ["In a spinal reflex the decision is not made by the brain.", "Receptors detect the thorn first, before the muscle acts.", "The muscle moved, so a motor neurone was involved."],
+          [S("Fast path", text="The relay neurone in the cord passes the impulse to the motor neurone, so the foot moves quickly."),
+           S("Slower path", text="Other impulses also travel to the brain, which gives the sensation of pain a little later.")],
+          "Reflexes and the brain", "Reasoning", "The brain is informed, but it does not start this reflex."),
+    ]))
+
+
+# ------------------------------------------------------------------ 3. The eye
+SETS.append(practice_set(
+    module=MODULE, topic=EYE,
+    title="The eye: parts, focusing and defects",
+    lesson="hbi3-the-eye",
+    questions=[
+        q("Which part of the eye controls the amount of light entering?",
+          ["Cornea", "Sclera", "Iris", "Retina"], 2,
+          ["The cornea bends light but does not control how much enters.", "The sclera is the tough white outer coat.", "The retina detects light; it does not control the amount."],
+          "The iris changes the size of the pupil and so controls how much light enters.", "Parts of the eye", "Recall", "It is the coloured ring of muscle."),
+        q("Which letter shows the retina in the diagram?",
+          ["D", "L", "G", "I"], 3,
+          ["D is the cornea at the front of the eye.", "L is the optic nerve, which carries impulses to the brain.", "G is the lens."],
+          "The retina is the light-sensitive layer at the back of the eye. It is labelled I.", "Parts of the eye", "Interpretation",
+          "The retina lines the back of the eyeball.", diagram="f5hbi3-eye-q.svg",
+          alt="A section of the eye with thirteen parts labelled by letters A to M: cornea, aqueous humour, pupil, iris, ciliary muscle, suspensory ligament, lens, sclera, retina, fovea, blind spot, optic nerve and vitreous humour."),
+        q("When a student looks at a book held close to the face, what happens in the eye?",
+          ["The ciliary muscles contract and the lens becomes thicker", "The ciliary muscles relax and the lens becomes thinner", "The ciliary muscles contract and the lens becomes thinner", "The pupil moves forward"], 0,
+          ["That is the response to a distant object.", "A contracted ciliary muscle slackens the ligaments so the lens becomes fatter, not thinner.", "The pupil is a hole and cannot move."],
+          "For near objects the ciliary muscles contract, the suspensory ligaments slacken and the lens becomes thicker.", "Accommodation", "Concept",
+          "A near object needs more bending of light."),
+        q("Which cells work in dim light and give black-and-white vision?",
+          ["Cones", "Rods", "Hair cells", "Iris cells"], 1,
+          ["Cones need bright light and detect colour.", "Hair cells are in the ear.", "The iris is a ring of muscle, not a light-sensitive layer."],
+          "Rods are sensitive to dim light but do not detect colour.", "Rods and cones", "Recall", "They are found mainly away from the fovea."),
+        q("A person sees nearby objects clearly but distant objects look blurred. The defect and its correction are",
+          ["long sight, concave lens", "short sight, convex lens", "cataract, concave lens", "short sight, concave lens"], 3,
+          ["Long sight blurs near objects, and it uses a convex lens.", "Short sight is corrected with a concave lens, not a convex one.", "Cataract is a cloudy lens and is treated by an operation."],
+          "Near clear and distant blurred means short sight. A concave (diverging) lens moves the image back onto the retina.", "Eye defects", "Application",
+          "Which objects are blurred: near or far?"),
+        q("In dim light, the pupil becomes larger. This is because",
+          ["the circular muscles of the iris contract", "the radial muscles of the iris relax", "the radial muscles of the iris contract", "the ciliary muscles contract"], 2,
+          ["Contracting circular muscles would make the pupil smaller.", "If the radial muscles relax, the pupil gets smaller.", "The ciliary muscle changes the shape of the lens, not the pupil."],
+          "In dim light the radial muscles contract and the circular muscles relax, so the pupil widens and lets in more light.", "Pupil reflex", "Concept",
+          "More light is needed, so the hole must widen."),
+        q("Why is the blind spot 'blind'?",
+          ["There are no light-sensitive cells where the optic nerve leaves the retina", "The iris covers that part", "The lens does not reach it", "It has only cones"], 0,
+          ["The iris is at the front of the eye.", "The lens focuses light on the whole retina.", "It has neither rods nor cones."],
+          "At the blind spot the optic nerve leaves the retina and there are no rods or cones, so no image is detected there.", "Blind spot", "Reasoning", "Think of what leaves the eye at this place."),
+        q("A child often has night blindness and the clinic suspects a diet problem. Which food advice is most suitable?",
+          ["Eat more sugar", "Drink more water only", "Eat foods rich in vitamin A, such as red palm oil, carrots and green leafy vegetables", "Eat less protein"], 2,
+          ["Sugar does not protect the retina.", "Water is needed but does not supply the missing nutrient.", "Protein is not the cause."],
+          "A lack of vitamin A is a cause of night blindness. Foods rich in vitamin A help to prevent it, and a health worker should be consulted.", "Care of the eye", "Application",
+          "Which vitamin is linked to seeing in the dark?"),
+    ]))
+
+
+# ------------------------------------------------------------------ 4. The ear
+SETS.append(practice_set(
+    module=MODULE, topic=EAR,
+    title="The ear: hearing and balance",
+    lesson="hbi3-the-ear",
+    questions=[
+        q("What is the function of the pinna?",
+          ["To change vibrations into impulses", "To collect sound waves", "To keep the balance", "To equalise air pressure"], 1,
+          ["That is the job of the hair cells in the cochlea.", "Balance is the job of the semicircular canals.", "Pressure is equalised by the Eustachian tube."],
+          "The pinna collects sound waves and directs them into the ear canal.", "Outer ear", "Recall", "It is the part you can see on the side of the head."),
+        q("Which letter shows the cochlea in the diagram?",
+          ["C", "E", "F", "H"], 2,
+          ["C is the semicircular canals, which detect movement of the head.", "E is the oval window, a membrane between the middle ear and the inner ear.", "H is the eardrum."],
+          "The cochlea is the coiled, snail-shaped organ of hearing. It is labelled F.", "Parts of the ear", "Interpretation",
+          "Look for the coiled shape.", diagram="f5hbi3-ear-q.svg",
+          alt="A section of the ear with nine parts labelled by letters A to I: pinna, ear canal, eardrum, ossicles, semicircular canals, cochlea, oval window, auditory nerve and Eustachian tube."),
+        n("How many ossicles (small bones) are there in the middle ear on one side of the head?", 3,
+          "The ossicles are the malleus (hammer), the incus (anvil) and the stapes (stirrup): three bones.", "bones", "Middle ear", "Recall",
+          "Name the hammer, anvil and stirrup."),
+        q("What is the function of the Eustachian tube?",
+          ["To carry impulses to the brain", "To produce wax", "To start impulses in the cochlea", "To equalise air pressure on the two sides of the eardrum"], 3,
+          ["The auditory nerve carries impulses.", "Wax is made in the ear canal.", "The hair cells of the cochlea start the impulses."],
+          "The Eustachian tube joins the middle ear to the throat, so air can pass and the pressure is the same on both sides of the eardrum.", "Eustachian tube", "Recall",
+          "It connects the ear to the throat."),
+        q("Which is the correct order for the path of sound through the ear?",
+          ["Eardrum, ossicles, oval window, cochlea", "Ossicles, eardrum, cochlea, oval window", "Cochlea, ossicles, eardrum, oval window", "Eardrum, cochlea, ossicles, oval window"], 0,
+          ["The eardrum vibrates first, then the ossicles.", "Sound reaches the cochlea last.", "The ossicles come before the cochlea."],
+          "Sound makes the eardrum vibrate, the ossicles pass the vibrations to the oval window, and the fluid in the cochlea moves.", "Path of sound", "Concept",
+          "Start at the membrane at the end of the ear canal."),
+        q("A person feels dizzy after spinning round quickly. Which part of the ear is mainly involved?",
+          ["Cochlea", "Eardrum", "Semicircular canals", "Pinna"], 2,
+          ["The cochlea is for hearing.", "The eardrum vibrates with sound.", "The pinna collects sound."],
+          "Fluid in the semicircular canals keeps moving for a moment after you stop, so the brain receives confusing signals about balance.", "Balance", "Application",
+          "Which part detects movement of the head?"),
+        q("Why do your ears 'pop' when you swallow on a bus climbing a high road?",
+          ["The eardrum bursts", "Swallowing opens the Eustachian tube so the air pressure becomes equal", "The ossicles move apart", "The cochlea fills with air"], 1,
+          ["The eardrum bulges but does not burst.", "The ossicles stay joined.", "The cochlea is filled with fluid."],
+          "Swallowing opens the Eustachian tube. Air moves between the throat and the middle ear and the pressure becomes equal on the two sides of the eardrum.", "Eustachian tube", "Application",
+          "Think of what changes with height and what the tube joins."),
+        q("A musician has used very loud speakers for many years and now hears less. The most likely damage is to",
+          ["the pinna", "the ear wax", "the Eustachian tube", "the sensory hair cells in the cochlea"], 3,
+          ["The pinna does not wear out from noise.", "Wax can block the canal, but loud noise does not cause it.", "The Eustachian tube equalises pressure; it does not detect sound."],
+          "Very loud noise over a long time can destroy the sensory hair cells in the cochlea. This causes nerve deafness. Avoiding very loud sound protects hearing.", "Deafness and care of the ears", "Reasoning",
+          "Which cells are the receptors for sound?"),
+    ]))
+
+
+# ------------------------------------------------------------------ 5. Endocrine glands and hormones
+SETS.append(practice_set(
+    module=MODULE, topic=ENDO,
+    title="Endocrine glands and hormones: functions",
+    lesson="hbi3-endocrine-hormones",
+    questions=[
+        q("An endocrine gland is a gland that",
+          ["releases its product directly into the blood", "releases its product along a duct", "makes only digestive juices", "is found only in the brain"], 0,
+          ["That describes an exocrine gland.", "Digestive juices are made by exocrine glands.", "Endocrine glands are found in many parts of the body."],
+          "An endocrine gland has no duct. It releases hormones directly into the blood.", "Endocrine glands", "Recall", "The word 'endo' means inside: the blood."),
+        q("Which gland makes insulin?",
+          ["Thyroid", "Adrenal", "Pituitary", "Pancreas"], 3,
+          ["The thyroid makes thyroxine.", "The adrenal glands make adrenaline.", "The pituitary makes growth hormone, FSH, LH and ADH."],
+          "Insulin is made by the pancreas.", "Hormones and glands", "Recall", "It also makes digestive juice."),
+        q("What is a result of adrenaline being released into the blood?",
+          ["The heart rate falls", "Digestion speeds up", "The heart beats faster and more glucose enters the blood", "Blood glucose falls"], 2,
+          ["Adrenaline makes the heart beat faster.", "Digestion slows down in 'fight or flight'.", "Adrenaline raises blood glucose."],
+          "Adrenaline prepares the body for action: faster heartbeat, more blood glucose and blood sent to the muscles.", "Adrenaline", "Concept", "Think of how your body feels when frightened."),
+        q("Which is a difference between nervous and hormonal control?",
+          ["Nerves use blood to carry messages; hormones use neurones", "Nervous responses are faster; hormonal effects usually last longer", "Hormones act on only one muscle", "Nervous control is chemical and hormonal control is electrical"], 1,
+          ["It is the other way round: hormones travel in blood and nerves use neurones.", "Hormones can act on many organs.", "Nerve impulses are electrical; hormones are chemical."],
+          "Nerves give fast, short-lived responses. Hormones are slower and often act for longer.", "Nerves and hormones compared", "Concept", "Compare speed and duration."),
+        q("After a big meal of rice and beans, the blood glucose rises. What does the pancreas do?",
+          ["It releases insulin, so the liver stores glucose as glycogen", "It releases glucagon, so the liver releases glucose", "It stops working", "It releases adrenaline"], 0,
+          ["Glucagon would raise the blood glucose even more.", "The pancreas responds to the change.", "Adrenaline is made by the adrenal glands."],
+          [S("Detect", text="Rising blood glucose is detected by the pancreas."),
+           S("Respond", text="Insulin is released. The liver and muscles store glucose as glycogen, so the blood glucose falls.")],
+          "Insulin and blood glucose", "Application", "Which hormone lowers blood glucose?"),
+        q("Lack of iodine in the diet can cause a swollen neck called goitre because iodine is needed to make",
+          ["insulin", "adrenaline", "testosterone", "thyroxine"], 3,
+          ["Insulin is made by the pancreas.", "Adrenaline is made by the adrenal glands.", "Testosterone is made by the testes."],
+          "The thyroid gland needs iodine to make thyroxine. Without iodine it enlarges, forming a goitre.", "Thyroid gland", "Recall", "Which gland is found in the neck?"),
+        q("Which of these is a sign of diabetes mellitus?",
+          ["Very low blood glucose after every meal", "A swollen neck", "Great thirst, frequent urination and tiredness", "Rapid growth in height"], 2,
+          ["In diabetes the blood glucose is too high.", "A swollen neck suggests goitre.", "Rapid growth is related to growth hormone."],
+          "In diabetes the blood glucose stays high. Typical signs are great thirst, frequent urination and tiredness.", "Diabetes", "Concept", "Think of too much glucose in the blood."),
+        q("A pupil is suddenly frightened by a loud noise. Which change is NOT expected?",
+          ["Faster heart rate", "Wider pupils", "More glucose in the blood", "Slower breathing"], 3,
+          ["The heart rate rises.", "The pupils widen.", "Blood glucose rises."],
+          "Adrenaline makes the heart and breathing rate faster, widens the pupils and raises blood glucose. Breathing does not slow down.", "Adrenaline", "Analysis",
+          "Which change would NOT help the body to act quickly?"),
+    ]))
+
+
+# ------------------------------------------------------------------ 6. The reproductive systems
+SETS.append(practice_set(
+    module=MODULE, topic=RS,
+    title="The male and female reproductive systems: parts and functions",
+    lesson="hbi3-reproductive-systems",
+    questions=[
+        q("Which letter shows the testis in the diagram of the male reproductive system?",
+          ["A", "B", "E", "H"], 1,
+          ["A is the bladder.", "E is the penis.", "H is the epididymis, the coiled tube on top of the testis."],
+          "The testis makes sperm and is held in the scrotum. It is labelled B.", "Male reproductive system", "Interpretation",
+          "The testes hang in the scrotum.", diagram="f5hbi3-male-q.svg",
+          alt="Front view of the male reproductive system with nine parts labelled by letters A to I: bladder, testis, urethra, sperm duct, penis, seminal vesicle, prostate gland, epididymis and scrotum."),
+        q("Which letter shows the oviduct (Fallopian tube) in the diagram of the female reproductive system?",
+          ["E", "F", "A", "C"], 3,
+          ["E is the ovary, which makes the eggs.", "F is the vagina.", "A is the uterus."],
+          "The oviduct carries the egg from the ovary towards the uterus. It is labelled C.", "Female reproductive system", "Interpretation",
+          "It is the tube joining the ovary and the uterus.", diagram="f5hbi3-female-q.svg",
+          alt="Front view of the female reproductive system with six parts labelled by letters A to F: uterus, cervix, oviduct, lining of the uterus, ovary and vagina."),
+        q("The scrotum keeps the testes slightly cooler than the body because",
+          ["sperm production needs a lower temperature", "the testes make urine", "the testes make eggs", "the testes need no blood"], 0,
+          ["Urine is made in the kidneys.", "Eggs are made in the ovaries.", "The testes have a blood supply like every organ."],
+          "Sperm production works best at a temperature a little below body temperature, so the testes hang in the scrotum outside the body.", "Scrotum", "Concept",
+          "Think of why the testes are outside the abdomen."),
+        q("In which part of the female reproductive system does fertilization usually occur?",
+          ["Ovary", "Uterus", "Oviduct", "Vagina"], 2,
+          ["The ovary makes the egg but does not hold sperm.", "The uterus is where the embryo grows after implantation.", "The vagina is where sperm are received and is the birth canal."],
+          "Fertilization usually takes place in the oviduct.", "Fertilization site", "Recall", "It happens in the tube the egg travels along."),
+        q("Which feature of a sperm cell supplies energy for swimming?",
+          ["The acrosome in the head", "The nucleus", "The jelly coat", "Many mitochondria in the middle piece"], 3,
+          ["The acrosome holds enzymes to enter the egg.", "The nucleus holds the genes.", "The jelly coat belongs to the egg cell."],
+          "The middle piece is packed with mitochondria that release energy for the tail to move.", "Sperm cell", "Recall", "Mitochondria release energy."),
+        q("Which feature belongs to an egg cell but NOT to a sperm cell?",
+          ["A tail", "A food store in the cytoplasm", "A nucleus", "Mitochondria"], 1,
+          ["The egg cannot swim; the sperm has the tail.", "Both cells have a nucleus.", "Both cells have mitochondria."],
+          "The egg is large and contains a food store, which feeds the early embryo. A sperm has none.", "Egg cell", "Concept", "Compare size and food supply."),
+        n("A human body cell has 46 chromosomes. How many chromosomes are there in one sperm cell?", 23,
+          [S("Gametes", text="Gametes have half the number of chromosomes of a body cell."),
+           S("Calculate", math=r"46 \div 2 = 23")], "chromosomes", "Gametes", "Calculation", "A sperm is a gamete.", tol=0),
+        q("In a permanent family-planning operation, the sperm ducts of a man are cut, but his testes are left. Which statement is correct afterwards?",
+          ["No fluid from the prostate gland is added to the semen", "The testes stop making testosterone", "Sperm cells no longer pass into the semen", "The man can no longer pass urine"], 2,
+          ["The prostate gland joins the urethra further on, so its fluid is still added.", "Testosterone passes from the testes into the blood and is not carried by the sperm duct.", "Urine passes down the urethra, which is not the sperm duct."],
+          [S("Path of sperm", text="Sperm leave the epididymis along the sperm duct to join the urethra."),
+           S("Effect of cutting", text="With the duct cut, sperm cannot reach the urethra, so semen contains no sperm. The testes still make testosterone and the glands still add fluid.")],
+          "Male reproductive system", "Reasoning", "Follow the path of the sperm."),
+    ]))
+
+
+# ------------------------------------------------------------------ 7. The menstrual cycle and fertilization
+SETS.append(practice_set(
+    module=MODULE, topic=MC_,
+    title="The menstrual cycle and fertilization: events and hormones",
+    lesson="hbi3-menstrual-cycle-fertilization",
+    questions=[
+        q("The graph shows a 28-day cycle (a teaching diagram). Which letter marks ovulation?",
+          ["A", "B", "C", "D"], 3,
+          ["A is the curve for the lining of the uterus.", "B is a hormone curve that is low before day 14.", "C is a hormone curve that peaks just before day 14."],
+          "Ovulation is marked by the dashed line at about day 14. It is labelled D.", "Menstrual cycle graph", "Interpretation",
+          "Look for the label that points to the vertical dashed line.", diagram="f5hbi3-menstrual-q.svg",
+          alt="A teaching graph of a 28-day menstrual cycle with three curves and one marked day labelled A, B, C and D: the thickness of the uterus lining, progesterone, oestrogen and ovulation."),
+        q("Which hormone causes the release of an egg from the ovary?",
+          ["FSH", "LH", "Progesterone", "Insulin"], 1,
+          ["FSH makes the follicle grow.", "", "Progesterone keeps the lining thick after ovulation.", "Insulin controls blood glucose."],
+          "A surge of LH from the pituitary gland makes the follicle burst and release the egg.", "Hormones of the cycle", "Recall", "It is made in the pituitary gland and begins with L."),
+        q("In the graph, which letter is progesterone? (Progesterone stays low until ovulation, then rises and peaks around day 21.)",
+          ["B", "C", "A", "D"], 0,
+          ["C is the curve that peaks just before ovulation: oestrogen.", "A is the lining of the uterus.", "D marks the day of ovulation."],
+          "Progesterone is low in the first half of the cycle, then rises to a peak after ovulation. That is curve B.", "Menstrual cycle graph", "Interpretation",
+          "Which curve stays low until day 14?", diagram="f5hbi3-menstrual-q.svg",
+          alt="A teaching graph of a 28-day menstrual cycle with three curves and one marked day labelled A, B, C and D: the thickness of the uterus lining, progesterone, oestrogen and ovulation."),
+        n("A student's menstrual cycle is 30 days long (an example invented for practice). Ovulation occurs about 14 days before the next period starts. On about which day of the cycle does ovulation occur?", 16,
+          [S("Rule", text="Ovulation is about 14 days before the next period."), S("Calculate", math=r"30 - 14 = 16", text="Ovulation is on about day 16.")],
+          "day", "Timing of ovulation", "Calculation", "Count back 14 days from the end of the cycle.", tol=0),
+        q("Which hormone keeps the lining of the uterus thick and ready for an embryo after ovulation?",
+          ["FSH", "LH", "Progesterone", "Adrenaline"], 2,
+          ["FSH grows the follicle in the first half of the cycle.", "LH triggers ovulation.", "", "Adrenaline is the fight or flight hormone and does not maintain the lining."],
+          "After ovulation the empty follicle makes progesterone, which maintains the lining.", "Hormones of the cycle", "Recall", "It is made by the body that forms from the empty follicle."),
+        q("What is implantation?",
+          ["The joining of a sperm and an egg", "The release of an egg from the ovary", "The shedding of the uterus lining", "The embedding of the embryo in the lining of the uterus"], 3,
+          ["That is fertilization.", "That is ovulation.", "That is menstruation."],
+          "Implantation is when the ball of cells sinks into the thick uterus lining, about a week after fertilization.", "Implantation", "Recall",
+          "It happens after fertilization, in the uterus."),
+        q("Twins who are one boy and one girl must be",
+          ["identical twins", "fraternal twins", "from one fertilised egg", "from a single sperm"], 1,
+          ["Identical twins have the same genes and the same sex.", "", "One fertilised egg gives identical twins, who are of the same sex.", "Each egg is fertilised by a different sperm."],
+          "Fraternal twins come from two eggs fertilised by two sperm, so they can be of different sexes.", "Twins", "Concept", "Identical twins are always the same sex."),
+        q("If no fertilization occurs, why does the lining of the uterus break down at the end of the cycle?",
+          ["The level of progesterone falls", "The level of FSH rises", "The egg is released", "The embryo leaves the uterus"], 0,
+          ["FSH acts at the start of the cycle to grow the follicle.", "Ovulation happens about two weeks before.", "There is no embryo when fertilization has not occurred."],
+          [S("After ovulation", text="The empty follicle makes progesterone, which keeps the lining thick."),
+           S("No embryo", text="Without a pregnancy the follicle body breaks down and the progesterone level falls."),
+           S("Result", text="The lining is no longer maintained, so it breaks down and is shed as a period.")],
+          "Menstruation", "Reasoning", "Which hormone maintains the lining?"),
+    ]))
+
+
+# ------------------------------------------------------------------ 8. Antenatal care and family planning
+SETS.append(practice_set(
+    module=MODULE, topic=ANC,
+    title="Pregnancy, antenatal and postnatal care and family planning",
+    lesson="hbi3-antenatal-family-planning",
+    questions=[
+        q("Which is a function of the placenta?",
+          ["To protect the foetus against knocks", "To make eggs", "To pass oxygen and nutrients to the foetus and take away wastes", "To open at birth"], 2,
+          ["That is the job of the amniotic fluid.", "Eggs are made in the ovaries.", "The cervix opens at birth."],
+          "The placenta allows oxygen and nutrients to pass from the mother to the foetus, and carbon dioxide and urea to pass back.", "Placenta", "Recall",
+          "It is the exchange organ between the mother and the foetus."),
+        q("The amniotic fluid",
+          ["cushions the foetus and keeps its temperature steady", "carries blood to the foetus", "makes hormones", "feeds the foetus with glucose"], 0,
+          ["Blood travels in the umbilical cord.", "The placenta makes hormones.", "Glucose comes through the placenta."],
+          "The amniotic fluid is a protective water cushion round the foetus.", "Amniotic fluid", "Recall", "Think of a cushion of water."),
+        q("Why should a pregnant woman not drink alcohol or smoke?",
+          ["These substances cannot reach the baby", "Alcohol and nicotine can cross the placenta and harm the foetus", "They make the placenta grow too big", "They increase the amniotic fluid"], 1,
+          ["Many harmful substances do cross the placenta.", "", "There is no evidence for that; the danger is to the foetus.", "The danger is the harm to the foetus."],
+          "Harmful substances such as alcohol and nicotine pass across the placenta into the foetus's blood.", "Antenatal care", "Concept",
+          "What can pass across the placenta?"),
+        q("Why is colostrum, the first milk, important for a newborn baby?",
+          ["It has no nutrients", "It makes the baby grow taller", "It replaces all vaccines", "It is rich in antibodies that help protect against infection"], 3,
+          ["Colostrum is rich in nutrients.", "It protects; it is not mainly for growth in height.", "Colostrum helps protect but vaccination is still needed."],
+          "Colostrum contains antibodies that protect the baby from infections in the first weeks.", "Postnatal care", "Recall", "Think of protection against germs."),
+        q("Which of the following is part of antenatal care?",
+          ["Weighing the mother, checking blood pressure and giving tetanus vaccine and iron tablets", "Giving the baby its first immunization after birth", "Choosing a family planning method after the birth", "Checking the baby's weight each month after birth"], 0,
+          ["Baby immunization is postnatal care.", "Family planning after the birth is part of family planning care.", "Growth monitoring of the baby is postnatal care."],
+          "Antenatal care is care of the pregnant woman before the birth: check-ups, tests, vaccines and supplements.", "Antenatal care", "Concept", "Antenatal means before birth."),
+        q("Family planning means",
+          ["limiting every family to one child", "forcing couples to follow rules", "deciding if, when and how many children to have, with advice from a health worker", "avoiding all medical care"], 2,
+          ["It is a choice, not a fixed limit for all.", "Choices are personal and nobody should be forced.", "Family planning is part of good health care, and health workers help with it."],
+          "Family planning is the informed choice of a person or couple about whether and when to have children. Choices are personal, and a health worker gives advice.", "Family planning", "Concept",
+          "Who makes the choice?"),
+        q("Which family-planning method also reduces the risk of sexually transmitted infections?",
+          ["A hormonal pill", "A condom", "An implant", "A natural method"], 1,
+          ["Hormonal pills do not protect against infections.", "", "Implants do not protect against infections.", "Natural methods do not protect against infections."],
+          "Condoms form a barrier that stops sperm and many germs. The other methods listed do not protect against infections.", "Family planning methods", "Recall",
+          "Which method is a barrier?"),
+        q("A young couple wants information about family planning. What is the best advice?",
+          ["Copy what a neighbour uses", "Choose the cheapest method without advice", "Do nothing because nothing can be done", "Visit a health worker, who can explain the methods and help them choose what suits them"], 3,
+          ["A method that suits one person may not suit another.", "A health worker can check that the method is safe and suitable.", "Many safe methods exist."],
+          "Choices about family planning are personal. A trained health worker explains the methods, their effects and what suits each person.", "Family planning", "Application",
+          "Who has the training to explain the methods?"),
+    ]))
+
+
+# ------------------------------------------------------------------ 9. Mendelian genetics
+SETS.append(practice_set(
+    module=MODULE, topic=MEN,
+    title="Mendelian genetics: monohybrid crosses",
+    lesson="hbi3-mendelian-genetics",
+    questions=[
+        q("Different forms of the same gene are called",
+          ["chromosomes", "alleles", "gametes", "phenotypes"], 1,
+          ["A chromosome carries many genes.", "", "Gametes are sex cells.", "A phenotype is the visible characteristic."],
+          "Alleles are alternative forms of a gene, for example T for tall and t for short.", "Genes and alleles", "Recall", "Think of T and t."),
+        q("Which genotype is homozygous recessive?",
+          ["TT", "Tt", "tt", "tT"], 2,
+          ["TT is homozygous dominant.", "Tt is heterozygous.", "", "tT is the same as Tt: heterozygous."],
+          "Homozygous means both alleles are the same, and recessive means they are the small letter: tt.", "Genotype", "Recall",
+          "Two small letters."),
+        q("A homozygous tall pea plant (TT) is crossed with a short plant (tt). What are the offspring?",
+          ["All Tt and all tall", "All tt and all short", "1 Tt : 1 tt", "3 tall : 1 short"], 0,
+          ["The offspring receive a T from the TT parent, so none can be tt.", "A 1 : 1 ratio comes from Tt x tt.", "The 3 : 1 ratio comes from Tt x Tt."],
+          [S("Gametes", text="TT gives T only. tt gives t only."), S("Offspring", text="Every offspring is Tt. The dominant allele T shows, so all are tall.")],
+          "Monohybrid cross", "Application", "Write the gametes of each parent first."),
+        n("Two heterozygous tall plants (Tt x Tt) are crossed. What percentage of their offspring are expected to be short?", 25,
+          [S("Punnett square", text="The boxes are TT, Tt, Tt and tt."), S("Short = tt", math=r"\frac{1}{4} = 25\%")],
+          "percent", "Probability", "Calculation", "Only one genotype is short.", tol=0),
+        q("Tt x Tt gives which ratio of tall to short offspring?",
+          ["1 tall : 1 short", "3 tall : 1 short", "1 tall : 3 short", "All tall"], 1,
+          ["That is the ratio for a test cross Tt x tt.", "", "Tall is dominant, so tall plants are more frequent.", "The recessive allele can reappear when both parents carry it."],
+          "TT and Tt are both tall, so there are 3 tall (TT, Tt, Tt) to 1 short (tt).", "Phenotype ratios", "Concept", "Remember that TT and Tt look the same."),
+        q("A farmer crosses two tall plants. Some of the offspring are short. What must be the genotypes of the parents?",
+          ["TT and TT", "TT and Tt", "tt and Tt", "Tt and Tt"], 3,
+          ["Two TT parents could only give tall offspring.", "A TT parent always passes on T, so no offspring could be short.", "A tt parent would itself be short, but both parents are tall."],
+          [S("Short offspring are tt", text="Each short plant received one t from each parent."),
+           S("Both parents carry t", text="The parents are tall, so each must be Tt.")],
+          "Monohybrid cross", "Reasoning", "A short plant is tt. Where did its two t alleles come from?"),
+        q("A tall plant is crossed with a short plant (tt). What ratio of offspring is expected if the tall plant is Tt?",
+          ["3 Tt : 1 tt", "1 TT : 2 Tt : 1 tt", "1 Tt : 1 tt", "All Tt"], 2,
+          ["Three to one is the ratio of phenotypes in Tt x Tt.", "That is the genotype ratio of Tt x Tt.", "", "All Tt comes from TT x tt."],
+          "Tt gives T and t; tt gives only t. The offspring are Tt and tt in equal numbers: 1 : 1.", "Test cross", "Application", "Write the gametes first."),
+        n("Two heterozygous tall parents (Tt x Tt) have two children-plants in turn. What is the chance, as a percentage, that BOTH are short? (Give the answer to two decimal places.)", 6.25,
+          [S("One seed", math=r"P(tt) = \frac{1}{4}"), S("Two seeds", math=r"\frac{1}{4} \times \frac{1}{4} = \frac{1}{16} = 6.25\%")],
+          "percent", "Probability", "Calculation", "Multiply the chance of the first by the chance of the second.", tol=0.01),
+    ]))
+
+
+# ------------------------------------------------------------------ 10. Sex determination and genetic disorders
+SETS.append(practice_set(
+    module=MODULE, topic=SEX,
+    title="Sex determination, sickle-cell, haemophilia and Down syndrome",
+    lesson="hbi3-sex-determination-disorders",
+    questions=[
+        n("A couple already has three girls. What is the chance, as a percentage, that their next baby is a boy?", 50,
+          [S("Sex chromosomes", text="Half of the sperm carry X and half carry Y. Each egg carries X."),
+           S("Chance", math=r"P(\text{boy}) = \frac{1}{2} = 50\%", text="Earlier children make no difference.")],
+          "percent", "Sex determination", "Calculation", "Each pregnancy starts again with equal chances."),
+        q("Down syndrome is caused by",
+          ["an extra copy of chromosome 21", "a missing X chromosome in all cells", "a recessive allele on the Y chromosome", "an infection caught during birth"], 0,
+          ["Down syndrome has an extra chromosome, not a missing one.", "Down syndrome is not caused by a Y-linked allele.", "It is a chromosome condition present from conception and is not infectious."],
+          "People with Down syndrome have three copies of chromosome 21, so they have 47 chromosomes.", "Down syndrome", "Recall", "Count the chromosomes: 46 + 1."),
+        q("The sex of a baby is decided by",
+          ["the egg, which may carry X or Y", "the mother's diet", "the sperm that fertilises the egg", "the mother's age"], 2,
+          ["Every egg carries an X chromosome.", "Diet has no effect on the sex of the baby.", "", "Age does not decide the sex of the baby."],
+          "Eggs all carry X. A sperm with X gives a girl (XX) and a sperm with Y gives a boy (XY).", "Sex determination", "Concept", "Which gamete can carry a Y?"),
+        q("Which genotype causes sickle-cell anaemia?",
+          ["AA", "SS", "AS", "XhY"], 1,
+          ["AA is normal.", "", "AS is a carrier with sickle-cell trait; usually healthy.", "XhY is the genotype of a male with haemophilia."],
+          "Sickle-cell anaemia occurs when a person has two faulty alleles: SS.", "Sickle-cell anaemia", "Recall", "It needs two copies of the recessive allele."),
+        n("Both parents have sickle-cell trait (AS x AS). What percentage of their children are expected to have sickle-cell anaemia (SS)?", 25,
+          [S("Punnett square", text="The boxes are AA, AS, AS and SS."), S("SS", math=r"\frac{1}{4} = 25\%")],
+          "percent", "Sickle-cell crosses", "Calculation", "Only one of four boxes is SS.", tol=0),
+        q("Haemophilia is much more common in males than females because",
+          ["males have two X chromosomes", "the allele is dominant", "the allele is on the Y chromosome", "the allele is recessive and on the X chromosome, so males need only one copy"], 3,
+          ["Males have one X and one Y.", "Haemophilia is recessive.", "The gene is on the X chromosome, not the Y."],
+          "A male has only one X, so a single recessive allele on it causes haemophilia. A female would need two.", "Haemophilia", "Concept", "How many X chromosomes does a male have?"),
+        q("A carrier woman (XHXh) and a normal man (XHY) have children. What fraction of their SONS is expected to have haemophilia?",
+          ["None", "One quarter", "One half", "All"], 2,
+          ["Sons receive Y from the father and one of the mother's two X chromosomes. Half of the time that is Xh.", "A quarter is the chance for a child (boy or girl) to be a boy with haemophilia.", "", "Only the sons who receive the Xh are affected."],
+          [S("Gametes", text="Mother: XH and Xh. Father: XH and Y."), S("Sons are XHY or XhY", text="A son gets Y from his father and one of the mother's X chromosomes. Half receive Xh.")],
+          "Haemophilia crosses", "Application", "A son gets his X from his mother."),
+        q("A man with haemophilia (XhY) has children with a woman who is not a carrier (XHXH). What are the children like?",
+          ["All daughters normal and not carriers", "Half the daughters are affected", "All sons have haemophilia", "All daughters are carriers and all sons are normal"], 3,
+          ["Daughters get the father's Xh, so they are carriers.", "Daughters get an XH from the mother, so none are affected.", "Sons get Y from their father and XH from their mother."],
+          [S("Gametes", text="Father: Xh and Y. Mother: XH only."),
+           S("Children", text="Daughters are XHXh (carriers). Sons are XHY (normal).")],
+          "Haemophilia crosses", "Reasoning", "A son gets his X from his mother."),
+    ]))
+

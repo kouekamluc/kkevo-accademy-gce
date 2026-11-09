@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Four road sign shapes A to D without symbols: red circle, blue circle, red triangle, blue rectangle</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<circle cx="75" cy="120" r="46" fill="#FFFFFF" stroke="#B91C1C" stroke-width="8"/>
+<circle cx="205" cy="120" r="46" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<polygon points="335,70 285,160 385,160" fill="#FFFFFF" stroke="#B91C1C" stroke-width="8" stroke-linejoin="round"/>
+<rect x="419" y="80" width="92" height="80" rx="6" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<text x="75" y="200" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">A</text>
+<text x="205" y="200" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">B</text>
+<text x="335" y="200" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">C</text>
+<text x="465" y="200" font-size="16" fill="#102A43" text-anchor="middle" dominant-baseline="middle" font-weight="700">D</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The imprest cycle: float given, small payments with vouchers, book totalled, amount spent refunded">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#102A43"/>
+    </marker>
+  </defs>
+  <rect width="560" height="360" fill="#FFFFFF"/>
+  <g font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle">
+    <rect x="30" y="50" width="200" height="76" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+    <text x="130" y="76" font-weight="bold">1. Start of period</text>
+    <text x="130" y="96">Head cashier gives</text>
+    <text x="130" y="114">the float: 50 000</text>
+
+    <rect x="330" y="50" width="200" height="76" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+    <text x="430" y="76" font-weight="bold">2. During the period</text>
+    <text x="430" y="96">Petty cashier pays</text>
+    <text x="430" y="114">small bills with vouchers</text>
+
+    <rect x="330" y="234" width="200" height="76" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+    <text x="430" y="260" font-weight="bold">3. End of period</text>
+    <text x="430" y="280">Book totalled: spent</text>
+    <text x="430" y="298">28 500, left 21 500</text>
+
+    <rect x="30" y="234" width="200" height="76" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+    <text x="130" y="260" font-weight="bold" fill="#047857">4. Reimbursement</text>
+    <text x="130" y="280">Head cashier refunds</text>
+    <text x="130" y="298">28 500: float is 50 000</text>
+
+    <path d="M232 88 L326 88" stroke="#102A43" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+    <path d="M430 128 L430 230" stroke="#102A43" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+    <path d="M328 272 L234 272" stroke="#102A43" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+    <path d="M130 230 L130 130" stroke="#102A43" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+
+    <text x="280" y="176" font-weight="bold" font-size="15" fill="#B45309">Imprest cycle</text>
+    <text x="280" y="196" font-size="13">refund = amount spent</text>
+  </g>
+</svg>

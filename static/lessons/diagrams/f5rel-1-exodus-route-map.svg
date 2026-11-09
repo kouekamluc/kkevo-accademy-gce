@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<title>Route of the Exodus, schematic map</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="28" font-size="17" fill="#102A43" text-anchor="middle" font-weight="700">The Exodus (schematic)</text>
+<rect x="20" y="60" width="110" height="130" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/><text x="75" y="100" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">EGYPT</text>
+<text x="75" y="125" font-size="14" fill="#102A43" text-anchor="middle">slavery</text>
+<text x="75" y="150" font-size="14" fill="#102A43" text-anchor="middle">Passover</text>
+<rect x="150" y="60" width="50" height="130" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/><text x="175" y="215" font-size="14" fill="#2563EB" text-anchor="middle">Sea</text>
+<rect x="230" y="240" width="170" height="90" rx="10" fill="#FFFFFF" stroke="#102A43" stroke-width="2" stroke-dasharray="6 4"/><text x="315" y="270" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">WILDERNESS</text>
+<text x="315" y="294" font-size="14" fill="#102A43" text-anchor="middle">manna, water</text>
+<text x="315" y="316" font-size="14" fill="#102A43" text-anchor="middle">forty years</text>
+<polygon points="270,70 300,120 240,120" fill="#ECFDF5" stroke="#047857" stroke-width="2"/><text x="270" y="62" font-size="14" fill="#047857" text-anchor="middle" font-weight="700">Mount Sinai</text>
+<text x="270" y="140" font-size="14" fill="#102A43" text-anchor="middle">covenant</text>
+<rect x="430" y="60" width="110" height="130" rx="10" fill="#ECFDF5" stroke="#047857" stroke-width="2"/><text x="485" y="100" font-size="15" fill="#047857" text-anchor="middle" font-weight="700">CANAAN</text>
+<text x="485" y="125" font-size="14" fill="#102A43" text-anchor="middle">the promised</text>
+<text x="485" y="147" font-size="14" fill="#102A43" text-anchor="middle">land</text>
+<line x1="130" y1="125" x2="140.0" y2="125.0" stroke="#B45309" stroke-width="2"/>
+<polygon points="150,125 140.0,120.0 140.0,130.0" fill="#B45309"/>
+<line x1="200" y1="125" x2="218.0" y2="125.0" stroke="#B45309" stroke-width="2"/>
+<polygon points="228,125 218.0,120.0 218.0,130.0" fill="#B45309"/>
+<polyline points="270,140 270,190 315,240" fill="none" stroke="#B45309" stroke-width="2"/>
+<line x1="400" y1="285" x2="478.1" y2="202.3" stroke="#B45309" stroke-width="2"/>
+<polygon points="485,195 474.5,198.8 481.8,205.7" fill="#B45309"/>
+<text x="160" y="345" font-size="14" fill="#B45309" text-anchor="start">Amber arrows: the direction of travel</text>
+</svg>

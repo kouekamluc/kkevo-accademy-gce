@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Route from seller's premises to buyer's premises with bars showing how far the seller pays under FAS, FOB and CIF"><rect width="560" height="360" fill="#fff"/>
+<text x="280" y="26" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" font-weight="700">Who pays the cost up to which point?</text>
+<line x1="60" y1="70" x2="500" y2="70" stroke="#102A43" stroke-width="2"/>
+<circle cx="60" cy="70" r="7" fill="#102A43"/>
+<text x="60" y="98" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Seller's</text>
+<text x="60" y="114" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">premises</text>
+<circle cx="170" cy="70" r="7" fill="#102A43"/>
+<text x="170" y="98" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Quayside</text>
+<text x="170" y="114" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">(alongside)</text>
+<circle cx="280" cy="70" r="7" fill="#102A43"/>
+<text x="280" y="98" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">On board</text>
+<text x="280" y="114" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">at origin port</text>
+<circle cx="390" cy="70" r="7" fill="#102A43"/>
+<text x="390" y="98" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Arrival</text>
+<text x="390" y="114" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">port</text>
+<circle cx="500" cy="70" r="7" fill="#102A43"/>
+<text x="500" y="98" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Buyer's</text>
+<text x="500" y="114" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">premises</text>
+<rect x="60" y="150" width="110" height="26" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="36" y="169" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#2563EB" font-weight="700">FAS</text>
+<text x="178" y="169" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Seller pays to quayside</text>
+<rect x="60" y="204" width="220" height="26" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="36" y="223" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#2563EB" font-weight="700">FOB</text>
+<text x="288" y="223" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Seller pays to on board</text>
+<rect x="60" y="258" width="330" height="26" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="36" y="277" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#2563EB" font-weight="700">CIF</text>
+<text x="225" y="277" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Seller pays freight + insurance to arrival port</text>
+<text x="280" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Franco: seller delivers to the buyer's place at seller's cost.</text>
+<text x="280" y="342" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#B45309">Under FOB and CIF the buyer's risk begins once goods are on board.</text>
+</svg>

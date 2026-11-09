@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Schematic national flag: three vertical stripes green, red, yellow with a star on the red stripe</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="110.0" y="40" width="113.3" height="230" fill="#007A5E"/>
+<rect x="223.3" y="40" width="113.3" height="230" fill="#CE1126"/>
+<rect x="336.7" y="40" width="113.3" height="230" fill="#FCD116"/>
+<rect x="110" y="40" width="340" height="230" fill="none" stroke="#102A43" stroke-width="2"/>
+<polygon points="280.0,119.0 288.8,142.9 314.2,143.9 294.3,159.6 301.2,184.1 280.0,170.0 258.8,184.1 265.7,159.6 245.8,143.9 271.2,142.9" fill="#FCD116" stroke="#102A43" stroke-width="1.5"/>
+<text x="166.66666666666666" y="300" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Stripe 1</text>
+<text x="280.0" y="300" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Stripe 2</text>
+<text x="393.3333333333333" y="300" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Stripe 3</text>
+<text x="280" y="334" font-size="13" fill="#B45309" text-anchor="middle" dominant-baseline="middle">Schematic drawing: colours and star position</text>
+</svg>

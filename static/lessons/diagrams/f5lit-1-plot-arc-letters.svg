@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="30" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102A43">A plot arc</text>
+<path d="M40 270 L130 262 L300 92 L420 190 L520 232" fill="none" stroke="#102A43" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="85" cy="266" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="85" y="271" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">A</text>
+<circle cx="215" cy="177" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="215" y="182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">B</text>
+<circle cx="300" cy="92" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="300" y="97" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">C</text>
+<circle cx="360" cy="141" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="360" y="146" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">D</text>
+<circle cx="470" cy="211" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="470" y="216" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">E</text>
+<text x="280" y="342" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43">Five points on the story's line of tension</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="30" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102A43">The plot arc</text>
+<path d="M40 270 L130 262 L300 92 L420 190 L520 232" fill="none" stroke="#102A43" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="85" cy="266" r="7" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<circle cx="215" cy="177" r="7" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<circle cx="300" cy="92" r="7" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<circle cx="360" cy="141" r="7" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<circle cx="470" cy="211" r="7" fill="#B45309" stroke="#B45309" stroke-width="2"/>
+<text x="85" y="305" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB">Exposition</text>
+<text x="205" y="150" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB">Rising action</text>
+<text x="300" y="70" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#B45309">Climax</text>
+<text x="380" y="135" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB">Falling action</text>
+<text x="470" y="252" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#2563EB">Resolution</text>
+<text x="280" y="342" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43">Tension rises, peaks, then eases</text>
+</svg>

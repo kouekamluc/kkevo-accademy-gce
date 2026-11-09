@@ -1,0 +1,22 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="28" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">From sales to the net result (simplified OHADA layout)</text>
+<rect x="20" y="46" width="520" height="52" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="34" y="68" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">Commercial margin</text>
+<text x="34" y="88" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">sales of goods - purchases of goods +/- change in inventory</text>
+<line x1="280" y1="98" x2="280" y2="108" stroke="#2563EB" stroke-width="2"/>
+<rect x="20" y="108" width="520" height="52" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="34" y="130" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">Value added</text>
+<text x="34" y="150" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">margin - other purchases and external services</text>
+<line x1="280" y1="160" x2="280" y2="170" stroke="#2563EB" stroke-width="2"/>
+<rect x="20" y="170" width="520" height="52" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="34" y="192" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">Operating profit before depreciation</text>
+<text x="34" y="212" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">value added - taxes - staff costs</text>
+<line x1="280" y1="222" x2="280" y2="232" stroke="#2563EB" stroke-width="2"/>
+<rect x="20" y="232" width="520" height="52" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="34" y="254" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">Operating result</text>
+<text x="34" y="274" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">- depreciation and provisions</text>
+<line x1="280" y1="284" x2="280" y2="294" stroke="#2563EB" stroke-width="2"/>
+<rect x="20" y="294" width="520" height="52" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="34" y="316" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857">Net result</text>
+<text x="34" y="336" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">+/- financial and exceptional items - income tax</text>
+</svg>

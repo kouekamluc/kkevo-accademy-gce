@@ -1,0 +1,20 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="28" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Balance sheet: both sides total the same</text>
+<rect x="20" y="46" width="255" height="270" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<rect x="285" y="46" width="255" height="270" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="147" y="72" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">ASSETS (what is owned)</text>
+<text x="412" y="72" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#047857">EQUITY AND LIABILITIES</text>
+<text x="36" y="120" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Fixed assets (net)</text>
+<text x="36" y="168" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Inventory</text>
+<text x="36" y="216" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Trade receivables</text>
+<text x="36" y="264" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Cash and bank</text>
+<text x="301" y="120" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Capital + net result</text>
+<text x="301" y="168" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Long-term loans</text>
+<text x="301" y="216" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Trade payables</text>
+<text x="301" y="264" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">Bank overdraft, other debts</text>
+<line x1="20" y1="290" x2="275" y2="290" stroke="#102A43" stroke-width="2"/>
+<line x1="285" y1="290" x2="540" y2="290" stroke="#102A43" stroke-width="2"/>
+<text x="147" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Total assets</text>
+<text x="412" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857">Total equity and liabilities</text>
+<text x="280" y="344" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#B45309">Total assets = total equity and liabilities</text>
+</svg>

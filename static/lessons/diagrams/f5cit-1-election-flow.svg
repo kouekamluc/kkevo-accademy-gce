@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Steps of an election: registration, campaign, voting, counting, results</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="90" y="14" width="280" height="52" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="230.0" y="31.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Voter registration</text>
+<text x="230.0" y="49.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">ELECAM lists</text>
+<line x1="230" y1="66" x2="230" y2="82" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="230" y1="82" x2="225.4" y2="74.3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="230" y1="82" x2="234.6" y2="74.3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<rect x="90" y="82" width="280" height="52" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="230.0" y="99.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Campaign</text>
+<text x="230.0" y="117.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">parties and candidates</text>
+<line x1="230" y1="134" x2="230" y2="150" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="230" y1="150" x2="225.4" y2="142.3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="230" y1="150" x2="234.6" y2="142.3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<rect x="90" y="150" width="280" height="52" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="230.0" y="167.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Voting day</text>
+<text x="230.0" y="185.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">polling station</text>
+<line x1="230" y1="202" x2="230" y2="218" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="230" y1="218" x2="225.4" y2="210.3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="230" y1="218" x2="234.6" y2="210.3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<rect x="90" y="218" width="280" height="52" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="230.0" y="235.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Counting</text>
+<text x="230.0" y="253.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">in front of observers</text>
+<line x1="230" y1="270" x2="230" y2="286" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="230" y1="286" x2="225.4" y2="278.3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="230" y1="286" x2="234.6" y2="278.3" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<rect x="90" y="286" width="280" height="52" rx="8" fill="#FFF7ED" stroke="#B45309" stroke-width="2"/>
+<text x="230.0" y="303.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Results</text>
+<text x="230.0" y="321.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">announced and challenged</text>
+<text x="465" y="40" font-size="13" fill="#B45309" text-anchor="middle" dominant-baseline="middle">Step 1</text>
+<text x="465" y="108" font-size="13" fill="#B45309" text-anchor="middle" dominant-baseline="middle">Step 2</text>
+<text x="465" y="176" font-size="13" fill="#B45309" text-anchor="middle" dominant-baseline="middle">Step 3</text>
+<text x="465" y="244" font-size="13" fill="#B45309" text-anchor="middle" dominant-baseline="middle">Step 4</text>
+<text x="465" y="312" font-size="13" fill="#B45309" text-anchor="middle" dominant-baseline="middle">Step 5</text>
+</svg>

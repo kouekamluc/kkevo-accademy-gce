@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<title>The eighth century BC (approximate)</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="28" font-size="17" fill="#102A43" text-anchor="middle" font-weight="700">The eighth century BC (approximate)</text>
+<line x1="20" y1="190" x2="540" y2="190" stroke="#102A43" stroke-width="3"/>
+<line x1="85.0" y1="190" x2="85.0" y2="172" stroke="#2563EB" stroke-width="2"/>
+<circle cx="85.0" cy="190" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="8" y="62" width="170" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="93.0" y="104.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Amos</text>
+<text x="93.0" y="122.0" font-size="14" fill="#102A43" text-anchor="middle">Shepherd; justice</text>
+<text x="93.0" y="140.0" font-size="14" fill="#102A43" text-anchor="middle">in Israel</text>
+<line x1="215.0" y1="190" x2="215.0" y2="208" stroke="#2563EB" stroke-width="2"/>
+<circle cx="215.0" cy="190" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="130.0" y="208" width="170" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="215.0" y="259.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Hosea</text>
+<text x="215.0" y="277.0" font-size="14" fill="#102A43" text-anchor="middle">God's faithful love</text>
+<line x1="345.0" y1="190" x2="345.0" y2="172" stroke="#2563EB" stroke-width="2"/>
+<circle cx="345.0" cy="190" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="260.0" y="62" width="170" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="345.0" y="104.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Isaiah</text>
+<text x="345.0" y="122.0" font-size="14" fill="#102A43" text-anchor="middle">Called in the</text>
+<text x="345.0" y="140.0" font-size="14" fill="#102A43" text-anchor="middle">temple; Judah</text>
+<line x1="475.0" y1="190" x2="475.0" y2="208" stroke="#2563EB" stroke-width="2"/>
+<circle cx="475.0" cy="190" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="382" y="208" width="170" height="110" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="467.0" y="250.0" font-size="15" fill="#047857" text-anchor="middle" font-weight="700">About 722 BC</text>
+<text x="467.0" y="268.0" font-size="14" fill="#102A43" text-anchor="middle">Samaria falls to</text>
+<text x="467.0" y="286.0" font-size="14" fill="#102A43" text-anchor="middle">Assyria</text>
+</svg>

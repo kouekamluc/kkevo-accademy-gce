@@ -1,0 +1,34 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#102A43"/></marker></defs>
+<text x="280" y="26" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#102A43">Two faults: find the movement</text>
+<defs><clipPath id="cf25"><rect x="25" y="85" width="240" height="190"/></clipPath></defs><g clip-path="url(#cf25)">
+<polygon points="25.0,110.0 131.6,110.0 142.1,150.0 25.0,150.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<polygon points="138.9,138.0 265.0,138.0 265.0,178.0 149.5,178.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<polygon points="25.0,150.0 142.1,150.0 152.6,190.0 25.0,190.0" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<polygon points="149.5,178.0 265.0,178.0 265.0,218.0 160.0,218.0" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<polygon points="25.0,190.0 152.6,190.0 163.2,230.0 25.0,230.0" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<polygon points="160.0,218.0 265.0,218.0 265.0,258.0 170.5,258.0" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<polygon points="25.0,230.0 163.2,230.0 181.6,300.0 25.0,300.0" fill="#E5E7EB" stroke="#102A43" stroke-width="2"/>
+<polygon points="170.5,258.0 265.0,258.0 265.0,328.0 188.9,328.0" fill="#E5E7EB" stroke="#102A43" stroke-width="2"/>
+</g><rect x="25" y="85" width="240" height="190" fill="none" stroke="#102A43" stroke-width="1"/>
+<line x1="125.0" y1="85.0" x2="175.0" y2="275.0" stroke="#2563EB" stroke-width="3"/>
+<line x1="215.0" y1="120.0" x2="215.0" y2="165.0" stroke="#102A43" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="85.0" y1="165.0" x2="85.0" y2="165.0" stroke="#102A43" stroke-width="2"/>
+
+<defs><clipPath id="cf295"><rect x="295" y="85" width="240" height="190"/></clipPath></defs><g clip-path="url(#cf295)">
+<polygon points="295.0,112.0 402.1,112.0 412.6,152.0 295.0,152.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<polygon points="394.7,84.0 535.0,84.0 535.0,124.0 405.3,124.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<polygon points="295.0,152.0 412.6,152.0 423.2,192.0 295.0,192.0" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<polygon points="405.3,124.0 535.0,124.0 535.0,164.0 415.8,164.0" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<polygon points="295.0,192.0 423.2,192.0 433.7,232.0 295.0,232.0" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<polygon points="415.8,164.0 535.0,164.0 535.0,204.0 426.3,204.0" fill="#FEF3C7" stroke="#102A43" stroke-width="2"/>
+<polygon points="295.0,232.0 433.7,232.0 451.6,300.0 295.0,300.0" fill="#E5E7EB" stroke="#102A43" stroke-width="2"/>
+<polygon points="426.3,204.0 535.0,204.0 535.0,272.0 444.2,272.0" fill="#E5E7EB" stroke="#102A43" stroke-width="2"/>
+</g><rect x="295" y="85" width="240" height="190" fill="none" stroke="#102A43" stroke-width="1"/>
+<line x1="395.0" y1="85.0" x2="445.0" y2="275.0" stroke="#2563EB" stroke-width="3"/>
+<line x1="485.0" y1="165.0" x2="485.0" y2="120.0" stroke="#102A43" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="355.0" y1="165.0" x2="355.0" y2="165.0" stroke="#102A43" stroke-width="2"/>
+
+<text x="145" y="298" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">FAULT X</text><text x="415" y="298" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">FAULT Y</text>
+<text x="145" y="318" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">arrow: movement of the right block</text><text x="415" y="318" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">arrow: movement of the right block</text>
+</svg>

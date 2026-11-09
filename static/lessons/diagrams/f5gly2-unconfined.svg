@@ -1,0 +1,20 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#102A43"/></marker></defs>
+<text x="280" y="26" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#102A43">Groundwater: water table, well and spring</text>
+<polygon points="40.0,150.0 110.0,128.0 180.0,112.0 260.0,140.0 340.0,175.0 400.0,190.0 470.0,178.0 520.0,168.0 520.0,310.0 40.0,310.0" fill="#FEF3C7" stroke="#102A43" stroke-width="1"/>
+<polygon points="40.0,190.0 110.0,175.0 180.0,160.0 260.0,168.0 340.0,182.0 400.0,190.0 470.0,188.0 520.0,188.0 520.0,262.0 40.0,262.0" fill="#BFDBFE" stroke="none" stroke-width="0"/>
+<polygon points="40.0,262.0 520.0,262.0 520.0,310.0 40.0,310.0" fill="#E5E7EB" stroke="#102A43" stroke-width="1"/>
+<polyline points="40.0,150.0 110.0,128.0 180.0,112.0 260.0,140.0 340.0,175.0 400.0,190.0 470.0,178.0 520.0,168.0" fill="none" stroke="#102A43" stroke-width="3"/>
+<polyline points="40.0,190.0 110.0,175.0 180.0,160.0 260.0,168.0 340.0,182.0 400.0,190.0 470.0,188.0 520.0,188.0" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="40" y="95" width="480" height="215" fill="none" stroke="#102A43" stroke-width="2"/>
+<line x1="180.0" y1="112.0" x2="180.0" y2="225.0" stroke="#102A43" stroke-width="4"/>
+<line x1="400.0" y1="190.0" x2="440.0" y2="205.0" stroke="#2563EB" stroke-width="3" marker-end="url(#ar)"/>
+<line x1="120.0" y1="176.0" x2="90.0" y2="82.0" stroke="#B45309" stroke-width="1.5"/><circle cx="120" cy="176" r="3" fill="#B45309" stroke="#B45309" stroke-width="1"/><text x="90" y="77" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#2563EB">water table</text>
+
+<line x1="180.0" y1="200.0" x2="280.0" y2="82.0" stroke="#B45309" stroke-width="1.5"/><circle cx="180" cy="200" r="3" fill="#B45309" stroke="#B45309" stroke-width="1"/><text x="280" y="77" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857">well</text>
+<line x1="400.0" y1="190.0" x2="440.0" y2="82.0" stroke="#B45309" stroke-width="1.5"/><circle cx="400" cy="190" r="3" fill="#B45309" stroke="#B45309" stroke-width="1"/><text x="440" y="77" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857">spring</text>
+<text x="250" y="235" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">zone of saturation: pores full of water</text>
+
+<text x="280" y="290" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">impermeable clay: water cannot go down</text>
+
+</svg>

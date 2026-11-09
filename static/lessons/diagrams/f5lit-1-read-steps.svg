@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="32" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#102A43">Reading a poem: six steps</text>
+<rect x="20" y="70" width="160" height="90" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="100" y="108" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#102A43">1  Read twice</text>
+<text x="100" y="134" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43">for sound, then sense</text>
+<rect x="200" y="70" width="160" height="90" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="108" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#102A43">2  Paraphrase</text>
+<text x="280" y="134" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43">say it in plain prose</text>
+<rect x="380" y="70" width="160" height="90" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="460" y="108" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#102A43">3  Who speaks?</text>
+<text x="460" y="134" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43">to whom?</text>
+<rect x="380" y="210" width="160" height="90" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="460" y="248" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#102A43">4  About what?</text>
+<text x="460" y="274" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43">subject and situation</text>
+<rect x="200" y="210" width="160" height="90" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="248" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#102A43">5  How?</text>
+<text x="280" y="274" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43">images, sound, form</text>
+<rect x="20" y="210" width="160" height="90" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="100" y="248" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#102A43">6  Why?</text>
+<text x="100" y="274" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43">theme and tone</text>
+<path d="M182 115 L198 115 M190 108 L198 115 L190 122" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<path d="M362 115 L378 115 M370 108 L378 115 L370 122" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<path d="M460 162 L460 208 M453 200 L460 208 L467 200" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<path d="M378 255 L362 255 M370 248 L362 255 L370 262" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<path d="M198 255 L182 255 M190 248 L182 255 L190 262" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<text x="280" y="335" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="400" fill="#102A43">Go back to the poem after each step</text>
+</svg>

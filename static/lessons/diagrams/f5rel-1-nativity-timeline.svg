@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<title>The birth stories (Luke and Matthew)</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="28" font-size="17" fill="#102A43" text-anchor="middle" font-weight="700">The birth stories (Luke and Matthew)</text>
+<line x1="20" y1="190" x2="540" y2="190" stroke="#102A43" stroke-width="3"/>
+<line x1="63.333333333333336" y1="190" x2="63.333333333333336" y2="172" stroke="#2563EB" stroke-width="2"/>
+<circle cx="63.333333333333336" cy="190" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="8" y="62" width="145" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="80.5" y="104.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Zechariah</text>
+<text x="80.5" y="122.0" font-size="14" fill="#102A43" text-anchor="middle">Gabriel</text>
+<text x="80.5" y="140.0" font-size="14" fill="#102A43" text-anchor="middle">announces John</text>
+<line x1="150.0" y1="190" x2="150.0" y2="208" stroke="#2563EB" stroke-width="2"/>
+<circle cx="150.0" cy="190" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="77.5" y="208" width="145" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="150.0" y="250.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Mary</text>
+<text x="150.0" y="268.0" font-size="14" fill="#102A43" text-anchor="middle">Gabriel</text>
+<text x="150.0" y="286.0" font-size="14" fill="#102A43" text-anchor="middle">announces Jesus</text>
+<line x1="236.66666666666669" y1="190" x2="236.66666666666669" y2="172" stroke="#2563EB" stroke-width="2"/>
+<circle cx="236.66666666666669" cy="190" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="164.2" y="62" width="145" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="236.7" y="113.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">John born</text>
+<text x="236.7" y="131.0" font-size="14" fill="#102A43" text-anchor="middle">Zechariah speaks</text>
+<line x1="323.33333333333337" y1="190" x2="323.33333333333337" y2="208" stroke="#2563EB" stroke-width="2"/>
+<circle cx="323.33333333333337" cy="190" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="250.8" y="208" width="145" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="323.3" y="250.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">Bethlehem</text>
+<text x="323.3" y="268.0" font-size="14" fill="#102A43" text-anchor="middle">Jesus born;</text>
+<text x="323.3" y="286.0" font-size="14" fill="#102A43" text-anchor="middle">shepherds</text>
+<line x1="410.0" y1="190" x2="410.0" y2="172" stroke="#2563EB" stroke-width="2"/>
+<circle cx="410.0" cy="190" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="337.5" y="62" width="145" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="410.0" y="113.0" font-size="15" fill="#2563EB" text-anchor="middle" font-weight="700">The magi</text>
+<text x="410.0" y="131.0" font-size="14" fill="#102A43" text-anchor="middle">Herod's anger</text>
+<line x1="496.6666666666667" y1="190" x2="496.6666666666667" y2="208" stroke="#2563EB" stroke-width="2"/>
+<circle cx="496.6666666666667" cy="190" r="8" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="407" y="208" width="145" height="110" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="479.5" y="250.0" font-size="15" fill="#047857" text-anchor="middle" font-weight="700">Egypt, Nazareth</text>
+<text x="479.5" y="268.0" font-size="14" fill="#102A43" text-anchor="middle">Family returns</text>
+<text x="479.5" y="286.0" font-size="14" fill="#102A43" text-anchor="middle">home</text>
+</svg>

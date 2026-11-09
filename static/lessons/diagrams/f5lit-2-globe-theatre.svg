@@ -1,0 +1,34 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif" font-size="14">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="26" text-anchor="middle" fill="#102A43" font-weight="700" font-size="17">An open-air Elizabethan playhouse (schematic)</text>
+<rect x="30" y="118" width="95" height="182" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<line x1="30" y1="178" x2="125" y2="178" stroke="#102A43" stroke-width="2"/>
+<line x1="30" y1="239" x2="125" y2="239" stroke="#102A43" stroke-width="2"/>
+<text x="77" y="108" text-anchor="middle" fill="#102A43" font-weight="700">Galleries</text>
+<text x="77" y="153" text-anchor="middle" fill="#102A43">seats</text>
+<rect x="435" y="118" width="95" height="182" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<line x1="435" y1="178" x2="530" y2="178" stroke="#102A43" stroke-width="2"/>
+<line x1="435" y1="239" x2="530" y2="239" stroke="#102A43" stroke-width="2"/>
+<text x="482" y="108" text-anchor="middle" fill="#102A43" font-weight="700">Galleries</text>
+<text x="482" y="153" text-anchor="middle" fill="#102A43">seats</text>
+<rect x="150" y="62" width="260" height="32" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="83" text-anchor="middle" fill="#102A43" font-weight="700">The Heavens (roof)</text>
+<line x1="158" y1="94" x2="158" y2="250" stroke="#102A43" stroke-width="3"/>
+<line x1="402" y1="94" x2="402" y2="250" stroke="#102A43" stroke-width="3"/>
+<rect x="175" y="116" width="210" height="134" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="134" text-anchor="middle" fill="#102A43">Back wall (tiring house)</text>
+<rect x="225" y="146" width="110" height="38" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="170" text-anchor="middle" fill="#102A43">Upper level</text>
+<rect x="185" y="200" width="55" height="50" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="212" y="230" text-anchor="middle" fill="#102A43">Door</text>
+<rect x="320" y="200" width="55" height="50" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="347" y="230" text-anchor="middle" fill="#102A43">Door</text>
+<rect x="140" y="250" width="280" height="50" fill="#ECFDF5" stroke="#047857" stroke-width="3"/>
+<rect x="250" y="245" width="60" height="8" fill="#B45309"/>
+<line x1="280" y1="253" x2="280" y2="268" stroke="#B45309" stroke-width="2"/>
+<text x="280" y="286" text-anchor="middle" fill="#102A43">Trap door</text>
+<text x="150" y="271" text-anchor="start" fill="#047857" font-weight="700">Stage</text>
+<line x1="30" y1="300" x2="530" y2="300" stroke="#102A43" stroke-width="3"/>
+<text x="280" y="326" text-anchor="middle" fill="#102A43" font-weight="700">The yard: groundlings stand in front of the stage</text>
+<text x="280" y="347" text-anchor="middle" fill="#102A43">No curtain, little scenery, daylight performance</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Three arms of government: executive, legislature, judiciary</title>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="130" y="14" width="300" height="70" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280.0" y="31.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">EXECUTIVE</text>
+<text x="280.0" y="49.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">President and Government</text>
+<text x="280.0" y="67.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">carries out the laws</text>
+<rect x="10" y="250" width="260" height="70" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="140.0" y="267.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">LEGISLATURE</text>
+<text x="140.0" y="285.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">National Assembly and Senate</text>
+<text x="140.0" y="303.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">makes the laws</text>
+<rect x="290" y="250" width="260" height="70" rx="8" fill="#FFF7ED" stroke="#B45309" stroke-width="2"/>
+<text x="420.0" y="267.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">JUDICIARY</text>
+<text x="420.0" y="285.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">The courts</text>
+<text x="420.0" y="303.0" font-size="14" fill="#102A43" text-anchor="middle" dominant-baseline="middle">applies the laws</text>
+<line x1="210" y1="84" x2="140" y2="250" stroke="#102A43" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 4"/>
+<line x1="350" y1="84" x2="420" y2="250" stroke="#102A43" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 4"/>
+<line x1="270" y1="285" x2="290" y2="285" stroke="#102A43" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 4"/>
+<text x="280" y="342" font-size="13" fill="#102A43" text-anchor="middle" dominant-baseline="middle">Three separate arms, each with its own job</text>
+</svg>
