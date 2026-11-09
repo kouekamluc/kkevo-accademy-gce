@@ -60,7 +60,7 @@
   .accent-slate { @apply bg-slate-100 text-navy; }
   /* Solid game-style subject tiles with a darker bottom edge */
   .tile-blue { @apply bg-primary text-white; box-shadow: inset 0 -4px 0 rgba(0,0,0,.2); }
-  .tile-emerald { @apply bg-success text-white; box-shadow: inset 0 -4px 0 rgba(0,0,0,.2); }
+  .tile-emerald { @apply bg-success text-[#052E1C]; box-shadow: inset 0 -4px 0 rgba(0,0,0,.2); }
   .tile-amber { @apply bg-warning text-navy; box-shadow: inset 0 -4px 0 rgba(0,0,0,.15); }
   .tile-slate { @apply bg-navy text-white; box-shadow: inset 0 -4px 0 rgba(0,0,0,.25); }
   .chip-toggle { @apply flex h-12 items-center justify-center whitespace-nowrap rounded-full border-[1.5px] border-slate-300 bg-white px-5 text-[15px] font-semibold text-slate-700 transition peer-checked:border-2 peer-checked:border-primary peer-checked:bg-primary-50 peer-checked:text-primary-700 peer-focus-visible:ring-4 peer-focus-visible:ring-primary-300 nav:h-[42px] nav:rounded-input nav:border-0 nav:bg-transparent nav:px-3 nav:font-medium nav:text-slate-600 nav:peer-checked:border-0 nav:peer-checked:bg-white nav:peer-checked:font-semibold nav:peer-checked:text-ink-heading nav:peer-checked:shadow-card; }

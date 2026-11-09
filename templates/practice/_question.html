@@ -128,7 +128,7 @@ exam_open, review_note. Works without JavaScript: answers and hint requests are 
         {% if dot.n <= 5 or dot.state == "current" or forloop.last %}
         {% if forloop.last and forloop.counter > 6 %}<span class="text-sm text-ink-muted">…</span>{% endif %}
         <a {% if dot.url %}href="{{ dot.url }}"{% endif %} {% if dot.state == "current" %}aria-current="step"{% endif %} aria-label="Question {{ dot.n }}{% if dot.state == 'right' %}, correct{% elif dot.state == 'wrong' %}, incorrect{% elif dot.state == 'answered' %}, answered{% endif %}"
-           class="flex h-9 w-9 items-center justify-center rounded-lg text-sm font-semibold {% if dot.state == 'right' %}bg-success text-white hover:text-white{% elif dot.state == 'wrong' %}border-[1.5px] border-dashed border-red-400 text-danger-text{% elif dot.state == 'answered' %}bg-primary-100 text-primary-700{% elif dot.state == 'current' %}bg-primary text-white hover:text-white{% else %}border border-surface-border text-slate-500{% endif %}">{{ dot.n }}</a>
+           class="flex h-9 w-9 items-center justify-center rounded-lg text-sm font-semibold {% if dot.state == 'right' %}bg-success text-[#052E1C] hover:text-[#052E1C]{% elif dot.state == 'wrong' %}border-[1.5px] border-dashed border-red-400 text-danger-text{% elif dot.state == 'answered' %}bg-primary-100 text-primary-700{% elif dot.state == 'current' %}bg-primary text-white hover:text-white{% else %}border border-surface-border text-slate-500{% endif %}">{{ dot.n }}</a>
         {% endif %}
       {% endfor %}
     </nav>

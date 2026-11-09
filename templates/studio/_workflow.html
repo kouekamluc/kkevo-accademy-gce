@@ -26,12 +26,12 @@ Buttons choose their endpoint with `formaction`, so one comment box serves every
     <button type="button" class="btn-secondary" @click="note = !note" x-text="note ? 'Hide comment' : 'Add comment'">Add comment</button>
     {% if draft %}
       {% if draft.status == "draft" %}<button type="submit" formaction="{{ changes_url }}" name="action" value="submit" class="btn-primary">Submit changes for review</button>{% endif %}
-      {% if can_publish %}<button type="submit" formaction="{{ changes_url }}" name="action" value="publish" class="btn bg-success text-white hover:bg-success-text hover:text-white">Publish changes</button>{% endif %}
+      {% if can_publish %}<button type="submit" formaction="{{ changes_url }}" name="action" value="publish" class="btn bg-success text-[#052E1C] hover:bg-success-text hover:text-white">Publish changes</button>{% endif %}
       {% if can_publish and draft.status == "review" %}<button type="submit" formaction="{{ changes_url }}" name="action" value="send_back" class="btn-secondary">Send changes back</button>{% endif %}
       <button type="submit" formaction="{{ changes_url }}" name="action" value="discard" class="btn-secondary text-danger-text" onclick="return confirm('Discard all draft changes? The published version stays as it is.')">Discard changes</button>
     {% else %}
       {% if lesson.status == "draft" %}<button type="submit" formaction="{{ status_url }}" name="status" value="review" class="btn-primary">Submit for review</button>{% endif %}
-      {% if can_publish and lesson.status != "published" %}<button type="submit" formaction="{{ status_url }}" name="status" value="published" class="btn bg-success text-white hover:bg-success-text hover:text-white">Publish</button>{% endif %}
+      {% if can_publish and lesson.status != "published" %}<button type="submit" formaction="{{ status_url }}" name="status" value="published" class="btn bg-success text-[#052E1C] hover:bg-success-text hover:text-white">Publish</button>{% endif %}
       {% if lesson.status != "draft" %}<button type="submit" formaction="{{ status_url }}" name="status" value="draft" class="btn-secondary">{% if lesson.status == "published" %}Unpublish (back to draft){% else %}Back to draft{% endif %}</button>{% endif %}
     {% endif %}
   </div>

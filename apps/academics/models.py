@@ -92,6 +92,13 @@ class Subject(OrderedModel):
     def __str__(self):
         return self.name
 
+    @property
+    def colour(self):
+        """The subject's own colour (see apps.academics.colours)."""
+        from .colours import subject_colour
+
+        return subject_colour(self)
+
     def card_meta(self):
         """'Science · 3 levels' — needs `active_offerings` prefetched (see core.views)."""
         offerings = getattr(self, "active_offerings", None)

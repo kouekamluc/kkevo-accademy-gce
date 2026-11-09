@@ -29,7 +29,7 @@
           {% for row in t.rows %}
           <a href="{{ row.lesson.get_absolute_url }}" {% if row.lesson.pk == lesson.pk %}aria-current="page"{% endif %}
              class="mt-1 flex min-h-[36px] items-start gap-2.5 rounded-lg px-2 py-2 leading-snug {% if row.lesson.pk == lesson.pk %}border border-primary-300 bg-primary-50 font-semibold text-primary-700 hover:text-primary-700{% else %}text-slate-700 hover:bg-white hover:text-navy{% endif %}">
-            {% if row.done %}<span class="flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full bg-success text-white">{% include "components/icon.html" with name="check" class="h-3 w-3" stroke="3" %}</span>
+            {% if row.done %}<span class="flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full bg-success text-[#052E1C]">{% include "components/icon.html" with name="check" class="h-3 w-3" stroke="3" %}</span>
             {% elif row.lesson.pk == lesson.pk %}<span class="flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full border-2 border-primary"><span class="h-2 w-2 rounded-full bg-primary"></span></span>
             {% else %}<span class="h-[18px] w-[18px] shrink-0 rounded-full border-2 border-slate-300"></span>{% endif %}
             <span class="line-clamp-2" title="{{ row.lesson.title }}">{{ row.lesson.title }}</span>

@@ -51,7 +51,7 @@
   <ol class="mt-4 divide-y divide-surface-border">
     {% for row in rows %}{% with a=row.answer %}
     <li><a href="{% url 'practice:question' attempt.pk forloop.counter %}" class="flex items-start gap-4 py-4 text-ink-heading hover:text-ink-heading">
-      <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-semibold {% if a.is_correct %}bg-success text-white{% else %}border-[1.5px] border-dashed border-red-400 text-danger-text{% endif %}">{{ forloop.counter }}</span>
+      <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-semibold {% if a.is_correct %}bg-success text-[#052E1C]{% else %}border-[1.5px] border-dashed border-red-400 text-danger-text{% endif %}">{{ forloop.counter }}</span>
       <span class="flex-1"><span class="block text-[15px]">{{ row.question.prompt|inline }}</span>
         <span class="mt-1 block text-sm {% if a.is_correct %}text-success-text{% else %}text-danger-text{% endif %}">{% if a %}Your answer: {{ a.display|inline }}{% else %}Not answered{% endif %}{% if a.used_hint %} · <span class="text-warning-text">hint used</span>{% endif %}{% if a.lucky_guess %} · <span class="text-warning-text">you guessed</span>{% endif %}</span></span>
     </a></li>

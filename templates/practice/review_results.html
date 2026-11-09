@@ -21,7 +21,7 @@
   <ol class="mt-4 divide-y divide-surface-border">
     {% for row in rows %}{% with a=row.answer card=row.card %}
     <li><a href="{% url 'practice:review_question' session.pk forloop.counter %}" class="flex items-start gap-4 py-4 text-ink-heading hover:text-ink-heading">
-      <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-semibold {% if a.is_correct %}bg-success text-white{% else %}border-[1.5px] border-dashed border-red-400 text-danger-text{% endif %}">{{ forloop.counter }}</span>
+      <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-semibold {% if a.is_correct %}bg-success text-[#052E1C]{% else %}border-[1.5px] border-dashed border-red-400 text-danger-text{% endif %}">{{ forloop.counter }}</span>
       <span class="flex-1"><span class="block text-[15px]">{{ row.question.prompt|inline }}</span>
         <span class="mt-1 block text-sm text-ink-muted">{% if card.retired_at %}<span class="font-semibold text-success-text">Cleared</span>{% elif card %}Next review {{ card.due_on|date:"l j M" }}{% endif %}</span></span>
     </a></li>

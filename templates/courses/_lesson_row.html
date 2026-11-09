@@ -2,7 +2,7 @@
 <a href="{{ lesson.get_absolute_url }}" x-show="rowVisible('{{ state }}')" {% if state == 'current' %}aria-current="step"{% endif %}
    class="flex min-h-[64px] items-center gap-3.5 border-t border-slate-100 px-4 py-3 text-ink-heading hover:bg-slate-50 hover:text-ink-heading sm:min-h-[70px] sm:gap-4 sm:pl-20 sm:pr-5 {% if state == 'current' %}border-primary-100 bg-primary-50 hover:bg-primary-50{% endif %}">
   {% if state == 'done' %}
-    <span class="flex h-6 w-6 flex-none items-center justify-center rounded-full bg-success text-white" aria-label="Completed">{% include "components/icon.html" with name="check" class="h-3.5 w-3.5" stroke="3" %}</span>
+    <span class="flex h-6 w-6 flex-none items-center justify-center rounded-full bg-success text-[#052E1C]" aria-label="Completed">{% include "components/icon.html" with name="check" class="h-3.5 w-3.5" stroke="3" %}</span>
   {% elif state == 'current' %}
     <span class="flex h-6 w-6 flex-none items-center justify-center rounded-full border-[2.5px] border-primary bg-white" aria-label="In progress"><span class="h-[9px] w-[9px] rounded-full bg-primary"></span></span>
   {% else %}

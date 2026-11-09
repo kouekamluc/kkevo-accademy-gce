@@ -13,9 +13,20 @@
   </div>
 
   {% if cards %}
+  {% if ready_count %}
   <div class="grid gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
-    {% for card in cards %}{% include "courses/_subject_card.html" %}{% endfor %}
+    {% for card in cards %}{% if card.ready %}{% include "courses/_subject_card.html" %}{% endif %}{% endfor %}
   </div>
+  {% endif %}
+  {% if ready_count < cards|length %}
+  <div class="{% if ready_count %}mt-4 {% endif %}flex flex-col gap-1">
+    <h2 class="text-lg font-extrabold text-ink-heading">Coming soon</h2>
+    <p class="text-[15px] text-ink-muted">Our teachers are writing these lessons now.</p>
+  </div>
+  <div class="grid gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+    {% for card in cards %}{% if not card.ready %}{% include "courses/_subject_card.html" %}{% endif %}{% endfor %}
+  </div>
+  {% endif %}
   {% else %}
   <div class="rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center">
     <p class="text-lg font-semibold text-ink-heading">No subjects match these filters</p>

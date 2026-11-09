@@ -64,7 +64,7 @@
         <div class="flex shrink-0 gap-2.5">
           {% include "lessons/_save_button.html" with variant="icon" %}
           <form method="post" action="{% url 'courses:lesson_complete' course.slug lesson.pk %}">{% csrf_token %}
-            <button type="submit" class="btn h-12 px-6 {% if progress.is_completed %}border border-success-200 bg-success-50 text-success-text{% else %}bg-success text-white hover:bg-success-text hover:text-white{% endif %}">{% include "components/icon.html" with name="check" class="h-[18px] w-[18px]" stroke="2.5" %}{% if progress.is_completed %}Completed{% else %}Complete Lesson{% endif %}</button>
+            <button type="submit" class="btn h-12 px-6 {% if progress.is_completed %}border border-success-200 bg-success-50 text-success-text{% else %}bg-success text-[#052E1C] hover:bg-success-text hover:text-white{% endif %}">{% include "components/icon.html" with name="check" class="h-[18px] w-[18px]" stroke="2.5" %}{% if progress.is_completed %}Completed{% else %}Complete Lesson{% endif %}</button>
           </form>
         </div>
       </div>

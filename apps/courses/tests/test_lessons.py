@@ -165,4 +165,4 @@ def test_course_page_is_encouraging_and_subject_tiles_are_solid(client, django_u
     user = django_user_model.objects.create_user(email="tiles@example.com", password="pw-Strong-123")
     client.force_login(user)
     html = client.get(course.get_absolute_url()).content.decode()
-    assert "Ready when you are!" in html and "tile-" in html and "+10" in html
+    assert "Ready when you are!" in html and course.offering.subject.colour in html and "+10" in html

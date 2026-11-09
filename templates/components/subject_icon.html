@@ -1,5 +1,5 @@
 {# Subject icon tile. Usage: {% include "components/subject_icon.html" with subject=s size="lg" %} #}
-<span class="{% if size == 'lg' %}h-[56px] w-[56px] rounded-2xl{% else %}h-11 w-11 rounded-btn{% endif %} tile-{{ subject.accent }} flex shrink-0 items-center justify-center" aria-hidden="true">
+<span class="{% if size == 'lg' %}h-[56px] w-[56px] rounded-2xl{% else %}h-11 w-11 rounded-btn{% endif %} flex shrink-0 items-center justify-center text-white" style="background-color: {{ subject.colour }}; box-shadow: inset 0 -4px 0 rgba(0,0,0,.2)" aria-hidden="true">
   {% if subject.icon %}{% include "components/icon.html" with name=subject.icon class="h-[26px] w-[26px]" %}
   {% else %}<span class="font-math {% if subject.icon_text|length <= 2 %}text-2xl italic{% else %}text-xl{% endif %}">{{ subject.icon_text }}</span>{% endif %}
 </span>

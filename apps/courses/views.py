@@ -110,19 +110,20 @@ def catalog(request):
             "subject": offering.subject,
             "course": course,
             "in_plan": offering.pk in enrolled,
+            "ready": bool(course and stats.get(course.pk) and stats[course.pk].total),
             "stat": stats.get(course.pk) if course else None,
             "module_count": counts.get(course.pk, 0) if course else 0,
             "pathway_badge": _pathway_badge(offering, pathways),
         })
-    cards.sort(key=lambda c: c["course"] is None)  # subjects with lessons first, "coming soon" last
-    if request.user.is_authenticated:  # "In your plan" first, as in the mockup (the sort is stable)
-        cards.sort(key=lambda c: not c["in_plan"])
+    # Subjects with lessons first, "coming soon" last; inside each group "In your plan" leads (stable sort).
+    cards.sort(key=lambda c: (not c["ready"], request.user.is_authenticated and not c["in_plan"]))
 
     context = {
         "levels": levels, "pathways": pathways, "categories": SubjectCategory.choices, "sorts": SORTS,
         "level": level, "stream": stream, "category": category, "q": q, "sort": sort,
         "for_you": for_you, "student_pathway": student_pathway,
         "cards": cards, "plan_count": sum(c["in_plan"] for c in cards), "nav_active": "explore",
+        "ready_count": sum(c["ready"] for c in cards),
         "shell": _shell(request),
     }
     template = "courses/_catalog_results.html" if request.htmx and request.htmx.target == "catalog-results" else "courses/catalog.html"

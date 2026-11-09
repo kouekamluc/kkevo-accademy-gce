@@ -43,7 +43,7 @@
         {% csrf_token %}
         <label class="flex flex-col gap-1.5"><span class="form-label">Note <span class="font-normal text-ink-muted">(optional)</span></span><input name="note" maxlength="300" class="form-input"></label>
         <div class="flex flex-wrap gap-2">
-          <button type="submit" name="status" value="approved" class="btn h-11 bg-success px-4 text-white hover:bg-success-text hover:text-white">Approve</button>
+          <button type="submit" name="status" value="approved" class="btn h-11 bg-success px-4 text-[#052E1C] hover:bg-success-text hover:text-white">Approve</button>
           <button type="submit" name="status" value="rejected" class="btn h-11 border border-danger-200 bg-white px-4 text-danger-text hover:bg-danger-50">Reject</button>
           {% if video.review_status != "pending" %}<button type="submit" name="status" value="pending" class="btn-secondary h-11">Back to review</button>{% endif %}
         </div>
