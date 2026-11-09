@@ -43,9 +43,9 @@
 
   {# ---------- Row 1: continue + recommended ---------- #}
   <div class="grid gap-6 xl:grid-cols-3">
-    <section class="card p-6 shadow-card {% if show.recommended %}xl:col-span-2{% else %}xl:col-span-3{% endif %} nav:p-8" aria-labelledby="continue-heading"{% if continue_card %} style="{{ continue_card.subject.style_vars }}; background-color: var(--sc-t); border-color: var(--sc-l)"{% endif %}>
+    <section class="card p-6 shadow-card {% if show.recommended %}xl:col-span-2{% else %}xl:col-span-3{% endif %} nav:p-8" aria-labelledby="continue-heading">
       <div class="flex items-baseline justify-between gap-3">
-        <h2 id="continue-heading" class="text-sm font-semibold uppercase tracking-[.06em] {% if continue_card %}sc-text{% else %}text-primary-700{% endif %}">Continue learning</h2>
+        <h2 id="continue-heading" class="text-sm font-semibold uppercase tracking-[.06em] text-primary-700">Continue learning</h2>
         {% if continue_card %}<span class="text-sm text-ink-muted"><span class="hidden sm:inline">Last opened {{ continue_card.last_opened|timesince }} ago</span><span class="sm:hidden">~{{ continue_card.minutes_left }} min left</span></span>{% endif %}
       </div>
       {% if continue_card %}
@@ -59,10 +59,10 @@
             <div class="text-[15px] text-ink-muted">{{ continue_card.subject.name }} · Module {{ continue_card.module.order }}: {{ continue_card.module.title }}<span class="lg:hidden"> · Lesson {{ continue_card.index }}</span></div>
             <div class="mt-1 text-xl font-bold leading-snug text-ink-heading lg:text-[26px]">{{ continue_card.lesson.title }}</div>
             <p class="mt-1.5 hidden text-[15px] text-ink-muted lg:block">{% if continue_card.progress.position_label %}You stopped at <strong class="text-ink-heading">{{ continue_card.progress.position_label }}</strong> · {% endif %}about {{ continue_card.minutes_left }} min left</p>
-            <div class="mt-4 flex items-center gap-3"><div class="sc-track h-2 flex-1 rounded-full"><div class="sc-fill h-2 rounded-full" style="width: {{ continue_card.progress.percent }}%"></div></div><span class="sc-text text-sm font-extrabold">{{ continue_card.progress.percent }}%</span></div>
+            <div class="mt-4 flex items-center gap-3"><div class="h-2 flex-1 rounded-full bg-surface-border"><div class="h-2 rounded-full bg-primary" style="width: {{ continue_card.progress.percent }}%"></div></div><span class="text-sm font-semibold">{{ continue_card.progress.percent }}%</span></div>
           </div>
         </div>
-        <a href="{{ continue_card.lesson.get_absolute_url }}?resume=1" class="sc-btn h-14 text-lg lg:px-7">Resume lesson {% include "components/icon.html" with name="arrow" class="h-5 w-5" stroke="2.2" %}</a>
+        <a href="{{ continue_card.lesson.get_absolute_url }}?resume=1" class="btn-primary h-14 text-lg lg:px-7">Resume lesson {% include "components/icon.html" with name="arrow" class="h-5 w-5" stroke="2.2" %}</a>
         <a href="{% url 'courses:continue' %}" class="mt-3 inline-flex min-h-[44px] items-center text-[15px] font-extrabold">All my courses</a>
         {% if continue_card.module_left %}<p class="mt-1 text-sm font-semibold text-slate-600">{{ continue_card.module_left }} lesson{{ continue_card.module_left|pluralize }} left to finish <strong class="text-ink-heading">{{ continue_card.module.title }}</strong>. <a href="{% url 'courses:path' continue_card.course.slug %}" class="font-extrabold">See the path</a></p>{% endif %}
       </div>
