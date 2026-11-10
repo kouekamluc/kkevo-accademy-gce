@@ -160,3 +160,25 @@ def test_many_subjects_are_capped_on_the_dashboard(client, student):
     client.force_login(student)
     ctx = client.get(reverse("dashboard:home")).context
     assert len(ctx["plan_shown"]) == 6 and ctx["plan_more"] == 2
+
+
+def test_new_student_is_pointed_at_their_first_lesson(client, student, offering, lessons):
+    Enrollment.objects.create(user=student, offering=offering)
+    client.force_login(student)
+    response = client.get(reverse("dashboard:home"))
+    html = response.content.decode()
+    assert response.context["start_here"] == lessons[0]
+    assert "Start your first lesson" in html and lessons[0].get_absolute_url() in html
+
+
+def test_finishing_every_started_lesson_does_not_say_nothing_was_started(client, student, offering, lessons):
+    """Regression: after completing a lesson the card used to claim 'You haven't started a lesson yet'."""
+    Enrollment.objects.create(user=student, offering=offering)
+    LessonProgress.objects.create(user=student, lesson=lessons[0], percent=100, completed_at=timezone.now())
+    client.force_login(student)
+    response = client.get(reverse("dashboard:home"))
+    html = response.content.decode()
+    assert response.context["continue_card"] is None
+    assert "You haven’t started a lesson yet" not in html
+    assert "You’re up to date" in html
+    assert response.context["recommended"] is not None or lessons[1].title in html

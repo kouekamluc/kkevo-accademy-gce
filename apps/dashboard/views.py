@@ -108,6 +108,15 @@ def home(request):
             "module_left": module_stats.total - module_stats.done,
         }
 
+    # Nothing in progress: point a brand-new student at their first lesson (the one onboarding suggested).
+    start_here = None
+    if not continue_card:
+        for p in plan:
+            if p["course"]:
+                start_here, _ = services.next_lesson(user, p["course"])
+                if start_here:
+                    break
+
     # Recommended next: continue another subject from where the student last finished
     recommended = None
     recent_done = (
@@ -178,7 +187,7 @@ def home(request):
         "plan_shown": plan[:modes.SUBJECTS_SHOWN], "plan_more": max(0, len(plan) - modes.SUBJECTS_SHOWN),
         "countdown": countdown, "rest_today": RestDay.objects.filter(user=user, date=today).exists(),
         "student": profile, "greeting": greeting(now), "plan": plan, "overall": overall,
-        "continue_card": continue_card, "recommended": recommended, "avg_score": avg_score,
+        "continue_card": continue_card, "start_here": start_here, "recommended": recommended, "avg_score": avg_score,
         "week": week, "week_total": fmt_minutes(week["total_minutes"]),
         "week_goal": fmt_minutes(week["weekly_goal_minutes"]),
         "streak": learning_streak(user, today), "upcoming": [

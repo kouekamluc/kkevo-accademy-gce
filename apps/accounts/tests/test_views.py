@@ -324,3 +324,19 @@ def test_staff_login_still_honours_next(client):
 def test_student_login_still_goes_to_dashboard(client, onboarded):
     response = client.post(reverse("accounts:login"), {"username": onboarded.email, "password": PASSWORD})
     assert response.url == reverse("dashboard:home")
+
+
+def test_first_visit_ticks_a_starter_set_with_core_subjects_first(form5, science, form5_offerings):
+    from apps.academics.models import Subject, SubjectOffering
+    from apps.accounts.onboarding import CORE_SUBJECTS, DEFAULT_SUBJECTS, _default_selection
+
+    # Eight more subjects, the core ones listed last, must still make the starter set.
+    for i, name in enumerate(["Zeta", "Eta", "Theta", "Iota", "Kappa", "Lambda", CORE_SUBJECTS[0], CORE_SUBJECTS[1]]):
+        subject = Subject.objects.create(name=name, slug=name.lower().replace(" ", "-"), icon_text=name[0], order=100 + i)
+        offering = SubjectOffering.objects.create(subject=subject, level=form5)
+        offering.pathways.add(science)
+        form5_offerings.append(offering)
+    picked = _default_selection(SubjectOffering.objects.filter(pk__in=[o.pk for o in form5_offerings]).select_related("subject"))
+    names = set(SubjectOffering.objects.filter(pk__in=picked).values_list("subject__name", flat=True))
+    assert len(picked) == DEFAULT_SUBJECTS
+    assert set(CORE_SUBJECTS) <= names

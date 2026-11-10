@@ -32,6 +32,18 @@ def _offerings_for(profile):
             .select_related("subject").order_by("subject__order", "subject__name"))
 
 
+# On a first visit we tick a manageable starter set, not every subject: a long plan buries the dashboard.
+DEFAULT_SUBJECTS = 6
+CORE_SUBJECTS = ("Mathematics", "English Language")
+
+
+def _default_selection(offerings):
+    """Primary keys to pre-tick: the core subjects first, then the class's others in their usual order."""
+    rows = list(offerings.values_list("pk", "subject__name"))
+    rows.sort(key=lambda row: row[1] not in CORE_SUBJECTS)  # stable: core first, order kept otherwise
+    return [pk for pk, _ in rows[:DEFAULT_SUBJECTS]]
+
+
 def _coming_soon(profile):
     """Names of the class's subjects whose lessons are not ready yet (shown, but not selectable)."""
     ready = SubjectOffering.objects.for_class(profile.level, profile.pathway).with_content().values("pk")
@@ -102,8 +114,9 @@ def subjects(request):
     if form.is_bound:
         selected = {str(v) for v in request.POST.getlist("offerings")}
     else:
-        # First visit: tick every subject of their class and stream, so most students just press Continue.
-        selected = {str(pk) for pk in (current or offerings.values_list("pk", flat=True))}
+        # First visit: tick a starter set (core subjects first) so most students just press Continue;
+        # the rest stay one tap away. Students who already chose keep their own selection.
+        selected = {str(pk) for pk in (current or _default_selection(offerings))}
     return render(request, "onboarding/subjects.html",
                   _context(4, form=form, offerings=offerings, selected=selected, minimum=form.minimum,
                            coming_soon=_coming_soon(profile)))
