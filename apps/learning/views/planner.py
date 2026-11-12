@@ -118,6 +118,14 @@ class SessionForm(forms.ModelForm):
         return session
 
 
+FALLBACK_STYLE = "--sc: #5B3FE4; --sc-d: #4527C9; --sc-tx: #3B2E8C; --sc-t: #F4F1FF; --sc-l: #B3A3FA"
+
+
+def _style(subject):
+    """Inline colour variables for a session card (the subject's own colour, or the app violet)."""
+    return subject.style_vars if subject else FALLBACK_STYLE
+
+
 SUBJECT_COLOURS = ["blue", "emerald", "slate", "violet", "rose", "cyan"]
 
 
@@ -130,7 +138,8 @@ def planner(request):
         anchor = date.fromisoformat(request.GET.get("date", ""))
     except ValueError:
         anchor = today
-    view = "day" if request.GET.get("view") == "day" else "week"
+    view = request.GET.get("view")
+    view = view if view in ("day", "week") else "agenda"
     monday = anchor - timedelta(days=anchor.weekday())
     days = [anchor] if view == "day" else [monday + timedelta(days=i) for i in range(7)]
     tz = timezone.get_current_timezone()
@@ -160,9 +169,25 @@ def planner(request):
             is_now = s.starts_at <= now < s.ends_at and not s.is_completed
             items.append({"session": s, "top": round(top), "height": max(36, round(s.duration_minutes / 60 * hour_px) - 6),
                           "colour": "amber" if is_now else ("plan" if s.kind == SessionKind.PLANNING else colour_for.get(s.subject_id, "slate")),
-                          "is_now": is_now, "time": local.strftime("%H:%M")})
+                          "is_now": is_now, "time": local.strftime("%H:%M"), "end": timezone.localtime(s.ends_at).strftime("%H:%M"),
+                          "is_missed": s.ends_at < now and not s.is_completed, "style": _style(s.subject)})
         columns.append({"date": d, "label": WEEKDAYS[d.weekday()], "is_today": d == today, "items": items})
     week_has_sessions = any(c["items"] for c in columns)
+    rest_days = set(RestDay.objects.filter(user=user, date__gte=monday, date__lte=monday + timedelta(days=6))
+                    .values_list("date", flat=True))
+    week_days = []
+    for i in range(7):
+        d = monday + timedelta(days=i)
+        day_sessions = [s for s in (sessions if view != "day" else []) if timezone.localtime(s.starts_at).date() == d]
+        week_days.append({
+            "date": d, "label": WEEKDAYS[i], "is_today": d == today, "is_selected": d == anchor, "is_rest": d in rest_days,
+            "count": len(day_sessions), "done": sum(s.is_completed for s in day_sessions),
+            "minutes": sum(s.duration_minutes for s in day_sessions),
+            "dots": [(s.subject.colour if s.subject else "#5B3FE4", s.is_completed) for s in day_sessions[:5]]})
+    agenda_col = next((c for c in columns if c["date"] == anchor), None)
+    agenda = agenda_col["items"] if agenda_col else []
+    agenda_done = sum(i["session"].is_completed for i in agenda)
+    agenda_minutes = sum(i["session"].duration_minutes for i in agenda)
     now_top = round((now.hour - first_hour + now.minute / 60) * hour_px) if first_hour <= now.hour < last_hour else None
     legend = [{"subject": Subject.objects.get(pk=sid), "colour": colour_for[sid]} for sid in subject_ids]
 
@@ -205,7 +230,13 @@ def planner(request):
         "todays": todays, "todays_done": sum(s.is_completed for s in todays),
         "week_minutes": fmt_minutes(done_minutes), "week_goal": fmt_minutes(goal),
         "week_percent": min(100, round(100 * done_minutes / goal)) if goal else 0,
+        "week_ring": round(min(100, 100 * done_minutes / goal) * 2.136) if goal else 0,
         "per_subject": sorted(per_subject.items(), key=lambda kv: -kv[1]["minutes"]),
+        "week_days": week_days, "agenda": agenda, "agenda_done": agenda_done, "agenda_minutes": fmt_minutes(agenda_minutes),
+        "anchor_is_today": anchor == today, "anchor_is_rest": anchor in rest_days,
+        "streak": motivation.learning_streak(user, today),
+        "hero_line": (f"{sum(s.is_completed for s in todays)} of {len(todays)} sessions done today" if todays
+                      else "Plan short, regular sessions. Consistency beats cramming."),
         "revision": revision, "form": form, "missed": missed, "full_day": full_day, "first_hour": first_hour,
         "week_has_sessions": week_has_sessions, "has_plan": has_plan, "week_monday": monday, "daily_goal": profile.daily_goal_minutes,
         "plan_weekdays": [{"n": i, "label": WEEKDAYS[i], "on": i < 6} for i in range(7)],

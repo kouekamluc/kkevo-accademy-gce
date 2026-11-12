@@ -160,3 +160,18 @@
 .wa-share { display: inline-flex; min-height: 36px; align-items: center; border-radius: 999px; padding: 0 14px; background: #157A4A;
   color: #fff; font-size: 14px; font-weight: 800; box-shadow: inset 0 -3px 0 rgba(0,0,0,.22); }
 .wa-share:hover { color: #fff; filter: brightness(1.08); }
+
+/* Study planner: week-strip day tiles and the day agenda cards (coloured by subject through --sc variables). */
+.day-tile { display: flex; min-height: 88px; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  border: 2px solid #E2D8C4; border-radius: 16px; background: #fff; padding: 6px 2px; color: #2D2658; }
+.day-tile:hover { border-color: #B3A3FA; color: #2D2658; }
+.day-tile-today { border-color: #5B3FE4; background: #F4F1FF; }
+.day-tile-on, .day-tile-on:hover { border-color: #15122A; background: #15122A; color: #fff; box-shadow: inset 0 -4px 0 rgba(255,255,255,.14); }
+.day-dot { display: block; width: 8px; height: 8px; border-radius: 999px; box-shadow: 0 0 0 1.5px #fff; }
+.day-tile-on .day-dot { box-shadow: 0 0 0 1.5px #15122A; }
+.agenda-card { position: relative; display: flex; align-items: stretch; gap: 10px; overflow: hidden; border: 2px solid var(--sc-l);
+  border-radius: 20px; background: var(--sc-t); padding: 12px 10px 12px 0; }
+.agenda-card::before { content: ""; flex: none; width: 7px; margin: -12px 0 -12px 0; background: var(--sc); }
+.agenda-card > button { padding-left: 4px; }
+.agenda-done { opacity: .62; }
+.agenda-done .agenda-title { text-decoration: line-through; }

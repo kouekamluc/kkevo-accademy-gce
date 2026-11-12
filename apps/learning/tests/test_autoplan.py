@@ -102,7 +102,7 @@ def test_plan_week_needs_a_day_and_subjects(client, student, course):
 def test_planner_offers_to_plan_an_empty_week(client, student, lessons):
     client.force_login(student)
     page = client.get(reverse("learning:planner")).content.decode()
-    assert "Your week is empty" in page and "Plan my week" in page
+    assert "Nothing planned for" in page and "Plan my week" in page
 
 
 def test_clear_week_keeps_done_and_past_sessions(client, student):

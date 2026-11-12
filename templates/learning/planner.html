@@ -2,45 +2,107 @@
 {% block title %}Study planner — KKEVO Academy{% endblock %}
 {% block content %}
 <div class="flex flex-col gap-6 nav:mt-2" x-data="{ adding: false, planning: false, selected: null, slot(e, day) { if (e.target !== e.currentTarget) return; const r = e.currentTarget.getBoundingClientRect(); const mins = Math.floor(((e.clientY - r.top) / {{ hour_px }} * 60) / 30) * 30 + {{ first_hour }} * 60; const t = String(Math.floor(mins / 60)).padStart(2, '0') + ':' + String(mins % 60).padStart(2, '0'); this.adding = true; this.$nextTick(() => { document.getElementById('id_date').value = day; document.getElementById('id_start_time').value = t; document.getElementById('id_title').focus(); }); } }" @keydown.escape.window="adding = false; planning = false; selected = null">
-  <div class="flex flex-wrap items-end justify-between gap-4">
-    <div class="flex items-center gap-3">
-      {% include "components/mascot.html" with size="64" mood="happy" %}
-      <div>
-        <h1 class="text-[26px] font-black tracking-[-.01em] text-navy nav:text-[34px]">Study Planner</h1>
-        <p class="mt-1 text-base font-semibold text-ink-muted">Plan short, regular sessions. Consistency beats cramming.</p>
-      </div>
-    </div>
-    <div class="flex flex-wrap gap-2">
-    {% if can_plan and has_plan %}<button type="button" class="btn-secondary h-12 px-5 text-base" @click="planning = true">{% include "components/icon.html" with name="refresh" class="h-5 w-5" stroke="2.2" %}Plan my week</button>{% endif %}
-    <button type="button" class="btn-primary h-12 px-6 text-base" @click="adding = true">{% include "components/icon.html" with name="plus" class="h-5 w-5" stroke="2.2" %}Add Study Session</button>
-    </div>
-  </div>
-
-  {% if can_plan and has_plan and not week_has_sessions %}
-  <section class="flex flex-wrap items-center gap-4 rounded-2xl border border-primary-200 bg-primary-50 p-5" aria-label="Plan this week">
-    <div class="min-w-[240px] flex-1">
-      <h2 class="text-lg font-bold text-navy">Your week is empty</h2>
-      <p class="mt-1 text-[15px] text-slate-700">Let the planner fill it: your next lessons and any revision that is due, about {{ daily_goal }} minutes a day. You can move or delete anything afterwards.</p>
-    </div>
-    <button type="button" class="btn-primary h-12 px-6" @click="planning = true">Plan my week</button>
-  </section>
-  {% elif not has_plan %}
-  <section class="rounded-2xl border border-warning-200 bg-warning-50 p-5 text-[15px] text-warning-text">You haven’t chosen your subjects yet. <a href="{% url 'accounts:onboarding_subjects' %}" class="font-semibold">Choose subjects</a> and the planner can fill your week for you.</section>
-  {% endif %}
-
-  <div class="grid gap-6 xl:grid-cols-[1fr_420px]">
-    <section class="card overflow-hidden" aria-labelledby="week-heading">
-      <div class="flex flex-wrap items-center gap-3 border-b border-surface-border px-5 py-4">
-        <a href="?view={{ view }}&date={{ prev }}" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border text-navy" aria-label="Previous {{ view }}">{% include "components/icon.html" with name="chevron-left" class="h-5 w-5" stroke="2" %}</a>
-        <a href="?view={{ view }}&date={{ next }}" class="flex h-11 w-11 items-center justify-center rounded-btn border border-surface-border text-navy" aria-label="Next {{ view }}">{% include "components/icon.html" with name="chevron-right" class="h-5 w-5" stroke="2" %}</a>
-        <h2 id="week-heading" class="text-xl font-bold">{% if view == "day" %}{{ anchor|date:"l j F Y" }}{% else %}{{ days.0|date:"j" }} – {{ days.6|date:"j F Y" }}{% endif %}</h2>
-        <span class="flex-1"></span>
-        <a href="?view={{ view }}&date={{ today.isoformat }}" class="btn-secondary h-11">Today</a>
-        <div class="flex rounded-btn bg-slate-100 p-[3px]">
-          <a href="?view=day&date={{ anchor.isoformat }}" class="flex h-10 items-center rounded-lg px-4 text-[15px] {% if view == 'day' %}bg-white font-semibold shadow-card{% else %}text-slate-600{% endif %}">Day</a>
-          <a href="?view=week&date={{ anchor.isoformat }}" class="flex h-10 items-center rounded-lg px-4 text-[15px] {% if view == 'week' %}bg-white font-semibold shadow-card{% else %}text-slate-600{% endif %}">Week</a>
+  {# ---------- Toghu header band: where you stand today ---------- #}
+  <header class="-mx-4 -mt-5 overflow-hidden nav:mx-0 nav:mt-0 nav:rounded-card">
+    <div class="toghu-band flex flex-col gap-4 px-4 pb-5 pt-4 nav:flex-row nav:items-center nav:justify-between nav:px-8 nav:py-6">
+      <div class="flex items-center gap-3">
+        <span class="shrink-0 rounded-full bg-white/10 p-1">{% include "components/mascot.html" with size="56" mood="happy" %}</span>
+        <div class="min-w-0">
+          <h1 class="text-[24px] font-black leading-tight tracking-[-.01em] text-white nav:text-[32px]">Study Planner</h1>
+          <p class="mt-0.5 text-sm font-bold text-[#CFC8EA] nav:text-base">{{ hero_line }}</p>
         </div>
       </div>
+      <div class="flex flex-wrap gap-2">
+        {% if can_plan and has_plan %}<button type="button" class="btn h-12 bg-white px-5 text-base text-navy hover:bg-primary-50 hover:text-navy" style="border-bottom: 4px solid rgba(0,0,0,.25)" @click="planning = true">{% include "components/icon.html" with name="refresh" class="h-5 w-5" stroke="2.2" %}Plan my week</button>{% endif %}
+        <button type="button" class="btn-primary h-12 px-5 text-base" @click="adding = true">{% include "components/icon.html" with name="plus" class="h-5 w-5" stroke="2.2" %}Add session</button>
+      </div>
+    </div>
+    <div class="toghu-band flex flex-wrap gap-2 px-4 pb-4 nav:px-8 nav:pb-5" aria-label="Your numbers">
+      {% if streak %}<span class="hg-pill text-[#FFE08A]"><span aria-hidden="true">🔥</span>{{ streak }}-day streak{% if rest_today %} · resting{% endif %}</span>{% endif %}
+      {% if countdown and not countdown.past and not countdown.is_today %}<a href="#exam" class="hg-pill text-white hover:text-white">GCE in {{ countdown.days_left }} day{{ countdown.days_left|pluralize }}</a>{% endif %}
+      <span class="hg-pill text-white">Today {{ todays_done }}/{{ todays|length }} done</span>
+      <span class="hg-pill text-[#A8EDCB]">This week {{ week_minutes }} of {{ week_goal }}</span>
+    </div>
+    <div class="toghu-stitch" aria-hidden="true"></div>
+  </header>
+
+  {% if not has_plan %}
+  <section class="rounded-2xl border-2 border-warning-200 bg-warning-50 p-5 text-[15px] text-warning-text">You haven’t chosen your subjects yet. <a href="{% url 'accounts:onboarding_subjects' %}" class="font-semibold">Choose subjects</a> and the planner can fill your week for you.</section>
+  {% endif %}
+
+  {# ---------- Week strip: pick a day, see at a glance how full it is ---------- #}
+  <section class="card border-2 p-3 nav:p-4" aria-labelledby="week-heading">
+    <div class="flex flex-wrap items-center gap-2 nav:gap-3">
+      <a href="?view={{ view }}&date={{ prev }}" class="flex h-11 w-11 items-center justify-center rounded-btn border-2 border-surface-border text-navy" aria-label="Previous {% if view == 'day' %}day{% else %}week{% endif %}">{% include "components/icon.html" with name="chevron-left" class="h-5 w-5" stroke="2" %}</a>
+      <a href="?view={{ view }}&date={{ next }}" class="flex h-11 w-11 items-center justify-center rounded-btn border-2 border-surface-border text-navy" aria-label="Next {% if view == 'day' %}day{% else %}week{% endif %}">{% include "components/icon.html" with name="chevron-right" class="h-5 w-5" stroke="2" %}</a>
+      <h2 id="week-heading" class="text-lg font-black text-navy nav:text-xl">{% if view == "day" %}{{ anchor|date:"l j F Y" }}{% else %}{{ week_days.0.date|date:"j" }} – {{ week_days.6.date|date:"j F Y" }}{% endif %}</h2>
+      <span class="flex-1"></span>
+      <a href="?view={{ view }}&date={{ today.isoformat }}" class="btn-secondary h-11">Today</a>
+      <div class="flex rounded-btn bg-slate-100 p-[3px]" role="group" aria-label="View">
+        <a href="?view=agenda&date={{ anchor.isoformat }}" class="flex h-10 items-center rounded-lg px-3.5 text-[15px] {% if view == 'agenda' %}bg-white font-bold shadow-card{% else %}text-slate-600{% endif %}">Agenda</a>
+        <a href="?view=week&date={{ anchor.isoformat }}" class="flex h-10 items-center rounded-lg px-3.5 text-[15px] {% if view == 'week' %}bg-white font-bold shadow-card{% else %}text-slate-600{% endif %}">Week grid</a>
+        <a href="?view=day&date={{ anchor.isoformat }}" class="flex h-10 items-center rounded-lg px-3.5 text-[15px] {% if view == 'day' %}bg-white font-bold shadow-card{% else %}text-slate-600{% endif %}">Day grid</a>
+      </div>
+    </div>
+    <div class="mt-3 grid grid-cols-7 gap-1.5 nav:gap-3">
+      {% for d in week_days %}
+      <a href="?view={% if view == 'day' %}day{% else %}agenda{% endif %}&date={{ d.date.isoformat }}" class="day-tile {% if d.is_selected %}day-tile-on{% elif d.is_today %}day-tile-today{% endif %}" {% if d.is_selected %}aria-current="date"{% endif %} aria-label="{{ d.date|date:'l j F' }}: {% if d.is_rest %}rest day{% else %}{{ d.count }} session{{ d.count|pluralize }}{% endif %}">
+        <span class="text-[11px] font-extrabold uppercase tracking-wide opacity-70 nav:text-xs">{{ d.label }}</span>
+        <span class="text-xl font-black leading-none nav:text-2xl">{{ d.date.day }}</span>
+        <span class="flex h-2 items-center gap-[3px]" aria-hidden="true">{% for hex, done in d.dots %}<span class="day-dot" style="background: {{ hex }}{% if done %}; opacity: .4{% endif %}"></span>{% endfor %}</span>
+        <span class="text-[11px] font-bold opacity-80 nav:text-xs">{% if d.is_rest %}Rest{% elif d.count %}{{ d.done }}/{{ d.count }}{% else %}&nbsp;{% endif %}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <div class="grid gap-6 xl:grid-cols-[1fr_420px]">
+    {% if view == "agenda" %}
+    <section class="flex flex-col gap-3" aria-labelledby="agenda-heading">
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+        <h2 id="agenda-heading" class="text-2xl font-black text-navy">{% if anchor_is_today %}Today{% else %}{{ anchor|date:"l" }}{% endif %} <span class="text-lg font-bold text-ink-muted">{{ anchor|date:"j F" }}</span></h2>
+        {% if agenda %}<span class="text-[15px] font-bold text-ink-muted">{{ agenda_done }} of {{ agenda|length }} done · {{ agenda_minutes }}</span>{% endif %}
+      </div>
+      {% for item in agenda %}
+      <article class="agenda-card {% if item.session.is_completed %}agenda-done{% endif %}" style="{{ item.style }}">
+        <button type="button" class="flex min-w-0 flex-1 items-center gap-3 text-left" @click="selected = {{ item.session.pk }}" aria-label="Details: {{ item.session.title }}">
+          <span class="flex w-[58px] shrink-0 flex-col items-center leading-tight"><span class="text-lg font-black text-ink-heading">{{ item.time }}</span><span class="text-xs font-bold text-ink-muted">{{ item.end }}</span></span>
+          <span class="svc-tile shrink-0 text-lg font-black" style="background: var(--sc)">{% if item.session.subject %}{{ item.session.subject.icon_text|default:item.session.subject.name|slice:":2" }}{% else %}{% include "components/icon.html" with name="calendar" class="h-6 w-6" stroke="2" %}{% endif %}</span>
+          <span class="min-w-0 flex-1">
+            <span class="block text-[13px] font-extrabold uppercase tracking-wide" style="color: var(--sc-tx)">{% if item.session.subject %}{{ item.session.subject.name }}{% else %}{{ item.session.get_kind_display }}{% endif %}{% if item.session.subject and item.session.kind != "study" %} · {{ item.session.get_kind_display }}{% endif %}</span>
+            <span class="agenda-title block text-[17px] font-black leading-snug text-ink-heading">{{ item.session.title }}</span>
+            <span class="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-bold text-ink-muted">{{ item.session.duration_minutes }} min
+              {% if item.is_now %}<span class="rounded-full bg-warning px-2 py-0.5 text-xs font-black text-ink-heading">Happening now</span>{% endif %}
+              {% if item.session.is_completed %}<span class="rounded-full bg-success-50 px-2 py-0.5 text-xs font-black text-success-text">Done</span>{% endif %}
+              {% if item.is_missed %}<span class="rounded-full bg-danger-50 px-2 py-0.5 text-xs font-black text-danger-text">Missed</span>{% endif %}
+            </span>
+          </span>
+        </button>
+        <div class="flex shrink-0 flex-col items-end justify-center gap-2 pr-1">
+          {% include "learning/_session_check.html" with session=item.session %}
+          {% if item.session.lesson and not item.session.is_completed %}<a href="{{ item.session.lesson.get_absolute_url }}" class="btn-primary min-h-0 h-10 px-4 text-sm">Start</a>{% endif %}
+        </div>
+      </article>
+      {% empty %}
+      <div class="rounded-card border-2 border-dashed border-surface-border bg-white/60 px-6 py-10 text-center">
+        <div class="mx-auto w-fit">{% include "components/mascot.html" with size="88" mood="happy" %}</div>
+        {% if anchor_is_rest %}
+        <h3 class="mt-3 text-xl font-black text-navy">Rest day</h3>
+        <p class="mx-auto mt-1 max-w-sm text-[15px] text-ink-muted">Your streak is safe. Come back fresh.</p>
+        {% else %}
+        <h3 class="mt-3 text-xl font-black text-navy">Nothing planned for {% if anchor_is_today %}today{% else %}{{ anchor|date:"l" }}{% endif %}</h3>
+        <p class="mx-auto mt-1 max-w-sm text-[15px] text-ink-muted">A short session of {{ daily_goal }} minutes is enough to keep your streak going.</p>
+        <div class="mt-5 flex flex-wrap justify-center gap-2">
+          {% if can_plan and has_plan %}<button type="button" class="btn-primary h-12 px-6" @click="planning = true">Plan my week</button>{% endif %}
+          <button type="button" class="btn-secondary h-12 px-6" @click="adding = true">Add a session</button>
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+      {% if agenda %}<button type="button" class="btn-secondary self-start" @click="adding = true">{% include "components/icon.html" with name="plus" class="h-5 w-5" stroke="2.2" %}Add another session</button>{% endif %}
+    </section>
+    {% else %}
+    <section class="card overflow-hidden border-2" aria-labelledby="week-heading-grid">
       <div class="overflow-x-auto">
         <div class="{% if view == 'week' %}min-w-[760px]{% endif %}">
           <div class="grid border-b border-surface-border" style="grid-template-columns: 64px repeat({{ columns|length }}, minmax(0, 1fr))">
@@ -72,9 +134,10 @@
         <a href="?view={{ view }}&date={{ anchor.isoformat }}{% if not full_day %}&hours=all{% endif %}" class="font-semibold">{% if full_day %}Show evenings only{% else %}Show the whole day{% endif %}</a>
       </div>
     </section>
+    {% endif %}
 
     <div class="flex flex-col gap-6">
-      <section id="exam" class="card p-6" aria-labelledby="exam-heading" x-data="{ editing: {{ countdown|yesno:'false,true' }} }">
+      <section id="exam" class="card border-2 p-5 nav:p-6" aria-labelledby="exam-heading" x-data="{ editing: {{ countdown|yesno:'false,true' }} }">
         <div class="flex items-baseline justify-between gap-3">
           <h2 id="exam-heading" class="text-xl font-bold">Exam countdown</h2>
         </div>
@@ -83,9 +146,9 @@
         <a href="{% url 'accounts:profile' %}#exam-date" class="mt-4 inline-flex min-h-[44px] items-center text-[15px] font-extrabold">{% if countdown %}Change your exam date in settings{% else %}Add your exam date in settings{% endif %}</a>
       </section>
 
-      <section class="card p-6" aria-labelledby="today-heading">
-        <div class="flex items-baseline justify-between"><h2 id="today-heading" class="text-xl font-bold">Today’s study tasks</h2><span class="text-sm text-ink-muted">{{ today|date:"D j M" }}</span></div>
-        {% if todays %}
+      <section class="card border-2 p-5 nav:p-6" aria-labelledby="today-heading">
+        <div class="flex items-baseline justify-between"><h2 id="today-heading" class="text-xl font-black">{% if view == "agenda" %}Rest day{% else %}Today’s study tasks{% endif %}</h2><span class="text-sm text-ink-muted">{{ today|date:"D j M" }}</span></div>
+        {% if view == "agenda" %}{% elif todays %}
         <div class="mt-3 flex items-center gap-3"><div class="progress-track h-2 flex-1"><div class="progress-fill" style="width: {% widthratio todays_done todays|length 100 %}%"></div></div><span class="text-sm font-semibold">{{ todays_done }} of {{ todays|length }}</span></div>
         <ul class="mt-3 divide-y divide-surface-border">
           {% for s in todays %}
@@ -134,10 +197,15 @@
       </section>
       {% endif %}
 
-      <section class="card p-6" aria-labelledby="thisweek-heading">
-        <h2 id="thisweek-heading" class="text-xl font-bold">This week</h2>
-        <p class="mt-2"><span class="text-[30px] font-bold">{{ week_minutes }}</span> <span class="text-ink-muted">done of {{ week_goal }} goal</span></p>
-        <div class="progress-track mt-2 h-2"><div class="h-full rounded-full bg-primary" style="width: {{ week_percent }}%"></div></div>
+      <section class="card border-2 p-5 nav:p-6" aria-labelledby="thisweek-heading">
+        <h2 id="thisweek-heading" class="text-xl font-black">This week</h2>
+        <div class="mt-3 flex items-center gap-4">
+          <div class="relative h-24 w-24 shrink-0" role="img" aria-label="{{ week_percent }} percent of the weekly goal done">
+            <svg viewBox="0 0 80 80" class="h-24 w-24 -rotate-90" aria-hidden="true"><circle cx="40" cy="40" r="34" fill="none" stroke="#EEEBF9" stroke-width="9"/><circle cx="40" cy="40" r="34" fill="none" stroke="#5B3FE4" stroke-width="9" stroke-linecap="round" stroke-dasharray="{{ week_ring }} 214"/></svg>
+            <span class="absolute inset-0 flex items-center justify-center text-lg font-black text-navy">{{ week_percent }}%</span>
+          </div>
+          <p><span class="text-[28px] font-black leading-none">{{ week_minutes }}</span><br><span class="text-[15px] text-ink-muted">done of {{ week_goal }} goal</span></p>
+        </div>
         <dl class="mt-4 grid grid-cols-[1fr_auto] gap-y-2 text-[15px]">
           {% for name, v in per_subject %}<dt>{{ name }}</dt><dd class="text-slate-600">{{ v.count }} session{{ v.count|pluralize }} · {% widthratio v.minutes 1 1 %} min</dd>{% empty %}<dt class="col-span-2 text-sm text-ink-muted">No sessions planned this week.</dt>{% endfor %}
         </dl>
@@ -159,7 +227,7 @@
         </ul>
       </section>
 
-      <section id="calendar" class="card p-6" aria-labelledby="calendar-heading">
+      <section id="calendar" class="card border-2 p-5 nav:p-6" aria-labelledby="calendar-heading">
         <h2 id="calendar-heading" class="flex items-center gap-2 text-xl font-bold">{% include "components/icon.html" with name="calendar" class="h-5 w-5 text-primary" stroke="2" %}Phone calendar</h2>
         <p class="mt-1 text-[15px] text-ink-muted">Show your sessions in Google Calendar or your phone’s calendar, with a reminder 15 minutes before each one — even when you’re offline.</p>
         {% if calendar_link %}
