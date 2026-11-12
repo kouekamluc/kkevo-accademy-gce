@@ -43,9 +43,9 @@
 
   {# ---------- Row 1: continue + recommended ---------- #}
   <div class="grid gap-6 xl:grid-cols-3">
-    <section class="card p-6 shadow-card {% if show.recommended %}xl:col-span-2{% else %}xl:col-span-3{% endif %} nav:p-8" aria-labelledby="continue-heading">
+    <section class="card p-6 shadow-card {% if show.recommended %}xl:col-span-2{% else %}xl:col-span-3{% endif %} nav:p-8" aria-labelledby="continue-heading"{% if continue_card %} style="{{ continue_card.subject.style_vars }}; background-color: var(--sc-t); border-color: var(--sc-l)"{% endif %}>
       <div class="flex items-baseline justify-between gap-3">
-        <h2 id="continue-heading" class="text-sm font-semibold uppercase tracking-[.06em] text-primary-700">Continue learning</h2>
+        <h2 id="continue-heading" class="text-sm font-semibold uppercase tracking-[.06em] {% if continue_card %}sc-text{% else %}text-primary-700{% endif %}">Continue learning</h2>
         {% if continue_card %}<span class="text-sm text-ink-muted">Last opened {{ continue_card.last_opened|timesince }} ago</span>{% endif %}
       </div>
       {% if continue_card %}
@@ -60,15 +60,15 @@
             <p class="mt-1.5 text-[15px] text-ink-muted">Lesson {{ continue_card.index }} of {{ continue_card.count }}{% if continue_card.progress.position_label %} · stopped at <strong class="text-ink-heading">{{ continue_card.progress.position_label }}</strong>{% endif %} · about {{ continue_card.minutes_left }} min left</p>
           </div>
         </div>
-        <div class="flex items-center gap-3"><div class="h-2.5 flex-1 rounded-full bg-surface-border"><div class="h-2.5 rounded-full bg-primary" style="width: {{ continue_card.progress.percent }}%"></div></div><span class="text-sm font-semibold">{{ continue_card.progress.percent }}%</span></div>
+        <div class="flex items-center gap-3"><div class="sc-track h-2.5 flex-1 rounded-full"><div class="sc-fill h-2.5 rounded-full" style="width: {{ continue_card.progress.percent }}%"></div></div><span class="sc-text text-sm font-extrabold">{{ continue_card.progress.percent }}%</span></div>
         <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <a href="{{ continue_card.lesson.get_absolute_url }}?resume=1" class="btn-primary h-12 justify-center px-7 text-base sm:h-14 sm:text-lg">Resume lesson {% include "components/icon.html" with name="arrow" class="h-5 w-5" stroke="2.2" %}</a>
+          <a href="{{ continue_card.lesson.get_absolute_url }}?resume=1" class="sc-btn h-12 justify-center px-7 text-base sm:h-14 sm:text-lg">Resume lesson {% include "components/icon.html" with name="arrow" class="h-5 w-5" stroke="2.2" %}</a>
           <div class="flex flex-wrap items-center gap-x-5 text-[15px] font-extrabold">
-            <a href="{% url 'courses:path' continue_card.course.slug %}" class="inline-flex min-h-[44px] items-center">See the path</a>
-            <a href="{% url 'courses:continue' %}" class="inline-flex min-h-[44px] items-center">All my courses</a>
+            <a href="{% url 'courses:path' continue_card.course.slug %}" class="sc-text inline-flex min-h-[44px] items-center">See the path</a>
+            <a href="{% url 'courses:continue' %}" class="sc-text inline-flex min-h-[44px] items-center">All my courses</a>
           </div>
         </div>
-        {% if continue_card.module_left %}<p class="border-t border-surface-border pt-4 text-sm font-semibold text-slate-600">{{ continue_card.module_left }} lesson{{ continue_card.module_left|pluralize }} left to finish <strong class="text-ink-heading">{{ continue_card.module.title }}</strong>.</p>{% endif %}
+        {% if continue_card.module_left %}<p class="border-t pt-4 text-sm font-semibold text-slate-600" style="border-color: var(--sc-l)">{{ continue_card.module_left }} lesson{{ continue_card.module_left|pluralize }} left to finish <strong class="text-ink-heading">{{ continue_card.module.title }}</strong>.</p>{% endif %}
       </div>
       {% else %}
       <div class="mt-5 flex flex-col items-start gap-3">
@@ -121,11 +121,11 @@
       <div class="flex items-center justify-between"><h2 id="subjects-heading" class="text-xl font-bold">My subjects</h2><a href="{% url 'courses:continue' %}" class="text-[15px] font-semibold"><span class="hidden nav:inline">All subjects{% if plan_more %} (+{{ plan_more }}){% endif %}</span><span class="nav:hidden">See all</span></a></div>
       <div class="mt-4 grid divide-y divide-surface-border rounded-2xl border border-surface-border bg-white px-5 nav:mt-6 nav:grid-cols-3 nav:gap-4 nav:divide-y-0 nav:border-0 nav:bg-transparent nav:px-0">
         {% for p in plan_shown %}
-        <a href="{% if p.course %}{{ p.course.get_absolute_url }}{% else %}{% url 'courses:continue' %}{% endif %}" class="flex items-center gap-4 py-4 text-ink-heading hover:text-ink-heading nav:flex-col nav:items-stretch nav:gap-4 nav:rounded-card nav:border nav:border-surface-border nav:p-5 nav:hover:border-primary-300">
+        <a href="{% if p.course %}{{ p.course.get_absolute_url }}{% else %}{% url 'courses:continue' %}{% endif %}" style="{{ p.subject.style_vars }}" class="{% if p.stat %}sc-card{% endif %} flex items-center gap-4 py-4 text-ink-heading hover:text-ink-heading nav:flex-col nav:items-stretch nav:gap-4 nav:rounded-card nav:border-2 nav:p-5 {% if not p.stat %}nav:border nav:border-surface-border{% endif %}">
           <div class="flex items-center gap-3.5">{% include "components/subject_icon.html" with subject=p.subject %}<div class="hidden min-w-0 nav:block"><div class="font-semibold">{{ p.subject.name }}</div><div class="text-[13px] text-ink-muted">{% if p.stat %}{{ p.stat.done }} / {{ p.stat.total }} lessons{% else %}Coming soon{% endif %}</div></div></div>
           <div class="min-w-0 flex-1">
-            <div class="flex justify-between nav:hidden"><span class="font-semibold">{{ p.subject.name }}</span><span class="font-semibold">{{ p.stat.percent|default:0 }}%</span></div>
-            <div class="mt-2 flex items-center gap-3 nav:mt-0"><div class="progress-track h-2 flex-1"><div class="progress-fill" style="width: {{ p.stat.percent|default:0 }}%"></div></div><span class="hidden text-sm font-semibold nav:inline">{{ p.stat.percent|default:0 }}%</span></div>
+            <div class="flex justify-between nav:hidden"><span class="font-semibold">{{ p.subject.name }}</span><span class="sc-text font-extrabold">{{ p.stat.percent|default:0 }}%</span></div>
+            <div class="mt-2 flex items-center gap-3 nav:mt-0"><div class="sc-track h-2 flex-1 overflow-hidden rounded-full"><div class="sc-fill h-full rounded-full" style="width: {{ p.stat.percent|default:0 }}%"></div></div><span class="sc-text hidden text-sm font-extrabold nav:inline">{{ p.stat.percent|default:0 }}%</span></div>
           </div>
         </a>
         {% endfor %}
