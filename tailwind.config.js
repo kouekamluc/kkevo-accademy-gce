@@ -22,7 +22,7 @@ module.exports = {
         success: { DEFAULT: "#1FBF75", text: "#0B7A47", 50: "#E8FBF1", 200: "#A8EDCB", 300: "#6FE0A8" },
         warning: { DEFAULT: "#FFB020", text: "#8F5200", 50: "#FFF6DC", 200: "#FFE08A" },
         danger: { DEFAULT: "#FF4D6A", text: "#BE1E3A", 50: "#FFEDF0", 200: "#FFC2CD" },
-        surface: { bg: "#F7F5FF", card: "#FFFFFF", border: "#E3DDF7" },
+        surface: { bg: "#F6F0E2", card: "#FFFFFF", border: "#E2D8C4" },
         slate: { 50: "#F6F4FD", 100: "#EEEBF9", 200: "#E3DDF7", 300: "#CFC8EA", 400: "#9A93BC", 500: "#706A94",
           600: "#565078", 700: "#3F3A60", 800: "#2D2658", 900: "#1B1340" },
         ink: { heading: "#1B1340", body: "#2D2658", muted: "#665F8C" },

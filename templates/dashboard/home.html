@@ -9,23 +9,45 @@
 </form>
 {% endblock %}
 {% block content %}
-<div class="flex flex-col gap-6 nav:mt-2">
-  <div class="flex items-center gap-4">
-    {% include "components/mascot.html" with size="84" mood=show.mood %}
-    <div class="min-w-0 flex-1">
-      <h1 class="text-[26px] font-black leading-tight tracking-[-.01em] text-navy nav:text-[32px]">{{ greeting }}, {{ user.first_name|default:user.display_name }}!</h1>
-      <p class="mt-1 text-base font-semibold text-ink-muted">{{ subtitle }}</p>
+<div class="flex flex-col gap-5 nav:mt-2">
+  {# ---------- Toghu header band: who you are, how you are doing ---------- #}
+  <header class="-mx-4 -mt-5 overflow-hidden nav:mx-0 nav:mt-0 nav:rounded-card">
+    <div class="toghu-band flex flex-col gap-3 px-4 pb-4 pt-4 nav:px-8 nav:py-6">
+      <div class="flex items-center gap-3">
+        <span class="shrink-0 rounded-full bg-white/10 p-1">{% include "components/mascot.html" with size="56" mood=show.mood %}</span>
+        <div class="min-w-0 flex-1">
+          <h1 class="text-[22px] font-black leading-tight tracking-[-.01em] text-white nav:text-[30px]">{{ greeting }}, {{ user.first_name|default:user.display_name }}!</h1>
+          <p class="mt-0.5 text-sm font-bold text-[#CFC8EA] nav:text-base">{% if student.class_label %}{{ student.class_label }} · {% endif %}{{ subtitle }}</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2" aria-label="Your stats">
+        {% if streak and show.streak %}<span class="hg-pill text-[#FFE08A]"><span aria-hidden="true">🔥</span>{{ streak }}-day streak{% if rest_today %} · resting{% endif %}</span>{% endif %}
+        {% if countdown and not countdown.past and not countdown.is_today %}<a href="{% url 'learning:planner' %}" class="hg-pill text-white hover:text-white">GCE in {{ countdown.days_left }} day{{ countdown.days_left|pluralize }}</a>{% endif %}
+        {% if not show.is_new %}
+        <span class="hg-pill text-white"><span aria-hidden="true">⭐</span>{{ rank.points }} points</span>
+        <span class="hg-pill text-[#A8EDCB]" title="{{ rank.into }} of {{ rank.needed }} points to the next level">Level {{ rank.level }}</span>
+        {% endif %}
+        <form method="post" action="{% url 'accounts:toggle_low_data' %}" class="nav:hidden">{% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}">
+          <button type="submit" class="hg-pill {% if student.low_data_mode %}text-[#A8EDCB]{% else %}text-[#CFC8EA]{% endif %}" aria-label="Low-data mode is {{ student.low_data_mode|yesno:'on,off' }}. Tap to switch it {{ student.low_data_mode|yesno:'off,on' }}.">Low data: {{ student.low_data_mode|yesno:"ON,OFF" }}</button>
+        </form>
+      </div>
     </div>
-  </div>
-  <div class="flex flex-wrap gap-2.5" aria-label="Your stats">
-    {% if streak and show.streak %}
-    <span class="inline-flex min-h-[44px] items-center gap-2 rounded-full border-2 border-warning-200 bg-warning-50 px-4 text-[15px] font-extrabold text-warning-text"><span aria-hidden="true">🔥</span>{{ streak }}-day streak{% if rest_today %} · resting{% endif %}</span>
-    {% endif %}
+    <div class="toghu-stitch" aria-hidden="true"></div>
+  </header>
+
+  {# ---------- Services: every part of the app, one tap away ---------- #}
+  <nav aria-label="Services" class="grid grid-cols-4 gap-x-1 gap-y-4 rounded-card border-2 border-surface-border bg-white px-2 py-4 nav:grid-cols-8">
+    <a href="{% url 'courses:continue' %}" class="svc"><span class="svc-tile" style="background-color:#2F2A9B">{% include "components/icon.html" with name="book" class="h-6 w-6" %}</span>My lessons</a>
+    <a href="{% url 'courses:catalog' %}" class="svc"><span class="svc-tile" style="background-color:#C2410C">{% include "components/icon.html" with name="compass" class="h-6 w-6" %}</span>Subjects</a>
+    <a href="{% url 'practice:index' %}" class="svc"><span class="svc-tile" style="background-color:#157A4A">{% include "components/icon.html" with name="target" class="h-6 w-6" %}</span>Practice</a>
+    <a href="{% url 'practice:review' %}" class="svc"><span class="svc-tile relative" style="background-color:#B45309">{% include "components/icon.html" with name="refresh" class="h-6 w-6" %}{% if reviews_due %}<span class="svc-badge">{{ reviews_due }}</span>{% endif %}</span>Mistakes</a>
+    <a href="{% url 'learning:planner' %}" class="svc"><span class="svc-tile" style="background-color:#7E22CE">{% include "components/icon.html" with name="calendar" class="h-6 w-6" %}</span>Timetable</a>
     {% if not show.is_new %}
-    <span class="inline-flex min-h-[44px] items-center gap-2 rounded-full border-2 border-primary-100 bg-primary-50 px-4 text-[15px] font-extrabold text-primary-700"><span aria-hidden="true">⭐</span>{{ rank.points }} points</span>
-    <span class="inline-flex min-h-[44px] items-center gap-3 rounded-full border-2 border-success-200 bg-success-50 px-4 text-[15px] font-extrabold text-success-text" title="{{ rank.into }} of {{ rank.needed }} points to the next level">Level {{ rank.level }}<span class="progress-track hidden h-2 w-20 sm:block"><span class="progress-fill block" style="width: {{ rank.percent }}%"></span></span></span>
+    <a href="{% url 'learning:progress' %}" class="svc"><span class="svc-tile" style="background-color:#0E7490">{% include "components/icon.html" with name="progress" class="h-6 w-6" %}</span>Progress</a>
+    <a href="{% url 'learning:saved' %}" class="svc"><span class="svc-tile" style="background-color:#BE185D">{% include "components/icon.html" with name="bookmark" class="h-6 w-6" %}</span>Saved</a>
     {% endif %}
-  </div>
+    <a href="{% url 'accounts:profile' %}" class="svc"><span class="svc-tile" style="background-color:#57534E">{% include "components/icon.html" with name="user" class="h-6 w-6" %}</span>Me</a>
+  </nav>
 
   {# ---------- Exam countdown ---------- #}
   {% url 'learning:planner' as planner_home %}
@@ -119,19 +141,20 @@
   <div class="grid gap-6 xl:grid-cols-3">
     <section class="xl:col-span-3 nav:card nav:p-8 nav:shadow-card" aria-labelledby="subjects-heading">
       <div class="flex items-center justify-between"><h2 id="subjects-heading" class="text-xl font-bold">My subjects</h2><a href="{% url 'courses:continue' %}" class="text-[15px] font-semibold"><span class="hidden nav:inline">All subjects{% if plan_more %} (+{{ plan_more }}){% endif %}</span><span class="nav:hidden">See all</span></a></div>
-      <div class="mt-4 grid divide-y divide-surface-border rounded-2xl border border-surface-border bg-white px-5 nav:mt-6 nav:grid-cols-3 nav:gap-4 nav:divide-y-0 nav:border-0 nav:bg-transparent nav:px-0">
+      <div class="mt-4 grid gap-2.5 nav:grid-cols-2 xl:grid-cols-3">
         {% for p in plan_shown %}
-        <a href="{% if p.course %}{{ p.course.get_absolute_url }}{% else %}{% url 'courses:continue' %}{% endif %}" style="{{ p.subject.style_vars }}" class="{% if p.stat %}sc-card{% endif %} flex items-center gap-4 py-4 text-ink-heading hover:text-ink-heading nav:flex-col nav:items-stretch nav:gap-4 nav:rounded-card nav:border-2 nav:p-5 {% if not p.stat %}nav:border nav:border-surface-border{% endif %}">
-          <div class="flex items-center gap-3.5">{% include "components/subject_icon.html" with subject=p.subject %}<div class="hidden min-w-0 nav:block"><div class="font-semibold">{{ p.subject.name }}</div><div class="text-[13px] text-ink-muted">{% if p.stat %}{{ p.stat.done }} / {{ p.stat.total }} lessons{% else %}Coming soon{% endif %}</div></div></div>
-          <div class="min-w-0 flex-1">
-            <div class="flex justify-between nav:hidden"><span class="font-semibold">{{ p.subject.name }}</span><span class="sc-text font-extrabold">{{ p.stat.percent|default:0 }}%</span></div>
-            <div class="mt-2 flex items-center gap-3 nav:mt-0"><div class="sc-track h-2 flex-1 overflow-hidden rounded-full"><div class="sc-fill h-full rounded-full" style="width: {{ p.stat.percent|default:0 }}%"></div></div><span class="sc-text hidden text-sm font-extrabold nav:inline">{{ p.stat.percent|default:0 }}%</span></div>
-          </div>
+        <a href="{% if p.course %}{{ p.course.get_absolute_url }}{% else %}{% url 'courses:continue' %}{% endif %}" style="{{ p.subject.style_vars }}" class="{% if p.stat %}sc-card{% else %}border-dashed border-surface-border bg-white{% endif %} flex min-h-[72px] items-center gap-3.5 rounded-2xl border-2 px-4 py-3 text-ink-heading hover:text-ink-heading">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-white" style="background-color: {{ p.subject.colour }}" aria-hidden="true">{% if p.subject.icon %}{% include "components/icon.html" with name=p.subject.icon class="h-6 w-6" %}{% else %}<span class="font-math {% if p.subject.icon_text|length <= 2 %}text-xl italic{% else %}text-base{% endif %}">{{ p.subject.icon_text }}</span>{% endif %}</span>
+          <span class="min-w-0 flex-1">
+            <span class="block truncate text-base font-extrabold">{{ p.subject.name }}</span>
+            <span class="block truncate text-sm font-semibold text-slate-600">{% if continue_card and continue_card.subject.pk == p.subject.pk %}{{ continue_card.lesson.title }} · in progress{% elif p.stat %}{{ p.stat.done }} of {{ p.stat.total }} lessons done{% else %}Coming soon{% endif %}</span>
+            {% if p.stat %}<span class="sc-track mt-1.5 block h-1.5 overflow-hidden rounded-full"><span class="sc-fill block h-full rounded-full" style="width: {{ p.stat.percent|default:0 }}%"></span></span>{% endif %}
+          </span>
+          {% if p.stat %}<span class="sc-text shrink-0 text-sm font-extrabold">{{ p.stat.percent|default:0 }}%</span>{% endif %}
         </a>
         {% endfor %}
-        <a href="{% url 'courses:catalog' %}" class="hidden min-h-[120px] items-center justify-center gap-2 rounded-card border-2 border-dashed border-surface-border text-[15px] font-semibold text-slate-600 hover:border-primary-300 hover:text-navy nav:flex">{% include "components/icon.html" with name="plus" class="h-5 w-5" stroke="2" %}Add a subject</a>
+        <a href="{% url 'courses:catalog' %}" class="flex min-h-[72px] items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-surface-border text-[15px] font-semibold text-slate-600 hover:border-primary-300 hover:text-navy">{% include "components/icon.html" with name="plus" class="h-5 w-5" stroke="2" %}Add a subject</a>
       </div>
-      {% if not plan %}<p class="mt-3 text-sm text-ink-muted nav:hidden">No subjects yet. <a href="{% url 'courses:catalog' %}" class="font-semibold">Add a subject</a></p>{% endif %}
     </section>
 
   </div>
