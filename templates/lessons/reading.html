@@ -50,13 +50,15 @@
   <main id="main" class="min-w-0 flex-1 py-6 nav:py-10">
     <article class="mx-auto max-w-reading 2xl:max-w-[800px]">
       <div class="text-xs font-semibold uppercase tracking-[.08em] text-primary-700">Module {{ module_index }} · {{ module.title }} · Lesson {{ lesson_index }} of {{ module_lesson_count }}</div>
-      <h1 class="mt-2 text-[28px] font-bold leading-tight tracking-[-.02em] text-navy nav:text-[38px]">{{ lesson.title }}</h1>
+      <h1 class="nb-title mt-2 text-[28px] font-bold leading-tight tracking-[-.02em] text-navy nav:text-[38px]">{{ lesson.title }}</h1>
+      <time class="nb-date" datetime="{% now 'Y-m-d' %}">{% now "d/m/Y" %}</time>
       {% if lesson.summary %}<p class="mt-3 text-[17px] leading-relaxed text-slate-600">{{ lesson.summary }}</p>{% endif %}
       <ul class="mt-4 flex flex-wrap gap-x-5 gap-y-1.5 text-[13px] text-slate-600">
         <li class="flex items-center gap-1.5">{% include "components/icon.html" with name="clock" class="h-4 w-4" %}{{ lesson.estimated_minutes }} min {% if video %}lesson{% else %}read{% endif %}</li>
         {% if video and video.data.duration %}<li class="flex items-center gap-1.5">{% include "components/icon.html" with name="video" class="h-4 w-4" %}{{ video.data.duration|mmss }} video</li>{% endif %}
         {% if practice_set %}<li class="flex items-center gap-1.5">{% include "components/icon.html" with name="target" class="h-4 w-4" %}{{ practice_set.question_count }} practice question{{ practice_set.question_count|pluralize }}</li>{% endif %}
         {% for pre in lesson.prerequisites.all %}<li class="flex items-center gap-1.5">{% include "components/icon.html" with name="check" class="h-4 w-4" stroke="2.2" %}Requires: <a href="{{ pre.get_absolute_url }}">{{ pre.title }}</a></li>{% endfor %}
+        <li class="print:hidden"><a href="https://wa.me/?text={{ lesson.title|add:' - KKEVO Academy '|add:request.build_absolute_uri|urlencode }}" target="_blank" rel="noopener" class="wa-share">Send on WhatsApp</a></li>
         <li class="print:hidden"><button type="button" @click="printLesson()" class="flex items-center gap-1.5 font-medium text-primary-700 hover:underline">{% include "components/icon.html" with name="download" class="h-4 w-4" %}Print or save as PDF</button></li>
         <li class="hidden print:hidden nav:block"><button type="button" @click="helpOpen = true" class="flex items-center gap-1.5 text-slate-600 hover:text-navy"><kbd class="rounded border border-slate-300 bg-white px-1.5 font-mono text-[11px]">?</kbd>Shortcuts</button></li>
       </ul>
@@ -85,7 +87,7 @@
       </section>
       {% endif %}
 
-      <div id="lesson-body" data-cards class="lesson-prose mt-8 flex flex-col gap-6">
+      <div id="lesson-body" data-cards class="lesson-prose notebook mt-8 flex flex-col gap-6">
         {% for block in blocks %}
           {% include block.template_name with block=block %}
         {% empty %}

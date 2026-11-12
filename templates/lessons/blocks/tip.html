@@ -1,4 +1,4 @@
-{% load lesson_tags %}<aside class="flex gap-3 rounded-card bg-success-50 px-5 py-4">
+{% load lesson_tags %}<aside class="nb-note flex gap-3 bg-success-50 px-5 py-4">
   {% include "components/icon.html" with name="lightbulb" class="mt-0.5 h-5 w-5 shrink-0 text-success-text" %}
   <div><div class="text-xs font-semibold uppercase tracking-[.08em] text-success-text">{{ block.title|default:"Tip" }}</div><div class="lesson-text mt-1 text-[15px]">{{ block.body|rich }}</div></div>
 </aside>
