@@ -1,0 +1,13 @@
+{# One search result. `hit` comes from apps.courses.search; `compact` is the suggestions dropdown. #}
+<a href="{{ hit.url }}" class="flex items-center gap-3 px-3 py-2.5 hover:bg-slate-50 focus-visible:bg-primary-50 focus-visible:outline-none {% if not compact %}nav:px-4 nav:py-3{% endif %}">
+  {% include "components/subject_icon.html" with subject=hit.subject %}
+  <span class="min-w-0 flex-1">
+    <span class="block text-[15px] font-semibold leading-snug text-ink-heading [&_mark]:rounded-sm [&_mark]:bg-amber-100 [&_mark]:text-inherit {% if compact %}truncate{% endif %}">{{ hit.title_html }}</span>
+    <span class="mt-0.5 block truncate text-[13px] text-ink-muted">{{ hit.crumb }}</span>
+  </span>
+  {% if compact %}
+  <span class="chip shrink-0">{% if hit.kind == "lesson" %}Lesson{% elif hit.kind == "practice" %}Practice{% elif hit.kind == "mock" %}Mock exam{% else %}Subject{% endif %}</span>
+  {% else %}
+  <span class="hidden shrink-0 text-right text-[13px] text-ink-muted sm:block">{% if hit.kind == "subject" %}Open course{% else %}{{ hit.detail }}{% endif %}</span>
+  {% endif %}
+</a>

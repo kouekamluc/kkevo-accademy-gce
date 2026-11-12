@@ -6,6 +6,8 @@ app_name = "courses"
 
 urlpatterns = [
     path("subjects/", views.catalog, name="catalog"),
+    path("search/", views.search, name="search"),
+    path("search/suggest/", views.search_suggest, name="search_suggest"),
     path("my-subjects/", views.my_subjects, name="my_subjects"),
     path("my-subjects/add-class/", views.add_class_subjects, name="add_class_subjects"),
     path("my-subjects/<int:offering_pk>/toggle/", views.toggle_plan, name="toggle_plan"),

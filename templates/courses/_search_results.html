@@ -1,0 +1,58 @@
+<section id="search-results" aria-live="polite" class="flex flex-col gap-5">
+{% if not q %}
+  <div class="rounded-card border border-surface-border bg-white p-5 nav:p-6">
+    <h2 class="text-lg font-extrabold text-ink-heading">What do you want to learn?</h2>
+    <p class="mt-1 text-[15px] text-ink-muted">Type a topic, a lesson or a subject. You can add your class, for example <em>o level</em> or <em>upper sixth</em>, and the word <em>mock</em> for exam papers.</p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      {% for example in examples %}<a href="{% url 'courses:search' %}?q={{ example|urlencode }}" class="rounded-full border border-surface-border bg-surface-bg px-3.5 py-2 text-sm font-semibold text-slate-700 hover:border-primary hover:text-primary-700">{{ example }}</a>{% endfor %}
+    </div>
+  </div>
+{% elif not total %}
+  <div class="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center">
+    <p class="text-lg font-semibold text-ink-heading">Nothing found for “{{ q }}”</p>
+    <p class="mx-auto mt-1 max-w-md text-sm text-slate-600">Check the spelling, or search for one topic word such as <em>fractions</em>, <em>osmosis</em> or <em>inflation</em>.{% if level %} You are searching one class only.{% endif %}</p>
+    <div class="mt-5 flex flex-wrap justify-center gap-3">
+      {% if level %}<a href="{% url 'courses:search' %}?q={{ q|urlencode }}" class="btn-primary">Search all classes</a>{% endif %}
+      <a href="{% url 'courses:catalog' %}" class="btn-secondary">Browse subjects</a>
+    </div>
+  </div>
+{% else %}
+  <div class="flex flex-col gap-3">
+    <p class="text-[15px] text-slate-600">
+      <strong class="text-ink-heading">{{ total }} result{{ total|pluralize }}</strong>
+      {% if corrected %}for <strong class="text-ink-heading">{{ corrected }}</strong> <span class="text-ink-muted">(nothing matched “{{ q }}” as typed)</span>{% else %}for <strong class="text-ink-heading">{{ q }}</strong>{% endif %}
+    </p>
+    <div class="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 nav:mx-0 nav:flex-wrap nav:px-0">
+      <a href="{% url 'courses:search' %}?q={{ q|urlencode }}{% if level %}&amp;level={{ level }}{% endif %}" class="whitespace-nowrap rounded-full border px-3.5 py-2 text-sm font-semibold {% if not active %}border-primary bg-primary-50 text-primary-700{% else %}border-surface-border bg-white text-slate-700 hover:border-primary{% endif %}">All <span class="font-normal text-ink-muted">{{ total }}</span></a>
+      {% for tab in tabs %}
+      <a href="{% url 'courses:search' %}?q={{ q|urlencode }}&amp;type={{ tab.kind }}{% if level %}&amp;level={{ level }}{% endif %}" class="whitespace-nowrap rounded-full border px-3.5 py-2 text-sm font-semibold {% if active == tab.kind %}border-primary bg-primary-50 text-primary-700{% else %}border-surface-border bg-white text-slate-700 hover:border-primary{% endif %}">{{ tab.label }} <span class="font-normal text-ink-muted">{{ tab.count }}</span></a>
+      {% endfor %}
+    </div>
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+      <span class="text-ink-muted">Class:</span>
+      <a href="{% url 'courses:search' %}?q={{ q|urlencode }}{% if kind %}&amp;type={{ kind }}{% endif %}" class="font-semibold {% if not level %}text-ink-heading underline decoration-2 underline-offset-4{% else %}text-primary-700 hover:underline{% endif %}">All classes</a>
+      {% for lvl in levels %}
+      <a href="{% url 'courses:search' %}?q={{ q|urlencode }}&amp;level={{ lvl.slug }}{% if kind %}&amp;type={{ kind }}{% endif %}" class="font-semibold {% if level == lvl.slug %}text-ink-heading underline decoration-2 underline-offset-4{% else %}text-primary-700 hover:underline{% endif %}">{{ lvl.name }}</a>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% for group in groups %}
+  <div class="overflow-hidden rounded-card border border-surface-border bg-white">
+    <div class="flex items-baseline justify-between gap-3 border-b border-surface-border px-3 py-2.5 nav:px-4">
+      <h2 class="text-base font-extrabold text-ink-heading">{{ group.label }} <span class="text-sm font-normal text-ink-muted">{{ group.total }}</span></h2>
+      {% if group.see_all %}<a href="{% url 'courses:search' %}?q={{ q|urlencode }}&amp;type={{ group.kind }}{% if level %}&amp;level={{ level }}{% endif %}" class="text-sm font-semibold text-primary-700 hover:underline">See all {{ group.total }}</a>{% endif %}
+    </div>
+    <div class="divide-y divide-surface-border">
+      {% for hit in group.hits %}{% include "courses/_search_hit.html" %}{% endfor %}
+    </div>
+    {% if group.more %}<a href="{% url 'courses:search' %}?q={{ q|urlencode }}&amp;type={{ group.kind }}{% if level %}&amp;level={{ level }}{% endif %}&amp;show={{ group.more }}" class="block border-t border-surface-border bg-slate-50 px-4 py-3 text-center text-sm font-semibold text-primary-700 hover:bg-primary-50">Show more</a>{% endif %}
+  </div>
+  {% empty %}
+  <div class="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center">
+    <p class="text-base font-semibold text-ink-heading">Nothing of this kind matches</p>
+    <a href="{% url 'courses:search' %}?q={{ q|urlencode }}" class="btn-secondary mt-4">See all results</a>
+  </div>
+  {% endfor %}
+{% endif %}
+</section>

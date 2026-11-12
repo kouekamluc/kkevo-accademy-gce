@@ -1,0 +1,20 @@
+{% extends shell %}
+{% block title %}{% if q %}{{ q }} — Search{% else %}Search{% endif %} — KKEVO Academy{% endblock %}
+{% block content %}
+<div class="mx-auto flex max-w-[860px] flex-col gap-5 nav:mt-2">
+  <h1 class="text-[26px] font-black tracking-[-.01em] text-navy nav:text-[30px]">Search</h1>
+  <form method="get" action="{% url 'courses:search' %}" role="search"
+        hx-get="{% url 'courses:search' %}" hx-target="#search-results" hx-swap="outerHTML" hx-push-url="true"
+        hx-trigger="input changed delay:300ms from:#search-q, submit" hx-sync="this:replace">
+    {% if level %}<input type="hidden" name="level" value="{{ level }}">{% endif %}
+    {% if kind %}<input type="hidden" name="type" value="{{ kind }}">{% endif %}
+    <div class="relative">
+      <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-ink-muted">{% include "components/icon.html" with name="search" class="h-5 w-5" stroke="2" %}</span>
+      <input id="search-q" type="search" name="q" value="{{ q }}" autocomplete="off" {% if not q %}autofocus{% endif %}
+             placeholder="Search lessons, topics or subjects" aria-label="Search" class="form-input h-14 rounded-xl pl-12 text-[17px]">
+    </div>
+    <noscript><button type="submit" class="btn-primary mt-3">Search</button></noscript>
+  </form>
+  {% include "courses/_search_results.html" %}
+</div>
+{% endblock %}

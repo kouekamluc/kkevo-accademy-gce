@@ -1,0 +1,11 @@
+{% if q|length > 1 %}
+  {% if hits %}
+    {% if corrected %}<p class="border-b border-surface-border px-3 py-2 text-[13px] text-ink-muted">Showing results for <strong class="text-ink-heading">{{ corrected }}</strong></p>{% endif %}
+    <div class="divide-y divide-surface-border">
+      {% for hit in hits %}{% include "courses/_search_hit.html" with compact=True %}{% endfor %}
+    </div>
+    <a href="{% url 'courses:search' %}?q={{ q|urlencode }}" class="block border-t border-surface-border bg-slate-50 px-3 py-2.5 text-sm font-semibold text-primary-700 hover:bg-primary-50">See all {{ total }} result{{ total|pluralize }}</a>
+  {% else %}
+    <p class="px-3 py-3 text-sm text-ink-muted">Nothing found for <strong class="text-ink-heading">{{ q }}</strong>. Try one topic word, like <em>fractions</em> or <em>osmosis</em>.</p>
+  {% endif %}
+{% endif %}

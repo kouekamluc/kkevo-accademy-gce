@@ -1,0 +1,12 @@
+{# Search box with live suggestions. Usage: {% include "components/search_box.html" with q=q %} #}
+<form action="{% url 'courses:search' %}" method="get" role="search" class="relative w-full"
+      x-data="{ open: false }" @click.outside="open = false" @keydown.escape="open = false">
+  <label class="flex h-[42px] items-center gap-2.5 rounded-btn border border-surface-border bg-surface-bg px-3.5 text-[15px] text-ink-muted focus-within:border-primary focus-within:bg-white">
+    {% include "components/icon.html" with name="search" class="h-[18px] w-[18px] shrink-0" stroke="2" %}
+    <input name="q" type="search" value="{{ q|default:'' }}" autocomplete="off" placeholder="Search lessons, topics or subjects" aria-label="Search"
+           class="min-w-0 flex-1 border-0 bg-transparent p-0 text-ink-heading placeholder:text-ink-muted focus:ring-0"
+           hx-get="{% url 'courses:search_suggest' %}" hx-trigger="input changed delay:250ms" hx-target="next .search-suggest" hx-swap="innerHTML" hx-sync="this:replace"
+           @input="open = $event.target.value.trim().length > 1" @focus="open = $event.target.value.trim().length > 1">
+  </label>
+  <div class="search-suggest absolute inset-x-0 top-full z-40 mt-2 overflow-hidden rounded-card border border-surface-border bg-white shadow-raised empty:hidden" x-show="open" x-cloak aria-live="polite"></div>
+</form>

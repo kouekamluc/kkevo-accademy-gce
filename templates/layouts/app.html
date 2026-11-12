@@ -26,6 +26,10 @@ Views set `nav_active` to highlight the current item. Works for visitors too (pu
     <header class="sticky top-0 z-30 flex h-14 items-center gap-4 bg-white px-4 nav:h-header nav:px-8">
       <a href="{% if user.is_authenticated %}{% url 'dashboard:home' %}{% else %}{% url 'core:landing' %}{% endif %}" class="flex items-center gap-2 text-navy nav:hidden" aria-label="KKEVO Academy home">{% include "components/logo.html" with size="sm" %}</a>
       <div class="min-w-0 flex-1">{% block header_left %}{% endblock %}</div>
+      {# Search sits in the middle of the header; the left and right groups share the rest equally. #}
+      {% block header_search %}<div class="hidden w-[min(520px,40vw)] shrink-0 nav:block">{% include "components/search_box.html" with q=search_q %}</div>{% endblock %}
+      <div class="flex shrink-0 items-center justify-end gap-1 nav:min-w-0 nav:flex-1 nav:gap-2">
+      <a href="{% url 'courses:search' %}" aria-label="Search" class="flex h-11 w-11 shrink-0 items-center justify-center rounded-btn text-slate-600 hover:bg-slate-50 hover:text-navy nav:hidden">{% include "components/icon.html" with name="search" class="h-5 w-5" stroke="2" %}</a>
       {% if user.is_authenticated %}
       <div class="relative" x-data="{ open: false }" @click.outside="open = false" @keydown.escape.window="open = false">
         <button type="button" @click="open = !open" :aria-expanded="open.toString()" aria-haspopup="menu" aria-controls="user-menu"
@@ -53,6 +57,7 @@ Views set `nav_active` to highlight the current item. Works for visitors too (pu
         <a href="{% url 'accounts:register' %}" class="btn-primary">Get Started</a>
       </div>
       {% endif %}
+      </div>
       {% block header_stitch %}<span class="toghu-stitch absolute inset-x-0 top-full" aria-hidden="true"></span>{% endblock %}
     </header>
 

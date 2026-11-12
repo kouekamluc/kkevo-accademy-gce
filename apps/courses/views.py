@@ -16,6 +16,7 @@ from apps.learning.models import Enrollment, LessonProgress
 from apps.practice.models import Attempt, PracticeSet, Question
 
 from .models import Course, Lesson, Module, Topic
+from . import search as search_engine
 from .path import build_path
 
 SORTS = {"popular": "Most popular", "name": "Name (A–Z)"}
@@ -358,3 +359,64 @@ def continue_learning(request):
         "started": started, "fresh": fresh, "finished": finished, "coming_soon": soon,
         "last": started[0] if started else None, "nav_active": "continue",
     })
+
+
+SEARCH_PAGE = 30
+SEARCH_PREVIEW = {search_engine.SUBJECT: 4, search_engine.LESSON: 8, search_engine.PRACTICE: 5, search_engine.MOCK: 4}
+SEARCH_EXAMPLES = ["photosynthesis", "quadratic equations", "the mole", "elasticity of demand", "essay writing",
+                   "o level physics mock"]
+
+
+def _run_search(request):
+    q = " ".join(request.GET.get("q", "").split())[:80]
+    levels = list(AcademicLevel.objects.filter(is_active=True))
+    level = request.GET.get("level") if request.GET.get("level") in {lvl.slug for lvl in levels} else ""
+    kind = request.GET.get("type") if request.GET.get("type") in dict(search_engine.KINDS) else ""
+    student_level, _pathway = _student_level(request)
+    found = search_engine.search(
+        q, user_level=student_level.slug if student_level else None,
+        enrolled=services.enrolled_offering_ids(request.user), level=level or None, kind=kind or None,
+    ) if q else None
+    return q, levels, level, kind, found
+
+
+def search(request):
+    """Search results: subjects, lessons, practice sets and mock exams, best match first."""
+    q, levels, level, kind, found = _run_search(request)
+    context = {"q": q, "search_q": q, "levels": levels, "level": level, "kind": kind, "shell": _shell(request),
+               "examples": SEARCH_EXAMPLES, "found": found}
+    if found:
+        hits, counts = found["hits"], found["counts"]
+        labels = dict(search_engine.KINDS)
+        # The words in the query may already choose a kind ("physics mock"): show that tab as selected.
+        active = kind or found["query"].kind
+        try:
+            limit = min(max(int(request.GET.get("show", SEARCH_PAGE)), SEARCH_PAGE), 300)
+        except ValueError:
+            limit = SEARCH_PAGE
+        if active:
+            groups = [{"kind": active, "label": labels[active], "hits": hits[:limit], "total": len(hits),
+                       "more": limit + SEARCH_PAGE if len(hits) > limit else 0}]
+        else:
+            groups = []
+            for key, label in search_engine.KINDS:
+                of_kind = [h for h in hits if h.doc.kind == key]
+                if of_kind:
+                    groups.append({"kind": key, "label": label, "hits": of_kind[:SEARCH_PREVIEW[key]],
+                                   "total": len(of_kind), "see_all": len(of_kind) > SEARCH_PREVIEW[key]})
+        context.update({
+            "groups": groups, "active": active, "total": sum(counts.values()),
+            "tabs": [{"kind": key, "label": label, "count": counts[key]} for key, label in search_engine.KINDS if counts[key]],
+            "corrected": found["corrected"],
+        })
+    template = "courses/_search_results.html" if request.headers.get("HX-Request") else "courses/search.html"
+    return render(request, template, context)
+
+
+def search_suggest(request):
+    """The few best matches, shown under the search box while the student types."""
+    q, _levels, _level, _kind, found = _run_search(request)
+    hits = found["hits"][:6] if found else []
+    return render(request, "courses/_search_suggest.html",
+                  {"q": q, "hits": hits, "total": sum(found["counts"].values()) if found else 0,
+                   "corrected": found["corrected"] if found else ""})

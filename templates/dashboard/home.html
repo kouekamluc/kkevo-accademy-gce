@@ -2,14 +2,6 @@
 {% load core_tags %}
 {% block title %}Today — KKEVO Academy{% endblock %}
 {% block header_stitch %}{% endblock %}
-{% block header_left %}
-<form action="{% url 'courses:catalog' %}" method="get" role="search" class="hidden max-w-[480px] nav:block">
-  <label class="flex h-[42px] items-center gap-2.5 rounded-btn border border-surface-border bg-surface-bg px-3.5 text-[15px] text-ink-muted">
-    {% include "components/icon.html" with name="search" class="h-[18px] w-[18px]" stroke="2" %}
-    <input name="q" type="search" placeholder="Search subjects, topics or lessons" aria-label="Search" class="min-w-0 flex-1 border-0 bg-transparent p-0 text-ink-heading placeholder:text-ink-muted focus:ring-0">
-  </label>
-</form>
-{% endblock %}
 {% block content %}
 <div class="flex flex-col gap-5 nav:mt-2">
   {# ---------- Toghu header band: who you are, how you are doing ---------- #}
