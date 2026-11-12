@@ -91,7 +91,10 @@ def test_draft_sets_hidden_and_index_lists_plan(client, student, practice_set, o
     client.force_login(student)
     assert "No practice sets yet" in client.get(reverse("practice:index")).content.decode()
     Enrollment.objects.create(user=student, offering=offering)
-    assert "Set A" in client.get(reverse("practice:index")).content.decode()
+    home = client.get(reverse("practice:index")).content.decode()
+    course = practice_set.topic.module.course
+    assert reverse("practice:course", args=[course.slug]) in home  # the course is listed; its sets are one tap deeper
+    assert "Set A" in client.get(reverse("practice:course", args=[course.slug])).content.decode()
     practice_set.status = "draft"
     practice_set.save()
     assert client.get(reverse("practice:set", args=[practice_set.pk])).status_code == 404
@@ -109,3 +112,32 @@ def test_game_style_feedback_and_results(client, student, practice_set):
     answer(client, attempt, 3, True)
     results = client.get(reverse("practice:finish", args=[attempt.pk])).content.decode()
     assert "3 of 3 stars" in results and "+6 points" in results and "100%" in results
+
+
+def test_practice_home_course_page_and_mock_page(client, student, practice_set, offering):
+    from apps.courses.models import Topic
+
+    Enrollment.objects.create(user=student, offering=offering)
+    course = practice_set.topic.module.course
+    mock = PracticeSet.objects.create(topic=practice_set.topic, title="Paper 1 mock exam A", status="published",
+                                      is_mock=True, time_limit_minutes=90)
+    q = Question.objects.create(practice_set=mock, prompt="Mock question?", order=0, solution_steps=[])
+    Choice.objects.create(question=q, text="Yes", is_correct=True, order=0)
+    Choice.objects.create(question=q, text="No", is_correct=False, order=1)
+    client.force_login(student)
+
+    home = client.get(reverse("practice:index"))
+    body = home.content.decode()
+    assert "Mock exams" in body and "Paper 1 mock exam A" in body and "90 min timed" in body
+    card = home.context["sections"][0][1][0]
+    assert card["sets"] == 1 and card["mocks"] == 1 and card["n_topics"] == 1 and card["next"].title == "Set A"
+
+    page = client.get(reverse("practice:course", args=[course.slug]))
+    assert page.status_code == 200 and "Set A" in page.content.decode() and "Paper 1 mock exam A" in page.content.decode()
+    assert [(k, n) for k, _l, n in page.context["filters"]] == [("all", 1), ("todo", 1), ("needs", 0), ("mastered", 0), ("mocks", 1)]
+    only_mocks = client.get(reverse("practice:course", args=[course.slug]), {"show": "mocks"})
+    assert "Paper 1 mock exam A" in only_mocks.content.decode() and "Set A" not in only_mocks.content.decode()
+    assert "Set A" not in client.get(reverse("practice:course", args=[course.slug]), {"show": "mastered"}).content.decode()
+
+    assert "Paper 1 mock exam A" in client.get(reverse("practice:mocks")).content.decode()
+    assert client.get(reverse("practice:course", args=["no-such-course"])).status_code == 404

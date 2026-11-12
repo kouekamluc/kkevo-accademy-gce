@@ -110,7 +110,7 @@ def test_dashboard_and_practice_page_show_practice_today(client, student, form5,
     # A new student has started nothing: the dashboard stays quiet, the Practice page already suggests sets.
     assert "Practice today" not in client.get(reverse("dashboard:home")).content.decode()
     page = client.get(reverse("practice:index")).content.decode()
-    assert "Practice today" in page and "Maths set 1" in page and "Physics set 1" in page and "All practice sets" in page
+    assert "Practice today" in page and "Maths set 1" in page and "Physics set 1" in page and "Practice by subject" in page
     # Once they have started a lesson, the dashboard shows the strip too.
     LessonProgress.objects.create(user=student, lesson=maths_set.lesson, percent=40)
     home = client.get(reverse("dashboard:home"))

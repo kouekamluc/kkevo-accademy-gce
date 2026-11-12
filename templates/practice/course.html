@@ -1,0 +1,83 @@
+{% extends "layouts/app.html" %}
+{% block title %}{{ subject.name }} practice — KKEVO Academy{% endblock %}
+{% block content %}
+<div class="sc-scope flex flex-col gap-5 nav:mt-2" style="{{ subject.style_vars }}">
+  <a href="{% url 'practice:index' %}" class="inline-flex items-center gap-1 text-sm font-semibold text-primary-700">&larr; Practice</a>
+
+  <header class="sc-hero flex flex-col gap-4 rounded-panel p-5 nav:flex-row nav:items-center nav:gap-6 nav:p-7">
+    <div class="flex items-center gap-4 nav:flex-1">
+      {% include "components/subject_icon.html" with subject=subject size="lg" %}
+      <div class="min-w-0">
+        <h1 class="text-2xl font-black leading-tight nav:text-[28px]">{{ subject.name }} practice</h1>
+        <p class="mt-0.5 text-[15px] font-semibold text-white/90">{{ level.name }} · {{ counts.mastered }} of {{ counts.all }} topics strong</p>
+        <div class="mt-2 h-2.5 w-full max-w-[320px] overflow-hidden rounded-full bg-white/25" role="progressbar" aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="Topics strong"><div class="h-full rounded-full bg-white" style="width: {{ percent }}%"></div></div>
+      </div>
+    </div>
+    {% if next_set %}
+    <a href="{{ next_set.get_absolute_url }}" class="sc-btn-light h-[52px] w-full shrink-0 justify-center px-6 text-base nav:w-auto">{% if next_set.mastery.key == "not_started" %}Start{% else %}Practise{% endif %}: {{ next_set.topic.title|truncatechars:34 }} {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
+    {% endif %}
+  </header>
+
+  <nav aria-label="Filter practice" class="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 nav:mx-0 nav:flex-wrap nav:px-0">
+    {% for key, label, count in filters %}{% if count or key == "all" %}
+    <a href="?show={{ key }}" {% if show == key %}aria-current="true"{% endif %} class="whitespace-nowrap rounded-full border px-3.5 py-2 text-sm font-semibold {% if show == key %}border-primary bg-primary-50 text-primary-700{% else %}border-surface-border bg-white text-slate-700 hover:border-primary{% endif %}">{{ label }} <span class="font-normal text-ink-muted">{{ count }}</span></a>
+    {% endif %}{% endfor %}
+  </nav>
+
+  {% if mocks %}
+  <section aria-labelledby="mocks-heading" class="flex flex-col gap-3">
+    <div>
+      <h2 id="mocks-heading" class="text-xl font-black text-navy">Mock exams</h2>
+      <p class="text-sm font-semibold text-slate-600">Timed papers across the whole course.</p>
+    </div>
+    <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      {% for s in mocks %}{% include "practice/_mock_card.html" with s=s show_course=False %}{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if modules %}
+  <section aria-labelledby="topics-heading" class="flex flex-col gap-3">
+    <h2 id="topics-heading" class="text-xl font-black text-navy">Practice by topic</h2>
+    {% for item in modules %}
+    <details {% if forloop.first or open_all %}open{% endif %} class="group overflow-hidden rounded-2xl border border-surface-border bg-white">
+      <summary class="flex min-h-[60px] cursor-pointer list-none items-center gap-3 px-4 py-3 [&::-webkit-details-marker]:hidden">
+        <span class="min-w-0 flex-1">
+          <span class="block font-extrabold text-ink-heading">{{ item.module.title }}</span>
+          <span class="block text-sm font-semibold text-ink-muted">{{ item.done }} of {{ item.total }} topic{{ item.total|pluralize }} strong</span>
+        </span>
+        <span class="sc-text transition group-open:rotate-180" aria-hidden="true">{% include "components/icon.html" with name="chevron-down" class="h-5 w-5" stroke="2.2" %}</span>
+      </summary>
+      <ul class="divide-y divide-surface-border border-t border-surface-border">
+        {% for t in item.topics %}
+        <li class="px-4 py-3">
+          <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
+            <span class="font-bold text-ink-heading">{{ t.topic.title }}</span>
+            {% include "practice/_mastery.html" with mastery=t.mastery %}
+          </div>
+          <ul class="mt-2 flex flex-col gap-1.5">
+            {% for s in t.sets %}
+            <li><a href="{{ s.get_absolute_url }}" class="flex min-h-[48px] items-center gap-3 rounded-input bg-surface-bg px-3 py-2 text-ink-heading hover:bg-primary-50 hover:text-ink-heading">
+              <span class="min-w-0 flex-1">
+                <span class="block truncate text-[15px] font-semibold">{{ s.title }}</span>
+                <span class="block text-[13px] text-ink-muted">{{ s.question_count }} question{{ s.question_count|pluralize }}</span>
+              </span>
+              {% if s.last_attempt %}<span class="shrink-0 rounded-full px-3 py-1 text-sm font-extrabold {% if s.last_attempt.score >= 60 %}bg-success-50 text-success-text{% else %}bg-warning-50 text-warning-text{% endif %}">{{ s.last_attempt.score }}%</span>
+              {% else %}<span class="sc-text shrink-0 text-sm font-extrabold">Start &rarr;</span>{% endif %}
+            </a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ul>
+    </details>
+    {% endfor %}
+  </section>
+  {% elif show != "mocks" %}
+  <div class="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center">
+    <p class="text-base font-semibold text-ink-heading">No topics in this group</p>
+    <a href="?show=all" class="btn-secondary mt-4">Show all topics</a>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

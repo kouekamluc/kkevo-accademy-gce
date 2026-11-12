@@ -14,7 +14,8 @@ from django.urls import reverse
 from django.utils import timezone
 from django.views.decorators.http import require_POST
 
-from apps.courses.models import Lesson
+from apps.accounts.utils import get_profile
+from apps.courses.models import Course, Lesson
 from apps.learning import achievements
 from apps.learning.models import Enrollment
 
@@ -98,36 +99,156 @@ def _hint_requested(request, question, owner):
 
 # ---------------------------------------------------------------- practice index and sets
 
-@login_required
-def index(request):
-    offering_ids = Enrollment.objects.filter(user=request.user).values_list("offering_id", flat=True)
-    sets = list(
-        PracticeSet.objects.published()
-        .filter(topic__module__course__offering_id__in=offering_ids, topic__module__course__status="published")
-        .select_related("topic__module__course__offering__subject")
-        .annotate(question_count=Count("questions"))
-        .order_by("topic__module__course__offering__subject__order", "topic__module__order", "topic__order", "order")
-    )
+# Which topic to practise next in a course: needs-work topics first, then ones not started, then the rest.
+_NEXT_ORDER = {"attempted": 0, "familiar": 1, "not_started": 2, "proficient": 3, "mastered": 4}
+
+
+def _enrolled_sets(user, course=None):
+    """Published sets in the student's plan (or in one course), with question counts, in curriculum order."""
+    qs = (PracticeSet.objects.published()
+          .filter(topic__module__course__status="published")
+          .select_related("topic__module__course__offering__subject", "topic__module__course__offering__level")
+          .annotate(question_count=Count("questions"))
+          .filter(question_count__gt=0)
+          .order_by("topic__module__course__offering__subject__order", "topic__module__course__pk", "topic__module__order",
+                    "topic__order", "order"))
+    if course is not None:
+        return qs.filter(topic__module__course=course)
+    offering_ids = Enrollment.objects.filter(user=user).values_list("offering_id", flat=True)
+    return qs.filter(topic__module__course__offering_id__in=offering_ids)
+
+
+def _decorate(sets, user):
+    """Attach last attempt, topic mastery and timed-exam length to each set."""
     last = {}
-    for attempt in Attempt.objects.filter(user=request.user, completed_at__isnull=False, practice_set__in=sets).order_by("completed_at"):
+    for attempt in Attempt.objects.filter(user=user, completed_at__isnull=False, practice_set__in=sets).order_by("completed_at"):
         last[attempt.practice_set_id] = attempt
-    mastery = topic_mastery(request.user)
-    groups = {}
-    tally = dict.fromkeys(LEVELS, 0)
-    seen_topics = set()
-    sets.sort(key=lambda s: s.is_mock)  # mock papers after topic practice (the sort is stable)
+    mastery = topic_mastery(user)
     for s in sets:
         s.last_attempt = last.get(s.pk)
         s.mastery = mastery.get(s.topic_id, NOT_STARTED)
         if s.is_mock:
             s.exam_minutes = round(s.exam_seconds_for(s.question_count) / 60)
-        elif s.topic_id not in seen_topics:
-            seen_topics.add(s.topic_id)
-            tally[s.mastery.label] += 1
-        groups.setdefault(s.subject, []).append(s)
+    return mastery
+
+
+def _by_class(items, student_level_id, level_of):
+    """[(level, [item, ...])] with the student's own class first, then the others in order."""
+    grouped = {}
+    for item in items:
+        grouped.setdefault(level_of(item), []).append(item)
+    return sorted(grouped.items(), key=lambda kv: (kv[0].pk != student_level_id, kv[0].pk))
+
+
+def _course_card(course):
+    offering = course.offering
+    return {"course": course, "subject": offering.subject, "level": offering.level, "topics": set(), "sets": 0, "mocks": 0,
+            "good": 0, "last": None, "next": None, "next_rank": 9, "attempted": 0, "familiar": 0, "not_started": 0,
+            "proficient": 0, "mastered": 0}
+
+
+@login_required
+def index(request):
+    """Practice home: what to do today, mock exams, then every course in the plan grouped by class."""
+    sets = list(_enrolled_sets(request.user))
+    _decorate(sets, request.user)
+    profile = get_profile(request.user)
+    cards, mock_sets, tally, seen_topics = {}, [], dict.fromkeys(LEVELS, 0), set()
+    for s in sets:
+        course = s.topic.module.course
+        card = cards.setdefault(course.pk, _course_card(course))
+        if s.is_mock:
+            mock_sets.append(s)
+            card["mocks"] += 1
+            continue
+        card["sets"] += 1
+        if s.topic_id not in card["topics"]:
+            card["topics"].add(s.topic_id)
+            card[s.mastery.key] += 1
+            if s.mastery.key in ("proficient", "mastered"):
+                card["good"] += 1
+            if s.topic_id not in seen_topics:
+                seen_topics.add(s.topic_id)
+                tally[s.mastery.label] += 1
+        if s.last_attempt and (card["last"] is None or s.last_attempt.completed_at > card["last"]):
+            card["last"] = s.last_attempt.completed_at
+        rank = _NEXT_ORDER[s.mastery.key]
+        if card["next"] is None or rank < card["next_rank"]:
+            card["next"], card["next_rank"] = s, rank
+    for card in cards.values():
+        card["n_topics"] = len(card["topics"])
+        card["percent"] = round(100 * card["good"] / card["n_topics"]) if card["n_topics"] else 0
+    sections = _by_class(sorted(cards.values(), key=lambda c: (c["subject"].order, c["subject"].name)),
+                         profile.level_id, lambda c: c["level"])
+    # Mock exams: the student's own class first, not yet attempted before attempted; a handful here, the rest on the mock page.
+    mock_sets.sort(key=lambda s: (s.topic.module.course.offering.level_id != profile.level_id, s.last_attempt is not None))
     return render(request, "practice/index.html", {
-        "today": practice_today(request.user), "groups": groups.items(), "nav_active": "practice", "review": review_summary(request.user),
-        "mastery_tally": list(tally.items()) if sets else [],
+        "today": practice_today(request.user), "sections": sections, "nav_active": "practice",
+        "review": review_summary(request.user), "mastery_tally": list(tally.items()) if cards else [],
+        "mocks": mock_sets[:4], "mock_total": len(mock_sets), "has_sets": bool(cards),
+    })
+
+
+@login_required
+def mocks(request):
+    """Every mock exam in the student's plan, by class and subject."""
+    sets = [s for s in _enrolled_sets(request.user) if s.is_mock]
+    _decorate(sets, request.user)
+    profile = get_profile(request.user)
+    sections = []
+    for level, items in _by_class(sets, profile.level_id, lambda s: s.topic.module.course.offering.level):
+        by_course = {}
+        for s in items:
+            by_course.setdefault(s.topic.module.course, []).append(s)
+        sections.append((level, list(by_course.items())))
+    return render(request, "practice/mocks.html", {"sections": sections, "total": len(sets), "nav_active": "practice"})
+
+
+SHOW_FILTERS = [("all", "All topics"), ("todo", "Not started"), ("needs", "Needs work"), ("mastered", "Strong"),
+                ("mocks", "Mock exams")]
+
+
+@login_required
+def course_practice(request, slug):
+    """All of one course's practice: mock exams, then topics by module, filterable by how well they are going."""
+    course = get_object_or_404(Course.objects.published().select_related("offering__subject", "offering__level"), slug=slug)
+    sets = list(_enrolled_sets(request.user, course))
+    if not sets:
+        raise Http404
+    _decorate(sets, request.user)
+    show = request.GET.get("show", "all")
+    show = show if show in dict(SHOW_FILTERS) else "all"
+    mocks_here = [s for s in sets if s.is_mock]
+    modules, counts = {}, dict.fromkeys(("all", "todo", "needs", "mastered"), 0)
+    for s in sets:
+        if s.is_mock:
+            continue
+        module = modules.setdefault(s.topic.module_id, {"module": s.topic.module, "topics": {}})
+        topic = module["topics"].setdefault(s.topic_id, {"topic": s.topic, "mastery": s.mastery, "sets": []})
+        topic["sets"].append(s)
+    for module in modules.values():
+        for topic in module["topics"].values():
+            key = topic["mastery"].key
+            topic["group"] = "todo" if key == "not_started" else "needs" if key in ("attempted", "familiar") else "mastered"
+            counts["all"] += 1
+            counts[topic["group"]] += 1
+    shown = []
+    for module in modules.values():
+        topics = [t for t in module["topics"].values() if show == "all" or t["group"] == show]
+        if show != "mocks" and topics:
+            shown.append({"module": module["module"], "topics": topics,
+                          "done": sum(1 for t in module["topics"].values() if t["group"] == "mastered"),
+                          "total": len(module["topics"])})
+    next_set = None
+    for s in sets:
+        if not s.is_mock and (next_set is None or _NEXT_ORDER[s.mastery.key] < _NEXT_ORDER[next_set.mastery.key]):
+            next_set = s
+    filters = [(key, label, len(mocks_here) if key == "mocks" else counts[key]) for key, label in SHOW_FILTERS]
+    return render(request, "practice/course.html", {
+        "course": course, "subject": course.offering.subject, "level": course.offering.level, "show": show,
+        "filters": filters, "modules": shown, "mocks": mocks_here if show in ("all", "mocks") else [], "counts": counts,
+        "percent": round(100 * counts["mastered"] / counts["all"]) if counts["all"] else 0, "next_set": next_set,
+        "open_all": show != "all" or len(shown) == 1, "nav_active": "practice",
     })
 
 

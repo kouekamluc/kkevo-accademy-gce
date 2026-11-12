@@ -1,7 +1,7 @@
 {% extends "layouts/app.html" %}
 {% block title %}Practice — KKEVO Academy{% endblock %}
 {% block content %}
-<div class="flex flex-col gap-6 nav:mt-2">
+<div class="flex flex-col gap-7 nav:mt-2">
   <div>
     <h1 class="text-[26px] font-black tracking-[-.01em] text-navy nav:text-[34px]">Practice</h1>
     <p class="mt-1 text-base font-semibold text-ink-muted">Check your understanding. Every question comes with a worked solution.</p>
@@ -12,13 +12,28 @@
     <span class="icon-tile accent-amber">{% include "components/icon.html" with name="refresh" class="h-5 w-5" stroke="2" %}</span>
     <div class="min-w-0 flex-1">
       <h2 id="review-heading" class="font-bold">Review my mistakes</h2>
-      <p class="text-sm text-slate-600">{% if review.due %}{{ review.due }} question{{ review.due|pluralize }} you missed {{ review.due|pluralize:"is,are" }} due today. A quick review now makes them stick.{% elif review.open_session %}You have a review in progress.{% else %}All caught up. Next review {{ review.next_due|date:"l j M" }}.{% endif %}</p>
+      <p class="text-sm text-slate-600">{% if review.due %}{{ review.due }} question{{ review.due|pluralize }} you missed {{ review.due|pluralize:"is,are" }} due today. A quick review now makes them stick.{% elif review.open_session %}You have a review in progress.{% else %}All caught up. Next review {{ review.next_due|date:"l j F" }}.{% endif %}</p>
     </div>
     <a href="{% url 'practice:review' %}" class="{% if review.due or review.open_session %}btn-primary{% else %}btn-secondary{% endif %} h-11">{% if review.due or review.open_session %}Review now{% else %}See schedule{% endif %}</a>
   </section>
   {% endif %}
 
   {% include "practice/_today.html" with items=today %}
+
+  {% if mocks %}
+  <section aria-labelledby="mocks-heading" class="flex flex-col gap-3">
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+      <div>
+        <h2 id="mocks-heading" class="text-xl font-black text-navy">Mock exams</h2>
+        <p class="text-sm font-semibold text-slate-600">Timed papers that feel like the real exam. Your score is broken down by topic afterwards.</p>
+      </div>
+      {% if mock_total > mocks|length %}<a href="{% url 'practice:mocks' %}" class="text-[15px] font-extrabold">All {{ mock_total }} mock exams</a>{% endif %}
+    </div>
+    <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      {% for s in mocks %}{% include "practice/_mock_card.html" with s=s show_course=True %}{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 
   {% if mastery_tally %}
   <section aria-labelledby="mastery-heading" class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
@@ -28,33 +43,50 @@
   </section>
   {% endif %}
 
-  {% if groups %}<h2 class="-mb-3 text-xl font-black text-navy">All practice sets</h2>{% endif %}
-  {% for subject, sets in groups %}
-  <details {% if forloop.first %}open{% endif %} class="sc-scope group overflow-hidden rounded-2xl border border-surface-border bg-white" style="{{ subject.style_vars }}">
-    <summary id="subject-{{ subject.pk }}" class="flex min-h-[64px] cursor-pointer list-none items-center gap-3 px-4 py-3 [&::-webkit-details-marker]:hidden">
-      {% include "components/subject_icon.html" with subject=subject %}
-      <span class="min-w-0 flex-1"><span class="block text-lg font-extrabold text-ink-heading">{{ subject.name }}</span><span class="block text-sm font-semibold text-ink-muted">{{ sets|length }} practice set{{ sets|length|pluralize }}</span></span>
-      <span class="sc-text transition group-open:rotate-180" aria-hidden="true">{% include "components/icon.html" with name="chevron-down" class="h-5 w-5" stroke="2.2" %}</span>
-    </summary>
-    <ul class="divide-y divide-surface-border border-t border-surface-border">
-      {% for s in sets %}
-      <li><a href="{{ s.get_absolute_url }}" class="flex min-h-[60px] items-center gap-3 px-4 py-3 text-ink-heading hover:bg-surface-bg hover:text-ink-heading">
-        <span class="min-w-0 flex-1">
-          <span class="block line-clamp-2 font-bold leading-snug">{{ s.title }}</span>
-          <span class="block line-clamp-2 text-sm text-ink-muted">{% if s.is_mock %}Mock exam · {{ s.question_count }} questions · {{ s.exam_minutes }} min timed{% else %}{{ s.topic.title }} · {{ s.question_count }} question{{ s.question_count|pluralize }}{% if s.mastery %} · {{ s.mastery.label }}{% endif %}{% endif %}</span>
-        </span>
-        {% if s.last_attempt %}<span class="shrink-0 rounded-full px-3 py-1 text-sm font-extrabold {% if s.last_attempt.score >= 60 %}bg-success-50 text-success-text{% else %}bg-warning-50 text-warning-text{% endif %}">{{ s.last_attempt.score }}%</span>
-        {% else %}<span class="sc-text shrink-0 text-sm font-extrabold">Start →</span>{% endif %}
-      </a></li>
+  {% if has_sets %}<h2 class="-mb-3 text-2xl font-black text-navy">Practice by subject</h2>{% endif %}
+  {% for level, cards in sections %}
+  <section aria-labelledby="class-{{ level.slug }}" class="flex flex-col gap-3">
+    <div class="flex flex-wrap items-end justify-between gap-x-4 gap-y-1 border-b-2 border-surface-border pb-2">
+      <h2 id="class-{{ level.slug }}" class="flex flex-wrap items-center gap-2 text-xl font-black text-navy">Practise {{ level.name }}
+        <span class="text-sm font-bold text-ink-muted">{{ level.get_exam_level_display }}</span>
+      </h2>
+      <span class="text-sm font-semibold text-slate-600">{{ cards|length }} subject{{ cards|length|pluralize }}</span>
+    </div>
+    <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      {% for card in cards %}
+      <li class="sc-card flex flex-col gap-3 rounded-card border p-4" style="{{ card.subject.style_vars }}">
+        <div class="flex items-center gap-3">
+          {% include "components/subject_icon.html" with subject=card.subject %}
+          <div class="min-w-0 flex-1">
+            <div class="truncate font-extrabold text-ink-heading">{{ card.subject.name }}</div>
+            <div class="sc-text text-[13px] font-semibold">{{ card.sets }} practice set{{ card.sets|pluralize }}{% if card.mocks %} · {{ card.mocks }} mock{{ card.mocks|pluralize }}{% endif %}{% if card.last %} · practised {{ card.last|timesince }} ago{% endif %}</div>
+          </div>
+          <span class="sc-text text-sm font-extrabold">{{ card.percent }}%</span>
+        </div>
+        <div class="sc-track h-2.5 overflow-hidden rounded-full" role="progressbar" aria-valuenow="{{ card.percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ card.subject.name }} topics strong"><div class="sc-fill h-full rounded-full" style="width: {{ card.percent }}%"></div></div>
+        <p class="text-[13px] font-semibold text-slate-600">
+          <strong class="text-ink-heading">{{ card.good }}</strong> of {{ card.n_topics }} topics strong
+          {% if card.not_started %} · {{ card.not_started }} not started{% endif %}
+        </p>
+        <div class="min-h-[40px]">
+          {% if card.next %}
+          <div class="text-xs font-extrabold uppercase tracking-[.06em] text-ink-muted">{% if card.next.mastery.key == "not_started" %}Start with{% elif card.next.mastery.key == "attempted" or card.next.mastery.key == "familiar" %}Needs work{% else %}Keep sharp{% endif %}</div>
+          <div class="truncate text-[15px] font-bold text-ink-heading">{{ card.next.title }}</div>
+          {% endif %}
+        </div>
+        <a href="{% url 'practice:course' card.course.slug %}" class="sc-btn mt-auto h-11 w-full">Open {{ card.subject.name }} practice</a>
+      </li>
       {% endfor %}
     </ul>
-  </details>
-  {% empty %}
+  </section>
+  {% endfor %}
+
+  {% if not has_sets %}
   <div class="rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center">
     <p class="text-lg font-semibold">No practice sets yet</p>
     <p class="mt-1 text-sm text-slate-600">Practice sets for the subjects in your plan will appear here as our content team adds them.</p>
     <a href="{% url 'courses:my_subjects' %}" class="btn-secondary mt-5">My subjects</a>
   </div>
-  {% endfor %}
+  {% endif %}
 </div>
 {% endblock %}

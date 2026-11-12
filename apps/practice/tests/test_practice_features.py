@@ -79,7 +79,9 @@ def test_mastery_levels(entry, key):
 def test_mastery_on_index_start_and_results(client, student, practice_set, offering):
     Enrollment.objects.create(user=student, offering=offering)
     client.force_login(student)
-    assert "Not started" in client.get(reverse("practice:index")).content.decode()
+    course_page = reverse("practice:course", args=[practice_set.topic.module.course.slug])
+    assert "Not started" in client.get(course_page).content.decode()
+    assert "1 not started" in client.get(reverse("practice:index")).content.decode()
 
     attempt = run_set(client, student, practice_set, right=3)  # 60%
     results = client.get(reverse("practice:finish", args=[attempt.pk])).content.decode()

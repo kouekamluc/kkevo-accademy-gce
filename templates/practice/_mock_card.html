@@ -1,0 +1,15 @@
+{% comment %}One mock exam as a card. Context: s (PracticeSet with last_attempt, exam_minutes, question_count), show_course (bool).{% endcomment %}
+{% with course=s.topic.module.course %}
+<li class="sc-card flex flex-col gap-3 rounded-card border p-4" style="{{ course.offering.subject.style_vars }}">
+  <div class="flex items-start gap-3">
+    {% include "components/subject_icon.html" with subject=course.offering.subject %}
+    <div class="min-w-0 flex-1">
+      <div class="font-extrabold leading-snug text-ink-heading">{{ s.title }}</div>
+      <div class="sc-text text-[13px] font-semibold">{% if show_course %}{{ course.offering.subject.name }} · {{ course.offering.level.name }}{% else %}{{ s.question_count }} questions{% endif %}</div>
+    </div>
+    {% if s.last_attempt %}<span class="shrink-0 rounded-full px-3 py-1 text-sm font-extrabold {% if s.last_attempt.score >= 60 %}bg-success-50 text-success-text{% else %}bg-warning-50 text-warning-text{% endif %}">{{ s.last_attempt.score }}%</span>{% endif %}
+  </div>
+  <p class="text-sm font-semibold text-slate-600">{% if show_course %}{{ s.question_count }} questions · {% endif %}{{ s.exam_minutes }} min timed{% if not s.last_attempt %} · not tried yet{% endif %}</p>
+  <a href="{{ s.get_absolute_url }}" class="{% if s.last_attempt %}sc-btn-soft{% else %}sc-btn{% endif %} mt-auto h-11 w-full">{% if s.last_attempt %}Try again{% else %}Start{% endif %}</a>
+</li>
+{% endwith %}

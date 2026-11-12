@@ -6,6 +6,8 @@ app_name = "practice"
 
 urlpatterns = [
     path("", views.index, name="index"),
+    path("mocks/", views.mocks, name="mocks"),
+    path("course/<slug:slug>/", views.course_practice, name="course"),
     path("sets/<int:pk>/", views.start_page, name="set"),
     path("sets/<int:pk>/start/", views.start, name="start"),
     path("attempts/<int:attempt>/q/<int:number>/", views.question, name="question"),
