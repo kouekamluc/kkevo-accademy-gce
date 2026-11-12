@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<g font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">
+<text x="280" y="24" text-anchor="middle" font-weight="700">Who pays a specific tax?</text>
+<line x1="80.0" y1="310.0" x2="80.0" y2="56.0" stroke="#102A43" stroke-width="2"/><polygon points="80.0,50.0 75.5,60.0 84.5,60.0" fill="#102A43"/>
+<line x1="80.0" y1="310.0" x2="514.0" y2="310.0" stroke="#102A43" stroke-width="2"/><polygon points="520.0,310.0 510.0,305.5 510.0,314.5" fill="#102A43"/>
+<text x="86.0" y="52.0" text-anchor="start" fill="#102A43" font-size="14" font-weight="600">Price</text>
+<text x="520.0" y="332.0" text-anchor="end" fill="#102A43" font-size="14" font-weight="600">Quantity</text>
+<text x="70.0" y="328.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="400">0</text>
+<path d="M100.0,82.0 L440.0,286.0" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="446.0" y="291.0" text-anchor="start" fill="#2563EB" font-size="14" font-weight="700">D</text>
+<path d="M80.0,270.0 L480.0,110.0" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<text x="484.0" y="115.0" text-anchor="start" fill="#102A43" font-size="14" font-weight="700">S1</text>
+<path d="M80.0,210.0 L440.0,66.0" fill="none" stroke="#B45309" stroke-width="2.5"/>
+<text x="446.0" y="71.0" text-anchor="start" fill="#B45309" font-size="13" font-weight="700">S2 = S1 + tax</text>
+<rect x="80" y="154.0" width="140" height="36.0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="80" y="190.0" width="140" height="24.0" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="150.0" y="177.0" text-anchor="middle" fill="#2563EB" font-size="13" font-weight="600">Consumers' share</text>
+<text x="150.0" y="207.0" text-anchor="middle" fill="#047857" font-size="13" font-weight="600">Producers' share</text>
+<circle cx="280.0" cy="190.0" r="4.5" fill="#102A43"/>
+<circle cx="220.0" cy="154.0" r="4.5" fill="#102A43"/>
+<line x1="220.0" y1="154.0" x2="220.0" y2="310.0" stroke="#102A43" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="280.0" y1="190.0" x2="280.0" y2="310.0" stroke="#102A43" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="280.0" y1="190.0" x2="220.0" y2="190.0" stroke="#102A43" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="220.0" y="330.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="600">Q1</text>
+<text x="280.0" y="330.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="600">Q0</text>
+<text x="72.0" y="159.0" text-anchor="end" fill="#102A43" font-size="14" font-weight="600">P1</text>
+<text x="72.0" y="195.0" text-anchor="end" fill="#102A43" font-size="14" font-weight="600">P0</text>
+<text x="72.0" y="219.0" text-anchor="end" fill="#102A43" font-size="14" font-weight="600">P2</text>
+<text x="280.0" y="346.0" text-anchor="middle" fill="#102A43" font-size="13" font-weight="400">Tax per unit = P1 &#8722; P2</text>
+</g></svg>

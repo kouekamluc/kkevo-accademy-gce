@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Lorenz curve with the line of perfect equality">
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#102A43"/></marker><marker id="ahb" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#2563EB"/></marker></defs>
+<rect width="560" height="360" fill="#fff"/>
+<rect x="110.0" y="40.0" width="270.0" height="270.0" rx="0" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<polyline points="110.0,310.0 164.0,296.5 218.0,269.5 272.0,229.0 326.0,161.5 380.0,40.0" fill="none" stroke="none" stroke-width="0" stroke-linejoin="round"/>
+<polygon points="110.0,310.0 380.0,40.0 380.0,40.0 326.0,161.5 272.0,229.0 218.0,269.5 164.0,296.5 110.0,310.0" fill="#EFF6FF" stroke="none" stroke-width="0.1" stroke-linejoin="round"/>
+<line x1="110.0" y1="310.0" x2="380.0" y2="40.0" stroke="#102A43" stroke-width="2.5"/>
+<polyline points="110.0,310.0 164.0,296.5 218.0,269.5 272.0,229.0 326.0,161.5 380.0,40.0" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="164.0" cy="296.5" r="4.5" fill="#2563EB"/>
+<circle cx="218.0" cy="269.5" r="4.5" fill="#2563EB"/>
+<circle cx="272.0" cy="229.0" r="4.5" fill="#2563EB"/>
+<circle cx="326.0" cy="161.5" r="4.5" fill="#2563EB"/>
+<text x="110.0" y="328.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">0</text>
+<text x="102.0" y="315.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">0</text>
+<text x="164.0" y="328.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">20</text>
+<text x="102.0" y="261.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">20</text>
+<text x="218.0" y="328.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">40</text>
+<text x="102.0" y="207.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">40</text>
+<text x="272.0" y="328.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">60</text>
+<text x="102.0" y="153.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">60</text>
+<text x="326.0" y="328.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">80</text>
+<text x="102.0" y="99.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">80</text>
+<text x="380.0" y="328.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">100</text>
+<text x="102.0" y="45.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">100</text>
+<text x="245.0" y="348.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Cumulative % of households</text>
+<text transform="rotate(-90 64 175.0)" x="64.0" y="175.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Cumulative % of income</text>
+<text x="214.0" y="172.4" font-size="16" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">A</text>
+<text x="320.6" y="239.8" font-size="16" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">B</text>
+<text x="183.0" y="181.4" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif"></text>
+<text x="388.0" y="104.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Line of</text>
+<text x="388.0" y="120.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">equality</text>
+<text x="388.0" y="200.0" font-size="13" fill="#2563EB" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="700">Lorenz</text>
+<text x="388.0" y="216.0" font-size="13" fill="#2563EB" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="700">curve</text>
+</svg>

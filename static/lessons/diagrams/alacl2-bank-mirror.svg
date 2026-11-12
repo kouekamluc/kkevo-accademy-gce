@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 330" font-family="Inter, Arial, sans-serif"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs><rect x="0" y="0" width="560" height="330" fill="#FFFFFF"/><text x="280" y="26" font-size="16" text-anchor="middle" font-weight="bold" fill="#102A43">One operation, two records, opposite sides</text>
+<text x="140" y="62" font-size="14" text-anchor="middle" font-weight="bold" fill="#2563EB">521 Bank (our books)</text>
+<line x1="20" y1="74" x2="260" y2="74" stroke="#2563EB" stroke-width="3"/>
+<line x1="140" y1="74" x2="140" y2="250" stroke="#2563EB" stroke-width="3"/>
+<text x="80" y="96" font-size="13" text-anchor="middle" font-weight="normal" fill="#2563EB">Debit</text>
+<text x="200" y="96" font-size="13" text-anchor="middle" font-weight="normal" fill="#2563EB">Credit</text>
+<text x="80" y="130" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Deposits</text>
+<text x="80" y="156" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Transfers in</text>
+<text x="80" y="208" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Balance:</text>
+<text x="80" y="234" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">asset</text>
+<text x="200" y="130" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Cheques</text>
+<text x="200" y="156" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">issued</text>
+<text x="200" y="182" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Charges</text>
+<text x="420" y="62" font-size="14" text-anchor="middle" font-weight="bold" fill="#B45309">Our account at the bank</text>
+<line x1="300" y1="74" x2="540" y2="74" stroke="#B45309" stroke-width="3"/>
+<line x1="420" y1="74" x2="420" y2="250" stroke="#B45309" stroke-width="3"/>
+<text x="360" y="96" font-size="13" text-anchor="middle" font-weight="normal" fill="#B45309">Debit</text>
+<text x="480" y="96" font-size="13" text-anchor="middle" font-weight="normal" fill="#B45309">Credit</text>
+<text x="360" y="130" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Cheques</text>
+<text x="360" y="156" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">paid</text>
+<text x="360" y="182" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Charges</text>
+<text x="480" y="130" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Deposits</text>
+<text x="480" y="156" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Transfers in</text>
+<text x="480" y="208" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Balance:</text>
+<text x="480" y="234" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">bank owes us</text>
+<rect x="40" y="268" width="480" height="50" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280" y="298" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">Debit balance in 521 = credit balance on the statement</text></svg>

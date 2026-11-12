@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<text x="95" y="26" font-size="15" fill="#102A43" text-anchor="middle" font-weight="bold">Class 1B (parallel)</text>
+<polyline points="160.8,236.1 158.4,230.4 155.6,225 152.3,219.8 148.6,215 144.5,210.5 140,206.4 135.2,202.7 130,199.4 124.6,196.6 118.9,194.2 113.1,192.4 107.2,191.1 101.1,190.3 95,190 88.9,190.3 82.8,191.1 76.9,192.4 71.1,194.2 65.4,196.6 60,199.4 54.8,202.7 50,206.4 45.5,210.5 41.4,215 37.7,219.8 34.4,225 31.6,230.4 29.2,236.1" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="192.7,224.4 189.3,216 185.1,208 180.2,200.3 174.7,193.2 168.5,186.5 161.8,180.3 154.7,174.8 147,169.9 139,165.7 130.6,162.3 121.9,159.5 113.1,157.6 104.1,156.4 95,156 85.9,156.4 76.9,157.6 68.1,159.5 59.4,162.3 51,165.7 43,169.9 35.3,174.8 28.2,180.3 21.5,186.5 15.3,193.2 9.8,200.3 4.9,208 0.7,216 -2.7,224.4" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<line x1="155.6" y1="225" x2="185.1" y2="208" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="140" y1="206.4" x2="161.8" y2="180.3" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="118.9" y1="194.2" x2="130.6" y2="162.3" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="95" y1="190" x2="95" y2="156" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="71.1" y1="194.2" x2="59.4" y2="162.3" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="50" y1="206.4" x2="28.2" y2="180.3" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="34.4" y1="225" x2="4.9" y2="208" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="95" y1="44" x2="95" y2="236" stroke="#9FB3C8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 4"/>
+<text x="95" y="300" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">isogons converge</text>
+<text x="95" y="318" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">to the core; t constant</text>
+<text x="280" y="26" font-size="15" fill="#102A43" text-anchor="middle" font-weight="bold">Class 2 (similar)</text>
+<polyline points="202,218 208,207.2 214,197.3 220,188.2 226,180 232,172.6 238,166.2 244,160.6 250,155.8 256,151.9 262,148.9 268,146.7 274,145.4 280,145 286,145.4 292,146.7 298,148.9 304,151.9 310,155.8 316,160.6 322,166.2 328,172.6 334,180 340,188.2 346,197.3 352,207.2 358,218" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="202,184 205,178.5 208,173.2 211,168.1 214,163.3 217,158.6 220,154.2 223,150 226,146 229,142.2 232,138.6 235,135.3 238,132.2 241,129.3 244,126.6 247,124.1 250,121.8 253,119.7 256,117.9 259,116.3 262,114.9 265,113.7 268,112.7 271,112 274,111.4 277,111.1 280,111 283,111.1 286,111.4 289,112 292,112.7 295,113.7 298,114.9 301,116.3 304,117.9 307,119.7 310,121.8 313,124.1 316,126.6 319,129.3 322,132.2 325,135.3 328,138.6 331,142.2 334,146 337,150 340,154.2 343,158.6 346,163.3 349,168.1 352,173.2 355,178.5 358,184" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<line x1="220" y1="188.2" x2="220" y2="154.2" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="244" y1="160.6" x2="244" y2="126.6" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="268" y1="146.7" x2="268" y2="112.7" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="292" y1="146.7" x2="292" y2="112.7" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="316" y1="160.6" x2="316" y2="126.6" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="340" y1="188.2" x2="340" y2="154.2" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="280" y1="44" x2="280" y2="236" stroke="#9FB3C8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 4"/>
+<text x="280" y="300" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">isogons parallel to</text>
+<text x="280" y="318" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">axial surface; T constant</text>
+<text x="465" y="26" font-size="15" fill="#102A43" text-anchor="middle" font-weight="bold">Class 3</text>
+<polyline points="415,175 421,168.2 427,162.3 433,157.3 439,153.1 445,149.8 451,147.4 457,145.8 463,145 469,145.2 475,146.2 481,148.1 487,150.8 493,154.4 499,158.9 505,164.2 511,170.4" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="415,171 418,164 421,157.5 424,151.3 427,145.7 430,140.4 433,135.6 436,131.2 439,127.2 442,123.7 445,120.6 448,117.9 451,115.7 454,113.9 457,112.5 460,111.6 463,111.1 466,111 469,111.4 472,112.2 475,113.4 478,115.1 481,117.1 484,119.7 487,122.6 490,126 493,129.8 496,134.1 499,138.7 502,143.9 505,149.4 508,155.4 511,161.8 514,168.6" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<line x1="405" y1="188.2" x2="435" y2="132.6" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="429" y1="160.6" x2="447" y2="118.8" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="453" y1="146.7" x2="459" y2="111.9" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="477" y1="146.7" x2="471" y2="111.9" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="501" y1="160.6" x2="483" y2="118.8" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="525" y1="188.2" x2="495" y2="132.6" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 3"/>
+<line x1="465" y1="44" x2="465" y2="236" stroke="#9FB3C8" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 4"/>
+<text x="465" y="300" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">isogons diverge</text>
+<text x="465" y="318" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">towards the core</text>
+<text x="280" y="350" font-size="13" fill="#B45309" text-anchor="middle" font-weight="normal">orange dashed lines = dip isogons (join points of equal dip)</text>
+</svg>

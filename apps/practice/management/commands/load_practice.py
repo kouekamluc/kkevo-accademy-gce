@@ -19,6 +19,7 @@ from django.db import transaction
 from django.templatetags.static import static
 
 from apps.academics.management.commands.load_gce_curriculum import COURSE_TAG
+from apps.core.db import refresh_planner_statistics
 from apps.courses.management.commands.load_lessons import Command as LessonsCommand
 from apps.courses.models import Course, Lesson
 from apps.practice import practice_content
@@ -92,6 +93,8 @@ class Command(BaseCommand):
                         counts["pruned"] += 1
         summary = ", ".join(f"{n} {k}" for k, n in counts.items() if n or k == "created")
         self.stdout.write(self.style.SUCCESS(("Dry run: " if options["dry_run"] else "Practice sets: ") + summary + "."))
+        if not options["dry_run"]:
+            refresh_planner_statistics()
         if options["dry_run"]:
             transaction.set_rollback(True)
             self.stdout.write(self.style.WARNING("Dry run: nothing was saved."))

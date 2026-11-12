@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Production possibility frontiers of Cameroon and Northland">
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#102A43"/></marker><marker id="ahb" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#2563EB"/></marker></defs>
+<rect width="560" height="360" fill="#fff"/>
+<line x1="80.0" y1="300.0" x2="530.0" y2="300.0" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="80.0" y1="300.0" x2="80.0" y2="24.0" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="530.0" y="322.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif"></text>
+<text x="86.0" y="28.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Cloth (thousand m)</text>
+<text x="74.0" y="316.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">0</text>
+<text x="530.0" y="342.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">Cocoa (tonnes)</text>
+<line x1="148.0" y1="300.0" x2="148.0" y2="305.0" stroke="#102A43" stroke-width="2"/>
+<text x="148.0" y="318.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">10</text>
+<line x1="216.0" y1="300.0" x2="216.0" y2="305.0" stroke="#102A43" stroke-width="2"/>
+<text x="216.0" y="318.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">20</text>
+<line x1="284.0" y1="300.0" x2="284.0" y2="305.0" stroke="#102A43" stroke-width="2"/>
+<text x="284.0" y="318.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">30</text>
+<line x1="352.0" y1="300.0" x2="352.0" y2="305.0" stroke="#102A43" stroke-width="2"/>
+<text x="352.0" y="318.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">40</text>
+<line x1="420.0" y1="300.0" x2="420.0" y2="305.0" stroke="#102A43" stroke-width="2"/>
+<text x="420.0" y="318.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">50</text>
+<line x1="488.0" y1="300.0" x2="488.0" y2="305.0" stroke="#102A43" stroke-width="2"/>
+<text x="488.0" y="318.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">60</text>
+<line x1="75.0" y1="247.0" x2="80.0" y2="247.0" stroke="#102A43" stroke-width="2"/>
+<text x="71.0" y="252.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">10</text>
+<line x1="75.0" y1="194.0" x2="80.0" y2="194.0" stroke="#102A43" stroke-width="2"/>
+<text x="71.0" y="199.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">20</text>
+<line x1="75.0" y1="141.0" x2="80.0" y2="141.0" stroke="#102A43" stroke-width="2"/>
+<text x="71.0" y="146.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">30</text>
+<line x1="75.0" y1="88.0" x2="80.0" y2="88.0" stroke="#102A43" stroke-width="2"/>
+<text x="71.0" y="93.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">40</text>
+<line x1="75.0" y1="35.0" x2="80.0" y2="35.0" stroke="#102A43" stroke-width="2"/>
+<text x="71.0" y="40.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">50</text>
+<polyline points="80.0,61.5 488.0,300.0" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="80.0,141.0 216.0,300.0" fill="none" stroke="#B45309" stroke-width="3" stroke-linejoin="round"/>
+<text x="296.0" y="172.8" font-size="14" fill="#2563EB" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="700">Cameroon</text>
+<text x="158.0" y="218.5" font-size="14" fill="#B45309" text-anchor="start" font-family="Inter, Arial, sans-serif" font-weight="700">Northland</text>
+</svg>

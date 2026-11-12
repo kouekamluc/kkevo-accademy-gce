@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="70" font-size="15" fill="#102A43" text-anchor="middle" font-weight="bold">Five limestones in thin section (schematic)</text>
+<text x="280" y="98" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">the curved lines in T are layers built by organisms</text>
+<rect x="18" y="130" width="92" height="160" rx="0" fill="#F1F5F9" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="29.9" cy="231.7" r="9" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="30.2" cy="278.3" r="9" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="50.7" cy="140.9" r="9" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="64" y="314" font-size="15" fill="#047857" text-anchor="middle" font-weight="bold">P</text>
+<rect x="126" y="130" width="92" height="160" rx="0" fill="#F1F5F9" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="162.5" cy="186" r="9" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="204.7" cy="277.3" r="9" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="136.8" cy="279.5" r="9" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="161.2" cy="140.7" r="9" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="139.9" cy="140.8" r="9" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="185.2" cy="277.5" r="9" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="181.4" cy="187" r="9" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="162.4" cy="277.1" r="9" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="172" y="314" font-size="15" fill="#047857" text-anchor="middle" font-weight="bold">Q</text>
+<rect x="234" y="130" width="92" height="160" rx="0" fill="#F1F5F9" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="252" cy="148" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="252" cy="179" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="252" cy="210" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="252" cy="241" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="252" cy="272" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="280" cy="148" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="280" cy="179" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="280" cy="210" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="280" cy="241" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="280" cy="272" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="308" cy="148" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="308" cy="179" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="308" cy="210" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="308" cy="241" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="308" cy="272" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="314" font-size="15" fill="#047857" text-anchor="middle" font-weight="bold">R</text>
+<rect x="342" y="130" width="92" height="160" rx="0" fill="#FFFFFF" stroke="#102A43" stroke-width="1.5"/>
+<circle cx="360" cy="148" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="360" cy="179" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="360" cy="210" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="360" cy="241" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="360" cy="272" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="388" cy="148" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="388" cy="179" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="388" cy="210" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="388" cy="241" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="388" cy="272" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="416" cy="148" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="416" cy="179" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="416" cy="210" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="416" cy="241" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="416" cy="272" r="15" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="388" y="314" font-size="15" fill="#047857" text-anchor="middle" font-weight="bold">S</text>
+<rect x="450" y="130" width="92" height="160" rx="0" fill="#FFFFFF" stroke="#102A43" stroke-width="1.5"/>
+<path d="M456,280 C480,250 512,250 536,280" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M456,242 C480,212 512,212 536,242" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M456,204 C480,174 512,174 536,204" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M456,166 C480,136 512,136 536,166" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linejoin="round"/>
+<text x="496" y="314" font-size="15" fill="#047857" text-anchor="middle" font-weight="bold">T</text>
+<text x="280" y="346" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">grey fill = carbonate mud (micrite);  circles = grains (allochems)</text>
+</svg>

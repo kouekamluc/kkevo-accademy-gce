@@ -1,0 +1,26 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<text x="280" y="24" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">The full-cost cascade</text>
+<rect x="20" y="38" width="250" height="42" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="145" y="65" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Purchase cost</text>
+<text x="290" y="64" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#B45309">price + supply centre</text>
+<line x1="145" y1="80" x2="145" y2="93" stroke="#2563EB" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="20" y="94" width="250" height="42" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="145" y="121" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Material stock</text>
+<text x="290" y="120" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#B45309">issues by CUMP or FIFO</text>
+<line x1="145" y1="136" x2="145" y2="149" stroke="#2563EB" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="20" y="150" width="250" height="42" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="145" y="177" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Production cost</text>
+<text x="290" y="176" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#B45309">materials + labour + centres</text>
+<line x1="145" y1="192" x2="145" y2="205" stroke="#2563EB" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="20" y="206" width="250" height="42" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="145" y="233" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Finished goods stock</text>
+<text x="290" y="232" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#B45309">goods sold by CUMP or FIFO</text>
+<line x1="145" y1="248" x2="145" y2="261" stroke="#2563EB" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="20" y="262" width="250" height="42" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="145" y="289" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Cost price</text>
+<text x="290" y="288" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#B45309">cost of goods sold + distribution</text>
+<line x1="145" y1="304" x2="145" y2="317" stroke="#2563EB" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="20" y="318" width="520" height="36" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280" y="342" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857">Analytical result = sales - cost price</text>
+</svg>

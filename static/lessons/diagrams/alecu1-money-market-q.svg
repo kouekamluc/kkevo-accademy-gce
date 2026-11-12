@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<g font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">
+<text x="280" y="24" text-anchor="middle" font-weight="700">The money market</text>
+<line x1="80.0" y1="310.0" x2="80.0" y2="56.0" stroke="#102A43" stroke-width="2"/><polygon points="80.0,50.0 75.5,60.0 84.5,60.0" fill="#102A43"/>
+<line x1="80.0" y1="310.0" x2="514.0" y2="310.0" stroke="#102A43" stroke-width="2"/><polygon points="520.0,310.0 510.0,305.5 510.0,314.5" fill="#102A43"/>
+<text x="86.0" y="52.0" text-anchor="start" fill="#102A43" font-size="14" font-weight="600">Interest rate (r)</text>
+<text x="520.0" y="332.0" text-anchor="end" fill="#102A43" font-size="14" font-weight="600">Quantity of money</text>
+<text x="70.0" y="328.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="400">0</text>
+<path d="M110.0,90.0 L115.0,103.3 L120.0,115.0 L125.0,125.3 L130.0,134.4 L135.0,142.6 L140.0,150.0 L145.0,156.7 L150.0,162.7 L155.0,168.3 L160.0,173.3 L165.0,178.0 L170.0,182.3 L175.0,186.3 L180.0,190.0 L185.0,193.4 L190.0,196.7 L195.0,199.7 L200.0,202.5 L205.0,205.2 L210.0,207.6 L215.0,210.0 L220.0,212.2 L225.0,214.3 L230.0,216.3 L235.0,218.2 L240.0,220.0 L245.0,221.7 L250.0,223.3 L255.0,224.9 L260.0,226.4 L265.0,227.8 L270.0,229.1 L275.0,230.4 L280.0,231.7 L285.0,232.9 L290.0,234.0 L295.0,235.1 L300.0,236.2 L305.0,237.2 L310.0,238.1 L315.0,239.1 L320.0,240.0 L325.0,240.9 L330.0,241.7 L335.0,242.5 L340.0,243.3 L345.0,244.1 L350.0,244.8 L355.0,245.6 L360.0,246.2 L365.0,246.9 L370.0,247.6 L375.0,248.2 L380.0,248.8 L385.0,249.4 L390.0,250.0 L395.0,250.6 L400.0,251.1 L405.0,251.6 L410.0,252.2 L415.0,252.7 L420.0,253.2 L425.0,253.6 L430.0,254.1 L435.0,254.6 L440.0,255.0 L445.0,255.4 L450.0,255.9 L455.0,256.3 L460.0,256.7 L465.0,257.1 L470.0,257.4 L475.0,257.8 L480.0,258.2 L485.0,258.5 L490.0,258.9 L495.0,259.2 L500.0,259.6" fill="none" stroke="#047857" stroke-width="3"/>
+<text x="345.0" y="215.0" text-anchor="start" fill="#047857" font-size="13" font-weight="600">L (liquidity preference)</text>
+<line x1="240.0" y1="310.0" x2="240.0" y2="70.0" stroke="#2563EB" stroke-width="2.5"/>
+<text x="240.0" y="64.0" text-anchor="middle" fill="#2563EB" font-size="14" font-weight="700">Ms</text>
+<circle cx="240.0" cy="220.0" r="4.5" fill="#102A43"/>
+<line x1="80.0" y1="220.0" x2="240.0" y2="220.0" stroke="#102A43" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="72.0" y="225.0" text-anchor="end" fill="#102A43" font-size="14" font-weight="600">r1</text>
+<text x="280.0" y="346.0" text-anchor="middle" fill="#102A43" font-size="13" font-weight="400">Ms = money supply set by the central bank</text>
+</g></svg>

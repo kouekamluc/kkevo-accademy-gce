@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs><rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/><rect x="150" y="14" width="260" height="50" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="35" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">ZA Net cash at 1 January</text>
+<text x="280" y="52" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">cash-assets - cash-liabilities</text>
+<rect x="14" y="112" width="170" height="120" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="99" y="143" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">ZB Operating</text>
+<text x="99" y="160" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">CAFG</text>
+<text x="99" y="177" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">- more inventories</text>
+<text x="99" y="193" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">- more receivables</text>
+<text x="99" y="210" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">+ more current liab.</text>
+<rect x="195" y="112" width="170" height="120" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="151" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">ZC Investing</text>
+<text x="280" y="168" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">- purchases of</text>
+<text x="280" y="185" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">fixed assets</text>
+<text x="280" y="202" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">+ disposal proceeds</text>
+<rect x="376" y="112" width="170" height="120" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="461" y="143" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">ZF Financing</text>
+<text x="461" y="160" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">ZD: + capital,</text>
+<text x="461" y="177" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">- dividends</text>
+<text x="461" y="193" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">ZE: + new loans,</text>
+<text x="461" y="210" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">- repayments</text>
+<line x1="280" y1="64" x2="99" y2="110" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="99" y1="232" x2="280" y2="286" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="280" y1="64" x2="280" y2="110" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="280" y1="232" x2="280" y2="286" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="280" y1="64" x2="461" y2="110" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="461" y1="232" x2="280" y2="286" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="16" y="280" font-size="13" text-anchor="start" font-weight="bold" fill="#B45309">ZG = change in net cash</text>
+<rect x="150" y="288" width="260" height="52" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280" y="310" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">ZH Net cash at 31 December</text>
+<text x="280" y="327" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">must equal the balance sheet</text></svg>

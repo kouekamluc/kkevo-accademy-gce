@@ -1,0 +1,29 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="26" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Functional balance sheet (gross values)</text>
+<text x="145" y="50" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">USES</text>
+<text x="415" y="50" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">RESOURCES</text>
+<rect x="40" y="60" width="210" height="120" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="145" y="115" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Stable uses</text>
+<text x="145" y="135" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">fixed assets (gross)</text>
+<rect x="40" y="180" width="210" height="100" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="145" y="225" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Current assets</text>
+<text x="145" y="245" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">excluding cash</text>
+<rect x="40" y="280" width="210" height="30" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<text x="145" y="300" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">Cash assets</text>
+<rect x="310" y="60" width="210" height="150" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="415" y="115" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Stable resources</text>
+<text x="415" y="135" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">equity + depreciation</text>
+<text x="415" y="153" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">+ provisions + long-term debt</text>
+<rect x="310" y="210" width="210" height="50" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="415" y="232" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Current liabilities</text>
+<text x="415" y="250" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">excluding cash</text>
+<rect x="310" y="260" width="210" height="50" fill="#ffffff" stroke="#102A43" stroke-width="2"/>
+<text x="415" y="280" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">Cash liabilities</text>
+<text x="415" y="298" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">overdraft, discounted bills</text>
+<line x1="262" y1="180" x2="298" y2="180" stroke="#2563EB" stroke-width="2"/>
+<line x1="262" y1="210" x2="298" y2="210" stroke="#2563EB" stroke-width="2"/>
+<line x1="280" y1="180" x2="280" y2="210" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="172" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563EB">FRNG</text>
+<text x="280" y="332" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">BFR = current assets - current liabilities (both excluding cash)</text>
+<text x="280" y="352" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857">Net cash TN = FRNG - BFR = cash assets - cash liabilities</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<g font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">
+<text x="280" y="24" text-anchor="middle" font-weight="700">The consumption function</text>
+<line x1="80.0" y1="300.0" x2="80.0" y2="48.0" stroke="#102A43" stroke-width="2"/><polygon points="80.0,42.0 75.5,52.0 84.5,52.0" fill="#102A43"/>
+<line x1="80.0" y1="300.0" x2="514.0" y2="300.0" stroke="#102A43" stroke-width="2"/><polygon points="520.0,300.0 510.0,295.5 510.0,304.5" fill="#102A43"/>
+<text x="86.0" y="44.0" text-anchor="start" fill="#102A43" font-size="14" font-weight="600">Consumption (C)</text>
+<text x="520.0" y="322.0" text-anchor="end" fill="#102A43" font-size="14" font-weight="600">Disposable income (Yd)</text>
+<text x="70.0" y="318.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="400">0</text>
+<path d="M80.0,300.0 L317.6,62.4" fill="none" stroke="#102A43" stroke-width="2"/>
+<text x="323.6" y="66.4" text-anchor="start" fill="#102A43" font-size="13" font-weight="400">C = Y (45&#176; line)</text>
+<path d="M80.0,256.0 L366.0,84.4" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="372.0" y="89.4" text-anchor="start" fill="#2563EB" font-size="13" font-weight="600">C = a + bYd</text>
+<circle cx="190.0" cy="190.0" r="4.5" fill="#047857"/>
+<line x1="190.0" y1="190.0" x2="190.0" y2="300.0" stroke="#102A43" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="190.0" y="320.0" text-anchor="middle" fill="#047857" font-size="14" font-weight="600">Y1</text>
+<text x="202.0" y="214.0" text-anchor="start" fill="#047857" font-size="14" font-weight="600">B (break-even)</text>
+<text x="74.0" y="261.0" text-anchor="end" fill="#102A43" font-size="14" font-weight="600">a</text>
+<line x1="146.0" y1="234.0" x2="146.0" y2="216.4" stroke="#B45309" stroke-width="3"/>
+<text x="200.0" y="272.0" text-anchor="start" fill="#B45309" font-size="14" font-weight="600">Dissaving</text>
+<line x1="204.0" y1="258.0" x2="154.3" y2="232.0" stroke="#B45309" stroke-width="2"/><polygon points="149.0,229.2 155.8,237.8 159.9,229.9" fill="#B45309"/>
+<line x1="278.0" y1="102.0" x2="278.0" y2="137.2" stroke="#047857" stroke-width="3"/>
+<text x="286.0" y="157.2" text-anchor="start" fill="#047857" font-size="14" font-weight="600">Saving</text>
+<text x="280.0" y="346.0" text-anchor="middle" fill="#102A43" font-size="13" font-weight="400">Slope of C = MPC = b; below Y1 people dissave, above Y1 they save</text>
+</g></svg>

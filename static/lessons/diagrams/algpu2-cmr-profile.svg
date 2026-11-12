@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img"><title>Schematic south to north relief profile of Cameroon with the main rock types</title><rect width="560" height="360" fill="#fff"/>
+<defs><pattern id="bs" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#FEF3C7"/><path d="M2 10L6 4L10 10" fill="none" stroke="#B45309" stroke-width="1"/></pattern><pattern id="sd" width="12" height="8" patternUnits="userSpaceOnUse"><rect width="12" height="8" fill="#EFF6FF"/><circle cx="3" cy="3" r="1.2" fill="#2563EB"/><circle cx="9" cy="6" r="1.2" fill="#2563EB"/></pattern></defs>
+<rect x="20" y="246" width="40" height="54" fill="#BFDBFE"/>
+<path d="M60,300 L60,246 L100,244 L125,200 L140,188 L175,182 L200,176 L215,182 L250,180 L268,140 L285,116 L320,112 L350,116 L368,180 L380,232 L430,236 L452,222 L472,230 L500,232 L535,234 L535,300 Z" fill="url(#bs)"/>
+<path d="M60,246 L100,244 L118,212 L118,300 L60,300 Z" fill="url(#sd)" stroke="#2563EB" stroke-width="1.5"/>
+<path d="M376,222 L380,232 L430,236 L440,232 L430,290 L392,290 Z" fill="url(#sd)" stroke="#2563EB" stroke-width="1.5"/>
+<path d="M472,230 L500,232 L535,234 L535,300 L470,300 L462,262 Z" fill="url(#sd)" stroke="#2563EB" stroke-width="1.5"/>
+<path d="M285,116 L320,112 L350,116 L349,126 L320,122 L287,127 Z" fill="#102A43"/>
+<path d="M20,246 L60,246 L60,246 L100,244 L125,200 L140,188 L175,182 L200,176 L215,182 L250,180 L268,140 L285,116 L320,112 L350,116 L368,180 L380,232 L430,236 L452,222 L472,230 L500,232 L535,234" fill="none" stroke="#102A43" stroke-width="2.4"/>
+<line x1="20" y1="300" x2="535" y2="300" stroke="#102A43" stroke-width="2"/>
+<text x="80" y="52" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700">Coastal</text>
+<text x="80" y="68" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700">plain</text>
+<line x1="80" y1="74" x2="80" y2="220" stroke="#102A43" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="170" y="52" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700">South Cameroon</text>
+<text x="170" y="68" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700">plateau</text>
+<line x1="170" y1="74" x2="170" y2="158" stroke="#102A43" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="318" y="52" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700">Adamawa</text>
+<text x="318" y="68" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700">plateau</text>
+<line x1="318" y1="74" x2="318" y2="88" stroke="#102A43" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="405" y="52" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700">Benue</text>
+<text x="405" y="68" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700">lowland</text>
+<line x1="405" y1="74" x2="405" y2="210" stroke="#102A43" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="503" y="52" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700">Chad</text>
+<text x="503" y="68" font-size="13" text-anchor="middle" fill="#102A43" font-weight="700">plain</text>
+<line x1="503" y1="74" x2="503" y2="208" stroke="#102A43" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="42" y="238" font-size="13" text-anchor="middle" fill="#2563EB" stroke="#fff" stroke-width="3" paint-order="stroke">Sea</text>
+<text x="95" y="236" font-size="13" text-anchor="middle" fill="#2563EB" stroke="#fff" stroke-width="3" paint-order="stroke">Douala</text>
+<text x="208" y="170" font-size="13" text-anchor="middle" fill="#2563EB" stroke="#fff" stroke-width="3" paint-order="stroke">Yaound&#233;</text>
+<text x="300" y="104" font-size="13" text-anchor="middle" fill="#2563EB" stroke="#fff" stroke-width="3" paint-order="stroke">Ngaound&#233;r&#233;</text>
+<text x="418" y="226" font-size="13" text-anchor="middle" fill="#2563EB" stroke="#fff" stroke-width="3" paint-order="stroke">Garoua</text>
+<text x="520" y="226" font-size="13" text-anchor="middle" fill="#2563EB" stroke="#fff" stroke-width="3" paint-order="stroke">L. Chad</text>
+<text x="262" y="140" font-size="13" text-anchor="end" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">escarpment</text>
+<text x="372" y="165" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">escarpment</text>
+<rect x="20" y="314" width="22" height="14" fill="url(#bs)" stroke="#102A43"/><text x="48" y="326" font-size="13" text-anchor="start" fill="#102A43">Precambrian basement (granite, gneiss)</text>
+<rect x="20" y="336" width="22" height="14" fill="url(#sd)" stroke="#102A43"/><text x="48" y="348" font-size="13" text-anchor="start" fill="#102A43">Sedimentary basins</text>
+<rect x="300" y="336" width="22" height="14" fill="#102A43"/><text x="328" y="348" font-size="13" text-anchor="start" fill="#102A43">Volcanic rocks (basalt)</text>
+<text x="552" y="326" font-size="13" text-anchor="end" fill="#102A43" font-style="italic">Not to scale</text>
+<text x="30" y="22" font-size="13" text-anchor="start" fill="#B45309" font-weight="700">South (Atlantic coast)</text>
+<text x="535" y="22" font-size="13" text-anchor="end" fill="#B45309" font-weight="700">North (Lake Chad)</text>
+</svg>

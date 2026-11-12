@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<rect x="40" y="40" width="480" height="260" rx="0" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="40,120 261.2,120 290.1,170 40,170" fill="#ECFDF5" stroke="#102A43" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="301.6,190 520,190 520,240 330.5,240" fill="#ECFDF5" stroke="#102A43" stroke-width="2" stroke-linejoin="round"/>
+<line x1="215" y1="40" x2="365.1" y2="300" stroke="#B45309" stroke-width="4" stroke-linecap="round"/>
+<line x1="341.6" y1="120" x2="341.6" y2="190" stroke="#047857" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ahg)"/>
+<line x1="261.2" y1="120" x2="345.6" y2="120" stroke="#047857" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="301.6" y1="190" x2="345.6" y2="190" stroke="#047857" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="261.2" y1="106" x2="301.6" y2="106" stroke="#047857" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ahg)"/>
+<line x1="301.6" y1="106" x2="261.2" y2="106" stroke="#047857" stroke-width="2.5" stroke-linecap="round" marker-end="url(#ahg)"/>
+<line x1="261.2" y1="102" x2="261.2" y2="124" stroke="#047857" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+<line x1="301.6" y1="102" x2="301.6" y2="194" stroke="#047857" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 3"/>
+<text x="70" y="70" font-size="16" fill="#102A43" text-anchor="start" font-weight="bold">P</text>
+<text x="440" y="70" font-size="16" fill="#102A43" text-anchor="middle" font-weight="bold">Q</text>
+<text x="373.1" y="294" font-size="16" fill="#B45309" text-anchor="start" font-weight="bold">R</text>
+<text x="353.6" y="160" font-size="16" fill="#047857" text-anchor="start" font-weight="bold">S</text>
+<text x="281.4" y="98" font-size="16" fill="#047857" text-anchor="middle" font-weight="bold">T</text>
+</svg>

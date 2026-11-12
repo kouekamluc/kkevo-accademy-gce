@@ -1,0 +1,56 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="22" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Cost variances</text>
+<rect x="170" y="34" width="220" height="34" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="56" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Total cost variance</text>
+<line x1="280" y1="68" x2="75" y2="98" stroke="#102A43" stroke-width="2"/>
+<rect x="13" y="98" width="124" height="34" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="75" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Materials</text>
+<line x1="17" y1="132" x2="17" y2="219" stroke="#102A43" stroke-width="2"/>
+<line x1="17" y1="169" x2="23" y2="169" stroke="#102A43" stroke-width="2"/>
+<rect x="23" y="152" width="104" height="34" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="75" y="174" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">price</text>
+<line x1="17" y1="219" x2="23" y2="219" stroke="#102A43" stroke-width="2"/>
+<rect x="23" y="202" width="104" height="34" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="75" y="224" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">usage</text>
+<line x1="280" y1="68" x2="209" y2="98" stroke="#102A43" stroke-width="2"/>
+<rect x="147" y="98" width="124" height="34" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="209" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Labour</text>
+<line x1="151" y1="132" x2="151" y2="219" stroke="#102A43" stroke-width="2"/>
+<line x1="151" y1="169" x2="157" y2="169" stroke="#102A43" stroke-width="2"/>
+<rect x="157" y="152" width="104" height="34" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="209" y="174" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">rate</text>
+<line x1="151" y1="219" x2="157" y2="219" stroke="#102A43" stroke-width="2"/>
+<rect x="157" y="202" width="104" height="34" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="209" y="224" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">efficiency</text>
+<line x1="280" y1="68" x2="343" y2="98" stroke="#102A43" stroke-width="2"/>
+<rect x="281" y="98" width="124" height="34" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="343" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Variable OH</text>
+<line x1="285" y1="132" x2="285" y2="219" stroke="#102A43" stroke-width="2"/>
+<line x1="285" y1="169" x2="291" y2="169" stroke="#102A43" stroke-width="2"/>
+<rect x="291" y="152" width="104" height="34" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="343" y="174" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">expenditure</text>
+<line x1="285" y1="219" x2="291" y2="219" stroke="#102A43" stroke-width="2"/>
+<rect x="291" y="202" width="104" height="34" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="343" y="224" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">efficiency</text>
+<line x1="280" y1="68" x2="477" y2="98" stroke="#102A43" stroke-width="2"/>
+<rect x="415" y="98" width="124" height="34" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="477" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Fixed OH</text>
+<line x1="419" y1="132" x2="419" y2="219" stroke="#102A43" stroke-width="2"/>
+<line x1="419" y1="169" x2="425" y2="169" stroke="#102A43" stroke-width="2"/>
+<rect x="425" y="152" width="104" height="34" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="477" y="174" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">expenditure</text>
+<line x1="419" y1="219" x2="425" y2="219" stroke="#102A43" stroke-width="2"/>
+<rect x="425" y="202" width="104" height="34" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="477" y="224" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">volume</text>
+<line x1="431" y1="236" x2="431" y2="307" stroke="#047857" stroke-width="2"/>
+<line x1="431" y1="267" x2="437" y2="267" stroke="#047857" stroke-width="2"/>
+<rect x="437" y="252" width="80" height="30" fill="#ffffff" stroke="#047857" stroke-width="2"/>
+<text x="477" y="272" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">capacity</text>
+<line x1="431" y1="307" x2="437" y2="307" stroke="#047857" stroke-width="2"/>
+<rect x="437" y="292" width="80" height="30" fill="#ffffff" stroke="#047857" stroke-width="2"/>
+<text x="477" y="312" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">efficiency</text>
+<text x="20" y="270" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#2563EB">price-type variance</text>
+<text x="20" y="292" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#047857">quantity-type variance</text>
+<text x="20" y="330" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">F = favourable (raises profit), A = adverse (lowers profit)</text>
+<text x="20" y="350" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">parts add up to the total variance</text>
+</svg>

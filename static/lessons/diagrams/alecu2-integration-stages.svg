@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Stages of economic integration">
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#102A43"/></marker><marker id="ahb" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#2563EB"/></marker></defs>
+<rect width="560" height="360" fill="#fff"/>
+<rect x="16.0" y="14.0" width="200.0" height="46.0" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="116.0" y="43.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">Preferential trade area</text>
+<text x="230.0" y="34.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Lower tariffs on some goods</text>
+<text x="230.0" y="51.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">traded between members</text>
+<line x1="119.0" y1="60.0" x2="119.0" y2="70.0" stroke="#102A43" stroke-width="2"/>
+<rect x="22.0" y="70.0" width="200.0" height="46.0" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="122.0" y="99.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">Free trade area</text>
+<text x="236.0" y="90.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">No tariffs between members; each</text>
+<text x="236.0" y="107.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">keeps its own external tariff</text>
+<line x1="125.0" y1="116.0" x2="125.0" y2="126.0" stroke="#102A43" stroke-width="2"/>
+<rect x="28.0" y="126.0" width="200.0" height="46.0" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="128.0" y="155.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">Customs union</text>
+<text x="242.0" y="146.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Free trade plus a common</text>
+<text x="242.0" y="163.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">external tariff (CET)</text>
+<line x1="131.0" y1="172.0" x2="131.0" y2="182.0" stroke="#102A43" stroke-width="2"/>
+<rect x="34.0" y="182.0" width="200.0" height="46.0" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="134.0" y="211.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">Common market</text>
+<text x="248.0" y="202.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Customs union plus free movement</text>
+<text x="248.0" y="219.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">of labour and capital</text>
+<line x1="137.0" y1="228.0" x2="137.0" y2="238.0" stroke="#102A43" stroke-width="2"/>
+<rect x="40.0" y="238.0" width="200.0" height="46.0" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="140.0" y="267.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">Economic union</text>
+<text x="254.0" y="258.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Common market plus harmonised</text>
+<text x="254.0" y="275.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">policies (often one currency)</text>
+<line x1="143.0" y1="284.0" x2="143.0" y2="294.0" stroke="#102A43" stroke-width="2"/>
+<rect x="46.0" y="294.0" width="200.0" height="46.0" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="146.0" y="323.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">Complete integration</text>
+<text x="260.0" y="314.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">One economic policy and a</text>
+<text x="260.0" y="331.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">single supranational authority</text>
+</svg>

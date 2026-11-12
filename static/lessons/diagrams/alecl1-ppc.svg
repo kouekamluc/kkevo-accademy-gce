@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<title>Production possibility curve for cocoa and maize</title>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<line x1="80" y1="310" x2="520" y2="310" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="80" y1="310" x2="80" y2="30" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="520.0" y="334.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end">Cocoa (tonnes)</text>
+<text x="88.0" y="34.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start">Maize (tonnes)</text>
+<text x="72.0" y="328.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end">0</text>
+<path d="M80.0,70.0 C90.1,71.6 120.5,74.8 140.8,79.6 C161.1,84.4 181.3,90.8 201.6,98.8 C221.9,106.8 242.1,116.4 262.4,127.6 C282.7,138.8 302.9,151.6 323.2,166.0 C343.5,180.4 363.7,190.0 384.0,214.0 C404.3,238.0 434.7,294.0 444.8,310.0" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-dasharray="7 5"/>
+<path d="M80.0,110.0 C88.4,111.3 113.8,114.0 130.7,118.0 C147.6,122.0 164.4,127.3 181.3,134.0 C198.2,140.7 215.1,148.7 232.0,158.0 C248.9,167.3 265.8,178.0 282.7,190.0 C299.6,202.0 316.4,210.0 333.3,230.0 C350.2,250.0 375.6,296.7 384.0,310.0" fill="none" stroke="#102A43" stroke-width="3"/>
+<text x="348.5" y="290.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">PPC1</text>
+<text x="448.8" y="296.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#2563EB" text-anchor="start" font-weight="700">PPC2</text>
+<line x1="181.3" y1="310.0" x2="181.3" y2="316.0" stroke="#102A43" stroke-width="2"/>
+<text x="181.3" y="332.0" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">20</text>
+<line x1="282.7" y1="310.0" x2="282.7" y2="316.0" stroke="#102A43" stroke-width="2"/>
+<text x="282.7" y="332.0" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">40</text>
+<line x1="384.0" y1="310.0" x2="384.0" y2="316.0" stroke="#102A43" stroke-width="2"/>
+<text x="384.0" y="332.0" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">60</text>
+<line x1="74.0" y1="210.0" x2="80.0" y2="210.0" stroke="#102A43" stroke-width="2"/>
+<text x="70.0" y="215.0" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="end">50</text>
+<line x1="74.0" y1="110.0" x2="80.0" y2="110.0" stroke="#102A43" stroke-width="2"/>
+<text x="70.0" y="115.0" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="end">100</text>
+<circle cx="181.3" cy="134.0" r="4.5" fill="#102A43"/>
+<text x="189.3" y="126.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">C</text>
+<circle cx="282.7" cy="190.0" r="4.5" fill="#102A43"/>
+<text x="290.7" y="182.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">E</text>
+<circle cx="232.0" cy="210.0" r="4.5" fill="#B45309"/>
+<text x="214.0" y="228.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#B45309" text-anchor="start" font-weight="700">U</text>
+<circle cx="338.4" cy="198.0" r="4.5" fill="#2563EB"/>
+<text x="348.4" y="203.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#2563EB" text-anchor="start" font-weight="700">X</text>
+</svg>

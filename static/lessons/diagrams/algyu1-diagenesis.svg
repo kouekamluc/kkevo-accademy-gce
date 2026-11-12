@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<rect x="12" y="40" width="168" height="200" rx="0" fill="#FFFFFF" stroke="#9FB3C8" stroke-width="1"/>
+<text x="96" y="28" font-size="15" fill="#102A43" text-anchor="middle" font-weight="bold">1. Deposition</text>
+<circle cx="46" cy="74.5" r="21" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="71" cy="118" r="21" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="46" cy="161.5" r="21" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="71" cy="205" r="21" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="96" cy="74.5" r="21" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="121" cy="118" r="21" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="96" cy="161.5" r="21" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="121" cy="205" r="21" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="146" cy="74.5" r="21" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="146" cy="161.5" r="21" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="96" y="262" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">loose grains</text>
+<text x="96" y="280" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">open pores (about 40%)</text>
+<rect x="196" y="40" width="168" height="200" rx="0" fill="#FFFFFF" stroke="#9FB3C8" stroke-width="1"/>
+<text x="280" y="28" font-size="15" fill="#102A43" text-anchor="middle" font-weight="bold">2. Compaction</text>
+<circle cx="238" cy="85" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="259" cy="121.5" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="238" cy="158.1" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="259" cy="194.6" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="280" cy="85" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="301" cy="121.5" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="280" cy="158.1" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="301" cy="194.6" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="322" cy="85" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="322" cy="158.1" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="262" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">closer packing</text>
+<text x="280" y="280" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">pressure solution at contacts</text>
+<rect x="380" y="40" width="168" height="200" rx="0" fill="#FFFFFF" stroke="#9FB3C8" stroke-width="1"/>
+<text x="464" y="28" font-size="15" fill="#102A43" text-anchor="middle" font-weight="bold">3. Cementation</text>
+<rect x="386" y="46" width="156" height="188" rx="0" fill="#ECFDF5" stroke="#ECFDF5" stroke-width="0"/>
+<circle cx="422" cy="85" r="26" fill="#FFFFFF" stroke="#047857" stroke-width="2"/>
+<circle cx="422" cy="85" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="443" cy="121.5" r="26" fill="#FFFFFF" stroke="#047857" stroke-width="2"/>
+<circle cx="443" cy="121.5" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="422" cy="158.1" r="26" fill="#FFFFFF" stroke="#047857" stroke-width="2"/>
+<circle cx="422" cy="158.1" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="443" cy="194.6" r="26" fill="#FFFFFF" stroke="#047857" stroke-width="2"/>
+<circle cx="443" cy="194.6" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="464" cy="85" r="26" fill="#FFFFFF" stroke="#047857" stroke-width="2"/>
+<circle cx="464" cy="85" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="485" cy="121.5" r="26" fill="#FFFFFF" stroke="#047857" stroke-width="2"/>
+<circle cx="485" cy="121.5" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="464" cy="158.1" r="26" fill="#FFFFFF" stroke="#047857" stroke-width="2"/>
+<circle cx="464" cy="158.1" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="485" cy="194.6" r="26" fill="#FFFFFF" stroke="#047857" stroke-width="2"/>
+<circle cx="485" cy="194.6" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="506" cy="85" r="26" fill="#FFFFFF" stroke="#047857" stroke-width="2"/>
+<circle cx="506" cy="85" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<circle cx="506" cy="158.1" r="26" fill="#FFFFFF" stroke="#047857" stroke-width="2"/>
+<circle cx="506" cy="158.1" r="23" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="464" y="262" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">cement fills pores</text>
+<text x="464" y="280" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">overgrowth rims on grains</text>
+<line x1="150" y1="316" x2="410" y2="316" stroke="#B45309" stroke-width="3" stroke-linecap="round" marker-end="url(#aha)"/>
+<text x="280" y="340" font-size="13" fill="#B45309" text-anchor="middle" font-weight="normal">burial: rising pressure and temperature, porosity falls</text>
+</svg>

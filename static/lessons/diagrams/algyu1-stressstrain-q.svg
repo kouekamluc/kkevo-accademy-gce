@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<line x1="70" y1="300" x2="540" y2="300" stroke="#102A43" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="70" y1="300" x2="70" y2="24" stroke="#102A43" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="540" y="326" font-size="14" fill="#102A43" text-anchor="end" font-weight="normal">strain</text>
+<text x="28" y="170" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal" transform="rotate(-90 28 170)">stress</text>
+<polyline points="70,300 150,120 168.5,114.1 187,108.6 205.5,103.5 224,98.7 242.5,94.2 261,90.1 279.5,86.3 298,82.9 316.5,79.8 335,77 353.5,74.5 372,72.3 390.5,70.5 409,68.9 427.5,67.6 446,66.6 464.5,65.8 483,65.3 501.5,65.1 520,65" fill="none" stroke="#2563EB" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="70,300 128,70" fill="none" stroke="#B45309" stroke-width="3" stroke-linejoin="round"/>
+<line x1="119" y1="58" x2="137" y2="82" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<line x1="137" y1="58" x2="119" y2="82" stroke="#B45309" stroke-width="3" stroke-linecap="round"/>
+<circle cx="150" cy="120" r="5" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<text x="146" y="64" font-size="15" fill="#B45309" text-anchor="start" font-weight="bold">X</text>
+<text x="158" y="140" font-size="15" fill="#2563EB" text-anchor="start" font-weight="bold">Y</text>
+<text x="380" y="50" font-size="13" fill="#2563EB" text-anchor="start" font-weight="normal">curve 2</text>
+<text x="90" y="150" font-size="13" fill="#B45309" text-anchor="end" font-weight="normal">curve 1</text>
+</svg>

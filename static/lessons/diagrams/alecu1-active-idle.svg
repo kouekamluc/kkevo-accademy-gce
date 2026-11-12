@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<g font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">
+<text x="280" y="24" text-anchor="middle" font-weight="700">Active and idle money balances</text>
+<line x1="60.0" y1="300.0" x2="60.0" y2="66.0" stroke="#102A43" stroke-width="2"/><polygon points="60.0,60.0 55.5,70.0 64.5,70.0" fill="#102A43"/>
+<line x1="60.0" y1="300.0" x2="254.0" y2="300.0" stroke="#102A43" stroke-width="2"/><polygon points="260.0,300.0 250.0,295.5 250.0,304.5" fill="#102A43"/>
+<text x="66.0" y="62.0" text-anchor="start" fill="#102A43" font-size="13" font-weight="600">Interest rate (r)</text>
+<text x="260.0" y="322.0" text-anchor="end" fill="#102A43" font-size="13" font-weight="600">Active balances</text>
+<line x1="170.0" y1="300.0" x2="170.0" y2="90.0" stroke="#2563EB" stroke-width="3"/>
+<text x="178.0" y="100.0" text-anchor="start" fill="#2563EB" font-size="13" font-weight="600">L1 at income Y1</text>
+<line x1="220.0" y1="300.0" x2="220.0" y2="130.0" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="226.0" y="150.0" text-anchor="start" fill="#2563EB" font-size="13" font-weight="400">L1 at Y2 > Y1</text>
+<text x="160.0" y="340.0" text-anchor="middle" fill="#102A43" font-size="13" font-weight="400">(a) L1 = transactions + precautionary</text>
+<line x1="320.0" y1="300.0" x2="320.0" y2="66.0" stroke="#102A43" stroke-width="2"/><polygon points="320.0,60.0 315.5,70.0 324.5,70.0" fill="#102A43"/>
+<line x1="320.0" y1="300.0" x2="534.0" y2="300.0" stroke="#102A43" stroke-width="2"/><polygon points="540.0,300.0 530.0,295.5 530.0,304.5" fill="#102A43"/>
+<text x="326.0" y="62.0" text-anchor="start" fill="#102A43" font-size="13" font-weight="600">Interest rate (r)</text>
+<text x="540.0" y="322.0" text-anchor="end" fill="#102A43" font-size="13" font-weight="600">Idle balances</text>
+<path d="M328.0,90.0 L333.0,126.0 L338.0,150.0 L343.0,167.1 L348.0,180.0 L353.0,190.0 L358.0,198.0 L363.0,204.5 L368.0,210.0 L373.0,214.6 L378.0,218.6 L383.0,222.0 L388.0,225.0 L393.0,227.6 L398.0,230.0 L403.0,232.1 L408.0,234.0 L413.0,235.7 L418.0,237.3 L423.0,238.7 L428.0,240.0 L433.0,241.2 L438.0,242.3 L443.0,243.3 L448.0,244.3 L453.0,245.2 L458.0,246.0 L463.0,246.8 L468.0,247.5 L473.0,248.2 L478.0,248.8 L483.0,249.4 L488.0,250.0 L493.0,250.5 L498.0,251.1 L503.0,251.5 L508.0,252.0 L513.0,252.4 L518.0,252.9 L523.0,253.3 L528.0,253.6" fill="none" stroke="#047857" stroke-width="3"/>
+<text x="360.0" y="112.0" text-anchor="start" fill="#047857" font-size="13" font-weight="600">L2 (speculative)</text>
+<text x="470.0" y="274.0" text-anchor="middle" fill="#B45309" font-size="13" font-weight="400">liquidity trap</text>
+<text x="430.0" y="340.0" text-anchor="middle" fill="#102A43" font-size="13" font-weight="400">(b) L2 falls as r rises</text>
+</g></svg>

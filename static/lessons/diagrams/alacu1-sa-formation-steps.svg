@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img" aria-label="Main stages in forming a public limited company (SA)">
+<title>Main stages in forming a public limited company (SA)</title><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="26" font-size="16" text-anchor="middle" fill="#102A43" font-weight="bold">Forming an SA under OHADA: main stages</text>
+<rect x="60" y="44" width="440" height="46" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="62.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="bold">Statutes drafted and signed</text>
+<text x="280.0" y="80.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">name, object, seat, capital, shares</text>
+<rect x="60" y="104" width="440" height="46" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="122.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="bold">Subscription of shares</text>
+<text x="280.0" y="140.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">cash shares: at least 1/4 of nominal paid</text>
+<line x1="280.0" y1="90" x2="280.0" y2="103" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="164" width="440" height="46" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="182.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="bold">Funds deposited</text>
+<text x="280.0" y="200.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">with a notary or a bank</text>
+<line x1="280.0" y1="150" x2="280.0" y2="163" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="224" width="440" height="46" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="242.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="bold">Declaration of subscription and payment</text>
+<text x="280.0" y="260.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">made before the notary</text>
+<line x1="280.0" y1="210" x2="280.0" y2="223" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="60" y="284" width="440" height="46" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280.0" y="302.9" font-size="14" text-anchor="middle" fill="#047857" font-weight="bold">Registration in the RCCM</text>
+<text x="280.0" y="320.9" font-size="14" text-anchor="middle" fill="#047857" font-weight="normal">the company gains legal personality</text>
+<line x1="280.0" y1="270" x2="280.0" y2="283" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+</svg>

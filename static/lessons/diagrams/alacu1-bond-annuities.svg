@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img" aria-label="Annuities of a bond loan redeemed in equal instalments">
+<title>Annuities of a bond loan redeemed in equal instalments</title>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="26" font-size="16" text-anchor="middle" fill="#102A43" font-weight="bold">Bond loan, equal redemption: yearly annuity</text>
+<line x1="90" y1="300" x2="530" y2="300" stroke="#102A43" stroke-width="2"/>
+<line x1="90" y1="300" x2="90" y2="60" stroke="#102A43" stroke-width="2"/>
+<text x="82" y="305.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="normal">0</text>
+<line x1="86" y1="300.0" x2="90" y2="300.0" stroke="#102A43" stroke-width="2"/>
+<text x="82" y="231.7" font-size="13" text-anchor="end" fill="#102A43" font-weight="normal">10</text>
+<line x1="86" y1="226.7" x2="90" y2="226.7" stroke="#102A43" stroke-width="2"/>
+<text x="82" y="158.3" font-size="13" text-anchor="end" fill="#102A43" font-weight="normal">20</text>
+<line x1="86" y1="153.3" x2="90" y2="153.3" stroke="#102A43" stroke-width="2"/>
+<text x="82" y="85.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="normal">30</text>
+<line x1="86" y1="80.0" x2="90" y2="80.0" stroke="#102A43" stroke-width="2"/>
+<text x="30" y="180" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">FCFA m</text>
+<rect x="115" y="150.4" width="50" height="149.6" rx="0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="115" y="91.7" width="50" height="58.7" rx="0" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="140.0" y="320" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Year 1</text>
+<rect x="201" y="150.4" width="50" height="149.6" rx="0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="201" y="103.5" width="50" height="46.9" rx="0" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="226.0" y="320" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Year 2</text>
+<rect x="287" y="150.4" width="50" height="149.6" rx="0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="287" y="115.2" width="50" height="35.2" rx="0" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="312.0" y="320" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Year 3</text>
+<rect x="373" y="150.4" width="50" height="149.6" rx="0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="373" y="126.9" width="50" height="23.5" rx="0" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="398.0" y="320" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Year 4</text>
+<rect x="459" y="150.4" width="50" height="149.6" rx="0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<rect x="459" y="138.7" width="50" height="11.7" rx="0" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="484.0" y="320" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Year 5</text>
+<rect x="330" y="52" width="16" height="16" rx="0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="352" y="65" font-size="13" text-anchor="start" fill="#102A43" font-weight="normal">Redemption (constant)</text>
+<rect x="330" y="74" width="16" height="16" rx="0" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="352" y="87" font-size="13" text-anchor="start" fill="#102A43" font-weight="normal">Interest (falling)</text>
+<text x="300" y="345" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Annuity = interest + redemption; it falls each year</text>
+</svg>

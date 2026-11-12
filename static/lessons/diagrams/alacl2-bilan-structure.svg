@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs><rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/><text x="145" y="28" font-size="15" text-anchor="middle" font-weight="bold" fill="#2563EB">ASSETS (actif)</text>
+<text x="415" y="28" font-size="14" text-anchor="middle" font-weight="bold" fill="#2563EB">EQUITY AND LIABILITIES (passif)</text>
+<rect x="20" y="44" width="250" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="145" y="87" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">Fixed assets</text>
+<text x="145" y="104" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">intangible, tangible,</text>
+<text x="145" y="120" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">financial (gross - dep. = net)</text>
+<rect x="20" y="160" width="250" height="90" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="145" y="193" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">Current assets</text>
+<text x="145" y="210" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">inventories, receivables</text>
+<text x="145" y="226" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">(less impairment)</text>
+<rect x="20" y="256" width="250" height="50" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="145" y="277" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">Cash-assets</text>
+<text x="145" y="294" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">bank, cash</text>
+<rect x="300" y="44" width="240" height="62" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="420" y="71" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">Equity</text>
+<text x="420" y="88" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">capital, reserves, result</text>
+<rect x="300" y="110" width="240" height="44" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="420" y="128" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">Financial debts</text>
+<text x="420" y="145" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">loans, provisions (19)</text>
+<rect x="290" y="38" width="260" height="122" rx="8" fill="none" stroke="#B45309" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="420" y="176" font-size="13" text-anchor="middle" font-weight="bold" fill="#B45309">= stable resources</text>
+<rect x="300" y="186" width="240" height="64" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="420" y="214" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">Current liabilities</text>
+<text x="420" y="231" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">suppliers, State, staff</text>
+<rect x="300" y="256" width="240" height="50" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="420" y="277" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">Cash-liabilities</text>
+<text x="420" y="294" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">overdrafts, bank credit</text>
+<rect x="20" y="318" width="520" height="34" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="340" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">Total assets = total equity and liabilities</text></svg>

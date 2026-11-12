@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<g font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43">
+<text x="280" y="24" text-anchor="middle" font-weight="700">Saving, investment and the paradox of thrift</text>
+<line x1="80.0" y1="318.0" x2="80.0" y2="52.0" stroke="#102A43" stroke-width="2"/><polygon points="80.0,46.0 75.5,56.0 84.5,56.0" fill="#102A43"/>
+<line x1="80.0" y1="250.0" x2="524.0" y2="250.0" stroke="#102A43" stroke-width="2"/><polygon points="530.0,250.0 520.0,245.5 520.0,254.5" fill="#102A43"/>
+<text x="86.0" y="50.0" text-anchor="start" fill="#102A43" font-size="14" font-weight="600">Saving, investment</text>
+<text x="530.0" y="292.0" text-anchor="end" fill="#102A43" font-size="14" font-weight="600">National income (Y)</text>
+<text x="70.0" y="255.0" text-anchor="end" fill="#102A43" font-size="14" font-weight="400">0</text>
+<path d="M80.0,305.0 L512.0,156.5" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<path d="M80.0,277.5 L512.0,129.0" fill="none" stroke="#B45309" stroke-width="2.5"/>
+<path d="M80.0,222.5 L512.0,192.8" fill="none" stroke="#047857" stroke-width="2.5"/>
+<text x="518.0" y="170.5" text-anchor="start" fill="#2563EB" font-size="14" font-weight="700">S1</text>
+<text x="518.0" y="127.0" text-anchor="start" fill="#B45309" font-size="14" font-weight="700">S2</text>
+<text x="518.0" y="197.8" text-anchor="start" fill="#047857" font-size="14" font-weight="700">I</text>
+<circle cx="380.0" cy="201.9" r="4.5" fill="#102A43"/>
+<line x1="380.0" y1="201.9" x2="380.0" y2="250.0" stroke="#102A43" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="380.0" y="270.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="600">Y1</text>
+<text x="376.0" y="189.9" text-anchor="end" fill="#102A43" font-size="14" font-weight="700">E1</text>
+<circle cx="280.0" cy="208.8" r="4.5" fill="#102A43"/>
+<line x1="280.0" y1="208.8" x2="280.0" y2="250.0" stroke="#102A43" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="280.0" y="270.0" text-anchor="middle" fill="#102A43" font-size="14" font-weight="600">Y2</text>
+<text x="276.0" y="196.8" text-anchor="end" fill="#102A43" font-size="14" font-weight="700">E2</text>
+<text x="280.0" y="346.0" text-anchor="middle" fill="#102A43" font-size="13" font-weight="400">Households try to save more (S1 to S2): income falls from Y1 to Y2</text>
+</g></svg>

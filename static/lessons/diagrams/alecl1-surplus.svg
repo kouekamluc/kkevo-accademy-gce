@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<title>Consumer surplus and producer surplus</title>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<line x1="90" y1="305" x2="530" y2="305" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="90" y1="305" x2="90" y2="25" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="530.0" y="329.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end">Quantity</text>
+<text x="98.0" y="29.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start">Price</text>
+<text x="82.0" y="323.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end">0</text>
+<polygon points="90.0,50.0 294.0,177.5 90.0,177.5" fill="#EFF6FF" stroke="#2563EB" fill-opacity="1"/>
+<polygon points="90.0,262.5 294.0,177.5 90.0,177.5" fill="#ECFDF5" stroke="#047857" fill-opacity="1"/>
+<path d="M90.0,50.0 L498.0,305.0" fill="none" stroke="#102A43" stroke-width="3"/>
+<path d="M90.0,262.5 L498.0,92.5" fill="none" stroke="#2563EB" stroke-width="3"/>
+<text x="433.4" y="252.3" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">D</text>
+<text x="502.0" y="86.5" font-family="Inter, Arial, sans-serif" font-size="14" fill="#2563EB" text-anchor="start" font-weight="700">S</text>
+<line x1="294.0" y1="177.5" x2="294.0" y2="305.0" stroke="#102A43" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="294.0" cy="177.5" r="4.5" fill="#102A43"/>
+<text x="294.0" y="325.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Qe</text>
+<text x="82.0" y="182.5" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">Pe</text>
+<text x="82.0" y="55.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end" font-style="italic">a</text>
+<text x="82.0" y="267.5" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end" font-style="italic">b</text>
+<text x="141.0" y="139.2" font-family="Inter, Arial, sans-serif" font-size="14" fill="#2563EB" text-anchor="start" font-weight="700">CS</text>
+<text x="141.0" y="211.5" font-family="Inter, Arial, sans-serif" font-size="14" fill="#047857" text-anchor="start" font-weight="700">PS</text>
+</svg>

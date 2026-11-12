@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img">
+<title>Map A: invented 1:50 000 extract of the Kemo area with contours, rivers, settlements and roads</title>
+<rect width="560" height="360" fill="#fff"/>
+<defs><clipPath id="c"><rect x="40" y="26" width="385" height="275"/></clipPath><pattern id="sw" width="10" height="8" patternUnits="userSpaceOnUse"><rect width="10" height="8" fill="#EFF6FF"/><path d="M0 3H5M7 3H10" stroke="#2563EB" stroke-width="1.2"/><path d="M5 7V4M3 7L4 5M7 7L6 5" stroke="#047857" stroke-width="1" fill="none"/></pattern><pattern id="ri" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#ECFDF5"/><path d="M0 4H8M4 0V8" stroke="#047857" stroke-width="1"/></pattern></defs>
+<g clip-path="url(#c)">
+<path d="M332,161 348,166 370,174 392,177 414,188 403,205 381,194 359,199 337,188 326,174Z" fill="url(#sw)"/>
+<path d="M345,213 384,213 389,205 356,205Z" fill="url(#ri)" stroke="#047857" stroke-width="1"/>
+<path d="M425,267 420,260 404,235 396,227 384,218 376,214 362,213 318,219 307,215 293,215 282,211 257,196 246,187 232,180 219,161 213,147 215,139 219,130 235,111 246,105 268,102 285,90 290,92 296,99 304,104 337,105 348,108 362,115 378,109 395,107 411,109 425,114" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M272,301 257,294 246,288 238,279 232,269 230,261 217,194 204,147 205,106 208,82 216,54 224,36 231,26" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M359,298 345,294 335,284 329,271 329,257 333,246 343,235 356,229 370,229 381,233 391,243 395,254 396,268 390,282 381,292 370,298 359,298" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M212,301 214,287 216,260 215,224 209,186 198,147 198,139 200,84 205,54 212,26" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M359,280 352,276 346,271 343,262 344,254 348,247 354,242 362,239 370,240 376,242 381,249 384,257 383,265 379,274 373,278 367,280 359,280" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M205,301 210,260 210,224 204,183 194,147 193,139 195,84 206,26" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M362,264 359,261 359,257 362,254 367,254 370,257 368,262 364,264 362,264" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M199,301 205,260 206,224 200,181 195,164 189,147 188,139 190,81 201,26" fill="none" stroke="#B45309" stroke-width="2.2"/>
+<path d="M194,301 201,257 200,218 197,192 192,169 180,142 184,122 184,95 187,73 195,26" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M187,301 193,268 194,230 188,185 183,164 175,154 164,148 150,145 122,145 105,139 122,138 150,133 164,131 169,129 174,125 177,117 180,73 188,26" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M173,301 178,290 181,279 181,268 179,257 175,249 166,239 158,234 141,227 134,221 132,210 131,180 129,174 113,166 98,160 70,164 40,159" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M152,26 158,45 159,67 154,92 150,102 145,108 137,114 122,119 92,117 65,125 40,124" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M142,294 136,290 132,284 130,279 131,271 136,262 142,259 147,257 156,259 161,262 166,268 167,274 166,282 162,290 156,294 150,295 142,294" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M70,268 62,262 54,251 52,240 54,230 62,218 70,213 84,210 95,213 103,219 110,230 113,243 110,254 103,263 92,269 81,271 70,268" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M98,92 87,87 79,78 76,67 77,56 81,48 90,40 100,36 112,37 122,42 128,49 132,59 132,70 127,81 120,88 109,92 98,92" fill="none" stroke="#B45309" stroke-width="1.1"/>
+<path d="M76,252 73,249 70,243 70,238 73,232 76,229 81,227 87,227 91,230 94,232 97,238 97,243 94,249 87,254 81,254 76,252" fill="none" stroke="#B45309" stroke-width="2.2"/>
+<circle cx="191" cy="279" r="3" fill="#ECFDF5" stroke="#047857" stroke-width="1.3"/>
+<circle cx="191" cy="262" r="3" fill="#ECFDF5" stroke="#047857" stroke-width="1.3"/>
+<circle cx="191" cy="246" r="3" fill="#ECFDF5" stroke="#047857" stroke-width="1.3"/>
+<circle cx="191" cy="230" r="3" fill="#ECFDF5" stroke="#047857" stroke-width="1.3"/>
+<circle cx="191" cy="213" r="3" fill="#ECFDF5" stroke="#047857" stroke-width="1.3"/>
+<circle cx="191" cy="196" r="3" fill="#ECFDF5" stroke="#047857" stroke-width="1.3"/>
+<circle cx="191" cy="180" r="3" fill="#ECFDF5" stroke="#047857" stroke-width="1.3"/>
+<circle cx="191" cy="164" r="3" fill="#ECFDF5" stroke="#047857" stroke-width="1.3"/>
+<circle cx="200" cy="120" r="3" fill="#ECFDF5" stroke="#047857" stroke-width="1.3"/>
+<circle cx="202" cy="103" r="3" fill="#ECFDF5" stroke="#047857" stroke-width="1.3"/>
+<path d="M40,142 68,144 95,136 122,142 150,139 178,142 194,144 208,147 227,152 249,144 271,158 293,166 315,158 337,174 359,186 381,174 403,191 425,196" fill="none" stroke="#2563EB" stroke-width="2.6" stroke-linejoin="round"/>
+<path d="M271,26 276,59 288,92 288,125 293,165" fill="none" stroke="#2563EB" stroke-width="2" stroke-linejoin="round"/>
+<path d="M195,139L207,151M195,151L207,139" stroke="#102A43" stroke-width="2"/>
+<path d="M425,111 381,120 337,128 310,133 276,125 244,117 224,108 219,95 205,92 216,81 200,76 208,64 183,64 156,78 128,92 84,95 40,89" fill="none" stroke="#102A43" stroke-width="4.5" stroke-linejoin="round"/>
+<path d="M425,111 381,120 337,128 310,133 276,125 244,117 224,108 219,95 205,92 216,81 200,76 208,64 183,64 156,78 128,92 84,95 40,89" fill="none" stroke="#FDE68A" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M307,136 312,161 318,186 315,213 312,235" fill="none" stroke="#102A43" stroke-width="1.6" stroke-dasharray="5 3"/>
+<rect x="70" y="108" width="6" height="6" fill="#102A43"/>
+<rect x="98" y="106" width="6" height="6" fill="#102A43"/>
+<rect x="120" y="103" width="6" height="6" fill="#102A43"/>
+<rect x="147" y="92" width="6" height="6" fill="#102A43"/>
+<rect x="108" y="81" width="6" height="6" fill="#102A43"/>
+<rect x="59" y="75" width="6" height="6" fill="#102A43"/>
+<rect x="164" y="106" width="6" height="6" fill="#102A43"/>
+<rect x="298" y="133" width="6" height="6" fill="#102A43"/>
+<rect x="304" y="126" width="6" height="6" fill="#102A43"/>
+<rect x="309" y="136" width="6" height="6" fill="#102A43"/>
+<rect x="315" y="129" width="6" height="6" fill="#102A43"/>
+<rect x="296" y="125" width="6" height="6" fill="#102A43"/>
+<rect x="306" y="119" width="6" height="6" fill="#102A43"/>
+<rect x="318" y="138" width="6" height="6" fill="#102A43"/>
+<rect x="304" y="235" width="6" height="6" fill="#102A43"/>
+<rect x="312" y="240" width="6" height="6" fill="#102A43"/>
+<rect x="318" y="232" width="6" height="6" fill="#102A43"/>
+</g>
+<line x1="40" y1="26" x2="40" y2="301" stroke="#102A43" stroke-width="2" opacity="1"/>
+<text x="40" y="317" font-size="13" text-anchor="middle" fill="#102A43">30</text>
+<line x1="95" y1="26" x2="95" y2="301" stroke="#102A43" stroke-width="0.8" opacity="0.55"/>
+<text x="95" y="317" font-size="13" text-anchor="middle" fill="#102A43">31</text>
+<line x1="150" y1="26" x2="150" y2="301" stroke="#102A43" stroke-width="0.8" opacity="0.55"/>
+<text x="150" y="317" font-size="13" text-anchor="middle" fill="#102A43">32</text>
+<line x1="205" y1="26" x2="205" y2="301" stroke="#102A43" stroke-width="0.8" opacity="0.55"/>
+<text x="205" y="317" font-size="13" text-anchor="middle" fill="#102A43">33</text>
+<line x1="260" y1="26" x2="260" y2="301" stroke="#102A43" stroke-width="0.8" opacity="0.55"/>
+<text x="260" y="317" font-size="13" text-anchor="middle" fill="#102A43">34</text>
+<line x1="315" y1="26" x2="315" y2="301" stroke="#102A43" stroke-width="0.8" opacity="0.55"/>
+<text x="315" y="317" font-size="13" text-anchor="middle" fill="#102A43">35</text>
+<line x1="370" y1="26" x2="370" y2="301" stroke="#102A43" stroke-width="0.8" opacity="0.55"/>
+<text x="370" y="317" font-size="13" text-anchor="middle" fill="#102A43">36</text>
+<line x1="425" y1="26" x2="425" y2="301" stroke="#102A43" stroke-width="2" opacity="1"/>
+<text x="425" y="317" font-size="13" text-anchor="middle" fill="#102A43">37</text>
+<line x1="40" y1="301" x2="425" y2="301" stroke="#102A43" stroke-width="2" opacity="1"/>
+<text x="35" y="306" font-size="13" text-anchor="end" fill="#102A43">60</text>
+<line x1="40" y1="246" x2="425" y2="246" stroke="#102A43" stroke-width="0.8" opacity="0.55"/>
+<text x="35" y="251" font-size="13" text-anchor="end" fill="#102A43">61</text>
+<line x1="40" y1="191" x2="425" y2="191" stroke="#102A43" stroke-width="0.8" opacity="0.55"/>
+<text x="35" y="196" font-size="13" text-anchor="end" fill="#102A43">62</text>
+<line x1="40" y1="136" x2="425" y2="136" stroke="#102A43" stroke-width="0.8" opacity="0.55"/>
+<text x="35" y="141" font-size="13" text-anchor="end" fill="#102A43">63</text>
+<line x1="40" y1="81" x2="425" y2="81" stroke="#102A43" stroke-width="0.8" opacity="0.55"/>
+<text x="35" y="86" font-size="13" text-anchor="end" fill="#102A43">64</text>
+<line x1="40" y1="26" x2="425" y2="26" stroke="#102A43" stroke-width="2" opacity="1"/>
+<text x="35" y="31" font-size="13" text-anchor="end" fill="#102A43">65</text>
+<text x="56" y="260" font-size="13" text-anchor="middle" fill="#B45309" stroke="#fff" stroke-width="3" paint-order="stroke">1200</text>
+<text x="150" y="235" font-size="13" text-anchor="middle" fill="#B45309" stroke="#fff" stroke-width="3" paint-order="stroke">1150</text>
+<text x="260" y="107" font-size="13" text-anchor="middle" fill="#B45309" stroke="#fff" stroke-width="3" paint-order="stroke">800</text>
+<text x="388" y="288" font-size="13" text-anchor="middle" fill="#B45309" stroke="#fff" stroke-width="3" paint-order="stroke">850</text>
+<circle cx="84" cy="240" r="2.5" fill="#102A43"/>
+<text x="94" y="232" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">1298</text>
+<circle cx="364" cy="259" r="2.5" fill="#102A43"/>
+<text x="374" y="250" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">955</text>
+<circle cx="238" cy="213" r="2.5" fill="#102A43"/>
+<text x="250" y="217" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">817</text>
+<circle cx="386" cy="59" r="2.5" fill="#102A43"/>
+<text x="392" y="63" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">826</text>
+<text x="128" y="158" font-size="13" text-anchor="middle" fill="#2563EB" font-style="italic" font-weight="400" stroke="#fff" stroke-width="3" paint-order="stroke">R. Kemo</text>
+<text x="257" y="54" font-size="13" text-anchor="middle" fill="#2563EB" font-style="italic" font-weight="400" stroke="#fff" stroke-width="3" paint-order="stroke">R. Tolo</text>
+<text x="345" y="103" font-size="13" text-anchor="middle" fill="#102A43" font-style="normal" font-weight="700" stroke="#fff" stroke-width="3" paint-order="stroke">KEMO</text>
+<text x="109" y="62" font-size="13" text-anchor="middle" fill="#102A43" font-style="normal" font-weight="700" stroke="#fff" stroke-width="3" paint-order="stroke">BAFU</text>
+<text x="345" y="230" font-size="13" text-anchor="middle" fill="#102A43" font-style="normal" font-weight="700" stroke="#fff" stroke-width="3" paint-order="stroke">Ndu</text>
+<circle cx="84" cy="240" r="9" fill="#2563EB"/><text x="84" y="246" font-size="13" font-weight="700" text-anchor="middle" fill="#fff">A</text>
+<circle cx="238" cy="213" r="9" fill="#2563EB"/><text x="238" y="218" font-size="13" font-weight="700" text-anchor="middle" fill="#fff">B</text>
+<circle cx="122" cy="262" r="9" fill="#2563EB"/><text x="122" y="268" font-size="13" font-weight="700" text-anchor="middle" fill="#fff">C</text>
+<circle cx="364" cy="259" r="9" fill="#2563EB"/><text x="364" y="264" font-size="13" font-weight="700" text-anchor="middle" fill="#fff">D</text>
+<circle cx="205" cy="230" r="9" fill="#2563EB"/><text x="205" y="234" font-size="13" font-weight="700" text-anchor="middle" fill="#fff">E</text>
+<line x1="51" y1="238" x2="414" y2="262" stroke="#2563EB" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="47" y="232" font-size="14" font-weight="700" text-anchor="end" fill="#2563EB" stroke="#fff" stroke-width="3" paint-order="stroke">X</text>
+<text x="418" y="256" font-size="14" font-weight="700" fill="#2563EB" stroke="#fff" stroke-width="3" paint-order="stroke">Y</text>
+<text x="438" y="40" font-size="14" font-weight="700" fill="#102A43">Key</text>
+<g transform="translate(438,62)"><line x1="0" y1="0" x2="22" y2="0" stroke="#B45309" stroke-width="1.5"/></g><text x="466" y="67" font-size="13" fill="#102A43">Contour</text>
+<g transform="translate(438,85)"><line x1="0" y1="0" x2="22" y2="0" stroke="#2563EB" stroke-width="2.6"/></g><text x="466" y="90" font-size="13" fill="#102A43">River</text>
+<g transform="translate(438,108)"><line x1="0" y1="0" x2="22" y2="0" stroke="#102A43" stroke-width="4.5"/><line x1="0" y1="0" x2="22" y2="0" stroke="#FDE68A" stroke-width="2.2"/></g><text x="466" y="113" font-size="13" fill="#102A43">Main road</text>
+<g transform="translate(438,131)"><line x1="0" y1="0" x2="22" y2="0" stroke="#102A43" stroke-width="1.6" stroke-dasharray="5 3"/></g><text x="466" y="136" font-size="13" fill="#102A43">Track</text>
+<g transform="translate(438,154)"><rect x="8" y="-3" width="6" height="6" fill="#102A43"/></g><text x="466" y="159" font-size="13" fill="#102A43">Building</text>
+<g transform="translate(438,177)"><rect x="0" y="-6" width="22" height="12" fill="url(#sw)"/></g><text x="466" y="182" font-size="13" fill="#102A43">Swamp</text>
+<g transform="translate(438,200)"><rect x="0" y="-6" width="22" height="12" fill="url(#ri)" stroke="#047857"/></g><text x="466" y="205" font-size="13" fill="#102A43">Rice field</text>
+<g transform="translate(438,223)"><circle cx="11" cy="0" r="3" fill="#ECFDF5" stroke="#047857" stroke-width="1.3"/></g><text x="466" y="228" font-size="13" fill="#102A43">Forest</text>
+<g transform="translate(438,246)"><path d="M5,-6L17,6M5,6L17,-6" stroke="#102A43" stroke-width="2"/></g><text x="466" y="251" font-size="13" fill="#102A43">Falls</text>
+<g transform="translate(438,269)"><circle cx="11" cy="0" r="2.5" fill="#102A43"/></g><text x="466" y="274" font-size="13" fill="#102A43">Spot height</text>
+<text x="40" y="352" font-size="13" fill="#102A43">Scale 1:50 000, grid squares 1 km, contour interval 50 m (invented map)</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 390" font-family="Inter, Arial, sans-serif" role="img" aria-label="Value per share before and after a cash issue and a bonus issue">
+<title>Value per share before and after a cash issue and a bonus issue</title>
+<rect x="0" y="0" width="560" height="390" fill="#FFFFFF"/>
+<text x="280" y="26" font-size="16" text-anchor="middle" fill="#102A43" font-weight="bold">Value per share in a double increase of capital</text>
+<line x1="90" y1="300" x2="530" y2="300" stroke="#102A43" stroke-width="2"/>
+<line x1="90" y1="300" x2="90" y2="60" stroke="#102A43" stroke-width="2"/>
+<text x="82" y="305.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="normal">0</text>
+<text x="82" y="247.5" font-size="13" text-anchor="end" fill="#102A43" font-weight="normal">4 000</text>
+<text x="82" y="190.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="normal">8 000</text>
+<text x="82" y="132.5" font-size="13" text-anchor="end" fill="#102A43" font-weight="normal">12 000</text>
+<text x="82" y="75.0" font-size="13" text-anchor="end" fill="#102A43" font-weight="normal">16 000</text>
+<rect x="120" y="84.4" width="90" height="215.6" rx="0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="165.0" y="76.4" font-size="14" text-anchor="middle" fill="#102A43" font-weight="bold">15 000</text>
+<text x="165.0" y="320" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Before</text>
+<rect x="265" y="93.0" width="90" height="207.0" rx="0" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="310.0" y="85.0" font-size="14" text-anchor="middle" fill="#2563EB" font-weight="bold">14 400</text>
+<text x="310.0" y="320" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">After cash issue</text>
+<rect x="410" y="127.5" width="90" height="172.5" rx="0" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="455.0" y="119.5" font-size="14" text-anchor="middle" fill="#047857" font-weight="bold">12 000</text>
+<text x="455.0" y="320" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">After bonus issue</text>
+<text x="300" y="350" font-size="14" text-anchor="middle" fill="#B45309" font-weight="bold">DS = 15 000 - 14 400 = 600;  DA = 14 400 - 12 000 = 2 400</text>
+<text x="300" y="374" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Figures in FCFA, invented for practice</text>
+</svg>

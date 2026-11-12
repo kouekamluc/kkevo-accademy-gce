@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<polygon points="220,60.2 70,320 370,320" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="212.5" y1="73.2" x2="227.5" y2="73.2" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="182.5" y1="125.1" x2="257.5" y2="125.1" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<line x1="220" y1="73.2" x2="220" y2="320" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+<text x="220" y="38.2" font-size="14" fill="#102A43" text-anchor="middle" font-weight="bold">Q (quartz, chert)</text>
+<text x="70" y="342" font-size="14" fill="#102A43" text-anchor="middle" font-weight="bold">F (feldspar)</text>
+<text x="370" y="342" font-size="14" fill="#102A43" text-anchor="middle" font-weight="bold">L (rock fragments)</text>
+<circle cx="220" cy="68" r="3" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<line x1="220" y1="68" x2="394" y2="47" stroke="#9FB3C8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="400" y="52" font-size="14" fill="#102A43" text-anchor="start" font-weight="normal">quartz arenite</text>
+<circle cx="209.5" cy="99.2" r="3" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<line x1="209.5" y1="99.2" x2="156" y2="107" stroke="#9FB3C8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="150" y="112" font-size="14" fill="#102A43" text-anchor="end" font-weight="normal">subarkose</text>
+<circle cx="230.5" cy="99.2" r="3" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<line x1="230.5" y1="99.2" x2="394" y2="107" stroke="#9FB3C8" stroke-width="1.5" stroke-linecap="round"/>
+<text x="400" y="112" font-size="14" fill="#102A43" text-anchor="start" font-weight="normal">sublitharenite</text>
+<text x="167.5" y="255" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">arkose</text>
+<text x="277" y="262.8" font-size="14" fill="#102A43" text-anchor="middle" font-weight="normal">lithic arenite</text>
+<text x="235.5" y="79.2" font-size="13" fill="#2563EB" text-anchor="start" font-weight="normal">95</text>
+<text x="265.5" y="131.1" font-size="13" fill="#2563EB" text-anchor="start" font-weight="normal">75</text>
+<circle cx="191.9" cy="157.6" r="6" fill="#047857" stroke="#047857" stroke-width="2"/>
+<text x="181.9" y="162.6" font-size="15" fill="#047857" text-anchor="end" font-weight="bold">A</text>
+<text x="550" y="280" font-size="13" fill="#B45309" text-anchor="end" font-weight="normal">Arenites: under 15% matrix</text>
+<text x="550" y="298" font-size="13" fill="#B45309" text-anchor="end" font-weight="normal">Wackes: over 15% matrix</text>
+</svg>

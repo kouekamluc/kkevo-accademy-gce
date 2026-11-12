@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<title>Isoquant and isocost: the least-cost combination of capital and labour</title>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<line x1="80" y1="315" x2="530" y2="315" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="80" y1="315" x2="80" y2="25" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="530.0" y="339.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end">Labour (workers)</text>
+<text x="88.0" y="29.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start">Capital (machines)</text>
+<text x="72.0" y="333.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end">0</text>
+<path d="M174.4,90.0 L178.0,98.1 L181.5,105.6 L185.0,112.7 L188.5,119.2 L192.1,125.4 L195.6,131.2 L199.1,136.6 L202.7,141.7 L206.2,146.6 L209.7,151.2 L213.2,155.5 L216.8,159.6 L220.3,163.5 L223.8,167.2 L227.3,170.8 L230.9,174.1 L234.4,177.4 L237.9,180.4 L241.4,183.4 L245.0,186.2 L248.5,188.9 L252.0,191.5 L255.5,193.9 L259.1,196.3 L262.6,198.6 L266.1,200.8 L269.6,202.9 L273.2,205.0 L276.7,207.0 L280.2,208.9 L283.7,210.7 L287.3,212.5 L290.8,214.2 L294.3,215.9 L297.9,217.5 L301.4,219.0 L304.9,220.5 L308.4,222.0 L312.0,223.4 L315.5,224.8 L319.0,226.1 L322.5,227.4 L326.1,228.6 L329.6,229.9 L333.1,231.0 L336.6,232.2 L340.2,233.3 L343.7,234.4 L347.2,235.5 L350.7,236.5 L354.3,237.5 L357.8,238.5 L361.3,239.5 L364.8,240.4 L368.4,241.3 L371.9,242.2 L375.4,243.1 L378.9,243.9 L382.5,244.7 L386.0,245.6" fill="none" stroke="#102A43" stroke-width="2.5"/>
+<text x="390.0" y="250.6" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="start" font-weight="700">Q = 10</text>
+<path d="M268.9,90.0 L272.3,93.9 L275.6,97.7 L279.0,101.4 L282.4,105.0 L285.7,108.4 L289.1,111.7 L292.5,115.0 L295.8,118.1 L299.2,121.1 L302.6,124.1 L305.9,126.9 L309.3,129.7 L312.7,132.3 L316.0,135.0 L319.4,137.5 L322.8,139.9 L326.2,142.3 L329.5,144.7 L332.9,146.9 L336.3,149.2 L339.6,151.3 L343.0,153.4 L346.4,155.4 L349.7,157.4 L353.1,159.4 L356.5,161.3 L359.8,163.1 L363.2,164.9 L366.6,166.7 L369.9,168.4 L373.3,170.1 L376.7,171.7 L380.0,173.4 L383.4,174.9 L386.8,176.5 L390.2,178.0 L393.5,179.4 L396.9,180.9 L400.3,182.3 L403.6,183.7 L407.0,185.0 L410.4,186.4 L413.7,187.7 L417.1,188.9 L420.5,190.2 L423.8,191.4 L427.2,192.6 L430.6,193.8 L433.9,194.9 L437.3,196.1 L440.7,197.2 L444.1,198.3 L447.4,199.3 L450.8,200.4 L454.2,201.4 L457.5,202.4 L460.9,203.4 L464.3,204.4 L467.6,205.4 L471.0,206.3" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+<text x="475.0" y="201.3" font-family="Inter, Arial, sans-serif" font-size="13" fill="#2563EB" text-anchor="start" font-weight="700">Q = 14.1</text>
+<path d="M80.0,65.0 L420.0,315.0" fill="none" stroke="#B45309" stroke-width="3"/>
+<text x="426.0" y="307.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#B45309" text-anchor="start" font-weight="700">Isocost</text>
+<circle cx="250.0" cy="190.0" r="4.5" fill="#047857"/>
+<line x1="250.0" y1="190.0" x2="250.0" y2="315.0" stroke="#047857" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="80.0" y1="190.0" x2="250.0" y2="190.0" stroke="#047857" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="260.0" y="180.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#047857" text-anchor="start" font-weight="700">E</text>
+<text x="250.0" y="335.0" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle">20</text>
+<text x="72.0" y="195.0" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="end">5</text>
+<text x="72.0" y="70.0" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="end">10</text>
+</svg>

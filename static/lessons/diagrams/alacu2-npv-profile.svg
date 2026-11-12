@@ -1,0 +1,24 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker></defs>
+<text x="280" y="22" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">NPV against the discount rate</text>
+<line x1="90" y1="70" x2="90" y2="260" stroke="#102A43" stroke-width="2"/>
+<line x1="90" y1="170" x2="530" y2="170" stroke="#102A43" stroke-width="2"/>
+<line x1="197.5" y1="87.95" x2="466.25" y2="204.6" stroke="#2563EB" stroke-width="2"/>
+<line x1="197.5" y1="166" x2="197.5" y2="174" stroke="#102A43" stroke-width="2"/>
+<text x="197.5" y="212" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">10%</text>
+<line x1="305" y1="166" x2="305" y2="174" stroke="#102A43" stroke-width="2"/>
+<text x="305" y="212" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">12%</text>
+<line x1="412.5" y1="166" x2="412.5" y2="174" stroke="#102A43" stroke-width="2"/>
+<text x="412.5" y="212" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">14%</text>
+<line x1="520" y1="166" x2="520" y2="174" stroke="#102A43" stroke-width="2"/>
+<text x="520" y="212" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">16%</text>
+<circle cx="197.5" cy="87.95" r="5" fill="#2563EB"/>
+<circle cx="466.25" cy="204.6" r="5" fill="#2563EB"/>
+<circle cx="386.535" cy="170" r="6" fill="#047857"/>
+<text x="209.5" y="91.95" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">+820 500 at 10%</text>
+<text x="458.25" y="232.6" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">-346 000 at 15%</text>
+<text x="386.535" y="114" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#047857">IRR about 13.5%</text>
+<line x1="386.535" y1="126" x2="386.535" y2="160" stroke="#047857" stroke-width="2" marker-end="url(#ar)"/>
+<text x="98" y="82" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">NPV (FCFA)</text>
+<text x="520" y="300" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">discount rate</text>
+</svg>

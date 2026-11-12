@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs><rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/><text x="280" y="26" font-size="16" text-anchor="middle" font-weight="bold" fill="#102A43">A doubtful customer: three outcomes at the year end</text>
+<rect x="20" y="50" width="150" height="56" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="95" y="74" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">411 Customers</text>
+<text x="95" y="92" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">healthy debts</text>
+<rect x="205" y="50" width="170" height="56" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="290" y="74" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">416 Doubtful</text>
+<text x="290" y="92" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">customers (TTC)</text>
+<rect x="400" y="50" width="145" height="56" rx="8" fill="#FFFFFF" stroke="#B45309" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="472" y="74" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">491 Impairment</text>
+<text x="472" y="92" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">on HT amount</text>
+<line x1="170" y1="78" x2="203" y2="78" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="375" y1="78" x2="398" y2="78" stroke="#B45309" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="20" y="200" width="160" height="120" rx="8" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="100" y="238" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">Paid</text>
+<text x="100" y="256" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Debit 521</text>
+<text x="100" y="274" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Credit 416 (TTC)</text>
+<text x="100" y="292" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Reverse its 491</text>
+<rect x="200" y="200" width="160" height="120" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="238" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">Still doubtful</text>
+<text x="280" y="256" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Needed vs old:</text>
+<text x="280" y="274" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">up: 6594 / 491</text>
+<text x="280" y="292" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">down: 491 / 7594</text>
+<rect x="380" y="200" width="165" height="120" rx="8" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+<text x="462" y="228" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">Lost</text>
+<text x="462" y="247" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Debit 651 (HT)</text>
+<text x="462" y="265" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Debit 4431 (VAT)</text>
+<text x="462" y="283" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Credit 416 (TTC)</text>
+<text x="462" y="301" font-size="14" text-anchor="middle" font-weight="normal" fill="#102A43">Reverse its 491</text>
+<line x1="250" y1="106" x2="100" y2="198" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="290" y1="106" x2="280" y2="198" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="330" y1="106" x2="462" y2="198" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/></svg>

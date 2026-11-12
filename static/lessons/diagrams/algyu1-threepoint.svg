@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<rect x="80" y="34" width="360" height="270" rx="0" fill="#FFFFFF" stroke="#102A43" stroke-width="2.5"/>
+<line x1="110" y1="304" x2="110" y2="309" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="110" y="324" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">0</text>
+<line x1="170" y1="304" x2="170" y2="309" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="170" y="324" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">200</text>
+<line x1="230" y1="304" x2="230" y2="309" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="230" y="324" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">400</text>
+<line x1="290" y1="304" x2="290" y2="309" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="290" y="324" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">600</text>
+<line x1="350" y1="304" x2="350" y2="309" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="350" y="324" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">800</text>
+<line x1="410" y1="304" x2="410" y2="309" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="410" y="324" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">1000</text>
+<line x1="75" y1="274" x2="80" y2="274" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="72" y="279" font-size="13" fill="#102A43" text-anchor="end" font-weight="normal">0</text>
+<line x1="75" y1="214" x2="80" y2="214" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="72" y="219" font-size="13" fill="#102A43" text-anchor="end" font-weight="normal">200</text>
+<line x1="75" y1="154" x2="80" y2="154" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="72" y="159" font-size="13" fill="#102A43" text-anchor="end" font-weight="normal">400</text>
+<line x1="75" y1="94" x2="80" y2="94" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="72" y="99" font-size="13" fill="#102A43" text-anchor="end" font-weight="normal">600</text>
+<line x1="75" y1="34" x2="80" y2="34" stroke="#102A43" stroke-width="1.5" stroke-linecap="round"/>
+<text x="72" y="39" font-size="13" fill="#102A43" text-anchor="end" font-weight="normal">800</text>
+<text x="260" y="342" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">east (m)</text>
+<text x="26" y="169" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal" transform="rotate(-90 26 169)">north (m)</text>
+<polyline points="80,251.5 83,253.8 86,256 89,258.2 92,260.5 95,262.8 98,265 101,267.2 104,269.5 107,271.8 110,274 113,276.2 116,278.5 119,280.8 122,283 125,285.2 128,287.5 131,289.8 134,292 137,294.2 140,296.5 143,298.8 146,301 149,303.2" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linejoin="round"/>
+<text x="145" y="298.2" font-size="13" fill="#2563EB" text-anchor="end" font-weight="bold">300</text>
+<polyline points="80,176.5 83,178.8 86,181 89,183.2 92,185.5 95,187.8 98,190 101,192.2 104,194.5 107,196.8 110,199 113,201.2 116,203.5 119,205.8 122,208 125,210.2 128,212.5 131,214.8 134,217 137,219.2 140,221.5 143,223.8 146,226 149,228.2 152,230.5 155,232.8 158,235 161,237.2 164,239.5 167,241.8 170,244 173,246.2 176,248.5 179,250.8 182,253 185,255.2 188,257.5 191,259.8 194,262 197,264.2 200,266.5 203,268.8 206,271 209,273.2 212,275.5 215,277.8 218,280 221,282.2 224,284.5 227,286.8 230,289 233,291.2 236,293.5 239,295.8 242,298 245,300.2 248,302.5" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linejoin="round"/>
+<text x="244" y="297.5" font-size="13" fill="#2563EB" text-anchor="end" font-weight="bold">260</text>
+<polyline points="80,101.5 83,103.8 86,106 89,108.2 92,110.5 95,112.8 98,115 101,117.2 104,119.5 107,121.8 110,124 113,126.2 116,128.5 119,130.8 122,133 125,135.2 128,137.5 131,139.8 134,142 137,144.2 140,146.5 143,148.8 146,151 149,153.2 152,155.5 155,157.8 158,160 161,162.2 164,164.5 167,166.8 170,169 173,171.2 176,173.5 179,175.8 182,178 185,180.2 188,182.5 191,184.8 194,187 197,189.2 200,191.5 203,193.8 206,196 209,198.2 212,200.5 215,202.8 218,205 221,207.2 224,209.5 227,211.8 230,214 233,216.2 236,218.5 239,220.8 242,223 245,225.2 248,227.5 251,229.8 254,232 257,234.2 260,236.5 263,238.8 266,241 269,243.2 272,245.5 275,247.8 278,250 281,252.2 284,254.5 287,256.8 290,259 293,261.2 296,263.5 299,265.8 302,268 305,270.2 308,272.5 311,274.8 314,277 317,279.2 320,281.5 323,283.8 326,286 329,288.2 332,290.5 335,292.8 338,295 341,297.2 344,299.5 347,301.8 350,304" fill="none" stroke="#047857" stroke-width="2.5" stroke-linejoin="round"/>
+<text x="346" y="299" font-size="13" fill="#047857" text-anchor="end" font-weight="bold">220</text>
+<polyline points="92,35.5 95,37.8 98,40 101,42.2 104,44.5 107,46.8 110,49 113,51.2 116,53.5 119,55.8 122,58 125,60.2 128,62.5 131,64.8 134,67 137,69.2 140,71.5 143,73.8 146,76 149,78.2 152,80.5 155,82.8 158,85 161,87.2 164,89.5 167,91.8 170,94 173,96.2 176,98.5 179,100.8 182,103 185,105.2 188,107.5 191,109.8 194,112 197,114.2 200,116.5 203,118.7 206,121 209,123.2 212,125.5 215,127.8 218,130 221,132.2 224,134.5 227,136.8 230,139 233,141.2 236,143.5 239,145.8 242,148 245,150.2 248,152.5 251,154.8 254,157 257,159.2 260,161.5 263,163.8 266,166 269,168.2 272,170.5 275,172.8 278,175 281,177.2 284,179.5 287,181.8 290,184 293,186.2 296,188.5 299,190.8 302,193 305,195.2 308,197.5 311,199.8 314,202 317,204.2 320,206.5 323,208.8 326,211 329,213.2 332,215.5 335,217.8 338,220 341,222.2 344,224.5 347,226.8 350,229 353,231.2 356,233.5 359,235.8 362,238 365,240.2 368,242.5 371,244.8 374,247 377,249.2 380,251.5 383,253.8 386,256 389,258.2 392,260.5 395,262.8 398,265 401,267.2 404,269.5 407,271.8 410,274 413,276.2 416,278.5 419,280.8 422,283 425,285.2 428,287.5 431,289.8 434,292 437,294.2 440,296.5" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linejoin="round"/>
+<text x="436" y="291.5" font-size="13" fill="#2563EB" text-anchor="end" font-weight="bold">180</text>
+<polyline points="191,34.8 194,37 197,39.2 200,41.5 203,43.8 206,46 209,48.2 212,50.5 215,52.8 218,55 221,57.2 224,59.5 227,61.8 230,64 233,66.2 236,68.5 239,70.8 242,73 245,75.2 248,77.5 251,79.8 254,82 257,84.2 260,86.5 263,88.7 266,91 269,93.2 272,95.5 275,97.8 278,100 281,102.2 284,104.5 287,106.8 290,109 293,111.2 296,113.5 299,115.8 302,118 305,120.2 308,122.5 311,124.8 314,127 317,129.2 320,131.5 323,133.8 326,136 329,138.2 332,140.5 335,142.8 338,145 341,147.2 344,149.5 347,151.8 350,154 353,156.2 356,158.5 359,160.8 362,163 365,165.2 368,167.5 371,169.8 374,172 377,174.2 380,176.5 383,178.8 386,181 389,183.2 392,185.5 395,187.8 398,190 401,192.2 404,194.5 407,196.8 410,199 413,201.2 416,203.5 419,205.8 422,208 425,210.2 428,212.5 431,214.8 434,217 437,219.2 440,221.5" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linejoin="round"/>
+<text x="436" y="216.5" font-size="13" fill="#2563EB" text-anchor="end" font-weight="bold">140</text>
+<line x1="278" y1="178" x2="308.6" y2="137.2" stroke="#B45309" stroke-width="3" stroke-linecap="round" marker-end="url(#aha)"/>
+<text x="316.6" y="141.2" font-size="13" fill="#B45309" text-anchor="start" font-weight="bold">dip 11</text>
+<circle cx="110" cy="274" r="6" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="120" y="266" font-size="14" fill="#102A43" text-anchor="start" font-weight="bold">A 300 m</text>
+<circle cx="410" cy="274" r="6" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="400" y="266" font-size="14" fill="#102A43" text-anchor="end" font-weight="bold">B 180 m</text>
+<circle cx="110" cy="124" r="6" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="120" y="128" font-size="14" fill="#102A43" text-anchor="start" font-weight="bold">C 220 m</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img"><title>Schematic of the Cameroon Volcanic Line from the Gulf of Guinea islands to the Adamawa plateau</title><rect width="560" height="360" fill="#fff"/>
+<path d="M20,20 L20,330 L230,330 C215,280 200,250 205,215 C210,180 170,150 120,120 C80,95 60,60 70,20 Z" fill="#EFF6FF"/>
+<path d="M230,330 C215,280 200,250 205,215 C210,180 170,150 120,120 C80,95 60,60 70,20" fill="none" stroke="#2563EB" stroke-width="2"/>
+<text x="80" y="300" font-size="13" text-anchor="middle" fill="#2563EB" font-style="italic">Gulf of Guinea</text>
+<text x="300" y="345" font-size="13" text-anchor="middle" fill="#102A43" font-style="italic">Africa (land)</text>
+<line x1="50" y1="288" x2="470" y2="52" stroke="#B45309" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M62,278 L70,262 L78,278 Z" fill="#102A43"/>
+<text x="58" y="275" font-size="13" text-anchor="end" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Annob&#243;n</text>
+<path d="M97,246 L105,230 L113,246 Z" fill="#102A43"/>
+<text x="93" y="243" font-size="13" text-anchor="end" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">S&#227;o Tom&#233;</text>
+<path d="M132,214 L140,198 L148,214 Z" fill="#102A43"/>
+<text x="128" y="211" font-size="13" text-anchor="end" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Pr&#237;ncipe</text>
+<path d="M167,182 L175,166 L183,182 Z" fill="#102A43"/>
+<text x="163" y="179" font-size="13" text-anchor="end" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Bioko</text>
+<path d="M229,171 L240,149 L251,171 Z" fill="#B45309"/>
+<text x="254" y="166" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Mt Cameroon</text>
+<path d="M274,140 L282,124 L290,140 Z" fill="#102A43"/>
+<text x="296" y="138" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Manengouba</text>
+<path d="M314,114 L322,98 L330,114 Z" fill="#102A43"/>
+<text x="336" y="112" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Bamboutos</text>
+<path d="M354,88 L362,72 L370,88 Z" fill="#102A43"/>
+<text x="376" y="86" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Oku</text>
+<path d="M432,72 L440,56 L448,72 Z" fill="#102A43"/>
+<text x="440" y="50" font-size="13" text-anchor="middle" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Adamawa volcanoes</text>
+<text x="100" y="150" font-size="13" text-anchor="middle" fill="#2563EB" font-weight="700">Oceanic sector</text>
+<text x="100" y="166" font-size="13" text-anchor="middle" fill="#2563EB">(volcanic islands)</text>
+<text x="440" y="190" font-size="13" text-anchor="middle" fill="#B45309" font-weight="700">Continental sector</text>
+<text x="440" y="206" font-size="13" text-anchor="middle" fill="#B45309">(mountains, crater lakes,</text>
+<text x="440" y="222" font-size="13" text-anchor="middle" fill="#B45309">e.g. Lakes Nyos, Barombi)</text>
+<text x="380" y="262" font-size="13" text-anchor="middle" fill="#102A43">Line trends SW to NE for about</text>
+<text x="380" y="278" font-size="13" text-anchor="middle" fill="#102A43">1,600 km (check your textbook)</text>
+<text x="380" y="305" font-size="13" text-anchor="middle" fill="#102A43" font-style="italic">Schematic, not to scale</text>
+</svg>

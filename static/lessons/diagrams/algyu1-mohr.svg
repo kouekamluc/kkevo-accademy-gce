@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<line x1="50" y1="260" x2="545" y2="260" stroke="#102A43" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<line x1="60" y1="270" x2="60" y2="40" stroke="#102A43" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="545" y="334" font-size="14" fill="#102A43" text-anchor="end" font-weight="normal">normal stress (MPa)</text>
+<text x="68" y="46" font-size="14" fill="#102A43" text-anchor="start" font-weight="normal">shear stress (MPa)</text>
+<text x="60" y="282" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">0</text>
+<polyline points="440,260 439.6,250.1 438.3,240.2 436.1,230.5 433.1,221 429.3,211.8 424.7,203 419.4,194.6 413.3,186.7 406.6,179.4 399.3,172.7 391.4,166.6 383,161.3 374.2,156.7 365,152.9 355.5,149.9 345.8,147.7 335.9,146.4 326,146 316.1,146.4 306.2,147.7 296.5,149.9 287,152.9 277.8,156.7 269,161.3 260.6,166.6 252.7,172.7 245.4,179.4 238.7,186.7 232.6,194.6 227.3,203 222.7,211.8 218.9,221 215.9,230.5 213.7,240.2 212.4,250.1 212,260" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="212" cy="260" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="440" cy="260" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<circle cx="326" cy="260" r="4" fill="#102A43" stroke="#102A43" stroke-width="2"/>
+<text x="212" y="282" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">sigma3 = 40</text>
+<text x="450" y="282" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">sigma1 = 100</text>
+<text x="308" y="282" font-size="13" fill="#102A43" text-anchor="middle" font-weight="normal">centre 70</text>
+<line x1="326" y1="260" x2="383" y2="161.3" stroke="#047857" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="383" y1="161.3" x2="383" y2="260" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<line x1="60" y1="161.3" x2="383" y2="161.3" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<circle cx="383" cy="161.3" r="5" fill="#047857" stroke="#047857" stroke-width="2"/>
+<text x="393" y="153.3" font-size="13" fill="#047857" text-anchor="start" font-weight="bold">plane with theta = 30</text>
+<text x="66" y="154.3" font-size="13" fill="#B45309" text-anchor="start" font-weight="normal">shear stress 26</text>
+<text x="383" y="304" font-size="13" fill="#B45309" text-anchor="middle" font-weight="normal">normal stress 85</text>
+<polyline points="360,260 359.8,256.4 359.3,252.9 358.3,249.5 357.1,246.2 355.4,243 353.5,240 351.3,237.2 348.8,234.7 346,232.5 343,230.6" fill="none" stroke="#047857" stroke-width="2" stroke-linejoin="round"/>
+<text x="318" y="230" font-size="13" fill="#047857" text-anchor="end" font-weight="normal">2 theta = 60</text>
+<text x="326" y="116" font-size="13" fill="#2563EB" text-anchor="middle" font-weight="normal">radius = (sigma1 - sigma3)/2 = 30</text>
+</svg>

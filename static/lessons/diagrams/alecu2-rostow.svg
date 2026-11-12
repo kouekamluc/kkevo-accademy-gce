@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Rostow's five stages of economic growth drawn as a staircase">
+<defs><marker id="ah" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#102A43"/></marker><marker id="ahb" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#2563EB"/></marker></defs>
+<rect width="560" height="360" fill="#fff"/>
+<rect x="20.0" y="260.0" width="100.0" height="60.0" rx="4" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="70.0" y="284.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">Traditional</text>
+<text x="70.0" y="302.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">society</text>
+<text x="70.0" y="308.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">1</text>
+<rect x="124.0" y="210.0" width="100.0" height="110.0" rx="4" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="174.0" y="234.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">Preconditions</text>
+<text x="174.0" y="252.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">for take-off</text>
+<text x="174.0" y="308.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">2</text>
+<rect x="228.0" y="160.0" width="100.0" height="160.0" rx="4" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="278.0" y="184.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">Take-off</text>
+<text x="278.0" y="308.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">3</text>
+<rect x="332.0" y="110.0" width="100.0" height="210.0" rx="4" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="382.0" y="134.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">Drive to</text>
+<text x="382.0" y="152.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">maturity</text>
+<text x="382.0" y="308.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">4</text>
+<rect x="436.0" y="60.0" width="100.0" height="260.0" rx="4" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="486.0" y="84.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">High mass</text>
+<text x="486.0" y="102.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="700">consumption</text>
+<text x="486.0" y="308.0" font-size="14" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">5</text>
+<line x1="30.0" y1="60.0" x2="260.0" y2="20.0" stroke="#B45309" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="40.0" y="34.0" font-size="13" fill="#B45309" text-anchor="start" font-family="Inter, Arial, sans-serif">Rising income per head</text>
+</svg>

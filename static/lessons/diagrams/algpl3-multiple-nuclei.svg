@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360"><rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="30.0" y="30.0" width="50.0" height="50.0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.5" rx="0"/>
+<rect x="80.0" y="30.0" width="50.0" height="50.0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.5" rx="0"/>
+<rect x="130.0" y="30.0" width="50.0" height="50.0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.5" rx="0"/>
+<rect x="180.0" y="30.0" width="50.0" height="50.0" fill="#D9E2EC" stroke="#D9E2EC" stroke-width="0.5" rx="0"/>
+<rect x="230.0" y="30.0" width="50.0" height="50.0" fill="#ECFDF5" stroke="#ECFDF5" stroke-width="0.5" rx="0"/>
+<rect x="280.0" y="30.0" width="50.0" height="50.0" fill="#EFF6FF" stroke="#EFF6FF" stroke-width="0.5" rx="0"/>
+<rect x="30.0" y="80.0" width="50.0" height="50.0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.5" rx="0"/>
+<rect x="80.0" y="80.0" width="50.0" height="50.0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.5" rx="0"/>
+<rect x="130.0" y="80.0" width="50.0" height="50.0" fill="#D9E2EC" stroke="#D9E2EC" stroke-width="0.5" rx="0"/>
+<rect x="180.0" y="80.0" width="50.0" height="50.0" fill="#D9E2EC" stroke="#D9E2EC" stroke-width="0.5" rx="0"/>
+<rect x="230.0" y="80.0" width="50.0" height="50.0" fill="#ECFDF5" stroke="#ECFDF5" stroke-width="0.5" rx="0"/>
+<rect x="280.0" y="80.0" width="50.0" height="50.0" fill="#EFF6FF" stroke="#EFF6FF" stroke-width="0.5" rx="0"/>
+<rect x="30.0" y="130.0" width="50.0" height="50.0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.5" rx="0"/>
+<rect x="80.0" y="130.0" width="50.0" height="50.0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.5" rx="0"/>
+<rect x="130.0" y="130.0" width="50.0" height="50.0" fill="#B45309" stroke="#B45309" stroke-width="0.5" rx="0"/>
+<rect x="180.0" y="130.0" width="50.0" height="50.0" fill="#B45309" stroke="#B45309" stroke-width="0.5" rx="0"/>
+<rect x="230.0" y="130.0" width="50.0" height="50.0" fill="#ECFDF5" stroke="#ECFDF5" stroke-width="0.5" rx="0"/>
+<rect x="280.0" y="130.0" width="50.0" height="50.0" fill="#ECFDF5" stroke="#ECFDF5" stroke-width="0.5" rx="0"/>
+<rect x="30.0" y="180.0" width="50.0" height="50.0" fill="#D9E2EC" stroke="#D9E2EC" stroke-width="0.5" rx="0"/>
+<rect x="80.0" y="180.0" width="50.0" height="50.0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.5" rx="0"/>
+<rect x="130.0" y="180.0" width="50.0" height="50.0" fill="#B45309" stroke="#B45309" stroke-width="0.5" rx="0"/>
+<rect x="180.0" y="180.0" width="50.0" height="50.0" fill="#B45309" stroke="#B45309" stroke-width="0.5" rx="0"/>
+<rect x="230.0" y="180.0" width="50.0" height="50.0" fill="#ECFDF5" stroke="#ECFDF5" stroke-width="0.5" rx="0"/>
+<rect x="280.0" y="180.0" width="50.0" height="50.0" fill="#ECFDF5" stroke="#ECFDF5" stroke-width="0.5" rx="0"/>
+<rect x="30.0" y="230.0" width="50.0" height="50.0" fill="#D9E2EC" stroke="#D9E2EC" stroke-width="0.5" rx="0"/>
+<rect x="80.0" y="230.0" width="50.0" height="50.0" fill="#D9E2EC" stroke="#D9E2EC" stroke-width="0.5" rx="0"/>
+<rect x="130.0" y="230.0" width="50.0" height="50.0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.5" rx="0"/>
+<rect x="180.0" y="230.0" width="50.0" height="50.0" fill="#FEF3C7" stroke="#FEF3C7" stroke-width="0.5" rx="0"/>
+<rect x="230.0" y="230.0" width="50.0" height="50.0" fill="#ECFDF5" stroke="#ECFDF5" stroke-width="0.5" rx="0"/>
+<rect x="280.0" y="230.0" width="50.0" height="50.0" fill="#EFF6FF" stroke="#EFF6FF" stroke-width="0.5" rx="0"/>
+<rect x="30.0" y="280.0" width="50.0" height="50.0" fill="#D9E2EC" stroke="#D9E2EC" stroke-width="0.5" rx="0"/>
+<rect x="80.0" y="280.0" width="50.0" height="50.0" fill="#D9E2EC" stroke="#D9E2EC" stroke-width="0.5" rx="0"/>
+<rect x="130.0" y="280.0" width="50.0" height="50.0" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.5" rx="0"/>
+<rect x="180.0" y="280.0" width="50.0" height="50.0" fill="#FEF3C7" stroke="#FEF3C7" stroke-width="0.5" rx="0"/>
+<rect x="230.0" y="280.0" width="50.0" height="50.0" fill="#ECFDF5" stroke="#ECFDF5" stroke-width="0.5" rx="0"/>
+<rect x="280.0" y="280.0" width="50.0" height="50.0" fill="#EFF6FF" stroke="#EFF6FF" stroke-width="0.5" rx="0"/>
+<line x1="180.0" y1="30.0" x2="180.0" y2="80.0" stroke="#102A43" stroke-width="2"/>
+<line x1="130.0" y1="80.0" x2="180.0" y2="80.0" stroke="#102A43" stroke-width="2"/>
+<line x1="230.0" y1="30.0" x2="230.0" y2="80.0" stroke="#102A43" stroke-width="2"/>
+<line x1="280.0" y1="30.0" x2="280.0" y2="80.0" stroke="#102A43" stroke-width="2"/>
+<line x1="130.0" y1="80.0" x2="130.0" y2="130.0" stroke="#102A43" stroke-width="2"/>
+<line x1="130.0" y1="130.0" x2="180.0" y2="130.0" stroke="#102A43" stroke-width="2"/>
+<line x1="230.0" y1="80.0" x2="230.0" y2="130.0" stroke="#102A43" stroke-width="2"/>
+<line x1="180.0" y1="130.0" x2="230.0" y2="130.0" stroke="#102A43" stroke-width="2"/>
+<line x1="280.0" y1="80.0" x2="280.0" y2="130.0" stroke="#102A43" stroke-width="2"/>
+<line x1="280.0" y1="130.0" x2="330.0" y2="130.0" stroke="#102A43" stroke-width="2"/>
+<line x1="30.0" y1="180.0" x2="80.0" y2="180.0" stroke="#102A43" stroke-width="2"/>
+<line x1="130.0" y1="130.0" x2="130.0" y2="180.0" stroke="#102A43" stroke-width="2"/>
+<line x1="230.0" y1="130.0" x2="230.0" y2="180.0" stroke="#102A43" stroke-width="2"/>
+<line x1="80.0" y1="180.0" x2="80.0" y2="230.0" stroke="#102A43" stroke-width="2"/>
+<line x1="130.0" y1="180.0" x2="130.0" y2="230.0" stroke="#102A43" stroke-width="2"/>
+<line x1="80.0" y1="230.0" x2="130.0" y2="230.0" stroke="#102A43" stroke-width="2"/>
+<line x1="130.0" y1="230.0" x2="180.0" y2="230.0" stroke="#102A43" stroke-width="2"/>
+<line x1="230.0" y1="180.0" x2="230.0" y2="230.0" stroke="#102A43" stroke-width="2"/>
+<line x1="180.0" y1="230.0" x2="230.0" y2="230.0" stroke="#102A43" stroke-width="2"/>
+<line x1="280.0" y1="230.0" x2="330.0" y2="230.0" stroke="#102A43" stroke-width="2"/>
+<line x1="30.0" y1="280.0" x2="80.0" y2="280.0" stroke="#102A43" stroke-width="2"/>
+<line x1="130.0" y1="230.0" x2="130.0" y2="280.0" stroke="#102A43" stroke-width="2"/>
+<line x1="180.0" y1="230.0" x2="180.0" y2="280.0" stroke="#102A43" stroke-width="2"/>
+<line x1="230.0" y1="230.0" x2="230.0" y2="280.0" stroke="#102A43" stroke-width="2"/>
+<line x1="280.0" y1="230.0" x2="280.0" y2="280.0" stroke="#102A43" stroke-width="2"/>
+<line x1="80.0" y1="280.0" x2="80.0" y2="330.0" stroke="#102A43" stroke-width="2"/>
+<line x1="130.0" y1="280.0" x2="130.0" y2="330.0" stroke="#102A43" stroke-width="2"/>
+<line x1="180.0" y1="280.0" x2="180.0" y2="330.0" stroke="#102A43" stroke-width="2"/>
+<line x1="230.0" y1="280.0" x2="230.0" y2="330.0" stroke="#102A43" stroke-width="2"/>
+<line x1="280.0" y1="280.0" x2="280.0" y2="330.0" stroke="#102A43" stroke-width="2"/>
+<rect x="30.0" y="30.0" width="300.0" height="300.0" fill="none" stroke="#102A43" stroke-width="2" rx="0"/>
+<text x="92.5" y="117.2" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">3</text>
+<text x="205.0" y="111.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">2</text>
+<text x="267.5" y="186.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">4</text>
+<text x="305.0" y="61.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">5</text>
+<text x="180.0" y="186.0" font-size="16" fill="#FFFFFF" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">1</text>
+<text x="80.0" y="261.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">6</text>
+<text x="155.0" y="261.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">3</text>
+<text x="205.0" y="261.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">7</text>
+<text x="305.0" y="261.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">8</text>
+<text x="55.0" y="311.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">9</text>
+<rect x="352.0" y="40.0" width="14.0" height="14.0" fill="#B45309" stroke="#102A43" stroke-width="1.5" rx="0"/>
+<text x="372.0" y="52.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">1 Central business district</text>
+<rect x="352.0" y="70.0" width="14.0" height="14.0" fill="#D9E2EC" stroke="#102A43" stroke-width="1.5" rx="0"/>
+<text x="372.0" y="82.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">2 Wholesale, light industry</text>
+<rect x="352.0" y="100.0" width="14.0" height="14.0" fill="#FFFFFF" stroke="#102A43" stroke-width="1.5" rx="0"/>
+<text x="372.0" y="112.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">3 Low-class housing</text>
+<rect x="352.0" y="130.0" width="14.0" height="14.0" fill="#ECFDF5" stroke="#102A43" stroke-width="1.5" rx="0"/>
+<text x="372.0" y="142.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">4 Middle-class housing</text>
+<rect x="352.0" y="160.0" width="14.0" height="14.0" fill="#EFF6FF" stroke="#102A43" stroke-width="1.5" rx="0"/>
+<text x="372.0" y="172.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">5 High-class housing</text>
+<rect x="352.0" y="190.0" width="14.0" height="14.0" fill="#D9E2EC" stroke="#102A43" stroke-width="1.5" rx="0"/>
+<text x="372.0" y="202.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">6 Heavy industry</text>
+<rect x="352.0" y="220.0" width="14.0" height="14.0" fill="#FEF3C7" stroke="#102A43" stroke-width="1.5" rx="0"/>
+<text x="372.0" y="232.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">7 Outlying business district</text>
+<rect x="352.0" y="250.0" width="14.0" height="14.0" fill="#EFF6FF" stroke="#102A43" stroke-width="1.5" rx="0"/>
+<text x="372.0" y="262.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">8 Residential suburb</text>
+<rect x="352.0" y="280.0" width="14.0" height="14.0" fill="#D9E2EC" stroke="#102A43" stroke-width="1.5" rx="0"/>
+<text x="372.0" y="292.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">9 Industrial suburb</text>
+<text x="180.0" y="352.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700" font-family="Inter, Arial, sans-serif">Multiple nuclei (Harris and Ullman)</text></svg>

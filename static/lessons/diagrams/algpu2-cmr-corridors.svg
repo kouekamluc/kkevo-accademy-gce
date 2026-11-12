@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img"><title>Schematic of the main transport corridors of Cameroon from the ports of Douala and Kribi</title><rect width="560" height="360" fill="#fff"/>
+<path d="M300,150 L300,90 L330,40" fill="none" stroke="#B45309" stroke-width="4" stroke-linejoin="round"/>
+<path d="M215,270 L350,275 L430,215" fill="none" stroke="#B45309" stroke-width="4" stroke-linejoin="round"/>
+<path d="M95,250 L130,185 L95,140" fill="none" stroke="#B45309" stroke-width="4" stroke-linejoin="round"/>
+<path d="M95,320 L140,270" fill="none" stroke="#B45309" stroke-width="4" stroke-linejoin="round"/>
+<path d="M95,250 L140,270" fill="none" stroke="#B45309" stroke-width="4" stroke-linejoin="round"/>
+<path d="M300,150 L430,215" fill="none" stroke="#B45309" stroke-width="4" stroke-linejoin="round"/>
+<path d="M95,250 L140,270 L215,270 L300,245 L300,150" fill="none" stroke="#102A43" stroke-width="5"/><path d="M95,250 L140,270 L215,270 L300,245 L300,150" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M330,40 L430,40" stroke="#B45309" stroke-width="4" stroke-dasharray="8 5"/><text x="436" y="45" font-size="13" text-anchor="start" fill="#102A43" font-weight="700">to N'Djamena</text>
+<text x="436" y="61" font-size="13" text-anchor="start" fill="#102A43">(Chad)</text>
+<path d="M430,215 L520,215" stroke="#B45309" stroke-width="4" stroke-dasharray="8 5"/><text x="520" y="200" font-size="13" text-anchor="end" fill="#102A43" font-weight="700">to Bangui (CAR)</text>
+<path d="M20,200 L60,200 L70,260 L62,340 L20,340 Z" fill="#BFDBFE"/><text x="40" y="300" font-size="13" text-anchor="middle" fill="#2563EB" font-style="italic">Sea</text>
+<circle cx="95" cy="250" r="8" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<text x="83" y="254" font-size="13" text-anchor="end" fill="#102A43" font-weight="700" stroke="#fff" stroke-width="3" paint-order="stroke">Douala</text>
+<circle cx="95" cy="320" r="8" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<text x="83" y="324" font-size="13" text-anchor="end" fill="#102A43" font-weight="700" stroke="#fff" stroke-width="3" paint-order="stroke">Kribi</text>
+<circle cx="140" cy="270" r="5" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<text x="140" y="292" font-size="13" text-anchor="middle" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Ed&#233;a</text>
+<circle cx="215" cy="270" r="5" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<text x="215" y="294" font-size="13" text-anchor="middle" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Yaound&#233;</text>
+<circle cx="300" cy="245" r="5" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<text x="290" y="237" font-size="13" text-anchor="end" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">B&#233;labo</text>
+<circle cx="300" cy="150" r="5" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<text x="312" y="155" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Ngaound&#233;r&#233;</text>
+<circle cx="300" cy="90" r="5" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<text x="312" y="95" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Garoua</text>
+<circle cx="330" cy="40" r="5" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<text x="318" y="45" font-size="13" text-anchor="end" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Maroua</text>
+<circle cx="130" cy="185" r="5" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<text x="142" y="190" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Bafoussam</text>
+<circle cx="95" cy="140" r="5" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<text x="107" y="145" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Bamenda</text>
+<circle cx="350" cy="275" r="5" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<text x="350" y="299" font-size="13" text-anchor="middle" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Bertoua</text>
+<circle cx="430" cy="215" r="5" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<text x="442" y="239" font-size="13" text-anchor="start" fill="#102A43" stroke="#fff" stroke-width="3" paint-order="stroke">Garoua-Boula&#239;</text>
+<line x1="395" y1="285" x2="425" y2="285" stroke="#102A43" stroke-width="5"/><line x1="395" y1="285" x2="425" y2="285" stroke="#fff" stroke-width="2" stroke-dasharray="6 6"/><text x="432" y="290" font-size="13" text-anchor="start" fill="#102A43">Railway</text>
+<line x1="395" y1="308" x2="425" y2="308" stroke="#B45309" stroke-width="4"/><text x="432" y="313" font-size="13" text-anchor="start" fill="#102A43">Main road</text>
+<circle cx="410" cy="331" r="8" fill="#2563EB" stroke="#102A43" stroke-width="2"/><text x="432" y="336" font-size="13" text-anchor="start" fill="#102A43">Seaport</text>
+<text x="20" y="22" font-size="13" text-anchor="start" fill="#102A43" font-style="italic">Schematic, not to scale</text>
+</svg>

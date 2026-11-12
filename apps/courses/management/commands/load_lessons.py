@@ -28,6 +28,7 @@ from apps.academics import gce_curriculum
 from apps.academics.management.commands.load_gce_curriculum import COURSE_TAG
 from apps.academics.management.commands.load_gce_curriculum import Command as CurriculumCommand
 from apps.academics.models import CurriculumReference, SubjectOffering, Syllabus
+from apps.core.db import refresh_planner_statistics
 from apps.courses import course_pages, lesson_content
 from apps.courses.models import Course, Lesson, LessonBlock, Module, Topic
 
@@ -121,6 +122,8 @@ class Command(BaseCommand):
         if counts["kept"] and not options["remove"]:
             self.stdout.write("Existing lessons were kept as they are" + (
                 " (only untouched drafts are refreshed)." if options["refresh"] else "; use --refresh to update untouched drafts."))
+        if not options["dry_run"]:
+            refresh_planner_statistics()
         if options["dry_run"]:
             transaction.set_rollback(True)
             self.stdout.write(self.style.WARNING("Dry run: nothing was saved."))

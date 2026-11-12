@@ -1,0 +1,37 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img"><rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="22" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#102A43">Break-even chart</text>
+<line x1="80" y1="300" x2="530" y2="300" stroke="#102A43" stroke-width="2"/>
+<line x1="80" y1="300" x2="80" y2="40" stroke="#102A43" stroke-width="2"/>
+<text x="86" y="44" text-anchor="start" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">FCFA millions</text>
+<text x="520" y="352" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">units sold</text>
+<text x="72" y="245" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">12</text>
+<line x1="75" y1="240" x2="80" y2="240" stroke="#102A43" stroke-width="2"/>
+<text x="72" y="155" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">30</text>
+<line x1="75" y1="150" x2="80" y2="150" stroke="#102A43" stroke-width="2"/>
+<text x="72" y="55" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">50</text>
+<line x1="75" y1="50" x2="80" y2="50" stroke="#102A43" stroke-width="2"/>
+<text x="72" y="305" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">0</text>
+<line x1="344" y1="300" x2="344" y2="305" stroke="#102A43" stroke-width="2"/>
+<text x="344" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">6 000</text>
+<line x1="432" y1="300" x2="432" y2="305" stroke="#102A43" stroke-width="2"/>
+<text x="432" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">8 000</text>
+<line x1="520" y1="300" x2="520" y2="305" stroke="#102A43" stroke-width="2"/>
+<text x="520" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">10 000</text>
+<line x1="80" y1="240" x2="520" y2="240" stroke="#B45309" stroke-width="2"/>
+<text x="516" y="232" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#B45309">fixed cost</text>
+<line x1="80" y1="240" x2="520" y2="90" stroke="#102A43" stroke-width="2"/>
+<text x="516" y="132" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#102A43">total cost</text>
+<line x1="80" y1="300" x2="520" y2="50" stroke="#2563EB" stroke-width="2"/>
+<text x="516" y="44" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#2563EB">sales revenue</text>
+<line x1="344" y1="150" x2="344" y2="300" stroke="#102A43" stroke-width="2" stroke-dasharray="5,4"/>
+<line x1="80" y1="150" x2="344" y2="150" stroke="#102A43" stroke-width="2" stroke-dasharray="5,4"/>
+<circle cx="344" cy="150" r="5" fill="#047857"/>
+<line x1="432" y1="100" x2="432" y2="300" stroke="#102A43" stroke-width="2" stroke-dasharray="2,4"/>
+<line x1="344" y1="334" x2="432" y2="334" stroke="#047857" stroke-width="2"/>
+<line x1="344" y1="328" x2="344" y2="340" stroke="#047857" stroke-width="2"/>
+<line x1="432" y1="328" x2="432" y2="340" stroke="#047857" stroke-width="2"/>
+<text x="334" y="140" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857">break-even point</text>
+<text x="348" y="352" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#047857">margin of safety</text>
+<text x="480" y="96" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#047857">profit</text>
+<text x="170" y="232" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="400" fill="#B91C1C">loss</text>
+</svg>

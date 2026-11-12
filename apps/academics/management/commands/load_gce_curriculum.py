@@ -18,6 +18,7 @@ from django.utils.text import slugify
 
 from apps.academics import gce_curriculum as data
 from apps.academics.models import AcademicLevel, AcademicPathway, CurriculumReference, Subject, SubjectOffering, Syllabus
+from apps.core.db import refresh_planner_statistics
 from apps.courses.models import Course, Lesson, Module, Topic
 
 COURSE_TAG = "[gce-guide]"  # stored in Course.description so --remove can find these outlines
@@ -165,6 +166,8 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS(
             ("Dry run, would load: " if options["dry_run"] else "GCE curriculum loaded: ") + ", ".join(f"{n} new {k}" for k, n in counts.items()) + "."))
         self.stdout.write("Syllabi are unofficial drafts; course outlines are drafts with no lessons yet.")
+        if not options["dry_run"]:
+            refresh_planner_statistics()
         if options["dry_run"]:
             transaction.set_rollback(True)
             self.stdout.write(self.style.WARNING("Dry run: nothing was saved."))

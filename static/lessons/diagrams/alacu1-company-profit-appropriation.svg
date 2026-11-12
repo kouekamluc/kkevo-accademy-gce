@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img" aria-label="Order of appropriation of a company's profit">
+<title>Order of appropriation of a company's profit</title><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="26" font-size="16" text-anchor="middle" fill="#102A43" font-weight="bold">Appropriation of a company's profit</text>
+<rect x="40" y="42" width="480" height="32" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="62.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">Net profit for the year</text>
+<rect x="40" y="82" width="480" height="32" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="102.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">− Losses brought forward (if any)</text>
+<line x1="280.0" y1="74" x2="280.0" y2="81" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="122" width="480" height="32" rx="8" fill="#EFF6FF" stroke="#B45309" stroke-width="2"/>
+<text x="280.0" y="142.9" font-size="14" text-anchor="middle" fill="#B45309" font-weight="normal">− Legal reserve: 10% until it reaches 20% of capital</text>
+<line x1="280.0" y1="114" x2="280.0" y2="121" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="162" width="480" height="32" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="182.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">− Statutory reserves (as the statutes say)</text>
+<line x1="280.0" y1="154" x2="280.0" y2="161" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="202" width="480" height="32" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="222.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">+ Profit brought forward (credit)</text>
+<line x1="280.0" y1="194" x2="280.0" y2="201" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="242" width="480" height="32" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280.0" y="262.9" font-size="14" text-anchor="middle" fill="#047857" font-weight="normal">= Distributable profit</text>
+<line x1="280.0" y1="234" x2="280.0" y2="241" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="282" width="480" height="32" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280.0" y="302.9" font-size="14" text-anchor="middle" fill="#2563EB" font-weight="normal">First dividend, optional reserves, super dividend</text>
+<line x1="280.0" y1="274" x2="280.0" y2="281" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="322" width="480" height="32" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="342.9" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">Remainder: retained earnings carried forward</text>
+<line x1="280.0" y1="314" x2="280.0" y2="321" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+</svg>

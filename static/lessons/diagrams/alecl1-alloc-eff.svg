@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<title>Allocative efficiency where marginal benefit equals marginal cost</title>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<line x1="80" y1="310" x2="520" y2="310" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="80" y1="310" x2="80" y2="30" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="520.0" y="334.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end">Quantity</text>
+<text x="88.0" y="34.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start">Price, MB, MC</text>
+<text x="72.0" y="328.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end">0</text>
+<polygon points="195.0,115.0 264.0,154.0 195.0,193.0" fill="#FDE68A" stroke="none" fill-opacity="0.9"/>
+<path d="M80.0,50.0 L494.0,284.0" fill="none" stroke="#102A43" stroke-width="3"/>
+<path d="M80.0,258.0 L471.0,37.0" fill="none" stroke="#2563EB" stroke-width="3"/>
+<text x="448.0" y="232.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="start" font-weight="700">D = MB</text>
+<text x="429.6" y="41.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#2563EB" text-anchor="end" font-weight="700">S = MC</text>
+<line x1="264.0" y1="154.0" x2="264.0" y2="310.0" stroke="#102A43" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="80.0" y1="154.0" x2="264.0" y2="154.0" stroke="#102A43" stroke-width="2" stroke-dasharray="6 5"/>
+<line x1="195.0" y1="115.0" x2="195.0" y2="310.0" stroke="#B45309" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="264.0" y="332.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="700">Qe</text>
+<text x="195.0" y="332.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#B45309" text-anchor="middle" font-weight="700">Q1</text>
+<text x="72.0" y="159.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="end" font-weight="700">Pe</text>
+<circle cx="264.0" cy="154.0" r="4.5" fill="#047857"/>
+<text x="278.0" y="159.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#047857" text-anchor="start" font-weight="700">MB = MC</text>
+<text x="220.3" y="148.8" font-family="Inter, Arial, sans-serif" font-size="13" fill="#B45309" text-anchor="middle" font-weight="700">loss</text>
+</svg>

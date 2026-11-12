@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360"><rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="112.0" y1="30.0" x2="112.0" y2="290.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="112.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">1</text>
+<line x1="201.7" y1="30.0" x2="201.7" y2="290.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="201.7" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">2</text>
+<line x1="254.2" y1="30.0" x2="254.2" y2="290.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="254.2" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">3</text>
+<line x1="320.3" y1="30.0" x2="320.3" y2="290.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="320.3" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">5</text>
+<line x1="410.0" y1="30.0" x2="410.0" y2="290.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="410.0" y="310.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">10</text>
+<line x1="112.0" y1="290.0" x2="410.0" y2="290.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="106.0" y="295.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">100 000</text>
+<line x1="112.0" y1="237.0" x2="410.0" y2="237.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="106.0" y="242.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">200 000</text>
+<line x1="112.0" y1="167.0" x2="410.0" y2="167.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="106.0" y="172.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">500 000</text>
+<line x1="112.0" y1="114.0" x2="410.0" y2="114.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="106.0" y="119.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">1 000 000</text>
+<line x1="112.0" y1="61.0" x2="410.0" y2="61.0" stroke="#D9E2EC" stroke-width="1"/>
+<text x="106.0" y="66.0" font-size="13" fill="#102A43" text-anchor="end" font-family="Inter, Arial, sans-serif">2 000 000</text>
+<line x1="112.0" y1="30.0" x2="112.0" y2="290.0" stroke="#102A43" stroke-width="2"/>
+<line x1="112.0" y1="290.0" x2="410.0" y2="290.0" stroke="#102A43" stroke-width="2"/>
+<text x="261.0" y="336.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Rank (logarithmic scale)</text>
+<text x="16.0" y="160.0" font-size="13" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif" transform="rotate(-90 16.0 160.0)">Population (log scale)</text>
+<line x1="112.0" y1="61.0" x2="410.0" y2="237.0" stroke="#2563EB" stroke-width="2.5"/>
+<circle cx="112.0" cy="61.0" r="5.0" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<circle cx="201.7" cy="114.0" r="5.0" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<circle cx="254.2" cy="145.0" r="5.0" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<circle cx="291.4" cy="167.0" r="5.0" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<circle cx="320.3" cy="184.0" r="5.0" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<circle cx="343.9" cy="198.0" r="5.0" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<circle cx="363.8" cy="209.7" r="5.0" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<circle cx="381.1" cy="220.0" r="5.0" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<circle cx="396.4" cy="229.0" r="5.0" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<circle cx="410.0" cy="237.0" r="5.0" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<rect x="107.0" y="56.0" width="10.0" height="10.0" fill="#B45309" stroke="#B45309" stroke-width="1" rx="0"/>
+<rect x="196.7" y="175.3" width="10.0" height="10.0" fill="#B45309" stroke="#B45309" stroke-width="1" rx="0"/>
+<rect x="249.2" y="201.0" width="10.0" height="10.0" fill="#B45309" stroke="#B45309" stroke-width="1" rx="0"/>
+<rect x="286.4" y="218.1" width="10.0" height="10.0" fill="#B45309" stroke="#B45309" stroke-width="1" rx="0"/>
+<rect x="315.3" y="232.0" width="10.0" height="10.0" fill="#B45309" stroke="#B45309" stroke-width="1" rx="0"/>
+<rect x="338.9" y="244.4" width="10.0" height="10.0" fill="#B45309" stroke="#B45309" stroke-width="1" rx="0"/>
+<rect x="358.8" y="254.0" width="10.0" height="10.0" fill="#B45309" stroke="#B45309" stroke-width="1" rx="0"/>
+<rect x="376.1" y="262.1" width="10.0" height="10.0" fill="#B45309" stroke="#B45309" stroke-width="1" rx="0"/>
+<rect x="391.4" y="269.8" width="10.0" height="10.0" fill="#B45309" stroke="#B45309" stroke-width="1" rx="0"/>
+<rect x="405.0" y="277.7" width="10.0" height="10.0" fill="#B45309" stroke="#B45309" stroke-width="1" rx="0"/>
+<circle cx="434.0" cy="70.0" r="5.0" fill="#2563EB" stroke="#2563EB" stroke-width="2"/>
+<text x="446.0" y="75.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="700" font-family="Inter, Arial, sans-serif">Country R:</text>
+<text x="446.0" y="93.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">follows the</text>
+<text x="446.0" y="111.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">rank-size rule</text>
+<rect x="429.0" y="145.0" width="10.0" height="10.0" fill="#B45309" stroke="#B45309" stroke-width="1" rx="0"/>
+<text x="446.0" y="155.0" font-size="13" fill="#102A43" text-anchor="start" font-weight="700" font-family="Inter, Arial, sans-serif">Country S:</text>
+<text x="446.0" y="173.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">primate</text>
+<text x="446.0" y="191.0" font-size="13" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">distribution</text></svg>

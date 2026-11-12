@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img" aria-label="Order of work on the dissolution of a partnership">
+<title>Order of work on the dissolution of a partnership</title><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs>
+<rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="26" font-size="16" text-anchor="middle" fill="#102A43" font-weight="bold">Dissolution of a partnership: the order of work</text>
+<rect x="70" y="42" width="420" height="42" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="59.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="bold">1. Transfer assets (except cash)</text>
+<text x="280.0" y="76.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">to the realisation account</text>
+<rect x="70" y="94" width="420" height="42" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="111.0" font-size="13" text-anchor="middle" fill="#102A43" font-weight="bold">2. Sell assets / partners take assets</text>
+<text x="280.0" y="128.1" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">credit realisation account</text>
+<line x1="280.0" y1="84" x2="280.0" y2="93" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="70" y="146" width="420" height="42" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="163.1" font-size="13" text-anchor="middle" fill="#102A43" font-weight="bold">3. Pay creditors, then dissolution costs</text>
+<text x="280.0" y="180.1" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">discounts received: credit realisation</text>
+<line x1="280.0" y1="136" x2="280.0" y2="145" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="70" y="198" width="420" height="42" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="215.1" font-size="13" text-anchor="middle" fill="#102A43" font-weight="bold">4. Repay partners' loans</text>
+<text x="280.0" y="232.1" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">(before partners' capitals)</text>
+<line x1="280.0" y1="188" x2="280.0" y2="197" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="70" y="250" width="420" height="42" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="267.1" font-size="13" text-anchor="middle" fill="#102A43" font-weight="bold">5. Share realisation profit or loss</text>
+<text x="280.0" y="284.1" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">in the profit-sharing ratio</text>
+<line x1="280.0" y1="240" x2="280.0" y2="249" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="70" y="302" width="420" height="42" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280.0" y="319.1" font-size="13" text-anchor="middle" fill="#047857" font-weight="bold">6. Settle capital accounts in cash</text>
+<text x="280.0" y="336.1" font-size="13" text-anchor="middle" fill="#047857" font-weight="normal">the bank account closes at zero</text>
+<line x1="280.0" y1="292" x2="280.0" y2="301" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+</svg>

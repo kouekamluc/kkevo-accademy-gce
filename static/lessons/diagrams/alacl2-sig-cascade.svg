@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker></defs><rect x="0" y="0" width="560" height="360" fill="#FFFFFF"/><rect x="20" y="10" width="290" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="165" y="26" font-size="13" text-anchor="middle" font-weight="bold" fill="#102A43">XA Commercial margin</text>
+<text x="165" y="43" font-size="13" text-anchor="middle" font-weight="normal" fill="#102A43">sales - cost of goods sold</text>
+<line x1="165" y1="50" x2="165" y2="67" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="325" y="64" font-size="13" text-anchor="start" font-weight="normal" fill="#B45309">less purchases, services, taxes</text>
+<rect x="20" y="68" width="290" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="165" y="93" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">XC Value added</text>
+<line x1="165" y1="108" x2="165" y2="125" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="325" y="122" font-size="13" text-anchor="start" font-weight="normal" fill="#B45309">less personnel costs</text>
+<rect x="20" y="126" width="290" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="165" y="151" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">XD Gross operating surplus</text>
+<line x1="165" y1="166" x2="165" y2="183" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="325" y="180" font-size="13" text-anchor="start" font-weight="normal" fill="#B45309">less depreciation, provisions</text>
+<rect x="20" y="184" width="290" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="165" y="209" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">XE Operating result</text>
+<line x1="165" y1="224" x2="165" y2="241" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="325" y="238" font-size="13" text-anchor="start" font-weight="normal" fill="#B45309">plus financial result (XF)</text>
+<rect x="20" y="242" width="290" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="165" y="267" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">XG Result of ordinary activities</text>
+<line x1="165" y1="282" x2="165" y2="299" stroke="#102A43" stroke-width="2" marker-end="url(#ah)"/>
+<text x="325" y="296" font-size="13" text-anchor="start" font-weight="normal" fill="#B45309">plus HAO result (XH), less tax</text>
+<rect x="20" y="300" width="290" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="165" y="325" font-size="14" text-anchor="middle" font-weight="bold" fill="#102A43">XI Net result</text></svg>
