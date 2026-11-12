@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="28" font-family="Inter, Arial, sans-serif" font-size="17" fill="#102A43" text-anchor="middle" font-weight="700">Metrical feet and a line of iambic tetrameter</text>
+<rect x="15" y="50" width="124" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="77" y="78" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Iamb</text>
+<text x="77" y="108" font-family="Inter, Arial, sans-serif" font-size="18" fill="#B45309" text-anchor="middle" font-weight="700">u /</text>
+<text x="77" y="138" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">da-DUM</text>
+<rect x="151" y="50" width="124" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="213" y="78" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Trochee</text>
+<text x="213" y="108" font-family="Inter, Arial, sans-serif" font-size="18" fill="#B45309" text-anchor="middle" font-weight="700">/ u</text>
+<text x="213" y="138" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">DUM-da</text>
+<rect x="287" y="50" width="124" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="349" y="78" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Anapaest</text>
+<text x="349" y="108" font-family="Inter, Arial, sans-serif" font-size="18" fill="#B45309" text-anchor="middle" font-weight="700">u u /</text>
+<text x="349" y="138" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">da-da-DUM</text>
+<rect x="423" y="50" width="124" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="485" y="78" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Dactyl</text>
+<text x="485" y="108" font-family="Inter, Arial, sans-serif" font-size="18" fill="#B45309" text-anchor="middle" font-weight="700">/ u u</text>
+<text x="485" y="138" font-family="Inter, Arial, sans-serif" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">DUM-da-da</text>
+<text x="280" y="190" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">u = unstressed syllable    / = stressed syllable</text>
+<text x="280" y="225" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">A line of four iambs (iambic tetrameter)</text>
+<rect x="50" y="245" width="52" height="44" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="76" y="273" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="400">in</text>
+<text x="76" y="310" font-family="Inter, Arial, sans-serif" font-size="16" fill="#B45309" text-anchor="middle" font-weight="700">u</text>
+<rect x="110" y="245" width="52" height="44" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="136" y="273" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">TO</text>
+<text x="136" y="310" font-family="Inter, Arial, sans-serif" font-size="16" fill="#B45309" text-anchor="middle" font-weight="700">/</text>
+<rect x="170" y="245" width="52" height="44" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="196" y="273" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="400">a</text>
+<text x="196" y="310" font-family="Inter, Arial, sans-serif" font-size="16" fill="#B45309" text-anchor="middle" font-weight="700">u</text>
+<rect x="230" y="245" width="52" height="44" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="256" y="273" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">PILE</text>
+<text x="256" y="310" font-family="Inter, Arial, sans-serif" font-size="16" fill="#B45309" text-anchor="middle" font-weight="700">/</text>
+<rect x="290" y="245" width="52" height="44" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="316" y="273" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="400">be</text>
+<text x="316" y="310" font-family="Inter, Arial, sans-serif" font-size="16" fill="#B45309" text-anchor="middle" font-weight="700">u</text>
+<rect x="350" y="245" width="52" height="44" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="376" y="273" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">SIDE</text>
+<text x="376" y="310" font-family="Inter, Arial, sans-serif" font-size="16" fill="#B45309" text-anchor="middle" font-weight="700">/</text>
+<rect x="410" y="245" width="52" height="44" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="436" y="273" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="400">the</text>
+<text x="436" y="310" font-family="Inter, Arial, sans-serif" font-size="16" fill="#B45309" text-anchor="middle" font-weight="700">u</text>
+<rect x="470" y="245" width="52" height="44" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="496" y="273" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">WALL</text>
+<text x="496" y="310" font-family="Inter, Arial, sans-serif" font-size="16" fill="#B45309" text-anchor="middle" font-weight="700">/</text>
+<line x1="50" y1="322" x2="162" y2="322" stroke="#2563EB" stroke-width="2"/>
+<line x1="170" y1="322" x2="282" y2="322" stroke="#2563EB" stroke-width="2"/>
+<line x1="290" y1="322" x2="402" y2="322" stroke="#2563EB" stroke-width="2"/>
+<line x1="410" y1="322" x2="522" y2="322" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="350" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">Four feet of two syllables: eight syllables in the line</text>
+</svg>

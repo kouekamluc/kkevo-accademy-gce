@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="30" font-family="Inter, Arial, sans-serif" font-size="17" fill="#102A43" text-anchor="middle" font-weight="700">What oral performance leaves in a written poem</text>
+<rect x="180" y="150" width="200" height="60" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280" y="175" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">Oral performance</text>
+<text x="280" y="195" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">(spoken, sung, drummed)</text>
+<rect x="20" y="70" width="240" height="70" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="140" y="98" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">Repetition and refrain</text>
+<text x="140" y="122" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">Helps memory; builds praise</text>
+<rect x="300" y="70" width="240" height="70" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="420" y="98" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">Call and response</text>
+<text x="420" y="122" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">Invites the audience in</text>
+<rect x="20" y="250" width="240" height="70" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="140" y="278" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">Direct address</text>
+<text x="140" y="302" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">Speaks to the dead or to Africa</text>
+<rect x="300" y="250" width="240" height="70" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="420" y="278" font-family="Inter, Arial, sans-serif" font-size="15" fill="#102A43" text-anchor="middle" font-weight="700">Speech rhythm</text>
+<text x="420" y="302" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">Free verse shaped by breath</text>
+<line x1="240" y1="150" x2="200" y2="140" stroke="#102A43" stroke-width="2"/>
+<polygon points="200,140 208.9,138.6 207.2,145.4" fill="#102A43"/>
+<line x1="320" y1="150" x2="360" y2="140" stroke="#102A43" stroke-width="2"/>
+<polygon points="360,140 352.8,145.4 351.1,138.6" fill="#102A43"/>
+<line x1="240" y1="210" x2="200" y2="250" stroke="#102A43" stroke-width="2"/>
+<polygon points="200,250 203.4,241.7 208.3,246.6" fill="#102A43"/>
+<line x1="320" y1="210" x2="360" y2="250" stroke="#102A43" stroke-width="2"/>
+<polygon points="360,250 351.7,246.6 356.6,241.7" fill="#102A43"/>
+</svg>

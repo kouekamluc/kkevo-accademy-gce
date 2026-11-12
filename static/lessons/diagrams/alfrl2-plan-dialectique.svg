@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#102A43">Le plan dialectique</text>
+<rect x="15" y="70" width="160" height="170" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="95.0" y="94" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">TH&#200;SE</text>
+<text x="95.0" y="116" text-anchor="middle" font-size="13" fill="#102A43">Oui, c'est vrai</text>
+<text x="95.0" y="135" text-anchor="middle" font-size="13" fill="#102A43">2 ou 3 arguments</text>
+<text x="95.0" y="154" text-anchor="middle" font-size="13" fill="#102A43">un exemple chacun</text>
+<rect x="200" y="70" width="160" height="170" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280.0" y="94" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">ANTITH&#200;SE</text>
+<text x="280.0" y="116" text-anchor="middle" font-size="13" fill="#102A43">Mais elle a des limites</text>
+<text x="280.0" y="135" text-anchor="middle" font-size="13" fill="#102A43">objections et</text>
+<text x="280.0" y="154" text-anchor="middle" font-size="13" fill="#102A43">contre-exemples</text>
+<rect x="385" y="70" width="160" height="170" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="465.0" y="94" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">SYNTH&#200;SE</text>
+<text x="465.0" y="116" text-anchor="middle" font-size="13" fill="#102A43">R&#233;ponse nuanc&#233;e</text>
+<text x="465.0" y="135" text-anchor="middle" font-size="13" fill="#102A43">conditions, cas,</text>
+<text x="465.0" y="154" text-anchor="middle" font-size="13" fill="#102A43">d&#233;passement</text>
+<line x1="176" y1="155" x2="191" y2="155" stroke="#102A43" stroke-width="2"/>
+<polygon points="199,155 189,149 189,161" fill="#102A43"/>
+<line x1="361" y1="155" x2="376" y2="155" stroke="#102A43" stroke-width="2"/>
+<polygon points="384,155 374,149 374,161" fill="#102A43"/>
+<text x="187" y="262" text-anchor="middle" font-size="13" fill="#B45309">transition</text>
+<text x="372" y="262" text-anchor="middle" font-size="13" fill="#B45309">transition</text>
+<rect x="15" y="285" width="530" height="48" rx="8" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="306" text-anchor="middle" font-size="14" fill="#102A43">La synth&#232;se n&#8217;est pas une r&#233;p&#233;tition de la th&#232;se</text>
+<text x="280" y="324" text-anchor="middle" font-size="14" fill="#102A43">ni un compromis vague : c&#8217;est une r&#233;ponse &#224; la probl&#233;matique.</text>
+</svg>

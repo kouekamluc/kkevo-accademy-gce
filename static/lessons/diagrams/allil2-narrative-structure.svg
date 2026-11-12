@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="t d"><title id="t">Three-part structure</title><desc id="d">Hard Times in three books and Nineteen Eighty-Four in three parts.</desc>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="30" font-size="18" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Three parts each</text>
+<text x="280" y="75" font-size="15" font-weight="700" fill="#2563EB" text-anchor="middle" font-family="Inter, Arial, sans-serif">Hard Times</text>
+<rect x="30" y="90" width="170" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="115" y="126" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Book 1: Sowing</text>
+<rect x="200" y="90" width="170" height="60" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="285" y="126" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Book 2: Reaping</text>
+<rect x="370" y="90" width="170" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="455" y="126" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Book 3: Garnering</text>
+<text x="280" y="200" font-size="15" font-weight="700" fill="#2563EB" text-anchor="middle" font-family="Inter, Arial, sans-serif">Nineteen Eighty-Four</text>
+<rect x="30" y="215" width="170" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="115" y="251" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Part 1: doubt</text>
+<rect x="200" y="215" width="170" height="60" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="285" y="251" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Part 2: love, hope</text>
+<rect x="370" y="215" width="170" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="455" y="251" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Part 3: defeat</text>
+<text x="280" y="320" font-size="14" font-weight="400" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">Both build from cause to consequence</text>
+</svg>

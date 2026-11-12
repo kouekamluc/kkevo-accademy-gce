@@ -1,0 +1,28 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#102A43" font-family="Inter, Arial, sans-serif">Une intervention en quatre temps</text>
+<rect x="20" y="150" width="115" height="70" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="77" y="180" text-anchor="middle" font-size="15" font-weight="bold" fill="#102A43" font-family="Inter, Arial, sans-serif">Position</text>
+<text x="77" y="203" text-anchor="middle" font-size="14" font-weight="normal" fill="#B45309" font-family="Inter, Arial, sans-serif">1</text>
+<text x="77" y="250" text-anchor="middle" font-size="13" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">Je suis pour / contre</text>
+<path d="M137 185 L153 185" stroke="#102A43" stroke-width="2.5" fill="none"/><path d="M148 179 L154 185 L148 191" stroke="#102A43" stroke-width="2.5" fill="none"/>
+<rect x="155" y="150" width="115" height="70" rx="8" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="212" y="180" text-anchor="middle" font-size="15" font-weight="bold" fill="#102A43" font-family="Inter, Arial, sans-serif">Raison</text>
+<text x="212" y="203" text-anchor="middle" font-size="14" font-weight="normal" fill="#B45309" font-family="Inter, Arial, sans-serif">2</text>
+<text x="212" y="250" text-anchor="middle" font-size="13" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">parce que, car</text>
+<path d="M272 185 L288 185" stroke="#102A43" stroke-width="2.5" fill="none"/><path d="M283 179 L289 185 L283 191" stroke="#102A43" stroke-width="2.5" fill="none"/>
+<rect x="290" y="150" width="115" height="70" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="347" y="180" text-anchor="middle" font-size="15" font-weight="bold" fill="#102A43" font-family="Inter, Arial, sans-serif">Exemple</text>
+<text x="347" y="203" text-anchor="middle" font-size="14" font-weight="normal" fill="#B45309" font-family="Inter, Arial, sans-serif">3</text>
+<text x="347" y="250" text-anchor="middle" font-size="13" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">par exemple</text>
+<path d="M407 185 L423 185" stroke="#102A43" stroke-width="2.5" fill="none"/><path d="M418 179 L424 185 L418 191" stroke="#102A43" stroke-width="2.5" fill="none"/>
+<rect x="425" y="150" width="115" height="70" rx="8" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="482" y="180" text-anchor="middle" font-size="15" font-weight="bold" fill="#102A43" font-family="Inter, Arial, sans-serif">Lien</text>
+<text x="482" y="203" text-anchor="middle" font-size="14" font-weight="normal" fill="#B45309" font-family="Inter, Arial, sans-serif">4</text>
+<text x="482" y="250" text-anchor="middle" font-size="13" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">c'est pourquoi</text>
+<rect x="100" y="64" width="260" height="50" rx="8" fill="#FFFFFF" stroke="#B45309" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="230" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#B45309" font-family="Inter, Arial, sans-serif">Concession facultative</text>
+<text x="230" y="106" text-anchor="middle" font-size="14" font-weight="normal" fill="#B45309" font-family="Inter, Arial, sans-serif">Certes..., mais...</text>
+<path d="M230 116 L230 146" stroke="#B45309" stroke-width="2.5" fill="none"/><path d="M224 140 L230 148 L236 140" stroke="#B45309" stroke-width="2.5" fill="none"/>
+<text x="280" y="300" text-anchor="middle" font-size="14" font-weight="normal" fill="#047857" font-family="Inter, Arial, sans-serif">20 à 40 secondes, puis laissez les autres répondre.</text>
+</svg>

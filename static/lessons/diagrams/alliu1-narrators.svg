@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="t d"><title id="t">Where the narrator stands</title><desc id="d">Three panels: a first-person narrator inside the story, a limited narrator beside one character, an omniscient narrator above all characters.</desc>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="32" font-size="18" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Where does the narrator stand?</text>
+<rect x="14" y="56" width="170" height="250" rx="10" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="99" y="82" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">First person</text>
+<text x="99" y="100" font-size="14" font-weight="400" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">I tells it</text>
+<circle cx="54" cy="230" r="17" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="54" y="235" font-size="14" font-weight="700" fill="#047857" text-anchor="middle" font-family="Inter, Arial, sans-serif">I</text>
+<circle cx="99" cy="265" r="17" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="99" y="270" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">B</text>
+<circle cx="144" cy="230" r="17" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="144" y="235" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">C</text>
+<text x="99" y="150" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">inside the story</text>
+<text x="99" y="172" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">sees what I sees</text>
+<rect x="196" y="56" width="170" height="250" rx="10" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="281" y="82" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Third limited</text>
+<text x="281" y="100" font-size="14" font-weight="400" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">one mind</text>
+<circle cx="236" cy="230" r="17" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="236" y="235" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">A</text>
+<circle cx="281" cy="265" r="17" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="281" y="270" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">B</text>
+<circle cx="326" cy="230" r="17" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="326" y="235" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">C</text>
+<text x="281" y="128" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle" font-family="Inter, Arial, sans-serif">narrator</text>
+<line x1="281" y1="136" x2="281" y2="238" stroke="#2563EB" stroke-width="2"/>
+<polygon points="275,234 287,234 281,247" fill="#2563EB"/>
+<text x="281" y="298" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">stays close to B</text>
+<rect x="378" y="56" width="170" height="250" rx="10" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="463" y="82" font-size="16" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Omniscient</text>
+<text x="463" y="100" font-size="14" font-weight="400" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">all minds</text>
+<circle cx="418" cy="230" r="17" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="418" y="235" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">A</text>
+<circle cx="463" cy="265" r="17" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="463" y="270" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">B</text>
+<circle cx="508" cy="230" r="17" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="508" y="235" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">C</text>
+<text x="463" y="122" font-size="13" font-weight="700" fill="#2563EB" text-anchor="middle" font-family="Inter, Arial, sans-serif">narrator above</text>
+<line x1="463" y1="130" x2="418" y2="211" stroke="#2563EB" stroke-width="2"/>
+<line x1="463" y1="130" x2="463" y2="246" stroke="#2563EB" stroke-width="2"/>
+<line x1="463" y1="130" x2="508" y2="211" stroke="#2563EB" stroke-width="2"/>
+<text x="463" y="298" font-size="13" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">knows all of them</text>
+<text x="280" y="338" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">The choice changes what the reader knows and trusts.</text>
+</svg>

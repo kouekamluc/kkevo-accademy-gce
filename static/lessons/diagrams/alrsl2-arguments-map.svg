@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="28" font-size="16" font-weight="bold" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Four classical arguments for God</text>
+<rect x="15" y="44" width="165" height="62" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="27" y="71" font-size="16" font-weight="bold" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Ontological</text>
+<text x="27" y="94" font-size="14" font-weight="normal" fill="#B45309" text-anchor="start" font-family="Inter, Arial, sans-serif">a priori</text>
+<line x1="180" y1="75" x2="208" y2="75" stroke="#047857" stroke-width="3"/>
+<polygon points="208,68 220,75 208,82" fill="#047857"/>
+<rect x="222" y="44" width="323" height="62" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="234" y="70" font-size="14" font-weight="bold" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Starts from the idea of God</text>
+<text x="234" y="92" font-size="13" font-weight="normal" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Anselm, Descartes; critics Gaunilo, Kant</text>
+<rect x="15" y="120" width="165" height="62" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="27" y="147" font-size="16" font-weight="bold" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Cosmological</text>
+<text x="27" y="170" font-size="14" font-weight="normal" fill="#B45309" text-anchor="start" font-family="Inter, Arial, sans-serif">a posteriori</text>
+<line x1="180" y1="151" x2="208" y2="151" stroke="#047857" stroke-width="3"/>
+<polygon points="208,144 220,151 208,158" fill="#047857"/>
+<rect x="222" y="120" width="323" height="62" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="234" y="146" font-size="14" font-weight="bold" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Starts from the world existing</text>
+<text x="234" y="168" font-size="13" font-weight="normal" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Aquinas, Leibniz; critics Hume, Russell</text>
+<rect x="15" y="196" width="165" height="62" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="27" y="223" font-size="16" font-weight="bold" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Teleological</text>
+<text x="27" y="246" font-size="14" font-weight="normal" fill="#B45309" text-anchor="start" font-family="Inter, Arial, sans-serif">a posteriori</text>
+<line x1="180" y1="227" x2="208" y2="227" stroke="#047857" stroke-width="3"/>
+<polygon points="208,220 220,227 208,234" fill="#047857"/>
+<rect x="222" y="196" width="323" height="62" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="234" y="222" font-size="14" font-weight="bold" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Starts from order and purpose</text>
+<text x="234" y="244" font-size="13" font-weight="normal" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Aquinas, Paley; critics Hume, Darwin</text>
+<rect x="15" y="272" width="165" height="62" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="27" y="299" font-size="16" font-weight="bold" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Moral</text>
+<text x="27" y="322" font-size="14" font-weight="normal" fill="#B45309" text-anchor="start" font-family="Inter, Arial, sans-serif">a posteriori</text>
+<line x1="180" y1="303" x2="208" y2="303" stroke="#047857" stroke-width="3"/>
+<polygon points="208,296 220,303 208,310" fill="#047857"/>
+<rect x="222" y="272" width="323" height="62" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="234" y="298" font-size="14" font-weight="bold" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Starts from conscience and duty</text>
+<text x="234" y="320" font-size="13" font-weight="normal" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">Kant, Newman; critics Freud, Euthyphro</text>
+</svg>

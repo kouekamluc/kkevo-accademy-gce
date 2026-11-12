@@ -1,0 +1,37 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Approximate timeline of prophets from 880 to 520 BC"><rect width="560" height="360" fill="#fff"/>
+<text x="280" y="24" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">Prophets in time (dates approximate, BC)</text>
+<line x1="182.5" y1="44" x2="182.5" y2="270" stroke="#102A43" stroke-opacity="0.2" stroke-width="2"/>
+<text x="182.5" y="292" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">850</text>
+<line x1="236.7" y1="44" x2="236.7" y2="270" stroke="#102A43" stroke-opacity="0.2" stroke-width="2"/>
+<text x="236.7" y="292" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">800</text>
+<line x1="290.8" y1="44" x2="290.8" y2="270" stroke="#102A43" stroke-opacity="0.2" stroke-width="2"/>
+<text x="290.8" y="292" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">750</text>
+<line x1="345.0" y1="44" x2="345.0" y2="270" stroke="#102A43" stroke-opacity="0.2" stroke-width="2"/>
+<text x="345.0" y="292" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">700</text>
+<line x1="399.2" y1="44" x2="399.2" y2="270" stroke="#102A43" stroke-opacity="0.2" stroke-width="2"/>
+<text x="399.2" y="292" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">650</text>
+<line x1="453.3" y1="44" x2="453.3" y2="270" stroke="#102A43" stroke-opacity="0.2" stroke-width="2"/>
+<text x="453.3" y="292" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">600</text>
+<line x1="507.5" y1="44" x2="507.5" y2="270" stroke="#102A43" stroke-opacity="0.2" stroke-width="2"/>
+<text x="507.5" y="292" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">550</text>
+<text x="140" y="69" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Elijah</text>
+<rect x="156.5" y="55" width="22.8" height="20" rx="3" fill="#B45309"/>
+<text x="140" y="100" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Amos</text>
+<rect x="274.6" y="86" width="16.3" height="20" rx="3" fill="#2563EB"/>
+<text x="140" y="131" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Hosea</text>
+<rect x="285.4" y="117" width="32.5" height="20" rx="3" fill="#2563EB"/>
+<text x="140" y="162" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Isaiah</text>
+<rect x="301.7" y="148" width="43.3" height="20" rx="3" fill="#2563EB"/>
+<text x="140" y="193" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Jeremiah</text>
+<rect x="424.1" y="179" width="50.9" height="20" rx="3" fill="#047857"/>
+<text x="140" y="224" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Ezekiel</text>
+<rect x="460.9" y="210" width="23.8" height="20" rx="3" fill="#047857"/>
+<text x="140" y="255" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Deutero-Isaiah</text>
+<rect x="507.5" y="241" width="11.9" height="20" rx="3" fill="#047857"/>
+<line x1="321.2" y1="44" x2="321.2" y2="270" stroke="#B45309" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="467.4" y1="44" x2="467.4" y2="270" stroke="#B45309" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="519.4" y1="44" x2="519.4" y2="270" stroke="#B45309" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="317.2" y="312" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" fill="#B45309">722 Samaria falls</text>
+<text x="463.4" y="330" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" fill="#B45309">587 Jerusalem falls</text>
+<text x="523.4" y="348" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" fill="#B45309">539 Cyrus takes Babylon</text>
+</svg>

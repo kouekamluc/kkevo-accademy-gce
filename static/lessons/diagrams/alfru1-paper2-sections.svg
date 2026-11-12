@@ -1,0 +1,34 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker></defs>
+<text x="280" y="34" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Paper 2 Literature: three sections (2023 report)</text>
+<rect x="20" y="60" width="160" height="40" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="100.0" y="85.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">A  Poésie</text>
+<rect x="20" y="108" width="160" height="94" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+<text x="100" y="132" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Baudelaire :</text>
+<text x="100" y="152" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">poèmes choisis</text>
+<text x="100" y="172" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400"></text>
+<text x="100" y="192" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Un poème inconnu</text>
+<rect x="200" y="60" width="160" height="40" rx="8" fill="#EFF6FF" stroke="#047857" stroke-width="2"/>
+<text x="280.0" y="85.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">B  Théâtre</text>
+<rect x="200" y="108" width="160" height="134" rx="8" fill="#FFFFFF" stroke="#047857" stroke-width="2"/>
+<text x="280" y="132" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Marivaux :</text>
+<text x="280" y="152" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Les Fausses</text>
+<text x="280" y="172" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Confidences</text>
+<text x="280" y="192" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400"></text>
+<text x="280" y="212" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Césaire : Le roi</text>
+<text x="280" y="232" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Christophe</text>
+<rect x="380" y="60" width="160" height="40" rx="8" fill="#EFF6FF" stroke="#B45309" stroke-width="2"/>
+<text x="460.0" y="85.0" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">C  Prose</text>
+<rect x="380" y="108" width="160" height="194" rx="8" fill="#FFFFFF" stroke="#B45309" stroke-width="2"/>
+<text x="460" y="132" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Hugo : Le Dernier</text>
+<text x="460" y="152" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Jour d'un condamné</text>
+<text x="460" y="172" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400"></text>
+<text x="460" y="192" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Nkoa Atenga :</text>
+<text x="460" y="212" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">L'Enfant de la</text>
+<text x="460" y="232" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">révolte muette</text>
+<text x="460" y="252" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400"></text>
+<text x="460" y="272" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Bebey : Le Fils</text>
+<text x="460" y="292" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">d'Agatha Moudio</text>
+<text x="280" y="352" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Check your own paper for how many questions to answer.</text>
+</svg>

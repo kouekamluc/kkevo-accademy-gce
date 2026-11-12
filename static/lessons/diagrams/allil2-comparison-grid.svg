@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="t d"><title id="t">Comparison grid</title><desc id="d">Rows: dream, money, ending, stage. Columns: two plays.</desc>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="30" font-size="18" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Comparison grid: two family plays</text>
+<rect x="40" y="50" width="120" height="40" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="100.0" y="76" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Point</text>
+<rect x="160" y="50" width="180" height="40" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="250.0" y="76" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Death of a Salesman</text>
+<rect x="340" y="50" width="180" height="40" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="430.0" y="76" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">A Raisin in the Sun</text>
+<rect x="40" y="90" width="120" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="100.0" y="126" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Dream</text>
+<rect x="160" y="90" width="180" height="60" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="250.0" y="126" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">False, private</text>
+<rect x="340" y="90" width="180" height="60" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="430.0" y="126" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Shared, grows</text>
+<rect x="40" y="150" width="120" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="100.0" y="186" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Money</text>
+<rect x="160" y="150" width="180" height="60" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="250.0" y="186" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Insurance after death</text>
+<rect x="340" y="150" width="180" height="60" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="430.0" y="186" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Insurance cheque</text>
+<rect x="40" y="210" width="120" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="100.0" y="246" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Ending</text>
+<rect x="160" y="210" width="180" height="60" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="250.0" y="246" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Death, requiem</text>
+<rect x="340" y="210" width="180" height="60" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="430.0" y="246" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Family moves on</text>
+<rect x="40" y="270" width="120" height="60" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="100.0" y="306" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Stage</text>
+<rect x="160" y="270" width="180" height="60" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="250.0" y="306" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">House, memory</text>
+<rect x="340" y="270" width="180" height="60" fill="#FFFFFF" stroke="#102A43" stroke-width="2"/>
+<text x="430.0" y="306" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">One apartment</text>
+<text x="280" y="350" font-size="14" font-weight="400" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">Fill your own grid with moments from your copy</text>
+</svg>

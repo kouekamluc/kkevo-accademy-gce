@@ -1,0 +1,24 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker></defs>
+<text x="280" y="34" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Plan dialectique de la dissertation</text>
+<rect x="150" y="56" width="260" height="40" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="280.0" y="81.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Introduction + problématique</text>
+<rect x="20" y="140" width="160" height="80" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="100.0" y="176.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Thèse</text>
+<text x="100.0" y="194.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Le sujet est vrai</text>
+<line x1="280" y1="98" x2="100" y2="138" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<line x1="100" y1="222" x2="280" y2="268" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<rect x="200" y="140" width="160" height="80" rx="8" fill="#EFF6FF" stroke="#B45309" stroke-width="2"/>
+<text x="280.0" y="176.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Antithèse</text>
+<text x="280.0" y="194.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Ses limites</text>
+<line x1="280" y1="98" x2="280" y2="138" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<line x1="280" y1="222" x2="280" y2="268" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<rect x="380" y="140" width="160" height="80" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="460.0" y="176.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Synthèse</text>
+<text x="460.0" y="194.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Dépasser le débat</text>
+<line x1="280" y1="98" x2="460" y2="138" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<line x1="460" y1="222" x2="280" y2="268" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<rect x="190" y="270" width="180" height="40" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280.0" y="295.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Conclusion + réponse</text>
+</svg>

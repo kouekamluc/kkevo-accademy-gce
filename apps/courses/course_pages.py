@@ -494,6 +494,109 @@ PAGES = {
             "Apply strategic tools and explain growth, culture and change",
             "Answer Paper 1 multiple choice, plan Paper 2 essays and handle case studies",
         ]),
+    ("philosophy", "lower-sixth"): dict(
+        title="Lower Sixth Philosophy (GCE 0790)", slug="lower-sixth-philosophy-gce-0790", primary=True,
+        summary="GCE A Level Philosophy, Lower Sixth: the nature and methods of philosophy, Greek and medieval thinkers, modern Western philosophy, traditional logic and propositional logic, with paper practice and timed mock papers.",
+        outcomes=[
+            "Explain the move from myth to logos, the branches and methods of philosophy",
+            "Explain the main ideas of the Greek and medieval thinkers",
+            "Compare rationalism, empiricism, the social contract and Kant",
+            "Analyse arguments with categorical syllogisms and fallacies",
+            "Use truth tables and formal proofs",
+            "Answer Paper 1 multiple choice and plan Paper 2 and Paper 3",
+        ]),
+    ("philosophy", "upper-sixth"): dict(
+        title="Upper Sixth Philosophy (GCE 0790)", slug="upper-sixth-philosophy-gce-0790", primary=True,
+        summary="GCE A Level Philosophy, Upper Sixth: African philosophy, contemporary philosophy, epistemology and philosophy of science, moral, social and political philosophy, and the method of the philosophical dissertation and text commentary, with paper practice and timed mock papers.",
+        outcomes=[
+            "Explain the debate on African philosophy and its main trends and thinkers",
+            "Explain Hegel, Marx, Nietzsche, Freud, Husserl and the existentialists",
+            "Discuss knowledge, scientific method and the ideas of Bachelard, Popper and Kuhn",
+            "Discuss freedom, duty, utilitarianism, justice and the state",
+            "Write a philosophical dissertation and a text commentary",
+            "Answer Paper 1 multiple choice and plan Paper 2 and Paper 3",
+        ]),
+    ("religious-studies", "lower-sixth"): dict(
+        title="Lower Sixth Religious Studies (GCE 0785)", slug="lower-sixth-religious-studies-gce-0785", primary=True,
+        summary="GCE A Level Religious Studies, Lower Sixth: Old Testament criticism and early Israel, the monarchy and the Temple, the intertestamental background and the Synoptic problem, Gospel theology, and an alternative track, with paper practice and timed mock papers.",
+        outcomes=[
+            "Explain the Documentary Hypothesis, the covenants and the Exodus",
+            "Assess Saul, David and Solomon and the cult of the Temple",
+            "Describe the New Testament background and the Synoptic problem",
+            "Explain the Gospels' theology and Christology",
+            "Answer Paper 1 multiple choice and plan Paper 2 essays and Paper 3 structural questions",
+        ]),
+    ("religious-studies", "upper-sixth"): dict(
+        title="Upper Sixth Religious Studies (GCE 0785)", slug="upper-sixth-religious-studies-gce-0785", primary=True,
+        summary="GCE A Level Religious Studies, Upper Sixth: the prophets, exilic prophecy and wisdom literature, Acts and the Pauline epistles, New Testament ethics and eschatology, and an alternative track, with paper practice and timed mock papers.",
+        outcomes=[
+            "Explain the nature of Hebrew prophecy and the eighth-century prophets",
+            "Explain Jeremiah, Ezekiel, the Servant Songs and the problem of theodicy",
+            "Explain Paul's mission and the argument of 1 Corinthians, Galatians and Romans",
+            "Explain New Testament ethics and eschatology",
+            "Answer Paper 1 multiple choice and plan Paper 2 essays and Paper 3 structural questions",
+        ]),
+    ("food-and-nutrition", "lower-sixth"): dict(
+        title="Lower Sixth Food Science and Nutrition (GCE 0740)", slug="lower-sixth-food-science-and-nutrition-gce-0740", primary=True,
+        summary="GCE A Level Food Science and Nutrition, Lower Sixth: food chemistry, vitamins, minerals, pigments and colloids, human metabolism and energy balance, food microbiology and safety, and sensory evaluation and analysis, with paper practice, a practical guide and timed mock papers.",
+        outcomes=[
+            "Explain water activity and the chemistry of carbohydrates, lipids and proteins",
+            "Explain the stability of micronutrients, pigments and colloids in food",
+            "Explain digestion, metabolism and energy requirements",
+            "Explain microbial growth, fermentation and food poisoning",
+            "Carry out sensory tests and basic food analyses",
+            "Answer Paper 1 multiple choice and plan Paper 2 and the practical Paper 3",
+        ]),
+    ("food-and-nutrition", "upper-sixth"): dict(
+        title="Upper Sixth Food Science and Nutrition (GCE 0740)", slug="upper-sixth-food-science-and-nutrition-gce-0740", primary=True,
+        summary="GCE A Level Food Science and Nutrition, Upper Sixth: preservation technology, commodity processing, quality assurance and legislation, clinical dietetics and community nutrition and food security, with paper practice and timed mock papers.",
+        outcomes=[
+            "Explain thermal processing, chilling, freezing, drying and packaging",
+            "Explain the processing of cereals, roots, oils, meat, dairy and beverages",
+            "Apply HACCP, GMP and food standards",
+            "Explain the dietary management of common diseases",
+            "Assess nutritional status and explain food security policy",
+            "Answer Paper 1 multiple choice and plan Paper 2 and the practical Paper 3",
+        ]),
+    ("literature-in-english", "lower-sixth"): dict(
+        title="Lower Sixth Literature in English (GCE 0735)", slug="lower-sixth-literature-in-english-gce-0735", primary=True,
+        summary="GCE A Level Literature in English, Lower Sixth: literary theory and practical criticism, Shakespearean drama, modern and African drama, and the English and American novel, with skills lessons and frameworks you apply to your own set texts, plus paper practice and timed mock papers.",
+        outcomes=[
+            "Use Aristotle's ideas, prosody and narrative theory in criticism",
+            "Write about Shakespeare's plays using the text and stagecraft",
+            "Compare modern and African drama",
+            "Write about prescribed novels for narrative, character and theme",
+            "Answer Paper 1 multiple choice and plan Paper 2 essays and Paper 3 context questions",
+        ]),
+    ("literature-in-english", "upper-sixth"): dict(
+        title="Upper Sixth Literature in English (GCE 0735)", slug="upper-sixth-literature-in-english-gce-0735", primary=True,
+        summary="GCE A Level Literature in English, Upper Sixth: African and post-colonial fiction, Chaucer and English poetry, modern African poetry, and unseen prose and poetry criticism, with skills lessons and frameworks you apply to your own set texts, plus paper practice and timed mock papers.",
+        outcomes=[
+            "Write about African and post-colonial prose fiction",
+            "Read Chaucer and canonical English poetry",
+            "Read and write about modern African poetry",
+            "Analyse unseen prose and poetry under exam conditions",
+            "Answer Paper 1 multiple choice and plan Paper 2 essays and Paper 3 questions",
+        ]),
+    ("french", "lower-sixth"): dict(
+        title="Lower Sixth French (GCE 0745)", slug="lower-sixth-french-gce-0745", primary=True,
+        summary="GCE A Level French, taught in English for Anglophone learners: advanced grammar and style, translation (thème and version), the dissertation de culture générale and a panorama of French and Francophone literature, with paper practice and timed mock papers.",
+        outcomes=[
+            "Use the subjunctive, the conditional and complex relative pronouns correctly",
+            "Translate into and out of French using comparative stylistics",
+            "Plan and write a dissertation de culture générale",
+            "Place the main French and Francophone literary movements",
+            "Answer Paper 1 multiple choice and plan Paper 2 and Paper 3",
+        ]),
+    ("french", "upper-sixth"): dict(
+        title="Upper Sixth French (GCE 0745)", slug="upper-sixth-french-gce-0745", primary=True,
+        summary="GCE A Level French, taught in English for Anglophone learners: the prescribed French and Francophone African works, the literary dissertation and commentaire composé, and listening and oral skills, with frameworks you apply to your own set texts, plus paper practice and timed mock papers.",
+        outcomes=[
+            "Study the prescribed French and African works with a framework for theme, character and style",
+            "Write a literary dissertation and a commentaire composé",
+            "Develop listening comprehension and oral expression",
+            "Answer Paper 1 multiple choice and plan Paper 2 and Paper 3",
+        ]),
     ("pure-mathematics-with-mechanics", "lower-sixth"): dict(
         summary="The core pure mathematics of GCE A Level Pure Mathematics with Mechanics: proof, algebra and "
                 "functions, trigonometry, conic sections, calculus, series, differential equations and 3D vectors.",

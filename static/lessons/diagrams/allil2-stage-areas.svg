@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="t d"><title id="t">Stage areas</title><desc id="d">Nine stage areas seen from above, audience at the bottom.</desc>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="30" font-size="18" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Stage areas (actor's view)</text>
+<rect x="60" y="50" width="150" height="75" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="135" y="94" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Upstage right</text>
+<rect x="210" y="50" width="150" height="75" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="285" y="94" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Upstage centre</text>
+<rect x="360" y="50" width="150" height="75" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="435" y="94" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Upstage left</text>
+<rect x="60" y="125" width="150" height="75" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="135" y="169" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Stage right</text>
+<rect x="210" y="125" width="150" height="75" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="285" y="169" font-size="14" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Centre stage</text>
+<rect x="360" y="125" width="150" height="75" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="435" y="169" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Stage left</text>
+<rect x="60" y="200" width="150" height="75" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="135" y="244" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Downstage right</text>
+<rect x="210" y="200" width="150" height="75" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="285" y="244" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Downstage centre</text>
+<rect x="360" y="200" width="150" height="75" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="435" y="244" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Downstage left</text>
+<text x="280" y="322" font-size="16" font-weight="700" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">AUDIENCE</text>
+<text x="280" y="342" font-size="14" font-weight="400" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">Stage right is the actor's right (audience's left)</text>
+</svg>

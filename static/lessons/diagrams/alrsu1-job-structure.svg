@@ -1,0 +1,34 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Structure of the book of Job"><rect width="560" height="360" fill="#fff"/>
+<text x="280" y="22" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">The book of Job</text>
+<rect x="20" y="34" width="520" height="32" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="32" y="55" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Prologue: Job, the accuser, the testing</text>
+<text x="528" y="55" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563EB">chapters 1-2</text>
+<line x1="280" y1="66" x2="280" y2="74" stroke="#102A43" stroke-width="2"/>
+<rect x="20" y="74" width="520" height="32" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="32" y="95" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Dialogue cycle 1: friends and Job</text>
+<text x="528" y="95" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857">chapters 3-14</text>
+<line x1="280" y1="106" x2="280" y2="114" stroke="#102A43" stroke-width="2"/>
+<rect x="20" y="114" width="520" height="32" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="32" y="135" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Dialogue cycle 2</text>
+<text x="528" y="135" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857">chapters 15-21</text>
+<line x1="280" y1="146" x2="280" y2="154" stroke="#102A43" stroke-width="2"/>
+<rect x="20" y="154" width="520" height="32" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="32" y="175" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Dialogue cycle 3</text>
+<text x="528" y="175" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857">chapters 22-27</text>
+<line x1="280" y1="186" x2="280" y2="194" stroke="#102A43" stroke-width="2"/>
+<rect x="20" y="194" width="520" height="32" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="32" y="215" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Job's final speeches and oath</text>
+<text x="528" y="215" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857">chapters 29-31</text>
+<line x1="280" y1="226" x2="280" y2="234" stroke="#102A43" stroke-width="2"/>
+<rect x="20" y="234" width="520" height="32" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="32" y="255" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Elihu (often seen as added later)</text>
+<text x="528" y="255" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857">chapters 32-37</text>
+<line x1="280" y1="266" x2="280" y2="274" stroke="#102A43" stroke-width="2"/>
+<rect x="20" y="274" width="520" height="32" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="32" y="295" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">God speaks from the whirlwind; Job replies</text>
+<text x="528" y="295" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#047857">chapters 38-42:6</text>
+<line x1="280" y1="306" x2="280" y2="314" stroke="#102A43" stroke-width="2"/>
+<rect x="20" y="314" width="520" height="32" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="32" y="335" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Epilogue: friends rebuked, Job restored</text>
+<text x="528" y="335" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#2563EB">chapters 42:7-17</text>
+</svg>

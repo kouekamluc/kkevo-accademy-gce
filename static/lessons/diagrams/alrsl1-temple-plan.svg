@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360"><defs><marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#102A43"/></marker></defs>
+<rect width="560" height="360" fill="#fff"/>
+<text x="280" y="28" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#102A43" font-weight="bold">Plan of Solomon's Temple (schematic)</text>
+<rect x="20" y="70" width="520" height="220" fill="#fff" stroke="#102A43" stroke-width="2"/>
+<text x="280" y="90" font-family="Inter, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Courtyard</text>
+<rect x="55" y="160" width="40" height="40" fill="#B45309" stroke="#102A43" stroke-width="2"/>
+<text x="75" y="222" font-family="Inter, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Altar of</text>
+<text x="75" y="238" font-family="Inter, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">burnt offering</text>
+<rect x="110" y="120" width="38" height="30" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="129" y="112" font-family="Inter, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Bronze sea</text>
+<rect x="200" y="150" width="50" height="60" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="225" y="232" font-family="Inter, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#102A43" font-weight="normal">Porch</text>
+<circle cx="215" cy="160" r="6" fill="#102A43"/><circle cx="215" cy="200" r="6" fill="#102A43"/>
+<text x="225" y="256" font-family="Inter, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Two pillars</text>
+<rect x="250" y="140" width="150" height="80" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="325" y="175" font-family="Inter, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#102A43" font-weight="bold">Main hall</text>
+<text x="325" y="195" font-family="Inter, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">(Holy Place)</text>
+<rect x="400" y="150" width="80" height="60" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="440" y="175" font-family="Inter, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#102A43" font-weight="bold">Holy of</text>
+<text x="440" y="193" font-family="Inter, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#102A43" font-weight="bold">Holies</text>
+<text x="440" y="258" font-family="Inter, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#047857" font-weight="normal">Ark, cherubim</text>
+<line x1="40" y1="310" x2="500" y2="310" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<text x="150" y="335" font-family="Inter, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Entrance (east)</text>
+<text x="440" y="335" font-family="Inter, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#102A43" font-weight="normal">Inner room (west)</text>
+</svg>

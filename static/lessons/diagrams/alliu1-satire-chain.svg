@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-labelledby="t d"><title id="t">How satire works</title><desc id="d">A chain of four boxes: target, method, effect, aim.</desc>
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="34" font-size="18" font-weight="700" fill="#102A43" text-anchor="middle" font-family="Inter, Arial, sans-serif">How satire works: four links</text>
+<rect x="30" y="52" width="500" height="50" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="46" y="82" font-size="16" font-weight="700" fill="#2563EB" text-anchor="start" font-family="Inter, Arial, sans-serif">1 Target</text>
+<text x="150" y="82" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">a vice or fault (greed, hypocrisy, vanity)</text>
+<line x1="280" y1="102" x2="280" y2="116" stroke="#102A43" stroke-width="2"/>
+<polygon points="274,112 286,112 280,122" fill="#102A43"/>
+<rect x="30" y="122" width="500" height="50" rx="8" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="46" y="152" font-size="16" font-weight="700" fill="#2563EB" text-anchor="start" font-family="Inter, Arial, sans-serif">2 Method</text>
+<text x="150" y="152" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">irony, exaggeration, understatement, contrast</text>
+<line x1="280" y1="172" x2="280" y2="186" stroke="#102A43" stroke-width="2"/>
+<polygon points="274,182 286,182 280,192" fill="#102A43"/>
+<rect x="30" y="192" width="500" height="50" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="46" y="222" font-size="16" font-weight="700" fill="#2563EB" text-anchor="start" font-family="Inter, Arial, sans-serif">3 Effect</text>
+<text x="150" y="222" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">the reader laughs, then judges</text>
+<line x1="280" y1="242" x2="280" y2="256" stroke="#102A43" stroke-width="2"/>
+<polygon points="274,252 286,252 280,262" fill="#102A43"/>
+<rect x="30" y="262" width="500" height="50" rx="8" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="46" y="292" font-size="16" font-weight="700" fill="#2563EB" text-anchor="start" font-family="Inter, Arial, sans-serif">4 Aim</text>
+<text x="150" y="292" font-size="14" font-weight="400" fill="#102A43" text-anchor="start" font-family="Inter, Arial, sans-serif">correct the fault, or praise the good model</text>
+<text x="280" y="342" font-size="13" font-weight="400" fill="#B45309" text-anchor="middle" font-family="Inter, Arial, sans-serif">Chaucer's pairs: Monk, Friar, Pardoner (faults) and Knight, Parson (virtues)</text>
+</svg>

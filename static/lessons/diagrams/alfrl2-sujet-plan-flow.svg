@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#102A43">Du sujet à la conclusion</text>
+<rect x="20" y="60" width="150" height="86" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="95.0" y="84" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">1. Le sujet</text>
+<text x="95.0" y="106" text-anchor="middle" font-size="13" fill="#102A43">mots-cl&#233;s</text>
+<text x="95.0" y="125" text-anchor="middle" font-size="13" fill="#102A43">consigne, enjeu</text>
+<rect x="205" y="60" width="150" height="86" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280.0" y="84" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">2. La tension</text>
+<text x="280.0" y="106" text-anchor="middle" font-size="13" fill="#102A43">pourquoi oui ?</text>
+<text x="280.0" y="125" text-anchor="middle" font-size="13" fill="#102A43">pourquoi non ?</text>
+<rect x="390" y="60" width="150" height="86" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="465.0" y="84" text-anchor="middle" font-size="14" font-weight="700" fill="#102A43">3. Probl&#233;matique</text>
+<text x="465.0" y="106" text-anchor="middle" font-size="13" fill="#102A43">question centrale</text>
+<text x="465.0" y="125" text-anchor="middle" font-size="13" fill="#102A43">ouverte</text>
+<line x1="172" y1="103.0" x2="195" y2="103.0" stroke="#102A43" stroke-width="2"/>
+<polygon points="203,103.0 193,97.0 193,109.0" fill="#102A43"/>
+<line x1="357" y1="103.0" x2="380" y2="103.0" stroke="#102A43" stroke-width="2"/>
+<polygon points="388,103.0 378,97.0 378,109.0" fill="#102A43"/>
+<rect x="20" y="210" width="150" height="86" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="95.0" y="234" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">4. Le plan</text>
+<text x="95.0" y="256" text-anchor="middle" font-size="13" fill="#102A43">2 ou 3 parties</text>
+<text x="95.0" y="275" text-anchor="middle" font-size="13" fill="#102A43">arguments + exemples</text>
+<rect x="205" y="210" width="150" height="86" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280.0" y="234" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">5. La r&#233;daction</text>
+<text x="280.0" y="256" text-anchor="middle" font-size="13" fill="#102A43">introduction</text>
+<text x="280.0" y="275" text-anchor="middle" font-size="13" fill="#102A43">d&#233;veloppement</text>
+<rect x="390" y="210" width="150" height="86" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="465.0" y="234" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">6. La conclusion</text>
+<text x="465.0" y="256" text-anchor="middle" font-size="13" fill="#102A43">bilan</text>
+<text x="465.0" y="275" text-anchor="middle" font-size="13" fill="#102A43">ouverture</text>
+<line x1="172" y1="253.0" x2="195" y2="253.0" stroke="#102A43" stroke-width="2"/>
+<polygon points="203,253.0 193,247.0 193,259.0" fill="#102A43"/>
+<line x1="357" y1="253.0" x2="380" y2="253.0" stroke="#102A43" stroke-width="2"/>
+<polygon points="388,253.0 378,247.0 378,259.0" fill="#102A43"/>
+<polyline points="465,146 465,178 95,178 95,208" fill="none" stroke="#102A43" stroke-width="2"/>
+<polygon points="95,210 89,200 101,200" fill="#102A43"/>
+<text x="280" y="332" text-anchor="middle" font-size="13" fill="#B45309">Le plan r&#233;pond &#224; la probl&#233;matique ; la conclusion y revient.</text>
+</svg>

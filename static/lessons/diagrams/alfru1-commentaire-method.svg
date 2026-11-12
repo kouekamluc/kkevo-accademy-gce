@@ -1,0 +1,25 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#102A43"/></marker></defs>
+<text x="280" y="34" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Le commentaire composé en quatre étapes</text>
+<rect x="14" y="120" width="116" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="72.0" y="162.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">1. Lire</text>
+<text x="72.0" y="180.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Relever les</text>
+<text x="72.0" y="198.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">procédés</text>
+<line x1="132" y1="175" x2="152" y2="175" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<rect x="154" y="120" width="116" height="110" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="212.0" y="162.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">2. Projet</text>
+<text x="212.0" y="180.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Une question</text>
+<text x="212.0" y="198.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">directrice</text>
+<line x1="272" y1="175" x2="292" y2="175" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<rect x="294" y="120" width="116" height="110" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="352.0" y="162.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">3. Axes</text>
+<text x="352.0" y="180.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Deux ou</text>
+<text x="352.0" y="198.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">trois idées</text>
+<line x1="412" y1="175" x2="432" y2="175" stroke="#102A43" stroke-width="2" marker-end="url(#a)"/>
+<rect x="434" y="120" width="116" height="110" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="492.0" y="162.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">4. Rédiger</text>
+<text x="492.0" y="180.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Intro, axes,</text>
+<text x="492.0" y="198.0" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">conclusion</text>
+<text x="280" y="290" font-size="14" fill="#102A43" text-anchor="middle" font-weight="400">Structure, temps, champ lexical, figures, ton</text>
+</svg>

@@ -154,7 +154,12 @@ def test_student_journey_from_dashboard_to_mock_exam(client, student, maths):
     ("geology", "lower-sixth", 27), ("geology", "upper-sixth", 31),
     ("economics", "lower-sixth", 32), ("economics", "upper-sixth", 30),
     ("accounting", "lower-sixth", 25), ("accounting", "upper-sixth", 28),
-    ("business-studies", "lower-sixth", 22), ("business-studies", "upper-sixth", 20)])
+    ("business-studies", "lower-sixth", 22), ("business-studies", "upper-sixth", 20),
+    ("philosophy", "lower-sixth", 24), ("philosophy", "upper-sixth", 27),
+    ("religious-studies", "lower-sixth", 26), ("religious-studies", "upper-sixth", 23),
+    ("food-and-nutrition", "lower-sixth", 23), ("food-and-nutrition", "upper-sixth", 24),
+    ("literature-in-english", "lower-sixth", 18), ("literature-in-english", "upper-sixth", 18),
+    ("french", "lower-sixth", 21), ("french", "upper-sixth", 14)])
 def test_a_level_courses_have_depth_practice_and_a_practice_paper(db, subject, level, min_topics):
     call_command("load_gce_curriculum")
     call_command("load_lessons", "--only", f"{subject}:{level}")

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#ffffff"/>
+<text x="280" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#102A43">Oruka's four trends</text>
+<rect x="20" y="50" width="250" height="130" rx="10" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="145.0" y="78" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">1. Ethnophilosophy</text>
+<text x="145.0" y="104" text-anchor="middle" font-size="13" fill="#102A43">Collective worldview</text>
+<text x="145.0" y="124" text-anchor="middle" font-size="13" fill="#102A43">Tempels, Mbiti</text>
+<rect x="290" y="50" width="250" height="130" rx="10" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="415.0" y="78" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">2. Philosophic sagacity</text>
+<text x="415.0" y="104" text-anchor="middle" font-size="13" fill="#102A43">Individual critical sages</text>
+<text x="415.0" y="124" text-anchor="middle" font-size="13" fill="#102A43">Oruka's sage interviews</text>
+<rect x="20" y="200" width="250" height="130" rx="10" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="145.0" y="228" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">3. Nationalist-ideological</text>
+<text x="145.0" y="254" text-anchor="middle" font-size="13" fill="#102A43">Liberation and development</text>
+<text x="145.0" y="274" text-anchor="middle" font-size="13" fill="#102A43">Senghor, Nkrumah, Nyerere</text>
+<rect x="290" y="200" width="250" height="130" rx="10" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="415.0" y="228" text-anchor="middle" font-size="15" font-weight="700" fill="#102A43">4. Professional</text>
+<text x="415.0" y="254" text-anchor="middle" font-size="13" fill="#102A43">Critical, written, academic</text>
+<text x="415.0" y="274" text-anchor="middle" font-size="13" fill="#102A43">Towa, Hountondji</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#102A43" font-family="Inter, Arial, sans-serif">Exposé de cinq minutes</text>
+<rect x="30" y="60" width="110" height="64" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="85.0" y="88" text-anchor="middle" font-size="14" font-weight="bold" fill="#102A43" font-family="Inter, Arial, sans-serif">Introduction</text>
+<text x="85.0" y="108" text-anchor="middle" font-size="14" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">1 min</text>
+<rect x="148" y="60" width="260" height="64" rx="8" fill="#ECFDF5" stroke="#102A43" stroke-width="2"/>
+<text x="278.0" y="88" text-anchor="middle" font-size="14" font-weight="bold" fill="#102A43" font-family="Inter, Arial, sans-serif">Développement</text>
+<text x="278.0" y="108" text-anchor="middle" font-size="14" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">3 min</text>
+<rect x="416" y="60" width="110" height="64" rx="8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="471.0" y="88" text-anchor="middle" font-size="14" font-weight="bold" fill="#102A43" font-family="Inter, Arial, sans-serif">Conclusion</text>
+<text x="471.0" y="108" text-anchor="middle" font-size="14" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">1 min</text>
+<text x="85" y="160" text-anchor="middle" font-size="14" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">Accroche</text>
+<text x="85" y="188" text-anchor="middle" font-size="14" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">Sujet, problème</text>
+<text x="85" y="216" text-anchor="middle" font-size="14" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">Plan annoncé</text>
+<text x="278" y="160" text-anchor="middle" font-size="14" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">Partie 1 : idée + exemple</text>
+<text x="278" y="188" text-anchor="middle" font-size="14" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">Partie 2 : idée + exemple</text>
+<text x="278" y="216" text-anchor="middle" font-size="14" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">Partie 3 : idée + exemple</text>
+<text x="278" y="244" text-anchor="middle" font-size="14" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">Transitions entre parties</text>
+<text x="471" y="160" text-anchor="middle" font-size="14" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">Réponse</text>
+<text x="471" y="188" text-anchor="middle" font-size="14" font-weight="normal" fill="#102A43" font-family="Inter, Arial, sans-serif">Ouverture</text>
+<text x="280" y="300" text-anchor="middle" font-size="14" font-weight="normal" fill="#B45309" font-family="Inter, Arial, sans-serif">Parlez à partir de fiches de mots-clés, pas d'un texte écrit.</text>
+<text x="280" y="326" text-anchor="middle" font-size="14" font-weight="normal" fill="#047857" font-family="Inter, Arial, sans-serif">Une idée par partie, un exemple par idée.</text>
+</svg>

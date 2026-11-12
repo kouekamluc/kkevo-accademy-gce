@@ -1,0 +1,26 @@
+<svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Order of places on Paul's journeys"><rect width="560" height="360" fill="#fff"/>
+<text x="280" y="22" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#102A43">Paul: order of the main places (schematic)</text>
+<rect x="12" y="36" width="140" height="70" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="22" y="64" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">First journey</text>
+<text x="22" y="86" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">about AD 46-48</text>
+<rect x="160" y="36" width="388" height="70" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="170" y="66" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Antioch (Syria) &#8594; Cyprus &#8594; Pisidian Antioch &#8594;</text>
+<text x="170" y="90" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Iconium &#8594; Lystra &#8594; Derbe</text>
+<rect x="12" y="116" width="140" height="70" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="22" y="144" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Second journey</text>
+<text x="22" y="166" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">about AD 49-52</text>
+<rect x="160" y="116" width="388" height="70" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="170" y="146" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Antioch &#8594; Asia Minor &#8594; Troas &#8594; Philippi &#8594;</text>
+<text x="170" y="170" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Thessalonica &#8594; Berea &#8594; Athens &#8594; Corinth</text>
+<rect x="12" y="196" width="140" height="70" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="22" y="224" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">Third journey</text>
+<text x="22" y="246" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">about AD 52-57</text>
+<rect x="160" y="196" width="388" height="70" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="170" y="226" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Antioch &#8594; Galatia and Phrygia &#8594; Ephesus &#8594;</text>
+<text x="170" y="250" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Macedonia &#8594; Corinth &#8594; Jerusalem</text>
+<rect x="12" y="276" width="140" height="70" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="22" y="304" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#102A43">To Rome</text>
+<text x="22" y="326" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">about AD 57-60</text>
+<rect x="160" y="276" width="388" height="70" rx="6" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="170" y="306" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">Jerusalem &#8594; Caesarea &#8594; Malta &#8594; Rome</text>
+</svg>

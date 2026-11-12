@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="28" font-family="Inter, Arial, sans-serif" font-size="17" fill="#102A43" text-anchor="middle" font-weight="700">The shape of an anthology essay</text>
+<rect x="60" y="46" width="440" height="58" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="70" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Introduction</text>
+<text x="280" y="91" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">Define the key word, state your thesis, name the poems</text>
+<line x1="280" y1="104" x2="280" y2="124" stroke="#102A43" stroke-width="2"/>
+<polygon points="280,124 276.5,115.7 283.5,115.7" fill="#102A43"/>
+<rect x="60" y="124" width="440" height="58" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280" y="148" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Body paragraphs</text>
+<text x="280" y="169" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">Topic sentence, several exact illustrations, comment on effect</text>
+<line x1="280" y1="182" x2="280" y2="202" stroke="#102A43" stroke-width="2"/>
+<polygon points="280,202 276.5,193.7 283.5,193.7" fill="#102A43"/>
+<rect x="60" y="202" width="440" height="58" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+<text x="280" y="226" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Counter-point</text>
+<text x="280" y="247" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">Show the other side: hope beside protest, doubt beside belief</text>
+<line x1="280" y1="260" x2="280" y2="280" stroke="#102A43" stroke-width="2"/>
+<polygon points="280,280 276.5,271.7 283.5,271.7" fill="#102A43"/>
+<rect x="60" y="280" width="440" height="58" rx="8" fill="#ECFDF5" stroke="#047857" stroke-width="2"/>
+<text x="280" y="304" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" text-anchor="middle" font-weight="700">Conclusion</text>
+<text x="280" y="325" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43" text-anchor="middle" font-weight="400">A judgement that answers the question</text>
+</svg>
