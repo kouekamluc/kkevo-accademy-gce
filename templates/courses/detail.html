@@ -1,6 +1,8 @@
 {% extends shell %}
 {% block title %}{{ course.title }} — KKEVO Academy{% endblock %}
 {% block meta_description %}{{ course.summary|default:course.title }}{% endblock %}
+{% block og_title %}{{ course.title }} — KKEVO Academy{% endblock %}
+{% block og_description %}{{ course.summary|default:course.title }}{% endblock %}
 {% block header_left %}
 <nav aria-label="Breadcrumb" class="truncate text-[15px]">
   {% if in_plan %}<a href="{% url 'courses:my_subjects' %}">My Subjects</a>{% else %}<a href="{% url 'courses:catalog' %}?level={{ level.slug }}">Explore</a>{% endif %}

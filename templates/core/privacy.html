@@ -1,0 +1,64 @@
+{% extends "core/legal_page.html" %}
+{% block title %}Privacy policy — KKEVO Academy{% endblock %}
+{% block meta_description %}What personal information KKEVO Academy collects from students, why, who can see it, and how to download or delete it.{% endblock %}
+{% block og_title %}Privacy policy — KKEVO Academy{% endblock %}
+{% block og_description %}What personal information KKEVO Academy collects from students, why, who can see it, and how to download or delete it.{% endblock %}
+{% block legal_title %}Privacy policy{% endblock %}
+{% block legal_intro %}We collect only what we need to run your lessons, practice and progress. We do not sell your information, and we do not show ads.{% endblock %}
+
+{% block legal_body %}
+<h2>Who we are</h2>
+<p>KKEVO Academy ("we", "us") is an independent learning platform for students preparing for the Cameroon GCE O Level and A Level examinations. We are not part of, or endorsed by, the Cameroon GCE Board. This page explains what we do with your personal information.</p>
+
+<h2>What we collect</h2>
+<ul>
+  <li><strong>Your account:</strong> your name, your email address and your password. We store your password in a scrambled form that we cannot read.</li>
+  <li><strong>Your set-up:</strong> your class, your stream (Arts or Science), the subjects you chose, the date of your first exam if you enter it, your daily study goal, your avatar and your low-data setting.</li>
+  <li><strong>Your learning:</strong> the lessons you open and finish, the time you spend, your practice answers and scores, your notes, the lessons you save, your planned study sessions and rest days, and your streak and points.</li>
+  <li><strong>Technical data:</strong> two small cookies that keep you logged in and protect your forms, and ordinary server records such as the time of a visit and your IP address, which our hosting provider may keep for a short time for security.</li>
+  <li><strong>On your phone:</strong> if you open a lesson for offline use, your browser keeps a copy on your device. You can remove it by clearing the site's data in your browser.</li>
+</ul>
+<p>We do not ask for your phone number, your address, your photo or your school records.</p>
+
+<h2>Why we use it</h2>
+<ul>
+  <li>to let you log in and keep your progress,</li>
+  <li>to show you where you stopped, what to revise and how you are doing,</li>
+  <li>to build your report card and weekly summary,</li>
+  <li>to send you account emails such as a password reset,</li>
+  <li>to find and fix mistakes in lessons and keep the service safe.</li>
+</ul>
+<p>We do not sell your information. We do not show advertising today. If that ever changes, we will update this page and tell you before it starts.</p>
+
+<h2>Who can see it</h2>
+<ul>
+  <li><strong>Only you,</strong> unless you share a link. Your report card and your phone-calendar link are private links. Anyone who has the link can see what it shows, so share it only with people you trust (for example a parent) and make a new link if it leaks.</li>
+  <li><strong>"Send on WhatsApp"</strong> opens WhatsApp with a message that contains a link. We do not send your data to WhatsApp.</li>
+  <li><strong>Videos:</strong> some lessons play a video from YouTube. When you press play, YouTube may collect information as described in its own policy.</li>
+  <li><strong>Service providers</strong> who host our website or send our emails handle data for us and only for that purpose.</li>
+  <li><strong>The law:</strong> we may share information if we are legally required to.</li>
+</ul>
+
+<h2>Students under 18</h2>
+<p>Most of our students are teenagers. If you are under 18, please use KKEVO Academy with the knowledge of a parent or guardian. A parent or guardian can ask us to show, correct or delete a child's information at any time, using the contact details below.</p>
+
+<h2>Your choices</h2>
+<ul>
+  <li><strong>See and download your data:</strong> in Settings, choose "Download my data".</li>
+  <li><strong>Correct it:</strong> change your name, class, subjects and goals in Settings.</li>
+  <li><strong>Delete it:</strong> in Settings, choose "Delete my account". This removes your profile, progress, notes, plans and practice history. Copies in our backups disappear when those backups are replaced.</li>
+  <li><strong>Ask us:</strong> <a href="{% url 'core:contact' %}">contact us</a> if you cannot do something yourself.</li>
+</ul>
+
+<h2>How long we keep it</h2>
+<p>We keep your information while your account exists. When you delete your account, we delete it as described above.</p>
+
+<h2>Keeping it safe</h2>
+<p>We use encrypted connections (HTTPS), scrambled passwords and limits on repeated login attempts. No service can promise perfect security, so please use a strong password and do not share it.</p>
+
+<h2>Changes</h2>
+<p>If we change this policy in a way that matters, we will say so on this page and update the date above.</p>
+
+<h2>Contact</h2>
+<p>Questions about your information? See our <a href="{% url 'core:contact' %}">contact page</a>.</p>
+{% endblock %}

@@ -1,9 +1,11 @@
 from django.conf import settings
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from django.contrib.sitemaps.views import sitemap
 from django.urls import include, path
 from django.views.generic import RedirectView
 
+from apps.core.sitemaps import SITEMAPS
 from apps.core.views import staff_login
 
 admin.site.site_header = "KKEVO Academy — Content administration"
@@ -16,6 +18,7 @@ urlpatterns = [
     path("admin/logout/", auth_views.LogoutView.as_view(), name="admin_logout_redirect"),
     path("admin/", RedirectView.as_view(pattern_name="studio:overview"), name="admin_home_redirect"),
     path("admin/", admin.site.urls),
+    path("sitemap.xml", sitemap, {"sitemaps": SITEMAPS}, name="sitemap"),
     path("studio/", include("apps.studio.urls")),
     path("accounts/", include("apps.accounts.urls")),
     path("dashboard/", include("apps.dashboard.urls")),

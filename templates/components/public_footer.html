@@ -21,6 +21,10 @@
   </div>
   <div class="wrap flex flex-wrap justify-between gap-3 border-t border-surface-border pb-7 pt-5 text-[13px] text-ink-muted">
     <span>© {% now "Y" %} KKEVO Academy. Independent learning platform, not affiliated with the Cameroon GCE Board.</span>
-    <span>English</span>
+    <span class="flex flex-wrap gap-x-5 gap-y-1">
+      <a href="{% url 'core:privacy' %}" class="text-ink-muted hover:text-navy">Privacy</a>
+      <a href="{% url 'core:terms' %}" class="text-ink-muted hover:text-navy">Terms</a>
+      <a href="{% url 'core:contact' %}" class="text-ink-muted hover:text-navy">Contact</a>
+    </span>
   </div>
 </footer>

@@ -87,3 +87,10 @@ def _staff_nav(request):
 
     return staff_navigation(request)
 
+
+def site(request):
+    """Values every page can use: the public contact email and the page's canonical address."""
+    from django.conf import settings
+
+    return {"contact_email": settings.CONTACT_EMAIL,
+            "canonical_url": request.build_absolute_uri(request.path)}

@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
+    "django.contrib.sitemaps",
     "django_htmx",
     # Project apps
     "apps.core",
@@ -73,6 +74,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "apps.core.context_processors.navigation",
+                "apps.core.context_processors.site",
             ],
         },
     },
@@ -150,6 +152,8 @@ EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD", default="")
 EMAIL_USE_TLS = env.bool("EMAIL_USE_TLS", default=True)
 EMAIL_USE_SSL = env.bool("EMAIL_USE_SSL", default=False)
 EMAIL_TIMEOUT = 15
+# Shown on the public Contact page. Leave empty until the support inbox exists.
+CONTACT_EMAIL = env("CONTACT_EMAIL", default="")
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="KKEVO Academy <no-reply@localhost>")
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
 PASSWORD_RESET_TIMEOUT = 60 * 60 * 24  # reset links work for one day

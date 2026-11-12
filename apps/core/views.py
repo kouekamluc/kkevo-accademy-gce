@@ -1,5 +1,11 @@
 from django.db.models import Count, Prefetch, Q
+from datetime import date
+
+from django.conf import settings
+from django.http import HttpResponse
 from django.shortcuts import render
+from django.urls import reverse
+from django.views.decorators.http import require_GET
 
 from apps.academics.models import AcademicLevel, AcademicPathway, Subject, SubjectOffering
 
@@ -83,3 +89,30 @@ def staff_login(request):
         raise PermissionDenied("This area is for staff only.")
     return redirect(f"{reverse('accounts:login')}?{urlencode({'next': next_url})}")
 
+
+# --------------------------------------------------------------------------- legal pages and crawler files
+LEGAL_UPDATED = date(2026, 11, 12)  # bump when the privacy policy or terms change in a way that matters
+
+
+def privacy(request):
+    return render(request, "core/privacy.html", {"legal_updated": LEGAL_UPDATED})
+
+
+def terms(request):
+    return render(request, "core/terms.html", {"legal_updated": LEGAL_UPDATED})
+
+
+def contact(request):
+    return render(request, "core/contact.html", {})
+
+
+# Pages that belong to a logged-in student, or that nobody needs to find through a search engine.
+ROBOTS_DISALLOW = ["/admin/", "/studio/", "/accounts/", "/dashboard/", "/learn/", "/practice/", "/my-subjects/",
+                   "/continue/", "/offline/", "/courses/*/lessons/"]
+
+
+@require_GET
+def robots_txt(request):
+    lines = ["User-agent: *", *[f"Disallow: {path}" for path in ROBOTS_DISALLOW], "",
+             f"Sitemap: {request.build_absolute_uri(reverse('sitemap'))}", ""]
+    return HttpResponse("\n".join(lines), content_type="text/plain; charset=utf-8")

@@ -1,0 +1,28 @@
+{% extends "core/legal_page.html" %}
+{% block title %}Contact — KKEVO Academy{% endblock %}
+{% block meta_description %}How to reach KKEVO Academy about a question, a mistake in a lesson, or your personal information.{% endblock %}
+{% block og_title %}Contact — KKEVO Academy{% endblock %}
+{% block og_description %}How to reach KKEVO Academy about a question, a mistake in a lesson, or your personal information.{% endblock %}
+{% block legal_eyebrow %}Contact{% endblock %}
+{% block legal_title %}Talk to us{% endblock %}
+{% block legal_intro %}Found a mistake in a lesson? Need help with your account? Want your information corrected or deleted? Write to us.{% endblock %}
+
+{% block legal_body %}
+<h2>Email</h2>
+{% if contact_email %}
+<p><a href="mailto:{{ contact_email }}" class="text-[20px]">{{ contact_email }}</a></p>
+<p>We read every message. Please tell us the class and subject, and the lesson title if your message is about a lesson.</p>
+{% else %}
+<p>Our support email address is being set up. Please check back soon.</p>
+{% endif %}
+
+<h2>Before you write</h2>
+<ul>
+  <li><strong>Forgot your password?</strong> Use <a href="{% url 'accounts:password_reset' %}">Reset my password</a>.</li>
+  <li><strong>Want a copy of your data, or to delete your account?</strong> You can do both yourself in Settings after you log in.</li>
+  <li><strong>Found a mistake?</strong> Tell us the lesson title and what you think is wrong. Corrections make the platform better for every student.</li>
+</ul>
+
+<h2>Your information</h2>
+<p>To ask us to show, correct or delete personal information (yours, or your child's), email us from the address on the account. See the <a href="{% url 'core:privacy' %}">privacy policy</a> for details.</p>
+{% endblock %}

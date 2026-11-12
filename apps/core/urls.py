@@ -11,4 +11,8 @@ urlpatterns = [
     path("sw.js", pwa.service_worker, name="service_worker"),
     path("offline/", pwa.offline, name="offline"),
     path("about/", views.about, name="about"),
+    path("privacy/", views.privacy, name="privacy"),
+    path("terms/", views.terms, name="terms"),
+    path("contact/", views.contact, name="contact"),
+    path("robots.txt", views.robots_txt, name="robots"),
 ]

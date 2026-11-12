@@ -1,0 +1,51 @@
+{% extends "core/legal_page.html" %}
+{% block title %}Terms of use — KKEVO Academy{% endblock %}
+{% block meta_description %}The rules for using KKEVO Academy: your account, how to use the lessons, and what we can and cannot promise.{% endblock %}
+{% block og_title %}Terms of use — KKEVO Academy{% endblock %}
+{% block og_description %}The rules for using KKEVO Academy: your account, how to use the lessons, and what we can and cannot promise.{% endblock %}
+{% block legal_title %}Terms of use{% endblock %}
+{% block legal_intro %}Plain rules for using KKEVO Academy. By creating an account or using the site, you agree to them.{% endblock %}
+
+{% block legal_body %}
+<h2>What KKEVO Academy is</h2>
+<p>KKEVO Academy is a free learning platform with lessons, practice and planning tools for Cameroon GCE O Level and A Level students. It is independent and is not affiliated with, or endorsed by, the Cameroon GCE Board.</p>
+
+<h2>Study help, not a promise of results</h2>
+<ul>
+  <li>Our lessons and practice questions are written to follow the topics of the GCE syllabuses, but they are <strong>not official exam material</strong>.</li>
+  <li>Some content may contain mistakes. Always check important facts against your textbook, your teacher and the official syllabus. Tell us if you find an error.</li>
+  <li>We cannot promise any exam result. Your marks and estimated grades in the app are only a guide to your progress.</li>
+</ul>
+
+<h2>Your account</h2>
+<ul>
+  <li>Give a real email address and keep your password to yourself. You are responsible for what happens under your account.</li>
+  <li>If you are under 18, use the platform with the knowledge of a parent or guardian.</li>
+  <li>You can delete your account at any time in Settings.</li>
+</ul>
+
+<h2>Using the site fairly</h2>
+<p>Please do not:</p>
+<ul>
+  <li>try to break, overload or get around the security of the site,</li>
+  <li>use another person's account,</li>
+  <li>copy our lessons in bulk to publish or sell them elsewhere,</li>
+  <li>write anything hateful, unlawful or harmful in your notes or other text you enter.</li>
+</ul>
+<p>Sharing a lesson link with a classmate, or printing a lesson to study, is welcome.</p>
+
+<h2>Content and ownership</h2>
+<p>The lessons, questions, design and software of KKEVO Academy belong to us or to the people who gave us permission to use them. You keep ownership of your own notes. You may use our content for your own studying.</p>
+
+<h2>The service</h2>
+<p>KKEVO Academy is provided free and "as it is". We work hard to keep it available and accurate, but we cannot promise it will never be interrupted or free of errors. We may add, change or remove features, and we may suspend an account that breaks these rules. To the extent the law allows, we are not responsible for losses that come from using, or being unable to use, the service.</p>
+
+<h2>Your information</h2>
+<p>How we handle your personal information is explained in our <a href="{% url 'core:privacy' %}">privacy policy</a>.</p>
+
+<h2>Changes to these terms</h2>
+<p>We may update these terms. If we make a change that matters, we will say so on this page and update the date above. Using the site after a change means you accept it.</p>
+
+<h2>Contact</h2>
+<p>Questions about these terms? See our <a href="{% url 'core:contact' %}">contact page</a>.</p>
+{% endblock %}
