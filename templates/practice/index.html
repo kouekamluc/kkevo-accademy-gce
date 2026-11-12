@@ -40,8 +40,8 @@
       {% for s in sets %}
       <li><a href="{{ s.get_absolute_url }}" class="flex min-h-[60px] items-center gap-3 px-4 py-3 text-ink-heading hover:bg-surface-bg hover:text-ink-heading">
         <span class="min-w-0 flex-1">
-          <span class="block truncate font-bold">{{ s.title }}</span>
-          <span class="block truncate text-sm text-ink-muted">{% if s.is_mock %}Mock exam · {{ s.question_count }} questions · {{ s.exam_minutes }} min timed{% else %}{{ s.topic.title }} · {{ s.question_count }} question{{ s.question_count|pluralize }}{% if s.mastery %} · {{ s.mastery.label }}{% endif %}{% endif %}</span>
+          <span class="block line-clamp-2 font-bold leading-snug">{{ s.title }}</span>
+          <span class="block line-clamp-2 text-sm text-ink-muted">{% if s.is_mock %}Mock exam · {{ s.question_count }} questions · {{ s.exam_minutes }} min timed{% else %}{{ s.topic.title }} · {{ s.question_count }} question{{ s.question_count|pluralize }}{% if s.mastery %} · {{ s.mastery.label }}{% endif %}{% endif %}</span>
         </span>
         {% if s.last_attempt %}<span class="shrink-0 rounded-full px-3 py-1 text-sm font-extrabold {% if s.last_attempt.score >= 60 %}bg-success-50 text-success-text{% else %}bg-warning-50 text-warning-text{% endif %}">{{ s.last_attempt.score }}%</span>
         {% else %}<span class="sc-text shrink-0 text-sm font-extrabold">Start →</span>{% endif %}

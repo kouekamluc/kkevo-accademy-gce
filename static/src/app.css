@@ -159,7 +159,8 @@
 .nb-date { display: block; margin-top: 6px; font-size: 14px; font-weight: 800; color: #565078; font-variant-numeric: tabular-nums; }
 .wa-share { display: inline-flex; min-height: 36px; align-items: center; border-radius: 999px; padding: 0 14px; background: #157A4A;
   color: #fff; font-size: 14px; font-weight: 800; box-shadow: inset 0 -3px 0 rgba(0,0,0,.22); }
-.wa-share:hover { color: #fff; filter: brightness(1.08); }
+a.wa-share, a.wa-share:visited, a.wa-share:hover { color: #fff; }
+.wa-share:hover { filter: brightness(1.08); }
 
 /* Study planner: week-strip day tiles and the day agenda cards (coloured by subject through --sc variables). */
 .day-tile { display: flex; min-height: 88px; flex-direction: column; align-items: center; justify-content: center; gap: 3px;

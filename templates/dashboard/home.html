@@ -1,5 +1,6 @@
 {% extends "layouts/app.html" %}
-{% block title %}Dashboard — KKEVO Academy{% endblock %}
+{% load core_tags %}
+{% block title %}Today — KKEVO Academy{% endblock %}
 {% block header_stitch %}{% endblock %}
 {% block header_left %}
 <form action="{% url 'courses:catalog' %}" method="get" role="search" class="hidden max-w-[480px] nav:block">
@@ -42,7 +43,7 @@
     <a href="{% url 'courses:catalog' %}" class="svc"><span class="svc-tile" style="background-color:#C2410C">{% include "components/icon.html" with name="compass" class="h-6 w-6" %}</span>Subjects</a>
     <a href="{% url 'practice:index' %}" class="svc"><span class="svc-tile" style="background-color:#157A4A">{% include "components/icon.html" with name="target" class="h-6 w-6" %}</span>Practice</a>
     <a href="{% url 'practice:review' %}" class="svc"><span class="svc-tile relative" style="background-color:#B45309">{% include "components/icon.html" with name="refresh" class="h-6 w-6" %}{% if reviews_due %}<span class="svc-badge">{{ reviews_due }}</span>{% endif %}</span>Mistakes</a>
-    <a href="{% url 'learning:planner' %}" class="svc"><span class="svc-tile" style="background-color:#7E22CE">{% include "components/icon.html" with name="calendar" class="h-6 w-6" %}</span>Timetable</a>
+    <a href="{% url 'learning:planner' %}" class="svc"><span class="svc-tile" style="background-color:#7E22CE">{% include "components/icon.html" with name="calendar" class="h-6 w-6" %}</span>Planner</a>
     {% if not show.is_new %}
     <a href="{% url 'learning:progress' %}" class="svc"><span class="svc-tile" style="background-color:#0E7490">{% include "components/icon.html" with name="progress" class="h-6 w-6" %}</span>Progress</a>
     <a href="{% url 'learning:saved' %}" class="svc"><span class="svc-tile" style="background-color:#BE185D">{% include "components/icon.html" with name="bookmark" class="h-6 w-6" %}</span>Saved</a>
@@ -73,7 +74,7 @@
     <section class="card p-6 shadow-card {% if show.recommended %}xl:col-span-2{% else %}xl:col-span-3{% endif %} nav:p-8" aria-labelledby="continue-heading"{% if continue_card %} style="{{ continue_card.subject.style_vars }}; background-color: var(--sc-t); border-color: var(--sc-l)"{% endif %}>
       <div class="flex items-baseline justify-between gap-3">
         <h2 id="continue-heading" class="text-sm font-semibold uppercase tracking-[.06em] {% if continue_card %}sc-text{% else %}text-primary-700{% endif %}">Continue learning</h2>
-        {% if continue_card %}<span class="text-sm text-ink-muted">Last opened {{ continue_card.last_opened|timesince }} ago</span>{% endif %}
+        {% if continue_card %}<span class="text-sm text-ink-muted">Last opened {{ continue_card.last_opened|ago }}</span>{% endif %}
       </div>
       {% if continue_card %}
       <div class="mt-5 flex flex-col gap-5">

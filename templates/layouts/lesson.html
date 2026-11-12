@@ -30,7 +30,7 @@ reading-progress line, and on phones a bottom bar with Previous · Mark as Compl
           <span class="text-ink-heading" aria-current="page">{{ lesson.title }}</span>
         </span>
       </nav>
-      <span data-offline-hint hidden class="rounded-full bg-success-50 px-2 text-xs font-semibold leading-6 text-success-text" title="You can reopen this lesson without a connection">Available offline</span>
+      <span data-offline-hint hidden class="whitespace-nowrap rounded-full bg-success-50 px-2 text-xs font-semibold leading-6 text-success-text" title="You can reopen this lesson without a connection"><span class="sr-only">Available offline</span><span aria-hidden="true" class="sm:hidden">✓ Offline</span><span aria-hidden="true" class="hidden sm:inline">Available offline</span></span>
       {% block header_actions %}{% endblock %}
       <a href="{% url 'accounts:profile' %}" class="hidden h-10 w-10 items-center justify-center rounded-full bg-primary-100 text-sm font-bold text-primary-700 hover:text-primary-700 nav:flex" aria-label="Your profile">{{ user.initials }}</a>
     </div>

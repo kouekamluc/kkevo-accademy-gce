@@ -1,4 +1,5 @@
 {% extends "layouts/app.html" %}
+{% load core_tags %}
 {% block title %}Weekly summary — KKEVO Academy{% endblock %}
 {% block content %}
 <div class="flex flex-col gap-6 nav:mt-2">
@@ -40,7 +41,7 @@
         <form method="post" action="{% url 'learning:private_link' 'report' %}">{% csrf_token %}<input type="hidden" name="next" value="{% url 'learning:weekly' %}#share"><button type="submit" class="btn-secondary">Make a new link</button></form>
         <form method="post" action="{% url 'learning:private_link' 'report' %}">{% csrf_token %}<input type="hidden" name="action" value="revoke"><input type="hidden" name="next" value="{% url 'learning:weekly' %}#share"><button type="submit" class="btn border border-danger-200 text-danger-text hover:bg-danger-50">Stop sharing</button></form>
       </div>
-      {% if report_link.last_used_at %}<p class="text-sm text-ink-muted">Last opened {{ report_link.last_used_at|timesince }} ago.</p>{% endif %}
+      {% if report_link.last_used_at %}<p class="text-sm text-ink-muted">Last opened {{ report_link.last_used_at|ago }}.</p>{% endif %}
     </div>
     {% else %}
     <form method="post" action="{% url 'learning:private_link' 'report' %}" class="mt-4">{% csrf_token %}<input type="hidden" name="next" value="{% url 'learning:weekly' %}#share"><button type="submit" class="btn-primary">Create a report link</button></form>

@@ -13,8 +13,8 @@ heading_tag (h2 default). The "All practice" link is shown only when `more` or `
     <li class="flex items-center gap-3 px-4 py-3" style="{{ item.subject.style_vars }}">
       <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white" style="background-color: {{ item.subject.colour }}" aria-hidden="true">{% if item.subject.icon %}{% include "components/icon.html" with name=item.subject.icon class="h-5 w-5" %}{% else %}<span class="font-math text-base {% if item.subject.icon_text|length <= 2 %}italic{% endif %}">{{ item.subject.icon_text }}</span>{% endif %}</span>
       <div class="min-w-0 flex-1">
-        <div class="truncate font-extrabold text-ink-heading">{{ item.practice_set.title }}</div>
-        <p class="truncate text-sm text-slate-600"><span class="sc-text font-bold">{{ item.subject.name }}</span> · {{ item.last_label }} · {{ item.reason }}</p>
+        <div class="line-clamp-2 font-extrabold leading-snug text-ink-heading">{{ item.practice_set.title }}</div>
+        <p class="line-clamp-1 text-sm text-slate-600"><span class="sc-text font-bold">{{ item.subject.name }}</span> · {{ item.last_label }}<span class="hidden nav:inline"> · {{ item.reason }}</span></p>
       </div>
       <a href="{{ item.practice_set.get_absolute_url }}" class="sc-btn h-10 shrink-0 px-4 text-sm">Practise</a>
     </li>

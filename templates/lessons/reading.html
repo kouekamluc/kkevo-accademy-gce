@@ -2,7 +2,7 @@
 {% load lesson_tags %}
 {% block title %}{{ lesson.title }} — {{ course.title }}{% endblock %}
 {% block header_actions %}
-<button type="button" x-show="cardsAvailable" x-cloak @click="toggleCards()" class="flex h-10 items-center gap-1.5 rounded-btn px-3 text-sm font-extrabold text-primary-700 hover:bg-primary-50" :aria-pressed="cardsOn.toString()">
+<button type="button" x-show="cardsAvailable" x-cloak @click="toggleCards()" class="flex h-10 items-center gap-1.5 whitespace-nowrap rounded-btn px-3 text-sm font-extrabold text-primary-700 hover:bg-primary-50" :aria-pressed="cardsOn.toString()">
   <span x-text="cardsOn ? 'Full page' : 'Cards'">Cards</span>
 </button>
 <button type="button" @click="cycleTextSize()" class="hidden h-10 items-center gap-1.5 rounded-btn px-3 text-sm font-medium text-slate-700 hover:bg-slate-100 sm:flex" :aria-label="'Text size: ' + textSize">
