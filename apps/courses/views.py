@@ -353,9 +353,35 @@ def continue_learning(request):
         else:
             fresh.append(row)
     started.sort(key=lambda r: r["last_seen"] or timezone.now() - timedelta(days=3650), reverse=True)
-    suggestions, coming_soon_names = _class_subject_suggestions(get_profile(request.user), {o.pk for o, _c in plan})
+    profile = get_profile(request.user)
+    enrolled_ids = {o.pk for o, _c in plan}
+    suggestions, coming_soon_names = _class_subject_suggestions(profile, enrolled_ids)
+
+    # One section per class the student has courses in (their own class always, so it can offer what to add).
+    # Inside a section: courses in progress first, then not started, then finished.
+    sections = {}
+    for status, cta, rows in (("started", "Continue", started), ("fresh", "Start", fresh), ("finished", "Review", finished)):
+        for row in rows:
+            row["status"], row["cta"] = status, cta
+            section = sections.setdefault(row["level"].pk, {"level": row["level"], "rows": [], "soon": []})
+            section["rows"].append(row)
+    for offering in soon:
+        sections.setdefault(offering.level_id, {"level": offering.level, "rows": [], "soon": []})["soon"].append(offering.subject.name)
+    if profile.level_id:
+        sections.setdefault(profile.level_id, {"level": profile.level, "rows": [], "soon": []})
+    for section in sections.values():
+        level = section["level"]
+        section["is_yours"] = level.pk == profile.level_id
+        section["n"] = len(section["rows"])
+        section["in_progress"] = sum(1 for r in section["rows"] if r["status"] == "started")
+        section["finished"] = sum(1 for r in section["rows"] if r["status"] == "finished")
+        # What else this class offers that the student can add in one tap (subjects with lessons ready).
+        section["add"] = list(SubjectOffering.objects.for_class(level, profile.pathway).with_content()
+                              .exclude(pk__in=enrolled_ids).select_related("subject")
+                              .order_by("subject__order", "subject__name"))
+    ordered = sorted(sections.values(), key=lambda s: (not s["is_yours"], s["level"].pk))
     return render(request, "courses/continue.html", {
-        "suggestions": suggestions, "coming_soon_names": coming_soon_names,
+        "sections": ordered, "suggestions": suggestions, "coming_soon_names": coming_soon_names,
         "started": started, "fresh": fresh, "finished": finished, "coming_soon": soon,
         "last": started[0] if started else None, "nav_active": "continue",
     })

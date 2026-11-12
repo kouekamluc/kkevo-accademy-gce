@@ -25,33 +25,6 @@
   </section>
   {% endif %}
 
-  {% if started %}
-  <section aria-labelledby="courses-heading" class="flex flex-col gap-3">
-    <h2 id="courses-heading" class="text-xl font-black text-navy">Your courses</h2>
-    <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-      {% for row in started %}{% include "courses/_continue_card.html" with row=row cta="Continue" %}{% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-
-  {% if fresh %}
-  <section aria-labelledby="fresh-heading" class="flex flex-col gap-3">
-    <h2 id="fresh-heading" class="text-xl font-black text-navy">Not started yet</h2>
-    <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-      {% for row in fresh %}{% include "courses/_continue_card.html" with row=row cta="Start" %}{% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-
-  {% if finished %}
-  <section aria-labelledby="done-heading" class="flex flex-col gap-3">
-    <h2 id="done-heading" class="text-xl font-black text-navy">Finished</h2>
-    <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-      {% for row in finished %}{% include "courses/_continue_card.html" with row=row cta="Review" %}{% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-
   {% if not started and not fresh and not finished %}
   <div class="rounded-card border-2 border-dashed border-surface-border bg-white p-10 text-center">
     <p class="text-lg font-extrabold">You have no courses in your plan yet</p>
@@ -60,26 +33,48 @@
   </div>
   {% endif %}
 
-  {% if suggestions %}
-  <section aria-labelledby="add-heading" class="flex flex-col gap-3">
-    <div class="flex flex-wrap items-baseline justify-between gap-3">
-      <h2 id="add-heading" class="text-xl font-black text-navy">Add more subjects</h2>
-      <form method="post" action="{% url 'courses:add_class_subjects' %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.path }}"><button type="submit" class="text-[15px] font-extrabold text-primary">Add all of them</button></form>
+  {% for section in sections %}
+  <section aria-labelledby="class-{{ section.level.slug }}" class="flex flex-col gap-3">
+    <div class="flex flex-wrap items-end justify-between gap-x-4 gap-y-1 border-b-2 border-surface-border pb-2">
+      <div>
+        <h2 id="class-{{ section.level.slug }}" class="flex flex-wrap items-center gap-2 text-xl font-black text-navy">{{ section.level.name }}
+          <span class="text-sm font-bold text-ink-muted">{{ section.level.get_exam_level_display }}</span>
+          {% if section.is_yours %}<span class="rounded-full bg-primary-50 px-2.5 py-0.5 text-xs font-extrabold text-primary-700">Your class</span>{% endif %}
+        </h2>
+        <p class="mt-0.5 text-sm font-semibold text-slate-600">
+          {% if section.n %}{{ section.n }} course{{ section.n|pluralize }}{% if section.in_progress %} · {{ section.in_progress }} in progress{% endif %}{% if section.finished %} · {{ section.finished }} finished{% endif %}
+          {% else %}No courses in your plan for this class yet.{% endif %}
+        </p>
+      </div>
+      <a href="{% url 'courses:catalog' %}?level={{ section.level.slug }}" class="text-[15px] font-extrabold">Browse {{ section.level.name }}</a>
     </div>
-    <p class="text-sm font-semibold text-slate-600">Other subjects of your class that have lessons ready.</p>
-    <ul class="flex flex-wrap gap-2.5">
-      {% for o in suggestions %}
-      <li><form method="post" action="{% url 'courses:toggle_plan' o.pk %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.path }}">
-        <button type="submit" class="inline-flex min-h-[48px] items-center gap-2 rounded-full border-2 border-b-4 border-surface-border bg-white px-5 text-[15px] font-extrabold text-slate-700 transition hover:border-primary-300 active:translate-y-[2px]">+ {{ o.subject.name }}</button></form></li>
-      {% endfor %}
+    {% if section.rows %}
+    <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      {% for row in section.rows %}{% include "courses/_continue_card.html" with row=row cta=row.cta %}{% endfor %}
     </ul>
+    {% endif %}
+    {% if section.add %}
+    <div class="flex flex-col gap-2 {% if section.rows %}mt-1{% endif %}">
+      <div class="flex flex-wrap items-baseline justify-between gap-3">
+        <h3 class="text-[15px] font-extrabold text-ink-heading">Add more subjects in {{ section.level.name }}</h3>
+        {% if section.is_yours and section.add|length > 1 %}<form method="post" action="{% url 'courses:add_class_subjects' %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.path }}"><button type="submit" class="text-[15px] font-extrabold text-primary">Add all of them</button></form>{% endif %}
+      </div>
+      <ul class="flex flex-wrap gap-2.5">
+        {% for o in section.add %}
+        <li><form method="post" action="{% url 'courses:toggle_plan' o.pk %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.path }}">
+          <button type="submit" class="inline-flex min-h-[44px] items-center gap-2 rounded-full border-2 border-b-4 border-surface-border bg-white px-4 text-[15px] font-extrabold text-slate-700 transition hover:border-primary-300 active:translate-y-[2px]">+ {{ o.subject.name }}</button>
+        </form></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    {% if section.soon %}<p class="text-sm font-semibold text-slate-600"><span class="font-extrabold text-ink-heading">Coming soon in your plan:</span> {{ section.soon|join:", " }}.</p>{% endif %}
   </section>
-  {% endif %}
+  {% endfor %}
+
 
   <p class="flex flex-wrap gap-x-5 gap-y-1 text-[15px] font-extrabold"><a href="{% url 'courses:catalog' %}">Browse all subjects</a><a href="{% url 'courses:my_subjects' %}">Manage my plan</a></p>
 
-  {% if coming_soon_names %}<p class="text-sm font-semibold leading-relaxed text-slate-600"><span class="font-extrabold text-ink-heading">Coming soon for your class:</span> {{ coming_soon_names|join:", " }}.</p>{% endif %}
 
-  {% if coming_soon %}<p class="text-sm font-semibold leading-relaxed text-slate-600"><span class="font-extrabold text-ink-heading">Coming soon in your plan:</span> {% for o in coming_soon %}{{ o.subject.name }}{% if not forloop.last %}, {% endif %}{% endfor %}.</p>{% endif %}
 </div>
 {% endblock %}

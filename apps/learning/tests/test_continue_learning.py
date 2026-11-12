@@ -121,3 +121,32 @@ def test_lesson_page_recommends_prerequisites_without_locking_the_lesson(client,
     assert "Recommended before this lesson" in html and a.title in html
     touch(student, a, done=True)
     assert "Recommended before this lesson" not in client.get(b.get_absolute_url()).content.decode()
+
+
+# ------------------------------------------------------------------ grouped by class
+
+
+def test_my_courses_groups_courses_by_class_with_their_own_class_first(client, student, levels, science):
+    chemistry = subject("Chemistry")
+    chem_f5 = build(chemistry, levels["F5"], science, lessons=TWO)
+    chem_u6 = build(chemistry, levels["U6"], science, lessons=TWO)
+    chem_l6 = build(chemistry, levels["L6"], science, lessons=TWO)
+    build(subject("Biology"), levels["F5"], science, lessons=TWO)  # in the class, not added yet
+    for offering in (chem_f5, chem_u6, chem_l6):
+        Enrollment.objects.create(user=student, offering=offering)
+    touch(student, lesson_of(chem_u6, "first"))
+    touch(student, lesson_of(chem_f5, "first"), done=True)
+    touch(student, lesson_of(chem_f5, "second"), done=True)
+    client.force_login(student)
+    response = client.get(reverse("courses:continue"))
+    sections = response.context["sections"]
+    assert [s["level"].slug for s in sections][0] == student.profile.level.slug  # their own class leads
+    by_level = {s["level"].code: s for s in sections}
+    assert set(by_level) == {"F5", "L6", "U6"}
+    # one Chemistry card per class, never mixed into one grid
+    assert all([r["subject"].name for r in by_level[code]["rows"]] == ["Chemistry"] for code in ("F5", "L6", "U6"))
+    assert by_level["U6"]["in_progress"] == 1 and by_level["F5"]["finished"] == 1 and by_level["L6"]["n"] == 1
+    # what else the class offers is one tap away
+    assert [o.subject.name for o in by_level["F5"]["add"]] == ["Biology"]
+    html = response.content.decode()
+    assert "Upper Sixth" in html and "Lower Sixth" in html and "Add more subjects in Form 5" in html
