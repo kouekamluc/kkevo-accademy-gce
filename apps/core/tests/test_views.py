@@ -45,7 +45,7 @@ def test_public_routes_resolve(client, name):
 
 def test_landing_speaks_to_teenagers_on_phones(client):
     html = client.get(reverse("core:landing")).content.decode()
-    assert "Daily streaks" in html and "Points and levels" in html and "Light on data" in html
+    assert "Daily streaks" in html and "Share on WhatsApp" in html and "Light on data" in html
     assert "Preview of a quiz question" in html and "Kiki" in html
 
 

@@ -5,7 +5,8 @@ and the form card below or beside it. Pages may override hero_title and hero_tex
 {% endcomment %}
 {% block body %}
 <div class="flex min-h-screen flex-col bg-surface-bg nav:flex-row">
-  <aside class="flex flex-col gap-4 bg-navy px-5 pb-14 pt-4 text-white nav:sticky nav:top-0 nav:h-screen nav:w-[480px] nav:max-w-[42vw] nav:shrink-0 nav:justify-between nav:px-12 nav:py-10">
+  <div class="toghu-stitch nav:hidden" aria-hidden="true"></div>
+  <aside class="toghu-band flex flex-col gap-4 px-5 pb-14 pt-4 text-white nav:sticky nav:top-0 nav:h-screen nav:w-[480px] nav:max-w-[42vw] nav:shrink-0 nav:justify-between nav:px-12 nav:py-10">
     <div class="flex items-center justify-between gap-4">
       <a href="{% url 'core:landing' %}" class="flex items-center gap-2.5 text-white hover:text-white">
         {% include "components/logo.html" with size="sm" %}<span class="text-[17px] font-black tracking-[-.01em]">KKEVO Academy</span>
@@ -21,9 +22,9 @@ and the form card below or beside it. Pages may override hero_title and hero_tex
       </div>
     </div>
     <ul class="hidden flex-wrap gap-2.5 text-sm font-extrabold nav:flex">
-      <li class="inline-flex items-center gap-2 rounded-full bg-navy-700 px-4 py-2"><span aria-hidden="true">🔥</span>Daily streaks</li>
-      <li class="inline-flex items-center gap-2 rounded-full bg-navy-700 px-4 py-2"><span aria-hidden="true">⭐</span>Points and levels</li>
-      <li class="inline-flex items-center gap-2 rounded-full bg-navy-700 px-4 py-2"><span aria-hidden="true">📱</span>Light on data</li>
+      <li class="inline-flex items-center gap-2 rounded-full bg-[#2A2550] px-4 py-2"><span aria-hidden="true">🔥</span>Daily streaks</li>
+      <li class="inline-flex items-center gap-2 rounded-full bg-[#2A2550] px-4 py-2"><span aria-hidden="true">💬</span>Share on WhatsApp</li>
+      <li class="inline-flex items-center gap-2 rounded-full bg-[#2A2550] px-4 py-2"><span aria-hidden="true">📱</span>Light on data</li>
     </ul>
   </aside>
   <main id="main" class="-mt-8 flex flex-1 justify-center rounded-t-[32px] bg-surface-bg px-4 pb-12 pt-8 nav:mt-0 nav:items-center nav:rounded-none nav:py-12">

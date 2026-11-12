@@ -3,28 +3,28 @@
 
 {% block content %}
 {# ---------- Hero ---------- #}
-<section class="overflow-hidden border-b-2 border-surface-border bg-white">
+<section class="toghu-band overflow-hidden">
   <div class="wrap grid items-center gap-12 pb-14 pt-10 nav:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] nav:pb-24 nav:pt-20">
     <div>
-      <div class="inline-flex h-8 items-center gap-2 rounded-full bg-primary-50 px-3 text-[13px] font-semibold text-primary-700">
-        <span class="h-1.5 w-1.5 rounded-full bg-primary"></span>For {% for level in levels %}{% if not forloop.first %}{% if forloop.last %} &amp; {% else %}, {% endif %}{% endif %}{{ level.name }}{% empty %}Form 5, Lower Sixth &amp; Upper Sixth{% endfor %}
+      <div class="inline-flex h-8 items-center gap-2 rounded-full bg-white/10 px-3 text-[13px] font-semibold text-[#E8E3FF]">
+        <span class="h-1.5 w-1.5 rounded-full bg-[#F2B705]"></span>For {% for level in levels %}{% if not forloop.first %}{% if forloop.last %} &amp; {% else %}, {% endif %}{% endif %}{{ level.name }}{% empty %}Form 5, Lower Sixth &amp; Upper Sixth{% endfor %}
       </div>
-      <h1 class="mt-5 text-[40px] font-black leading-[1.06] tracking-[-.02em] text-navy nav:text-[58px]">
-        Pass your GCE,<br><span class="text-primary">one small win at a time.</span>
+      <h1 class="mt-5 text-[40px] font-black leading-[1.06] tracking-[-.02em] text-white nav:text-[58px]">
+        Pass your GCE,<br><span class="text-[#F2B705]">one small win at a time.</span>
       </h1>
-      <p class="mt-5 max-w-[520px] text-[18px] font-semibold leading-[1.6] text-slate-600">
-        Short lessons, quick quizzes, points and streaks. Made for Cameroon O Level and A Level students, and light enough for any phone.
+      <p class="mt-5 max-w-[520px] text-[18px] font-semibold leading-[1.6] text-[#D8D2F0]">
+        Short lessons, quick quizzes and a report card you can send to your parents on WhatsApp. Made for Cameroon O Level and A Level students, and light enough for any phone.
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <a href="{% if user.is_authenticated %}{% url 'dashboard:home' %}{% else %}{% url 'accounts:register' %}{% endif %}" class="btn-primary btn-lg w-full sm:w-auto">
+        <a href="{% if user.is_authenticated %}{% url 'dashboard:home' %}{% else %}{% url 'accounts:register' %}{% endif %}" class="btn btn-lg w-full border-b-4 border-[#B98500] bg-[#F2B705] text-[#1A1630] hover:bg-[#F2B705] hover:text-[#1A1630] sm:w-auto">
           Start Learning for Free {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}
         </a>
-        <a href="{% url 'courses:catalog' %}" class="btn-secondary btn-lg w-full sm:w-auto">See subjects</a>
+        <a href="{% url 'courses:catalog' %}" class="btn btn-lg w-full border-2 border-b-4 border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white sm:w-auto">See subjects</a>
       </div>
       <ul class="mt-7 flex flex-wrap gap-2.5 text-[15px] font-extrabold">
-        <li class="inline-flex items-center gap-2 rounded-full border-2 border-warning-200 bg-warning-50 px-4 py-2 text-warning-text"><span aria-hidden="true">🔥</span>Daily streaks</li>
-        <li class="inline-flex items-center gap-2 rounded-full border-2 border-primary-100 bg-primary-50 px-4 py-2 text-primary-700"><span aria-hidden="true">⭐</span>Points and levels</li>
-        <li class="inline-flex items-center gap-2 rounded-full border-2 border-success-200 bg-success-50 px-4 py-2 text-success-text"><span aria-hidden="true">📱</span>Light on data</li>
+        <li class="inline-flex items-center gap-2 rounded-full border-2 border-white/20 bg-white/10 px-4 py-2 text-white"><span aria-hidden="true">🔥</span>Daily streaks</li>
+        <li class="inline-flex items-center gap-2 rounded-full border-2 border-white/20 bg-white/10 px-4 py-2 text-white"><span aria-hidden="true">💬</span>Share on WhatsApp</li>
+        <li class="inline-flex items-center gap-2 rounded-full border-2 border-white/20 bg-white/10 px-4 py-2 text-white"><span aria-hidden="true">📱</span>Light on data</li>
       </ul>
     </div>
 
@@ -51,6 +51,7 @@
     </div>
   </div>
 </section>
+<div class="toghu-stitch" aria-hidden="true"></div>
 
 {# ---------- Choose your class ---------- #}
 <section class="wrap pt-16 nav:pt-[88px]" id="levels">
