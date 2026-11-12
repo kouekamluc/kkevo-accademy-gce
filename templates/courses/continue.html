@@ -20,7 +20,7 @@
         <div class="mt-0.5 truncate text-[15px] font-semibold text-white/90">{{ last.lesson.title }}{% if last.progress and not last.progress.is_completed and last.progress.percent %} · {{ last.progress.percent }}% read{% endif %}</div>
       </div>
     </div>
-    <a href="{{ last.resume_url }}" class="sc-btn-light h-[52px] w-full px-6 text-base nav:w-auto">Resume lesson {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
+    <a href="{{ last.resume_url }}" class="sc-btn-light h-[52px] w-full shrink-0 whitespace-nowrap px-6 text-base nav:w-auto">Resume lesson {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</a>
   </section>
   {% endif %}
 
