@@ -13,7 +13,7 @@ from django.urls import reverse
 from django.utils import timezone
 from django.views.decorators.http import require_POST
 
-from .. import analytics, motivation, services
+from .. import analytics, autoplan, motivation, services
 from ..models import Enrollment, LinkPurpose, PrivateLink, RestDay, SessionKind, StudySession
 from apps.academics.models import Subject
 from apps.accounts.decorators import onboarding_required
@@ -145,7 +145,8 @@ def planner(request):
     hours = [timezone.localtime(s.starts_at).hour for s in sessions] + [timezone.localtime(s.ends_at).hour + 1 for s in sessions]
     first_hour = min([15] + hours) if hours else 15
     last_hour = max([21] + hours) if hours else 21
-    first_hour, last_hour = max(0, min(first_hour, 15)), min(24, max(last_hour, 21))
+    full_day = request.GET.get("hours") == "all"
+    first_hour, last_hour = (max(0, min(first_hour, 6)), min(24, max(last_hour, 23))) if full_day else         (max(0, min(first_hour, 15)), min(24, max(last_hour, 21)))
     hour_px = 112
     now = timezone.localtime()
     columns = []
@@ -161,6 +162,7 @@ def planner(request):
                           "colour": "amber" if is_now else ("plan" if s.kind == SessionKind.PLANNING else colour_for.get(s.subject_id, "slate")),
                           "is_now": is_now, "time": local.strftime("%H:%M")})
         columns.append({"date": d, "label": WEEKDAYS[d.weekday()], "is_today": d == today, "items": items})
+    week_has_sessions = any(c["items"] for c in columns)
     now_top = round((now.hour - first_hour + now.minute / 60) * hour_px) if first_hour <= now.hour < last_hour else None
     legend = [{"subject": Subject.objects.get(pk=sid), "colour": colour_for[sid]} for sid in subject_ids]
 
@@ -186,6 +188,10 @@ def planner(request):
     for r in revision:
         r["label"] = analytics.due_label(r["due"], today)
 
+    missed = [s for s in StudySession.objects.filter(user=user, completed_at__isnull=True, starts_at__gte=now - timedelta(days=14),
+                                                     starts_at__lt=now).select_related("subject").order_by("-starts_at")
+              if s.ends_at < now][:5]
+    has_plan = any(p["course"] for p in _plan(user))
     form = SessionForm(user=user, initial={"date": anchor if anchor >= today else today, "start_time": time(17, 0),
                                            "duration_minutes": 30, "repeat_weeks": 4})
     rest_this_week = RestDay.objects.filter(user=user, date__gte=week_start, date__lte=week_start + timedelta(days=6)).first()
@@ -200,7 +206,10 @@ def planner(request):
         "week_minutes": fmt_minutes(done_minutes), "week_goal": fmt_minutes(goal),
         "week_percent": min(100, round(100 * done_minutes / goal)) if goal else 0,
         "per_subject": sorted(per_subject.items(), key=lambda kv: -kv[1]["minutes"]),
-        "revision": revision, "form": form, "nav_active": "planner", "now": now,
+        "revision": revision, "form": form, "missed": missed, "full_day": full_day, "first_hour": first_hour,
+        "week_has_sessions": week_has_sessions, "has_plan": has_plan, "week_monday": monday, "daily_goal": profile.daily_goal_minutes,
+        "plan_weekdays": [{"n": i, "label": WEEKDAYS[i], "on": i < 6} for i in range(7)],
+        "can_plan": monday + timedelta(days=6) >= today, "nav_active": "planner", "now": now,
         "countdown": _countdown(user, profile, today), "exam_form": ExamDateForm(instance=profile),
         "rest_this_week": rest_this_week, "rest_today": bool(rest_this_week and rest_this_week.date == today),
         "calendar_link": links.get(LinkPurpose.CALENDAR),
@@ -347,3 +356,76 @@ def session_toggle(request, pk):
     if request.htmx:
         return render(request, "learning/_session_check.html", {"session": session, "variant": request.POST.get("variant", "")})
     return redirect(_safe_next(request, "dashboard:home"))
+
+
+# --------------------------------------------------------------------------- automatic planning
+@login_required
+@require_POST
+def plan_week(request):
+    """'Plan my week': fill the chosen days with the student's next lessons and due revisions."""
+    user = request.user
+    profile = get_profile(user)
+    today = timezone.localdate()
+    try:
+        first_day = date.fromisoformat(request.POST.get("date", ""))
+    except ValueError:
+        first_day = today
+    first_day = first_day - timedelta(days=first_day.weekday())
+    weekdays = {int(d) for d in request.POST.getlist("days") if d.isdigit() and 0 <= int(d) <= 6}
+    try:
+        start_time = time.fromisoformat(request.POST.get("start_time") or "17:00")
+    except ValueError:
+        start_time = None
+    if not weekdays or start_time is None:
+        messages.error(request, "Choose at least one study day and a start time.")
+        return _planner_at(first_day)
+    weeks = 2 if request.POST.get("weeks") == "2" else 1
+    courses = [p["course"] for p in _plan(user) if p["course"]]
+    if not courses:
+        messages.error(request, "Choose your subjects first, then the planner can fill your week.")
+        return redirect("learning:planner")
+    start = max(first_day, today)
+    plan = autoplan.build_plan(user, profile, courses, start, (first_day + timedelta(days=7 * weeks) - start).days, weekdays, start_time)
+    if not plan:
+        messages.info(request, "Nothing to add: those days are full, resting, already behind you, or you have no lessons left to plan.")
+        return _planner_at(first_day)
+    created = autoplan.save_plan(user, plan)
+    minutes = sum(s.duration_minutes for s in created)
+    messages.success(request, f"Planned {len(created)} session{'s' if len(created) != 1 else ''} "
+                              f"({fmt_minutes(minutes)} of study). Move or delete any you don't want.")
+    return _planner_at(timezone.localtime(created[0].starts_at).date())
+
+
+@login_required
+@require_POST
+def week_clear(request):
+    """Remove this week's sessions that are still to come and not done (undo for 'Plan my week')."""
+    try:
+        day = date.fromisoformat(request.POST.get("date", ""))
+    except ValueError:
+        day = timezone.localdate()
+    monday = day - timedelta(days=day.weekday())
+    tz = timezone.get_current_timezone()
+    start = max(timezone.now(), timezone.make_aware(datetime.combine(monday, time.min), tz))
+    end = timezone.make_aware(datetime.combine(monday + timedelta(days=6), time.max), tz)
+    removed, _ = StudySession.objects.filter(user=request.user, completed_at__isnull=True, starts_at__range=(start, end)).delete()
+    messages.success(request, f"Cleared {removed} upcoming session{'s' if removed != 1 else ''} this week."
+                     if removed else "Nothing to clear: no upcoming sessions this week.")
+    return _planner_at(day)
+
+
+@login_required
+@require_POST
+def session_reschedule(request, pk):
+    """Move a missed (or any) session to the next time its clock time comes round."""
+    session = get_object_or_404(StudySession, pk=pk, user=request.user)
+    tz = timezone.get_current_timezone()
+    clock = timezone.localtime(session.starts_at).time()
+    now = timezone.now()
+    day = timezone.localdate()
+    while timezone.make_aware(datetime.combine(day, clock), tz) <= now:
+        day += timedelta(days=1)
+    session.starts_at = timezone.make_aware(datetime.combine(day, clock), tz)
+    session.save(update_fields=["starts_at"])
+    messages.success(request, f"“{session.title}” moved to {day:%A %d %B}, {clock:%H:%M}.")
+    return _planner_at(day)

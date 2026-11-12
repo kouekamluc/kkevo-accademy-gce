@@ -1,7 +1,7 @@
 {% extends "layouts/app.html" %}
 {% block title %}Study planner — KKEVO Academy{% endblock %}
 {% block content %}
-<div class="flex flex-col gap-6 nav:mt-2" x-data="{ adding: false, selected: null }" @keydown.escape.window="adding = false; selected = null">
+<div class="flex flex-col gap-6 nav:mt-2" x-data="{ adding: false, planning: false, selected: null, slot(e, day) { if (e.target !== e.currentTarget) return; const r = e.currentTarget.getBoundingClientRect(); const mins = Math.floor(((e.clientY - r.top) / {{ hour_px }} * 60) / 30) * 30 + {{ first_hour }} * 60; const t = String(Math.floor(mins / 60)).padStart(2, '0') + ':' + String(mins % 60).padStart(2, '0'); this.adding = true; this.$nextTick(() => { document.getElementById('id_date').value = day; document.getElementById('id_start_time').value = t; document.getElementById('id_title').focus(); }); } }" @keydown.escape.window="adding = false; planning = false; selected = null">
   <div class="flex flex-wrap items-end justify-between gap-4">
     <div class="flex items-center gap-3">
       {% include "components/mascot.html" with size="64" mood="happy" %}
@@ -10,8 +10,23 @@
         <p class="mt-1 text-base font-semibold text-ink-muted">Plan short, regular sessions. Consistency beats cramming.</p>
       </div>
     </div>
+    <div class="flex flex-wrap gap-2">
+    {% if can_plan and has_plan %}<button type="button" class="btn-secondary h-12 px-5 text-base" @click="planning = true">{% include "components/icon.html" with name="refresh" class="h-5 w-5" stroke="2.2" %}Plan my week</button>{% endif %}
     <button type="button" class="btn-primary h-12 px-6 text-base" @click="adding = true">{% include "components/icon.html" with name="plus" class="h-5 w-5" stroke="2.2" %}Add Study Session</button>
+    </div>
   </div>
+
+  {% if can_plan and has_plan and not week_has_sessions %}
+  <section class="flex flex-wrap items-center gap-4 rounded-2xl border border-primary-200 bg-primary-50 p-5" aria-label="Plan this week">
+    <div class="min-w-[240px] flex-1">
+      <h2 class="text-lg font-bold text-navy">Your week is empty</h2>
+      <p class="mt-1 text-[15px] text-slate-700">Let the planner fill it: your next lessons and any revision that is due, about {{ daily_goal }} minutes a day. You can move or delete anything afterwards.</p>
+    </div>
+    <button type="button" class="btn-primary h-12 px-6" @click="planning = true">Plan my week</button>
+  </section>
+  {% elif not has_plan %}
+  <section class="rounded-2xl border border-warning-200 bg-warning-50 p-5 text-[15px] text-warning-text">You haven’t chosen your subjects yet. <a href="{% url 'accounts:onboarding_subjects' %}" class="font-semibold">Choose subjects</a> and the planner can fill your week for you.</section>
+  {% endif %}
 
   <div class="grid gap-6 xl:grid-cols-[1fr_420px]">
     <section class="card overflow-hidden" aria-labelledby="week-heading">
@@ -35,7 +50,7 @@
           <div class="relative grid" style="grid-template-columns: 64px repeat({{ columns|length }}, minmax(0, 1fr)); height: {{ grid_height }}px">
             <div class="relative">{% for h in hours %}<span class="absolute right-3 -translate-y-1/2 text-xs text-ink-muted" style="top: {% widthratio forloop.counter0 1 hour_px %}px">{{ h|stringformat:"02d" }}:00</span>{% endfor %}</div>
             {% for c in columns %}
-            <div class="relative border-l border-surface-border {% if c.is_today %}bg-primary-50/50{% endif %}">
+            <div class="relative cursor-copy border-l border-surface-border {% if c.is_today %}bg-primary-50/50{% endif %}" @click="slot($event, '{{ c.date.isoformat }}')" title="Click an empty slot to add a session">
               {% for h in hours %}<div class="absolute inset-x-0 border-t border-surface-border" style="top: {% widthratio forloop.counter0 1 hour_px %}px"></div>{% endfor %}
               {% if c.is_today and now_top is not None %}<div class="absolute inset-x-0 z-10 border-t-2 border-red-500" style="top: {{ now_top }}px"><span class="absolute -left-1 -top-[5px] h-2 w-2 rounded-full bg-red-500"></span></div>{% endif %}
               {% for item in c.items %}
@@ -53,6 +68,8 @@
         {% for l in legend %}<span class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-sm session-{{ l.colour }}"></span>{{ l.subject.name }}</span>{% endfor %}
         <span class="flex items-center gap-1.5"><span class="h-3 w-3 rounded-sm session-amber"></span>Happening now</span>
         <span>Faded = completed</span>
+        <span class="flex-1"></span>
+        <a href="?view={{ view }}&date={{ anchor.isoformat }}{% if not full_day %}&hours=all{% endif %}" class="font-semibold">{% if full_day %}Show evenings only{% else %}Show the whole day{% endif %}</a>
       </div>
     </section>
 
@@ -97,6 +114,26 @@
         </form>
       </section>
 
+      {% if missed %}
+      <section class="rounded-2xl border border-danger-200 bg-danger-50 p-6" aria-labelledby="missed-heading">
+        <h2 id="missed-heading" class="text-xl font-bold text-danger-text">Missed sessions</h2>
+        <p class="mt-1 text-[15px] text-danger-text">Life happens. Move them to the next free day, or let them go.</p>
+        <ul class="mt-4 flex flex-col gap-3">
+          {% for s in missed %}
+          <li class="rounded-xl bg-white px-4 py-3">
+            <div class="font-semibold">{{ s.title }}</div>
+            <div class="text-sm text-ink-muted">{{ s.starts_at|date:"D j M" }} · {{ s.starts_at|time:"H:i" }} · {{ s.duration_minutes }} min</div>
+            <div class="mt-2 flex flex-wrap gap-2">
+              <form method="post" action="{% url 'learning:session_reschedule' s.pk %}">{% csrf_token %}<button type="submit" class="btn-secondary min-h-0 h-10 px-4 text-sm">Move to next day</button></form>
+              <form method="post" action="{% url 'learning:session_toggle' s.pk %}">{% csrf_token %}<input type="hidden" name="next" value="{{ request.get_full_path }}"><button type="submit" class="btn min-h-0 h-10 px-4 text-sm text-slate-600">I did it</button></form>
+              <form method="post" action="{% url 'learning:session_delete' s.pk %}">{% csrf_token %}<button type="submit" class="btn min-h-0 h-10 px-4 text-sm text-danger-text">Skip</button></form>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
       <section class="card p-6" aria-labelledby="thisweek-heading">
         <h2 id="thisweek-heading" class="text-xl font-bold">This week</h2>
         <p class="mt-2"><span class="text-[30px] font-bold">{{ week_minutes }}</span> <span class="text-ink-muted">done of {{ week_goal }} goal</span></p>
@@ -104,6 +141,9 @@
         <dl class="mt-4 grid grid-cols-[1fr_auto] gap-y-2 text-[15px]">
           {% for name, v in per_subject %}<dt>{{ name }}</dt><dd class="text-slate-600">{{ v.count }} session{{ v.count|pluralize }} · {% widthratio v.minutes 1 1 %} min</dd>{% empty %}<dt class="col-span-2 text-sm text-ink-muted">No sessions planned this week.</dt>{% endfor %}
         </dl>
+        {% if week_has_sessions %}
+        <form method="post" action="{% url 'learning:week_clear' %}" class="mt-4 border-t border-surface-border pt-3 text-sm" onsubmit="return confirm('Remove the upcoming sessions this week that are not done yet?')">{% csrf_token %}<input type="hidden" name="date" value="{{ anchor.isoformat }}"><button type="submit" class="font-semibold text-danger-text">Clear this week’s upcoming sessions</button></form>
+        {% endif %}
       </section>
 
       <section class="rounded-2xl border border-warning-200 bg-warning-50 p-6" aria-labelledby="spaced-heading">
@@ -166,6 +206,26 @@
     </div>
   </div>
   {% endfor %}{% endfor %}
+
+  {# Plan my week dialog #}
+  <div x-show="planning" x-cloak class="fixed inset-0 z-50 flex items-end justify-center bg-navy/40 p-4 sm:items-center" @click.self="planning = false" role="dialog" aria-modal="true" aria-labelledby="plan-title">
+    <form method="post" action="{% url 'learning:plan_week' %}" class="flex max-h-[90vh] w-full max-w-lg flex-col gap-4 overflow-y-auto rounded-panel bg-white p-6 shadow-raised">
+      {% csrf_token %}<input type="hidden" name="date" value="{{ week_monday.isoformat }}">
+      <h3 id="plan-title" class="text-xl font-bold">Plan my week</h3>
+      <p class="text-[15px] text-slate-600">Each study day is filled up to your daily goal of <strong>{{ daily_goal }} minutes</strong>. Revision that is due comes first, then your subjects take turns. Rest days and sessions you already have are kept.</p>
+      <fieldset>
+        <legend class="form-label">Study on</legend>
+        <div class="mt-2 flex flex-wrap gap-2">
+          {% for d in plan_weekdays %}<label class="flex min-h-[44px] cursor-pointer items-center gap-2 rounded-btn border border-surface-border px-3 text-[15px]"><input type="checkbox" name="days" value="{{ d.n }}" {% if d.on %}checked{% endif %} class="h-5 w-5 rounded border-slate-300 text-primary">{{ d.label }}</label>{% endfor %}
+        </div>
+      </fieldset>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div><label for="plan-start" class="form-label">Start at</label><input id="plan-start" type="time" name="start_time" value="17:00" class="form-input" required></div>
+        <div><label for="plan-weeks" class="form-label">For</label><select id="plan-weeks" name="weeks" class="form-input"><option value="1">This week</option><option value="2">This week and next</option></select></div>
+      </div>
+      <div class="flex justify-end gap-2"><button type="button" class="btn-secondary" @click="planning = false">Cancel</button><button type="submit" class="btn-primary">Fill my planner</button></div>
+    </form>
+  </div>
 
   {# Add session dialog #}
   <div x-show="adding" x-cloak class="fixed inset-0 z-50 flex items-end justify-center bg-navy/40 p-4 sm:items-center" @click.self="adding = false" role="dialog" aria-modal="true" aria-labelledby="add-title">

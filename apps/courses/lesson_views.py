@@ -9,7 +9,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 from django.views.decorators.http import require_POST
 
-from apps.learning import achievements, services
+from apps.learning import achievements, autoplan, services
 from apps.learning.models import DailyActivity, LessonNote, LessonProgress, SavedLesson
 from apps.practice.models import PracticeSet
 
@@ -158,6 +158,7 @@ def lesson_complete(request, course_slug, pk):
     progress, _ = LessonProgress.objects.get_or_create(user=request.user, lesson=lesson)
     progress.mark_complete()
     progress.save()
+    autoplan.complete_for_lesson(request.user, lesson)
     lessons = _ordered_lessons(request, lesson.course)
     index = next((i for i, item in enumerate(lessons) if item.pk == lesson.pk), 0)
     next_lesson = lessons[index + 1] if index + 1 < len(lessons) else None

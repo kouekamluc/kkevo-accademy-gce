@@ -140,5 +140,23 @@ def next_lesson(user, course):
     return lessons[0], progress.get(lessons[0].pk)
 
 
+def upcoming_lessons(user, course, limit):
+    """The next `limit` lessons to study in a course: unfinished ones first (latest opened first), then the rest in order.
+
+    Lessons still waiting on a prerequisite come last.
+    """
+    lessons = list(
+        published_lessons().filter(topic__module__course=course).select_related("topic__module__course__offering__subject")
+        .order_by("topic__module__order", "topic__order", "order", "pk")
+    )
+    progress = progress_by_lesson(user, lessons)
+    todo = [l for l in lessons if l.pk not in progress or not progress[l.pk].is_completed]
+    started = sorted((l for l in todo if l.pk in progress), key=lambda l: progress[l.pk].last_viewed_at, reverse=True)
+    fresh = [l for l in todo if l.pk not in progress]
+    blocked = _blocked_from(user, _published_prerequisite_links([l.pk for l in todo]))
+    ordered = started + [l for l in fresh if l.pk not in blocked] + [l for l in fresh if l.pk in blocked]
+    return ordered[:limit]
+
+
 def course_for_offering(offering):
     return Course.objects.published().filter(offering=offering).order_by("order", "pk").first()
