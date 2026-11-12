@@ -46,7 +46,7 @@
     <a href="{% url 'learning:progress' %}" class="svc"><span class="svc-tile" style="background-color:#0E7490">{% include "components/icon.html" with name="progress" class="h-6 w-6" %}</span>Progress</a>
     <a href="{% url 'learning:saved' %}" class="svc"><span class="svc-tile" style="background-color:#BE185D">{% include "components/icon.html" with name="bookmark" class="h-6 w-6" %}</span>Saved</a>
     {% endif %}
-    <a href="{% url 'accounts:profile' %}" class="svc"><span class="svc-tile" style="background-color:#57534E">{% include "components/icon.html" with name="user" class="h-6 w-6" %}</span>Me</a>
+    {% if not show.is_new %}<a href="{% url 'learning:report_card' %}" class="svc"><span class="svc-tile" style="background-color:#57534E">{% include "components/icon.html" with name="file" class="h-6 w-6" %}</span>Report card</a>{% else %}<a href="{% url 'accounts:profile' %}" class="svc"><span class="svc-tile" style="background-color:#57534E">{% include "components/icon.html" with name="user" class="h-6 w-6" %}</span>Me</a>{% endif %}
   </nav>
 
   {# ---------- Exam countdown ---------- #}

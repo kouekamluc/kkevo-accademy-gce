@@ -29,7 +29,7 @@ def test_sidebar_has_one_my_courses_entry_instead_of_three(client, student, leve
     started(student, build(subject("Maths"), levels["F5"], science))
     client.force_login(student)
     items = client.get(reverse("dashboard:home")).context["sidebar_items"]
-    assert labels(items) == ["Today", "My Courses", "Explore Subjects", "Practice", "Study Planner", "My Progress", "Saved Lessons", "Settings"]
+    assert labels(items) == ["Today", "My Courses", "Explore Subjects", "Practice", "Study Planner", "My Progress", "Report Card", "Saved Lessons", "Settings"]
     assert "My Subjects" not in labels(items) and "Continue Learning" not in labels(items)
 
 

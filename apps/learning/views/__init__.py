@@ -9,6 +9,7 @@ from ._common import (  # noqa: F401
     _safe_next,
     fmt_minutes,
 )
+from .reportcard import report_card  # noqa: F401
 from .progress import (  # noqa: F401
     _sparkline,
     _suggestions,

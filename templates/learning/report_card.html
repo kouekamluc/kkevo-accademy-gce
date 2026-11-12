@@ -1,0 +1,73 @@
+{% extends "layouts/app.html" %}
+{% block title %}My report card — KKEVO Academy{% endblock %}
+{% block content %}
+<div class="mx-auto flex max-w-[760px] flex-col gap-5 nav:mt-2">
+  <header class="-mx-4 -mt-5 overflow-hidden nav:mx-0 nav:mt-0 nav:rounded-card">
+    <div class="toghu-band px-4 py-4 nav:px-8 nav:py-6">
+      <p class="text-sm font-bold text-[#CFC8EA]">Based on your practice scores · {{ today|date:"j F Y" }}</p>
+      <h1 class="mt-1 text-[26px] font-black leading-tight text-white nav:text-[32px]">My report card</h1>
+    </div>
+    <div class="toghu-stitch" aria-hidden="true"></div>
+  </header>
+
+  {% if marked %}
+  <section class="overflow-hidden border-2 border-ink-heading bg-white" aria-labelledby="bulletin-heading">
+    <div class="border-b-2 border-ink-heading px-4 py-3 text-center">
+      <h2 id="bulletin-heading" class="text-sm font-black uppercase tracking-[.06em] text-ink-heading">KKEVO Academy</h2>
+      <p class="text-sm font-semibold text-ink-muted">{{ student_name }}{% if student.class_label %} · {{ student.class_label }}{% endif %}</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-[15px]">
+        <thead>
+          <tr class="border-b-2 border-ink-heading text-xs font-black uppercase tracking-[.06em] text-ink-heading">
+            <th scope="col" class="px-4 py-2.5">Subject</th>
+            <th scope="col" class="px-2 py-2.5 text-right">Mark / 20</th>
+            <th scope="col" class="px-2 py-2.5 text-center">Grade</th>
+            <th scope="col" class="px-4 py-2.5">Remark</th>
+          </tr>
+        </thead>
+        <tbody class="tabular-nums">
+          {% for row in rows %}
+          <tr class="border-b border-surface-border" style="{{ row.subject.style_vars }}">
+            <th scope="row" class="px-4 py-3 font-extrabold">
+              <span class="flex items-center gap-2.5"><span class="h-3 w-3 shrink-0 rounded-full" style="background-color: {{ row.subject.colour }}" aria-hidden="true"></span>{{ row.subject.name }}</span>
+            </th>
+            {% if row.mark is not None %}
+            <td class="px-2 py-3 text-right text-lg font-black">{{ row.mark }}</td>
+            <td class="px-2 py-3 text-center font-black sc-text">{{ row.grade }}</td>
+            <td class="px-4 py-3 font-semibold text-slate-700">{{ row.remark }}</td>
+            {% else %}
+            <td colspan="3" class="px-2 py-3 text-sm font-semibold text-ink-muted"><a href="{% url 'practice:index' %}" class="sc-text">No practice yet. Try a set.</a></td>
+            {% endif %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-1 border-t-2 border-ink-heading px-4 py-3 text-[15px] font-black">
+      <span>Average: {{ average }} / 20</span>
+      <span class="text-sm font-bold text-ink-muted">{{ marked }} subject{{ marked|pluralize }} marked</span>
+    </div>
+    {% if strongest and weakest %}
+    <div class="border-t border-surface-border px-4 py-3 text-[15px]">
+      <p class="text-xs font-black uppercase tracking-[.06em] text-ink-muted">Kiki's remark</p>
+      <p class="mt-1 font-bold text-ink-heading">{% if weakest.percent >= 60 %}Strong across the board. Keep {{ strongest.subject.name }} sharp and stretch {{ weakest.subject.name }}.{% else %}Your best is {{ strongest.subject.name }}. Give {{ weakest.subject.name }} a little time every day.{% endif %}</p>
+    </div>
+    {% endif %}
+  </section>
+
+  <div class="flex flex-col gap-3 sm:flex-row">
+    <a href="https://wa.me/?text={{ share_text }}" target="_blank" rel="noopener" class="btn h-12 flex-1 border-b-4 border-[#0B5A35] bg-[#157A4A] text-base text-white hover:bg-[#157A4A] hover:text-white">Send to my parents on WhatsApp</a>
+    {% if weakest %}<a href="{% url 'practice:index' %}" class="btn-primary h-12 flex-1 text-base">Practise {{ weakest.subject.name }}</a>{% else %}<a href="{% url 'practice:index' %}" class="btn-primary h-12 flex-1 text-base">Practise now</a>{% endif %}
+  </div>
+
+  <p class="text-sm leading-relaxed text-ink-muted">Each mark is the average of your latest score on every topic you have practised, out of 20. Grades are an estimate to guide you ({% for minimum, grade, remark in scale %}{{ grade }} from {{ minimum }}%{% if not forloop.last %}, {% endif %}{% endfor %}). They are not your GCE result.</p>
+  {% else %}
+  <section class="card flex flex-col items-start gap-3 p-6 nav:p-8">
+    <h2 class="text-xl font-black text-navy">Your report card starts with your first practice set</h2>
+    <p class="text-[15px] text-slate-700">Finish one practice set and your first mark out of 20 appears here, with a remark for each subject.</p>
+    <a href="{% url 'practice:index' %}" class="btn-primary h-12 text-base">Start practising</a>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}

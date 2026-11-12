@@ -6,6 +6,7 @@ app_name = "learning"
 
 urlpatterns = [
     path("progress/", views.progress, name="progress"),
+    path("report-card/", views.report_card, name="report_card"),
     path("progress/add-to-planner/", views.add_suggestions, name="add_suggestions"),
     path("planner/", views.planner, name="planner"),
     path("planner/sessions/new/", views.session_create, name="session_create"),

@@ -13,6 +13,7 @@ SIDEBAR = [
     ("practice", "Practice", "target", "practice:index"),
     ("planner", "Study Planner", "calendar", "learning:planner"),
     ("progress", "My Progress", "progress", "learning:progress"),
+    ("report", "Report Card", "file", "learning:report_card"),
     ("saved", "Saved Lessons", "bookmark", "learning:saved"),
     ("settings", "Settings", "settings", "accounts:profile"),
 ]
@@ -21,13 +22,13 @@ BOTTOM_BAR = [
     ("dashboard", "Today", "home", "dashboard:home", ()),
     ("courses", "Learn", "book", "courses:continue", ("subjects", "continue", "explore", "saved")),
     ("practice", "Practice", "target", "practice:index", ()),
-    ("progress", "Progress", "progress", "learning:progress", ("planner",)),
+    ("progress", "Progress", "progress", "learning:progress", ("planner", "report")),
     ("settings", "Me", "user", "accounts:profile", ()),
 ]
 
 
 # Hidden until the student has started a lesson: they have nothing to show yet, so they only add clutter.
-HIDDEN_UNTIL_STARTED = {"progress", "saved"}
+HIDDEN_UNTIL_STARTED = {"progress", "saved", "report"}
 
 
 def _resolve(items, started=True):
