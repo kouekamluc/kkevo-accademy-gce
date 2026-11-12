@@ -34,7 +34,7 @@
     <h2 id="subject-{{ subject.pk }}" class="flex items-center gap-3 text-lg font-bold">{% include "components/subject_icon.html" with subject=subject %}{{ subject.name }}</h2>
     <ul class="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
       {% for s in sets %}
-      <li><a href="{{ s.get_absolute_url }}" class="sc-card flex h-full flex-col gap-2 rounded-card border-2 border-b-4 p-5 text-ink-heading transition hover:-translate-y-0.5 hover:text-ink-heading">
+      <li><a href="{{ s.get_absolute_url }}" class="sc-card flex h-full flex-col gap-2 rounded-card border p-5 text-ink-heading transition hover:-translate-y-0.5 hover:text-ink-heading">
         <span class="font-semibold">{{ s.title }}</span>
         {% if s.is_mock %}
         <span class="text-sm text-ink-muted">Mock exam · {{ s.question_count }} questions · {{ s.exam_minutes }} min timed</span>

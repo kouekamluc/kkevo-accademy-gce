@@ -16,7 +16,7 @@
   {% if rows %}
   <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
     {% for row in rows %}
-    <article class="sc-card relative flex flex-col gap-4 rounded-card border-2 border-b-4 p-5 transition hover:-translate-y-0.5" style="{{ row.subject.style_vars }}">
+    <article class="sc-card relative flex flex-col gap-4 rounded-card border p-5 transition hover:-translate-y-0.5" style="{{ row.subject.style_vars }}">
       <div class="flex items-center gap-3.5">
         {% include "components/subject_icon.html" with subject=row.subject %}
         <div class="min-w-0 flex-1">
@@ -55,7 +55,7 @@
     </div>
     <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
       {% for offering in suggestions %}
-      <li class="sc-card flex items-center gap-3 rounded-card border-2 p-3.5" style="{{ offering.subject.style_vars }}">
+      <li class="sc-card flex items-center gap-3 rounded-card border p-3.5" style="{{ offering.subject.style_vars }}">
         {% include "components/subject_icon.html" with subject=offering.subject %}
         <span class="min-w-0 flex-1 font-semibold text-ink-heading">{{ offering.subject.name }}</span>
         <form method="post" action="{% url 'courses:toggle_plan' offering.pk %}">{% csrf_token %}

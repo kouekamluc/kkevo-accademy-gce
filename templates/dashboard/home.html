@@ -53,10 +53,14 @@
   {# ---------- Exam countdown ---------- #}
   {% url 'learning:planner' as planner_home %}
   {% if countdown and not countdown.past %}
-  <section class="card flex flex-col gap-3 p-5 nav:flex-row nav:items-center nav:gap-6 nav:px-8" aria-labelledby="countdown-heading">
-    <h2 id="countdown-heading" class="sr-only">Exam countdown</h2>
-    <div class="min-w-0 flex-1">{% include "learning/_countdown.html" with countdown=countdown compact=True %}</div>
-    <a href="{{ planner_home }}" class="text-[15px] font-semibold">Plan my week</a>
+  <section class="flex flex-wrap items-center gap-x-5 gap-y-1 rounded-2xl border border-surface-border bg-white px-4 py-3 text-[15px]" aria-label="Exam countdown">
+    {% if countdown.is_today %}<strong class="font-black text-navy">Your GCE exams begin today. Good luck, trust your preparation.</strong>
+    {% else %}
+    <span><strong class="text-xl font-black text-navy">{{ countdown.days_left }}</strong> day{{ countdown.days_left|pluralize }} to your GCE exams</span>
+    {% if countdown.total %}<span class="text-ink-muted"><strong class="text-ink-heading">{{ countdown.remaining }}</strong> of {{ countdown.total }} lessons left</span>{% endif %}
+    {% if countdown.per_week and not countdown.finished %}<span class="text-ink-muted">Aim for <strong class="text-ink-heading">{{ countdown.per_week }} a week</strong></span>{% endif %}
+    {% endif %}
+    <a href="{{ planner_home }}" class="ml-auto font-extrabold">Plan my week</a>
   </section>
   {% elif not countdown and show.exam_prompt %}
   <a href="{% url 'accounts:profile' %}#exam-date" class="flex items-center gap-3 rounded-2xl border border-dashed border-slate-300 bg-white px-5 py-4 text-[15px] text-slate-700 hover:border-primary-300 hover:text-navy">
@@ -114,23 +118,23 @@
     </section>
 
     {% if show.recommended %}
-    <section class="flex flex-col rounded-2xl bg-navy p-6 text-white nav:p-8" aria-labelledby="recommended-heading">
-      <h2 id="recommended-heading" class="text-sm font-semibold uppercase tracking-[.06em] text-success-300">Recommended next</h2>
+    <section class="toghu-band flex flex-col self-start rounded-2xl p-6 nav:p-8" aria-labelledby="recommended-heading">
+      <h2 id="recommended-heading" class="text-sm font-semibold uppercase tracking-[.06em] text-[#F2B705]">Recommended next</h2>
       {% if recommended %}
       <div class="mt-2 flex items-center gap-4">
         <div class="min-w-0 flex-1">
           <div class="text-xl font-bold leading-snug">{{ recommended.lesson.title }}</div>
-          <p class="mt-2 text-[15px] leading-relaxed text-slate-300">{{ recommended.subject.name }} · {{ recommended.lesson.get_lesson_type_display }} lesson · {{ recommended.lesson.estimated_minutes }} min.<span class="hidden nav:inline">{% if recommended.builds_on %} Builds on <em>{{ recommended.builds_on.title }}</em>, which you finished {{ recommended.finished_label }}.{% endif %}</span></p>
+          <p class="mt-2 text-[15px] leading-relaxed text-[#D8D2F0]">{{ recommended.subject.name }} · {{ recommended.lesson.get_lesson_type_display }} lesson · {{ recommended.lesson.estimated_minutes }} min.<span class="hidden nav:inline">{% if recommended.builds_on %} Builds on <em>{{ recommended.builds_on.title }}</em>, which you finished {{ recommended.finished_label }}.{% endif %}</span></p>
         </div>
-        <a href="{{ recommended.lesson.get_absolute_url }}" class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white text-navy nav:hidden" aria-label="Start {{ recommended.lesson.title }}"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></a>
+        <a href="{{ recommended.lesson.get_absolute_url }}" class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#F2B705] text-[#1A1630] nav:hidden" aria-label="Start {{ recommended.lesson.title }}"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></a>
       </div>
-      <div class="mb-6 mt-4 hidden flex-wrap gap-2 nav:flex">
-        <span class="rounded-md bg-navy-700 px-2.5 py-1 text-sm">{{ recommended.lesson.get_lesson_type_display }}</span>
-        {% if recommended.questions %}<span class="rounded-md bg-navy-700 px-2.5 py-1 text-sm">{{ recommended.questions }} questions</span>{% endif %}
+      <div class="mb-5 mt-4 hidden flex-wrap gap-2 nav:flex">
+        <span class="rounded-md bg-[#2A2550] px-2.5 py-1 text-sm">{{ recommended.lesson.get_lesson_type_display }}</span>
+        {% if recommended.questions %}<span class="rounded-md bg-[#2A2550] px-2.5 py-1 text-sm">{{ recommended.questions }} questions</span>{% endif %}
       </div>
-      <a href="{{ recommended.lesson.get_absolute_url }}" class="btn mt-auto hidden h-12 bg-white text-base text-navy hover:bg-slate-100 hover:text-navy nav:flex">Start lesson</a>
+      <a href="{{ recommended.lesson.get_absolute_url }}" class="btn hidden h-12 border-b-4 border-[#B98500] bg-[#F2B705] text-base text-[#1A1630] hover:bg-[#F2B705] hover:text-[#1A1630] nav:flex">Start lesson</a>
       {% else %}
-      <p class="mt-3 text-[15px] text-slate-300">Finish a lesson and we’ll suggest what to learn next.</p>
+      <p class="mt-3 text-[15px] text-[#D8D2F0]">Finish a lesson and we’ll suggest what to learn next.</p>
       {% endif %}
     </section>
     {% endif %}
@@ -144,7 +148,7 @@
       <div class="flex items-center justify-between"><h2 id="subjects-heading" class="text-xl font-bold">My subjects</h2><a href="{% url 'courses:continue' %}" class="text-[15px] font-semibold"><span class="hidden nav:inline">All subjects{% if plan_more %} (+{{ plan_more }}){% endif %}</span><span class="nav:hidden">See all</span></a></div>
       <div class="mt-4 grid gap-2.5 nav:grid-cols-2 xl:grid-cols-3">
         {% for p in plan_shown %}
-        <a href="{% if p.course %}{{ p.course.get_absolute_url }}{% else %}{% url 'courses:continue' %}{% endif %}" style="{{ p.subject.style_vars }}" class="{% if p.stat %}sc-card{% else %}border-dashed border-surface-border bg-white{% endif %} flex min-h-[72px] items-center gap-3.5 rounded-2xl border-2 px-4 py-3 text-ink-heading hover:text-ink-heading">
+        <a href="{% if p.course %}{{ p.course.get_absolute_url }}{% else %}{% url 'courses:continue' %}{% endif %}" style="{{ p.subject.style_vars }}" class="{% if p.stat %}sc-card{% else %}border-dashed border-surface-border bg-white{% endif %} flex min-h-[72px] items-center gap-3.5 rounded-2xl border px-4 py-3 text-ink-heading hover:text-ink-heading">
           <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-white" style="background-color: {{ p.subject.colour }}" aria-hidden="true">{% if p.subject.icon %}{% include "components/icon.html" with name=p.subject.icon class="h-6 w-6" %}{% else %}<span class="font-math {% if p.subject.icon_text|length <= 2 %}text-xl italic{% else %}text-base{% endif %}">{{ p.subject.icon_text }}</span>{% endif %}</span>
           <span class="min-w-0 flex-1">
             <span class="block truncate text-base font-extrabold">{{ p.subject.name }}</span>

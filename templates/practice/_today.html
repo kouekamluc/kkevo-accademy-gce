@@ -8,21 +8,15 @@ heading_tag (h2 default). The "All practice" link is shown only when `more` or `
     <h2 id="today-heading" class="text-xl font-black text-navy">Practice today</h2>
     {% if more or link_all %}<a href="{% url 'practice:index' %}" class="text-[15px] font-extrabold">All practice{% if more %} (+{{ more }} more subject{{ more|pluralize }}){% endif %}</a>{% endif %}
   </div>
-  <ul class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+  <ul class="divide-y divide-surface-border overflow-hidden rounded-2xl border border-surface-border bg-white">
     {% for item in items %}
-    <li class="sc-card flex flex-col gap-3 rounded-card border-2 border-b-4 p-4" style="{{ item.subject.style_vars }}">
-      <div class="flex items-center gap-3">
-        {% include "components/subject_icon.html" with subject=item.subject %}
-        <div class="min-w-0 flex-1">
-          <div class="truncate font-extrabold text-ink-heading">{{ item.subject.name }}</div>
-          <div class="sc-text text-[13px] font-semibold">{{ item.last_label }}</div>
-        </div>
+    <li class="flex items-center gap-3 px-4 py-3" style="{{ item.subject.style_vars }}">
+      <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-white" style="background-color: {{ item.subject.colour }}" aria-hidden="true">{% if item.subject.icon %}{% include "components/icon.html" with name=item.subject.icon class="h-5 w-5" %}{% else %}<span class="font-math text-base {% if item.subject.icon_text|length <= 2 %}italic{% endif %}">{{ item.subject.icon_text }}</span>{% endif %}</span>
+      <div class="min-w-0 flex-1">
+        <div class="truncate font-extrabold text-ink-heading">{{ item.practice_set.title }}</div>
+        <p class="truncate text-sm text-slate-600"><span class="sc-text font-bold">{{ item.subject.name }}</span> · {{ item.last_label }} · {{ item.reason }}</p>
       </div>
-      <div>
-        <div class="font-bold text-ink-heading">{{ item.practice_set.title }}</div>
-        <p class="mt-0.5 text-sm text-slate-600">{{ item.reason }}</p>
-      </div>
-      <a href="{{ item.practice_set.get_absolute_url }}" class="sc-btn mt-auto h-11 w-full">Practise</a>
+      <a href="{{ item.practice_set.get_absolute_url }}" class="sc-btn h-10 shrink-0 px-4 text-sm">Practise</a>
     </li>
     {% endfor %}
   </ul>
