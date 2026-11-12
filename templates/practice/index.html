@@ -71,7 +71,7 @@
         <div class="min-h-[40px]">
           {% if card.next %}
           <div class="text-xs font-extrabold uppercase tracking-[.06em] text-ink-muted">{% if card.next.mastery.key == "not_started" %}Start with{% elif card.next.mastery.key == "attempted" or card.next.mastery.key == "familiar" %}Needs work{% else %}Keep sharp{% endif %}</div>
-          <div class="truncate text-[15px] font-bold text-ink-heading">{{ card.next.title }}</div>
+          <div class="text-[15px] font-bold leading-snug text-ink-heading">{{ card.next.title }}</div>
           {% endif %}
         </div>
         <a href="{% url 'practice:course' card.course.slug %}" class="sc-btn mt-auto h-11 w-full">Open {{ card.subject.name }} practice</a>
