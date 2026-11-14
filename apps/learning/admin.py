@@ -1,7 +1,7 @@
 from django.contrib import admin
 from unfold.admin import ModelAdmin
 
-from .models import (DailyActivity, Enrollment, LessonNote, LessonProgress, PrivateLink, RestDay, SavedLesson,
+from .models import (LessonFeedback, DailyActivity, Enrollment, LessonNote, LessonProgress, PrivateLink, RestDay, SavedLesson,
                      StudySession)
 
 
@@ -56,3 +56,11 @@ class PrivateLinkAdmin(ModelAdmin):
 
     def has_add_permission(self, request):
         return False
+
+
+@admin.register(LessonFeedback)
+class LessonFeedbackAdmin(ModelAdmin):
+    list_display = ("lesson", "kind", "status", "user", "created_at")
+    list_filter = ("status", "kind")
+    search_fields = ("lesson__title", "message")
+    raw_id_fields = ("lesson", "user")

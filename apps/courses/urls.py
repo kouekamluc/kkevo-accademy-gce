@@ -15,6 +15,7 @@ urlpatterns = [
     path("courses/<slug:slug>/", views.course_detail, name="detail"),
     path("courses/<slug:slug>/path/", views.course_path, name="path"),
     path("courses/<slug:course_slug>/lessons/<int:pk>/", lesson_views.lesson_detail, name="lesson"),
+    path("courses/<slug:course_slug>/lessons/<int:pk>/feedback/", lesson_views.lesson_feedback, name="lesson_feedback"),
     path("courses/<slug:course_slug>/lessons/<int:pk>/complete/", lesson_views.lesson_complete, name="lesson_complete"),
     path("courses/<slug:course_slug>/lessons/<int:pk>/heartbeat/", lesson_views.lesson_heartbeat, name="lesson_heartbeat"),
     path("courses/<slug:course_slug>/lessons/<int:pk>/save/", lesson_views.lesson_save, name="lesson_save"),

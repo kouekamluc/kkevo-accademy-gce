@@ -1,0 +1,30 @@
+{# "Found a problem?" form under every lesson. Swapped in place by HTMX with a confirmation. #}
+<div id="lesson-feedback" class="print:hidden">
+{% if state == "thanks" %}
+  <p class="rounded-card border border-success-200 bg-success-50 px-4 py-3 text-sm font-semibold text-success-text" role="status">Thank you. Our team will look at it.</p>
+{% else %}
+<details class="group rounded-card border border-surface-border bg-white"{% if state %} open{% endif %}>
+  <summary class="flex min-h-touch cursor-pointer list-none items-center gap-2 px-4 text-sm font-semibold text-slate-600 hover:text-navy">
+    <svg class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4m0 0h13l-2 4 2 4H4"/></svg>
+    Found a mistake or something confusing? Tell us
+  </summary>
+  <form method="post" action="{% url 'courses:lesson_feedback' course.slug lesson.pk %}" hx-post="{% url 'courses:lesson_feedback' course.slug lesson.pk %}" hx-target="#lesson-feedback" hx-swap="outerHTML" class="flex flex-col gap-3 border-t border-surface-border p-4">
+    {% csrf_token %}
+    {% if state == "need_message" %}<p class="text-[13px] font-medium text-danger-text" role="alert">Please write a few words about the problem.</p>{% endif %}
+    {% if state == "invalid" %}<p class="text-[13px] font-medium text-danger-text" role="alert">Choose what the problem is.</p>{% endif %}
+    {% if state == "limit" %}<p class="text-[13px] font-medium text-danger-text" role="alert">You have sent a lot of reports today. Thank you, please try again tomorrow.</p>{% endif %}
+    <fieldset class="flex flex-col gap-2">
+      <legend class="sr-only">What is the problem?</legend>
+      {% for value, label in kinds %}
+      <label class="flex min-h-touch cursor-pointer items-center gap-3 rounded-input border border-surface-border px-3 text-sm font-semibold text-ink-heading has-[:checked]:border-primary has-[:checked]:bg-primary-50">
+        <input type="radio" name="kind" value="{{ value }}" {% if kind == value %}checked{% endif %} class="h-4 w-4 text-primary focus:ring-primary-300" required> {{ label }}
+      </label>
+      {% endfor %}
+    </fieldset>
+    <label class="flex flex-col gap-1.5"><span class="form-label">Tell us more <span class="font-normal text-ink-muted">(optional)</span></span>
+      <textarea name="message" rows="3" maxlength="500" class="form-input" placeholder="Which part? What should it say?">{{ message }}</textarea></label>
+    <div><button type="submit" class="btn-secondary">Send</button></div>
+  </form>
+</details>
+{% endif %}
+</div>

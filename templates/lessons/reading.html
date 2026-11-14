@@ -101,6 +101,8 @@
 
       <div id="complete-card" data-cards-end class="mt-10 print:hidden">{% include "lessons/_complete_card.html" %}</div>
 
+      <div data-cards-end class="mt-4">{% include "lessons/_feedback.html" with kinds=feedback_kinds %}</div>
+
       <nav data-cards-end class="mt-6 grid grid-cols-2 gap-4 print:hidden" aria-label="Previous and next lesson">
         {% if prev_lesson %}<a href="{{ prev_lesson.get_absolute_url }}" class="rounded-card border border-surface-border bg-white p-4 text-ink-heading hover:border-primary-300 hover:text-ink-heading"><span class="flex items-center gap-1 text-xs text-ink-muted">{% include "components/icon.html" with name="chevron-left" class="h-3.5 w-3.5" stroke="2" %}Previous</span><span class="mt-1 block text-sm font-semibold">{{ prev_lesson.title }}</span></a>{% else %}<span></span>{% endif %}
         {% if next_lesson %}<a href="{{ next_lesson.get_absolute_url }}" class="rounded-card border border-surface-border bg-white p-4 text-right text-ink-heading hover:border-primary-300 hover:text-ink-heading"><span class="flex items-center justify-end gap-1 text-xs text-ink-muted">Next{% include "components/icon.html" with name="chevron-right" class="h-3.5 w-3.5" stroke="2" %}</span><span class="mt-1 block text-sm font-semibold">{{ next_lesson.title }}</span></a>{% endif %}

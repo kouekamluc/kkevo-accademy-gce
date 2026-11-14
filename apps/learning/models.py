@@ -228,3 +228,34 @@ class Achievement(models.Model):
 
     def __str__(self):
         return f"{self.user} · {self.code}"
+
+
+class LessonFeedback(models.Model):
+    """A student's report about a lesson: wrong, hard to follow, a display problem, or something else."""
+
+    class Kind(models.TextChoices):
+        WRONG = "wrong", "Something in it is wrong"
+        UNCLEAR = "unclear", "I could not understand it"
+        DISPLAY = "display", "Typo or it looks broken"
+        OTHER = "other", "Something else"
+
+    class Status(models.TextChoices):
+        NEW = "new", "New"
+        SEEN = "seen", "Seen"
+        FIXED = "fixed", "Fixed"
+        DISMISSED = "dismissed", "Not a problem"
+
+    user = models.ForeignKey(USER, on_delete=models.SET_NULL, null=True, blank=True, related_name="lesson_feedback")
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name="feedback")
+    kind = models.CharField(max_length=10, choices=Kind.choices)
+    message = models.CharField(max_length=500, blank=True)
+    status = models.CharField(max_length=10, choices=Status.choices, default=Status.NEW, db_index=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    handled_at = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+        verbose_name_plural = "lesson feedback"
+
+    def __str__(self):
+        return f"{self.get_kind_display()}: {self.lesson}"

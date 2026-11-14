@@ -10,7 +10,7 @@ from django.utils import timezone
 from django.views.decorators.http import require_POST
 
 from apps.learning import achievements, autoplan, services
-from apps.learning.models import DailyActivity, LessonNote, LessonProgress, SavedLesson
+from apps.learning.models import DailyActivity, LessonFeedback, LessonNote, LessonProgress, SavedLesson
 from apps.practice.models import PracticeSet
 
 from .models import BlockType, Lesson, LessonType, Topic, attach_videos
@@ -128,6 +128,7 @@ def lesson_detail(request, course_slug, pk):
         "up_next": [item for item in module_lessons[module_lessons.index(lesson) + 1:]][:3] if lesson in module_lessons else [],
         "media_note": "low" if _is_low_data(request.user) else "normal",
         "chapters": _chapters(video),
+        "feedback_kinds": LessonFeedback.Kind.choices,
         "related_reading": [item for item in module_lessons if item.pk != lesson.pk
                             and item.lesson_type in ("reading", "interactive")][:2],
     }
@@ -249,3 +250,28 @@ def _notes_response(request, lesson):
     if request.htmx:
         return render(request, "lessons/_notes.html", {"lesson": lesson, "course": lesson.course, "notes": notes, "oob": True})
     return redirect(lesson.get_absolute_url() + "#notes")
+
+
+FEEDBACK_PER_DAY = 10
+
+
+@login_required
+@require_POST
+def lesson_feedback(request, course_slug, pk):
+    """Student reports a problem with a lesson. Answers with a small confirmation for the form to swap in."""
+    lesson = _get_lesson(request, course_slug, pk)
+    kind = request.POST.get("kind", "")
+    message = " ".join(request.POST.get("message", "").split())[:500]
+    today = timezone.localdate()
+    sent_today = LessonFeedback.objects.filter(user=request.user, created_at__date=today).count()
+    if kind not in LessonFeedback.Kind.values:
+        state = "invalid"
+    elif kind == LessonFeedback.Kind.OTHER and len(message) < 5:
+        state = "need_message"
+    elif sent_today >= FEEDBACK_PER_DAY:
+        state = "limit"
+    else:
+        LessonFeedback.objects.create(user=request.user, lesson=lesson, kind=kind, message=message)
+        state = "thanks"
+    return render(request, "lessons/_feedback.html", {"lesson": lesson, "course": lesson.course, "state": state,
+                                                      "kinds": LessonFeedback.Kind.choices, "kind": kind, "message": message})
