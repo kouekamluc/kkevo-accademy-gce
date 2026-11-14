@@ -61,6 +61,8 @@ def build(user, today=None):
 def send_for(user, today=None):
     """Send the reminder if one is due. Returns True when an email was sent."""
     today = today or timezone.localdate()
+    if not user.has_real_email:
+        return False
     plan = build(user, today)
     if plan is None:
         return False

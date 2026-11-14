@@ -9,7 +9,7 @@ changes here. Each record also includes its own CASCADE children one level down
 from django.db import models
 
 SKIPPED_APPS = {"admin", "sessions"}  # admin audit log; sessions are not personal content
-USER_FIELDS = ("email", "first_name", "last_name", "date_joined", "last_login")
+USER_FIELDS = ("email", "phone", "first_name", "last_name", "date_joined", "last_login")
 
 
 def _value(obj, field):

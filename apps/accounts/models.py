@@ -30,11 +30,27 @@ class UserManager(BaseUserManager):
         return self._create_user(email, password, **extra_fields)
 
 
+PHONE_EMAIL_DOMAIN = "phone.kkevo.invalid"  # students who sign up with a phone number get a placeholder address that never receives mail
+
+
+def normalize_phone(raw):
+    """'677 12 34 56', '+237677123456', '00237 6 77...' -> '+237677123456'. Returns None when it is not a Cameroon mobile number."""
+    digits = "".join(ch for ch in (raw or "") if ch.isdigit())
+    if digits.startswith("00"):
+        digits = digits[2:]
+    if digits.startswith("237"):
+        digits = digits[3:]
+    if len(digits) == 9 and digits[0] == "6":
+        return "+237" + digits
+    return None
+
+
 class User(AbstractUser):
     """Platform user. Students and staff share this model; staff use `is_staff`."""
 
     username = None
     email = models.EmailField("email address", unique=True)
+    phone = models.CharField(max_length=16, unique=True, null=True, blank=True, help_text="Cameroon mobile number, +2376XXXXXXXX.")
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["first_name", "last_name"]
@@ -45,18 +61,27 @@ class User(AbstractUser):
         ordering = ["email"]
 
     def __str__(self):
-        return self.email
+        return self.contact
+
+    @property
+    def has_real_email(self):
+        return not self.email.endswith("@" + PHONE_EMAIL_DOMAIN)
+
+    @property
+    def contact(self):
+        """What to show for this person: their email, or their phone number when they signed up without one."""
+        return self.email if self.has_real_email else (self.phone or self.email)
 
     @property
     def display_name(self):
-        return self.get_full_name() or self.email.split("@")[0]
+        return self.get_full_name() or self.contact.split("@")[0]
 
     @property
     def initials(self):
         parts = [p for p in (self.first_name, self.last_name) if p]
         if parts:
             return "".join(p[0] for p in parts).upper()[:2]
-        return self.email[:2].upper()
+        return self.contact.lstrip("+")[:2].upper()
 
 
 # Avatars: Cameroonian wildlife, shown instead of initials in the header and on the profile.

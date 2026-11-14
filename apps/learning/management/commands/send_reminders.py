@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 from django.utils import timezone
 
-from apps.accounts.models import StudentProfile
+from apps.accounts.models import PHONE_EMAIL_DOMAIN, StudentProfile
 from apps.learning import reminders
 
 
@@ -15,7 +15,7 @@ class Command(BaseCommand):
         now = timezone.localtime()
         today = now.date()
         due = (StudentProfile.objects.filter(reminders_enabled=True, user__is_active=True, reminder_hour__lte=now.hour)
-               .exclude(last_reminder_on=today).exclude(user__email="").select_related("user"))
+               .exclude(last_reminder_on=today).exclude(user__email="").exclude(user__email__endswith="@" + PHONE_EMAIL_DOMAIN).select_related("user"))
         sent = 0
         for profile in due:
             if dry_run:

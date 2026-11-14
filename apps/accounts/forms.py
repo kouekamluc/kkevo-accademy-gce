@@ -7,8 +7,30 @@ from django.utils import timezone
 
 from apps.academics.models import AcademicLevel, AcademicPathway
 
-from .models import StudentProfile, User
+from .models import PHONE_EMAIL_DOMAIN, StudentProfile, User, normalize_phone
 from .ratelimit import login_limiter, password_reset_limiter
+
+PHONE_HELP = "Cameroon mobile number, for example 677 12 34 56."
+
+
+def clean_phone_value(value, instance=None):
+    """Normalised, unique phone number, or '' when the field was left empty."""
+    if not (value or "").strip():
+        return ""
+    phone = normalize_phone(value)
+    if phone is None:
+        raise forms.ValidationError("Enter a Cameroon mobile number, for example 677 12 34 56.")
+    clash = User.objects.filter(phone=phone)
+    if instance is not None and instance.pk:
+        clash = clash.exclude(pk=instance.pk)
+    if clash.exists():
+        raise forms.ValidationError("An account with this phone number already exists. Try logging in instead.")
+    return phone
+
+
+def placeholder_email(phone):
+    return f"{phone.lstrip('+')}@{PHONE_EMAIL_DOMAIN}"
+
 
 PASSWORD_HELP = "At least 8 characters. Avoid common words, your name, or only numbers."
 
@@ -38,10 +60,18 @@ class RegistrationForm(StyledFormMixin, forms.ModelForm):
         label="Full name", max_length=300,
         widget=forms.TextInput(attrs={"autocomplete": "name", "autofocus": True}),
     )
+    phone = forms.CharField(
+        label="Phone number", required=False, help_text="No email? Use your phone number instead.",
+        widget=forms.TextInput(attrs={"autocomplete": "tel", "inputmode": "tel", "placeholder": "6XX XX XX XX"}),
+    )
     password = forms.CharField(
         label="Password", strip=False, help_text=PASSWORD_HELP,
         widget=forms.PasswordInput(attrs={"autocomplete": "new-password"}),
     )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["email"].required = False
 
     class Meta:
         model = User
@@ -49,7 +79,20 @@ class RegistrationForm(StyledFormMixin, forms.ModelForm):
         widgets = {"email": forms.EmailInput(attrs={"autocomplete": "email"})}
         labels = {"email": "Email"}
 
-    field_order = ["full_name", "email", "password"]
+    field_order = ["full_name", "email", "phone", "password"]
+
+    def clean_phone(self):
+        return clean_phone_value(self.cleaned_data.get("phone"))
+
+    def clean(self):
+        cleaned = super().clean()
+        if not self.errors.get("email") and not self.errors.get("phone"):
+            if not cleaned.get("email") and not cleaned.get("phone"):
+                self.add_error("email", "Enter your email, or your phone number if you have no email.")
+            elif not cleaned.get("email"):
+                cleaned["email"] = placeholder_email(cleaned["phone"])
+                self.instance.email = cleaned["email"]
+        return cleaned
 
     def clean_full_name(self):
         name = " ".join(self.cleaned_data["full_name"].split())
@@ -58,8 +101,8 @@ class RegistrationForm(StyledFormMixin, forms.ModelForm):
         return name
 
     def clean_email(self):
-        email = self.cleaned_data["email"].strip().lower()
-        if User.objects.filter(email__iexact=email).exists():
+        email = (self.cleaned_data.get("email") or "").strip().lower()
+        if email and User.objects.filter(email__iexact=email).exists():
             raise forms.ValidationError("An account with this email already exists. Try logging in instead.")
         return email
 
@@ -77,6 +120,7 @@ class RegistrationForm(StyledFormMixin, forms.ModelForm):
     def save(self, commit=True):
         user = super().save(commit=False)
         user.set_password(self.cleaned_data["password"])
+        user.phone = self.cleaned_data.get("phone") or None
         if commit:
             user.save()
         return user
@@ -101,9 +145,9 @@ class EmailAuthenticationForm(StyledFormMixin, AuthenticationForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields["username"].label = "Email"
-        self.fields["username"].widget = forms.EmailInput(
-            attrs={"autocomplete": "email", "autofocus": True, "class": "form-input"}
+        self.fields["username"].label = "Email or phone number"
+        self.fields["username"].widget = forms.TextInput(
+            attrs={"autocomplete": "username", "autofocus": True, "class": "form-input"}
         )
         self.fields["password"].widget.attrs["autocomplete"] = "current-password"
         self.rate_limited = False
@@ -117,6 +161,10 @@ class EmailAuthenticationForm(StyledFormMixin, AuthenticationForm):
 
     def clean(self):
         email = (self.cleaned_data.get("username") or "").strip().lower()
+        if email and "@" not in email:  # a phone number: log in as the account that owns it
+            phone = normalize_phone(email)
+            owner = User.objects.filter(phone=phone).first() if phone else None
+            email = owner.email if owner else (phone or email)
         if email:
             self.cleaned_data["username"] = email
         limiter = login_limiter(self.request, email) if email and self.request is not None else None
@@ -148,6 +196,9 @@ class StyledPasswordResetForm(StyledFormMixin, PasswordResetForm):
         super().__init__(*args, **kwargs)
         self.request = request
         self.fields["email"].widget.attrs.update({"autofocus": True})
+
+    def get_users(self, email):
+        return (user for user in super().get_users(email) if user.has_real_email)
 
     def clean_email(self):
         email = self.cleaned_data["email"].strip().lower()
@@ -244,18 +295,41 @@ class SubjectsForm(forms.Form):
 class AccountDetailsForm(StyledFormMixin, forms.ModelForm):
     class Meta:
         model = User
-        fields = ("first_name", "last_name", "email")
+        fields = ("first_name", "last_name", "email", "phone")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["first_name"].required = True
         self.fields["last_name"].required = True
+        self.fields["email"].required = False
+        self.fields["phone"].label = "Phone number"
+        self.fields["phone"].help_text = PHONE_HELP
+        self.fields["phone"].widget.attrs.update({"autocomplete": "tel", "inputmode": "tel"})
+        if not self.instance.has_real_email:
+            self.initial["email"] = ""  # do not show the placeholder address
 
     def clean_email(self):
-        email = self.cleaned_data["email"].strip().lower()
-        if User.objects.filter(email__iexact=email).exclude(pk=self.instance.pk).exists():
+        email = (self.cleaned_data.get("email") or "").strip().lower()
+        if email and User.objects.filter(email__iexact=email).exclude(pk=self.instance.pk).exists():
             raise forms.ValidationError("Another account already uses this email.")
         return email
+
+    def clean_phone(self):
+        return clean_phone_value(self.cleaned_data.get("phone"), self.instance)
+
+    def clean(self):
+        cleaned = super().clean()
+        if not self.errors.get("email") and not self.errors.get("phone") and not cleaned.get("email"):
+            if not cleaned.get("phone"):
+                self.add_error("email", "Keep at least an email or a phone number so you can sign in.")
+            else:
+                cleaned["email"] = placeholder_email(cleaned["phone"])
+                self.instance.email = cleaned["email"]
+        return cleaned
+
+    def save(self, commit=True):
+        self.instance.phone = self.cleaned_data.get("phone") or None
+        return super().save(commit=commit)
 
 
 class StudyPreferencesForm(forms.ModelForm):
