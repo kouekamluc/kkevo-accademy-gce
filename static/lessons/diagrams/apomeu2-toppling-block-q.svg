@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="190.0" y="98.0" width="144.0" height="192.0" rx="0" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<line x1="120.0" y1="290.0" x2="424.0" y2="290.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="120.0" y1="290.0" x2="110.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="134.0" y1="290.0" x2="124.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="148.0" y1="290.0" x2="138.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="162.0" y1="290.0" x2="152.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="176.0" y1="290.0" x2="166.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="190.0" y1="290.0" x2="180.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="204.0" y1="290.0" x2="194.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="218.0" y1="290.0" x2="208.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="232.0" y1="290.0" x2="222.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="246.0" y1="290.0" x2="236.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="260.0" y1="290.0" x2="250.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="274.0" y1="290.0" x2="264.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="288.0" y1="290.0" x2="278.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="302.0" y1="290.0" x2="292.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="316.0" y1="290.0" x2="306.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="330.0" y1="290.0" x2="320.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="344.0" y1="290.0" x2="334.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="358.0" y1="290.0" x2="348.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="372.0" y1="290.0" x2="362.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="386.0" y1="290.0" x2="376.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="400.0" y1="290.0" x2="390.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="414.0" y1="290.0" x2="404.0" y2="302.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<circle cx="262.0" cy="194.0" r="5" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<line x1="262.0" y1="194.0" x2="262.0" y2="260.0" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="262.0,260.0 257.3,248.9 266.7,248.9" fill="#2563EB" stroke="#2563EB" stroke-width="1" stroke-linejoin="round"/>
+<text x="276.0" y="246.0" font-size="18" text-anchor="start" fill="#2563EB" font-weight="700">W</text>
+<text x="254.0" y="186.0" font-size="16" text-anchor="end" fill="#102A43" font-weight="700">G</text>
+<line x1="100.0" y1="170.0" x2="188.0" y2="170.0" stroke="#B45309" stroke-width="4" stroke-linecap="round"/>
+<polygon points="188.0,170.0 176.0,175.1 176.0,164.9" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linejoin="round"/>
+<text x="98.0" y="158.0" font-size="18" text-anchor="end" fill="#B45309" font-weight="700">P</text>
+<line x1="334.0" y1="360.0" x2="334.0" y2="296.0" stroke="#047857" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="334.0,296.0 338.7,307.1 329.3,307.1" fill="#047857" stroke="#047857" stroke-width="1" stroke-linejoin="round"/>
+<text x="346.0" y="348.0" font-size="18" text-anchor="start" fill="#047857" font-weight="700">R</text>
+<line x1="330.0" y1="320.0" x2="264.0" y2="320.0" stroke="#047857" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="264.0,320.0 275.1,315.3 275.1,324.7" fill="#047857" stroke="#047857" stroke-width="1" stroke-linejoin="round"/>
+<text x="264.0" y="342.0" font-size="18" text-anchor="end" fill="#047857" font-weight="700">F</text>
+<text x="324.0" y="280.0" font-size="16" text-anchor="end" fill="#102A43" font-weight="700">B</text>
+<circle cx="334.0" cy="290.0" r="5" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<text x="280.0" y="28.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">Uniform block pushed by a horizontal force P</text>
+</svg>

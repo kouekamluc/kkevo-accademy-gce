@@ -99,6 +99,11 @@ class Command(BaseCommand):
             else:
                 counts["kept"] += 1
 
+        if not options["remove"]:
+            for key, course in courses.items():
+                if course:
+                    self.align_with_outline(course, key)
+
         if status == "published" and not options["remove"]:
             for key, course in courses.items():
                 # Only a course that had no lessons before this run: an admin-disabled course stays disabled.
@@ -127,6 +132,20 @@ class Command(BaseCommand):
         if options["dry_run"]:
             transaction.set_rollback(True)
             self.stdout.write(self.style.WARNING("Dry run: nothing was saved."))
+
+    def align_with_outline(self, course, key):
+        """Keep modules and topics in the outline's order. Sections added to the outline later (for an existing
+        course) are created after the old ones when their first lesson loads, so put them back in place."""
+        sections = gce_curriculum.SYLLABI[key][2]
+        module_pos = {title: i for i, (title, _topics) in enumerate(sections)}
+        topic_pos = {title: {t[0]: i for i, t in enumerate(topics)} for title, topics in sections}
+        for number, module in enumerate(sorted(course.modules.all(), key=lambda m: (module_pos.get(m.title, 10_000), m.order, m.pk)), 1):
+            if module.order != number:
+                Module.objects.filter(pk=module.pk).update(order=number)
+            positions = topic_pos.get(module.title, {})
+            for n, topic in enumerate(sorted(module.topics.all(), key=lambda t: (positions.get(t.title, 10_000), t.order, t.pk)), 1):
+                if topic.order != n:
+                    Topic.objects.filter(pk=topic.pk).update(order=n)
 
     def outline_course(self, key, create=True):
         subject_slug, level_slug = key

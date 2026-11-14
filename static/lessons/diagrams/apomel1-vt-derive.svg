@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img"><title>Velocity-time graph of constant acceleration from u to v in time t</title><defs><marker id="an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs><rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="90,300 90,230 450,100 450,300" fill="#EFF6FF" stroke="#2563EB" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="70" y1="300" x2="540" y2="300" stroke="#102A43" stroke-width="2" stroke-linecap="round" marker-end="url(#an)"/>
+<line x1="90" y1="320" x2="90" y2="45" stroke="#102A43" stroke-width="2" stroke-linecap="round" marker-end="url(#an)"/>
+<text x="535" y="328" font-size="15" fill="#102A43" text-anchor="end" font-weight="600">time t</text>
+<text x="98" y="40" font-size="15" fill="#102A43" text-anchor="start" font-weight="600">velocity</text>
+<text x="80" y="235" font-size="16" fill="#102A43" text-anchor="end" font-weight="600">u</text>
+<text x="462" y="92" font-size="16" fill="#102A43" text-anchor="start" font-weight="600">v</text>
+<text x="450" y="324" font-size="16" fill="#102A43" text-anchor="middle" font-weight="600">t</text>
+<text x="80" y="318" font-size="14" fill="#102A43" text-anchor="end" font-weight="600">O</text>
+<line x1="450" y1="100" x2="450" y2="300" stroke="#102A43" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<text x="280" y="270" font-size="18" fill="#047857" text-anchor="middle" font-weight="600">area = s</text>
+<text x="290" y="195" font-size="16" fill="#B45309" text-anchor="middle" font-weight="600">gradient = a</text>
+<line x1="100" y1="220" x2="440" y2="90" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 5"/>
+</svg>

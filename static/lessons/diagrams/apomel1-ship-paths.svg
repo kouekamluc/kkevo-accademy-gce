@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img"><title>Relative path of ship A seen from ship B</title><defs><marker id="an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs><rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="32" y1="160" x2="320" y2="160" stroke="#94A3B8" stroke-width="1" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="240" y1="352" x2="240" y2="80" stroke="#94A3B8" stroke-width="1" stroke-linecap="round" stroke-dasharray="4 4"/>
+<line x1="64" y1="328" x2="280" y2="40" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#ab)"/>
+<circle cx="64" cy="328" r="5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="112" cy="264" r="5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="160" cy="200" r="5" fill="#2563EB" stroke="none" stroke-width="2"/>
+<circle cx="208" cy="136" r="5" fill="#B45309" stroke="none" stroke-width="2"/>
+<text x="72" y="346" font-size="14" fill="#102A43" text-anchor="start" font-weight="600">noon</text>
+<text x="172" y="206" font-size="14" fill="#102A43" text-anchor="start" font-weight="600">2 pm</text>
+<circle cx="240" cy="160" r="7" fill="#102A43" stroke="none" stroke-width="2"/>
+<text x="252" y="182" font-size="16" fill="#102A43" text-anchor="start" font-weight="600">B</text>
+<line x1="240" y1="160" x2="208" y2="136" stroke="#047857" stroke-width="3" stroke-linecap="round"/>
+<circle cx="208" cy="136" r="6" fill="#B45309" stroke="none" stroke-width="2"/>
+<text x="196" y="124" font-size="14" fill="#B45309" text-anchor="end" font-weight="600">3 pm</text>
+<text x="230" y="136" font-size="16" fill="#047857" text-anchor="start" font-weight="600">5 km</text>
+<text x="132" y="302" font-size="14" fill="#2563EB" text-anchor="start" font-weight="600">path of A relative to B</text>
+</svg>

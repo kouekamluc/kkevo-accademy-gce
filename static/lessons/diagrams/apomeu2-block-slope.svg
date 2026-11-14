@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="40.0" y1="330.0" x2="520.0" y2="116.3" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="40.0" y1="330.0" x2="520.0" y2="330.0" stroke="#102A43" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/>
+<polygon points="200.0,258.8 281.3,222.6 200.0,39.9 118.7,76.1" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="200.0" cy="149.3" r="5" fill="#102A43" stroke="#102A43" stroke-width="1"/>
+<line x1="200.0" y1="59.3" x2="200.0" y2="308.8" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<line x1="200.0" y1="149.3" x2="200.0" y2="219.3" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="200.0,219.3 195.3,208.3 204.7,208.3" fill="#2563EB" stroke="#2563EB" stroke-width="1" stroke-linejoin="round"/>
+<text x="212.0" y="213.3" font-size="18" text-anchor="start" fill="#2563EB" font-weight="700">W</text>
+<text x="190.0" y="141.3" font-size="16" text-anchor="end" fill="#102A43" font-weight="700">G</text>
+<circle cx="200.0" cy="258.8" r="5" fill="#B45309" stroke="#B45309" stroke-width="1"/>
+<text x="214.0" y="300.8" font-size="14" text-anchor="start" fill="#B45309" font-weight="700">pivot edge</text>
+<path d="M 110.0 330.0 A 70 70 0 0 0 103.9 301.5" fill="none" stroke="#B45309" stroke-width="2"/>
+<text x="120.0" y="316.0" font-size="16" text-anchor="start" fill="#B45309" font-weight="700">&#952;</text>
+<text x="295.3" y="218.6" font-size="15" text-anchor="start" fill="#102A43" font-weight="700">b</text>
+<text x="254.6" y="131.2" font-size="15" text-anchor="start" fill="#102A43" font-weight="700">h</text>
+<text x="30.0" y="26.0" font-size="15" text-anchor="start" fill="#102A43" font-weight="700">At the point of toppling, the weight passes through the pivot edge</text>
+</svg>

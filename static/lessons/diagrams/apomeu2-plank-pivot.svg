@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="70.0" y="162.0" width="420.0" height="16.0" rx="0" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<polygon points="175.0,178.0 156.0,212.0 194.0,212.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="142.0" y1="212.0" x2="208.0" y2="212.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="95.0" y1="212.0" x2="255.0" y2="212.0" stroke="#102A43" stroke-width="3" stroke-linecap="round"/>
+<line x1="95.0" y1="212.0" x2="85.0" y2="224.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="109.0" y1="212.0" x2="99.0" y2="224.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="123.0" y1="212.0" x2="113.0" y2="224.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="137.0" y1="212.0" x2="127.0" y2="224.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="151.0" y1="212.0" x2="141.0" y2="224.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="165.0" y1="212.0" x2="155.0" y2="224.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="179.0" y1="212.0" x2="169.0" y2="224.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="193.0" y1="212.0" x2="183.0" y2="224.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="207.0" y1="212.0" x2="197.0" y2="224.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="221.0" y1="212.0" x2="211.0" y2="224.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="235.0" y1="212.0" x2="225.0" y2="224.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="249.0" y1="212.0" x2="239.0" y2="224.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="70.0" y1="100.0" x2="70.0" y2="158.0" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="70.0,158.0 65.3,146.9 74.7,146.9" fill="#2563EB" stroke="#2563EB" stroke-width="1" stroke-linejoin="round"/>
+<text x="70.0" y="90.0" font-size="15" text-anchor="middle" fill="#2563EB" font-weight="700">60 kg</text>
+<line x1="280.0" y1="100.0" x2="280.0" y2="158.0" stroke="#2563EB" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="280.0,158.0 275.3,146.9 284.7,146.9" fill="#2563EB" stroke="#2563EB" stroke-width="1" stroke-linejoin="round"/>
+<text x="280.0" y="90.0" font-size="15" text-anchor="middle" fill="#2563EB" font-weight="700">30 kg (plank)</text>
+<line x1="490.0" y1="100.0" x2="490.0" y2="158.0" stroke="#B45309" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="490.0,158.0 485.3,146.9 494.7,146.9" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linejoin="round"/>
+<text x="490.0" y="90.0" font-size="15" text-anchor="middle" fill="#B45309" font-weight="700">M kg</text>
+<text x="70.0" y="200.0" font-size="17" text-anchor="middle" fill="#102A43" font-weight="700">A</text>
+<text x="490.0" y="200.0" font-size="17" text-anchor="middle" fill="#102A43" font-weight="700">B</text>
+<text x="175.0" y="238.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">C (pivot)</text>
+<line x1="70.0" y1="270.0" x2="175.0" y2="270.0" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="175.0,270.0 167.6,273.1 167.6,266.9" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linejoin="round"/>
+<line x1="175.0" y1="270.0" x2="70.0" y2="270.0" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="70.0,270.0 77.4,266.9 77.4,273.1" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linejoin="round"/>
+<text x="122.5" y="262.0" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">1.5 m</text>
+<line x1="175.0" y1="270.0" x2="280.0" y2="270.0" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="280.0,270.0 272.6,273.1 272.6,266.9" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linejoin="round"/>
+<line x1="280.0" y1="270.0" x2="175.0" y2="270.0" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="175.0,270.0 182.4,266.9 182.4,273.1" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linejoin="round"/>
+<text x="227.5" y="262.0" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">1.5 m</text>
+<line x1="175.0" y1="310.0" x2="490.0" y2="310.0" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="490.0,310.0 482.6,313.1 482.6,306.9" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linejoin="round"/>
+<line x1="490.0" y1="310.0" x2="175.0" y2="310.0" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="175.0,310.0 182.4,306.9 182.4,313.1" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linejoin="round"/>
+<text x="332.5" y="302.0" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">4.5 m</text>
+<text x="280.0" y="36.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">Uniform plank AB, 6 m, balanced on a pivot at C</text>
+</svg>

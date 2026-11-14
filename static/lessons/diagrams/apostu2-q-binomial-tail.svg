@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<text x="280" y="28" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#102A43" font-weight="600">Number of germinating seeds out of 20</text>
+<rect x="70.0" y="289.9" width="21" height="0.5" fill="#FDE9C8" stroke="#B45309" stroke-width="2"/>
+<text x="80.5" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">8</text>
+<rect x="103.6" y="289.6" width="21" height="0.5" fill="#FDE9C8" stroke="#B45309" stroke-width="2"/>
+<text x="114.1" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">9</text>
+<rect x="137.2" y="288.1" width="21" height="1.9" fill="#FDE9C8" stroke="#B45309" stroke-width="2"/>
+<text x="147.7" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">10</text>
+<rect x="170.8" y="283.2" width="21" height="6.8" fill="#FDE9C8" stroke="#B45309" stroke-width="2"/>
+<text x="181.3" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">11</text>
+<rect x="204.4" y="269.7" width="21" height="20.3" fill="#FDE9C8" stroke="#B45309" stroke-width="2"/>
+<text x="214.9" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">12</text>
+<rect x="238.0" y="240.0" width="21" height="50.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="248.5" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">13</text>
+<rect x="271.6" y="190.0" width="21" height="100.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="282.1" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">14</text>
+<rect x="305.2" y="130.0" width="21" height="160.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="315.70000000000005" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">15</text>
+<rect x="338.8" y="90.0" width="21" height="200.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="349.3" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">16</text>
+<rect x="372.4" y="101.8" width="21" height="188.2" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="382.90000000000003" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">17</text>
+<rect x="406.0" y="164.5" width="21" height="125.5" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="416.5" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">18</text>
+<rect x="439.6" y="237.2" width="21" height="52.8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="450.1" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">19</text>
+<rect x="473.2" y="279.4" width="21" height="10.6" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<text x="483.70000000000005" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" fill="#102A43">20</text>
+<line x1="60" y1="290" x2="535" y2="290" stroke="#102A43" stroke-width="2"/>
+</svg>

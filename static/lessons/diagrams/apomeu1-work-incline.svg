@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="14">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="aB" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#2563EB"/></marker><marker id="aK" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#102A43"/></marker><marker id="aG" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#047857"/></marker><marker id="aA" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#B45309"/></marker></defs>
+<polygon points="60,330 432.4,330 432.4,115.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<g transform="translate(305.8,188.1) rotate(-30)"><rect x="-32.0" y="-40" width="64" height="40" fill="#ffffff" stroke="#2563EB" stroke-width="3"/></g>
+<line x1="295.8" y1="170.8" x2="295.8" y2="240.8" stroke="#102A43" stroke-width="3" marker-end="url(#aK)"/>
+<text x="305.77800959402373" y="230.77949192431126" fill="#102A43" text-anchor="start" font-size="15" font-weight="600">mg</text>
+<line x1="295.8" y1="170.8" x2="264.8" y2="117.1" stroke="#102A43" stroke-width="3" marker-end="url(#aK)"/>
+<text x="258.77800959402373" y="113.08591688967606" fill="#102A43" text-anchor="end" font-size="15" font-weight="600">R</text>
+<line x1="295.8" y1="170.8" x2="349.5" y2="139.8" stroke="#B45309" stroke-width="3" marker-end="url(#aA)"/>
+<text x="357.47158462865895" y="143.77949192431126" fill="#B45309" text-anchor="start" font-size="15" font-weight="600">F</text>
+<line x1="229.2" y1="193.1" x2="169.6" y2="227.5" stroke="#047857" stroke-width="3" marker-end="url(#aG)"/>
+<text x="165.61291403328494" y="217.45513627132905" fill="#047857" text-anchor="end" font-size="14" font-weight="400">motion</text>
+<line x1="123.7" y1="337.1" x2="265.2" y2="255.4" stroke="#102A43" stroke-width="2" marker-end="url(#aK)"/>
+<line x1="265.2" y1="255.4" x2="123.7" y2="337.1" stroke="#102A43" stroke-width="2" marker-end="url(#aK)"/>
+<text x="198.4411863244657" y="322.25896534380865" fill="#102A43" text-anchor="middle" font-size="15" font-weight="600">s</text>
+<line x1="432.4" y1="115.0" x2="432.4" y2="330.0" stroke="#102A43" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="422.39092362730867" y="227.5" fill="#102A43" text-anchor="end" font-size="15" font-weight="600">h</text>
+<path d="M 120,330 A 60,60 0 0 0 112.0,300.0" fill="none" stroke="#102A43" stroke-width="2"/>
+<text x="126" y="322" fill="#102A43" text-anchor="start" font-size="14" font-weight="400">30&#176;</text>
+</svg>

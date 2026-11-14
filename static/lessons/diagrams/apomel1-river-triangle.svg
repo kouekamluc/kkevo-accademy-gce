@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img"><title>Velocity triangle for a boat crossing a river</title><defs><marker id="an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs><rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="0" y="40" width="560" height="22" fill="#E2E8F0" stroke="none" stroke-width="2"/>
+<rect x="0" y="300" width="560" height="22" fill="#E2E8F0" stroke="none" stroke-width="2"/>
+<line x1="0" y1="62" x2="560" y2="62" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<line x1="0" y1="300" x2="560" y2="300" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<text x="280" y="54" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600">far bank</text>
+<text x="280" y="318" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600">start bank</text>
+<line x1="190" y1="270" x2="190" y2="108.9" stroke="#2563EB" stroke-width="3" stroke-linecap="round" marker-end="url(#ab)"/>
+<line x1="190" y1="270" x2="97" y2="108.9" stroke="#047857" stroke-width="3" stroke-linecap="round" marker-end="url(#ag)"/>
+<line x1="97" y1="108.9" x2="190" y2="108.9" stroke="#102A43" stroke-width="3" stroke-linecap="round" marker-end="url(#an)"/>
+<text x="130" y="172" font-size="14" fill="#047857" text-anchor="end" font-weight="600">3 m/s</text>
+<text x="130" y="190" font-size="14" fill="#047857" text-anchor="end" font-weight="600">relative to water</text>
+<text x="143.5" y="96.9" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600">current 1.5 m/s</text>
+<text x="202" y="194.5" font-size="14" fill="#2563EB" text-anchor="start" font-weight="600">straight across</text>
+<path d="M 190 230 A 40 40 0 0 0 170 235.4" fill="none" stroke="#B45309" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="172" y="222" font-size="16" fill="#B45309" text-anchor="end" font-weight="600">&#966;</text>
+<circle cx="190" cy="270" r="5" fill="#102A43" stroke="none" stroke-width="2"/>
+<line x1="380" y1="160" x2="500" y2="160" stroke="#102A43" stroke-width="3" stroke-linecap="round" marker-end="url(#an)"/>
+<text x="440" y="150" font-size="14" fill="#102A43" text-anchor="middle" font-weight="600">river flow</text>
+</svg>

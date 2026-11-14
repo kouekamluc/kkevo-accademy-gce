@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="14">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="aB" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#2563EB"/></marker><marker id="aK" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#102A43"/></marker><marker id="aG" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#047857"/></marker><marker id="aA" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#B45309"/></marker></defs>
+<path d="M 170 90 C 170 230, 260 290, 390 290 L 520 290 L 520 330 L 170 330 Z" fill="#EFF6FF" stroke="none"/>
+<path d="M 170 90 C 170 230, 260 290, 390 290 L 520 290" fill="none" stroke="#102A43" stroke-width="4"/>
+<line x1="40.0" y1="290.0" x2="520.0" y2="290.0" stroke="#102A43" stroke-width="2" stroke-dasharray="7 6"/>
+<line x1="70.0" y1="90.0" x2="70.0" y2="290.0" stroke="#102A43" stroke-width="2" marker-end="url(#aK)"/>
+<line x1="70.0" y1="290.0" x2="70.0" y2="90.0" stroke="#102A43" stroke-width="2" marker-end="url(#aK)"/>
+<line x1="60.0" y1="90.0" x2="170.0" y2="90.0" stroke="#102A43" stroke-width="2" stroke-dasharray="7 6"/>
+<text x="80" y="200" fill="#102A43" text-anchor="start" font-size="15" font-weight="600">h</text>
+<circle cx="170" cy="78" r="12" fill="#2563EB" stroke="#102A43" stroke-width="2"/>
+<text x="192" y="70" fill="#2563EB" text-anchor="start" font-size="14" font-weight="400">A: released from rest</text>
+<circle cx="470" cy="276" r="12" fill="#B45309" stroke="#102A43" stroke-width="2"/>
+<text x="470" y="240" fill="#B45309" text-anchor="middle" font-size="15" font-weight="600">B: v = ?</text>
+<text x="440" y="318" fill="#102A43" text-anchor="middle" font-size="14" font-weight="400">reference level (PE = 0)</text>
+<text x="300" y="170" fill="#102A43" text-anchor="start" font-size="14" font-weight="400">smooth track</text>
+</svg>

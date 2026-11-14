@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="140.0,310.0 340.0,310.0 340.0,270.0 180.0,270.0 180.0,70.0 140.0,70.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="140.0" y1="310.0" x2="430.0" y2="310.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<polygon points="430.0,310.0 421.7,313.5 421.7,306.5" fill="#102A43" stroke="#102A43" stroke-width="1" stroke-linejoin="round"/>
+<line x1="140.0" y1="310.0" x2="140.0" y2="30.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<polygon points="140.0,30.0 143.5,38.3 136.5,38.3" fill="#102A43" stroke="#102A43" stroke-width="1" stroke-linejoin="round"/>
+<text x="440.0" y="315.0" font-size="15" text-anchor="start" fill="#102A43" font-weight="700">x</text>
+<text x="136.0" y="22.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">y</text>
+<text x="126.0" y="330.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">O</text>
+<text x="370.0" y="150.0" font-size="15" text-anchor="start" fill="#102A43" font-weight="700">L-shaped lamina</text>
+<text x="370.0" y="176.0" font-size="14" text-anchor="start" fill="#102A43">(dimensions in the question)</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="14">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="aB" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#2563EB"/></marker><marker id="aK" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#102A43"/></marker><marker id="aG" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#047857"/></marker><marker id="aA" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#B45309"/></marker></defs>
+<text x="30" y="40" fill="#102A43" text-anchor="start" font-size="16" font-weight="700">Before</text>
+<line x1="40.0" y1="145.0" x2="520.0" y2="145.0" stroke="#102A43" stroke-width="2"/>
+<text x="30" y="205" fill="#102A43" text-anchor="start" font-size="16" font-weight="700">After</text>
+<line x1="40.0" y1="310.0" x2="520.0" y2="310.0" stroke="#102A43" stroke-width="2"/>
+<rect x="110" y="85" width="60" height="60" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/><text x="140.0" y="120.0" fill="#102A43" text-anchor="middle" font-size="14" font-weight="600">3 kg</text>
+<rect x="330" y="85" width="70" height="60" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/><text x="365.0" y="120.0" fill="#102A43" text-anchor="middle" font-size="14" font-weight="600">2 kg</text>
+<rect x="200" y="250" width="60" height="60" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/><text x="230.0" y="285.0" fill="#102A43" text-anchor="middle" font-size="14" font-weight="600">3 kg</text>
+<rect x="350" y="250" width="70" height="60" rx="4" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/><text x="385.0" y="285.0" fill="#102A43" text-anchor="middle" font-size="14" font-weight="600">2 kg</text>
+<line x1="115.0" y1="70.0" x2="195.0" y2="70.0" stroke="#2563EB" stroke-width="3" marker-end="url(#aB)"/>
+<text x="155" y="60" fill="#2563EB" text-anchor="middle" font-size="15" font-weight="400">5 m/s</text>
+<text x="365" y="70" fill="#2563EB" text-anchor="middle" font-size="15" font-weight="400">at rest</text>
+<line x1="205.0" y1="235.0" x2="265.0" y2="235.0" stroke="#B45309" stroke-width="3" marker-end="url(#aA)"/>
+<text x="235" y="225" fill="#B45309" text-anchor="middle" font-size="15" font-weight="400">v = ?</text>
+<line x1="355.0" y1="235.0" x2="425.0" y2="235.0" stroke="#B45309" stroke-width="3" marker-end="url(#aA)"/>
+<text x="390" y="225" fill="#B45309" text-anchor="middle" font-size="15" font-weight="400">v = ?</text>
+<line x1="440.0" y1="50.0" x2="520.0" y2="50.0" stroke="#102A43" stroke-width="2" marker-end="url(#aK)"/>
+<text x="480" y="38" fill="#102A43" text-anchor="middle" font-size="14" font-weight="400">positive</text>
+</svg>

@@ -2587,14 +2587,101 @@ _PURE_CORE = [
     ]),
 ]
 _PURE_NOTE = "Core pure syllabus; the guide does not split it between Lower and Upper Sixth."
-SYLLABI[("pure-mathematics-with-mechanics", "lower-sixth")] = (
-    "Pure Mathematics with Mechanics (A Level, 765) — Core Pure", _PURE_NOTE, _PURE_CORE)
-SYLLABI[("pure-mathematics-with-statistics", "lower-sixth")] = (
-    "Pure Mathematics with Statistics (A Level, 770) — Core Pure", _PURE_NOTE, _PURE_CORE)
-SYLLABI[("pure-mathematics-with-mechanics", "upper-sixth")] = (
-    "Pure Mathematics with Mechanics (A Level, 765) — Core Pure", _PURE_NOTE, _PURE_CORE)
-SYLLABI[("pure-mathematics-with-statistics", "upper-sixth")] = (
-    "Pure Mathematics with Statistics (A Level, 770) — Core Pure", _PURE_NOTE, _PURE_CORE)
+_PURE_NO_EXAM = [m for m in _PURE_CORE if m[0] != "Examination"]
+
+
+def _pure_option(title, option_modules, papers):
+    """Core pure, then the option, then the Examination module with Paper 3 added."""
+    exam = ("Examination", [*dict(_PURE_CORE)["Examination"], papers[2]])
+    return (title, "Core pure plus the option. The core is the same at both levels (the guide does not split it); the option is split between Lower and Upper Sixth by KKEVO. Papers follow the GCE Board's 2023 Advanced Level subject report. ", [*_PURE_NO_EXAM, *option_modules, exam])
+
+
+_MECH_L6 = [
+    ("Kinematics", [
+        ("Motion in a straight line", "Displacement, velocity and acceleration; constant-acceleration formulae; graphs."),
+        ("Variable acceleration", "Velocity and acceleration as derivatives of displacement and integrals of acceleration."),
+        ("Projectile motion", "Motion under gravity with components; range, time of flight and greatest height."),
+        ("Relative velocity", "Velocity as a vector; relative velocity, closest approach and interception."),
+    ]),
+    ("Forces & Newton's Laws", [
+        ("Forces and equilibrium", "Resultants, resolving forces and equilibrium of a particle."),
+        ("Newton's laws and connected particles", "Newton's second law; particles connected by strings and over pulleys."),
+        ("Friction", "The friction law, limiting friction and the coefficient of friction."),
+        ("Motion on an inclined plane", "Resolving along and perpendicular to a slope, with and without friction."),
+    ]),
+    ("Probability", [
+        ("Events and the addition law", "Sample spaces, events, Venn diagrams and the addition law."),
+        ("Conditional probability and independence", "Conditional probability, the multiplication law, tree diagrams and independent events."),
+        ("Permutations and combinations", "Counting arrangements and selections, and their use in probability."),
+    ]),
+]
+_MECH_U6 = [
+    ("Momentum, Impulse & Collisions", [
+        ("Momentum and impulse", "Linear momentum, impulse and the impulse-momentum principle."),
+        ("Collisions and loss of kinetic energy", "Direct collisions of particles, conservation of momentum, restitution and energy lost."),
+    ]),
+    ("Work, Energy & Power", [
+        ("Work and kinetic energy", "Work done by a force, kinetic energy and the work-energy principle."),
+        ("Potential energy and conservation of energy", "Gravitational potential energy and conservation of mechanical energy."),
+        ("Power and moving vehicles", "Power as the rate of working; driving force, resistance and speed."),
+    ]),
+    ("Statics of Rigid Bodies", [
+        ("Moments", "The moment of a force and the principle of moments."),
+        ("Equilibrium of rigid bodies", "Equilibrium of a rod or a beam under coplanar forces."),
+        ("Centre of mass", "Centre of mass of particles, uniform bodies and composite plane laminas."),
+        ("Toppling and sliding", "Laminas and bodies on rough surfaces and slopes: when they slide or topple."),
+    ]),
+]
+_STAT_L6 = [
+    ("Descriptive Statistics", [
+        ("Measures of location and spread", "Mean, median, mode, range, variance and standard deviation."),
+        ("Quartiles and box plots", "Quartiles, interquartile and quartile deviation, outliers and box plots."),
+        ("Grouped data and histograms", "Frequency tables, histograms with unequal widths and estimating the median."),
+        ("Coding and combining data sets", "Linear coding, and the mean and variance of combined sets."),
+    ]),
+    ("Probability", [
+        ("Events and the addition law", "Sample spaces, events, Venn diagrams and the addition law."),
+        ("Conditional probability and independence", "Conditional probability, the multiplication law, tree diagrams and independent events."),
+        ("Permutations and combinations", "Counting arrangements and selections, and their use in probability."),
+    ]),
+    ("Discrete Random Variables", [
+        ("Probability distributions, expectation and variance", "Probability distributions, E(X), Var(X) and E(aX + b)."),
+        ("The binomial distribution", "The binomial model B(n, p), its mean and variance, and its use."),
+    ]),
+]
+_STAT_U6 = [
+    ("Further Distributions", [
+        ("The Poisson distribution", "The Poisson model, its mean and variance, and when it applies."),
+        ("Continuous random variables", "Probability density and cumulative distribution functions, mean, median and variance."),
+        ("The normal distribution", "The normal curve, standardising and using tables."),
+        ("Normal approximations", "Approximating the binomial and the Poisson by the normal, with continuity correction."),
+    ]),
+    ("Sampling & Hypothesis Testing", [
+        ("The distribution of the sample mean", "Populations, samples, the distribution of the sample mean and the central limit theorem."),
+        ("Estimation and confidence intervals", "Unbiased estimates and confidence intervals for a mean."),
+        ("Hypothesis tests for a mean", "Null and alternative hypotheses, test statistics, significance levels and critical regions."),
+        ("Hypothesis tests for binomial and Poisson", "Exact tests of a binomial proportion and a Poisson mean."),
+    ]),
+    ("Correlation & Regression", [
+        ("Correlation", "Scatter diagrams and the product-moment correlation coefficient."),
+        ("Regression lines", "Least-squares regression of y on x, interpolation and extrapolation."),
+        ("Rank correlation", "Spearman's rank correlation coefficient."),
+    ]),
+]
+_MECH_PAPER3 = [('Paper 1', "Multiple-choice: 35 questions on pure mathematics, 15 on mechanics and probability, all compulsory (per the Board's 2023 report)."), ('Paper 2', "Pure mathematics only (per the Board's 2023 report)."), ('Paper 3', "Mechanics and probability (per the Board's 2023 report).")]
+_STAT_PAPER3 = [('Paper 1', "Multiple-choice: all questions compulsory (per the Board's 2023 report; check the split with your teacher)."), ('Paper 2', 'Pure mathematics (check the exact format with your teacher).'), ('Paper 3', 'Statistics and probability (check the exact format with your teacher).')]
+SYLLABI[("pure-mathematics-with-mechanics", "lower-sixth")] = _pure_option(
+    "Pure Mathematics with Mechanics (A Level, 765) — Lower Sixth: core pure, kinematics, forces and probability",
+    _MECH_L6, _MECH_PAPER3)
+SYLLABI[("pure-mathematics-with-mechanics", "upper-sixth")] = _pure_option(
+    "Pure Mathematics with Mechanics (A Level, 765) — Upper Sixth: core pure, energy, collisions and statics",
+    _MECH_U6, _MECH_PAPER3)
+SYLLABI[("pure-mathematics-with-statistics", "lower-sixth")] = _pure_option(
+    "Pure Mathematics with Statistics (A Level, 770) — Lower Sixth: core pure, descriptive statistics, probability and random variables",
+    _STAT_L6, _STAT_PAPER3)
+SYLLABI[("pure-mathematics-with-statistics", "upper-sixth")] = _pure_option(
+    "Pure Mathematics with Statistics (A Level, 770) — Upper Sixth: core pure, distributions, inference and regression",
+    _STAT_U6, _STAT_PAPER3)
 
 
 # A Level courses that have a practice paper: KKEVO's own exam practice, not a Board paper.

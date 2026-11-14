@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<line x1="80.0" y1="135.0" x2="340.0" y2="135.0" stroke="#102A43" stroke-width="9" stroke-linecap="round"/>
+<line x1="340.0" y1="135.0" x2="187.4" y2="263.0" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<line x1="80.0" y1="135.0" x2="187.4" y2="263.0" stroke="#047857" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 5"/>
+<line x1="340.0" y1="135.0" x2="431.9" y2="57.9" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+<polygon points="431.9,57.9 425.6,70.3 418.5,62.0" fill="#2563EB" stroke="#2563EB" stroke-width="1" stroke-linejoin="round"/>
+<circle cx="80.0" cy="135.0" r="9" fill="#FFFFFF" stroke="#102A43" stroke-width="3"/>
+<line x1="340.0" y1="135.0" x2="470.0" y2="135.0" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 5"/>
+<path d="M 392.0 135.0 A 52 52 0 0 0 379.8 101.6" fill="none" stroke="#B45309" stroke-width="2"/>
+<text x="418.0" y="123.0" font-size="17" text-anchor="middle" fill="#B45309" font-weight="700">&#952;</text>
+<text x="76.0" y="115.0" font-size="18" text-anchor="middle" fill="#102A43" font-weight="700">O</text>
+<text x="346.0" y="165.0" font-size="18" text-anchor="middle" fill="#102A43" font-weight="700">P</text>
+<text x="453.9" y="53.9" font-size="19" text-anchor="middle" fill="#2563EB" font-weight="700">F</text>
+<text x="117.7" y="205.0" font-size="18" text-anchor="middle" fill="#047857" font-weight="700">d</text>
+<text x="210.0" y="117.0" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">OP = r</text>
+<text x="280.0" y="318.0" font-size="16" text-anchor="middle" fill="#102A43" font-weight="700">Moment of F about O = F &#215; d, where d = r sin &#952;</text>
+<text x="280.0" y="342.0" font-size="14" text-anchor="middle" fill="#102A43">d is the perpendicular distance from O to the line of action of F</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" font-size="14">
+<rect width="560" height="360" fill="#ffffff"/>
+<defs><marker id="aB" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#2563EB"/></marker><marker id="aK" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#102A43"/></marker><marker id="aG" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#047857"/></marker><marker id="aA" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#B45309"/></marker></defs>
+<polygon points="40,320 503.6,320 503.6,195.8" fill="#EFF6FF" stroke="#102A43" stroke-width="2"/>
+<g transform="translate(318.2,245.5) rotate(-15)"><rect x="-55.0" y="-46" width="110" height="46" fill="#ffffff" stroke="#2563EB" stroke-width="3"/></g>
+<line x1="312.2" y1="223.2" x2="312.2" y2="293.2" stroke="#102A43" stroke-width="3" marker-end="url(#aK)"/>
+<text x="322.2337999338937" y="285.24382100582545" fill="#102A43" text-anchor="start" font-size="15" font-weight="600">mg</text>
+<line x1="312.2" y1="223.2" x2="291.5" y2="146.0" stroke="#102A43" stroke-width="3" marker-end="url(#aK)"/>
+<text x="285.52827632569205" y="141.9697549027" fill="#102A43" text-anchor="end" font-size="15" font-weight="600">N</text>
+<line x1="312.2" y1="223.2" x2="399.2" y2="200.0" stroke="#047857" stroke-width="3" marker-end="url(#aG)"/>
+<text x="401.16712429990986" y="175.9501069465986" fill="#047857" text-anchor="end" font-size="14" font-weight="600">driving force F</text>
+<line x1="312.2" y1="223.2" x2="225.3" y2="246.5" stroke="#B45309" stroke-width="3" marker-end="url(#aA)"/>
+<text x="217.30047556787753" y="268.53753506505234" fill="#B45309" text-anchor="end" font-size="14" font-weight="600">resistance R</text>
+<path d="M 100,320 A 60,60 0 0 0 98.0,304.5" fill="none" stroke="#102A43" stroke-width="2"/>
+<text x="110" y="314" fill="#102A43" text-anchor="start" font-size="14" font-weight="400">slope angle</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<polygon points="40.0,290.0 240.0,290.0 140.0,120.0" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="140.0" cy="233.3" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<text x="150.0" y="223.3" font-size="16" text-anchor="start" fill="#047857" font-weight="700">G</text>
+<text x="140.0" y="318.0" font-size="14" text-anchor="middle" fill="#102A43">base</text>
+<text x="140.0" y="342.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">Triangular lamina</text>
+<path d="M 340 290 A 100 100 0 0 1 540 290 Z" fill="#ECFDF5" stroke="#102A43" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="440.0" cy="247.6" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<text x="450.0" y="237.6" font-size="16" text-anchor="start" fill="#047857" font-weight="700">G</text>
+<text x="440.0" y="318.0" font-size="14" text-anchor="middle" fill="#102A43">diameter</text>
+<text x="440.0" y="342.0" font-size="14" text-anchor="middle" fill="#102A43" font-weight="700">Semicircular lamina</text>
+</svg>

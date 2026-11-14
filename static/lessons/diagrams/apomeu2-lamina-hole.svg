@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif">
+<rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="80.0" y="60.0" width="320.0" height="240.0" rx="0" fill="#EFF6FF" stroke="#102A43" stroke-width="2.5"/>
+<circle cx="160.0" cy="180.0" r="40" fill="#FFFFFF" stroke="#B45309" stroke-width="2.5"/>
+<circle cx="245.6" cy="180.0" r="6" fill="#047857" stroke="#FFFFFF" stroke-width="2"/>
+<text x="255.6" y="168.0" font-size="16" text-anchor="start" fill="#047857" font-weight="700">G</text>
+<text x="160.0" y="206.0" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">hole</text>
+<line x1="50.0" y1="300.0" x2="440.0" y2="300.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<polygon points="440.0,300.0 431.7,303.5 431.7,296.5" fill="#102A43" stroke="#102A43" stroke-width="1" stroke-linejoin="round"/>
+<line x1="50.0" y1="300.0" x2="50.0" y2="30.0" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<polygon points="50.0,30.0 53.5,38.3 46.5,38.3" fill="#102A43" stroke="#102A43" stroke-width="1" stroke-linejoin="round"/>
+<text x="450.0" y="305.0" font-size="15" text-anchor="start" fill="#102A43" font-weight="700">x</text>
+<text x="46.0" y="22.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">y</text>
+<text x="72.0" y="320.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">O</text>
+<line x1="80.0" y1="330.0" x2="400.0" y2="330.0" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="400.0,330.0 392.6,333.1 392.6,326.9" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linejoin="round"/>
+<line x1="400.0" y1="330.0" x2="80.0" y2="330.0" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="80.0,330.0 87.4,326.9 87.4,333.1" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linejoin="round"/>
+<text x="240.0" y="350.0" font-size="14" text-anchor="middle" fill="#B45309" font-weight="700">40 cm</text>
+<line x1="422.0" y1="300.0" x2="422.0" y2="60.0" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="422.0,60.0 425.1,67.4 418.9,67.4" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linejoin="round"/>
+<line x1="422.0" y1="60.0" x2="422.0" y2="300.0" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<polygon points="422.0,300.0 418.9,292.6 425.1,292.6" fill="#B45309" stroke="#B45309" stroke-width="1" stroke-linejoin="round"/>
+<text x="430.0" y="185.0" font-size="14" text-anchor="start" fill="#B45309" font-weight="700">30 cm</text>
+<line x1="160.0" y1="180.0" x2="160.0" y2="300.0" stroke="#B45309" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 4"/>
+<text x="166.0" y="284.0" font-size="13" text-anchor="start" fill="#B45309" font-weight="700">10 cm</text>
+<line x1="160.0" y1="180.0" x2="200.0" y2="180.0" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+<text x="202.0" y="174.0" font-size="13" text-anchor="start" fill="#B45309" font-weight="700">5</text>
+<text x="300.0" y="36.0" font-size="15" text-anchor="middle" fill="#102A43" font-weight="700">Rectangular lamina with a circular hole</text>
+</svg>

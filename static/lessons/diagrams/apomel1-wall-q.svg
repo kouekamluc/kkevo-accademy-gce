@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" font-family="Inter, Arial, sans-serif" role="img"><title>Ball kicked towards a wall</title><defs><marker id="an" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#102A43"/></marker><marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563EB"/></marker><marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#047857"/></marker><marker id="am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker></defs><rect width="560" height="360" fill="#FFFFFF"/>
+<rect x="0" y="290" width="560" height="70" fill="#F1F5F9" stroke="none" stroke-width="2"/>
+<line x1="0" y1="290" x2="560" y2="290" stroke="#102A43" stroke-width="2" stroke-linecap="round"/>
+<rect x="393" y="190" width="14" height="100" fill="#E2E8F0" stroke="#102A43" stroke-width="2"/>
+<circle cx="70" cy="290" r="5" fill="#B45309" stroke="none" stroke-width="2"/>
+<line x1="70" y1="290" x2="165.3" y2="235" stroke="#047857" stroke-width="3" stroke-linecap="round" marker-end="url(#ag)"/>
+<text x="173.3" y="231" font-size="15" fill="#047857" text-anchor="start" font-weight="600">15 m/s</text>
+<line x1="120" y1="290" x2="130" y2="290" stroke="#102A43" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 3"/>
+<path d="M 130 290 A 60 60 0 0 0 122 260" fill="none" stroke="#B45309" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="138" y="280" font-size="15" fill="#B45309" text-anchor="start" font-weight="600">30&#176;</text>
+<line x1="70" y1="324" x2="400" y2="324" stroke="#102A43" stroke-width="2" stroke-linecap="round" marker-end="url(#an)"/>
+<line x1="400" y1="324" x2="70" y2="324" stroke="#102A43" stroke-width="2" stroke-linecap="round" marker-end="url(#an)"/>
+<text x="235" y="317" font-size="15" fill="#102A43" text-anchor="middle" font-weight="600">15 m</text>
+<line x1="426" y1="190" x2="426" y2="289" stroke="#102A43" stroke-width="2" stroke-linecap="round" marker-end="url(#an)"/>
+<line x1="426" y1="289" x2="426" y2="190" stroke="#102A43" stroke-width="2" stroke-linecap="round" marker-end="url(#an)"/>
+<text x="436" y="245" font-size="15" fill="#102A43" text-anchor="start" font-weight="600">2.5 m</text>
+<text x="400" y="180" font-size="15" fill="#102A43" text-anchor="middle" font-weight="600">wall</text>
+</svg>

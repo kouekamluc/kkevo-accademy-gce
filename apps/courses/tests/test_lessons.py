@@ -166,3 +166,19 @@ def test_course_page_is_encouraging_and_subject_tiles_are_solid(client, django_u
     client.force_login(user)
     html = client.get(course.get_absolute_url()).content.decode()
     assert "Ready when you are!" in html and course.offering.subject.colour in html and "+10" in html
+
+
+def test_pure_options_have_their_own_modules_in_outline_order(db):
+    """Mechanics and Statistics have option modules after the shared core, with the Examination module last."""
+    from django.core.management import call_command
+
+    from apps.academics import gce_curriculum
+    from apps.courses.models import Course
+
+    call_command("load_gce_curriculum")
+    for key in [("pure-mathematics-with-mechanics", "lower-sixth"), ("pure-mathematics-with-statistics", "upper-sixth")]:
+        call_command("load_lessons", "--only", f"{key[0]}:{key[1]}")
+        course = Course.objects.get(offering__subject__slug=key[0], offering__level__slug=key[1], description="[gce-guide]")
+        titles = [m.title for m in course.modules.all()]
+        assert titles == [title for title, _topics in gce_curriculum.SYLLABI[key][2]]
+        assert titles[-1] == "Examination" and "Paper 3" in [t.title for t in course.modules.last().topics.all()]

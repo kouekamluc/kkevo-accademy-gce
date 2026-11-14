@@ -598,48 +598,44 @@ PAGES = {
             "Answer Paper 1 multiple choice and plan Paper 2 and Paper 3",
         ]),
     ("pure-mathematics-with-mechanics", "lower-sixth"): dict(
-        summary="The core pure mathematics of GCE A Level Pure Mathematics with Mechanics: proof, algebra and "
-                "functions, trigonometry, conic sections, calculus, series, differential equations and 3D vectors.",
+        summary="GCE A Level Pure Mathematics with Mechanics, Lower Sixth: the core pure mathematics, then kinematics, forces and Newton's laws, and probability, with Paper 1, Paper 2 and Paper 3 practice and timed mock papers.",
         outcomes=[
             "Prove results by induction and by contradiction",
             "Use partial fractions, the binomial theorem and the roots of polynomials",
-            "Work with composite and inverse functions and sketch curves with asymptotes",
-            "Use compound, double and half-angle identities and the harmonic form R cos(θ ± α)",
+            "Solve problems on projectiles, variable acceleration and relative velocity",
+            "Resolve forces and apply Newton's laws, friction and motion on slopes",
+            "Use conditional probability, permutations and combinations",
             "Differentiate and integrate with the standard rules and techniques, including series",
-            "Solve first-order differential equations and problems with lines and planes in 3D",
         ]),
     ("pure-mathematics-with-mechanics", "upper-sixth"): dict(
-        summary="The core pure mathematics of GCE A Level Pure Mathematics with Mechanics: proof, algebra and "
-                "functions, trigonometry, conic sections, calculus, series, differential equations and 3D vectors.",
+        summary="GCE A Level Pure Mathematics with Mechanics, Upper Sixth: the core pure mathematics, then momentum, impulse and collisions, work, energy and power, and the statics of rigid bodies, with Paper 1, Paper 2 and Paper 3 practice and timed mock papers.",
         outcomes=[
             "Prove results by induction and by contradiction",
             "Use partial fractions, the binomial theorem and the roots of polynomials",
-            "Work with composite and inverse functions and sketch curves with asymptotes",
-            "Use compound, double and half-angle identities and the harmonic form R cos(θ ± α)",
+            "Use momentum, impulse and restitution in collisions and find the energy lost",
+            "Apply the work-energy principle, conservation of energy and power to moving bodies",
+            "Take moments, find centres of mass and decide when a body slides or topples",
             "Differentiate and integrate with the standard rules and techniques, including series",
-            "Solve first-order differential equations and problems with lines and planes in 3D",
         ]),
     ("pure-mathematics-with-statistics", "lower-sixth"): dict(
-        summary="The core pure mathematics of GCE A Level Pure Mathematics with Statistics: proof, algebra and "
-                "functions, trigonometry, conic sections, calculus, series, differential equations and 3D vectors.",
+        summary="GCE A Level Pure Mathematics with Statistics, Lower Sixth: the core pure mathematics, then descriptive statistics, probability and discrete random variables, with Paper 1, Paper 2 and Paper 3 practice and timed mock papers.",
         outcomes=[
             "Prove results by induction and by contradiction",
             "Use partial fractions, the binomial theorem and the roots of polynomials",
-            "Work with composite and inverse functions and sketch curves with asymptotes",
-            "Use compound, double and half-angle identities and the harmonic form R cos(θ ± α)",
+            "Summarise data with measures of location and spread, quartiles, box plots and histograms",
+            "Use conditional probability, permutations and combinations",
+            "Find the expectation and variance of a discrete variable and use the binomial distribution",
             "Differentiate and integrate with the standard rules and techniques, including series",
-            "Solve first-order differential equations and problems with lines and planes in 3D",
         ]),
     ("pure-mathematics-with-statistics", "upper-sixth"): dict(
-        summary="The core pure mathematics of GCE A Level Pure Mathematics with Statistics: proof, algebra and "
-                "functions, trigonometry, conic sections, calculus, series, differential equations and 3D vectors.",
+        summary="GCE A Level Pure Mathematics with Statistics, Upper Sixth: the core pure mathematics, then the Poisson, continuous and normal distributions, sampling and hypothesis testing, and correlation and regression, with Paper 1, Paper 2 and Paper 3 practice and timed mock papers.",
         outcomes=[
             "Prove results by induction and by contradiction",
             "Use partial fractions, the binomial theorem and the roots of polynomials",
-            "Work with composite and inverse functions and sketch curves with asymptotes",
-            "Use compound, double and half-angle identities and the harmonic form R cos(θ ± α)",
+            "Use the Poisson, continuous and normal distributions, with normal approximations",
+            "Find confidence intervals and carry out hypothesis tests on a mean, a proportion and a Poisson mean",
+            "Measure correlation and fit and interpret regression lines",
             "Differentiate and integrate with the standard rules and techniques, including series",
-            "Solve first-order differential equations and problems with lines and planes in 3D",
         ]),
     ("computer-science", "lower-sixth"): dict(
         summary="GCE A Level Computer Science, year 1: how computers work inside, digital logic, operating "
