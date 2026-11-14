@@ -231,7 +231,7 @@ class Achievement(models.Model):
 
 
 class LessonFeedback(models.Model):
-    """A student's report about a lesson: wrong, hard to follow, a display problem, or something else."""
+    """A student's report about a lesson or a practice question: wrong, hard to follow, a display problem, or something else."""
 
     class Kind(models.TextChoices):
         WRONG = "wrong", "Something in it is wrong"
@@ -246,7 +246,9 @@ class LessonFeedback(models.Model):
         DISMISSED = "dismissed", "Not a problem"
 
     user = models.ForeignKey(USER, on_delete=models.SET_NULL, null=True, blank=True, related_name="lesson_feedback")
-    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name="feedback")
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, null=True, blank=True, related_name="feedback")
+    question = models.ForeignKey("practice.Question", on_delete=models.CASCADE, null=True, blank=True,
+                                 related_name="student_reports")
     kind = models.CharField(max_length=10, choices=Kind.choices)
     message = models.CharField(max_length=500, blank=True)
     status = models.CharField(max_length=10, choices=Status.choices, default=Status.NEW, db_index=True)
@@ -255,7 +257,25 @@ class LessonFeedback(models.Model):
 
     class Meta:
         ordering = ["-created_at"]
-        verbose_name_plural = "lesson feedback"
+        verbose_name_plural = "lesson and question feedback"
+        constraints = [models.CheckConstraint(
+            condition=(models.Q(lesson__isnull=False, question__isnull=True)
+                       | models.Q(lesson__isnull=True, question__isnull=False)),
+            name="feedback_about_lesson_or_question")]
 
     def __str__(self):
-        return f"{self.get_kind_display()}: {self.lesson}"
+        return f"{self.get_kind_display()}: {self.lesson or self.question}"
+
+    @property
+    def target_title(self):
+        if self.lesson_id:
+            return self.lesson.title
+        text = " ".join(self.question.prompt.split())
+        return (text[:90] + "…") if len(text) > 90 else text
+
+    @property
+    def target_course(self):
+        if self.lesson_id:
+            return self.lesson.topic.module.course
+        topic = self.question.practice_set.topic
+        return topic.module.course if topic else None

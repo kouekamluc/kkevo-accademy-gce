@@ -40,6 +40,7 @@ others.
 
 ## Using student feedback
 
-Students can report a problem from the bottom of every lesson. Staff see the reports in the studio under
-"Student feedback", with the most reported lessons listed first. Fix those lessons before anything else:
+Students can report a problem from the bottom of every lesson, and from any practice question once they have
+answered it. Staff see both in the studio under "Student feedback", with the most reported lessons and
+practice sets listed first. Fix those lessons before anything else:
 students found the mistake by actually using the lesson.

@@ -60,7 +60,7 @@ class PrivateLinkAdmin(ModelAdmin):
 
 @admin.register(LessonFeedback)
 class LessonFeedbackAdmin(ModelAdmin):
-    list_display = ("lesson", "kind", "status", "user", "created_at")
+    list_display = ("__str__", "kind", "status", "user", "created_at")
     list_filter = ("status", "kind")
-    search_fields = ("lesson__title", "message")
-    raw_id_fields = ("lesson", "user")
+    search_fields = ("lesson__title", "question__prompt", "message")
+    raw_id_fields = ("lesson", "question", "user")

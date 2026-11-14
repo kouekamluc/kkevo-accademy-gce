@@ -10,6 +10,7 @@ urlpatterns = [
     path("course/<slug:slug>/", views.course_practice, name="course"),
     path("sets/<int:pk>/", views.start_page, name="set"),
     path("sets/<int:pk>/start/", views.start, name="start"),
+    path("questions/<int:pk>/feedback/", views.question_feedback, name="question_feedback"),
     path("attempts/<int:attempt>/q/<int:number>/", views.question, name="question"),
     path("attempts/<int:attempt>/results/", views.finish, name="finish"),
     path("review/", views.review, name="review"),

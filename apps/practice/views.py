@@ -17,7 +17,7 @@ from django.views.decorators.http import require_POST
 from apps.accounts.utils import get_profile
 from apps.courses.models import Course, Lesson
 from apps.learning import achievements
-from apps.learning.models import Enrollment
+from apps.learning.models import Enrollment, LessonFeedback
 
 from .mastery import LEVELS, NOT_STARTED, mastery_for_topic, topic_mastery
 from .suggestions import practice_today
@@ -341,7 +341,7 @@ def question(request, attempt, number):
         next_url = (reverse("practice:finish", args=[attempt.pk]) if is_last
                     else reverse("practice:question", args=[attempt.pk, number + 1]))
     return render(request, "practice/question.html", {
-        "attempt": attempt, "practice_set": attempt.practice_set, "question": q, "number": number,
+        "kinds": QUESTION_KINDS, "attempt": attempt, "practice_set": attempt.practice_set, "question": q, "number": number,
         "total": len(questions), "answer": answer, "is_last": is_last, "next_url": next_url,
         "dots": _dots(questions, answers, number,
                       lambda i: reverse("practice:question", args=[attempt.pk, i]), show_feedback),
@@ -489,7 +489,7 @@ def review_question(request, session, number):
 
     is_last = number == len(questions)
     return render(request, "practice/review_question.html", {
-        "session": session, "question": q, "number": number, "total": len(questions), "answer": answer,
+        "kinds": QUESTION_KINDS, "session": session, "question": q, "number": number, "total": len(questions), "answer": answer,
         "dots": _dots(questions, answers, number,
                       lambda i: reverse("practice:review_question", args=[session.pk, i]), True),
         "is_last": is_last, "progress_percent": round(100 * len(answers) / len(questions)),
@@ -529,3 +529,34 @@ def review_finish(request, session):
         "cleared": sum(1 for r in rows if r["card"] and r["card"].retired_at),
         "review": review_summary(request.user),
     })
+
+
+QUESTION_FEEDBACK_PER_DAY = 10
+QUESTION_KINDS = [("wrong", "The marked answer or explanation is wrong"), ("unclear", "I could not understand the question"),
+                  ("display", "Typo or it looks broken"), ("other", "Something else")]
+
+
+@login_required
+@require_POST
+def question_feedback(request, pk):
+    """Student reports a problem with a practice question (only questions they have actually seen answered)."""
+    question = get_object_or_404(Question.objects.select_related("practice_set"), pk=pk,
+                                 practice_set__status="published")
+    seen = (Answer.objects.filter(attempt__user=request.user, question=question).exists()
+            or ReviewAnswer.objects.filter(session__user=request.user, question=question).exists())
+    if not seen and not request.user.is_staff:
+        raise Http404
+    kind = request.POST.get("kind", "")
+    message = " ".join(request.POST.get("message", "").split())[:500]
+    sent_today = LessonFeedback.objects.filter(user=request.user, created_at__date=timezone.localdate()).count()
+    if kind not in LessonFeedback.Kind.values:
+        state = "invalid"
+    elif kind == LessonFeedback.Kind.OTHER and len(message) < 5:
+        state = "need_message"
+    elif sent_today >= QUESTION_FEEDBACK_PER_DAY:
+        state = "limit"
+    else:
+        LessonFeedback.objects.create(user=request.user, question=question, kind=kind, message=message)
+        state = "thanks"
+    return render(request, "practice/_report.html", {"question": question, "state": state, "kind": kind,
+                                                     "message": message, "kinds": QUESTION_KINDS})
