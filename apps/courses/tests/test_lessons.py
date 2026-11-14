@@ -182,3 +182,13 @@ def test_pure_options_have_their_own_modules_in_outline_order(db):
         titles = [m.title for m in course.modules.all()]
         assert titles == [title for title, _topics in gce_curriculum.SYLLABI[key][2]]
         assert titles[-1] == "Examination" and "Paper 3" in [t.title for t in course.modules.last().topics.all()]
+
+
+def test_review_checklist_lists_flagged_sentences(tmp_path):
+    from django.core.management import call_command
+
+    out = tmp_path / "checklist.md"
+    call_command("review_checklist", "--out", str(out))
+    text = out.read_text(encoding="utf-8")
+    assert text.startswith("# Content review checklist") and "Start here" in text
+    assert "- [ ]" in text and "check your textbook" in text.lower()
