@@ -1,0 +1,18 @@
+{% autoescape off %}Hello {{ user.first_name|default:"there" }},
+{% if sessions %}
+Here is what you planned for today:
+{% for s in sessions %}- {{ s.starts_at|time:"H:i" }}  {{ s.title }} ({{ s.duration_minutes }} min)
+{% endfor %}{% else %}
+You have not studied yet today. A good next step is:
+- {{ next_up.title }}
+{% endif %}{% if streak > 1 %}
+You are on a {{ streak }}-day learning streak. Nice work.
+{% endif %}
+Open KKEVO Academy:
+{{ today_url }}
+
+Not today? That is fine, rest is part of learning.
+
+KKEVO Academy
+Stop these reminders: {{ unsubscribe_url }}
+{% endautoescape %}

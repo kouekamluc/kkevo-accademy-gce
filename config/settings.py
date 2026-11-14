@@ -154,6 +154,8 @@ EMAIL_USE_SSL = env.bool("EMAIL_USE_SSL", default=False)
 EMAIL_TIMEOUT = 15
 # Shown on the public Contact page. Leave empty until the support inbox exists.
 CONTACT_EMAIL = env("CONTACT_EMAIL", default="")
+# Absolute address used in emails (reminders, reports). Set it to the real site address in production.
+SITE_BASE_URL = env("SITE_BASE_URL", default="http://localhost:8000").rstrip("/")
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="KKEVO Academy <no-reply@localhost>")
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
 PASSWORD_RESET_TIMEOUT = 60 * 60 * 24  # reset links work for one day

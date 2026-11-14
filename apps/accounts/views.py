@@ -24,7 +24,7 @@ from .forms import (
 )
 from apps.learning import achievements, promotion
 
-from .models import AVATARS
+from .models import AVATARS, StudentProfile
 from .privacy import export_user_data
 from .ratelimit import login_limiter
 from .utils import get_profile
@@ -226,3 +226,13 @@ def delete_account(request):
         user.delete()  # cascades to profile, enrolments, progress, notes, plans and attempts
         return redirect("accounts:account_deleted")
     return render(request, "accounts/delete_account.html", {"form": form, "nav_active": "settings"})
+
+
+def reminders_off(request, token):
+    """One-click unsubscribe from the link in every reminder email (works without logging in)."""
+    from apps.learning import reminders
+
+    user = reminders.user_from_token(token)
+    if user is not None:
+        StudentProfile.objects.filter(user=user).update(reminders_enabled=False)
+    return render(request, "accounts/reminders_off.html", {"found": user is not None})

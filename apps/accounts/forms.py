@@ -269,10 +269,20 @@ class StudyPreferencesForm(forms.ModelForm):
         help_text="Copy it from the official GCE timetable your school gives you. It powers your countdown.",
     )
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["reminder_hour"].required = False
+
     class Meta:
         model = StudentProfile
-        fields = ("level", "pathway", "daily_goal_minutes", "exam_date", "low_data_mode")
-        labels = {"daily_goal_minutes": "Daily learning goal (minutes)"}
+        fields = ("level", "pathway", "daily_goal_minutes", "exam_date", "low_data_mode", "reminders_enabled", "reminder_hour")
+        labels = {"daily_goal_minutes": "Daily learning goal (minutes)", "reminders_enabled": "Daily study reminder",
+                  "reminder_hour": "Send it at"}
+        widgets = {"reminder_hour": forms.Select(choices=[(h, f"{h:02d}:00") for h in range(5, 24)], attrs={"class": "form-input"})}
+
+    def clean_reminder_hour(self):
+        value = self.cleaned_data.get("reminder_hour")
+        return self.instance.reminder_hour if value is None else value
 
     def clean_exam_date(self):
         """Same rules as the planner's exam-date box, but an unchanged date is never re-checked

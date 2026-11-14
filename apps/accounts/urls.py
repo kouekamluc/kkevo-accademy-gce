@@ -19,6 +19,7 @@ urlpatterns = [
     path("profile/move-up/", views.move_up, name="move_up"),
     path("profile/password/", views.password_change, name="password_change"),
     path("profile/low-data/", views.toggle_low_data, name="toggle_low_data"),
+    path("reminders/off/<str:token>/", views.reminders_off, name="reminders_off"),
     path("profile/download/", views.data_export, name="data_export"),
     path("profile/delete/", views.delete_account, name="delete_account"),
     path("deleted/", TemplateView.as_view(template_name="accounts/account_deleted.html"), name="account_deleted"),

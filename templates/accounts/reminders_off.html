@@ -1,0 +1,9 @@
+{% extends "layouts/auth.html" %}
+{% block title %}Study reminders — KKEVO Academy{% endblock %}
+{% block content %}
+<div class="card mt-4 p-6 shadow-card sm:p-8">
+  <h1 class="text-[28px] font-bold leading-tight tracking-[-.02em] text-navy">{% if found %}Reminders switched off{% else %}This link is not valid{% endif %}</h1>
+  <p class="mt-2 text-[15px] leading-relaxed text-slate-600">{% if found %}You will not get daily study emails any more. You can turn them back on in Settings whenever you like.{% else %}Sign in and use Settings to change your reminders.{% endif %}</p>
+  <a href="{% url 'accounts:profile' %}" class="btn-secondary btn-lg mt-7 w-full">Open Settings</a>
+</div>
+{% endblock %}

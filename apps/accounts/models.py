@@ -91,6 +91,13 @@ class StudentProfile(models.Model):
         help_text="Date of the student's first GCE paper (from their official timetable). Drives the countdown.",
     )
     avatar = models.CharField(max_length=12, blank=True, default="", choices=AVATAR_CHOICES)
+    reminders_enabled = models.BooleanField(
+        default=True, help_text="Send one short study reminder a day (only on days the student has not studied yet)."
+    )
+    reminder_hour = models.PositiveSmallIntegerField(
+        default=17, validators=[MaxValueValidator(23)], help_text="Hour of the day (Cameroon time) for the reminder."
+    )
+    last_reminder_on = models.DateField(null=True, blank=True, editable=False)
     onboarded_at = models.DateTimeField(null=True, blank=True)
     updated_at = models.DateTimeField(auto_now=True)
 
