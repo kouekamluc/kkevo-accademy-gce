@@ -61,7 +61,7 @@ class RegistrationForm(StyledFormMixin, forms.ModelForm):
         widget=forms.TextInput(attrs={"autocomplete": "name", "autofocus": True}),
     )
     phone = forms.CharField(
-        label="Phone number", required=False, help_text="No email? Use your phone number instead.",
+        label="Phone number", required=False, help_text="Fill in your email, your phone number, or both.",
         widget=forms.TextInput(attrs={"autocomplete": "tel", "inputmode": "tel", "placeholder": "6XX XX XX XX"}),
     )
     password = forms.CharField(
