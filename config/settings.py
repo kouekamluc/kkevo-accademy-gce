@@ -51,6 +51,9 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    # Pages are 30-140 KB of HTML; gzip makes them 5-12 times smaller on a 3G phone. Django 4.2+ pads
+    # compressed responses against BREACH, and CSRF tokens are masked per response.
+    "django.middleware.gzip.GZipMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
