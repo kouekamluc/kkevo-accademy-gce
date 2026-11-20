@@ -31,7 +31,7 @@
       {% for card in due_cards %}
       <li class="flex items-start gap-3 py-3">
         {% include "components/subject_icon.html" with subject=card.question.practice_set.subject %}
-        <div class="min-w-0 flex-1"><p class="text-[15px]">{{ card.question.prompt|truncatechars:110|inline }}</p>
+        <div class="min-w-0 flex-1"><p class="line-clamp-2 text-[15px]">{{ card.question.prompt|inline }}</p>
           <p class="mt-0.5 text-[13px] text-ink-muted">{{ card.question.practice_set.topic.title }}{% if card.reviews %} · reviewed {{ card.reviews }} time{{ card.reviews|pluralize }}{% endif %}</p></div>
       </li>
       {% endfor %}

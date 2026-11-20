@@ -141,3 +141,29 @@ def test_practice_home_course_page_and_mock_page(client, student, practice_set, 
 
     assert "Paper 1 mock exam A" in client.get(reverse("practice:mocks")).content.decode()
     assert client.get(reverse("practice:course", args=["no-such-course"])).status_code == 404
+
+
+def test_start_page_offers_start_again_and_leads_mocks_with_the_timed_exam(client, student, practice_set):
+    client.force_login(student)
+    page = client.get(reverse("practice:set", args=[practice_set.pk])).content.decode()
+    assert "Start practice" in page and "Start again" not in page
+    client.post(reverse("practice:start", args=[practice_set.pk]))
+    page = client.get(reverse("practice:set", args=[practice_set.pk])).content.decode()
+    assert "Resume practice" in page and "Start again" in page
+    first = Attempt.objects.get(user=student)
+    client.post(reverse("practice:start", args=[practice_set.pk]), {"restart": "1"})
+    assert not Attempt.objects.filter(pk=first.pk).exists() and Attempt.objects.filter(user=student).count() == 1
+
+    practice_set.is_mock = True
+    practice_set.time_limit_minutes = 90
+    practice_set.save()
+    page = client.get(reverse("practice:set", args=[practice_set.pk])).content.decode()
+    assert page.index("Start timed exam") < page.index("Practice mode") and "90 minutes" in page
+
+
+def test_handing_in_an_exam_with_gaps_asks_first(client, student, practice_set):
+    client.force_login(student)
+    client.post(reverse("practice:start", args=[practice_set.pk]), {"mode": "exam"})
+    attempt = Attempt.objects.get(user=student)
+    page = client.get(reverse("practice:question", args=[attempt.pk, 1])).content.decode()
+    assert "Hand in the exam now? 3 questions not answered will count as wrong." in page

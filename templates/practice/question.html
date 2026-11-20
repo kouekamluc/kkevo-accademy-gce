@@ -3,7 +3,7 @@
 {% block close_url %}{% if practice_set.lesson %}{{ practice_set.lesson.get_absolute_url }}{% else %}{% url 'practice:index' %}{% endif %}{% endblock %}
 {% block kicker %}{% if attempt.is_exam %}Timed exam{% else %}Practice set{% endif %}{% endblock %}
 {% block counter %}
-<div class="flex shrink-0 items-center gap-3">
+<div class="flex shrink-0 items-center gap-2 sm:gap-3">
   {% if exam_open %}
   <div class="inline-flex items-center gap-1.5 rounded-btn bg-slate-100 px-3 py-2 text-[15px] font-semibold tabular-nums text-navy" role="timer" aria-label="Time left"
        x-data="{ s: {{ seconds_left }} }" x-init="const t = setInterval(() => { if (s > 0) { s-- } else { clearInterval(t); window.location.href = '{% url 'practice:finish' attempt.pk %}' } }, 1000)"
@@ -12,7 +12,7 @@
     <span x-text="Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0')">{% widthratio seconds_left 60 1 %} min</span>
   </div>
   {% endif %}
-  <div class="text-[15px] font-semibold" aria-live="polite">Question {{ number }} <span class="font-normal text-ink-muted">of {{ total }}</span></div>
+  <div class="text-[15px] font-semibold" aria-live="polite" aria-label="Question {{ number }} of {{ total }}"><span class="hidden sm:inline">Question </span>{{ number }}<span class="font-normal text-ink-muted"><span class="sm:hidden">/</span><span class="hidden sm:inline"> of </span>{{ total }}</span></div>
 </div>
 {% endblock %}
 {% block progress %}{{ progress_percent }}{% endblock %}
@@ -20,7 +20,8 @@
 {% if attempt.is_exam and not exam_open %}<p class="mb-4 rounded-card bg-primary-50 px-4 py-3 text-sm font-semibold text-primary-700">Exam finished — you’re reviewing your answers with full solutions.</p>{% endif %}
 {% include "practice/_question.html" %}
 {% if exam_open %}
-<form method="post" action="{% url 'practice:finish' attempt.pk %}" class="mt-6 flex flex-wrap items-center justify-end gap-3 border-t border-surface-border pt-5">
+<form method="post" action="{% url 'practice:finish' attempt.pk %}" class="mt-6 flex flex-wrap items-center justify-end gap-3 border-t border-surface-border pt-5"
+      {% if unanswered_count %}onsubmit="return confirm('Hand in the exam now? {{ unanswered_count }} question{{ unanswered_count|pluralize }} not answered will count as wrong.')"{% endif %}>
   {% csrf_token %}
   <p class="text-sm text-ink-muted">{% if unanswered_count %}{{ unanswered_count }} question{{ unanswered_count|pluralize }} not answered yet — {{ unanswered_count|pluralize:"it,they" }} will count as wrong.{% else %}All questions answered. You’ll see your score and every solution next.{% endif %}</p>
   <button type="submit" class="btn-secondary h-12">Finish exam</button>

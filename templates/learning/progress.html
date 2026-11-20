@@ -30,7 +30,7 @@
       <p class="mt-2 text-sm font-semibold text-slate-300">{{ rank.to_next }} more point{{ rank.to_next|pluralize }} to reach level {{ rank.level|add:1 }}. Finish a lesson for 10, or answer a question right for 2.</p>
     </div>
     <div class="flex flex-wrap gap-2.5 nav:flex-col">
-      <span class="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-navy-700 px-4 text-[15px] font-extrabold"><span aria-hidden="true">🔥</span>{{ streak }}-day streak</span>
+      <span class="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-navy-700 px-4 text-[15px] font-extrabold"><span aria-hidden="true">🔥</span>{% if streak %}{{ streak }}-day streak{% else %}No streak yet{% endif %}</span>
       <span class="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-navy-700 px-4 text-[15px] font-extrabold"><span aria-hidden="true">🏅</span>{{ milestones_earned }} of {{ milestones|length }} milestones</span>
     </div>
   </section>
@@ -43,7 +43,7 @@
         <div class="font-semibold {% if m.earned_at %}text-warning-text{% else %}text-ink-heading{% endif %}">{{ m.milestone.title }}{% if m.earned_at %} <span class="sr-only">(earned)</span>{% endif %}</div>
         <div class="mt-0.5 text-sm text-slate-600">{{ m.milestone.description }}</div>
         {% if m.earned_at %}<div class="mt-2 text-xs text-ink-muted">Earned {{ m.earned_at|date:"j M Y" }}</div>
-        {% else %}<div class="mt-2 flex items-center gap-2"><div class="progress-track h-1.5 flex-1"><div class="progress-fill" style="width: {{ m.percent }}%"></div></div><span class="text-xs text-ink-muted">{{ m.have }}/{{ m.target }}</span></div>{% endif %}
+        {% else %}<div class="mt-2 flex items-center gap-2"><div class="progress-track h-1.5 flex-1"><div class="progress-fill" style="width: {{ m.percent }}%"></div></div><span class="text-xs text-ink-muted">{% if m.milestone.stat == "best_score" %}best {{ m.have }}%{% else %}{{ m.have }}/{{ m.target }}{% endif %}</span></div>{% endif %}
       </li>
       {% endfor %}
     </ul>
@@ -67,10 +67,10 @@
         {% for r in subject_rows %}
         <li class="sc-scope flex items-center gap-4 py-3.5" style="{{ r.subject.style_vars }}">
           {% include "components/subject_icon.html" with subject=r.subject %}
-          <a href="{{ r.course.get_absolute_url }}" class="w-40 shrink-0 font-semibold text-ink-heading hover:text-navy">{{ r.subject.name }}</a>
+          <a href="{{ r.course.get_absolute_url }}" class="min-w-0 flex-1 font-semibold text-ink-heading hover:text-navy sm:w-40 sm:flex-none sm:shrink-0">{{ r.subject.name }}</a>
           <div class="hidden flex-1 sm:block"><div class="progress-track h-2"><div class="progress-fill" style="width: {{ r.stat.percent }}%"></div></div></div>
-          <span class="sc-text w-14 text-right font-extrabold">{{ r.stat.percent }}%</span>
-          <span class="w-20 text-right text-sm {% if r.quiz is not None and r.quiz < 65 %}font-semibold text-warning-text{% else %}text-ink-muted{% endif %}">{% if r.quiz is not None %}quiz {{ r.quiz }}%{% else %}no quiz{% endif %}</span>
+          <span class="sc-text w-12 shrink-0 text-right font-extrabold">{{ r.stat.percent }}%</span>
+          <span class="w-[4.5rem] shrink-0 text-right text-sm {% if r.quiz is not None and r.quiz < 65 %}font-semibold text-warning-text{% else %}text-ink-muted{% endif %}">{% if r.quiz is not None %}quiz {{ r.quiz }}%{% else %}no quiz{% endif %}</span>
         </li>
         {% empty %}<li class="py-6 text-sm text-ink-muted">Add subjects to your plan to see progress here.</li>{% endfor %}
       </ul>

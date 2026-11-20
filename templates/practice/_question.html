@@ -25,10 +25,10 @@ exam_open, review_note. Works without JavaScript: answers and hint requests are 
     {% if answer %}
     <div class="flex min-h-[72px] flex-wrap items-center gap-4 rounded-card px-5 py-3 {% if not show_feedback %}border-2 border-primary bg-primary-50{% elif answer.is_correct %}border-2 border-success bg-success-50{% else %}border-[1.5px] border-dashed border-red-400 bg-white{% endif %}">
       <span class="text-sm font-semibold {% if not show_feedback %}text-primary-700{% elif answer.is_correct %}text-success-text{% else %}text-danger-text{% endif %}">Your answer</span>
-      <span class="flex-1 text-xl font-bold">{{ answer.display }}</span>
+      <span class="math-wrap min-w-0 flex-1 break-words py-1 text-lg font-bold sm:text-xl">{{ answer.display }}</span>
     </div>
     {% if show_feedback and not answer.is_correct %}
-    <div class="mt-3 flex min-h-[72px] flex-wrap items-center gap-4 rounded-card border-2 border-success bg-success-50 px-5 py-3"><span class="text-sm font-semibold text-success-text">Correct answer</span><span class="flex-1 text-xl font-bold text-emerald-900">{{ question.correct_display }}</span></div>
+    <div class="mt-3 flex min-h-[72px] flex-wrap items-center gap-4 rounded-card border-2 border-success bg-success-50 px-5 py-3"><span class="-mt-2 basis-full pb-2 pl-[52px] text-sm sm:mt-0 sm:basis-auto sm:shrink-0 sm:pb-0 sm:pl-0 sm:text-right font-semibold text-success-text">Correct answer</span><span class="math-wrap min-w-0 flex-1 break-words py-1 text-lg font-bold sm:text-xl text-emerald-900">{{ question.correct_display }}</span></div>
     {% endif %}
     {% else %}
     <label for="answer-value" class="text-base font-extrabold text-ink-heading">Your answer</label>
@@ -42,31 +42,31 @@ exam_open, review_note. Works without JavaScript: answers and hint requests are 
   {% else %}
   <fieldset {% if answer %}disabled{% endif %}>
     <legend class="sr-only">Choose an answer</legend>
-    <div class="grid gap-4 sm:grid-cols-2">
+    <div class="grid gap-4 sm:grid-cols-2 [&>*]:min-w-0">
       {% for choice in question.choices.all %}
       {% with letter="ABCDEFGH"|slice:forloop.counter|last %}
       {% if answer and not show_feedback %}
         {% if choice.pk == answer.choice_id %}
-        <div class="flex min-h-[72px] items-center gap-4 rounded-card border-2 border-primary bg-primary-50 px-5"><span class="flex h-9 w-9 items-center justify-center rounded-[10px] bg-primary font-bold text-white">{{ letter }}</span><span class="flex-1 text-xl font-bold">{{ choice.text|inline }}</span><span class="text-sm font-semibold text-primary-700">Your answer</span></div>
+        <div class="flex min-h-[72px] flex-wrap items-center gap-x-4 rounded-card border-2 border-primary bg-primary-50 px-5"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-primary font-bold text-white">{{ letter }}</span><span class="math-wrap min-w-0 flex-1 break-words py-1 text-lg font-bold sm:text-xl">{{ choice.text|inline }}</span><span class="-mt-2 basis-full pb-2 pl-[52px] text-sm sm:mt-0 sm:basis-auto sm:shrink-0 sm:pb-0 sm:pl-0 sm:text-right font-semibold text-primary-700">Your answer</span></div>
         {% else %}
-        <div class="flex min-h-[72px] items-center gap-4 rounded-card border border-surface-border bg-slate-50 px-5 opacity-80"><span class="flex h-9 w-9 items-center justify-center rounded-[10px] border-[1.5px] border-slate-300 font-bold text-slate-500">{{ letter }}</span><span class="flex-1 text-xl font-bold text-slate-500">{{ choice.text|inline }}</span></div>
+        <div class="flex min-h-[72px] flex-wrap items-center gap-x-4 rounded-card border border-surface-border bg-slate-50 px-5 opacity-80"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] border-[1.5px] border-slate-300 font-bold text-slate-500">{{ letter }}</span><span class="math-wrap min-w-0 flex-1 break-words py-1 text-lg font-bold sm:text-xl text-slate-500">{{ choice.text|inline }}</span></div>
         {% endif %}
       {% elif answer %}
         {% if choice.pk == answer.choice_id and answer.is_correct %}
-        <div class="flex min-h-[72px] items-center gap-4 rounded-card border-2 border-success bg-success-50 px-5"><span class="flex h-9 w-9 items-center justify-center rounded-[10px] bg-success-text font-bold text-white">{{ letter }}</span><span class="flex-1 text-xl font-bold text-emerald-900">{{ choice.text|inline }}</span><span class="text-sm font-semibold text-success-text">Your answer</span></div>
+        <div class="flex min-h-[72px] flex-wrap items-center gap-x-4 rounded-card border-2 border-success bg-success-50 px-5"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-success-text font-bold text-white">{{ letter }}</span><span class="math-wrap min-w-0 flex-1 break-words py-1 text-lg font-bold sm:text-xl text-emerald-900">{{ choice.text|inline }}</span><span class="-mt-2 basis-full pb-2 pl-[52px] text-sm sm:mt-0 sm:basis-auto sm:shrink-0 sm:pb-0 sm:pl-0 sm:text-right font-semibold text-success-text">Your answer</span></div>
         {% elif choice.pk == answer.choice_id %}
-        <div class="flex min-h-[72px] items-center gap-4 rounded-card border-[1.5px] border-dashed border-red-400 bg-white px-5"><span class="flex h-9 w-9 items-center justify-center rounded-[10px] border-[1.5px] border-red-400 font-bold text-red-800">{{ letter }}</span><span class="flex-1 text-xl font-bold text-red-800">{{ choice.text|inline }}</span><span class="text-sm font-semibold text-danger-text">Your answer</span></div>
+        <div class="flex min-h-[72px] flex-wrap items-center gap-x-4 rounded-card border-[1.5px] border-dashed border-red-400 bg-white px-5"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] border-[1.5px] border-red-400 font-bold text-red-800">{{ letter }}</span><span class="math-wrap min-w-0 flex-1 break-words py-1 text-lg font-bold sm:text-xl text-red-800">{{ choice.text|inline }}</span><span class="-mt-2 basis-full pb-2 pl-[52px] text-sm sm:mt-0 sm:basis-auto sm:shrink-0 sm:pb-0 sm:pl-0 sm:text-right font-semibold text-danger-text">Your answer</span></div>
         {% elif choice.is_correct %}
-        <div class="flex min-h-[72px] items-center gap-4 rounded-card border-2 border-success bg-success-50 px-5"><span class="flex h-9 w-9 items-center justify-center rounded-[10px] bg-success-text font-bold text-white">{{ letter }}</span><span class="flex-1 text-xl font-bold text-emerald-900">{{ choice.text|inline }}</span><span class="text-sm font-semibold text-success-text">Correct answer</span></div>
+        <div class="flex min-h-[72px] flex-wrap items-center gap-x-4 rounded-card border-2 border-success bg-success-50 px-5"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-success-text font-bold text-white">{{ letter }}</span><span class="math-wrap min-w-0 flex-1 break-words py-1 text-lg font-bold sm:text-xl text-emerald-900">{{ choice.text|inline }}</span><span class="-mt-2 basis-full pb-2 pl-[52px] text-sm sm:mt-0 sm:basis-auto sm:shrink-0 sm:pb-0 sm:pl-0 sm:text-right font-semibold text-success-text">Correct answer</span></div>
         {% else %}
-        <div class="flex min-h-[72px] items-center gap-4 rounded-card border border-surface-border bg-slate-50 px-5 opacity-80"><span class="flex h-9 w-9 items-center justify-center rounded-[10px] border-[1.5px] border-slate-300 font-bold text-slate-500">{{ letter }}</span><span class="flex-1 text-xl font-bold text-slate-500">{{ choice.text|inline }}</span></div>
+        <div class="flex min-h-[72px] flex-wrap items-center gap-x-4 rounded-card border border-surface-border bg-slate-50 px-5 opacity-80"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] border-[1.5px] border-slate-300 font-bold text-slate-500">{{ letter }}</span><span class="math-wrap min-w-0 flex-1 break-words py-1 text-lg font-bold sm:text-xl text-slate-500">{{ choice.text|inline }}</span></div>
         {% endif %}
       {% else %}
         <label class="block cursor-pointer">
           <input type="radio" name="choice" value="{{ choice.pk }}" class="peer sr-only" x-model="picked" required>
           <span class="flex min-h-[72px] items-center gap-4 rounded-card border-2 border-b-4 border-surface-border bg-white px-5 transition hover:border-primary-300 active:translate-y-[2px] peer-checked:border-primary peer-checked:bg-primary-50 peer-focus-visible:ring-4 peer-focus-visible:ring-primary-300 [&_.badge]:border-slate-300 peer-checked:[&_.badge]:border-primary peer-checked:[&_.badge]:bg-primary peer-checked:[&_.badge]:text-white">
-            <span class="badge flex h-9 w-9 items-center justify-center rounded-[10px] border-[1.5px] font-bold text-slate-600">{{ letter }}</span>
-            <span class="flex-1 text-xl font-bold">{{ choice.text|inline }}</span>
+            <span class="badge flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] border-[1.5px] font-bold text-slate-600">{{ letter }}</span>
+            <span class="math-wrap min-w-0 flex-1 break-words py-1 text-lg font-bold sm:text-xl">{{ choice.text|inline }}</span>
           </span>
         </label>
       {% endif %}

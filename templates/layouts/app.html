@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% comment %}
 App shell from the dashboard mockup (02): 264px sidebar (≥900px), 64px header, bottom bar on phones.
 Views set `nav_active` to highlight the current item. Works for visitors too (public catalog/course pages).
@@ -78,4 +79,28 @@ Views set `nav_active` to highlight the current item. Works for visitors too (pu
   {% endfor %}
 </nav>
 {% endif %}
+{# Maths outside lessons (a question in Review my mistakes, a lesson summary): load KaTeX only when the page has some. #}
+<script>
+(function () {
+  var main = document.getElementById("main");
+  if (!main || !/\$[^$]+\$/.test(main.textContent)) return;
+  var css = document.createElement("link");
+  css.rel = "stylesheet"; css.href = "{% static 'vendor/katex/katex.min.css' %}";
+  document.head.appendChild(css);
+  var katex = document.createElement("script");
+  katex.src = "{% static 'vendor/katex/katex.min.js' %}";
+  katex.onload = function () {
+    var auto = document.createElement("script");
+    auto.src = "{% static 'vendor/katex/auto-render.min.js' %}";
+    auto.onload = function () {
+      renderMathInElement(main, {
+        delimiters: [{ left: "$$", right: "$$", display: true }, { left: "$", right: "$", display: false }],
+        ignoredClasses: ["no-math"], throwOnError: false,
+      });
+    };
+    document.head.appendChild(auto);
+  };
+  document.head.appendChild(katex);
+})();
+</script>
 {% endblock %}

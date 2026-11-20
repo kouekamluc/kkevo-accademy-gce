@@ -104,7 +104,7 @@
             {% elif m.status == 'complete' %}<span class="hidden rounded-md bg-success-50 px-2 py-0.5 text-xs font-semibold text-success-text sm:inline">Completed</span>{% endif %}
           </span>
           <span class="mt-0.5 block text-sm {% if m.status == 'complete' %}font-semibold text-success-text sm:font-normal sm:text-ink-muted{% else %}text-ink-muted{% endif %}">
-            <span class="sm:hidden">{% if m.status == 'complete' %}Completed · {{ m.total }} lessons{% else %}{{ m.total }} lessons · {{ m.done }} done · {{ m.percent }}%{% endif %}</span>
+            <span class="sm:hidden">{% if m.status == 'complete' %}Completed · {{ m.total }} lessons{% elif user.is_authenticated and m.done %}{{ m.total }} lessons · {{ m.done }} done · {{ m.percent }}%{% else %}{{ m.total }} lesson{{ m.total|pluralize }}{% endif %}</span>
             <span class="hidden sm:inline">{{ m.topics|length }} topic{{ m.topics|length|pluralize }} · {{ m.total }} lesson{{ m.total|pluralize }} · {% if m.status == 'progress' %}{{ m.done }} complete{% else %}{{ m.module.summary|default:"" }}{% endif %}</span>
           </span>
         </span>

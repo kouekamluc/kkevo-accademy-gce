@@ -11,9 +11,27 @@
     <span class="text-sm text-ink-muted">{{ mastery.next_step }}</span>
   </div>
   {% if best is not None %}<p class="mt-2 text-sm text-ink-muted">Your best score: <strong class="text-ink-heading">{{ best }}%</strong></p>{% endif %}
+  {% if practice_set.is_mock %}
+  {# A mock paper is meant to be sat like the real exam: the timed mode leads, practice mode is the gentler option. #}
+  <div class="mt-5 rounded-card bg-surface-bg px-4 py-3 text-sm text-slate-700">
+    <strong class="text-ink-heading">{{ exam_minutes }} minutes</strong> for {{ question_count }} question{{ question_count|pluralize }}. No hints and no feedback until you hand in, like the real paper. Then you see your score by topic and every solution.
+  </div>
+  <form method="post" action="{% url 'practice:start' practice_set.pk %}" class="mt-5 flex flex-wrap gap-3">{% csrf_token %}<input type="hidden" name="mode" value="exam">
+    <button type="submit" class="btn-primary h-12 px-7 text-base">{% if ongoing_exam %}Resume exam{% else %}Start timed exam{% endif %} {% include "components/icon.html" with name="clock" class="h-[18px] w-[18px]" stroke="2.2" %}</button>
+    {% if ongoing_exam %}<button type="submit" name="restart" value="1" class="btn-secondary h-12" onclick="return confirm('Start this paper again? Your answers so far will be cleared.')">Start again</button>{% endif %}
+  </form>
+  <div class="mt-6 border-t border-surface-border pt-5">
+    <h2 class="font-semibold">Practice mode</h2>
+    <p class="mt-1 text-sm text-slate-600">No clock. You see the answer and the worked solution after each question.</p>
+    <form method="post" action="{% url 'practice:start' practice_set.pk %}" class="mt-3 flex flex-wrap gap-3">{% csrf_token %}
+      <button type="submit" class="btn-secondary h-12">{% if ongoing %}Resume practice{% else %}Practise without a clock{% endif %}</button>
+    </form>
+  </div>
+  {% else %}
   <form method="post" action="{% url 'practice:start' practice_set.pk %}" class="mt-6 flex flex-wrap gap-3">{% csrf_token %}
     <button type="submit" class="btn-primary h-12 px-7 text-base">{% if ongoing %}Resume practice{% else %}Start practice{% endif %} {% include "components/icon.html" with name="arrow" class="h-[18px] w-[18px]" stroke="2.2" %}</button>
-    {% if practice_set.lesson %}<a href="{{ practice_set.lesson.get_absolute_url }}" class="btn-secondary h-12">Review the lesson first</a>{% endif %}
+    {% if ongoing %}<button type="submit" name="restart" value="1" class="btn-secondary h-12">Start again</button>
+    {% elif practice_set.lesson %}<a href="{{ practice_set.lesson.get_absolute_url }}" class="btn-secondary h-12">Review the lesson first</a>{% endif %}
   </form>
   <div class="mt-6 border-t border-surface-border pt-5">
     <h2 class="flex items-center gap-2 font-semibold">{% include "components/icon.html" with name="clock" class="h-[18px] w-[18px]" stroke="2" %}Timed exam mode</h2>
@@ -22,5 +40,6 @@
       <button type="submit" class="btn-secondary h-12">{% if ongoing_exam %}Resume exam{% else %}Start timed exam{% endif %}</button>
     </form>
   </div>
+  {% endif %}
 </section>
 {% endblock %}

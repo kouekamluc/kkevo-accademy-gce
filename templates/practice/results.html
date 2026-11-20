@@ -11,7 +11,7 @@
   <div class="mt-2 text-5xl font-black text-navy">{{ attempt.score }}%</div>
   {% if points_earned %}<div class="mt-3 inline-flex items-center gap-2 rounded-full border-2 border-warning-200 bg-warning-50 px-4 py-1.5 text-[15px] font-extrabold text-warning-text"><span aria-hidden="true">⭐</span>+{{ points_earned }} points</div>{% endif %}
   <h1 class="mt-5 text-[26px] font-bold text-navy">{% if attempt.score >= 80 %}Great work!{% elif attempt.score >= 60 %}Good effort{% else %}Keep practising{% endif %}</h1>
-  <p class="mt-2 text-slate-600">You got <strong class="text-ink-heading">{{ attempt.correct_count }} of {{ attempt.total }}</strong> questions right{% if attempt.is_exam %} in exam conditions{% endif %}.{% if attempt.score < 60 %} Re-read the lesson, then try again.{% endif %}</p>
+  <p class="mt-2 text-slate-600">You got <strong class="text-ink-heading">{{ attempt.correct_count }} of {{ attempt.total }}</strong> questions right{% if attempt.is_exam %} in exam conditions{% endif %}.{% if attempt.score < 60 %}{% if attempt.practice_set.is_mock %} Revise the topics at the top of the list below, then try again.{% else %} Re-read the lesson, then try again.{% endif %}{% endif %}</p>
   {% if hint_count or guess_count or unanswered_count %}
   <p class="mt-1 text-sm text-ink-muted">{% if unanswered_count %}{{ unanswered_count }} not answered. {% endif %}{% if hint_count %}Hints used on {{ hint_count }} question{{ hint_count|pluralize }}. {% endif %}{% if guess_count %}{{ guess_count }} right answer{{ guess_count|pluralize }} you marked as a guess.{% endif %}</p>
   {% endif %}

@@ -105,6 +105,8 @@
 .lesson-text p + p { margin-top: 1em; }
 .lesson-text strong { font-weight: 600; color: theme("colors.ink.heading"); }
 .katex { font-size: 1.08em; }
+/* Answer choices are narrow on phones: let long maths (sets written with words) wrap like text. */
+.math-wrap .katex .base { white-space: normal; width: auto; }
 
 /* Simulation sliders */
 .sim-range { -webkit-appearance: none; appearance: none; height: 6px; border-radius: 999px; }

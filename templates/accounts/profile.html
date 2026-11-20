@@ -13,7 +13,7 @@
       <div class="mt-4 flex flex-wrap gap-2.5">
         <span class="inline-flex min-h-[40px] items-center gap-2 rounded-full bg-navy-700 px-4 text-[15px] font-extrabold">Level {{ rank.level }}</span>
         <span class="inline-flex min-h-[40px] items-center gap-2 rounded-full bg-navy-700 px-4 text-[15px] font-extrabold"><span aria-hidden="true">⭐</span>{{ rank.points }} points</span>
-        <span class="inline-flex min-h-[40px] items-center gap-2 rounded-full bg-navy-700 px-4 text-[15px] font-extrabold"><span aria-hidden="true">🔥</span>{{ streak }}-day streak</span>
+        <span class="inline-flex min-h-[40px] items-center gap-2 rounded-full bg-navy-700 px-4 text-[15px] font-extrabold"><span aria-hidden="true">🔥</span>{% if streak %}{{ streak }}-day streak{% else %}No streak yet{% endif %}</span>
       </div>
     </div>
     <div class="hidden shrink-0 nav:block">{% include "components/mascot.html" with size="104" mood="happy" %}</div>
