@@ -29,7 +29,7 @@ def onboarded(student, form5, science):
 # ---------- registration ----------
 
 def register(client, **overrides):
-    data = {"full_name": "  Alex   Nfor ", "email": "Alex@Example.com", "password": PASSWORD, **overrides}
+    data = {"full_name": "  Alex   Nfor ", "email": "Alex@Example.com", "password": PASSWORD, "accept_terms": "on", **overrides}
     return client.post(reverse("accounts:register"), data)
 
 
@@ -42,6 +42,7 @@ def test_registration_creates_user_profile_logs_in_and_starts_onboarding(client)
     assert user.check_password(PASSWORD) and user.password.startswith("pbkdf2_")
     assert not user.is_staff
     assert StudentProfile.objects.filter(user=user, onboarded_at__isnull=True).exists()
+    assert user.profile.terms_accepted_at is not None  # consent is recorded with its date
     assert client.session["_auth_user_id"] == str(user.pk)
 
 
@@ -53,6 +54,7 @@ def test_registration_creates_user_profile_logs_in_and_starts_onboarding(client)
         ({"password": "alex@example.com"}, "password"),
         ({"email": "not-an-email"}, "email"),
         ({"full_name": "   "}, "full_name"),
+        ({"accept_terms": ""}, "accept_terms"),
     ],
 )
 def test_registration_validation(client, overrides, field):

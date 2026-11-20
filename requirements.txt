@@ -6,3 +6,5 @@ whitenoise>=6.11
 pytest>=8.3
 pytest-django>=4.9
 django-unfold>=0.110,<0.111
+sentry-sdk>=2.0
+gunicorn>=22.0; sys_platform != "win32"

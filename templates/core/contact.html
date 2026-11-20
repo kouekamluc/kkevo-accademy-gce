@@ -15,6 +15,11 @@
 {% else %}
 <p>Our support email address is being set up. Please check back soon.</p>
 {% endif %}
+{% if contact_whatsapp %}
+<h2>WhatsApp</h2>
+<p><a href="https://wa.me/{{ contact_whatsapp }}" rel="noopener" class="text-[20px]">+{{ contact_whatsapp }}</a></p>
+<p>Send a message at any time. We answer as soon as we can.</p>
+{% endif %}
 
 <h2>Before you write</h2>
 <ul>

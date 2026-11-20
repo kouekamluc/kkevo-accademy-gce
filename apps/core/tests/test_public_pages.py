@@ -27,6 +27,31 @@ def test_contact_shows_the_email_only_when_configured(client, settings):
     assert 'mailto:help@example.com' in client.get(reverse("core:contact")).content.decode()
 
 
+def test_contact_shows_whatsapp_only_when_configured(client, settings):
+    settings.CONTACT_WHATSAPP = ""
+    assert "wa.me" not in client.get(reverse("core:contact")).content.decode()
+    settings.CONTACT_WHATSAPP = "237600000000"
+    assert "https://wa.me/237600000000" in client.get(reverse("core:contact")).content.decode()
+
+
+def test_health_check_answers_ok_when_the_database_does(client):
+    response = client.get(reverse("core:healthz"))
+    assert response.status_code == 200 and response.content == b"ok"
+    assert "no-cache" in response["Cache-Control"]
+    assert client.post(reverse("core:healthz")).status_code == 405
+
+
+def test_health_check_reports_a_database_failure(client, monkeypatch):
+    from apps.core import views
+
+    class DownConnection:
+        def cursor(self):
+            raise RuntimeError("database down")
+
+    monkeypatch.setattr(views, "connection", DownConnection())
+    assert client.get(reverse("core:healthz")).status_code == 503
+
+
 def test_footer_and_signup_link_to_the_legal_pages(client):
     for url in (reverse("core:landing"), reverse("accounts:register")):
         page = client.get(url).content.decode()

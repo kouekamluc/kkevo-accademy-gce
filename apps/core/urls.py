@@ -14,5 +14,6 @@ urlpatterns = [
     path("privacy/", views.privacy, name="privacy"),
     path("terms/", views.terms, name="terms"),
     path("contact/", views.contact, name="contact"),
+    path("healthz/", views.healthz, name="healthz"),
     path("robots.txt", views.robots_txt, name="robots"),
 ]

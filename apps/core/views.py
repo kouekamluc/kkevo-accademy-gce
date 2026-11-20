@@ -2,9 +2,11 @@ from django.db.models import Count, Prefetch, Q
 from datetime import date
 
 from django.conf import settings
+from django.db import connection
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.urls import reverse
+from django.views.decorators.cache import never_cache
 from django.views.decorators.http import require_GET
 
 from apps.academics.models import AcademicLevel, AcademicPathway, Subject, SubjectOffering
@@ -116,3 +118,16 @@ def robots_txt(request):
     lines = ["User-agent: *", *[f"Disallow: {path}" for path in ROBOTS_DISALLOW], "",
              f"Sitemap: {request.build_absolute_uri(reverse('sitemap'))}", ""]
     return HttpResponse("\n".join(lines), content_type="text/plain; charset=utf-8")
+
+
+@never_cache
+@require_GET
+def healthz(request):
+    """For uptime monitors and the host's health check: 200 only when the database answers."""
+    try:
+        with connection.cursor() as cursor:
+            cursor.execute("SELECT 1")
+            cursor.fetchone()
+    except Exception:
+        return HttpResponse("database unavailable", status=503, content_type="text/plain")
+    return HttpResponse("ok", content_type="text/plain")

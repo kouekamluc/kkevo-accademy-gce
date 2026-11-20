@@ -137,6 +137,7 @@ X_FRAME_OPTIONS = "DENY"
 if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
     SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=True)
+    SECURE_REDIRECT_EXEMPT = [r"^healthz/$"]  # the host's health check often calls over plain HTTP
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_HSTS_SECONDS = env.int("DJANGO_HSTS_SECONDS", default=0)
@@ -157,6 +158,8 @@ EMAIL_USE_SSL = env.bool("EMAIL_USE_SSL", default=False)
 EMAIL_TIMEOUT = 15
 # Shown on the public Contact page. Leave empty until the support inbox exists.
 CONTACT_EMAIL = env("CONTACT_EMAIL", default="")
+# WhatsApp number for the Contact page, international format without "+", e.g. 2376XXXXXXXX. Empty hides it.
+CONTACT_WHATSAPP = "".join(ch for ch in env("CONTACT_WHATSAPP", default="") if ch.isdigit())
 # Absolute address used in emails (reminders, reports). Set it to the real site address in production.
 SITE_BASE_URL = env("SITE_BASE_URL", default="http://localhost:8000").rstrip("/")
 DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="KKEVO Academy <no-reply@localhost>")
@@ -216,3 +219,24 @@ UNFOLD = {
     },
 }
 
+# Logging goes to stdout, where hosting platforms collect it.
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {"plain": {"format": "{asctime} {levelname} {name} {message}", "style": "{"}},
+    "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "plain"}},
+    "root": {"handlers": ["console"], "level": env("DJANGO_LOG_LEVEL", default="INFO")},
+    "loggers": {"django.request": {"handlers": ["console"], "level": "WARNING", "propagate": False}},
+}
+
+# Error tracking: set SENTRY_DSN in production. No personal data is sent (send_default_pii=False).
+SENTRY_DSN = env("SENTRY_DSN", default="")
+if SENTRY_DSN:
+    import sentry_sdk
+
+    sentry_sdk.init(
+        dsn=SENTRY_DSN,
+        environment=env("SENTRY_ENVIRONMENT", default="production"),
+        traces_sample_rate=env.float("SENTRY_TRACES_SAMPLE_RATE", default=0.0),
+        send_default_pii=False,
+    )

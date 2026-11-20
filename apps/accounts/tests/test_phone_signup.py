@@ -22,7 +22,7 @@ def test_bad_phone_numbers_are_rejected(raw):
 
 
 def register(client, **extra):
-    data = {"full_name": "Ngu Brice", "password": "Strong-pass-7531", **extra}
+    data = {"full_name": "Ngu Brice", "password": "Strong-pass-7531", "accept_terms": "on", **extra}
     return client.post(reverse("accounts:register"), data)
 
 

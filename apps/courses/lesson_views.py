@@ -52,7 +52,8 @@ def _resume_point(progress, blocks, toc, created):
 
 def _get_lesson(request, course_slug, pk):
     lesson = get_object_or_404(
-        Lesson.objects.select_related("topic__module__course__offering__subject", "topic__module__course__offering__level"),
+        Lesson.objects.select_related("topic__module__course__offering__subject", "topic__module__course__offering__level",
+                                      "reviewer"),
         pk=pk, topic__module__course__slug=course_slug,
     )
     course = lesson.course

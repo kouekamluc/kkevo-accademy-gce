@@ -68,6 +68,10 @@ class RegistrationForm(StyledFormMixin, forms.ModelForm):
         label="Password", strip=False, help_text=PASSWORD_HELP,
         widget=forms.PasswordInput(attrs={"autocomplete": "new-password"}),
     )
+    accept_terms = forms.BooleanField(
+        required=True, label="I accept the Terms of use and the Privacy policy",
+        error_messages={"required": "Please accept the Terms of use and the Privacy policy to create your account."},
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -79,7 +83,7 @@ class RegistrationForm(StyledFormMixin, forms.ModelForm):
         widgets = {"email": forms.EmailInput(attrs={"autocomplete": "email"})}
         labels = {"email": "Email"}
 
-    field_order = ["full_name", "email", "phone", "password"]
+    field_order = ["full_name", "email", "phone", "password", "accept_terms"]
 
     def clean_phone(self):
         return clean_phone_value(self.cleaned_data.get("phone"))
@@ -123,6 +127,8 @@ class RegistrationForm(StyledFormMixin, forms.ModelForm):
         user.phone = self.cleaned_data.get("phone") or None
         if commit:
             user.save()
+            # Keep the date of consent with the account (the profile is created by a signal on save).
+            StudentProfile.objects.filter(user=user).update(terms_accepted_at=timezone.now())
         return user
 
 

@@ -192,3 +192,14 @@ def test_review_checklist_lists_flagged_sentences(tmp_path):
     text = out.read_text(encoding="utf-8")
     assert text.startswith("# Content review checklist") and "Start here" in text
     assert "- [ ]" in text and "check your textbook" in text.lower()
+
+
+def test_lesson_says_who_checked_it(client, student, lessons):
+    first, _ = lessons
+    client.force_login(student)
+    assert "A teacher has not checked this lesson yet" in client.get(url(first)).content.decode()
+    first.reviewer = get_user_model().objects.create_user(email="t@example.com", password="pw-Strong-123",
+                                                          is_staff=True, first_name="Mbah")
+    first.save()
+    page = client.get(url(first)).content.decode()
+    assert "Checked by Mbah" in page and "has not checked" not in page

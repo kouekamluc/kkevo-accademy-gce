@@ -124,6 +124,9 @@ class StudentProfile(models.Model):
     )
     last_reminder_on = models.DateField(null=True, blank=True, editable=False)
     onboarded_at = models.DateTimeField(null=True, blank=True)
+    terms_accepted_at = models.DateTimeField(
+        null=True, blank=True, help_text="When the student accepted the terms and privacy policy at sign-up."
+    )
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):

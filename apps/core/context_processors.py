@@ -89,8 +89,8 @@ def _staff_nav(request):
 
 
 def site(request):
-    """Values every page can use: the public contact email and the page's canonical address."""
+    """Values every page can use: the public contact email and WhatsApp number, and the page's canonical address."""
     from django.conf import settings
 
-    return {"contact_email": settings.CONTACT_EMAIL,
+    return {"contact_email": settings.CONTACT_EMAIL, "contact_whatsapp": settings.CONTACT_WHATSAPP,
             "canonical_url": request.build_absolute_uri(request.path)}

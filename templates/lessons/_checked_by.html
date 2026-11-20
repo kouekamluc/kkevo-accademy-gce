@@ -1,0 +1,6 @@
+{# Who checked this lesson against the syllabus. Publishing in the studio records the reviewer. #}
+{% if lesson.reviewer %}
+<p class="mb-3 flex items-center gap-2 text-sm font-semibold text-success-text print:hidden">{% include "components/icon.html" with name="check" class="h-4 w-4" stroke="2.5" %}Checked by {{ lesson.reviewer.first_name|default:"a KKEVO Academy teacher" }}</p>
+{% else %}
+<p class="mb-3 text-sm text-ink-muted print:hidden">A teacher has not checked this lesson yet. If you spot a mistake, please tell us below.</p>
+{% endif %}
