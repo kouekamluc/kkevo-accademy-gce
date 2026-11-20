@@ -1,0 +1,116 @@
+{% extends "layouts/studio.html" %}
+{% block title %}Usage — Content studio{% endblock %}
+{% block crumbs %}<span class="text-ink-heading">Usage</span>{% endblock %}
+{% block content %}
+<div class="flex flex-wrap items-end justify-between gap-4">
+  <div>
+    <h1 class="text-[28px] font-bold tracking-[-.02em] text-navy nav:text-[34px]">Usage</h1>
+    <p class="mt-1 max-w-2xl text-[17px] text-ink-muted">How students use KKEVO Academy, from {{ since_date|date:"j M" }} to {{ today|date:"j M Y" }}. Staff accounts are not counted.</p>
+  </div>
+  <nav aria-label="Period" class="flex gap-2">
+    {% for p in periods %}
+    <a href="?days={{ p }}" class="inline-flex h-10 items-center rounded-full px-4 text-sm font-semibold {% if p == days %}bg-navy text-white hover:text-white{% else %}bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-800{% endif %}" {% if p == days %}aria-current="page"{% endif %}>Last {{ p }} days</a>
+    {% endfor %}
+  </nav>
+</div>
+
+<ul class="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4" aria-label="Headline numbers">
+  <li class="card p-5"><div class="text-sm text-ink-muted">Active students</div><div class="mt-1 text-3xl font-bold text-primary-700">{{ headline.active }}</div><div class="mt-1 text-[13px] text-ink-muted">of {{ headline.students }} student{{ headline.students|pluralize }}</div></li>
+  <li class="card p-5"><div class="text-sm text-ink-muted">New sign-ups</div><div class="mt-1 text-3xl font-bold">{{ headline.new_students }}</div></li>
+  <li class="card p-5"><div class="text-sm text-ink-muted">Lessons finished</div><div class="mt-1 text-3xl font-bold text-success-text">{{ headline.lessons_completed }}</div></li>
+  <li class="card p-5"><div class="text-sm text-ink-muted">Learning time</div><div class="mt-1 text-3xl font-bold">{% if headline.minutes >= 120 %}{% widthratio headline.minutes 60 1 %} h{% else %}{{ headline.minutes }} min{% endif %}</div><div class="mt-1 text-[13px] text-ink-muted">{{ headline.avg_minutes }} min per active student</div></li>
+  <li class="card p-5"><div class="text-sm text-ink-muted">Practice sets finished</div><div class="mt-1 text-3xl font-bold">{{ headline.practice_finished }}</div></li>
+  <li class="card p-5"><div class="text-sm text-ink-muted">Mock exams sat</div><div class="mt-1 text-3xl font-bold">{{ headline.mocks_finished }}</div></li>
+  <li class="card p-5"><a href="{% url 'studio:feedback' %}" class="block"><div class="text-sm text-ink-muted">Student reports</div><div class="mt-1 text-3xl font-bold {% if headline.reports %}text-warning-text{% endif %}">{{ headline.reports }}</div></a></li>
+  <li class="card p-5"><div class="text-sm text-ink-muted">Came back</div><div class="mt-1 text-3xl font-bold">{{ returning }}</div><div class="mt-1 text-[13px] text-ink-muted">active on 2 days or more</div></li>
+</ul>
+
+<section class="card mt-6 p-5" aria-labelledby="daily-h">
+  <h2 id="daily-h" class="text-base font-bold text-navy">Active students each day</h2>
+  <ol class="mt-4 flex h-40 items-end gap-1 sm:gap-2" aria-label="Active students per day">
+    {% for d in daily %}
+    <li class="flex h-full min-w-0 flex-1 flex-col items-center justify-end gap-1" title="{{ d.day|date:'D j M' }}: {{ d.n }}">
+      <span class="text-[12px] font-semibold text-ink-heading">{% if d.n %}{{ d.n }}{% endif %}</span>
+      <span class="block w-full rounded-t bg-primary" style="height: {% if d.n %}{{ d.pct }}%{% else %}2px{% endif %}; {% if not d.n %}opacity:.25{% endif %}"></span>
+      <span class="text-[11px] text-ink-muted">{% if days == 7 %}{{ d.day|date:"D" }}{% elif forloop.first or forloop.last or d.day.weekday == 0 %}{{ d.day|date:"j/n" }}{% else %}&nbsp;{% endif %}</span>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<div class="mt-6 grid gap-6 lg:grid-cols-2 [&>*]:min-w-0">
+  <section class="card p-5" aria-labelledby="funnel-h">
+    <h2 id="funnel-h" class="text-base font-bold text-navy">How far new students got</h2>
+    <p class="mt-1 text-sm text-ink-muted">Students who signed up in this period.</p>
+    {% if funnel.0.n %}
+    <ol class="mt-4 flex flex-col gap-3">
+      {% for step in funnel %}
+      <li>
+        <div class="flex items-baseline justify-between gap-3 text-sm"><span class="font-semibold text-ink-heading">{{ step.label }}</span><span class="shrink-0 text-ink-muted"><b class="text-ink-heading">{{ step.n }}</b> · {{ step.pct }}%</span></div>
+        <div class="mt-1 h-2.5 rounded-full bg-slate-100"><div class="h-2.5 rounded-full bg-primary" style="width: {{ step.pct }}%"></div></div>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <p class="mt-4 text-ink-muted">Nobody signed up in this period.</p>
+    {% endif %}
+  </section>
+
+  <section class="card p-5" aria-labelledby="class-h">
+    <h2 id="class-h" class="text-base font-bold text-navy">Students by class</h2>
+    <p class="mt-1 text-sm text-ink-muted">All students, and how many were active in this period.</p>
+    <ul class="mt-4 flex flex-col gap-3">
+      {% for c in classes %}
+      <li>
+        <div class="flex items-baseline justify-between gap-3 text-sm"><span class="font-semibold text-ink-heading">{{ c.name }}</span><span class="shrink-0 text-ink-muted"><b class="text-ink-heading">{{ c.n }}</b> · {{ c.active }} active</span></div>
+        <div class="mt-1 h-2.5 rounded-full bg-slate-100"><div class="h-2.5 rounded-full bg-navy-600" style="width: {{ c.pct }}%"></div></div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="card p-5" aria-labelledby="subj-h">
+    <h2 id="subj-h" class="text-base font-bold text-navy">Subjects with the most lessons finished</h2>
+    {% if subjects %}
+    <ul class="mt-4 flex flex-col gap-3">
+      {% for s in subjects %}
+      <li>
+        <div class="flex items-baseline justify-between gap-3 text-sm"><span class="truncate font-semibold text-ink-heading">{{ s.name }}</span><span class="shrink-0 font-bold">{{ s.n }}</span></div>
+        <div class="mt-1 h-2.5 rounded-full bg-slate-100"><div class="h-2.5 rounded-full bg-success" style="width: {{ s.pct }}%"></div></div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="mt-4 text-ink-muted">No lessons finished in this period.</p>
+    {% endif %}
+  </section>
+
+  <section class="card p-5" aria-labelledby="opened-h">
+    <h2 id="opened-h" class="text-base font-bold text-navy">Most opened lessons</h2>
+    <p class="mt-1 text-sm text-ink-muted">Number of students who opened each lesson.</p>
+    {% if opened %}
+    <ul class="mt-4 flex flex-col gap-2.5 text-sm">
+      {% for l in opened %}
+      <li class="flex items-center justify-between gap-3"><span class="min-w-0"><a href="{% url 'studio:edit' l.lesson_id %}" class="block truncate font-semibold">{{ l.title }}</a><span class="block truncate text-[13px] text-ink-muted">{{ l.course }}</span></span><span class="shrink-0 rounded-full bg-primary-50 px-2.5 py-0.5 text-[13px] font-bold text-primary-700">{{ l.n }}</span></li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="mt-4 text-ink-muted">No lessons opened in this period.</p>
+    {% endif %}
+  </section>
+</div>
+
+<section class="card mt-6 p-5" aria-labelledby="drop-h">
+  <h2 id="drop-h" class="text-base font-bold text-navy">Lessons started but not finished</h2>
+  <p class="mt-1 text-sm text-ink-muted">Where students stop. A lesson high on this list may be too long, too hard, or have a problem worth a look.</p>
+  {% if dropoff %}
+  <ul class="mt-4 divide-y divide-surface-border text-sm">
+    {% for l in dropoff %}
+    <li class="flex items-center justify-between gap-3 py-2.5"><span class="min-w-0"><a href="{% url 'studio:edit' l.lesson_id %}" class="block truncate font-semibold">{{ l.title }}</a><span class="block truncate text-[13px] text-ink-muted">{{ l.course }}</span><span class="block text-[13px] text-ink-muted">Stopped at {{ l.avg_percent|floatformat:0 }}% on average</span></span><span class="shrink-0 rounded-full bg-warning-50 px-2.5 py-0.5 text-[13px] font-bold text-warning-text" title="Students who stopped">{{ l.n }}</span></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="mt-4 text-ink-muted">Every lesson started in this period was finished.</p>
+  {% endif %}
+</section>
+{% endblock %}

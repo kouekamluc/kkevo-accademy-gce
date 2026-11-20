@@ -39,6 +39,7 @@ from .editor import (  # noqa: F401
     lesson_status,
 )
 from .feedback import feedback, feedback_status  # noqa: F401
+from .usage import usage  # noqa: F401
 from .history import (  # noqa: F401
     lesson_history,
     revision_detail,

@@ -17,6 +17,7 @@ STAFF_NAV = [
         ("Media library", "photo_library", "studio:media", "", "courses.change_lesson"),
         ("Video library", "video_library", "studio:videos", "", "courses.change_lesson"),
         ("Student feedback", "flag", "studio:feedback", "", "courses.change_lesson"),
+        ("Usage", "monitoring", "studio:usage", "", "courses.change_lesson"),
     ]),
     ("Curriculum", [
         ("Academic levels", "school", "admin:academics_academiclevel_changelist", "", "academics.view_academiclevel"),
