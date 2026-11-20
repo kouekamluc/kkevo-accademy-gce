@@ -8,7 +8,6 @@ The writers marked facts that textbooks differ on, or that they could not confir
 subject, class and lesson so a teacher can verify them against the Board's syllabus and the school's books.
 """
 
-import re
 from pathlib import Path
 
 from django.conf import settings
@@ -16,11 +15,8 @@ from django.core.management.base import BaseCommand
 
 from apps.academics import gce_curriculum
 from apps.courses import lesson_content
+from apps.courses.review import block_texts, flagged_in
 
-NOTE = re.compile(
-    r"check (?:your (?:textbook|copy|tables|text)|the current (?:rules|position|figures|Finance Law)|current (?:rules|figures)"
-    r"|with your teacher|the Finance Law|your school)", re.I)
-SENTENCE = re.compile(r"(?<=[.!?])\s+(?=[A-Z(“\"'])")
 LEVEL_NAMES = {"form-5": "Form 5 (O Level)", "lower-sixth": "Lower Sixth", "upper-sixth": "Upper Sixth"}
 
 PRIORITY = """\
@@ -60,17 +56,9 @@ class Command(BaseCommand):
         for key, spec, source in lesson_content.collect():
             sentences = []
             for block in spec["blocks"]:
-                data = block.get("data") or {}
-                pieces = [block.get("body", ""), block.get("title", "")]
-                for value in data.values():
-                    if isinstance(value, str):
-                        pieces.append(value)
-                    elif isinstance(value, list):
-                        pieces += [v for v in value if isinstance(v, str)]
-                for piece in pieces:
-                    for sentence in SENTENCE.split(" ".join(piece.split())):
-                        if NOTE.search(sentence) and sentence not in sentences:
-                            sentences.append(sentence[:320])
+                for sentence in flagged_in(block_texts(block.get("body", ""), block.get("title", ""), block.get("data"))):
+                    if sentence not in sentences:
+                        sentences.append(sentence)
             if sentences:
                 total += len(sentences)
                 found.setdefault(key, []).append((spec, source, sentences))

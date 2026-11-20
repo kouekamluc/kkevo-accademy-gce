@@ -77,6 +77,8 @@ class LessonEvent(models.Model):
         CHANGES_SENT_BACK = "changes_sent_back", "Sent changes back"
         CHANGES_DISCARDED = "changes_discarded", "Discarded draft changes"
         RESTORED = "restored", "Restored a revision"
+        CHECKED = "checked", "Checked against the syllabus"
+        NEEDS_FIX = "needs_fix", "Marked as needing a fix"
 
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, related_name="studio_events")
     actor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True,
@@ -93,6 +95,32 @@ class LessonEvent(models.Model):
 
     def __str__(self):
         return f"{self.get_action_display()} · {self.lesson}"
+
+
+class LessonReview(models.Model):
+    """A teacher's check of a lesson against the syllabus: which flagged sentences they verified, and the outcome.
+
+    A lesson without a review row has not been looked at. Approving sets `Lesson.reviewer`, which students see
+    as "Checked by …". `fingerprint` is the content hash at approval, so later edits show as "changed since checked".
+    """
+
+    class Status(models.TextChoices):
+        IN_PROGRESS = "in_progress", "Being checked"
+        NEEDS_FIX = "needs_fix", "Needs a fix"
+        CHECKED = "checked", "Checked"
+
+    lesson = models.OneToOneField(Lesson, on_delete=models.CASCADE, related_name="review")
+    status = models.CharField(max_length=12, choices=Status.choices, default=Status.IN_PROGRESS, db_index=True)
+    ticked = models.JSONField(default=list, blank=True, help_text="Keys of the flagged sentences already verified.")
+    note = models.TextField(blank=True, help_text="What needs fixing, or anything the next reader should know.")
+    reviewer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True,
+                                 related_name="+")
+    fingerprint = models.CharField(max_length=40, blank=True)
+    checked_at = models.DateTimeField(null=True, blank=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.get_status_display()} · {self.lesson}"
 
 
 def media_upload_to(instance, filename):

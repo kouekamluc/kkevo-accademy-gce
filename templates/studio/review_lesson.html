@@ -1,0 +1,112 @@
+{% extends "layouts/studio.html" %}
+{% block title %}Check: {{ lesson.title }} — Content studio{% endblock %}
+{% block crumbs %}<a href="{% url 'studio:review' %}">Syllabus check</a><span class="mx-2 text-ink-muted">/</span><span class="text-ink-heading">{{ lesson.title }}</span>{% endblock %}
+{% block content %}
+<div class="flex flex-wrap items-start justify-between gap-4">
+  <div class="min-w-0">
+    <p class="text-sm font-semibold text-ink-muted">{{ course.offering.level.name }} {{ course.offering.subject.name }} · {{ lesson.topic.module.title }} › {{ lesson.topic.title }}</p>
+    <h1 class="mt-1 text-[26px] font-bold tracking-[-.02em] text-navy nav:text-[32px]">{{ lesson.title }}</h1>
+    <p class="mt-2 flex flex-wrap items-center gap-2 text-sm">
+      {% if changed %}<span class="rounded-full bg-warning-50 px-2.5 py-0.5 font-bold text-warning-text">Changed since it was checked</span>
+      {% elif review.status == "checked" %}<span class="rounded-full bg-success-50 px-2.5 py-0.5 font-bold text-success-text">Checked by {{ review.reviewer.first_name|default:"staff" }} · {{ review.checked_at|date:"j M Y" }}</span>
+      {% elif review.status == "needs_fix" %}<span class="rounded-full bg-warning-50 px-2.5 py-0.5 font-bold text-warning-text">Needs a fix</span>
+      {% else %}<span class="rounded-full bg-slate-100 px-2.5 py-0.5 font-bold text-slate-700">Not checked yet</span>{% endif %}
+      {% if lesson.status != "published" %}<span class="rounded-full bg-slate-100 px-2.5 py-0.5 font-bold text-slate-700">{{ lesson.get_status_display }}</span>{% endif %}
+    </p>
+  </div>
+  <div class="flex flex-wrap gap-2">
+    <a href="{% url 'studio:edit' lesson.pk %}" class="btn-secondary h-11">Edit lesson</a>
+    {% if lesson.status == "published" %}<a href="{% url 'courses:lesson' course.slug lesson.pk %}" target="_blank" rel="noopener" class="btn-secondary h-11">Open as a student</a>{% endif %}
+    <a href="#review-panel" class="btn-primary h-11 lg:hidden">{% if flags %}{{ flags|length }} to verify · {% endif %}Decide</a>
+  </div>
+</div>
+
+<div class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_360px]">
+  <article class="min-w-0" aria-label="Lesson content">
+    {% if lesson.summary %}<p class="mb-4 text-[17px] leading-relaxed text-ink-heading">{{ lesson.summary }}</p>{% endif %}
+    {% if lesson.objectives_list %}
+    <section class="card mb-4 p-5"><h2 class="text-sm font-bold uppercase tracking-wide text-ink-muted">Objectives</h2>
+      <ul class="mt-2 list-disc space-y-1 pl-5 text-[15px] text-ink-heading">{% for o in lesson.objectives_list %}<li>{{ o }}</li>{% endfor %}</ul></section>
+    {% endif %}
+    <div class="flex flex-col gap-4">
+      {% for block in blocks %}
+      <div id="{{ block.review_anchor }}" class="scroll-mt-24 rounded-card {% if block.number in flagged_blocks %}ring-2 ring-primary-300 ring-offset-4 ring-offset-surface-bg{% endif %}">
+        <p class="mb-1.5 text-[12px] font-bold uppercase tracking-wide {% if block.number in flagged_blocks %}text-primary-700{% else %}text-ink-muted{% endif %}">Block {{ block.number }} · {{ block.get_block_type_display }}{% if block.number in flagged_blocks %} · has a sentence to verify{% endif %}</p>
+        {% if block.block_type == simulation %}
+        <div class="card p-4 text-sm text-ink-muted">Interactive simulation “{{ block.data.key|default:block.title }}”. Open the lesson as a student to try it.</div>
+        {% else %}
+        {% include block.template_name with block=block %}
+        {% endif %}
+      </div>
+      {% empty %}
+      <p class="card p-6 text-ink-muted">This lesson has no content blocks yet.</p>
+      {% endfor %}
+    </div>
+  </article>
+
+  <aside id="review-panel" class="min-w-0 scroll-mt-4 lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:self-start lg:overflow-y-auto" aria-label="Review"
+         x-data="{ total: {{ flags|length }}, done: 0 }" x-init="done = $el.querySelectorAll('input[data-flag]:checked').length">
+    <section class="card p-5">
+      <h2 class="text-base font-bold text-navy">What to check</h2>
+      <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-ink-heading">
+        <li>The lesson matches its syllabus topic and the level of the class.</li>
+        <li>Definitions, facts, dates and figures are right.</li>
+        <li>Every worked example and answer is correct.</li>
+        <li>The practice set's answers are right.</li>
+      </ul>
+    </section>
+
+    <section class="card mt-4 p-5" aria-labelledby="flags-h">
+      <div class="flex items-baseline justify-between gap-3">
+        <h2 id="flags-h" class="text-base font-bold text-navy">Sentences to verify</h2>
+        {% if flags %}<span class="text-sm font-semibold text-ink-muted"><span x-text="done">0</span>/{{ flags|length }}</span>{% endif %}
+      </div>
+      {% if flags %}
+      <p class="mt-1 text-sm text-ink-muted">The writer was not sure of these. Check each one against the syllabus or your textbook, fix it in the lesson if needed, then tick it.</p>
+      <ul class="mt-3 flex flex-col gap-3">
+        {% for flag in flags %}
+        <li class="rounded-input border border-surface-border p-3">
+          <label class="flex cursor-pointer items-start gap-3 text-sm leading-snug text-ink-heading">
+            <input type="checkbox" data-flag class="mt-0.5 h-5 w-5 shrink-0 accent-success" {% if flag.ticked %}checked{% endif %}
+                   @change="done += $event.target.checked ? 1 : -1; fetch('{% url 'studio:review_tick' lesson.pk %}', {method: 'POST', headers: {'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value}, body: new URLSearchParams({key: '{{ flag.key }}', ticked: $event.target.checked ? '1' : '0'})})">
+            <span>{{ flag.sentence }}</span>
+          </label>
+          <a href="#{{ flag.anchor }}" class="mt-1.5 inline-block pl-8 text-[13px] font-semibold">Go to block {{ flag.block }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p class="mt-1 text-sm text-ink-muted">The writer flagged nothing in this lesson. Read it through with the list above in mind.</p>
+      {% endif %}
+    </section>
+
+    {% if practice_sets or open_reports %}
+    <section class="card mt-4 p-5">
+      <h2 class="text-base font-bold text-navy">Also look at</h2>
+      <ul class="mt-2 flex flex-col gap-1.5 text-sm">
+        {% for ps in practice_sets %}<li><a href="{% url 'admin:practice_practiceset_change' ps.pk %}" target="_blank" rel="noopener" class="font-semibold">{{ ps.title }}</a> <span class="text-ink-muted">· {{ ps.n }} question{{ ps.n|pluralize }}</span></li>{% endfor %}
+        {% if open_reports %}<li><a href="{% url 'studio:feedback' %}" class="font-semibold text-warning-text">{{ open_reports }} open student report{{ open_reports|pluralize }}</a></li>{% endif %}
+      </ul>
+    </section>
+    {% endif %}
+
+    <section class="card mt-4 p-5" aria-labelledby="decide-h">
+      <h2 id="decide-h" class="text-base font-bold text-navy">Your decision</h2>
+      {% if review.note %}<p class="mt-2 rounded-input bg-slate-50 p-3 text-sm text-ink-heading"><span class="font-semibold">Last note{% if review.reviewer %} from {{ review.reviewer.first_name|default:"staff" }}{% endif %}:</span> {{ review.note }}</p>{% endif %}
+      {% if can_publish %}
+      <form method="post" action="{% url 'studio:review_decide' lesson.pk %}" class="mt-3 flex flex-col gap-3">{% csrf_token %}
+        <label for="review-note" class="form-label">Note <span class="font-normal text-ink-muted">(required for “Needs a fix”)</span></label>
+        <textarea id="review-note" name="note" rows="3" class="form-input min-h-[88px] py-2.5" placeholder="What is wrong, and where? Or a remark for the next reader."></textarea>
+        <button name="action" value="approve" class="btn-primary h-12" :disabled="done < total" :class="done < total && 'cursor-not-allowed opacity-50'">{% include "components/icon.html" with name="check" class="h-5 w-5" stroke="2.4" %}Approve: it is correct</button>
+        <p x-show="done < total" class="-mt-1 text-[13px] text-ink-muted">Tick every sentence above to approve.</p>
+        <button name="action" value="needs_fix" class="btn-secondary h-12">Needs a fix</button>
+      </form>
+      {% else %}
+      {% csrf_token %}
+      <p class="mt-2 text-sm text-ink-muted">Your ticks are saved. Only reviewers with the publish permission can approve a lesson or send it for a fix.</p>
+      {% endif %}
+      {% if next_pk %}<a href="{% url 'studio:review_lesson' next_pk %}" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold">Skip to the next lesson{% include "components/icon.html" with name="chevron-right" class="h-4 w-4" stroke="2.2" %}</a>{% endif %}
+    </section>
+  </aside>
+</div>
+{% endblock %}
