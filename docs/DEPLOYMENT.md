@@ -41,6 +41,9 @@ Deployment is planned close to the pilot (see `NEXT_PHASE.md`), so hosting is no
 
 ## Deploy steps
 
+With Docker, the image does steps 1, 2, 3 and 4 itself (see `docs/DOCKER.md`); do steps 5 to 9 as written.
+Without Docker:
+
 1. `pip install -r requirements.txt` and `npm ci && npm run build` (vendor files and CSS).
 2. `python manage.py collectstatic --noinput`
 3. `python manage.py migrate`

@@ -138,8 +138,8 @@ if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
     SECURE_SSL_REDIRECT = env.bool("DJANGO_SECURE_SSL_REDIRECT", default=True)
     SECURE_REDIRECT_EXEMPT = [r"^healthz/$"]  # the host's health check often calls over plain HTTP
-    SESSION_COOKIE_SECURE = True
-    CSRF_COOKIE_SECURE = True
+    # Cookies only over HTTPS. Turn off only to try a production build over plain http on your own machine.
+    SESSION_COOKIE_SECURE = CSRF_COOKIE_SECURE = env.bool("DJANGO_SECURE_COOKIES", default=True)
     SECURE_HSTS_SECONDS = env.int("DJANGO_HSTS_SECONDS", default=0)
     SECURE_CONTENT_TYPE_NOSNIFF = True
 

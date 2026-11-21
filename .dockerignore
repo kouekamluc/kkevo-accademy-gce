@@ -1,0 +1,17 @@
+# Keep secrets, local tools and build output out of the image.
+.env
+.env.*
+!.env.example
+*.local.txt
+.git
+.gitignore
+.venv
+.pytest_cache
+**/__pycache__
+**/*.pyc
+node_modules
+staticfiles
+media
+.claude
+# Design mockups at the top level: not part of the app.
+/[0-9][0-9]*.html

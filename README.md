@@ -113,6 +113,11 @@ npm run build        # copies htmx/alpine/katex/fonts to static/vendor and build
 npm run watch:css    # rebuild CSS while editing templates
 ```
 
+## Docker
+
+`docker compose up --build -d` runs the production build (gunicorn, `DEBUG` off) with its own PostgreSQL on
+http://localhost:8000. Loading content, staff accounts and running it on a host: `docs/DOCKER.md`.
+
 ## Tests
 
 ```bash

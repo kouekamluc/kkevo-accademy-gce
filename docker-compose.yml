@@ -1,0 +1,56 @@
+# KKEVO Academy with its own PostgreSQL, for trying the production build on your machine.
+#
+#   docker compose up --build -d                   # http://localhost:8000
+#   docker compose exec web python manage.py createsuperuser
+#   Loading the curriculum and lessons once, and everything else: docs/DOCKER.md
+#
+# This file is for local use: it serves plain http and has a throwaway secret key and database password.
+# On a real host, set the variables in docs/DEPLOYMENT.md instead (HTTPS, real secrets, secure cookies on).
+
+name: kkevo-academy
+
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: kkevo
+      POSTGRES_USER: kkevo
+      POSTGRES_PASSWORD: kkevo-local-only
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kkevo -d kkevo"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  web:
+    build: .
+    image: kkevo-academy
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${WEB_PORT:-8000}:8000"
+    environment:
+      DATABASE_URL: postgres://kkevo:kkevo-local-only@db:5432/kkevo
+      DJANGO_SECRET_KEY: local-docker-only-not-for-production-6f1c2b9e8d7a
+      DJANGO_DEBUG: "False"
+      DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1
+      DJANGO_CSRF_TRUSTED_ORIGINS: http://localhost:${WEB_PORT:-8000},http://127.0.0.1:${WEB_PORT:-8000}
+      # Plain http on your own machine: no HTTPS redirect, cookies allowed without HTTPS.
+      DJANGO_SECURE_SSL_REDIRECT: "False"
+      DJANGO_SECURE_COOKIES: "False"
+      # Several gunicorn workers share login rate limits through this table (created on start).
+      CACHE_URL: dbcache://django_cache
+      DJANGO_EMAIL_BACKEND: django.core.mail.backends.console.EmailBackend
+      SITE_BASE_URL: http://localhost:${WEB_PORT:-8000}
+      LOAD_CONTENT: ${LOAD_CONTENT:-0}
+    volumes:
+      - media:/app/media
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  media:

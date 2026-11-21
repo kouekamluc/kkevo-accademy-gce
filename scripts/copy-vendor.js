@@ -12,9 +12,15 @@ fs.mkdirSync(out, { recursive: true });
 const katexOut = path.join(out, "katex");
 fs.mkdirSync(path.join(katexOut, "fonts"), { recursive: true });
 const katexDist = path.join(__dirname, "..", "node_modules/katex/dist");
-for (const f of ["katex.min.js", "katex.min.css", "contrib/auto-render.min.js"]) {
+for (const f of ["katex.min.js", "contrib/auto-render.min.js"]) {
   fs.copyFileSync(path.join(katexDist, f), path.join(katexOut, path.basename(f)));
 }
+// Only the woff2 fonts are copied, so drop the woff/ttf fallbacks from the stylesheet too. Otherwise the
+// production static build (WhiteNoise's manifest storage) stops at the first font file it cannot find.
+const katexCss = fs.readFileSync(path.join(katexDist, "katex.min.css"), "utf8")
+  .replace(/,url\(fonts\/[^)]+\.(?:woff|ttf)\) format\("(?:woff|truetype)"\)/g, "");
+if (/\.(?:woff|ttf)\)/.test(katexCss)) throw new Error("katex.min.css still points at woff/ttf fonts");
+fs.writeFileSync(path.join(katexOut, "katex.min.css"), katexCss);
 for (const f of fs.readdirSync(path.join(katexDist, "fonts")).filter((f) => f.endsWith(".woff2"))) {
   fs.copyFileSync(path.join(katexDist, "fonts", f), path.join(katexOut, "fonts", f));
 }
